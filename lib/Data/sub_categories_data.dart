@@ -1,0 +1,130 @@
+import '../models/sub_category.dart';
+
+const SubCategoriesData = const [
+  SubCategory(
+    id: 'sc1',
+    categories: 'c2',
+    subCategoryTitle: 'Places To Stay',
+    description: 'KL city-life at your doorstep',
+    image: 'assets/images/subCatedgories/around.jpg',
+  ),
+  SubCategory(
+    id: 'sc2',
+    categories: 'c2',
+    subCategoryTitle: 'KL AT A Glance',
+    description: 'A Walk Through History',
+    image: 'assets/images/subCatedgories/klatglance.jpg',
+  ),
+  SubCategory(
+    id: 'sc3',
+    categories: 'c3',
+    subCategoryTitle: 'Historical Places',
+    description: 'A historical montage',
+    image: 'assets/images/subCatedgories/historical.jpg',
+  ),
+  SubCategory(
+    id: 'sc4',
+    categories: 'c3',
+    subCategoryTitle: 'Parks',
+    description: 'Dive into nature with your loved ones',
+    image: 'assets/images/subCatedgories/parks.jpg',
+  ),
+
+//////
+  SubCategory(
+    id: 'sc7',
+    categories: 'c4',
+    subCategoryTitle: 'Malaysian Music',
+    description: 'Get lost in the beats of Malaysia',
+    image: 'assets/images/subCatedgories/music.jpg',
+  ),
+  SubCategory(
+    id: 'sc8',
+    categories: 'c4',
+    subCategoryTitle: 'Malaysian Games',
+    description: 'Indulge in local games',
+    image: 'assets/images/subCatedgories/games2.jpg',
+  ),
+  SubCategory(
+    id: 'sc9',
+    categories: 'c4',
+    subCategoryTitle: 'Malaysian Dance',
+    description: 'Spellbinding Dances of Malaysia',
+    image: 'assets/images/subCatedgories/dance.jpg',
+  ),
+
+  SubCategory(
+    id: 'sc_17',
+    categories: 'c4',
+    subCategoryTitle: 'Local Foods',
+    description: 'Experience food like Malaysians',
+    image: 'assets/images/subCatedgories/food.jpg',
+  ),
+
+ 
+  SubCategory(
+    id: 'sc5',
+    categories: 'c5',
+    subCategoryTitle: 'Rest and Relax',
+    description: 'Feel Good from within',
+    image: 'assets/images/subCatedgories/spa.jpg',
+  ),
+  SubCategory(
+    id: 'sc6',
+    categories: 'c5',
+    subCategoryTitle: 'KL for Kids',
+    description: 'Places where kids can be kids',
+    image: 'assets/images/subCatedgories/kids.JPG',
+  ),
+
+  SubCategory(
+    id: 'sc_10',
+    categories: 'c5',
+    subCategoryTitle: 'What to do in KL',
+    description: 'Explore The City',
+    image: 'assets/images/subCatedgories/whatToDo.jpg',
+  ),
+  SubCategory(
+    id: 'sc_11',
+    categories: 'c5',
+    subCategoryTitle: 'Where to shop in KL',
+    description: 'Time to break the bank',
+    image: 'assets/images/subCatedgories/shop.jpg',
+  ),
+  SubCategory(
+    id: 'sc_12',
+    categories: 'c5',
+    subCategoryTitle: 'Night Life',
+    description: 'Let Your Hair Down',
+    image: 'assets/images/subCatedgories/nightlife.jpg',
+  ),
+  SubCategory(
+    id: 'sc_13',
+    categories: 'c5',
+    subCategoryTitle: 'Where To Eat in KL',
+    description: 'KL\'s Gastronomic Hotspots',
+    image: 'assets/images/subCatedgories/Street.jpg',
+  ),
+  SubCategory(
+    id: 'sc_14',
+    categories: 'c6',
+    subCategoryTitle: 'Medical Tourism',
+    description: 'Health Care Beyond Borders',
+    image: 'assets/images/subCatedgories/healthcare.jpg',
+  ),
+  SubCategory(
+    id: 'sc_15',
+    categories: 'c6',
+    subCategoryTitle: 'Accomodation',
+    description: 'Your Home Away From Home',
+    image: 'assets/images/subCatedgories/accomifation.jpg',
+  ),
+  SubCategory(
+    id: 'sc_16',
+    categories: 'c6',
+    subCategoryTitle: 'Transportation',
+    description: 'Get Connected With Kuala Lumpur',
+    image: 'assets/images/subCatedgories/transport.jpg',
+  ),
+ 
+];
