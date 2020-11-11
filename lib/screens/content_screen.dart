@@ -1,4 +1,5 @@
-import 'package:KlTheGuide/models/InAds.dart';
+// import 'package:KlTheGuide/models/InAds.dart';
+// import 'package:firebase_admob/firebase_admob.dart';
 import 'package:flutter/material.dart';
 import '../Data/content_data.dart';
 import 'package:flutter/cupertino.dart';
@@ -8,7 +9,6 @@ import '../widgets/content/tel_widget.dart';
 import '../widgets/content/workHour_widget.dart';
 import '../widgets/content/location_widget.dart';
 import 'package:flutter_platform_widgets/flutter_platform_widgets.dart';
-import 'package:firebase_admob/firebase_admob.dart';
 
 class ContentScreen extends StatefulWidget {
   static const routeName = '/content_screen';
@@ -24,14 +24,14 @@ class ContentScreen extends StatefulWidget {
 }
 
 class _ContentScreenState extends State<ContentScreen> {
-  InterstitialAd _interstitialAd;
+  // InterstitialAd _interstitialAd;
 
-  void initState() {
-    super.initState();
-    _interstitialAd?.dispose();
-    _interstitialAd = InAdsense().createInterstitialAd()..load();
+  // void initState() {
+  //   super.initState();
+  //   _interstitialAd?.dispose();
+  //   _interstitialAd = InAdsense().createInterstitialAd()..load();
 
-  }
+  // }
  
 
   @override
@@ -46,7 +46,7 @@ class _ContentScreenState extends State<ContentScreen> {
       child: Material(
         child: GestureDetector(
           onVerticalDragCancel: () {
-            _interstitialAd?.show();
+          //  _interstitialAd?.show();
           },
           child: SingleChildScrollView(
             child: Column(children: [

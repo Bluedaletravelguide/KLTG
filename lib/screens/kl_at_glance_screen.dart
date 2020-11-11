@@ -1,6 +1,6 @@
-import 'dart:io';
-import 'package:KlTheGuide/models/banAds.dart';
-import 'package:firebase_admob/firebase_admob.dart';
+// import 'dart:io';
+// import 'package:KlTheGuide/models/banAds.dart';
+// import 'package:firebase_admob/firebase_admob.dart';
 import 'package:flutter/material.dart';
 import 'package:timeline_tile/timeline_tile.dart';
 import '../Data/kl_at_glance_data.dart';
@@ -38,37 +38,37 @@ class KlAtGlanceScreen extends StatefulWidget {
 }
 
 class _KlAtGlanceScreenState extends State<KlAtGlanceScreen> {
-  BannerAd _bannerAd;
-  BanAdsense _banAdsense;
+//   BannerAd _bannerAd;
+//   BanAdsense _banAdsense;
 
-  void initState() {
-    if (Platform.isIOS) {
-      FirebaseAdMob.instance
-          .initialize(appId: 'ca-app-pub-7002644831588730~7281355962');
-    } else {
-      FirebaseAdMob.instance
-          .initialize(appId: 'ca-app-pub-7002644831588730~3248809866');
-    }
-    super.initState();
-    _bannerAd = BanAdsense().createBannerAd()..load();
-  }
+//   void initState() {
+//     if (Platform.isIOS) {
+//       FirebaseAdMob.instance
+//           .initialize(appId: 'ca-app-pub-7002644831588730~7281355962');
+//     } else {
+//       FirebaseAdMob.instance
+//           .initialize(appId: 'ca-app-pub-7002644831588730~3248809866');
+//     }
+//     super.initState();
+//     _bannerAd = BanAdsense().createBannerAd()..load();
+//   }
   
 
-  @override
-  void dispose() {
-    _bannerAd?.dispose();
-    _banAdsense.removeAd();
-    super.dispose();
-  }
-   void removeAd() {
-    _bannerAd?.dispose();
-    _bannerAd = null;
-  }
- @override
-  void didUpdateWidget(covariant KlAtGlanceScreen oldWidget) {
-    removeAd();
-    super.didUpdateWidget(oldWidget);
-  }
+//   @override
+//   void dispose() {
+//     _bannerAd?.dispose();
+//     _banAdsense.removeAd();
+//     super.dispose();
+//   }
+//    void removeAd() {
+//     _bannerAd?.dispose();
+//     _bannerAd = null;
+//   }
+//  @override
+//   void didUpdateWidget(covariant KlAtGlanceScreen oldWidget) {
+//     removeAd();
+//     super.didUpdateWidget(oldWidget);
+//   }
   @override
   Widget build(BuildContext context) {
     final subCategoryTitle = widget.appbartitle;
@@ -84,22 +84,22 @@ class _KlAtGlanceScreenState extends State<KlAtGlanceScreen> {
           ),
           child: GestureDetector(
             onVerticalDragCancel: () {
-              if (Platform.isIOS) {
-                _bannerAd ??= _banAdsense.createBannerAd();
-                _bannerAd
-                  ..load()
-                  ..show(
-                      anchorType: AnchorType.bottom,
-                      anchorOffset: kBottomNavigationBarHeight);
-              } else {
-                _bannerAd ??= _banAdsense.createBannerAd();
-                _bannerAd
-                  ..load()
-                  ..show();
-              }
+              // if (Platform.isIOS) {
+              //   _bannerAd ??= _banAdsense.createBannerAd();
+              //   _bannerAd
+              //     ..load()
+              //     ..show(
+              //         anchorType: AnchorType.bottom,
+              //         anchorOffset: kBottomNavigationBarHeight);
+              // } else {
+              //   _bannerAd ??= _banAdsense.createBannerAd();
+              //   _bannerAd
+              //     ..load()
+              //     ..show();
+              // }
             },
             child: Padding(
-              padding: EdgeInsets.only(top: 8, left: 8, right: 8, bottom: 50),
+              padding: EdgeInsets.only(top: 8, left: 8, right: 8, /*bottom: 50*/),
               child: GridView.count(
                 crossAxisSpacing: 0,
                 mainAxisSpacing: 0,

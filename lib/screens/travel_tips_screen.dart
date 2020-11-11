@@ -1,8 +1,8 @@
-import 'dart:io';
+// import 'package:KlTheGuide/screens/catgeroies_screen.dart';
+// import 'dart:io';
 
-import 'package:KlTheGuide/models/banAds.dart';
-import 'package:KlTheGuide/screens/catgeroies_screen.dart';
-import 'package:firebase_admob/firebase_admob.dart';
+// import 'package:KlTheGuide/models/banAds.dart';
+// import 'package:firebase_admob/firebase_admob.dart';
 import 'package:flutter/material.dart';
 import '../Data/travel_tips_data.dart';
 import '../widgets/travelTips_widget.dart';
@@ -20,60 +20,39 @@ class TravelTipsScreen extends StatefulWidget {
 }
 
 class _TravelTipsScreenState extends State<TravelTipsScreen> {
-  BannerAd _bannerAd;
-  BanAdsense _banAdsense;
+  // BannerAd _bannerAd;
+  // BanAdsense _banAdsense;
 
-  void initState() {
-    if (Platform.isIOS) {
-      FirebaseAdMob.instance
-          .initialize(appId: 'ca-app-pub-7002644831588730~7281355962');
-    } else {
-      FirebaseAdMob.instance
-          .initialize(appId: 'ca-app-pub-7002644831588730~3248809866');
-    }
-    super.initState();
-    _bannerAd = BanAdsense().createBannerAd()..load();
-  }
-
-  @override
-  void dispose() {
-    _bannerAd?.dispose();
-    _banAdsense.removeAd();
-    super.dispose();
-  }
-
-  void removeAd() {
-    _bannerAd?.dispose();
-    _bannerAd = null;
-  }
-
-//  if (Offstage().offstage) {
-//       return removeAd();
-//     }
-
-  // @override
-  // void didUpdateWidget(covariant TravelTipsScreen oldWidget) {
-  //   removeAd();
-  //   super.didUpdateWidget(oldWidget);
+  // void initState() {
+  //   if (Platform.isIOS) {
+  //     FirebaseAdMob.instance
+  //         .initialize(appId: 'ca-app-pub-7002644831588730~7281355962');
+  //   } else {
+  //     FirebaseAdMob.instance
+  //         .initialize(appId: 'ca-app-pub-7002644831588730~3248809866');
+  //   }
+  //   super.initState();
+  //   _bannerAd = BanAdsense().createBannerAd()..load();
   // }
 
   // @override
-  // void setState(fn) {
-  //   removeAd();
-  //   super.setState(fn);
+  // void dispose() {
+  //   _bannerAd?.dispose();
+  //   _banAdsense.removeAd();
+  //   super.dispose();
   // }
-//  @override
-//   void didChangeDependencies() {
-//         removeAd();
 
-//     super.didChangeDependencies();
+  // void removeAd() {
+  //   _bannerAd?.dispose();
+  //   _bannerAd = null;
+  // }
+  //  @override
+//   void didUpdateWidget(covariant TransportationScreen oldWidget) {
+//     removeAd();
+//     super.didUpdateWidget(oldWidget);
 //   }
 
-  // @override
-  // void deactivate() {
-  //   removeAd();
-  //   super.deactivate();
-  // }
+
 
   @override
   Widget build(BuildContext context) {
@@ -82,23 +61,25 @@ class _TravelTipsScreenState extends State<TravelTipsScreen> {
       child: Material(
         child: GestureDetector(
           onVerticalDragCancel: () {
-            if (Platform.isIOS) {
-              _bannerAd ??= _banAdsense.createBannerAd();
-              _bannerAd
-                ..load()
-                ..show(
-                  anchorType: AnchorType.bottom,
-                );
-            } else {
-              _bannerAd ??= _banAdsense.createBannerAd();
-              _bannerAd
-                ..load()
-                ..show();
-            }
+            // if (Platform.isIOS) {
+            //   _bannerAd ??= _banAdsense.createBannerAd();
+            //   _bannerAd
+            //     ..load()
+            //     ..show(
+            //       anchorType: AnchorType.bottom,
+            //     );
+            // } else {
+            //   _bannerAd ??= _banAdsense.createBannerAd();
+            //   _bannerAd
+            //     ..load()
+            //     ..show();
+            // }
           },
-          child: Padding(
-            padding: EdgeInsets.only(bottom: 50),
-            child: SingleChildScrollView(
+          child:
+          //  Padding(
+          //   padding: EdgeInsets.only(bottom: 50),
+          //   child: 
+            SingleChildScrollView(
               child: Column(
                 children: TravelTipsData.map(
                   (con) => TravelTips(
@@ -112,7 +93,7 @@ class _TravelTipsScreenState extends State<TravelTipsScreen> {
             ),
           ),
         ),
-      ),
+     // ),
     );
     return PlatformScaffold(
       appBar: PlatformAppBar(

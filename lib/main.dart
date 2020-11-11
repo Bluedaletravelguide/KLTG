@@ -10,8 +10,8 @@
 // import './screens/kl_at_glance_screen.dart';
 // import './screens/transportation_screen.dart';
 
-import 'package:KlTheGuide/screens/catgeroies_screen.dart';
-import 'package:KlTheGuide/screens/sub_categories_screen.dart';
+// import 'package:KlTheGuide/screens/catgeroies_screen.dart';
+// import 'package:KlTheGuide/screens/sub_categories_screen.dart';
 import 'package:KlTheGuide/screens/tabs_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
