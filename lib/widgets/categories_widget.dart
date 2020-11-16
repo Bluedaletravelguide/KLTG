@@ -50,7 +50,7 @@ class Catgeories extends StatelessWidget {
         ),
         child: Stack(children: [
           Opacity(
-            opacity: 0.60,
+            opacity: 1,
             child: Container(
               decoration: new BoxDecoration(
                 image: DecorationImage(

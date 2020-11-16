@@ -7,7 +7,8 @@ class BanAdsense {
   BannerAd createBannerAd() {
     return Platform.isIOS
         ? BannerAd(
-            adUnitId: 'ca-app-pub-3940256099942544/2934735716',
+            adUnitId: 'ca-app-pub-7002644831588730/6754149455',
+            //test id ('ca-app-pub-3940256099942544/2934735716')
             size: AdSize.banner,
 
             //   targetingInfo: targetingInfo,
@@ -16,7 +17,8 @@ class BanAdsense {
             },
           )
         : BannerAd(
-            adUnitId: 'ca-app-pub-3940256099942544/6300978111',
+            adUnitId: 'ca-app-pub-7002644831588730/4427349537',
+            //test id ('ca-app-pub-3940256099942544/6300978111')
             size: AdSize.smartBanner,
 
             //   targetingInfo: targetingInfo,

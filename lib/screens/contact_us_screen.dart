@@ -12,8 +12,6 @@ class ContactUsScreen extends StatefulWidget {
 }
 
 class _ContactUsScreenState extends State<ContactUsScreen> {
- 
-
   List<String> attachments = [];
   bool isHTML = false;
   final body = FocusNode();
@@ -63,7 +61,7 @@ class _ContactUsScreenState extends State<ContactUsScreen> {
     _name.clear();
     _phone.clear();
     _bodyController.clear();
-        _subject = '';
+    _subject = '';
 
     if (!mounted) return;
   }
