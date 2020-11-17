@@ -42,7 +42,7 @@ class Catgeories extends StatelessWidget {
           gradient: new LinearGradient(
             colors: [
               color,
-              Colors.blueGrey,
+              Colors.transparent,
             ],
             begin: Alignment.center,
             end: new Alignment(1, 1),
@@ -67,7 +67,7 @@ class Catgeories extends StatelessWidget {
               width: MediaQuery.of(context).size.width * 0.5,
               padding: EdgeInsets.only(right: 30.0),
               decoration: BoxDecoration(
-                color: Colors.black45,
+                color: Colors.black87,
                 gradient: LinearGradient(
                   colors: <Color>[
                     Colors.black,
