@@ -133,8 +133,8 @@ class Loading extends StatelessWidget {
                   //sub_categories (Title)
                   headline5: TextStyle(
                       fontSize: SizeConfig.safeBlockHorizontal * 4.5,
-                      fontFamily: 'RobotoCondensed-Light',
-                      fontWeight: FontWeight.w300,
+                      fontFamily: 'RobotoCondensed-Regular',
+                      fontWeight: FontWeight.w500,
                       color: Colors.white),
                   headline6: TextStyle(
                       fontSize: SizeConfig.safeBlockHorizontal * 2.7,
