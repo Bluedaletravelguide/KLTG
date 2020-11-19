@@ -137,12 +137,6 @@ class _ContactUsScreenState extends State<ContactUsScreen> {
                           child: DropDownFormField(
                             titleText: 'Subject',
                             hintText: 'Please choose one',
-                            validator: (value) {
-                              if (value == null) {
-                                return 'Please Select!';
-                              }
-                              return null;
-                            },
                             value: _subject,
                             onSaved: (value) {
                               setState(() {
