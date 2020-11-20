@@ -99,7 +99,7 @@ class AboutUsScreen extends StatelessWidget {
     final carsoulData = ClientCarsoulData;
     final socialData = SocialMediaData;
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 10),
+      padding: const EdgeInsets.all(8),
       child: LayoutBuilder(
         builder: (context, constraints) {
           return Column(

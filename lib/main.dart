@@ -105,7 +105,7 @@ class Loading extends StatelessWidget {
                     // fontFamily: 'RobotoCondensed-Regular',
                   ),
                   headline4: TextStyle(
-                    fontSize: SizeConfig.safeBlockHorizontal * 2.6,
+                    fontSize: SizeConfig.safeBlockHorizontal * 2.3,
                     color: Colors.black,
                     // fontFamily: 'RobotoCondensed-Regular',
                   ),
@@ -145,8 +145,8 @@ class Loading extends StatelessWidget {
         initialRoute: '/',
         routes: {
           '/': (ctx) => TabsScreen(),
-        //   CategoriesScreen.routeName: (ctx) => CategoriesScreen(),
-        //  SubCategoriesScreen.routeName: (ctx) => SubCategoriesScreen(),
+          //   CategoriesScreen.routeName: (ctx) => CategoriesScreen(),
+          //  SubCategoriesScreen.routeName: (ctx) => SubCategoriesScreen(),
           // ContentListScreen.routeName: (ctx) => ContentListScreen(),
           // ContentScreen.routeName: (ctx) => ContentScreen(),
           // FirstPage.routeName: (ctx) => FirstPage(),

@@ -42,7 +42,7 @@ class Catgeories extends StatelessWidget {
           gradient: new LinearGradient(
             colors: [
               color,
-              Colors.transparent,
+              Colors.blueGrey,
             ],
             begin: Alignment.center,
             end: new Alignment(1, 1),
@@ -50,7 +50,7 @@ class Catgeories extends StatelessWidget {
         ),
         child: Stack(children: [
           Opacity(
-            opacity: 1,
+            opacity: 0.8,
             child: Container(
               decoration: new BoxDecoration(
                 image: DecorationImage(
@@ -64,31 +64,33 @@ class Catgeories extends StatelessWidget {
             bottom: 30,
             left: 0,
             child: Container(
-              width: MediaQuery.of(context).size.width * 0.5,
-              padding: EdgeInsets.only(right: 30.0),
-              decoration: BoxDecoration(
-                color: Colors.black87,
-                gradient: LinearGradient(
-                  colors: <Color>[
-                    Colors.black,
-                    Colors.black54,
-                    Colors.black38,
-                  ],
+                width: MediaQuery.of(context).size.width * 0.5,
+                padding: EdgeInsets.only(right: 30.0),
+                decoration: BoxDecoration(
+                  color: Colors.black87,
+                  gradient: LinearGradient(
+                    colors: <Color>[
+                      Colors.black,
+                      Colors.black54,
+                      Colors.black38,
+                    ],
+                  ),
+                  borderRadius: BorderRadius.only(
+                      bottomRight: Radius.circular(30),
+                      topRight: Radius.circular(30)),
                 ),
-                borderRadius: BorderRadius.only(
-                    bottomRight: Radius.circular(30),
-                    topRight: Radius.circular(30)),
-              ),
-              child: Text(
-                title,
-                style: MediaQuery.of(context).size.width > 500
-                    ? Theme.of(context).textTheme.headline6
-                    : Theme.of(context).textTheme.headline5,
-                overflow: TextOverflow.fade,
-                softWrap: true,
-                textAlign: TextAlign.center,
-              ),
-            ),
+                child: Padding(
+                  padding: const EdgeInsets.only(left: 20),
+                  child: Text(
+                    title,
+                    style: MediaQuery.of(context).size.width > 500
+                        ? Theme.of(context).textTheme.headline6
+                        : Theme.of(context).textTheme.headline5,
+                    overflow: TextOverflow.fade,
+                    softWrap: true,
+                    textAlign: TextAlign.left,
+                  ),
+                )),
           ),
         ]),
       ),
