@@ -164,33 +164,34 @@ class AboutUsScreen extends StatelessWidget {
                                     )),
                               ),
                               //Divider(),
-                              Container(
-                                height: constraints.maxHeight * 0.3,
-                                width: MediaQuery.of(context).size.width,
-                                child: RichText(
-                                  textAlign: TextAlign.center,
-                                  softWrap: true,
-                                  overflow: TextOverflow.fade,
-                                  text: TextSpan(
-                                    style: TextStyle(
-                                        fontSize:
-                                            SizeConfig.safeBlockHorizontal *
-                                                3.4),
-                                    children: <TextSpan>[
-                                      textSpan(context, 'Mobile no: '),
-                                      textSpanNo(context, '+60122200622\n'),
-                                      textSpan(context, 'Tel No: '),
-                                      textSpanNo(context, '+60378869219\n'),
-                                      textSpan(context, 'Fax No: '),
-                                      textSpanNo(context, "+60378878212"),
-                                    ],
+                              Padding(
+                                padding: const EdgeInsets.all(5.0),
+                                child: Container(
+                                  height: constraints.maxHeight * 0.3,
+                                  width: MediaQuery.of(context).size.width,
+                                  child: RichText(
+                                    textAlign: TextAlign.center,
+                                    softWrap: true,
+                                    overflow: TextOverflow.fade,
+                                    text: TextSpan(
+                                      style: TextStyle(
+                                          fontSize:
+                                              SizeConfig.safeBlockHorizontal *
+                                                  3.4),
+                                      children: <TextSpan>[
+                                        textSpan(context, 'Mobile no: '),
+                                        textSpanNo(context, '+60122200622\n\n'),
+                                        textSpan(context, 'Tel No: '),
+                                        textSpanNo(context, '+60378869219\n'),
+                                      ],
+                                    ),
                                   ),
                                 ),
                               ),
 
                               Expanded(
                                 child: Container(
-                                  height: constraints.maxHeight * 0.28,
+                                  height: constraints.maxHeight * 0.15,
                                   child: ListView.builder(
                                       scrollDirection: Axis.horizontal,
                                       shrinkWrap: true,
