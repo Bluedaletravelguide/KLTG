@@ -20,6 +20,11 @@ class TravelTipsScreen extends StatefulWidget {
 }
 
 class _TravelTipsScreenState extends State<TravelTipsScreen> {
+
+
+//Ads Code 
+
+
   // BannerAd _bannerAd;
   // BanAdsense _banAdsense;
 

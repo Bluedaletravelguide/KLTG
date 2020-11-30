@@ -38,6 +38,12 @@ class KlAtGlanceScreen extends StatefulWidget {
 }
 
 class _KlAtGlanceScreenState extends State<KlAtGlanceScreen> {
+//Ads Code: 
+
+
+
+
+
 //   BannerAd _bannerAd;
 //   BanAdsense _banAdsense;
 

@@ -13,6 +13,9 @@ class TabsScreen extends StatefulWidget {
 }
 
 class _TabsScreenState extends State<TabsScreen> {
+
+ //We save the widget into a variable to prevenr code duplicating
+// Widget variable
   Widget bottomNav(Widget child, String text) {
     return CupertinoTabView(builder: (context) {
       return CupertinoPageScaffold(
@@ -20,7 +23,7 @@ class _TabsScreenState extends State<TabsScreen> {
           navigationBar: CupertinoNavigationBar(middle: Text(text)));
     });
   }
-
+//For android app bottom nevgation bar : 
   final List<Map<String, Object>> _pages = [
     {
       'page': CategoriesScreen(),
@@ -47,7 +50,7 @@ class _TabsScreenState extends State<TabsScreen> {
       _selectedPageIndex = index;
     });
   }
-
+//The main widget 
   @override
   Widget build(BuildContext context) {
     final List<BottomNavigationBarItem> _items = [
@@ -70,7 +73,7 @@ class _TabsScreenState extends State<TabsScreen> {
         label: 'About US',
       ),
     ];
-
+//IOS BottomNavigationBar
     return Platform.isIOS
         ? CupertinoTabScaffold(
             tabBar: CupertinoTabBar(
@@ -96,7 +99,9 @@ class _TabsScreenState extends State<TabsScreen> {
               }
             },
           )
-        : Scaffold(
+        :
+        //Android BottomNavigationBar
+         Scaffold(
             appBar: AppBar(
               title: Text(_pages[_selectedPageIndex]['title']),
             ),
@@ -110,86 +115,5 @@ class _TabsScreenState extends State<TabsScreen> {
                 type: BottomNavigationBarType.fixed,
                 items: _items),
           );
-
-    // PlatformScaffold(
-    //     appBar: PlatformAppBar(
-    //       title: Text('Travel Tips')),
-    //       body: _pages[_selectedPageIndex]['page'],
-    //       bottomNavBar: PlatformNavBar(
-    //         itemChanged: _selectPage,
-    //           backgroundColor: Theme.of(context).primaryColorDark,
-    //           currentIndex: _selectedPageIndex,
-    //          // type: BottomNavigationBarType.fixed,
-    //           items: [
-    //             BottomNavigationBarItem(
-    //               backgroundColor: Theme.of(context).primaryColorDark,
-    //               icon: Icon(Icons.home),
-    //               label: 'Home',
-    //             ),
-    //             BottomNavigationBarItem(
-    //                 backgroundColor: Theme.of(context).primaryColorDark,
-    //                 icon: Icon(Icons.book),
-    //                 label: 'E-Book'),
-    //             BottomNavigationBarItem(
-    //                 backgroundColor: Theme.of(context).primaryColorDark,
-    //                 icon: Icon(Icons.contacts),
-    //                 label: 'Contact Us'),
-    //             BottomNavigationBarItem(
-    //               backgroundColor: Theme.of(context).primaryColorDark,
-    //               icon: Icon(Icons.info),
-    //               label: 'About US',
-    //             ),
-    //           ],
-    //         ),
-    //     );
-
-    //  Platform.isIOS
-    //     ? CupertinoTabScaffold(
-    //         tabBar: CupertinoTabBar(items: [
-    //           BottomNavigationBarItem(
-    //             backgroundColor: Theme.of(context).primaryColorDark,
-    //             icon: Icon(Icons.home),
-    //             label: 'Home',
-    //           ),
-    //           BottomNavigationBarItem(
-    //               backgroundColor: Theme.of(context).primaryColorDark,
-    //               icon: Icon(Icons.book),
-    //               label: 'E-Book'),
-    //           BottomNavigationBarItem(
-    //               backgroundColor: Theme.of(context).primaryColorDark,
-    //               icon: Icon(Icons.contacts),
-    //               label: 'Contact Us'),
-    //           BottomNavigationBarItem(
-    //             backgroundColor: Theme.of(context).primaryColorDark,
-    //             icon: Icon(Icons.info),
-    //             label: 'About US',
-    //           ),
-    //         ]),
-    //         tabBuilder: (context, index) {
-    //           if (index == 0) {
-    //             return CupertinoPageScaffold(
-    //                 navigationBar:
-    //                     CupertinoNavigationBar(middle: Text('KL THE GUIDE')),
-    //                 child:
-    //                     SafeArea(child: Material(child: CategoriesScreen())));
-    //           } else if (index == 1) {
-    //             return CupertinoPageScaffold(
-    //                 navigationBar:
-    //                     CupertinoNavigationBar(middle: Text('E-Book')),
-    //                 child: SafeArea(child: Material(child: FirstPage())));
-    //           } else if (index == 2) {
-    //             return CupertinoPageScaffold(
-    //                 navigationBar:
-    //                     CupertinoNavigationBar(middle: Text('Contact Us')),
-    //                 child: SafeArea(child: Material(child: ContactUsScreen())));
-    //           } else {
-    //             return CupertinoPageScaffold(
-    //                 navigationBar:
-    //                     CupertinoNavigationBar(middle: Text('About US')),
-    //                 child: SafeArea(child: Material(child: AboutUsScreen())));
-    //           }
-    //         },
-    //       )
-    //    :
   }
 }

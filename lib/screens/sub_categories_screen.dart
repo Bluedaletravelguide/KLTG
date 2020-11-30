@@ -15,11 +15,12 @@ class SubCategoriesScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // final routeArgs =
-    //     ModalRoute.of(context).settings.arguments as Map<String, String>;
     final subCategoryTitle = appbartitle;
     final subCategoryId = id;
     final media = MediaQuery.of(context).size.width;
+
+    //This function is to import the SubCategoriesData into this widget:
+
     final subCategory = SubCategoriesData.where((subCategory) {
       return subCategory.categories.contains(subCategoryId);
     }).toList();
@@ -36,6 +37,7 @@ class SubCategoriesScreen extends StatelessWidget {
           },
           itemCount: subCategory.length,
           gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+            // those if condition to make the widget aspect ratio responsive: 
             crossAxisCount: media > 500 ? 2 : 1,
             childAspectRatio: media > 500 ? 1 : 1.35,
             crossAxisSpacing: media > 500 ? 15 : 4,

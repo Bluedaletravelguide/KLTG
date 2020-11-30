@@ -2,6 +2,12 @@ import 'dart:io';
 
 import 'package:firebase_admob/firebase_admob.dart';
 
+
+//Use the test id code first to test the ADS then you can use the real ID 
+//Real id can be found in the admob account 
+
+
+
 class BanAdsense {
   BannerAd _bannerAd;
   BannerAd createBannerAd() {
@@ -10,8 +16,6 @@ class BanAdsense {
             adUnitId: 'ca-app-pub-7002644831588730/6754149455',
             //test id ('ca-app-pub-3940256099942544/2934735716')
             size: AdSize.banner,
-
-            //   targetingInfo: targetingInfo,
             listener: (MobileAdEvent event) {
               print("BannerAd event $event");
             },
@@ -20,8 +24,6 @@ class BanAdsense {
             adUnitId: 'ca-app-pub-7002644831588730/4427349537',
             //test id ('ca-app-pub-3940256099942544/6300978111')
             size: AdSize.smartBanner,
-
-            //   targetingInfo: targetingInfo,
             listener: (MobileAdEvent event) {
               print("BannerAd event $event");
             });
@@ -53,11 +55,4 @@ class BanAdsense {
     }
     _bannerAd = createBannerAd()..load();
   }
-
-  // @override
-  // void dispose() {
-  //   _bannerAd?.dispose();
-  //   removeAd();
-
-  // }
 }

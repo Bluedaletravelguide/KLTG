@@ -1,3 +1,5 @@
+// This imports used to call a library, screen path or class path.
+
 import 'dart:ui';
 import 'package:KlTheGuide/Data/SizeConfig.dart';
 import 'package:KlTheGuide/Data/about_us.dart';
@@ -9,7 +11,8 @@ import 'package:flutter/gestures.dart';
 class AboutUsScreen extends StatelessWidget {
   static const routeName = '/about';
   final CarouselController buttonCarouselController = CarouselController();
-
+//We save the widget into a variable to prevenr code duplicating
+// Widget variable
   Object textSpan(BuildContext context, String text) {
     return TextSpan(
       text: text,
@@ -19,6 +22,7 @@ class AboutUsScreen extends StatelessWidget {
     );
   }
 
+// Widget variable
   Object textSpanNo(BuildContext context, String phoneno) {
     return TextSpan(
       text: phoneno,
@@ -37,9 +41,9 @@ class AboutUsScreen extends StatelessWidget {
     );
   }
 
+// Widget variable
   Widget clientButton(BuildContext context, String image, String clientUrl) {
     SizeConfig().init(context);
-
     return InkWell(
       splashColor: Colors.blueGrey[600],
       onTap: () async {
@@ -61,6 +65,7 @@ class AboutUsScreen extends StatelessWidget {
     );
   }
 
+// Widget variable
   Widget contentText(BuildContext context, String text, TextStyle style) {
     return Container(
       alignment: Alignment.center,
@@ -68,6 +73,7 @@ class AboutUsScreen extends StatelessWidget {
     );
   }
 
+// Widget variable
   Widget textBorder(BuildContext context, Widget child) {
     return Container(
       padding: EdgeInsets.all(7),
@@ -78,6 +84,7 @@ class AboutUsScreen extends StatelessWidget {
     );
   }
 
+// Widget variable
   Widget socialMedia(BuildContext context, String url, Icon icon, Color color) {
     return IconButton(
       onPressed: () async {
@@ -94,6 +101,7 @@ class AboutUsScreen extends StatelessWidget {
     );
   }
 
+//The Main Widget
   @override
   Widget build(BuildContext context) {
     final carsoulData = ClientCarsoulData;
@@ -107,6 +115,7 @@ class AboutUsScreen extends StatelessWidget {
               children: [
                 Container(
                     height: constraints.maxHeight * 0.06,
+                    //here we call the widget
                     child: contentText(
                       context,
                       'Our Story',
@@ -163,6 +172,7 @@ class AboutUsScreen extends StatelessWidget {
                                               .bodyText2,
                                     )),
                               ),
+<<<<<<< Updated upstream
                               //Divider(),
                               Padding(
                                 padding: const EdgeInsets.all(5.0),
@@ -185,10 +195,32 @@ class AboutUsScreen extends StatelessWidget {
                                         textSpanNo(context, '+60378869219\n'),
                                       ],
                                     ),
+=======
+                              Container(
+                                height: constraints.maxHeight * 0.3,
+                                width: MediaQuery.of(context).size.width,
+                                child: RichText(
+                                  textAlign: TextAlign.center,
+                                  softWrap: true,
+                                  overflow: TextOverflow.fade,
+                                  text: TextSpan(
+                                    style: TextStyle(
+                                        fontSize:
+                                            SizeConfig.safeBlockHorizontal *
+                                                3.4),
+                                    children: <TextSpan>[
+                                      //here we call the widget
+                                      textSpan(context, 'Mobile no: '),
+                                      textSpanNo(context, '+60122200622\n'),
+                                      textSpan(context, 'Tel No: '),
+                                      textSpanNo(context, '+60378869219\n'),
+                                      textSpan(context, 'Fax No: '),
+                                      textSpanNo(context, "+60378878212"),
+                                    ],
+>>>>>>> Stashed changes
                                   ),
                                 ),
                               ),
-
                               Expanded(
                                 child: Container(
                                   height: constraints.maxHeight * 0.15,
@@ -198,6 +230,7 @@ class AboutUsScreen extends StatelessWidget {
                                       itemCount: socialData.length,
                                       itemBuilder:
                                           (BuildContext context, int index) {
+                                        //here we call the widget
                                         return socialMedia(
                                           context,
                                           socialData[index].url,

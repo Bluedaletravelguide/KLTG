@@ -24,6 +24,12 @@ class ContentScreen extends StatefulWidget {
 }
 
 class _ContentScreenState extends State<ContentScreen> {
+
+
+//Ads Code: 
+
+
+
   // InterstitialAd _interstitialAd;
 
   // void initState() {
@@ -34,6 +40,8 @@ class _ContentScreenState extends State<ContentScreen> {
   // }
  
 
+
+//The main widget 
   @override
   Widget build(BuildContext context) {
     final contentTitle = widget.appbartitle;

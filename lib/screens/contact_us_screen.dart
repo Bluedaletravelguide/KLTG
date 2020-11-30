@@ -18,6 +18,7 @@ class _ContactUsScreenState extends State<ContactUsScreen> {
   final phone = FocusNode();
 
   final _recipientController = TextEditingController(
+    //recipient email:
     text: 'enquiry@bluedale.com.my',
   );
 
@@ -28,6 +29,8 @@ class _ContactUsScreenState extends State<ContactUsScreen> {
 
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
   final form = GlobalKey<FormState>();
+
+  //email sending function 
   Future<void> send() async {
     final validate = form.currentState.validate();
     if (!validate) {
@@ -70,7 +73,7 @@ class _ContactUsScreenState extends State<ContactUsScreen> {
     body.dispose();
     super.dispose();
   }
-
+//The main widget: 
   @override
   Widget build(BuildContext context) {
     return Scaffold(

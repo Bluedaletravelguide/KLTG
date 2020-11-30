@@ -26,6 +26,11 @@ class Medical extends StatefulWidget {
 }
 
 class _MedicalState extends State<Medical> {
+//Ads code: 
+
+
+
+
 //   BannerAd _bannerAd;
 //   BanAdsense _banAdsense;
 

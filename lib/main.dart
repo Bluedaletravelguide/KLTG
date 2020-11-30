@@ -1,17 +1,4 @@
-// import 'package:KlTheGuide/screens/medical_screen.dart';
-// import 'screens/travel_tips_screen.dart';
-// import './screens/kl_at_glance_screen.dart';
-// import './screens/transportation_screen.dart';
-// import 'screens/travel_tips_screen.dart';
-// import './screens/kl_at_glance_screen.dart';
-// import './screens/transportation_screen.dart';
-// import 'package:KlTheGuide/screens/kl_at_glance_screen.dart';
-// import 'screens/travel_tips_screen.dart';
-// import './screens/kl_at_glance_screen.dart';
-// import './screens/transportation_screen.dart';
 
-// import 'package:KlTheGuide/screens/catgeroies_screen.dart';
-// import 'package:KlTheGuide/screens/sub_categories_screen.dart';
 import 'package:KlTheGuide/screens/tabs_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -145,17 +132,7 @@ class Loading extends StatelessWidget {
         initialRoute: '/',
         routes: {
           '/': (ctx) => TabsScreen(),
-          //   CategoriesScreen.routeName: (ctx) => CategoriesScreen(),
-          //  SubCategoriesScreen.routeName: (ctx) => SubCategoriesScreen(),
-          // ContentListScreen.routeName: (ctx) => ContentListScreen(),
-          // ContentScreen.routeName: (ctx) => ContentScreen(),
-          // FirstPage.routeName: (ctx) => FirstPage(),
-          // AboutUsScreen.routeName: (ctx) => AboutUsScreen(),
-          // ContactUsScreen.routeName: (ctx) => ContactUsScreen(),
-          // TravelTipsScreen.routeName: (ctx) => TravelTipsScreen(),
-          // KlAtGlanceScreen.routeName: (ctx) => KlAtGlanceScreen(),
-          // TransportationScreen.routeName: (ctx) => TransportationScreen(),
-          // Medical.routeName: (ctx) => Medical(),
+
         });
   }
 }

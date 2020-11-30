@@ -13,7 +13,7 @@ class FirstPage extends StatefulWidget {
 class _FirstPageState extends State<FirstPage> {
   int bookIndex = 39;
   String edition;
-
+//Function to create book edtion numbers 
   String bookEdition() {
     setState(() {
       bookIndex--;
@@ -38,6 +38,7 @@ class _FirstPageState extends State<FirstPage> {
         Expanded(
           child: GridView.count(
             crossAxisCount: 2,
+            //This function is to import the e-book data into this widget: 
             children: EbookData.map(
               (con) => Padding(
                 padding: const EdgeInsets.all(15),
