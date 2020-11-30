@@ -172,30 +172,6 @@ class AboutUsScreen extends StatelessWidget {
                                               .bodyText2,
                                     )),
                               ),
-<<<<<<< Updated upstream
-                              //Divider(),
-                              Padding(
-                                padding: const EdgeInsets.all(5.0),
-                                child: Container(
-                                  height: constraints.maxHeight * 0.3,
-                                  width: MediaQuery.of(context).size.width,
-                                  child: RichText(
-                                    textAlign: TextAlign.center,
-                                    softWrap: true,
-                                    overflow: TextOverflow.fade,
-                                    text: TextSpan(
-                                      style: TextStyle(
-                                          fontSize:
-                                              SizeConfig.safeBlockHorizontal *
-                                                  3.4),
-                                      children: <TextSpan>[
-                                        textSpan(context, 'Mobile no: '),
-                                        textSpanNo(context, '+60122200622\n\n'),
-                                        textSpan(context, 'Tel No: '),
-                                        textSpanNo(context, '+60378869219\n'),
-                                      ],
-                                    ),
-=======
                               Container(
                                 height: constraints.maxHeight * 0.3,
                                 width: MediaQuery.of(context).size.width,
@@ -217,7 +193,6 @@ class AboutUsScreen extends StatelessWidget {
                                       textSpan(context, 'Fax No: '),
                                       textSpanNo(context, "+60378878212"),
                                     ],
->>>>>>> Stashed changes
                                   ),
                                 ),
                               ),
