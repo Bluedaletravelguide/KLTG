@@ -12,14 +12,16 @@ class BanAdsense {
         ? BannerAd(
             adUnitId: 'ca-app-pub-7002644831588730/6754149455',
             //test id ('ca-app-pub-3940256099942544/2934735716')
+            //actual ('ca-app-pub-7002644831588730/6754149455')
             size: AdSize.banner,
             listener: (MobileAdEvent event) {
               print("BannerAd event $event");
             },
           )
         : BannerAd(
-            adUnitId: 'ca-app-pub-7002644831588730/4427349537',
+            adUnitId: 'ca-app-pub-3940256099942544/6300978111',
             //test id ('ca-app-pub-3940256099942544/6300978111')
+            //actual ('ca-app-pub-7002644831588730/4427349537')
             size: AdSize.smartBanner,
             listener: (MobileAdEvent event) {
               print("BannerAd event $event");
