@@ -2,11 +2,8 @@ import 'dart:io';
 
 import 'package:firebase_admob/firebase_admob.dart';
 
-
-//Use the test id code first to test the ADS then you can use the real ID 
-//Real id can be found in the admob account 
-
-
+//Use the test id code first to test the ADS then you can use the real ID
+//Real id can be found in the admob account
 
 class BanAdsense {
   BannerAd _bannerAd;
@@ -40,6 +37,7 @@ class BanAdsense {
     await _bannerAd.dispose();
     _bannerAd = null;
   }
+
   void removeAd() {
     _bannerAd?.dispose();
     _bannerAd = null;

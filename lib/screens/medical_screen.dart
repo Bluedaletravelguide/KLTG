@@ -1,6 +1,6 @@
-// import 'dart:io';
-// import 'package:KlTheGuide/models/banAds.dart';
-// import 'package:firebase_admob/firebase_admob.dart';
+import 'dart:io';
+import 'package:KlTheGuide/models/Adsban.dart';
+import 'package:firebase_admob/firebase_admob.dart';
 import 'package:KlTheGuide/Data/SizeConfig.dart';
 import 'package:KlTheGuide/Data/content_data.dart';
 import 'package:KlTheGuide/widgets/content/decrepitation_widget.dart';
@@ -26,41 +26,41 @@ class Medical extends StatefulWidget {
 }
 
 class _MedicalState extends State<Medical> {
-//Ads code: 
+//Ads code:
 
+  BannerAd _bannerAd;
+  BanAdsense _banAdsense;
 
+  void initState() {
+    if (Platform.isIOS) {
+      FirebaseAdMob.instance
+          .initialize(appId: 'ca-app-pub-7002644831588730~7281355962');
+    } else {
+      FirebaseAdMob.instance
+          .initialize(appId: 'ca-app-pub-7002644831588730~3248809866');
+    }
+    super.initState();
+    _bannerAd = BanAdsense().createBannerAd()..load();
+  }
 
+  @override
+  void dispose() {
+    _bannerAd?.dispose();
+    _banAdsense.removeAd();
+    super.dispose();
+  }
 
-//   BannerAd _bannerAd;
-//   BanAdsense _banAdsense;
+  @override
+  void didUpdateWidget(covariant Medical oldWidget) {
+    removeAd();
+    super.didUpdateWidget(oldWidget);
+  }
 
-//   void initState() {
-//     if (Platform.isIOS) {
-//       FirebaseAdMob.instance
-//           .initialize(appId: 'ca-app-pub-7002644831588730~7281355962');
-//     } else {
-//       FirebaseAdMob.instance
-//           .initialize(appId: 'ca-app-pub-7002644831588730~3248809866');
-//     }
-//     super.initState();
-//     _bannerAd = BanAdsense().createBannerAd()..load();
-//   }
+  void removeAd() {
+    _bannerAd?.dispose();
+    _bannerAd = null;
+  }
 
-//   @override
-//   void dispose() {
-//     _bannerAd?.dispose();
-//     _banAdsense.removeAd();
-//     super.dispose();
-//   }
-//    @override
-//   void didUpdateWidget(covariant Medical oldWidget) {
-//     removeAd();
-//     super.didUpdateWidget(oldWidget);
-//   }
-//  void removeAd() {
-//     _bannerAd?.dispose();
-//     _bannerAd = null;
-//   }
   @override
   Widget build(BuildContext context) {
     SizeConfig().init(context);
@@ -74,25 +74,23 @@ class _MedicalState extends State<Medical> {
       child: Material(
         child: GestureDetector(
           onVerticalDragCancel: () {
-            // if (Platform.isIOS) {
-            //   _bannerAd ??= _banAdsense.createBannerAd();
-            //   _bannerAd
-            //     ..load()
-            //     ..show(
-            //         anchorType: AnchorType.bottom,
-            //         anchorOffset: kBottomNavigationBarHeight);
-            // } else {
-            //   _bannerAd ??= _banAdsense.createBannerAd();
-            //   _bannerAd
-            //     ..load()
-            //     ..show();
-            // }
+            if (Platform.isIOS) {
+              _bannerAd ??= _banAdsense.createBannerAd();
+              _bannerAd
+                ..load()
+                ..show(
+                    anchorType: AnchorType.bottom,
+                    anchorOffset: kBottomNavigationBarHeight);
+            } else {
+              _bannerAd ??= _banAdsense.createBannerAd();
+              _bannerAd
+                ..load()
+                ..show();
+            }
           },
-          child: 
-          // Padding(
-          //   padding: EdgeInsets.only(bottom: 50),
-          //   child: 
-            ListView.builder(
+          child: Padding(
+            padding: EdgeInsets.only(bottom: 50),
+            child: ListView.builder(
                 shrinkWrap: true,
                 itemCount: selectcontent.length,
                 itemBuilder: (ctx, index) {
@@ -214,7 +212,7 @@ class _MedicalState extends State<Medical> {
                 }),
           ),
         ),
-     // ),
+      ),
     );
     return PlatformScaffold(
       appBar: PlatformAppBar(

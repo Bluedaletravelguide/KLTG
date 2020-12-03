@@ -1,5 +1,5 @@
-// import 'package:KlTheGuide/models/InAds.dart';
-// import 'package:firebase_admob/firebase_admob.dart';
+import 'package:KlTheGuide/models/AdsIn.dart';
+import 'package:firebase_admob/firebase_admob.dart';
 import 'package:flutter/material.dart';
 import '../Data/content_data.dart';
 import 'package:flutter/cupertino.dart';
@@ -24,24 +24,17 @@ class ContentScreen extends StatefulWidget {
 }
 
 class _ContentScreenState extends State<ContentScreen> {
+//Ads Code:
 
+  InterstitialAd _interstitialAd;
 
-//Ads Code: 
+  void initState() {
+    super.initState();
+    _interstitialAd?.dispose();
+    _interstitialAd = InAdsense().createInterstitialAd()..load();
+  }
 
-
-
-  // InterstitialAd _interstitialAd;
-
-  // void initState() {
-  //   super.initState();
-  //   _interstitialAd?.dispose();
-  //   _interstitialAd = InAdsense().createInterstitialAd()..load();
-
-  // }
- 
-
-
-//The main widget 
+//The main widget
   @override
   Widget build(BuildContext context) {
     final contentTitle = widget.appbartitle;
@@ -54,7 +47,7 @@ class _ContentScreenState extends State<ContentScreen> {
       child: Material(
         child: GestureDetector(
           onVerticalDragCancel: () {
-          //  _interstitialAd?.show();
+            _interstitialAd?.show();
           },
           child: SingleChildScrollView(
             child: Column(children: [
