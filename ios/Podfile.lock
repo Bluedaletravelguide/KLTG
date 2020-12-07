@@ -48,8 +48,9 @@ PODS:
   - Flutter (1.0.0)
   - flutter_email_sender (0.0.1):
     - Flutter
-  - Google-Mobile-Ads-SDK (7.63.0):
+  - Google-Mobile-Ads-SDK (7.67.0):
     - GoogleAppMeasurement (~> 6.0)
+    - GoogleUserMessagingPlatform (~> 1.1)
   - GoogleAppMeasurement (6.9.0):
     - GoogleUtilities/AppDelegateSwizzler (~> 6.7)
     - GoogleUtilities/MethodSwizzler (~> 6.7)
@@ -58,6 +59,7 @@ PODS:
     - nanopb (~> 1.30906.0)
   - GoogleDataTransport (7.5.1):
     - nanopb (~> 1.30906.0)
+  - GoogleUserMessagingPlatform (1.4.0)
   - GoogleUtilities/AppDelegateSwizzler (6.7.2):
     - GoogleUtilities/Environment
     - GoogleUtilities/Logger
@@ -75,14 +77,14 @@ PODS:
   - "GoogleUtilities/NSData+zlib (6.7.2)"
   - GoogleUtilities/Reachability (6.7.2):
     - GoogleUtilities/Logger
-  - GTMSessionFetcher/Core (1.4.0)
+  - GTMSessionFetcher/Core (1.5.0)
   - leveldb-library (1.22)
   - nanopb (1.30906.0):
     - nanopb/decode (= 1.30906.0)
     - nanopb/encode (= 1.30906.0)
   - nanopb/decode (1.30906.0)
   - nanopb/encode (1.30906.0)
-  - PromisesObjC (1.2.10)
+  - PromisesObjC (1.2.11)
   - url_launcher (0.0.1):
     - Flutter
 
@@ -107,6 +109,7 @@ SPEC REPOS:
     - Google-Mobile-Ads-SDK
     - GoogleAppMeasurement
     - GoogleDataTransport
+    - GoogleUserMessagingPlatform
     - GoogleUtilities
     - GTMSessionFetcher
     - leveldb-library
@@ -143,16 +146,17 @@ SPEC CHECKSUMS:
   FirebaseStorage: f4f39ae834a7145963b913f54e2f24a9db1d8fac
   Flutter: 0e3d915762c693b495b44d77113d4970485de6ec
   flutter_email_sender: f787522d0e82f50e5766c1213dbffff22fdcf009
-  Google-Mobile-Ads-SDK: a71d6bc14f9cf1f66d686dbdf9ad2091de04059c
+  Google-Mobile-Ads-SDK: 8b58584890539de4527c47ef01e4da941a10bc8a
   GoogleAppMeasurement: a6a3a066369828db64eda428cb2856dc1cdc7c4e
   GoogleDataTransport: f56af7caa4ed338dc8e138a5d7c5973e66440833
+  GoogleUserMessagingPlatform: b168e8c46cd8f92aa3e34b584c4ca78a411ce367
   GoogleUtilities: 7f2f5a07f888cdb145101d6042bc4422f57e70b3
-  GTMSessionFetcher: 6f5c8abbab8a9bce4bb3f057e317728ec6182b10
+  GTMSessionFetcher: b3503b20a988c4e20cc189aa798fd18220133f52
   leveldb-library: 55d93ee664b4007aac644a782d11da33fba316f7
   nanopb: 59317e09cf1f1a0af72f12af412d54edf52603fc
-  PromisesObjC: b14b1c6b68e306650688599de8a45e49fae81151
+  PromisesObjC: 8c196f5a328c2cba3e74624585467a557dcb482f
   url_launcher: 6fef411d543ceb26efce54b05a0a40bfd74cbbef
 
-PODFILE CHECKSUM: f7e759e022c4f92347ae504e2ba13be86cf97492
+PODFILE CHECKSUM: a75497545d4391e2d394c3668e20cfb1c2bbd4aa
 
 COCOAPODS: 1.10.0
