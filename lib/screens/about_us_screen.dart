@@ -149,7 +149,7 @@ class AboutUsScreen extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.end,
                             children: [
                               Container(
-                                height: constraints.maxHeight * 0.40,
+                                height: constraints.maxHeight * 0.3,
                                 child: InkWell(
                                     onTap: () async {
                                       const url =
@@ -172,6 +172,7 @@ class AboutUsScreen extends StatelessWidget {
                                               .bodyText2,
                                     )),
                               ),
+<<<<<<< Updated upstream
                               Container(
                                 height: constraints.maxHeight * 0.3,
                                 width: MediaQuery.of(context).size.width,
@@ -191,12 +192,37 @@ class AboutUsScreen extends StatelessWidget {
                                       textSpan(context, '\nTel No: '),
                                       textSpanNo(context, '+60378869219'),
                                     ],
+=======
+                              Padding(
+                                padding: const EdgeInsets.all(4.0),
+                                child: Container(
+                                  height: constraints.maxHeight * 0.4,
+                                  width: MediaQuery.of(context).size.width,
+                                  child: RichText(
+                                    textAlign: TextAlign.center,
+                                    softWrap: true,
+                                    overflow: TextOverflow.fade,
+                                    text: TextSpan(
+                                      style: TextStyle(
+                                          fontSize:
+                                              SizeConfig.safeBlockHorizontal *
+                                                  3.4),
+                                      children: <TextSpan>[
+                                        //here we call the widget
+                                        textSpan(context, '\n'),
+                                        textSpan(context, 'Mobile no: '),
+                                        textSpanNo(context, '+60122200622\n\n'),
+                                        textSpan(context, 'Tel No: '),
+                                        textSpanNo(context, '+60378869219\n'),
+                                      ],
+                                    ),
+>>>>>>> Stashed changes
                                   ),
                                 ),
                               ),
                               Expanded(
                                 child: Container(
-                                  height: constraints.maxHeight * 0.15,
+                                  height: constraints.maxHeight * 0.1,
                                   child: ListView.builder(
                                       scrollDirection: Axis.horizontal,
                                       shrinkWrap: true,
