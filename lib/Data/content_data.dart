@@ -141,7 +141,7 @@ const ContentData = const [
         'The famous eco-tourism destination can be accessed in many ways! The easiest way is to drive. You can find private parking for around RM 10.00 in Jalan Raja Chulan which is just a stone’s throw from the park.',
     workhour: '7.00 am - 6.00 pm (Daily)',
     fees: 'Free ',
-    phoneNo: '+60320201606',
+    phoneNo: '+603-20201606',
     locationText:
         'Kuala Lumpur, 50250 Kuala Lumpur, Federal Territory of Kuala Lumpur',
     locationUrl: 'https://goo.gl/maps/MRHQSXAkQn3F8FHR9',
@@ -154,7 +154,7 @@ const ContentData = const [
         'The experience is better if you know more about the context behind each sculpture, as the details on the site are very scarce. The garden was formally opened for the commemoration of the 20th anniversary of ASEAN in 1987.',
     workhour: '-',
     fees: 'Free',
-    phoneNo: '+60163337328',
+    phoneNo: '+6016-3337328',
     locationText:
         'ASEAN Sculpture Garden, Persiaran Sultan Salahuddin, Taman Tasik Perdana, 50480 Kuala Lumpur, Federal Territory of Kuala Lumpur',
     locationUrl: 'https://goo.gl/maps/ouKjLqYhL671MAro9',
@@ -206,7 +206,7 @@ const ContentData = const [
         'The Titiwangsa Park is situated 95 hectares northeast of Titiwangsa Station. 57 hectares of the park consists of a lake that is a by-product of tin mining during the British occupation.',
     workhour: '7.00 am - 7.00 pm (Daily)',
     fees: 'Free',
-    phoneNo: '+60326176273',
+    phoneNo: '+603-26176273',
     locationText:
         'Taman Tasik Titiwangsa, Tasik, Titiwangsa, 53200 Kuala Lumpur',
     locationUrl: 'https://g.page/taman-tasik-titiwangsa?share',
@@ -275,7 +275,7 @@ const ContentData = const [
         'Ozmosis Fitness & Day Spa is a serene haven situated right in the heart of Bangsar Baru, adopting the concept of a Balinese spa where calm prevails and all five senses are awakened and refreshed.',
     workhour: '10.00 am - 9.00 pm (Mon - Sun) ',
     fees: '-',
-    phoneNo: '+60322870380',
+    phoneNo: '+603-22870380',
     locationText:
         '16-1, Jalan Telawi 2, Bangsar, 59100 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
     locationUrl: 'https://g.page/OzmosisSpaBangsar?share',
@@ -288,7 +288,7 @@ const ContentData = const [
         'Customers can take a dip in the outdoor swimming pool, relax in the Jacuzzi or carry out an invigorating workout in a professionally fitted gym, before indulging in the skills of professional therapists for a soothing massage or a mani-pedi service. Other facilities offered include a movie theatre, a lounge and a café serving foreign cuisine to soak up appetites between sampling sessions.',
     workhour: '24 Hours (Daily)',
     fees: '-',
-    phoneNo: '+60321485888',
+    phoneNo: '+603-21485888',
     locationText:
         'Lot 5-02-06, 179, Jalan Gading, Bukit Bintang, 55100 Kuala Lumpur',
     locationUrl: 'https://goo.gl/maps/Gn427GNsEJEYQNc77',
@@ -301,7 +301,7 @@ const ContentData = const [
         'It is a 24-hour spa with just one entrance charge, but there are additional facilities such as manicures and massages. Other than that, you should take advantage of all the spa facilities, get all the coffee, use all the internet and eat all the food you need for 24 hours.',
     workhour: '24 hours (Daily) ',
     fees: '-',
-    phoneNo: '+60321459933',
+    phoneNo: '+603-21459933',
     locationText:
         'Wisma Mirama, Jalan Wisma Putra, Kampung Attap, 50460 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
     locationUrl: 'https://goo.gl/maps/dewGmyZf9tawhDhXA',
@@ -314,7 +314,7 @@ const ContentData = const [
         'Swasana Spa has been accredited as a 5-star resort by the Ministry of Tourism of Malaysia, the recipient of the World Luxury Spa Award and several other awards.',
     workhour: '10.00 am - 10.00 pm (Mon - Sun)',
     fees: '-',
-    phoneNo: '+60321471111',
+    phoneNo: '+603-21471111',
     locationText:
         'Impiana @ Klcc Hotel, No. 13, Jalan Pinang, Kuala Lumpur, 50450 Kuala Lumpur, Wilayah Persekutuan',
     locationUrl: 'https://goo.gl/maps/6nVjzutv333RFHup6',
@@ -327,7 +327,7 @@ const ContentData = const [
         'All you need to do is select the treatment that best fits your needs and allow the skilled masseurs and masseuses of Alam to take care of you. You\'re sure to wake up feeling refreshed and ready to conquer Kuala Lumpur!',
     workhour: '12.00 pm - 12.00 am (Daily)',
     fees: '-',
-    phoneNo: '+60192120639',
+    phoneNo: '+6019-2120639',
     locationText: '9, Tengkat Tong Shin, Bukit Bintang, 55100 Kuala Lumpur.',
     locationUrl: 'https://goo.gl/maps/y1GEjwJ1m68P99Qy5',
   ),
@@ -339,7 +339,7 @@ const ContentData = const [
         'Their massages are designed to treat you with gentle strokes to relieve insomnia and to induce deep sleep. Their in-house essential oil in the spa will relax the body to recover from the jet lag. In the end, it will make it possible for the body to remain healthy, smooth and balanced.',
     workhour: '11.00 am - 10.00 pm (Daily)',
     fees: '-',
-    phoneNo: '+60178813990',
+    phoneNo: '+6017-8813990',
     locationText:
         'LG1-5, Lower Ground 1, Arcoris, 10, Jalan Kiara, Mont Kiara, 50480 Kuala Lumpur',
     locationUrl: 'https://g.page/UrootSpaMK?share',
@@ -352,7 +352,7 @@ const ContentData = const [
         'Ideal for those looking for a quiet retreat or couples and friends who want to share a wonderful experience together. Bali Ayu Spa Sanctuary specialises in detoxification and lymphatic treatment as well as muscle relaxation and general massage.',
     workhour: '10.00 am - 10.00 pm (Daily)',
     fees: '-',
-    phoneNo: '+60320944557',
+    phoneNo: '+603-20944557',
     locationText:
         '57, Jalan Bangkung, Bangsar, 59100 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
     locationUrl: 'https://goo.gl/maps/uhNWBvb6NmdL3d9cA',
@@ -365,7 +365,7 @@ const ContentData = const [
         'If you need to take a break while shopping and relaxing, you don\'t need to go any further. The spa provides a wide variety of treatments, from various styles of massages to body scrubs and manicures and pedicures.',
     workhour: '10.00 am - 10.00 pm (Daily)',
     fees: '-',
-    phoneNo: '+60178779912',
+    phoneNo: '+6017-8779912',
     locationText:
         'Mid Valley Megamall, Lot No.2, LG, 59, Lingkaran Syed Putra, Mid Valley City, 59200 Kuala Lumpur, Federal Territory of Kuala Lumpur',
     locationUrl: 'https://goo.gl/maps/G9TbuVJpCB3k1V5G6',
@@ -378,7 +378,7 @@ const ContentData = const [
         'Offering immersive experiences that provide a quick break from daily stress, the spa is the perfect place to visit for authentic Thai massages. Masseuses here are well-trained and strong, so don\'t be surprised when they apply strong pressure to ease the pain in your troubled areas. \n\nDisclaimer : This place is temporarily closed.',
     workhour: '10.00 am - 10.00 pm (Daily)',
     fees: '-',
-    phoneNo: '+60341628699',
+    phoneNo: '+603-41628699',
     locationText:
         'L6-19 Melawati Mall, 355 Jalan Bandar Melawati, Pusat Bandar Melawati, 53100 Kuala Lumpur, Selangor',
     locationUrl: 'https://goo.gl/maps/WaGvDtJmRMQixwjB8',
@@ -391,7 +391,7 @@ const ContentData = const [
         'Reborn is well known for its foot massages and Tui Na treatments that offer instant body rejuvenation. If you want your massage to be less painful, you might want to pay a visit to this spa, where traditional acupressure is used to heal and restore balance to your body.',
     workhour: '11.00 am - 1.00 am (Daily)',
     fees: '-',
-    phoneNo: '+60390571099',
+    phoneNo: '+603-90571099',
     locationText:
         '29-2, Jalan Radin Anum, Sri Petaling, 57000 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
     locationUrl: 'https://goo.gl/maps/WczKLdxcfJicRbM98',
@@ -405,7 +405,7 @@ const ContentData = const [
         'The structure looks like a truncated cone topped with a geodesic dome. The themes used in the exhibition galleries include environmental odyssey, exploration routes, the future of the earth, and thought machines. The centre has a digital library, a science lab, three classrooms, two auditoriums and a multipurpose space.',
     workhour: '9.00 am - 4.00 pm (Sun - Thu)',
     fees: '-',
-    phoneNo: '+60320893400',
+    phoneNo: '+603-20893400',
     locationText:
         'Persiaran Bukit Kiara Bukit Damansara, Bukit Kiara, 50662 Kuala Lumpur',
     locationUrl: 'https://goo.gl/maps/fpouoVXvTCiG2D8t9',
@@ -418,7 +418,7 @@ const ContentData = const [
         'Inside, visitors can explore a number of rooms that they’d find in a real house, including kitchen, living room, master bedroom and an attic – all upside down, of course. Depending on how long you need to pose for photos, a visit here takes between 30 minutes to an hour.',
     workhour: '10.00 am - 10.00 pm (Daily)',
     fees: '-',
-    phoneNo: '+60350319458',
+    phoneNo: '+603-50319458',
     locationText:
         'SB-1, Sunsuria Forum, No.1, Jalan Setia Dagang AL U13/AL, Seksyen U13, Setia Alam, 40170 Shah Alam, Selangor',
     locationUrl: 'https://goo.gl/maps/LtuUHLMBwUkYXRKP9',
@@ -431,7 +431,7 @@ const ContentData = const [
         'The National Planetarium might not be as high tech as the other planetariums around the world, but it still deserves a visit. The main entrance is evocative of a teleport chamber, which leads to a series of halls containing two planetaries with interactive exhibits and a Space Theater.',
     workhour: '9.00 am - 4.30 pm (Tues - Sun)',
     fees: '-',
-    phoneNo: '+60320205444',
+    phoneNo: '+603-20205444',
     locationText:
         '53, Jalan Perdana, Tasik Perdana, 50480 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
     locationUrl: 'https://goo.gl/maps/cswKxyp4SUG8ndE26',
@@ -444,7 +444,7 @@ const ContentData = const [
         'If you are looking for kid-friendly places in KL, KL Tower Mini Zoo should be on your list. A wide variety of exotic animals can be found here, ranging from large python monkeys to cuddly rabbits.',
     workhour: '10.00 am - 9.00 pm (Daily) ',
     fees: '-',
-    phoneNo: '+60320223943',
+    phoneNo: '+603-20223943',
     locationText:
         'Ground Floor, Menara Kuala Lumpur, WP, Jalan Puncak, 50250 Kuala Lumpur',
     locationUrl: 'https://goo.gl/maps/i3Jwd9KvL129q3A2A',
@@ -540,7 +540,7 @@ const ContentData = const [
         'Visit the National Museum to learn more about Malaysia\'s history and culture. Local resources and national costumes are also on display. There are also temporary exhibitions that rotate throughout the year.',
     workhour: '9.00 am - 5.00 pm (Tue - Sun)',
     fees: '-',
-    phoneNo: '+60322671000',
+    phoneNo: '+603-22671000',
     locationText:
         'Jabatan Muzium Malaysia, Jalan Damansara, Perdana Botanical Gardens, 50566 Kuala Lumpur, Federal Territory of Kuala Lumpur ',
     locationUrl: 'https://g.page/national-museum-of-malaysia?share',
@@ -552,7 +552,7 @@ const ContentData = const [
         'Taman Eko Rimba Kuala Lumpur is one of Malaysia\'s oldest forests. Located in Hutan Simpan Bukit Nanas, one of the oldest forests in Malaysia.  Taman Eko Rimba Kuala Lumpur Is FREE & Instagram-worthy!',
     workhour: '8.00 am - 6.00 pm (Daily)',
     fees: '-',
-    phoneNo: '+60320264741',
+    phoneNo: '+603-20264741',
     locationText:
         'Kuala Lumpur, 50250 Kuala Lumpur, Federal Territory of Kuala Lumpur',
     locationUrl: 'https://goo.gl/maps/LHLmPBtJQWzW8bqPA',
@@ -564,7 +564,7 @@ const ContentData = const [
         'Petaling Street also known as Chinatown by locals. The street food vendors that set up here at night are particularly popular. The street is also well known for its counterfeit goods that are priced dirt-cheap.',
     workhour: '24 Hours',
     fees: '-',
-    phoneNo: '+603-2032 5988',
+    phoneNo: '+603-20325988',
     locationText:
         'Jalan Petaling, City Centre, 50000 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur ',
     locationUrl: 'https://g.page/petaling-street-market?share',
@@ -590,7 +590,7 @@ const ContentData = const [
         'The 120-year-old Pasar Seni has been listed as a heritage site by the Department of National Heritage. Inside the building is an array of boutiques, crafts and souvenir stalls with traders selling local goods. It is a short walk away from Petaling Street, along Jalan Hang Kasturi, and is near major transport links to all major destinations in Kuala Lumpur. The complex is an art-deco-style complex with local \'Baroque\' trimmings.',
     workhour: '10.00 am – 10.00 pm (Daily)',
     fees: '-',
-    phoneNo: '+60320310399 ',
+    phoneNo: '+603-20310399 ',
     locationText:
         'Central Market, Kasturi Walk, 50050, Wilayah Persekutuan Kuala Lumpur',
     locationUrl: 'https://goo.gl/maps/cXDKTr1tJ3n7rzKo7',
@@ -603,7 +603,7 @@ const ContentData = const [
         'The Petaling Street Market is well known for its "imitation" products as well as its food options that are rich in culture. With hundreds of vendors selling items ranging from luxury bags to traditional fried rice noodles, Petaling Street is a destination for visitors and locals looking for KL bargains.',
     workhour: '7.00 am – 8.00 pm (Daily)',
     fees: '-',
-    phoneNo: '+60326176404',
+    phoneNo: '+603-26176404',
     locationText:
         'Jalan Petaling, City Centre, 50000 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
     locationUrl: 'https://g.page/petaling-street-market?share',
@@ -616,7 +616,7 @@ const ContentData = const [
         'Shoppes at Four Seasons Place is an exclusive shopping mall featuring six floors of retail, restaurants, speciality grocer and more. Expect an exciting view of the lively days and nights that KL city centre has to offer!',
     workhour: '10.00 am - 10.00 pm (Daily) ',
     fees: '-',
-    phoneNo: '+60320265085',
+    phoneNo: '+603-20265085',
     locationText:
         '145, Jalan Ampang, Kuala Lumpur City Centre, 50088 Kuala Lumpur, Federal Territory of Kuala Lumpur',
     locationUrl: 'https://goo.gl/maps/tijEBAS2F3UTyEWY7',
@@ -629,7 +629,7 @@ const ContentData = const [
         'A landmark of KL, the location of Lot 10 has been instrumental in its development. Sporting an instantly identifiable, vibrant green façade, substantial refurbishment in early 2012 saw the interior nixing its 1980s theme.',
     workhour: '10.00 am - 10.00 pm ',
     fees: '-',
-    phoneNo: '+60321410500',
+    phoneNo: '+603-21410500',
     locationText:
         '50, Bukit Bintang Street, Bukit Bintang, 55100 Kuala Lumpur, Federal Territory of Kuala Lumpur',
     locationUrl: 'https://g.page/Lot10KL?share',
@@ -642,7 +642,7 @@ const ContentData = const [
         'Pavilion KL is a favourite among KL-ites, with trendy dining choices, big-box retailers and access to both foreign designer brands and local speciality retailers. Usually crowded no matter the day of the week or afternoon, there are six shopping \'zones\' and a row of street boutiques in the seven-storey lifestyle centre.',
     workhour: '10.00 am - 10.00 pm  ',
     fees: '-',
-    phoneNo: '+60321188833',
+    phoneNo: '+603-21188833',
     locationText:
         'Bukit Bintang, 55100 Kuala Lumpur, Federal Territory of Kuala Lumpur',
     locationUrl: 'https://g.page/pavilionmall-kuala-lumpur?share',
@@ -760,7 +760,7 @@ const ContentData = const [
         'Luxurious hotel in downtown Kuala Lumpur. Designed to represent Malaysia\'s true architectural heritage. A beautifully built hotel with a fantastic venue.',
     workhour: '-',
     fees: '-',
-    phoneNo: '+60326889688',
+    phoneNo: '+603-26889688',
     locationText:
         '5, Jalan Conlay, Kuala Lumpur, 50450 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
     locationUrl: 'https://goo.gl/maps/rtDQU65UC6bsNpi46',
@@ -772,7 +772,7 @@ const ContentData = const [
         'Strategically situated near Kuala Lumpur, Majestic Hotel opened its doors in December 2012. Established in 1932, the original hotel was one of the prominent of Kuala Lumpur in its day.',
     workhour: '-',
     fees: '-',
-    phoneNo: '+60327858000',
+    phoneNo: '+603-27858000',
     locationText:
         '5, Jalan Sultan Hishamuddin, Tasik Perdana, 50000 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
     locationUrl: 'https://goo.gl/maps/zvxfPSXEWP6a6PSE7',
@@ -784,7 +784,7 @@ const ContentData = const [
         'The Furama Hotel is 750 metres from Imbi Monorail Station and offers spacious accommodation with free WiFi and free on-site parking. Berjaya Times Square shopping centre is only a short 4-minute walk from the hotel.',
     workhour: '-',
     fees: '-',
-    phoneNo: '+60327888888',
+    phoneNo: '+603-27888888',
     locationText:
         '136, Jalan Changkat Thambi Dollah, Bukit Bintang, 55100 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
     locationUrl: 'https://g.page/furamabukitbintang?share',
@@ -796,7 +796,7 @@ const ContentData = const [
         'JW Marriott Kuala Lumpur is located in close proximity to the bustling Bukit Bintang area. This 5-star luxury hotel provides luxurious comfort and convenience.',
     workhour: '-',
     fees: '-',
-    phoneNo: '+60327159000',
+    phoneNo: '+603-27159000',
     locationText:
         '183, Bukit Bintang Street, Bukit Bintang, 55100 Kuala Lumpur, Federal Territory of Kuala Lumpur',
     locationUrl: 'https://goo.gl/maps/n8fbrfVVfR126DQb6',
@@ -808,7 +808,7 @@ const ContentData = const [
         'Mandarin Oriental is located between the famous Petronas Twin Towers and the lush gardens of Kuala Lumpur City Park. The hotel is situated approximately 45 km from KLIA.',
     workhour: '-',
     fees: '-',
-    phoneNo: '+60323808888',
+    phoneNo: '+603-23808888',
     locationText:
         'Kuala Lumpur City Centre, 50088 Kuala Lumpur, Federal Territory of Kuala Lumpur',
     locationUrl: 'https://g.page/mandarin-oriental-kuala-lumpur?share',
@@ -820,7 +820,7 @@ const ContentData = const [
         'Just 100m from Masjid Jamek LRT station, Citin Hotel is convenient for tourists in the heart of Kuala Lumpur.',
     workhour: '-',
     fees: '-',
-    phoneNo: '+60326932999',
+    phoneNo: '+603-26932999',
     locationText:
         '33, Jalan Melayu, City Centre, 50100 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
     locationUrl: 'https://goo.gl/maps/9nUyxxMFWgcncPKb9',
@@ -832,7 +832,7 @@ const ContentData = const [
         'Prescott Hotel Kuala Lumpur is within easy reach of major financial districts, government buildings and entertainment and cultural centres.',
     workhour: '-',
     fees: '-',
-    phoneNo: '+60327137887',
+    phoneNo: '+603-27137887',
     locationText:
         'No 23, Lorong Medan Tuanku 1, Off, Jalan Sultan Ismail, 50300 Kuala Lumpur',
     locationUrl: 'https://goo.gl/maps/e8KnC22y5p1R3k6N7',
@@ -844,7 +844,7 @@ const ContentData = const [
         'The Westin Kuala Lumpur is located in the heart of the Golden Triangle of Kuala Lumpur. Shopping malls including Pavilion, Lot 10 and Sungei Wang are located within walking distance of the property.',
     workhour: '-',
     fees: '-',
-    phoneNo: '+60327318333',
+    phoneNo: '+603-27318333',
     locationText:
         '199, Bukit Bintang Street, Bukit Bintang, 55100 Kuala Lumpur, Federal Territory of Kuala Lumpur',
     locationUrl: 'https://goo.gl/maps/WGBnEt42Bz717M53A',
@@ -856,7 +856,7 @@ const ContentData = const [
         'A 2-minute walk to KL Sentral, Hilton Kuala Lumpur is located 750 m away from the 9-storey premium shopping mall, Nu Sentral.',
     workhour: '-',
     fees: '-',
-    phoneNo: '+60322642264',
+    phoneNo: '+603-22642264',
     locationText:
         '3, Jalan Stesen Sentral, Kuala Lumpur Sentral, 50470 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
     locationUrl: 'https://goo.gl/maps/9Qah1cjEtpi7LRAk8',
@@ -868,7 +868,7 @@ const ContentData = const [
         'InterContinental Kuala Lumpur offers facilities in the hustle and bustle of the city centre.',
     workhour: '-',
     fees: '-',
-    phoneNo: '+60327826000',
+    phoneNo: '+603-27826000',
     locationText:
         '165, Jalan Ampang, Kuala Lumpur, 50450 Kuala Lumpur, Federal Territory of Kuala Lumpur',
     locationUrl: 'https://goo.gl/maps/chLuAmGSRMYrMSyYA',
@@ -1242,7 +1242,7 @@ const MedicalData = const [
         'The hospital\'s international credibility has steadily grown over the last 20 years to establish itself as one of the country\'s most favoured private healthcare facilities for both local and international patients.',
     workhour: 'Open 24 hours (Daily)',
     fees: '-',
-    phoneNo: '+60341413000',
+    phoneNo: '+603-41413000',
     image:
         'assets/images/contentList/medicalTourism/sub-medical/Gleneagles-KL.jpg',
     locationText:
@@ -1259,14 +1259,14 @@ const MedicalData = const [
         'The hospital is situated in close vicinity to the National Heart Institute, National Blood Bank, the Institute of Medical Science and the National Library. \nInternational: +603 2726 8688',
     workhour: 'Open 24 hours (Daily)',
     fees: '-',
-    phoneNo: '1800188688',
+    phoneNo: '1800-18-8688',
     image:
         'assets/images/contentList/medicalTourism/sub-medical/KPJ-Tawakkal-KL.jpg',
     locationText:
         '1, Jalan Pahang Barat, Pekeliling, 53000 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
     locationUrl: 'https://goo.gl/maps/PzR7S8BC1A5eAXha8',
   ),
-   MedicalClass(
+  MedicalClass(
     id: 'cl3_14',
     categories: 'cl1_14',
     title: 'Damai Service Hospital',
@@ -1276,7 +1276,7 @@ const MedicalData = const [
         'The facility has a wide range of diagnostic and rehabilitation services capable of treating up to 95% of the illness spectrum.',
     workhour: 'Open 24 hours (Daily)',
     fees: '-',
-    phoneNo: '+60340434900',
+    phoneNo: '+603-40434900',
     image:
         'assets/images/contentList/medicalTourism/sub-medical/Damai-Service-Hospital.jpg',
     locationText:
@@ -1295,12 +1295,12 @@ const MedicalData = const [
         'DentalPro specialises in restorative and cosmetic dentistry procedures such as implants, crowns, bridges, composite and porcelain veneers and root canal treatment. They also have general dental treatment.',
     workhour: '9.00 am - 6.00 pm (Mon-Sat) \nClosed on Sun & Public Holiday',
     fees: '-',
-    phoneNo: '+60321471111',
+    phoneNo: '+603-21471111',
     locationText:
         '12, Jalan Sri Semantan 1, Damansara Heights, 50490 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
     locationUrl: 'https://g.page/dentalpro-specialist?share',
   ),
-   MedicalClass(
+  MedicalClass(
     id: 'cl2_14',
     categories: 'cl2_14',
     title: 'Imperial Dental Specialist Centre',
@@ -1312,7 +1312,7 @@ const MedicalData = const [
         'They operate as a one-stop dental centre offering holistic solutions to dental, skeletal and soft tissue problems as well as neuromuscular problems of the craniofacial areas in complete dental treatment combined with the body\'s overall physical health.',
     workhour: '9.00 am - 8.00 pm (Mon-Sat) \n9.00 am - 6.00 pm (Sun)',
     fees: '-',
-    phoneNo: '+60392120605',
+    phoneNo: '+603-92120605',
     locationText:
         '62 & 64, Jalan Telawi, Bangsar, 59100 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
     locationUrl: 'https://g.page/imperialdentalspecialistcentre?share',
@@ -1321,17 +1321,15 @@ const MedicalData = const [
     id: 'cl3_14',
     categories: 'cl2_14',
     title: 'Kuala Lumpur International Dental Centre (Ampang)',
-    image:
-        'assets/images/contentList/medicalTourism/sub-medical/KLIDC.jpg',
+    image: 'assets/images/contentList/medicalTourism/sub-medical/KLIDC.jpg',
     decrepitation:
         'Kuala Lumpur International Dental Centre has positioned itself as the provider of quality oral healthcare, a front runner in the dental healthcare tourism industry.',
     content:
         'KLIDC is equipped to manage and treat oral cavity diseases as well as oral surgery and advanced implant and bone augmentation surgery. ',
     workhour: '10.00 am - 7.00 pm (Daily)',
     fees: '-',
-    phoneNo: '+60321625555',
-    locationText:
-        'G-01 M SUITES, 283, Jalan Ampang, 50450 Kuala Lumpur',
+    phoneNo: '+603-21625555',
+    locationText: 'G-01 M SUITES, 283, Jalan Ampang, 50450 Kuala Lumpur',
     locationUrl: 'https://goo.gl/maps/CPhmyuAfvA86YGeH9',
   ),
   MedicalClass(
@@ -1346,12 +1344,12 @@ const MedicalData = const [
         'Using the latest state-of-the-art technology, their mission is to help you uncover your beauty potential and reclaim your confidence. Ko Skin Specialists work to distinguish themselves from other skincare clinics in the region by always showing sincere consideration to each and every patient they treat.',
     workhour: '10.00 am - 7.00 pm (Mon- Fri) \n10.00 am - 6.00 pm (Sat) ',
     fees: '-',
-    phoneNo: '+60392210261',
+    phoneNo: '+603-92210261',
     locationText:
         '32-4, Jalan Metro Pudu, Fraser Business Park, 55100 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
     locationUrl: 'https://goo.gl/maps/TC2Pp6QsgV8jypQg8',
   ),
-   MedicalClass(
+  MedicalClass(
     id: 'cl2_14',
     categories: 'cl3_14',
     title: 'Nexus Clinic Kuala Lumpur (Skin & Hair Aesthetic Clinic)',
@@ -1363,12 +1361,12 @@ const MedicalData = const [
         'Using the latest state-of-the-art technology, their mission is to help you uncover your beauty potential and reclaim your confidence. Ko Skin Specialists work to distinguish themselves from other skincare clinics in the region by always showing sincere consideration to each and every patient they treat.',
     workhour: '8.30 am - 6.00 pm (Mon -Thur) \n8.30 am - 6.30 pm (Fri & Sat)  ',
     fees: '-',
-    phoneNo: '+60167025699 ',
+    phoneNo: '+6016-7025699 ',
     locationText:
         'LG 10, Lower Ground Floor, Wisma UOA II, Jalan Pinang, 50450 Kuala Lumpur',
     locationUrl: 'https://goo.gl/maps/5YAaJVpS2jYeu4jy7',
   ),
-   MedicalClass(
+  MedicalClass(
     id: 'cl3_14',
     categories: 'cl3_14',
     title: 'Peter Ch’ng Clinic',
@@ -1380,7 +1378,7 @@ const MedicalData = const [
         'Peter Ch’ng Clinic offers services that treat patients\' skin disorders. The range of services includes a number of skin problems and issues, hair (removal and growth) and body problems.',
     workhour: '10.00 am - 6.00 pm (Mon - Sat)',
     fees: '-',
-    phoneNo: '+601122882299',
+    phoneNo: '+6011-22882299',
     locationText:
         'G-G-1 Plaza Arkadia, 3 Jalan Intisari Perdana, Desa Parkcity, 52200 Kuala Lumpur',
     locationUrl: 'https://g.page/peterchngdpc?share',

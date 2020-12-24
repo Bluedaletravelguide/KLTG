@@ -187,11 +187,9 @@ class AboutUsScreen extends StatelessWidget {
                                     children: <TextSpan>[
                                       //here we call the widget
                                       textSpan(context, 'Mobile no: '),
-                                      textSpanNo(context, '+60122200622\n'),
-                                      textSpan(context, 'Tel No: '),
-                                      textSpanNo(context, '+60378869219\n'),
-                                      textSpan(context, 'Fax No: '),
-                                      textSpanNo(context, "+60378878212"),
+                                      textSpanNo(context, '+60122200622'),
+                                      textSpan(context, '\nTel No: '),
+                                      textSpanNo(context, '+60378869219'),
                                     ],
                                   ),
                                 ),
