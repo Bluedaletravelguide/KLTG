@@ -172,27 +172,7 @@ class AboutUsScreen extends StatelessWidget {
                                               .bodyText2,
                                     )),
                               ),
-<<<<<<< Updated upstream
-                              Container(
-                                height: constraints.maxHeight * 0.3,
-                                width: MediaQuery.of(context).size.width,
-                                child: RichText(
-                                  textAlign: TextAlign.center,
-                                  softWrap: true,
-                                  overflow: TextOverflow.fade,
-                                  text: TextSpan(
-                                    style: TextStyle(
-                                        fontSize:
-                                            SizeConfig.safeBlockHorizontal *
-                                                3.4),
-                                    children: <TextSpan>[
-                                      //here we call the widget
-                                      textSpan(context, 'Mobile no: '),
-                                      textSpanNo(context, '+60122200622'),
-                                      textSpan(context, '\nTel No: '),
-                                      textSpanNo(context, '+60378869219'),
-                                    ],
-=======
+                              //Divider(),
                               Padding(
                                 padding: const EdgeInsets.all(4.0),
                                 child: Container(
@@ -208,15 +188,13 @@ class AboutUsScreen extends StatelessWidget {
                                               SizeConfig.safeBlockHorizontal *
                                                   3.4),
                                       children: <TextSpan>[
-                                        //here we call the widget
                                         textSpan(context, '\n'),
                                         textSpan(context, 'Mobile no: '),
-                                        textSpanNo(context, '+60122200622\n\n'),
-                                        textSpan(context, 'Tel No: '),
-                                        textSpanNo(context, '+60378869219\n'),
+                                        textSpanNo(context, '+6012-2200622'),
+                                        textSpan(context, '\n\nTel No: '),
+                                        textSpanNo(context, '+603-78869219'),
                                       ],
                                     ),
->>>>>>> Stashed changes
                                   ),
                                 ),
                               ),
