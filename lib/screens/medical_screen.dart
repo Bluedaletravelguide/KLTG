@@ -80,7 +80,7 @@ class _MedicalState extends State<Medical> {
                 ..load()
                 ..show(
                     anchorType: AnchorType.bottom,
-                    anchorOffset: kBottomNavigationBarHeight);
+                  );
             } else {
               _bannerAd ??= _banAdsense.createBannerAd();
               _bannerAd

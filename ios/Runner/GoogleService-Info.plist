@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>735221333649-l9ob9nivccevqmmom0sck0jv9hq21322.apps.googleusercontent.com</string>
+	<string>735221333649-85istibe5o649rq2f68f2rohbv5fgnte.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.735221333649-l9ob9nivccevqmmom0sck0jv9hq21322</string>
+	<string>com.googleusercontent.apps.735221333649-85istibe5o649rq2f68f2rohbv5fgnte</string>
 	<key>API_KEY</key>
 	<string>AIzaSyCijHqd2NpVqVOXWhBkapQ3NGo3GJH8amw</string>
 	<key>GCM_SENDER_ID</key>
@@ -13,7 +13,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>my.com.klthguide</string>
+	<string>my.com.kltheguide</string>
 	<key>PROJECT_ID</key>
 	<string>kltg-e77d9</string>
 	<key>STORAGE_BUCKET</key>
@@ -29,10 +29,8 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:735221333649:ios:29ef01d027f2255e6f8930</string>
+	<string>1:735221333649:ios:f92dc8f973e8eade6f8930</string>
 	<key>DATABASE_URL</key>
 	<string>https://kltg-e77d9.firebaseio.com</string>
-	<key>ADMOB_APP_ID</key>
-	<string>ca-app-pub-7002644831588730~7281355962</string>
 </dict>
 </plist>
