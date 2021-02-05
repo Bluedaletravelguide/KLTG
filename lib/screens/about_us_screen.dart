@@ -206,8 +206,7 @@ class AboutUsScreen extends StatelessWidget {
                                                     context, 'Mobile no: '),
                                                 textSpanNo(
                                                     context, '+6012-2200622'),
-                                                textSpan(
-                                                    context, '\n\nTel No: '),
+                                                textSpan(context, '\nTel No: '),
                                                 textSpanNo(
                                                     context, '+603-78869219'),
                                               ],
