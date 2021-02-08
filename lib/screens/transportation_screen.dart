@@ -67,8 +67,7 @@ class _TransportationScreenState extends State<TransportationScreen> {
               _bannerAd
                 ..load()
                 ..show(
-                    anchorType: AnchorType.bottom,
-                    anchorOffset: kBottomNavigationBarHeight);
+                    anchorType: AnchorType.bottom,);
             } else {
               _bannerAd ??= _banAdsense.createBannerAd();
               _bannerAd

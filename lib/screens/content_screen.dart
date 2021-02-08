@@ -1,4 +1,6 @@
-import 'package:KlTheGuide/models/AdsIn.dart';
+import 'dart:io';
+
+import '../models/AdsBan.dart';
 import 'package:firebase_admob/firebase_admob.dart';
 import 'package:flutter/material.dart';
 import '../Data/content_data.dart';
@@ -26,12 +28,37 @@ class ContentScreen extends StatefulWidget {
 class _ContentScreenState extends State<ContentScreen> {
 //Ads Code:
 
-  InterstitialAd _interstitialAd;
+  BannerAd _bannerAd;
+  BanAdsense _banAdsense;
 
   void initState() {
+    if (Platform.isIOS) {
+      FirebaseAdMob.instance
+          .initialize(appId: 'ca-app-pub-7002644831588730~7281355962');
+    } else {
+      FirebaseAdMob.instance
+          .initialize(appId: 'ca-app-pub-7002644831588730~3248809866');
+    }
     super.initState();
-    _interstitialAd?.dispose();
-    _interstitialAd = InAdsense().createInterstitialAd()..load();
+    _bannerAd = BanAdsense().createBannerAd()..load();
+  }
+
+  @override
+  void dispose() {
+    _bannerAd?.dispose();
+    _banAdsense.removeAd();
+    super.dispose();
+  }
+
+  void removeAd() {
+    _bannerAd?.dispose();
+    _bannerAd = null;
+  }
+
+  @override
+  void didUpdateWidget(covariant ContentScreen oldWidget) {
+    removeAd();
+    super.didUpdateWidget(oldWidget);
   }
 
 //The main widget
@@ -45,10 +72,24 @@ class _ContentScreenState extends State<ContentScreen> {
 
     final pageBody = SafeArea(
       child: Material(
-        child: GestureDetector(
-          onVerticalDragCancel: () {
-            _interstitialAd?.show();
-          },
+          child: GestureDetector(
+        onVerticalDragCancel: () {
+          if (Platform.isIOS) {
+            _bannerAd ??= _banAdsense.createBannerAd();
+            _bannerAd
+              ..load()
+              ..show(
+                anchorType: AnchorType.bottom,
+              );
+          } else {
+            _bannerAd ??= _banAdsense.createBannerAd();
+            _bannerAd
+              ..load()
+              ..show();
+          }
+        },
+        child: Padding(
+          padding: EdgeInsets.only(bottom: 50),
           child: SingleChildScrollView(
             child: Column(children: [
               Stack(children: [
@@ -85,7 +126,7 @@ class _ContentScreenState extends State<ContentScreen> {
             ]),
           ),
         ),
-      ),
+      )),
     );
     return PlatformScaffold(
       appBar: PlatformAppBar(title: Text(contentTitle)),

@@ -22,7 +22,7 @@ class BanAdsense {
             adUnitId: 'ca-app-pub-7002644831588730/4427349537',
             //test id ('ca-app-pub-3940256099942544/6300978111')
             //actual ('ca-app-pub-7002644831588730/4427349537')
-            size: AdSize.smartBanner,
+            size: AdSize.banner,
             listener: (MobileAdEvent event) {
               print("BannerAd event $event");
             });
