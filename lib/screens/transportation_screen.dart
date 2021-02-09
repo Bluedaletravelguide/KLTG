@@ -35,6 +35,7 @@ class _TransportationScreenState extends State<TransportationScreen> {
     }
     super.initState();
     _bannerAd = BanAdsense().createBannerAd()..load();
+    showAd();
   }
 
   @override
@@ -42,6 +43,22 @@ class _TransportationScreenState extends State<TransportationScreen> {
     _bannerAd?.dispose();
     _banAdsense.removeAd();
     super.dispose();
+  }
+
+  void showAd() {
+    if (Platform.isIOS) {
+      _bannerAd ??= _banAdsense.createBannerAd();
+      _bannerAd
+        ..load()
+        ..show(
+          anchorType: AnchorType.bottom,
+        );
+    } else {
+      _bannerAd ??= _banAdsense.createBannerAd();
+      _bannerAd
+        ..load()
+        ..show();
+    }
   }
 
   void removeAd() {
@@ -61,20 +78,6 @@ class _TransportationScreenState extends State<TransportationScreen> {
     final pageBody = SafeArea(
       child: Material(
         child: GestureDetector(
-          onVerticalDragCancel: () {
-            if (Platform.isIOS) {
-              _bannerAd ??= _banAdsense.createBannerAd();
-              _bannerAd
-                ..load()
-                ..show(
-                    anchorType: AnchorType.bottom,);
-            } else {
-              _bannerAd ??= _banAdsense.createBannerAd();
-              _bannerAd
-                ..load()
-                ..show();
-            }
-          },
           child: Padding(
             padding: EdgeInsets.only(bottom: 50),
             child: SingleChildScrollView(

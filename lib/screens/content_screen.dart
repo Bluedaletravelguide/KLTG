@@ -41,6 +41,7 @@ class _ContentScreenState extends State<ContentScreen> {
     }
     super.initState();
     _bannerAd = BanAdsense().createBannerAd()..load();
+    showAd();
   }
 
   @override
@@ -48,6 +49,22 @@ class _ContentScreenState extends State<ContentScreen> {
     _bannerAd?.dispose();
     _banAdsense.removeAd();
     super.dispose();
+  }
+
+  void showAd() {
+    if (Platform.isIOS) {
+      _bannerAd ??= _banAdsense.createBannerAd();
+      _bannerAd
+        ..load()
+        ..show(
+          anchorType: AnchorType.bottom,
+        );
+    } else {
+      _bannerAd ??= _banAdsense.createBannerAd();
+      _bannerAd
+        ..load()
+        ..show();
+    }
   }
 
   void removeAd() {
@@ -71,63 +88,46 @@ class _ContentScreenState extends State<ContentScreen> {
         ContentData.firstWhere((contents) => contents.id == contentId);
 
     final pageBody = SafeArea(
-      child: Material(
-          child: GestureDetector(
-        onVerticalDragCancel: () {
-          if (Platform.isIOS) {
-            _bannerAd ??= _banAdsense.createBannerAd();
-            _bannerAd
-              ..load()
-              ..show(
-                anchorType: AnchorType.bottom,
-              );
-          } else {
-            _bannerAd ??= _banAdsense.createBannerAd();
-            _bannerAd
-              ..load()
-              ..show();
-          }
-        },
-        child: Padding(
-          padding: EdgeInsets.only(bottom: 50),
-          child: SingleChildScrollView(
-            child: Column(children: [
-              Stack(children: [
-                Image.asset(
-                  contentImage,
-                  width: double.infinity,
-                  fit: BoxFit.fill,
-                ),
-                Positioned(
-                  bottom: 0,
-                  child: Decrepitation(
-                    text: selectcontent.decrepitation,
-                  ),
-                ),
-              ]),
-              Container(
-                margin: EdgeInsets.only(top: 30),
-                padding: EdgeInsets.symmetric(horizontal: 20),
-                alignment: Alignment.center,
-                child: Text(
-                  selectcontent.content,
-                  style: Theme.of(context).textTheme.bodyText2,
-                  textAlign: TextAlign.justify,
+        child: Material(
+      child: Padding(
+        padding: EdgeInsets.only(bottom: 50),
+        child: SingleChildScrollView(
+          child: Column(children: [
+            Stack(children: [
+              Image.asset(
+                contentImage,
+                width: double.infinity,
+                fit: BoxFit.fill,
+              ),
+              Positioned(
+                bottom: 0,
+                child: Decrepitation(
+                  text: selectcontent.decrepitation,
                 ),
               ),
-              SizedBox(height: 10),
-              Fees(text: selectcontent.fees),
-              Tel(text: selectcontent.phoneNo, phone: selectcontent.phoneNo),
-              WorkHour(text: selectcontent.workhour),
-              Location(
-                  text: selectcontent.locationText,
-                  location: selectcontent.locationUrl),
-              SizedBox(height: 50),
             ]),
-          ),
+            Container(
+              margin: EdgeInsets.only(top: 30),
+              padding: EdgeInsets.symmetric(horizontal: 20),
+              alignment: Alignment.center,
+              child: Text(
+                selectcontent.content,
+                style: Theme.of(context).textTheme.bodyText2,
+                textAlign: TextAlign.justify,
+              ),
+            ),
+            SizedBox(height: 10),
+            Fees(text: selectcontent.fees),
+            Tel(text: selectcontent.phoneNo, phone: selectcontent.phoneNo),
+            WorkHour(text: selectcontent.workhour),
+            Location(
+                text: selectcontent.locationText,
+                location: selectcontent.locationUrl),
+            SizedBox(height: 50),
+          ]),
         ),
-      )),
-    );
+      ),
+    ));
     return PlatformScaffold(
       appBar: PlatformAppBar(title: Text(contentTitle)),
       body: pageBody,

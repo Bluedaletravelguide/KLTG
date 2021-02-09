@@ -34,6 +34,7 @@ class _TravelTipsScreenState extends State<TravelTipsScreen> {
     }
     super.initState();
     _bannerAd = BanAdsense().createBannerAd()..load();
+    showAd();
   }
 
   @override
@@ -48,6 +49,22 @@ class _TravelTipsScreenState extends State<TravelTipsScreen> {
     _bannerAd = null;
   }
 
+  void showAd() {
+    if (Platform.isIOS) {
+      _bannerAd ??= _banAdsense.createBannerAd();
+      _bannerAd
+        ..load()
+        ..show(
+          anchorType: AnchorType.bottom,
+        );
+    } else {
+      _bannerAd ??= _banAdsense.createBannerAd();
+      _bannerAd
+        ..load()
+        ..show();
+    }
+  }
+
   @override
   void didUpdateWidget(covariant TravelTipsScreen oldWidget) {
     removeAd();
@@ -60,21 +77,6 @@ class _TravelTipsScreenState extends State<TravelTipsScreen> {
     final pageBody = SafeArea(
       child: Material(
         child: GestureDetector(
-          onVerticalDragCancel: () {
-            if (Platform.isIOS) {
-              _bannerAd ??= _banAdsense.createBannerAd();
-              _bannerAd
-                ..load()
-                ..show(
-                  anchorType: AnchorType.bottom,
-                );
-            } else {
-              _bannerAd ??= _banAdsense.createBannerAd();
-              _bannerAd
-                ..load()
-                ..show();
-            }
-          },
           child: Padding(
             padding: EdgeInsets.only(bottom: 50),
             child: SingleChildScrollView(
