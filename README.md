@@ -37,3 +37,8 @@ If you have any question or enquiry feel free to contact me:
 
 Name: Mohd. Shobak 
 Phone Number: +966558301933
+
+## Updates
+Due to ads annoyance, we removed the ad that goes full screen, and replaced it with banner ads.
+
+
