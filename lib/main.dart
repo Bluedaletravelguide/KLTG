@@ -1,4 +1,3 @@
-
 import 'package:KlTheGuide/screens/tabs_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -132,7 +131,6 @@ class Loading extends StatelessWidget {
         initialRoute: '/',
         routes: {
           '/': (ctx) => TabsScreen(),
-
         });
   }
 }

@@ -6,6 +6,7 @@ import 'catgeroies_screen.dart';
 import 'about_us_screen.dart';
 import 'contact_us_screen.dart';
 import 'e-book_screen.dart';
+import '../Data/search_data.dart';
 
 class TabsScreen extends StatefulWidget {
   @override
@@ -13,8 +14,7 @@ class TabsScreen extends StatefulWidget {
 }
 
 class _TabsScreenState extends State<TabsScreen> {
-
- //We save the widget into a variable to prevenr code duplicating
+  //We save the widget into a variable to prevenr code duplicating
 // Widget variable
   Widget bottomNav(Widget child, String text) {
     return CupertinoTabView(builder: (context) {
@@ -23,7 +23,8 @@ class _TabsScreenState extends State<TabsScreen> {
           navigationBar: CupertinoNavigationBar(middle: Text(text)));
     });
   }
-//For android app bottom nevgation bar : 
+
+//For android app bottom nevgation bar :
   final List<Map<String, Object>> _pages = [
     {
       'page': CategoriesScreen(),
@@ -44,13 +45,15 @@ class _TabsScreenState extends State<TabsScreen> {
   ];
 
   int _selectedPageIndex = 0;
+  final List<String> list = List.generate(10, (index) => "Text $index");
 
   void _selectPage(int index) {
     setState(() {
       _selectedPageIndex = index;
     });
   }
-//The main widget 
+
+//The main widget
   @override
   Widget build(BuildContext context) {
     final List<BottomNavigationBarItem> _items = [
@@ -83,8 +86,10 @@ class _TabsScreenState extends State<TabsScreen> {
               switch (index) {
                 case 0:
                   return CupertinoPageScaffold(
-          child: SafeArea(child: Material(child: CategoriesScreen())),
-          navigationBar: CupertinoNavigationBar(middle: Text('KL The Guide')));
+                      child:
+                          SafeArea(child: Material(child: CategoriesScreen())),
+                      navigationBar:
+                          CupertinoNavigationBar(middle: Text('KL The Guide')));
                 case 1:
                   return bottomNav(FirstPage(), 'E-Book');
 
@@ -101,9 +106,17 @@ class _TabsScreenState extends State<TabsScreen> {
           )
         :
         //Android BottomNavigationBar
-         Scaffold(
+        Scaffold(
             appBar: AppBar(
               title: Text(_pages[_selectedPageIndex]['title']),
+              actions: <Widget>[
+                IconButton(
+                  onPressed: () {
+                    showSearch(context: context, delegate: DataSearch());
+                  },
+                  icon: Icon(Icons.search),
+                )
+              ],
             ),
             body: _pages[_selectedPageIndex]['page'],
             bottomNavigationBar: BottomNavigationBar(
