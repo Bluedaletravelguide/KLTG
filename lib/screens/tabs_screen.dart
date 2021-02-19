@@ -88,8 +88,17 @@ class _TabsScreenState extends State<TabsScreen> {
                   return CupertinoPageScaffold(
                       child:
                           SafeArea(child: Material(child: CategoriesScreen())),
-                      navigationBar:
-                          CupertinoNavigationBar(middle: Text('KL The Guide')));
+                      navigationBar: CupertinoNavigationBar(
+                          middle: Text('KL THE GUIDE'),
+                          trailing: Material(
+                            child: IconButton(
+                              onPressed: () {
+                                showSearch(
+                                    context: context, delegate: DataSearch());
+                              },
+                              icon: Icon(Icons.search),
+                            ),
+                          )));
                 case 1:
                   return bottomNav(FirstPage(), 'E-Book');
 

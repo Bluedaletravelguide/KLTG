@@ -83,7 +83,6 @@ class DataSearch extends SearchDelegate<String> {
     final suggestionList = query.isEmpty
         ? recent
         : info.where((p) => p.startsWith(query)).toList();
-
     return ListView.builder(
       itemBuilder: (context, index) => ListTile(
           onTap: () {
