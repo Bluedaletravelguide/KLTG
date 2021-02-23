@@ -1,12 +1,13 @@
 import 'dart:io';
 
+import 'package:KlTheGuide/screens/search_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_platform_widgets/flutter_platform_widgets.dart';
 import 'catgeroies_screen.dart';
 import 'about_us_screen.dart';
 import 'contact_us_screen.dart';
 import 'e-book_screen.dart';
-import '../Data/search_data.dart';
 
 class TabsScreen extends StatefulWidget {
   @override
@@ -93,8 +94,11 @@ class _TabsScreenState extends State<TabsScreen> {
                           trailing: Material(
                             child: IconButton(
                               onPressed: () {
-                                showSearch(
-                                    context: context, delegate: DataSearch());
+                                Navigator.of(context).push(
+                                  platformPageRoute(
+                                      context: context,
+                                      builder: (context) => new SearchScreen()),
+                                );
                               },
                               icon: Icon(Icons.search),
                             ),
@@ -121,7 +125,11 @@ class _TabsScreenState extends State<TabsScreen> {
               actions: <Widget>[
                 IconButton(
                   onPressed: () {
-                    showSearch(context: context, delegate: DataSearch());
+                    Navigator.of(context).push(
+                      platformPageRoute(
+                          context: context,
+                          builder: (context) => new SearchScreen()),
+                    );
                   },
                   icon: Icon(Icons.search),
                 )

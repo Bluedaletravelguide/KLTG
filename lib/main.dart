@@ -53,7 +53,7 @@ class Loading extends StatelessWidget {
                   //Ebook
                   //About Us
                   headline1: TextStyle(
-                      fontSize: SizeConfig.safeBlockHorizontal * 4,
+                      fontSize: SizeConfig.safeBlockHorizontal * 5,
                       fontFamily: 'RobotoCondensed-Bold',
                       fontWeight: FontWeight.w700,
                       color: Colors.black),
@@ -65,14 +65,14 @@ class Loading extends StatelessWidget {
                     color: Colors.white,
                     fontFamily: 'RobotoCondensed-Light',
                     fontWeight: FontWeight.w300,
-                    fontSize: SizeConfig.safeBlockHorizontal * 3.5,
+                    fontSize: SizeConfig.safeBlockHorizontal * 4,
                   ),
 
                   headline3: TextStyle(
                     color: Colors.white,
                     fontFamily: 'RobotoCondensed-Light',
                     fontWeight: FontWeight.w300,
-                    fontSize: SizeConfig.safeBlockHorizontal * 2.2,
+                    fontSize: SizeConfig.safeBlockHorizontal * 3.5,
                   ),
                   //White
                   //KLAtGlance
@@ -86,20 +86,20 @@ class Loading extends StatelessWidget {
                   //content_screen (content)
                   //medical_screen ()
                   bodyText2: TextStyle(
-                    fontSize: SizeConfig.safeBlockHorizontal * 3.3,
+                    fontSize: SizeConfig.safeBlockHorizontal * 4,
                     color: Colors.black,
-                    // fontFamily: 'RobotoCondensed-Regular',
+                    fontFamily: 'RobotoCondensed-Regular',
                   ),
                   headline4: TextStyle(
-                    fontSize: SizeConfig.safeBlockHorizontal * 2.3,
+                    fontSize: SizeConfig.safeBlockHorizontal * 3,
                     color: Colors.black,
-                    // fontFamily: 'RobotoCondensed-Regular',
+                    fontFamily: 'RobotoCondensed-Regular',
                   ),
 
                   //White
                   //Contact Us (Text Field)
                   subtitle1: TextStyle(
-                      fontSize: SizeConfig.safeBlockHorizontal * 3.5,
+                      fontSize: SizeConfig.safeBlockHorizontal * 4,
                       fontFamily: 'RobotoCondensed-Light',
                       fontWeight: FontWeight.w300,
                       color: Colors.black),
@@ -111,7 +111,7 @@ class Loading extends StatelessWidget {
                     color: Color.fromRGBO(20, 51, 51, 1),
                     fontFamily: 'Raleway-Bold',
                     fontWeight: FontWeight.w700,
-                    fontSize: SizeConfig.safeBlockHorizontal * 3,
+                    fontSize: SizeConfig.safeBlockHorizontal * 3.5,
                   ),
 
                   //White
@@ -123,7 +123,7 @@ class Loading extends StatelessWidget {
                       fontWeight: FontWeight.w500,
                       color: Colors.white),
                   headline6: TextStyle(
-                      fontSize: SizeConfig.safeBlockHorizontal * 2.7,
+                      fontSize: SizeConfig.safeBlockHorizontal * 3.5,
                       fontFamily: 'RobotoCondensed-Light',
                       fontWeight: FontWeight.w300,
                       color: Colors.white),
