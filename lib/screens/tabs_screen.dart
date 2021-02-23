@@ -100,7 +100,7 @@ class _TabsScreenState extends State<TabsScreen> {
                                       builder: (context) => new SearchScreen()),
                                 );
                               },
-                              icon: Icon(Icons.search),
+                              icon: Icon(CupertinoIcons.search),
                             ),
                           )));
                 case 1:
