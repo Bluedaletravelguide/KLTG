@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:material_floating_search_bar/material_floating_search_bar.dart';
 import '../Data/content_list_data.dart';
 import '../widgets/content_list_widget.dart';
-import 'package:flutter_platform_widgets/flutter_platform_widgets.dart';
 
 class SearchScreen extends StatefulWidget {
   @override
@@ -74,100 +73,103 @@ class _SearchScreenState extends State<SearchScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return PlatformScaffold(
-        body: FloatingSearchBar(
-      controller: controller,
-      body: FloatingSearchBarScrollNotifier(
-        child: SearchResultsListView(searchTerm: selectedTerm),
-      ),
-      transition: CircularFloatingSearchBarTransition(),
-      physics: BouncingScrollPhysics(),
-      title: Text(
-        selectedTerm ?? 'KL THE GUIDE',
-        style: Theme.of(context).textTheme.headline4,
-      ),
-      hint: 'Search KL the Guide',
-      actions: [
-        FloatingSearchBarAction.searchToClear(),
-      ],
-      onQueryChanged: (query) {
-        setState(() {
-          filteredSearchHistory = filteredSearchTerm(filter: query);
-        });
-      },
-      onSubmitted: (query) {
-        setState(() {
-          addSearchTerm(query);
-          selectedTerm = query;
-        });
-        controller.close();
-      },
-      builder: (context, transition) {
-        return ClipRRect(
-          borderRadius: BorderRadius.circular(8),
-          child: Material(
-            color: Colors.white,
-            elevation: 4,
-            child: Builder(
-              builder: (context) {
-                if (filteredSearchHistory.isEmpty && controller.query.isEmpty) {
-                  return Container(
-                    height: 56,
-                    width: double.infinity,
-                    alignment: Alignment.center,
-                    child: Text(
-                      'Start searching',
-                      maxLines: 1,
-                      overflow: TextOverflow.ellipsis,
-                      style: Theme.of(context).textTheme.caption,
-                    ),
-                  );
-                } else if (filteredSearchHistory.isEmpty) {
-                  return ListTile(
-                    title: Text(controller.query),
-                    leading: const Icon(Icons.search),
-                    onTap: () {
-                      setState(() {
-                        addSearchTerm(controller.query);
-                        selectedTerm = controller.query;
-                      });
-                      controller.close();
-                    },
-                  );
-                } else {
-                  return Column(
-                      mainAxisSize: MainAxisSize.min,
-                      children: filteredSearchHistory
-                          .map((term) => ListTile(
-                                title: Text(
-                                  term,
-                                  maxLines: 1,
-                                  overflow: TextOverflow.ellipsis,
-                                ),
-                                leading: const Icon(Icons.history),
-                                trailing: IconButton(
-                                  icon: const Icon(Icons.clear),
-                                  onPressed: () {
+    return Scaffold(
+        body: Builder(
+      builder: (context) => FloatingSearchBar(
+        controller: controller,
+        body: FloatingSearchBarScrollNotifier(
+          child: SearchResultsListView(searchTerm: selectedTerm),
+        ),
+        transition: CircularFloatingSearchBarTransition(),
+        physics: BouncingScrollPhysics(),
+        title: Text(
+          selectedTerm ?? 'KL THE GUIDE',
+          style: Theme.of(context).textTheme.headline4,
+        ),
+        hint: 'Search KL the Guide',
+        actions: [
+          FloatingSearchBarAction.searchToClear(),
+        ],
+        onQueryChanged: (query) {
+          setState(() {
+            filteredSearchHistory = filteredSearchTerm(filter: query);
+          });
+        },
+        onSubmitted: (query) {
+          setState(() {
+            addSearchTerm(query);
+            selectedTerm = query;
+          });
+          controller.close();
+        },
+        builder: (context, transition) {
+          return ClipRRect(
+            borderRadius: BorderRadius.circular(8),
+            child: Material(
+              color: Colors.white,
+              elevation: 4,
+              child: Builder(
+                builder: (context) {
+                  if (filteredSearchHistory.isEmpty &&
+                      controller.query.isEmpty) {
+                    return Container(
+                      height: 56,
+                      width: double.infinity,
+                      alignment: Alignment.center,
+                      child: Text(
+                        'Start searching',
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                        style: Theme.of(context).textTheme.caption,
+                      ),
+                    );
+                  } else if (filteredSearchHistory.isEmpty) {
+                    return ListTile(
+                      title: Text(controller.query),
+                      leading: const Icon(Icons.search),
+                      onTap: () {
+                        setState(() {
+                          addSearchTerm(controller.query);
+                          selectedTerm = controller.query;
+                        });
+                        controller.close();
+                      },
+                    );
+                  } else {
+                    return Column(
+                        mainAxisSize: MainAxisSize.min,
+                        children: filteredSearchHistory
+                            .map((term) => ListTile(
+                                  title: Text(
+                                    term,
+                                    maxLines: 1,
+                                    overflow: TextOverflow.ellipsis,
+                                  ),
+                                  leading: const Icon(Icons.history),
+                                  trailing: IconButton(
+                                    icon: const Icon(Icons.clear),
+                                    onPressed: () {
+                                      setState(() {
+                                        deleteSearchTerm(term);
+                                      });
+                                    },
+                                  ),
+                                  onTap: () {
                                     setState(() {
-                                      deleteSearchTerm(term);
+                                      putSearchTermFirst(term);
+                                      selectedTerm = term;
                                     });
+                                    controller.close();
                                   },
-                                ),
-                                onTap: () {
-                                  setState(() {
-                                    putSearchTermFirst(term);
-                                    selectedTerm = term;
-                                  });
-                                  controller.close();
-                                },
-                              ))
-                          .toList());
-                }
-              },
+                                ))
+                            .toList());
+                  }
+                },
+              ),
             ),
-          ),
-        );
-      },
+          );
+        },
+      ),
     ));
   }
 }
