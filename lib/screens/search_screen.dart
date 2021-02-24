@@ -12,23 +12,114 @@ class SearchScreen extends StatefulWidget {
 class _SearchScreenState extends State<SearchScreen> {
   static const historyLength = 5;
 
-  List<String> _searchHistory = [
-    'Bangsar',
-    'Lot 10',
-    'Petailing Street',
-    'Changkat',
-  ].reversed.toList();
-
+  List<String> _searchHistory = [''].reversed.toList();
   List<String> filteredSearchHistory;
+
   String selectedTerm;
 
-  List<String> filteredSearchTerm({@required String filter}) {
+  List<String> _searchSuggestion = [
+    'Bukit Bintang',
+    'KLCC',
+    'KL Sentral',
+    'Bangsar South',
+    'Bangsar',
+    'Chinatown',
+    'Petaling Street',
+    'Dental',
+    'Dermatologist',
+    'Health Care Services',
+    'Royal Chulan',
+    'Westin',
+    'Majestic Hotel',
+    'Furama Hotel',
+    'JW Marriot',
+    'Prescott Hotel',
+    'Hilton',
+    'InterContinental Hotel',
+    'KL',
+    'Kuala Lumpur',
+    'Sultan Abdul Samad Building',
+    'Central Market',
+    'Pasar Seni',
+    'Dataran Merdeka',
+    'Malayan Railway Administartion Building',
+    'National Monument',
+    'Taman Eko Rimba',
+    'ASEAN Culture Garden',
+    'Ampang Hilir Park',
+    'Kepong Metropolitan Park',
+    'Taman Tasik Titiwangsa',
+    'Taman Tasik Permaisuri',
+    'Botanical Gardens',
+    'Putrajaya',
+    'Desa Park City',
+    'Bukit Kiara Trail',
+    'Kompang',
+    'Rebana Ubi',
+    'Gambus',
+    'Gamelan',
+    'Serunai',
+    'Guqin',
+    'Erhu',
+    'Tanggu',
+    'Gong',
+    'Bangu',
+    'Sitar',
+    'Veena',
+    'Tabla',
+    'Mridangam',
+    'Ghatam',
+    'Congkak',
+    'Batu Seremban',
+    'Top Spinning',
+    'Kite Flying',
+    'Wau',
+    'Nasi Lemak',
+    'Banana Leaf',
+    'Nasi Kandar',
+    'Street Burger',
+    'Roti Canai',
+    'Ossoto Recreation Hub',
+    'Spa',
+    'Swasana Spa',
+    'Alam Beauty and Wellness Spa',
+    'Uroot Spa',
+    'Bali Ayu Spa Sanctuary',
+    'Manjakaki',
+    'Erawan Wellness Massage',
+    'Reborn Foot Reflexology',
+    'National Science Centre',
+    'KL Upside Down House',
+    'National Planetarium',
+    'KL tower Mini Zoo',
+    'Lot 10',
+    'Shoppes by Four Seasons Place KL',
+    'Pavilion KL',
+    'Changkat',
+    'Ampang',
+    'Jalan Alor',
+    'Taman Connaught Night Market',
+    'Tapak Urban Street Dining'
+  ].reversed.toList();
+  List<String> filteredSearchSuggestion;
+
+  List<String> filteredSearchHistoryTerm({@required String filter}) {
     if (filter != null && filter.isNotEmpty) {
       return _searchHistory.reversed
-          .where((term) => term.startsWith(filter))
+          .where((term) => term.toLowerCase().startsWith(filter.toLowerCase()))
           .toList();
     } else {
       return _searchHistory.reversed.toList();
+    }
+  }
+
+  List<String> filteredSearchSuggestions({@required String filter}) {
+    if (filter != null && filter.isNotEmpty) {
+      return _searchSuggestion.reversed
+          .where((term) => term.toLowerCase().startsWith(filter.toLowerCase()))
+          .toList();
+    } else {
+      return [''].toList();
     }
   }
 
@@ -37,18 +128,19 @@ class _SearchScreenState extends State<SearchScreen> {
       putSearchTermFirst(term);
       return;
     }
-
     _searchHistory.add(term);
+    _searchHistory.remove('');
+
     if (_searchHistory.length > historyLength) {
       _searchHistory.removeRange(0, _searchHistory.length - historyLength);
     }
 
-    filteredSearchHistory = filteredSearchTerm(filter: null);
+    filteredSearchHistory = filteredSearchHistoryTerm(filter: null);
   }
 
   void deleteSearchTerm(String term) {
     _searchHistory.removeWhere((t) => t == term);
-    filteredSearchHistory = filteredSearchTerm(filter: null);
+    filteredSearchHistory = filteredSearchHistoryTerm(filter: null);
   }
 
   void putSearchTermFirst(String term) {
@@ -62,7 +154,8 @@ class _SearchScreenState extends State<SearchScreen> {
   void initState() {
     super.initState();
     controller = FloatingSearchBarController();
-    filteredSearchHistory = filteredSearchTerm(filter: null);
+    filteredSearchHistory = filteredSearchHistoryTerm(filter: null);
+    filteredSearchSuggestion = filteredSearchSuggestions(filter: null);
   }
 
   @override
@@ -92,7 +185,10 @@ class _SearchScreenState extends State<SearchScreen> {
         ],
         onQueryChanged: (query) {
           setState(() {
-            filteredSearchHistory = filteredSearchTerm(filter: query);
+            filteredSearchHistory =
+                filteredSearchHistoryTerm(filter: query.toLowerCase());
+            filteredSearchSuggestion =
+                filteredSearchSuggestions(filter: query.toLowerCase());
           });
         },
         onSubmitted: (query) {
@@ -110,8 +206,9 @@ class _SearchScreenState extends State<SearchScreen> {
               elevation: 4,
               child: Builder(
                 builder: (context) {
-                  if (filteredSearchHistory.isEmpty &&
-                      controller.query.isEmpty) {
+                  if (controller.query.isEmpty &&
+                      filteredSearchHistory.contains('') &&
+                      filteredSearchSuggestion.contains('')) {
                     return Container(
                       height: 56,
                       width: double.infinity,
@@ -123,19 +220,9 @@ class _SearchScreenState extends State<SearchScreen> {
                         style: Theme.of(context).textTheme.caption,
                       ),
                     );
-                  } else if (filteredSearchHistory.isEmpty) {
-                    return ListTile(
-                      title: Text(controller.query),
-                      leading: const Icon(Icons.search),
-                      onTap: () {
-                        setState(() {
-                          addSearchTerm(controller.query);
-                          selectedTerm = controller.query;
-                        });
-                        controller.close();
-                      },
-                    );
-                  } else {
+                  } else if (filteredSearchHistory.isNotEmpty ||
+                      filteredSearchHistory.contains(filteredSearchSuggestion
+                          .contains(controller.query))) {
                     return Column(
                         mainAxisSize: MainAxisSize.min,
                         children: filteredSearchHistory
@@ -163,6 +250,39 @@ class _SearchScreenState extends State<SearchScreen> {
                                   },
                                 ))
                             .toList());
+                  } else if (filteredSearchSuggestion.isNotEmpty) {
+                    return Column(
+                      mainAxisSize: MainAxisSize.min,
+                      children: filteredSearchSuggestion
+                          .map((term) => ListTile(
+                                title: Text(
+                                  term,
+                                  maxLines: 1,
+                                  overflow: TextOverflow.ellipsis,
+                                ),
+                                leading: const Icon(Icons.info),
+                                onTap: () {
+                                  setState(() {
+                                    addSearchTerm(term);
+                                    selectedTerm = term;
+                                  });
+                                  controller.close();
+                                },
+                              ))
+                          .toList(),
+                    );
+                  } else {
+                    return ListTile(
+                      title: Text(controller.query),
+                      leading: const Icon(Icons.search),
+                      onTap: () {
+                        setState(() {
+                          addSearchTerm(controller.query);
+                          selectedTerm = controller.query;
+                        });
+                        controller.close();
+                      },
+                    );
                   }
                 },
               ),
