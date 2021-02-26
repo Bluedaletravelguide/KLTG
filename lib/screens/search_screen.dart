@@ -140,6 +140,9 @@ class _SearchScreenState extends State<SearchScreen> {
 
   void deleteSearchTerm(String term) {
     _searchHistory.removeWhere((t) => t == term);
+    if (_searchHistory.isEmpty) {
+      _searchHistory.add('');
+    }
     filteredSearchHistory = filteredSearchHistoryTerm(filter: null);
   }
 
@@ -318,7 +321,7 @@ class SearchResultsListView extends StatelessWidget {
                 ),
                 Text(
                   'Type in the field above to search.',
-                  style: Theme.of(context).textTheme.headline4,
+                  style: Theme.of(context).textTheme.headline1,
                 )
               ],
             ),
@@ -343,7 +346,7 @@ class SearchResultsListView extends StatelessWidget {
                 ),
                 Text(
                   'No results!',
-                  style: Theme.of(context).textTheme.headline4,
+                  style: Theme.of(context).textTheme.headline1,
                 )
               ],
             ),

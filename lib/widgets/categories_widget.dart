@@ -1,4 +1,4 @@
-import 'package:KlTheGuide/screens/travel_tips_screen.dart';
+import '../screens/travel_tips_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_platform_widgets/flutter_platform_widgets.dart';
@@ -84,8 +84,8 @@ class Catgeories extends StatelessWidget {
                   child: Text(
                     title,
                     style: MediaQuery.of(context).size.width > 500
-                        ? Theme.of(context).textTheme.headline6
-                        : Theme.of(context).textTheme.headline5,
+                        ? Theme.of(context).textTheme.headline5
+                        : Theme.of(context).textTheme.headline6,
                     overflow: TextOverflow.fade,
                     softWrap: true,
                     textAlign: TextAlign.left,

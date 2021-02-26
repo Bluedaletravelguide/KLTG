@@ -7,6 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:flutter/gestures.dart';
+import 'package:flutter_platform_widgets/flutter_platform_widgets.dart';
 
 class AboutUsScreen extends StatelessWidget {
   static const routeName = '/about';
@@ -106,7 +107,10 @@ class AboutUsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final carsoulData = ClientCarsoulData;
     final socialData = SocialMediaData;
-    return Scaffold(
+    return PlatformScaffold(
+        appBar: PlatformAppBar(
+          title: Text('About Us'),
+        ),
         body: Container(
             decoration: BoxDecoration(
               image: DecorationImage(
@@ -136,7 +140,7 @@ class AboutUsScreen extends StatelessWidget {
                                 context,
                                 contentText(
                                   context,
-                                  'KL The Guide is a quarterly guidebook, first published in August 2007. We are a free travel guide book that helps travellers make their travel plans around Malaysia\'s capital city, Kuala Lumpur. KL The Guide includes travel tips, places to explore, kid-friendly locations, hotels, transportation services, places to eat, sight-seeing, shopping places, nightlife and other things to do. With KL The Guide, navigating the city becomes easier.',
+                                  'KL The Guide is a quarterly guidebook, first published in August 2007. We are a free travel guide book that helps travellers make their travel plans around Malaysia\'s capital city, Kuala Lumpur. KL The Guide includes travel tips, places to explore, kid-friendly locations, hotels, and more. With KL The Guide, navigating the city becomes easier.',
                                   MediaQuery.of(context).size.width > 500
                                       ? Theme.of(context).textTheme.headline4
                                       : Theme.of(context).textTheme.bodyText2,
@@ -158,7 +162,7 @@ class AboutUsScreen extends StatelessWidget {
                                     mainAxisAlignment: MainAxisAlignment.end,
                                     children: [
                                       Container(
-                                        height: constraints.maxHeight * 0.3,
+                                        height: constraints.maxHeight * 0.35,
                                         child: InkWell(
                                             onTap: () async {
                                               const url =
@@ -188,7 +192,7 @@ class AboutUsScreen extends StatelessWidget {
                                       Padding(
                                         padding: const EdgeInsets.all(4.0),
                                         child: Container(
-                                          height: constraints.maxHeight * 0.4,
+                                          height: constraints.maxHeight * 0.35,
                                           width:
                                               MediaQuery.of(context).size.width,
                                           child: RichText(

@@ -1,11 +1,12 @@
 import 'dart:io';
 
+import 'package:KlTheGuide/screens/home_screen.dart';
 import 'package:KlTheGuide/screens/search_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_platform_widgets/flutter_platform_widgets.dart';
-import 'catgeroies_screen.dart';
-import 'about_us_screen.dart';
+import 'home_screen.dart';
+import '../Data/about_us_screen.dart';
 import 'contact_us_screen.dart';
 import 'e-book_screen.dart';
 
@@ -27,22 +28,19 @@ class _TabsScreenState extends State<TabsScreen> {
 
 //For android app bottom nevgation bar :
   final List<Map<String, Object>> _pages = [
-    {
-      'page': CategoriesScreen(),
-      'title': 'KL THE GUIDE',
-    },
-    {
-      'page': FirstPage(),
-      'title': ' E-Book',
-    },
+    {'page': HomeScreen(), 'title': 'KL THE GUIDE'},
+    // {
+    //   'page': FirstPage(),
+    //   'title': ' E-Book',
+    // },
     {
       'page': ContactUsScreen(),
       'title': ' Contact Us',
     },
-    {
-      'page': AboutUsScreen(),
-      'title': ' About Us',
-    },
+    // {
+    //   'page': AboutUsScreen(),
+    //   'title': ' About Us',
+    // },
   ];
 
   int _selectedPageIndex = 0;
@@ -63,19 +61,19 @@ class _TabsScreenState extends State<TabsScreen> {
         icon: Icon(Icons.home),
         label: 'Home',
       ),
-      BottomNavigationBarItem(
-          backgroundColor: Theme.of(context).primaryColorDark,
-          icon: Icon(Icons.book),
-          label: 'E-Book'),
+      // BottomNavigationBarItem(
+      //     backgroundColor: Theme.of(context).primaryColorDark,
+      //     icon: Icon(Icons.book),
+      //     label: 'E-Book'),
       BottomNavigationBarItem(
           backgroundColor: Theme.of(context).primaryColorDark,
           icon: Icon(Icons.contacts),
           label: 'Contact Us'),
-      BottomNavigationBarItem(
-        backgroundColor: Theme.of(context).primaryColorDark,
-        icon: Icon(Icons.info),
-        label: 'About US',
-      ),
+      // BottomNavigationBarItem(
+      //   backgroundColor: Theme.of(context).primaryColorDark,
+      //   icon: Icon(Icons.info),
+      //   label: 'About US',
+      // ),
     ];
 //IOS BottomNavigationBar
     return Platform.isIOS
@@ -87,8 +85,7 @@ class _TabsScreenState extends State<TabsScreen> {
               switch (index) {
                 case 0:
                   return CupertinoPageScaffold(
-                      child:
-                          SafeArea(child: Material(child: CategoriesScreen())),
+                      child: SafeArea(child: Material(child: HomeScreen())),
                       navigationBar: CupertinoNavigationBar(
                           middle: Text('KL THE GUIDE'),
                           trailing: Material(
@@ -110,10 +107,10 @@ class _TabsScreenState extends State<TabsScreen> {
                   return bottomNav(ContactUsScreen(), 'Contact Us');
 
                 case 3:
-                  return bottomNav(AboutUsScreen(), 'About US');
+                  return bottomNav(AboutUsScreen(), 'About Us');
 
                 default:
-                  return bottomNav(CategoriesScreen(), 'KL The Guide');
+                  return bottomNav(HomeScreen(), 'KL THE GUIDE');
               }
             },
           )

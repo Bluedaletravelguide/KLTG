@@ -1,4 +1,4 @@
-import 'package:KlTheGuide/screens/content_screen.dart';
+import '../screens/content_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_platform_widgets/flutter_platform_widgets.dart';
 import '../screens/medical_screen.dart';
@@ -12,11 +12,11 @@ class ContentList extends StatelessWidget {
 
   void selectContentList(BuildContext context) {
     if (id == 'cl1_14' || id == 'cl2_14' || id == 'cl3_14') {
-     Navigator.of(context).push(
+      Navigator.of(context).push(
         platformPageRoute(
           context: context,
           builder: (context) =>
-              new Medical(appbartitle: title, id: id,image: image),
+              new Medical(appbartitle: title, id: id, image: image),
         ),
       );
     } else {
@@ -24,11 +24,12 @@ class ContentList extends StatelessWidget {
         platformPageRoute(
           context: context,
           builder: (context) =>
-              new ContentScreen(appbartitle: title, id: id, image:image),
+              new ContentScreen(appbartitle: title, id: id, image: image),
         ),
       );
     }
   }
+
   @override
   Widget build(BuildContext context) {
     return InkWell(
@@ -46,7 +47,6 @@ class ContentList extends StatelessWidget {
         child: LayoutBuilder(
           builder: (context, constraints) {
             return Column(children: [
-
               ClipRRect(
                 borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(15),
@@ -67,7 +67,7 @@ class ContentList extends StatelessWidget {
                     children: <Widget>[
                       Icon(
                         Icons.arrow_right,
-                        size:MediaQuery.of(context).size.height*0.04,
+                        size: MediaQuery.of(context).size.height * 0.04,
                       ),
                       SizedBox(
                         width: constraints.maxWidth * 0.05,
@@ -76,8 +76,6 @@ class ContentList extends StatelessWidget {
                         child: Text(
                           title,
                           style: Theme.of(context).textTheme.subtitle2,
-
-                         
                           softWrap: true,
                           overflow: TextOverflow.fade,
                         ),
