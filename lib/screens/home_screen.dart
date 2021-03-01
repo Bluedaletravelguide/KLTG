@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_platform_widgets/flutter_platform_widgets.dart';
 import 'travel_tips_screen.dart';
 import 'e-book_screen.dart';
-import '../Data/about_us_screen.dart';
+import 'about_us_screen.dart';
 import 'catgeroies_screen.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 
