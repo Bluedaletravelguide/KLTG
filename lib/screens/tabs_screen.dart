@@ -2,6 +2,7 @@ import 'dart:io';
 import 'package:KlTheGuide/screens/home_screen.dart';
 import 'package:KlTheGuide/screens/search_screen.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:cupertino_icons/cupertino_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_platform_widgets/flutter_platform_widgets.dart';
 import 'home_screen.dart';
@@ -78,8 +79,7 @@ class _TabsScreenState extends State<TabsScreen> {
                                       builder: (context) => new SearchScreen()),
                                 );
                               },
-                              icon: Icon(
-                                CupertinoIcons.search),
+                              icon: Icon(CupertinoIcons.search),
                             ),
                           )));
 
