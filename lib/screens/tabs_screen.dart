@@ -2,7 +2,6 @@ import 'dart:io';
 import 'package:KlTheGuide/screens/home_screen.dart';
 import 'package:KlTheGuide/screens/search_screen.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:cupertino_icons/cupertino_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_platform_widgets/flutter_platform_widgets.dart';
 import 'home_screen.dart';
@@ -70,18 +69,20 @@ class _TabsScreenState extends State<TabsScreen> {
                       child: SafeArea(child: Material(child: HomeScreen())),
                       navigationBar: CupertinoNavigationBar(
                           middle: Text('KL THE GUIDE'),
-                          trailing: Material(
+                          trailing:Material(
+                            color: Colors.transparent,
                             child: IconButton(
-                              onPressed: () {
-                                Navigator.of(context).push(
-                                  platformPageRoute(
-                                      context: context,
-                                      builder: (context) => new SearchScreen()),
-                                );
-                              },
-                              icon: Icon(CupertinoIcons.search),
-                            ),
-                          )));
+                                onPressed: () {
+                                  Navigator.of(context).push(
+                                    platformPageRoute(
+                                        context: context,
+                                        builder: (context) => new SearchScreen()),
+                                  );
+                                },
+                                icon: Icon(CupertinoIcons.search),
+                              ),
+                          ),
+                          ));
 
 
                 case 1:
