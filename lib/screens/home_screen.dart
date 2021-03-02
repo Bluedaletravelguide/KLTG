@@ -187,7 +187,9 @@ class ShowListTile extends StatelessWidget {
             child: CarouselSlider.builder(
               itemCount: 3,
               options: CarouselOptions(
-                  autoPlayCurve: Curves.linearToEaseOut, aspectRatio: 16 / 9),
+                  autoPlayCurve: Curves.linearToEaseOut,
+                  aspectRatio: 16 / 9,
+                  enlargeCenterPage: true),
               itemBuilder: (context, index) {
                 return ContentList(
                     id: sightseeingList[index].id,
@@ -206,7 +208,9 @@ class ShowListTile extends StatelessWidget {
             child: CarouselSlider.builder(
               itemCount: 3,
               options: CarouselOptions(
-                  autoPlayCurve: Curves.linearToEaseOut, aspectRatio: 16 / 9),
+                  autoPlayCurve: Curves.linearToEaseOut,
+                  aspectRatio: 16 / 9,
+                  enlargeCenterPage: true),
               itemBuilder: (context, index) {
                 return ContentList(
                     id: accomodationList[index].id,
