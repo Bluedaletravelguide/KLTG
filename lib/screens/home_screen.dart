@@ -17,6 +17,7 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
+    //Create a button that redirects the users to its respective catergory.
     Widget createButton(String appTitle, String id) {
       return ButtonTheme(
         minWidth: double.infinity,
@@ -38,6 +39,7 @@ class _HomeScreenState extends State<HomeScreen> {
       );
     }
 
+    //Shows the three icon buttons for travel tips, e-book and about us respectively.
     final quickAccess = Row(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
@@ -100,6 +102,7 @@ class _HomeScreenState extends State<HomeScreen> {
       ],
     );
 
+    //The button that redirects users to all categories page
     final allCategoriesButton = ButtonTheme(
       minWidth: double.infinity,
       buttonColor: Colors.white60,
@@ -114,6 +117,7 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
     );
 
+    //The main home page layout
     return PlatformScaffold(
       body: SingleChildScrollView(
         child: Column(
@@ -166,6 +170,8 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 }
 
+//Shows the top 3 items in the list tile.
+//Upon clicking it goes straight to the respective content screen.
 class ShowListTile extends StatelessWidget {
   final String selectTerm;
 

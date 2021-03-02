@@ -17,6 +17,7 @@ class _SearchScreenState extends State<SearchScreen> {
 
   String selectedTerm;
 
+  //Key words when users key in their search terms
   List<String> _searchSuggestion = [
     'Bukit Bintang',
     'KLCC',
@@ -103,6 +104,7 @@ class _SearchScreenState extends State<SearchScreen> {
   ].reversed.toList();
   List<String> filteredSearchSuggestion;
 
+  //Checks whether the users have the search history stored in the app.
   List<String> filteredSearchHistoryTerm({@required String filter}) {
     if (filter != null && filter.isNotEmpty) {
       return _searchHistory.reversed
@@ -167,6 +169,7 @@ class _SearchScreenState extends State<SearchScreen> {
     super.dispose();
   }
 
+  //The main search engine functionality.
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -297,6 +300,8 @@ class _SearchScreenState extends State<SearchScreen> {
   }
 }
 
+//The page where it shows the search results.
+//Checks whether any search term matches with the content available in the app.
 class SearchResultsListView extends StatelessWidget {
   final String searchTerm;
 

@@ -41,4 +41,8 @@ Phone Number: +966558301933
 ## Updates
 Due to ads annoyance, we removed the ad that goes full screen, and replaced it with banner ads.
 
+## Updates2
+
+We have added a new home screen upon launching the app as well as search engine for users to search and obtain the content neccessary based on their query. More info on the code functionalities can be found in search_screen.dart and home_screen.dart respectively. On top of that, these features are implemented across all other apps.
+
 
