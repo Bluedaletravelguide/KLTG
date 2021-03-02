@@ -164,7 +164,7 @@ class AboutUsScreen extends StatelessWidget {
                                       mainAxisAlignment: MainAxisAlignment.end,
                                       children: [
                                         Container(
-                                          height: constraints.maxHeight * 0.35,
+                                          height: constraints.maxHeight * 0.4,
                                           child: InkWell(
                                               onTap: () async {
                                                 const url =
