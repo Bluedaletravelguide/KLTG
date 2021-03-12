@@ -1,5 +1,4 @@
 import 'package:KlTheGuide/models/medical.dart';
-
 import '../models/content.dart';
 
 const ContentData = const [

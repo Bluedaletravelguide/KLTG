@@ -29,9 +29,6 @@ class _CategoriesScreenState extends State<CategoriesScreen> {
     );
 
     return PlatformScaffold(
-      appBar: PlatformAppBar(
-        title: Text('All Categories'),
-      ),
       body: pageBody,
     );
   }

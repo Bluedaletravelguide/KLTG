@@ -1,5 +1,4 @@
 import 'dart:io';
-
 import 'package:firebase_admob/firebase_admob.dart';
 
 //Use the test id code first to test the ADS then you can use the real ID

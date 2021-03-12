@@ -1,4 +1,5 @@
 import 'dart:io';
+import 'package:KlTheGuide/screens/catgeroies_screen.dart';
 import 'package:KlTheGuide/screens/home_screen.dart';
 import 'package:KlTheGuide/screens/search_screen.dart';
 import 'package:flutter/cupertino.dart';
@@ -6,7 +7,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_platform_widgets/flutter_platform_widgets.dart';
 import 'home_screen.dart';
 import 'contact_us_screen.dart';
-
 
 class TabsScreen extends StatefulWidget {
   @override
@@ -27,6 +27,7 @@ class _TabsScreenState extends State<TabsScreen> {
 //For android app bottom nevgation bar :
   final List<Map<String, Object>> _pages = [
     {'page': HomeScreen(), 'title': 'KL THE GUIDE'},
+    {'page': CategoriesScreen(), 'title': 'All Categories'},
     {
       'page': ContactUsScreen(),
       'title': ' Contact Us',
@@ -52,6 +53,11 @@ class _TabsScreenState extends State<TabsScreen> {
         label: 'Home',
       ),
       BottomNavigationBarItem(
+        backgroundColor: Theme.of(context).primaryColorDark,
+        icon: Icon(Icons.list),
+        label: 'Categories',
+      ),
+      BottomNavigationBarItem(
           backgroundColor: Theme.of(context).primaryColorDark,
           icon: Icon(Icons.contacts),
           label: 'Contact Us'),
@@ -68,26 +74,27 @@ class _TabsScreenState extends State<TabsScreen> {
                   return CupertinoPageScaffold(
                       child: SafeArea(child: Material(child: HomeScreen())),
                       navigationBar: CupertinoNavigationBar(
-                          middle: Text('KL THE GUIDE'),
-                          trailing:Material(
-                            color: Colors.transparent,
-                            child: IconButton(
-                                onPressed: () {
-                                  Navigator.of(context).push(
-                                    platformPageRoute(
-                                        context: context,
-                                        builder: (context) => new SearchScreen()),
-                                  );
-                                },
-                                icon: Icon(CupertinoIcons.search),
-                              ),
+                        middle: Text('KL THE GUIDE'),
+                        trailing: Material(
+                          color: Colors.transparent,
+                          child: IconButton(
+                            onPressed: () {
+                              Navigator.of(context).push(
+                                platformPageRoute(
+                                    context: context,
+                                    builder: (context) => new SearchScreen()),
+                              );
+                            },
+                            icon: Icon(CupertinoIcons.search),
                           ),
-                          ));
-
+                        ),
+                      ));
 
                 case 1:
                   return bottomNav(ContactUsScreen(), 'Contact Us');
 
+                case 2:
+                  return bottomNav(CategoriesScreen(), 'All Categories');
 
                 default:
                   return bottomNav(HomeScreen(), 'KL THE GUIDE');

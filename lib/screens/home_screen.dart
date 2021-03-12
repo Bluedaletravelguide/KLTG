@@ -6,7 +6,6 @@ import 'package:flutter_platform_widgets/flutter_platform_widgets.dart';
 import 'travel_tips_screen.dart';
 import 'e-book_screen.dart';
 import 'about_us_screen.dart';
-import 'catgeroies_screen.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -102,21 +101,6 @@ class _HomeScreenState extends State<HomeScreen> {
       ],
     );
 
-    //The button that redirects users to all categories page
-    final allCategoriesButton = ButtonTheme(
-      minWidth: double.infinity,
-      buttonColor: Colors.white60,
-      child: RaisedButton.icon(
-        onPressed: () {
-          Navigator.of(context).push(platformPageRoute(
-              context: context, builder: (context) => new CategoriesScreen()));
-        },
-        icon: Icon(Icons.view_list),
-        label: Text('VIEW ALL CATEGORIES'),
-        shape: const StadiumBorder(),
-      ),
-    );
-
     //The main home page layout
     return PlatformScaffold(
       body: SingleChildScrollView(
@@ -159,10 +143,6 @@ class _HomeScreenState extends State<HomeScreen> {
               padding: const EdgeInsets.all(8.0),
               child: createButton('Accomodation', 'sc_15'),
             ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: allCategoriesButton,
-            )
           ],
         ),
       ),

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-
 import '../models/about_us.dart';
 
 const ClientCarsoulData = const [
@@ -100,25 +99,25 @@ const SocialMediaData = const [
     icon: Icon(FontAwesomeIcons.facebook),
     color: Colors.blue,
   ),
-    SocialMedia(
+  SocialMedia(
     id: 'soci1',
     url: 'https://www.instagram.com/kltheguide/',
     icon: Icon(FontAwesomeIcons.instagram),
     color: Color(0xffE57373),
   ),
-    SocialMedia(
+  SocialMedia(
     id: 'soci1',
     url: 'http://www.kltheguide.com.my/',
     icon: Icon(FontAwesomeIcons.globe),
     color: Color(0xff90a4ae),
   ),
-    SocialMedia(
+  SocialMedia(
     id: 'soci1',
     url: 'https://www.youtube.com/channel/UCvTK_Uu6yy_z7oY1r2Cce3w',
     icon: Icon(FontAwesomeIcons.youtube),
     color: Colors.red,
   ),
-    SocialMedia(
+  SocialMedia(
     id: 'soci1',
     url: 'https://twitter.com/kltheguide',
     icon: Icon(FontAwesomeIcons.twitter),
