@@ -19,17 +19,21 @@ class Location extends StatelessWidget {
               final url = location;
               if (await canLaunch(url)) {
                 await launch(url);
-              } else
-                throw (error) {
-                  ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                    elevation: 1000,
-                    behavior: SnackBarBehavior.floating,
-                    content: Text(
-                      error.toString(),
-                      textAlign: TextAlign.center,
-                    ),
-                  ));
-                };
+              } else {
+                ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                  elevation: 1000,
+                  action: SnackBarAction(
+                      textColor: Colors.white,
+                      label: 'OK',
+                      onPressed: () {
+                        ScaffoldMessenger.of(context).removeCurrentSnackBar();
+                      }),
+                  content: Text(
+                    'Location not availble!',
+                    textAlign: TextAlign.left,
+                  ),
+                ));
+              }
             },
             child: Container(
               padding: EdgeInsets.only(bottom: 5),

@@ -30,7 +30,10 @@ class _HomeScreenState extends State<HomeScreen> {
         },
         icon: Icon(Icons.view_list),
         label: Text('VIEW MORE'),
-        style: ElevatedButton.styleFrom(shape: const StadiumBorder()),
+        style: ElevatedButton.styleFrom(
+            primary: Colors.white60,
+            onPrimary: Colors.black,
+            shape: const StadiumBorder()),
       );
     }
 

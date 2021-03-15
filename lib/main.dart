@@ -42,6 +42,7 @@ class Loading extends StatelessWidget {
         theme: ThemeData(
             primarySwatch: Colors.blue,
             accentColor: Colors.deepPurple[700],
+            appBarTheme: AppBarTheme(brightness: Brightness.dark),
             canvasColor: Color.fromRGBO(255, 255, 255, 1),
             textTheme: ThemeData.light().textTheme.copyWith(
                   //Black
