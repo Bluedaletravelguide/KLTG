@@ -30,7 +30,7 @@ class _ContactUsScreenState extends State<ContactUsScreen> {
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
   final form = GlobalKey<FormState>();
 
-  //email sending function 
+  //email sending function
   Future<void> send() async {
     final validate = form.currentState.validate();
     if (!validate) {
@@ -52,7 +52,7 @@ class _ContactUsScreenState extends State<ContactUsScreen> {
     try {
       await FlutterEmailSender.send(email);
     } catch (error) {
-      _scaffoldKey.currentState.showSnackBar(SnackBar(
+      ScaffoldMessenger.of(context).showSnackBar(SnackBar(
         elevation: 1000,
         behavior: SnackBarBehavior.floating,
         content: Text(
@@ -73,7 +73,8 @@ class _ContactUsScreenState extends State<ContactUsScreen> {
     body.dispose();
     super.dispose();
   }
-//The main widget: 
+
+//The main widget:
   @override
   Widget build(BuildContext context) {
     return Scaffold(

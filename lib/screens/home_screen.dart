@@ -18,23 +18,19 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     //Create a button that redirects the users to its respective catergory.
     Widget createButton(String appTitle, String id) {
-      return ButtonTheme(
-        minWidth: double.infinity,
-        buttonColor: Colors.white60,
-        child: RaisedButton.icon(
-          onPressed: () {
-            Navigator.of(context).push(
-              platformPageRoute(
-                context: context,
-                builder: (context) =>
-                    new ContentListScreen(appbartitle: appTitle, id: id),
-              ),
-            );
-          },
-          icon: Icon(Icons.view_list),
-          label: Text('VIEW MORE'),
-          shape: const StadiumBorder(),
-        ),
+      return ElevatedButton.icon(
+        onPressed: () {
+          Navigator.of(context).push(
+            platformPageRoute(
+              context: context,
+              builder: (context) =>
+                  new ContentListScreen(appbartitle: appTitle, id: id),
+            ),
+          );
+        },
+        icon: Icon(Icons.view_list),
+        label: Text('VIEW MORE'),
+        style: ElevatedButton.styleFrom(shape: const StadiumBorder()),
       );
     }
 

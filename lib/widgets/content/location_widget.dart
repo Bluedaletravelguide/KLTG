@@ -14,23 +14,30 @@ class Location extends StatelessWidget {
   Widget build(BuildContext context) {
     return text != '-'
         ? InkWell(
-          splashColor: Colors.red[600],
-          
+            splashColor: Colors.red[600],
             onTap: () async {
               final url = location;
               if (await canLaunch(url)) {
                 await launch(url);
-              } else {
-                throw 'Could not launch $url';
-              }
+              } else
+                throw (error) {
+                  ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                    elevation: 1000,
+                    behavior: SnackBarBehavior.floating,
+                    content: Text(
+                      error.toString(),
+                      textAlign: TextAlign.center,
+                    ),
+                  ));
+                };
             },
             child: Container(
-               padding: EdgeInsets.only(bottom: 5),
+              padding: EdgeInsets.only(bottom: 5),
               child: ListTile(
                 leading: Icon(
                   Icons.pin_drop,
                   color: Colors.red,
-                   size: MediaQuery.of(context).size.height*0.04,
+                  size: MediaQuery.of(context).size.height * 0.04,
                 ),
                 title: Text(
                   'Location',
