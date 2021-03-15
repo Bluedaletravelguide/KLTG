@@ -90,11 +90,11 @@ class _TabsScreenState extends State<TabsScreen> {
                         ),
                       ));
 
-                case 2:
-                  return bottomNav(ContactUsScreen(), 'Contact Us');
-
                 case 1:
                   return bottomNav(CategoriesScreen(), 'All Categories');
+
+                case 2:
+                  return bottomNav(ContactUsScreen(), 'Contact Us');
 
                 default:
                   return bottomNav(HomeScreen(), 'KL THE GUIDE');

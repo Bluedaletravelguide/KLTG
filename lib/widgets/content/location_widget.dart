@@ -29,7 +29,7 @@ class Location extends StatelessWidget {
                         ScaffoldMessenger.of(context).removeCurrentSnackBar();
                       }),
                   content: Text(
-                    'Location not availble!',
+                    'Location not available!',
                     textAlign: TextAlign.left,
                   ),
                 ));
