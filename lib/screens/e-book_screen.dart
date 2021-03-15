@@ -1,4 +1,4 @@
-import 'package:KlTheGuide/Data/SizeConfig.dart';
+import '../Data/SizeConfig.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 import '../Data/ebook-data.dart';
@@ -34,7 +34,7 @@ class _FirstPageState extends State<FirstPage> {
       ),
       body: SafeArea(
         child: Material(
-                  child: Padding(
+          child: Padding(
             padding: const EdgeInsets.all(6),
             child: Column(children: [
               Text(
@@ -96,8 +96,9 @@ class _FirstPageState extends State<FirstPage> {
                                       padding: const EdgeInsets.only(right: 4),
                                       child: Text(
                                         bookEdition(),
-                                        style:
-                                            Theme.of(context).textTheme.bodyText1,
+                                        style: Theme.of(context)
+                                            .textTheme
+                                            .bodyText1,
                                       ),
                                     ),
                                   ),

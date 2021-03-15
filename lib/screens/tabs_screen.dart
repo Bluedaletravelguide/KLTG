@@ -1,7 +1,7 @@
 import 'dart:io';
-import 'package:KlTheGuide/screens/catgeroies_screen.dart';
-import 'package:KlTheGuide/screens/home_screen.dart';
-import 'package:KlTheGuide/screens/search_screen.dart';
+import '../screens/catgeroies_screen.dart';
+import '../screens/home_screen.dart';
+import '../screens/search_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_platform_widgets/flutter_platform_widgets.dart';

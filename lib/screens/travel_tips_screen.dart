@@ -1,5 +1,5 @@
 import 'dart:io';
-import 'package:KlTheGuide/models/Adsban.dart';
+import '../models/Adsban.dart';
 import 'package:firebase_admob/firebase_admob.dart';
 import 'package:flutter/material.dart';
 import '../Data/travel_tips_data.dart';

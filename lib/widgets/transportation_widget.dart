@@ -1,7 +1,7 @@
 import 'dart:ui';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:KlTheGuide/Data/SizeConfig.dart';
+import '../Data/SizeConfig.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class Transportation extends StatelessWidget {

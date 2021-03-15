@@ -1,8 +1,8 @@
-import 'package:KlTheGuide/Data/SizeConfig.dart';
-import 'package:KlTheGuide/screens/content_list_screen.dart';
-import 'package:KlTheGuide/screens/kl_at_glance_screen.dart';
+import '../Data/SizeConfig.dart';
+import '../screens/content_list_screen.dart';
+import '../screens/kl_at_glance_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:KlTheGuide/screens/transportation_screen.dart';
+import '../screens/transportation_screen.dart';
 import 'package:flutter_platform_widgets/flutter_platform_widgets.dart';
 
 class SubCategories extends StatelessWidget {

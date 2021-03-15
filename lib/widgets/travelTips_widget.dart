@@ -1,8 +1,7 @@
 import 'dart:ui';
-
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:KlTheGuide/Data/SizeConfig.dart';
+import '../Data/SizeConfig.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class TravelTips extends StatelessWidget {
@@ -85,7 +84,8 @@ class TravelTips extends StatelessWidget {
                           text: TextSpan(
                               style: TextStyle(
                                   color: Colors.black54,
-                                  fontSize: SizeConfig.safeBlockHorizontal * 3.5),
+                                  fontSize:
+                                      SizeConfig.safeBlockHorizontal * 3.5),
                               children: <TextSpan>[
                                 textSpan(context, 'Police/Ambulance:\n999 ('),
                                 textSpanNo(context, '112'),
@@ -110,7 +110,6 @@ class TravelTips extends StatelessWidget {
           )
         ]),
       ),
-      
     );
   }
 }

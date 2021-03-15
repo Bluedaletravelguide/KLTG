@@ -1,5 +1,5 @@
 import 'dart:io';
-import 'package:KlTheGuide/models/Adsban.dart';
+import '../models/Adsban.dart';
 import 'package:firebase_admob/firebase_admob.dart';
 import 'package:flutter/material.dart';
 import 'package:timeline_tile/timeline_tile.dart';

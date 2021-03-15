@@ -1,8 +1,8 @@
 // This imports used to call a library, screen path or class path.
 
 import 'dart:ui';
-import 'package:KlTheGuide/Data/SizeConfig.dart';
-import 'package:KlTheGuide/Data/about_us.dart';
+import '../Data/SizeConfig.dart';
+import '../Data/about_us.dart';
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:url_launcher/url_launcher.dart';
