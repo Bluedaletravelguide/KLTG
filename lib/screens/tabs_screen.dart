@@ -17,25 +17,23 @@ class _TabsScreenState extends State<TabsScreen> {
   //We save the widget into a variable to prevent code duplicating for iOS
 // Widget variable
   Widget bottomNav(Widget child, String text) {
-    return CupertinoTabView(builder: (context) {
-      return CupertinoPageScaffold(
-          child: SafeArea(child: Material(child: child)),
-          navigationBar: CupertinoNavigationBar(
-              middle: Text(text),
-              trailing: Material(
-                color: Colors.transparent,
-                child: IconButton(
-                  onPressed: () {
-                    Navigator.of(context).push(
-                      platformPageRoute(
-                          context: context,
-                          builder: (context) => new SearchScreen()),
-                    );
-                  },
-                  icon: Icon(CupertinoIcons.search),
-                ),
-              )));
-    });
+    return CupertinoPageScaffold(
+        child: SafeArea(child: Material(child: child)),
+        navigationBar: CupertinoNavigationBar(
+            middle: Text(text),
+            trailing: Material(
+              color: Colors.transparent,
+              child: IconButton(
+                onPressed: () {
+                  Navigator.of(context).push(
+                    platformPageRoute(
+                        context: context,
+                        builder: (context) => new SearchScreen()),
+                  );
+                },
+                icon: Icon(CupertinoIcons.search),
+              ),
+            )));
   }
 
 //For android app bottom nevgation bar :
@@ -84,8 +82,6 @@ class _TabsScreenState extends State<TabsScreen> {
             ),
             tabBuilder: (context, index) {
               switch (index) {
-                case 0:
-                  return bottomNav(HomeScreen(), 'KL THE GUIDE');
 
                 case 1:
                   return bottomNav(CategoriesScreen(), 'All Categories');
