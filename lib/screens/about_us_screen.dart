@@ -108,200 +108,187 @@ class AboutUsScreen extends StatelessWidget {
     final carsoulData = ClientCarsoulData;
     final socialData = SocialMediaData;
     return PlatformScaffold(
-        appBar: PlatformAppBar(
-          title: Text('About Us'),
-        ),
-        iosContentPadding: true,
         body: Material(
-          child: Container(
-              decoration: BoxDecoration(
-                image: DecorationImage(
-                    image: AssetImage("assets/images/aboutUs.jpg"),
-                    fit: BoxFit.cover,
-                    colorFilter: ColorFilter.mode(
-                        Colors.white.withOpacity(0.33), BlendMode.dstATop)),
-              ),
-              child: Padding(
-                padding: const EdgeInsets.all(8),
-                child: LayoutBuilder(
-                  builder: (context, constraints) {
-                    return Column(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                          Container(
-                              height: constraints.maxHeight * 0.06,
-                              //here we call the widget
-                              child: contentText(
-                                context,
-                                'Our Story',
-                                Theme.of(context).textTheme.headline1,
-                              )),
-                          Container(
-                              height: constraints.maxHeight * 0.34,
-                              child: textBorder(
-                                  context,
-                                  contentText(
-                                    context,
-                                    'KL The Guide is a quarterly guidebook, first published in August 2007. We are a free travel guide book that helps travellers make their travel plans around Malaysia\'s capital city, Kuala Lumpur. KL The Guide includes travel tips, places to explore, kid-friendly locations, hotels, and more. With KL The Guide, navigating the city becomes easier.',
-                                    MediaQuery.of(context).size.width > 500
-                                        ? Theme.of(context).textTheme.headline4
-                                        : Theme.of(context).textTheme.bodyText2,
-                                  ))),
-                          Container(
-                              height: constraints.maxHeight * 0.06,
-                              child: contentText(
-                                context,
-                                'Find Us',
-                                Theme.of(context).textTheme.headline1,
-                              )),
-                          Container(
-                            height: constraints.maxHeight * 0.34,
-                            child: textBorder(
+      child: Container(
+          decoration: BoxDecoration(
+            image: DecorationImage(
+                image: AssetImage("assets/images/aboutUs.jpg"),
+                fit: BoxFit.cover,
+                colorFilter: ColorFilter.mode(
+                    Colors.white.withOpacity(0.33), BlendMode.dstATop)),
+          ),
+          child: Padding(
+            padding: const EdgeInsets.all(8),
+            child: LayoutBuilder(
+              builder: (context, constraints) {
+                return Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Container(
+                          height: constraints.maxHeight * 0.06,
+                          //here we call the widget
+                          child: contentText(
+                            context,
+                            'Our Story',
+                            Theme.of(context).textTheme.headline1,
+                          )),
+                      Container(
+                          height: constraints.maxHeight * 0.34,
+                          child: textBorder(
                               context,
-                              LayoutBuilder(
-                                builder: (context, constraints) {
-                                  return Column(
-                                      mainAxisAlignment: MainAxisAlignment.end,
-                                      children: [
-                                        Container(
-                                          height: constraints.maxHeight * 0.4,
-                                          child: InkWell(
-                                              onTap: () async {
-                                                const url =
-                                                    'https://goo.gl/maps/TMu5YuBTU54epbmu6';
-                                                if (await canLaunch(url)) {
-                                                  await launch(url);
-                                                } else {
-                                                  throw 'Could not launch $url';
-                                                }
-                                              },
-                                              child: contentText(
+                              contentText(
+                                context,
+                                'KL The Guide is a quarterly guidebook, first published in August 2007. We are a free travel guide book that helps travellers make their travel plans around Malaysia\'s capital city, Kuala Lumpur. KL The Guide includes travel tips, places to explore, kid-friendly locations, hotels, and more. With KL The Guide, navigating the city becomes easier.',
+                                MediaQuery.of(context).size.width > 500
+                                    ? Theme.of(context).textTheme.headline4
+                                    : Theme.of(context).textTheme.bodyText2,
+                              ))),
+                      Container(
+                          height: constraints.maxHeight * 0.06,
+                          child: contentText(
+                            context,
+                            'Find Us',
+                            Theme.of(context).textTheme.headline1,
+                          )),
+                      Container(
+                        height: constraints.maxHeight * 0.34,
+                        child: textBorder(
+                          context,
+                          LayoutBuilder(
+                            builder: (context, constraints) {
+                              return Column(
+                                  mainAxisAlignment: MainAxisAlignment.end,
+                                  children: [
+                                    Container(
+                                      height: constraints.maxHeight * 0.4,
+                                      child: InkWell(
+                                          onTap: () async {
+                                            const url =
+                                                'https://goo.gl/maps/TMu5YuBTU54epbmu6';
+                                            if (await canLaunch(url)) {
+                                              await launch(url);
+                                            } else {
+                                              throw 'Could not launch $url';
+                                            }
+                                          },
+                                          child: contentText(
+                                            context,
+                                            'No.31-2, Block F2, Level 2, Jalan PJU 1/42a, Dataran Prima, 47301 Petaling Jaya, Selangor. \nOpening Hours: Monday-Friday: 9:00AM - 6:00PM',
+                                            MediaQuery.of(context).size.width >
+                                                    500
+                                                ? Theme.of(context)
+                                                    .textTheme
+                                                    .headline4
+                                                : Theme.of(context)
+                                                    .textTheme
+                                                    .bodyText2,
+                                          )),
+                                    ),
+                                    //Divider(),
+                                    Padding(
+                                      padding: const EdgeInsets.all(4.0),
+                                      child: Container(
+                                        height: constraints.maxHeight * 0.35,
+                                        width:
+                                            MediaQuery.of(context).size.width,
+                                        child: RichText(
+                                          textAlign: TextAlign.center,
+                                          softWrap: true,
+                                          overflow: TextOverflow.fade,
+                                          text: TextSpan(
+                                            style: TextStyle(
+                                                fontSize: SizeConfig
+                                                        .safeBlockHorizontal *
+                                                    3.4),
+                                            children: <TextSpan>[
+                                              textSpan(context, '\n'),
+                                              textSpan(context, 'Mobile no: '),
+                                              textSpanNo(
+                                                  context, '+6012-2200622'),
+                                              textSpan(context, '\nTel No: '),
+                                              textSpanNo(
+                                                  context, '+603-78869219'),
+                                            ],
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                    Expanded(
+                                      child: Container(
+                                        height: constraints.maxHeight * 0.1,
+                                        child: ListView.builder(
+                                            scrollDirection: Axis.horizontal,
+                                            shrinkWrap: true,
+                                            itemCount: socialData.length,
+                                            itemBuilder: (BuildContext context,
+                                                int index) {
+                                              //here we call the widget
+                                              return socialMedia(
                                                 context,
-                                                'No.31-2, Block F2, Level 2, Jalan PJU 1/42a, Dataran Prima, 47301 Petaling Jaya, Selangor. \nOpening Hours: Monday-Friday: 9:00AM - 6:00PM',
-                                                MediaQuery.of(context)
-                                                            .size
-                                                            .width >
-                                                        500
-                                                    ? Theme.of(context)
-                                                        .textTheme
-                                                        .headline4
-                                                    : Theme.of(context)
-                                                        .textTheme
-                                                        .bodyText2,
-                                              )),
-                                        ),
-                                        //Divider(),
-                                        Padding(
-                                          padding: const EdgeInsets.all(4.0),
-                                          child: Container(
-                                            height:
-                                                constraints.maxHeight * 0.35,
-                                            width: MediaQuery.of(context)
-                                                .size
-                                                .width,
-                                            child: RichText(
-                                              textAlign: TextAlign.center,
-                                              softWrap: true,
-                                              overflow: TextOverflow.fade,
-                                              text: TextSpan(
-                                                style: TextStyle(
-                                                    fontSize: SizeConfig
-                                                            .safeBlockHorizontal *
-                                                        3.4),
-                                                children: <TextSpan>[
-                                                  textSpan(context, '\n'),
-                                                  textSpan(
-                                                      context, 'Mobile no: '),
-                                                  textSpanNo(
-                                                      context, '+6012-2200622'),
-                                                  textSpan(
-                                                      context, '\nTel No: '),
-                                                  textSpanNo(
-                                                      context, '+603-78869219'),
-                                                ],
-                                              ),
-                                            ),
-                                          ),
-                                        ),
-                                        Expanded(
-                                          child: Container(
-                                            height: constraints.maxHeight * 0.1,
-                                            child: ListView.builder(
-                                                scrollDirection:
-                                                    Axis.horizontal,
-                                                shrinkWrap: true,
-                                                itemCount: socialData.length,
-                                                itemBuilder:
-                                                    (BuildContext context,
-                                                        int index) {
-                                                  //here we call the widget
-                                                  return socialMedia(
-                                                    context,
-                                                    socialData[index].url,
-                                                    socialData[index].icon,
-                                                    socialData[index].color,
-                                                  );
-                                                }),
-                                          ),
-                                        ),
-                                      ]);
-                                },
+                                                socialData[index].url,
+                                                socialData[index].icon,
+                                                socialData[index].color,
+                                              );
+                                            }),
+                                      ),
+                                    ),
+                                  ]);
+                            },
+                          ),
+                        ),
+                      ),
+                      Container(
+                        height: constraints.maxHeight * 0.2,
+                        child: Stack(alignment: Alignment.center, children: [
+                          CarouselSlider.builder(
+                              carouselController: buttonCarouselController,
+                              options: CarouselOptions(
+                                height: 150,
+                                enlargeCenterPage: true,
+                                autoPlay: true,
+                                aspectRatio: 16 / 9,
+                                autoPlayCurve: Curves.linearToEaseOut,
+                                enableInfiniteScroll: true,
+                                autoPlayAnimationDuration:
+                                    Duration(milliseconds: 1000),
+                                viewportFraction: 0.8,
                               ),
+                              itemCount: ClientCarsoulData.length,
+                              itemBuilder: (context, index) {
+                                return clientButton(
+                                  context,
+                                  carsoulData[index].image,
+                                  carsoulData[index].url,
+                                );
+                              }),
+                          Positioned(
+                            left: 0,
+                            height: 150,
+                            child: IconButton(
+                              onPressed: () =>
+                                  buttonCarouselController.previousPage(
+                                      duration: Duration(milliseconds: 100),
+                                      curve: Curves.linear),
+                              icon: Icon(Icons.arrow_back_ios),
                             ),
                           ),
-                          Container(
-                            height: constraints.maxHeight * 0.2,
-                            child:
-                                Stack(alignment: Alignment.center, children: [
-                              CarouselSlider.builder(
-                                  carouselController: buttonCarouselController,
-                                  options: CarouselOptions(
-                                    height: 150,
-                                    enlargeCenterPage: true,
-                                    autoPlay: true,
-                                    aspectRatio: 16 / 9,
-                                    autoPlayCurve: Curves.linearToEaseOut,
-                                    enableInfiniteScroll: true,
-                                    autoPlayAnimationDuration:
-                                        Duration(milliseconds: 1000),
-                                    viewportFraction: 0.8,
-                                  ),
-                                  itemCount: ClientCarsoulData.length,
-                                  itemBuilder: (context, index) {
-                                    return clientButton(
-                                      context,
-                                      carsoulData[index].image,
-                                      carsoulData[index].url,
-                                    );
-                                  }),
-                              Positioned(
-                                left: 0,
-                                height: 150,
-                                child: IconButton(
-                                  onPressed: () =>
-                                      buttonCarouselController.previousPage(
-                                          duration: Duration(milliseconds: 100),
-                                          curve: Curves.linear),
-                                  icon: Icon(Icons.arrow_back_ios),
-                                ),
-                              ),
-                              Positioned(
-                                right: 0,
-                                height: 150,
-                                child: IconButton(
-                                  onPressed: () =>
-                                      buttonCarouselController.nextPage(
-                                          duration: Duration(milliseconds: 100),
-                                          curve: Curves.linear),
-                                  icon: Icon(Icons.arrow_forward_ios),
-                                ),
-                              ),
-                            ]),
+                          Positioned(
+                            right: 0,
+                            height: 150,
+                            child: IconButton(
+                              onPressed: () =>
+                                  buttonCarouselController.nextPage(
+                                      duration: Duration(milliseconds: 100),
+                                      curve: Curves.linear),
+                              icon: Icon(Icons.arrow_forward_ios),
+                            ),
                           ),
-                        ]);
-                  },
-                ),
-              )),
-        ));
+                        ]),
+                      ),
+                    ]);
+              },
+            ),
+          )),
+    ));
   }
 }
