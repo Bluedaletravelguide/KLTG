@@ -1,4 +1,6 @@
+import 'dart:io';
 import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class Location extends StatelessWidget {
@@ -10,6 +12,52 @@ class Location extends StatelessWidget {
     this.location,
   }) : super(key: key);
 
+  void showError(BuildContext context) {
+    if (Platform.isIOS) {
+      showCupertinoDialog(
+          context: context,
+          barrierDismissible: false,
+          builder: (BuildContext context) {
+            return AlertDialog(
+              title: Text(
+                'Error',
+                style:
+                    TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
+              ),
+              content: Text('Location not found!'),
+              actions: [
+                TextButton(
+                    onPressed: () {
+                      Navigator.of(context).pop();
+                    },
+                    child: Text('OK'))
+              ],
+            );
+          });
+    } else {
+      showDialog(
+          context: context,
+          barrierDismissible: false,
+          builder: (BuildContext context) {
+            return AlertDialog(
+              title: Text(
+                'Error',
+                style:
+                    TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
+              ),
+              content: Text('Location not found!'),
+              actions: [
+                TextButton(
+                    onPressed: () {
+                      Navigator.of(context).pop();
+                    },
+                    child: Text('OK'))
+              ],
+            );
+          });
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return text != '-'
@@ -20,19 +68,7 @@ class Location extends StatelessWidget {
               if (await canLaunch(url)) {
                 await launch(url);
               } else {
-                ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                  elevation: 1000,
-                  action: SnackBarAction(
-                      textColor: Colors.white,
-                      label: 'OK',
-                      onPressed: () {
-                        ScaffoldMessenger.of(context).removeCurrentSnackBar();
-                      }),
-                  content: Text(
-                    'Location not available!',
-                    textAlign: TextAlign.left,
-                  ),
-                ));
+                showError(context);
               }
             },
             child: Container(

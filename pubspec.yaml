@@ -33,7 +33,7 @@ dependencies:
   carousel_slider: ^2.2.1
   http: ^0.12.2
   font_awesome_flutter: ^8.8.1
-  url_launcher: ^5.5.3
+  url_launcher: ^6.0.3
   timeline_list: ^0.0.5
   timeline_tile: ^1.0.0
   animated_splash_screen: ^1.0.1
