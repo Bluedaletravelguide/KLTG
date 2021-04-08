@@ -1,6 +1,6 @@
 import 'dart:io';
 import '../models/Adsban.dart';
-import 'package:firebase_admob/firebase_admob.dart';
+import 'package:google_mobile_ads/google_mobile_ads.dart';
 import '../Data/SizeConfig.dart';
 import '../Data/content_data.dart';
 import '../widgets/content/decrepitation_widget.dart';
@@ -32,13 +32,6 @@ class _MedicalState extends State<Medical> {
   BanAdsense _banAdsense;
 
   void initState() {
-    if (Platform.isIOS) {
-      FirebaseAdMob.instance
-          .initialize(appId: 'ca-app-pub-7002644831588730~7281355962');
-    } else {
-      FirebaseAdMob.instance
-          .initialize(appId: 'ca-app-pub-7002644831588730~3248809866');
-    }
     super.initState();
     _bannerAd = BanAdsense().createBannerAd()..load();
     showAd();
@@ -60,16 +53,10 @@ class _MedicalState extends State<Medical> {
   void showAd() {
     if (Platform.isIOS) {
       _bannerAd ??= _banAdsense.createBannerAd();
-      _bannerAd
-        ..load()
-        ..show(
-          anchorType: AnchorType.bottom,
-        );
+      _bannerAd..load();
     } else {
       _bannerAd ??= _banAdsense.createBannerAd();
-      _bannerAd
-        ..load()
-        ..show();
+      _bannerAd..load();
     }
   }
 

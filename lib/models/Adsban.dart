@@ -1,5 +1,5 @@
 import 'dart:io';
-import 'package:firebase_admob/firebase_admob.dart';
+import 'package:google_mobile_ads/google_mobile_ads.dart';
 
 //Use the test id code first to test the ADS then you can use the real ID
 //Real id can be found in the admob account
@@ -13,25 +13,26 @@ class BanAdsense {
             //test id ('ca-app-pub-3940256099942544/2934735716')
             //actual ('ca-app-pub-7002644831588730/6754149455')
             size: AdSize.banner,
-            listener: (MobileAdEvent event) {
-              print("BannerAd event $event");
-            },
-          )
+            request: AdRequest(),
+            listener: AdListener(
+              onAdLoaded: (Ad ad) {
+                print('$BannerAd loaded.');
+              },
+            ))
         : BannerAd(
             adUnitId: 'ca-app-pub-7002644831588730/4427349537',
             //test id ('ca-app-pub-3940256099942544/6300978111')
             //actual ('ca-app-pub-7002644831588730/4427349537')
             size: AdSize.banner,
-            listener: (MobileAdEvent event) {
-              print("BannerAd event $event");
-            });
+            request: AdRequest(),
+            listener: AdListener(onAdLoaded: (Ad ad) {
+              print('$BannerAd loaded.');
+            }));
   }
 
   void loadAd() {
     _bannerAd ??= createBannerAd();
-    _bannerAd
-      ..load()
-      ..show();
+    _bannerAd..load();
   }
 
   void hideAd() async {
@@ -42,16 +43,5 @@ class BanAdsense {
   void removeAd() {
     _bannerAd?.dispose();
     _bannerAd = null;
-  }
-
-  void initState() {
-    if (Platform.isIOS) {
-      FirebaseAdMob.instance
-          .initialize(appId: 'ca-app-pub-7002644831588730~7281355962');
-    } else {
-      FirebaseAdMob.instance
-          .initialize(appId: 'ca-app-pub-7002644831588730~3248809866');
-    }
-    _bannerAd = createBannerAd()..load();
   }
 }

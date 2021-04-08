@@ -1,7 +1,5 @@
-import 'dart:io';
-
 import '../models/AdsBan.dart';
-import 'package:firebase_admob/firebase_admob.dart';
+import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:flutter/material.dart';
 import '../Data/content_data.dart';
 import 'package:flutter/cupertino.dart';
@@ -32,16 +30,20 @@ class _ContentScreenState extends State<ContentScreen> {
   BanAdsense _banAdsense;
 
   void initState() {
-    if (Platform.isIOS) {
-      FirebaseAdMob.instance
-          .initialize(appId: 'ca-app-pub-7002644831588730~7281355962');
-    } else {
-      FirebaseAdMob.instance
-          .initialize(appId: 'ca-app-pub-7002644831588730~3248809866');
-    }
     super.initState();
     _bannerAd = BanAdsense().createBannerAd()..load();
     showAd();
+  }
+
+  Widget showAd() {
+    return Align(
+        alignment: Alignment.bottomCenter,
+        child: _bannerAd == null
+            ? SizedBox(height: 50)
+            : Container(
+                height: 50,
+                child: AdWidget(ad: _bannerAd),
+              ));
   }
 
   @override
@@ -49,22 +51,6 @@ class _ContentScreenState extends State<ContentScreen> {
     _bannerAd?.dispose();
     _banAdsense.removeAd();
     super.dispose();
-  }
-
-  void showAd() {
-    if (Platform.isIOS) {
-      _bannerAd ??= _banAdsense.createBannerAd();
-      _bannerAd
-        ..load()
-        ..show(
-          anchorType: AnchorType.bottom,
-        );
-    } else {
-      _bannerAd ??= _banAdsense.createBannerAd();
-      _bannerAd
-        ..load()
-        ..show();
-    }
   }
 
   void removeAd() {
@@ -90,7 +76,7 @@ class _ContentScreenState extends State<ContentScreen> {
     final pageBody = SafeArea(
         child: Material(
       child: Padding(
-        padding: EdgeInsets.only(bottom: 50),
+        padding: EdgeInsets.only(bottom: 0),
         child: SingleChildScrollView(
           child: Column(children: [
             Stack(children: [
@@ -129,8 +115,6 @@ class _ContentScreenState extends State<ContentScreen> {
       ),
     ));
     return PlatformScaffold(
-      appBar: PlatformAppBar(title: Text(contentTitle)),
-      body: pageBody,
-    );
+        appBar: PlatformAppBar(title: Text(contentTitle)), body: pageBody);
   }
 }

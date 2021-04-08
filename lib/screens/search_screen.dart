@@ -312,10 +312,10 @@ class SearchResultsListView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final fsb = FloatingSearchBar.of(context);
+    //final fsb = FloatingSearchBar.of(context);
     if (searchTerm == null) {
       return Padding(
-          padding: EdgeInsets.only(top: fsb.height + fsb.margins.vertical),
+          padding: EdgeInsets.only(top: 16.0),
           child: Center(
             child: Column(
               mainAxisSize: MainAxisSize.min,
@@ -340,7 +340,7 @@ class SearchResultsListView extends StatelessWidget {
 
     if (queryList.isEmpty) {
       return Padding(
-          padding: EdgeInsets.only(top: fsb.height + fsb.margins.vertical),
+          padding: EdgeInsets.only(top: 16.0),
           child: Center(
             child: Column(
               mainAxisSize: MainAxisSize.min,
@@ -359,7 +359,7 @@ class SearchResultsListView extends StatelessWidget {
     }
 
     return Padding(
-      padding: EdgeInsets.only(top: fsb.height + fsb.margins.vertical),
+      padding: EdgeInsets.only(top: 16.0),
       child: SafeArea(
         child: Material(
           child: GridView.builder(

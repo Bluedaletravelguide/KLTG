@@ -254,7 +254,10 @@ class AboutUsScreen extends StatelessWidget {
                                 viewportFraction: 0.8,
                               ),
                               itemCount: ClientCarsoulData.length,
-                              itemBuilder: (context, index) {
+                              itemBuilder: (
+                                context,
+                                index,
+                              ) {
                                 return clientButton(
                                   context,
                                   carsoulData[index].image,

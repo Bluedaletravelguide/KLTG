@@ -1,6 +1,5 @@
-import 'dart:io';
 import '../models/Adsban.dart';
-import 'package:firebase_admob/firebase_admob.dart';
+import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:flutter/material.dart';
 import '../Data/travel_tips_data.dart';
 import '../widgets/travelTips_widget.dart';
@@ -24,16 +23,20 @@ class _TravelTipsScreenState extends State<TravelTipsScreen> {
   BanAdsense _banAdsense;
 
   void initState() {
-    if (Platform.isIOS) {
-      FirebaseAdMob.instance
-          .initialize(appId: 'ca-app-pub-7002644831588730~7281355962');
-    } else {
-      FirebaseAdMob.instance
-          .initialize(appId: 'ca-app-pub-7002644831588730~3248809866');
-    }
     super.initState();
     _bannerAd = BanAdsense().createBannerAd()..load();
     showAd();
+  }
+
+  Widget showAd() {
+    return Align(
+        alignment: Alignment.bottomCenter,
+        child: _bannerAd == null
+            ? SizedBox(height: 50)
+            : Container(
+                height: 50,
+                child: AdWidget(ad: _bannerAd),
+              ));
   }
 
   @override
@@ -46,22 +49,6 @@ class _TravelTipsScreenState extends State<TravelTipsScreen> {
   void removeAd() {
     _bannerAd?.dispose();
     _bannerAd = null;
-  }
-
-  void showAd() {
-    if (Platform.isIOS) {
-      _bannerAd ??= _banAdsense.createBannerAd();
-      _bannerAd
-        ..load()
-        ..show(
-          anchorType: AnchorType.bottom,
-        );
-    } else {
-      _bannerAd ??= _banAdsense.createBannerAd();
-      _bannerAd
-        ..load()
-        ..show();
-    }
   }
 
   @override
@@ -95,10 +82,9 @@ class _TravelTipsScreenState extends State<TravelTipsScreen> {
       ),
     );
     return PlatformScaffold(
-      appBar: PlatformAppBar(
-        title: Text(subCategoryTitle),
-      ),
-      body: pageBody,
-    );
+        appBar: PlatformAppBar(
+          title: Text(subCategoryTitle),
+        ),
+        body: pageBody);
   }
 }
