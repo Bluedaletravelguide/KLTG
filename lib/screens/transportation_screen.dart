@@ -1,6 +1,3 @@
-import 'dart:io';
-import '../models/Adsban.dart';
-import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:flutter/material.dart';
 import '../Data/transportation_data.dart';
 import '../widgets/transportation_widget.dart';
@@ -20,44 +17,6 @@ class TransportationScreen extends StatefulWidget {
 }
 
 class _TransportationScreenState extends State<TransportationScreen> {
-//Ads Code
-
-  BannerAd _bannerAd;
-  BanAdsense _banAdsense;
-
-  void initState() {
-    super.initState();
-    _bannerAd = BanAdsense().createBannerAd()..load();
-  }
-
-  @override
-  void dispose() {
-    _bannerAd?.dispose();
-    _banAdsense.removeAd();
-    super.dispose();
-  }
-
-  void showAd() {
-    if (Platform.isIOS) {
-      _bannerAd ??= _banAdsense.createBannerAd();
-      _bannerAd..load();
-    } else {
-      _bannerAd ??= _banAdsense.createBannerAd();
-      _bannerAd..load();
-    }
-  }
-
-  void removeAd() {
-    _bannerAd?.dispose();
-    _bannerAd = null;
-  }
-
-  @override
-  void didUpdateWidget(covariant TransportationScreen oldWidget) {
-    removeAd();
-    super.didUpdateWidget(oldWidget);
-  }
-
   @override
   Widget build(BuildContext context) {
     final subCategoryTitle = widget.appbartitle;
@@ -65,7 +24,7 @@ class _TransportationScreenState extends State<TransportationScreen> {
       child: Material(
         child: GestureDetector(
           child: Padding(
-            padding: EdgeInsets.only(bottom: 50),
+            padding: EdgeInsets.only(bottom: 0),
             child: SingleChildScrollView(
               child: Column(
                 children: TransportationData.map(

@@ -1,6 +1,3 @@
-import 'dart:io';
-import '../models/Adsban.dart';
-import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:flutter/material.dart';
 import 'package:timeline_tile/timeline_tile.dart';
 import '../Data/kl_at_glance_data.dart';
@@ -38,34 +35,6 @@ class KlAtGlanceScreen extends StatefulWidget {
 }
 
 class _KlAtGlanceScreenState extends State<KlAtGlanceScreen> {
-//Ads Code:
-
-  BannerAd _bannerAd;
-  BanAdsense _banAdsense;
-
-  void initState() {
-    super.initState();
-    _bannerAd = BanAdsense().createBannerAd()..load();
-  }
-
-  @override
-  void dispose() {
-    _bannerAd?.dispose();
-    _banAdsense.removeAd();
-    super.dispose();
-  }
-
-  void removeAd() {
-    _bannerAd?.dispose();
-    _bannerAd = null;
-  }
-
-  @override
-  void didUpdateWidget(covariant KlAtGlanceScreen oldWidget) {
-    removeAd();
-    super.didUpdateWidget(oldWidget);
-  }
-
   @override
   Widget build(BuildContext context) {
     final subCategoryTitle = widget.appbartitle;
@@ -80,15 +49,6 @@ class _KlAtGlanceScreenState extends State<KlAtGlanceScreen> {
             ),
           ),
           child: GestureDetector(
-            onVerticalDragCancel: () {
-              if (Platform.isIOS) {
-                _bannerAd ??= _banAdsense.createBannerAd();
-                _bannerAd..load();
-              } else {
-                _bannerAd ??= _banAdsense.createBannerAd();
-                _bannerAd..load();
-              }
-            },
             child: Padding(
               padding: EdgeInsets.only(top: 8, left: 8, right: 8, bottom: 50),
               child: GridView.count(

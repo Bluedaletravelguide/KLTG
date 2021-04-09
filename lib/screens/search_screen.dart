@@ -327,7 +327,7 @@ class SearchResultsListView extends StatelessWidget {
                 Text(
                   'Type in the field above to search.',
                   style: Theme.of(context).textTheme.headline1,
-                )
+                ),
               ],
             ),
           ));

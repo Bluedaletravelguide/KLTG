@@ -32,18 +32,6 @@ class _ContentScreenState extends State<ContentScreen> {
   void initState() {
     super.initState();
     _bannerAd = BanAdsense().createBannerAd()..load();
-    showAd();
-  }
-
-  Widget showAd() {
-    return Align(
-        alignment: Alignment.bottomCenter,
-        child: _bannerAd == null
-            ? SizedBox(height: 50)
-            : Container(
-                height: 50,
-                child: AdWidget(ad: _bannerAd),
-              ));
   }
 
   @override
@@ -110,6 +98,14 @@ class _ContentScreenState extends State<ContentScreen> {
                 text: selectcontent.locationText,
                 location: selectcontent.locationUrl),
             SizedBox(height: 50),
+            Align(
+                alignment: Alignment.bottomCenter,
+                child: _bannerAd == null
+                    ? SizedBox(height: 50)
+                    : Container(
+                        height: 50,
+                        child: AdWidget(ad: _bannerAd),
+                      ))
           ]),
         ),
       ),

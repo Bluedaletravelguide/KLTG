@@ -1,6 +1,3 @@
-import 'dart:io';
-import '../models/Adsban.dart';
-import 'package:google_mobile_ads/google_mobile_ads.dart';
 import '../Data/SizeConfig.dart';
 import '../Data/content_data.dart';
 import '../widgets/content/decrepitation_widget.dart';
@@ -26,45 +23,6 @@ class Medical extends StatefulWidget {
 }
 
 class _MedicalState extends State<Medical> {
-//Ads code:
-
-  BannerAd _bannerAd;
-  BanAdsense _banAdsense;
-
-  void initState() {
-    super.initState();
-    _bannerAd = BanAdsense().createBannerAd()..load();
-    showAd();
-  }
-
-  @override
-  void dispose() {
-    _bannerAd?.dispose();
-    _banAdsense.removeAd();
-    super.dispose();
-  }
-
-  @override
-  void didUpdateWidget(covariant Medical oldWidget) {
-    removeAd();
-    super.didUpdateWidget(oldWidget);
-  }
-
-  void showAd() {
-    if (Platform.isIOS) {
-      _bannerAd ??= _banAdsense.createBannerAd();
-      _bannerAd..load();
-    } else {
-      _bannerAd ??= _banAdsense.createBannerAd();
-      _bannerAd..load();
-    }
-  }
-
-  void removeAd() {
-    _bannerAd?.dispose();
-    _bannerAd = null;
-  }
-
   @override
   Widget build(BuildContext context) {
     SizeConfig().init(context);
