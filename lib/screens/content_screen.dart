@@ -1,3 +1,4 @@
+import 'dart:io';
 import '../models/AdsBan.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:flutter/material.dart';
@@ -8,7 +9,6 @@ import '../widgets/content/fees_widget.dart';
 import '../widgets/content/tel_widget.dart';
 import '../widgets/content/workHour_widget.dart';
 import '../widgets/content/location_widget.dart';
-import 'package:flutter_platform_widgets/flutter_platform_widgets.dart';
 
 class ContentScreen extends StatefulWidget {
   static const routeName = '/content_screen';
@@ -44,6 +44,27 @@ class _ContentScreenState extends State<ContentScreen> {
   void removeAd() {
     _bannerAd?.dispose();
     _bannerAd = null;
+  }
+
+  // Widget createAppBar () {
+  //   if (Platform.isIOS) {
+
+  //   }
+  // }
+
+  double getSmartBannerHeight(BuildContext context) {
+    MediaQueryData mediaScreen = MediaQuery.of(context);
+    double dpHeight = mediaScreen.orientation == Orientation.portrait
+        ? mediaScreen.size.height
+        : mediaScreen.size.width;
+    print("Device height: $dpHeight");
+    if (dpHeight <= 400.0) {
+      return 32.0;
+    }
+    if (dpHeight > 720.0) {
+      return 90.0;
+    }
+    return 50.0;
   }
 
   @override
@@ -98,19 +119,22 @@ class _ContentScreenState extends State<ContentScreen> {
                 text: selectcontent.locationText,
                 location: selectcontent.locationUrl),
             SizedBox(height: 50),
-            Align(
-                alignment: Alignment.bottomCenter,
-                child: _bannerAd == null
-                    ? SizedBox(height: 50)
-                    : Container(
-                        height: 50,
-                        child: AdWidget(ad: _bannerAd),
-                      ))
           ]),
         ),
       ),
     ));
-    return PlatformScaffold(
-        appBar: PlatformAppBar(title: Text(contentTitle)), body: pageBody);
+
+    final adPlace = _bannerAd == null
+        ? Container(height: 50)
+        : Container(
+            height: getSmartBannerHeight(context),
+            child: AdWidget(ad: _bannerAd),
+          );
+
+    return Scaffold(
+      appBar: AppBar(title: Text(contentTitle)),
+      body: pageBody,
+      bottomNavigationBar: adPlace,
+    );
   }
 }

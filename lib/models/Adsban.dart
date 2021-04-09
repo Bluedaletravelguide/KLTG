@@ -1,4 +1,5 @@
 import 'dart:io';
+import 'package:flutter/cupertino.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 
 //Use the test id code first to test the ADS then you can use the real ID
@@ -23,7 +24,7 @@ class BanAdsense {
             adUnitId: 'ca-app-pub-7002644831588730/4427349537',
             //test id ('ca-app-pub-3940256099942544/6300978111')
             //actual ('ca-app-pub-7002644831588730/4427349537')
-            size: AdSize.banner,
+            size: AdSize.getSmartBanner(Orientation.portrait),
             request: AdRequest(),
             listener: AdListener(onAdLoaded: (Ad ad) {
               print('$BannerAd loaded.');

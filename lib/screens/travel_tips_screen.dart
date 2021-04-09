@@ -38,6 +38,7 @@ class _TravelTipsScreenState extends State<TravelTipsScreen> {
         ),
       ),
     );
+
     return PlatformScaffold(
         appBar: PlatformAppBar(
           title: Text(subCategoryTitle),
