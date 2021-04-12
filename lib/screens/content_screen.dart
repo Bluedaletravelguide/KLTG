@@ -46,11 +46,15 @@ class _ContentScreenState extends State<ContentScreen> {
     _bannerAd = null;
   }
 
-  // Widget createAppBar () {
-  //   if (Platform.isIOS) {
-
-  //   }
-  // }
+  Widget createAppBar(String title) {
+    if (Platform.isIOS) {
+      return CupertinoNavigationBar(
+        middle: Text(title),
+      );
+    } else {
+      return AppBar(title: Text(title));
+    }
+  }
 
   double getSmartBannerHeight(BuildContext context) {
     MediaQueryData mediaScreen = MediaQuery.of(context);
@@ -132,7 +136,7 @@ class _ContentScreenState extends State<ContentScreen> {
           );
 
     return Scaffold(
-      appBar: AppBar(title: Text(contentTitle)),
+      appBar: createAppBar(contentTitle),
       body: pageBody,
       bottomNavigationBar: adPlace,
     );
