@@ -4,6 +4,7 @@ import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:flutter/material.dart';
 import '../Data/content_data.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:animate_icons/animate_icons.dart';
 import '../widgets/content/decrepitation_widget.dart';
 import '../widgets/content/fees_widget.dart';
 import '../widgets/content/tel_widget.dart';
@@ -50,9 +51,53 @@ class _ContentScreenState extends State<ContentScreen> {
     if (Platform.isIOS) {
       return CupertinoNavigationBar(
         middle: Text(title),
+        trailing: animatedIcons(),
       );
     } else {
-      return AppBar(title: Text(title));
+      return AppBar(
+        title: Text(title),
+        actions: <Widget>[animatedIcons()],
+      );
+    }
+  }
+
+  Widget animatedIcons() {
+    AnimateIconController controller;
+    controller = AnimateIconController();
+    if (Platform.isIOS) {
+      return AnimateIcons(
+        startIcon: Icons.bookmark_outline,
+        endIcon: Icons.bookmark,
+        startTooltip: 'Bookmark this page',
+        endTooltip: 'Unbookmark this page',
+        startIconColor: Colors.black,
+        endIconColor: Colors.black,
+        controller: controller,
+        onStartIconPress: () {
+          return true;
+        },
+        onEndIconPress: () {
+          return true;
+        },
+        duration: Duration(milliseconds: 375),
+      );
+    } else {
+      return AnimateIcons(
+        startIcon: Icons.bookmark_outline,
+        endIcon: Icons.bookmark,
+        startTooltip: 'Bookmark this page',
+        endTooltip: 'Unbookmark this page',
+        startIconColor: Colors.white,
+        endIconColor: Colors.white,
+        controller: controller,
+        onStartIconPress: () {
+          return true;
+        },
+        onEndIconPress: () {
+          return true;
+        },
+        duration: Duration(milliseconds: 250),
+      );
     }
   }
 
