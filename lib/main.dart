@@ -1,13 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'Data/SizeConfig.dart';
 import 'screens/tabs_screen.dart';
+import 'models/notification.dart';
 import 'package:animated_splash_screen/animated_splash_screen.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
   MobileAds.instance.initialize();
+  Firebase.initializeApp();
   SystemChrome.setPreferredOrientations([
     DeviceOrientation.portraitUp,
     DeviceOrientation.portraitDown,
@@ -37,7 +40,7 @@ class Loading extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     SizeConfig().init(context);
-
+    PushNotificationsManager().init();
     return MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'KL The Guide',

@@ -65,21 +65,24 @@ class _ContentScreenState extends State<ContentScreen> {
     AnimateIconController controller;
     controller = AnimateIconController();
     if (Platform.isIOS) {
-      return AnimateIcons(
-        startIcon: Icons.bookmark_outline,
-        endIcon: Icons.bookmark,
-        startTooltip: 'Bookmark this page',
-        endTooltip: 'Unbookmark this page',
-        startIconColor: Colors.black,
-        endIconColor: Colors.black,
-        controller: controller,
-        onStartIconPress: () {
-          return true;
-        },
-        onEndIconPress: () {
-          return true;
-        },
-        duration: Duration(milliseconds: 375),
+      return Material(
+        color: Colors.transparent,
+        child: AnimateIcons(
+          startIcon: Icons.bookmark_outline,
+          endIcon: Icons.bookmark,
+          startTooltip: 'Bookmark this page',
+          endTooltip: 'Unbookmark this page',
+          startIconColor: Colors.black,
+          endIconColor: Colors.black,
+          controller: controller,
+          onStartIconPress: () {
+            return true;
+          },
+          onEndIconPress: () {
+            return true;
+          },
+          duration: Duration(milliseconds: 375),
+        ),
       );
     } else {
       return AnimateIcons(
