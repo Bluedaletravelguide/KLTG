@@ -1,6 +1,6 @@
 import 'dart:io';
-import '../screens/about_us_screen.dart';
-import '../screens/e-book_screen.dart';
+import '../screens/bookmark_screen.dart';
+import '../screens/home_screen.dart';
 import '../screens/catgeroies_screen.dart';
 import '../screens/search_screen.dart';
 import 'package:flutter/cupertino.dart';
@@ -39,13 +39,13 @@ class _TabsScreenState extends State<TabsScreen> {
 
 //For android app bottom nevgation bar :
   final List<Map<String, Object>> _pages = [
-    {'page': CategoriesScreen(), 'title': 'KL THE GUIDE'},
-    {'page': FirstPage(), 'title': 'E-book'},
+    {'page': HomeScreen(), 'title': 'KL THE GUIDE'},
+    {'page': CategoriesScreen(), 'title': 'All Categories'},
+    {'page': BookmarkScreen(), 'title': 'My Bookmarks'},
     {
       'page': ContactUsScreen(),
       'title': 'Contact Us',
     },
-    {'page': AboutUsScreen(), 'title': 'About Us'}
   ];
 
   int _selectedPageIndex = 0;
@@ -68,17 +68,18 @@ class _TabsScreenState extends State<TabsScreen> {
       ),
       BottomNavigationBarItem(
         backgroundColor: Theme.of(context).primaryColorDark,
-        icon: Icon(Icons.book),
-        label: 'E-book',
+        icon: Icon(Icons.list),
+        label: 'All Categories',
+      ),
+      BottomNavigationBarItem(
+        backgroundColor: Theme.of(context).primaryColorDark,
+        icon: Icon(Icons.bookmark),
+        label: 'Bookmarks',
       ),
       BottomNavigationBarItem(
           backgroundColor: Theme.of(context).primaryColorDark,
           icon: Icon(Icons.contacts),
           label: 'Contact Us'),
-      BottomNavigationBarItem(
-          backgroundColor: Theme.of(context).primaryColorDark,
-          icon: Icon(Icons.info),
-          label: 'About Us')
     ];
 //IOS BottomNavigationBar
     return Platform.isIOS
@@ -89,13 +90,13 @@ class _TabsScreenState extends State<TabsScreen> {
             tabBuilder: (context, index) {
               switch (index) {
                 case 1:
-                  return bottomNav(FirstPage(), 'E-book');
-
-                case 2:
-                  return bottomNav(ContactUsScreen(), 'Contact Us');
+                  return bottomNav(CategoriesScreen(), 'All Categories');
 
                 case 3:
-                  return bottomNav(AboutUsScreen(), 'About Us');
+                  return bottomNav(ContactUsScreen(), 'Contact Us');
+
+                case 2:
+                  return bottomNav(BookmarkScreen(), 'My Bookmarks');
 
                 default:
                   return bottomNav(CategoriesScreen(), 'KL THE GUIDE');

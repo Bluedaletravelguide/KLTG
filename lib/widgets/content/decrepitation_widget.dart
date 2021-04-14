@@ -23,15 +23,19 @@ class Decrepitation extends StatelessWidget {
               padding: const EdgeInsets.only(
                 right: 70,
                 left: 10,
-                top:20,
+                top: 20,
               ),
               alignment: Alignment.centerLeft,
-              child: Text(
-                text,
-                style: MediaQuery.of(context).size.width>500?Theme.of(context).textTheme.headline3:Theme.of(context).textTheme.bodyText1,
-                textAlign: TextAlign.left,
-                softWrap: true,
-                overflow: TextOverflow.fade,
+              child: SingleChildScrollView(
+                child: Text(
+                  text,
+                  style: MediaQuery.of(context).size.width > 500
+                      ? Theme.of(context).textTheme.headline3
+                      : Theme.of(context).textTheme.bodyText1,
+                  textAlign: TextAlign.left,
+                  softWrap: true,
+                  overflow: TextOverflow.fade,
+                ),
               ),
             ),
           )

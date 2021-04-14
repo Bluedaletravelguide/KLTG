@@ -29,6 +29,9 @@ class _FirstPageState extends State<FirstPage> {
   Widget build(BuildContext context) {
     SizeConfig().init(context);
     return PlatformScaffold(
+      appBar: PlatformAppBar(
+        title: Text('E-book'),
+      ),
       body: SafeArea(
         child: Material(
           child: Padding(

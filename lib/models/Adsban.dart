@@ -13,7 +13,7 @@ class BanAdsense {
             adUnitId: 'ca-app-pub-7002644831588730/6754149455',
             //test id ('ca-app-pub-3940256099942544/2934735716')
             //actual ('ca-app-pub-7002644831588730/6754149455')
-            size: AdSize.banner,
+            size: AdSize.getSmartBanner(Orientation.portrait),
             request: AdRequest(),
             listener: AdListener(
               onAdLoaded: (Ad ad) {
