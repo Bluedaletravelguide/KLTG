@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:kltheguide/screens/bookmark_screen.dart';
 import 'Data/SizeConfig.dart';
 import 'screens/tabs_screen.dart';
 import 'models/notification.dart';
@@ -136,6 +137,7 @@ class Loading extends StatelessWidget {
         initialRoute: '/',
         routes: {
           '/': (ctx) => TabsScreen(),
+          '/bookmark': (ctx) => BookmarkScreen()
         });
   }
 }

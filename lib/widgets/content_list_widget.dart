@@ -1,32 +1,67 @@
+import 'package:kltheguide/models/content_List.dart';
+import 'package:kltheguide/screens/bookmark_screen.dart';
+import '../widgets/bookmark_widget.dart';
 import '../screens/content_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_platform_widgets/flutter_platform_widgets.dart';
 import '../screens/medical_screen.dart';
 
-class ContentList extends StatelessWidget {
+class ContentList extends StatefulWidget {
   final String title;
   final String id;
   final String image;
   final String description;
-  const ContentList({this.image, this.title, this.id, this.description});
+  final Set<ContentLi> _bookmark = new Set<ContentLi>();
+  ContentList({this.image, this.title, this.id, this.description});
+
+  void execute() {
+    _ContentListState().pushToScreen(_ContentListState().context);
+  }
+
+  Set<ContentLi> getBookmark() {
+    return _ContentListState().getbookmark();
+  }
+
+  @override
+  _ContentListState createState() => _ContentListState();
+}
+
+class _ContentListState extends State<ContentList> {
+  void initState() {
+    super.initState();
+  }
 
   void selectContentList(BuildContext context) {
-    if (id == 'cl1_14' || id == 'cl2_14' || id == 'cl3_14') {
+    if (widget.id == 'cl1_14' ||
+        widget.id == 'cl2_14' ||
+        widget.id == 'cl3_14') {
       Navigator.of(context).push(
         platformPageRoute(
           context: context,
-          builder: (context) =>
-              new Medical(appbartitle: title, id: id, image: image),
+          builder: (context) => new Medical(
+              appbartitle: widget.title, id: widget.id, image: widget.image),
         ),
       );
     } else {
       Navigator.of(context).push(
         platformPageRoute(
           context: context,
-          builder: (context) =>
-              new ContentScreen(appbartitle: title, id: id, image: image),
+          builder: (context) => new ContentScreen(
+              appbartitle: widget.title, id: widget.id, image: widget.image),
         ),
       );
+    }
+  }
+
+  Set<ContentLi> getbookmark() {
+    return widget._bookmark;
+  }
+
+  Widget isBookmarked(bool bk) {
+    if (bk) {
+      return Icon(Icons.bookmark);
+    } else {
+      return Icon(Icons.bookmark_outline);
     }
   }
 
@@ -37,7 +72,7 @@ class ContentList extends StatelessWidget {
       borderRadius: BorderRadius.circular(10),
       autofocus: true,
       onTap: () => selectContentList(context),
-      onLongPress: () => print(id),
+      onLongPress: () => print(widget.id),
       child: Card(
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(15),
@@ -53,7 +88,7 @@ class ContentList extends StatelessWidget {
                   topRight: Radius.circular(15),
                 ),
                 child: Image.asset(
-                  image,
+                  widget.image,
                   height: constraints.maxHeight * 0.78,
                   width: double.infinity,
                   fit: BoxFit.cover,
@@ -61,20 +96,21 @@ class ContentList extends StatelessWidget {
               ),
               Expanded(
                 child: Padding(
-                  padding: EdgeInsets.all(0),
+                  padding: EdgeInsets.only(left: 5.0),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: <Widget>[
-                      Icon(
-                        Icons.arrow_right,
-                        size: MediaQuery.of(context).size.height * 0.04,
+                      Container(
+                        height: 50,
+                        width: 50,
+                        child: BookmarkWidget(),
                       ),
                       SizedBox(
                         width: constraints.maxWidth * 0.05,
                       ),
                       Expanded(
                         child: Text(
-                          title,
+                          widget.title,
                           style: Theme.of(context).textTheme.subtitle2,
                           softWrap: true,
                           overflow: TextOverflow.fade,
@@ -89,5 +125,10 @@ class ContentList extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  Future pushToScreen(BuildContext context) {
+    return Navigator.of(context).push(
+        MaterialPageRoute(builder: (BuildContext context) => BookmarkScreen()));
   }
 }

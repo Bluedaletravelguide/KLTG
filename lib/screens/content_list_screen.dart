@@ -11,13 +11,12 @@ class ContentListScreen extends StatelessWidget {
 
   const ContentListScreen({Key key, this.appbartitle, this.id})
       : super(key: key);
-  
 
   @override
   Widget build(BuildContext context) {
     final contentListTitle = appbartitle;
     final contentListId = id;
-    //This function is to call the data from the data folder(ContentListData) then it will generate the widget according to item number. 
+    //This function is to call the data from the data folder(ContentListData) then it will generate the widget according to item number.
     final contentList = ContentListData.where((contentList) {
       return contentList.categories.contains(contentListId);
     }).toList();
@@ -43,7 +42,9 @@ class ContentListScreen extends StatelessWidget {
       ),
     );
     return PlatformScaffold(
-      appBar: PlatformAppBar(title: Text(contentListTitle)),
+      appBar: PlatformAppBar(
+        title: Text(contentListTitle),
+      ),
       body: pageBody,
     );
   }

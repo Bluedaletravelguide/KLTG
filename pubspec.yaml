@@ -47,6 +47,7 @@ dependencies:
   google_mobile_ads: ^0.12.1
   flutter_platform_widgets: ^1.1.0
   pattern_formatter: ^2.0.0
+  path_provider: ^2.0.1
 
 
 

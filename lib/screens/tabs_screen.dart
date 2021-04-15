@@ -1,5 +1,6 @@
 import 'dart:io';
-import '../screens/bookmark_screen.dart';
+import 'package:kltheguide/screens/bookmark_screen.dart';
+
 import '../screens/home_screen.dart';
 import '../screens/catgeroies_screen.dart';
 import '../screens/search_screen.dart';
@@ -72,10 +73,9 @@ class _TabsScreenState extends State<TabsScreen> {
         label: 'All Categories',
       ),
       BottomNavigationBarItem(
-        backgroundColor: Theme.of(context).primaryColorDark,
-        icon: Icon(Icons.bookmark),
-        label: 'Bookmarks',
-      ),
+          backgroundColor: Theme.of(context).primaryColorDark,
+          icon: Icon(Icons.bookmark),
+          label: 'My Bookmarks'),
       BottomNavigationBarItem(
           backgroundColor: Theme.of(context).primaryColorDark,
           icon: Icon(Icons.contacts),
@@ -92,14 +92,14 @@ class _TabsScreenState extends State<TabsScreen> {
                 case 1:
                   return bottomNav(CategoriesScreen(), 'All Categories');
 
-                case 3:
-                  return bottomNav(ContactUsScreen(), 'Contact Us');
-
                 case 2:
                   return bottomNav(BookmarkScreen(), 'My Bookmarks');
 
+                case 3:
+                  return bottomNav(ContactUsScreen(), 'Contact Us');
+
                 default:
-                  return bottomNav(CategoriesScreen(), 'KL THE GUIDE');
+                  return bottomNav(HomeScreen(), 'KL THE GUIDE');
               }
             },
           )
