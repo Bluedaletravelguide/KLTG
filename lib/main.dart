@@ -20,6 +20,11 @@ void main() {
   runApp(MyApp());
 }
 
+@override
+Widget build(BuildContext context) {
+  return null;
+}
+
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {

@@ -1,3 +1,5 @@
+import 'package:kltheguide/screens/crosswordWidget.dart';
+
 import '../Data/content_list_data.dart';
 import '../widgets/content_list_widget.dart';
 import '../models/bookmark.dart';
@@ -144,6 +146,20 @@ class _HomeScreenState extends State<HomeScreen> {
               padding: const EdgeInsets.all(8.0),
               child: createButton('Accomodation', 'sc_15'),
             ),
+            Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: ElevatedButton.icon(
+                  onPressed: () {
+                    Navigator.of(context).push(
+                      platformPageRoute(
+                        context: context,
+                        builder: (context) => new CrosswordWidget(),
+                      ),
+                    );
+                  },
+                  icon: Icon(Icons.gamepad),
+                  label: Text('Game'),
+                ))
           ],
         ),
       ),

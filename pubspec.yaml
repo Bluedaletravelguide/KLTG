@@ -48,6 +48,7 @@ dependencies:
   flutter_platform_widgets: ^1.1.0
   pattern_formatter: ^2.0.0
   path_provider: ^2.0.1
+  word_search: ^0.1.2
 
 
 
