@@ -1,21 +1,42 @@
 import 'package:flutter/material.dart';
 import '../Data/content_list_data.dart';
 import '../widgets/content_list_widget.dart';
+import '../models/bookmark.dart';
+import '../models/content_List.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_platform_widgets/flutter_platform_widgets.dart';
 
-class ContentListScreen extends StatelessWidget {
+class ContentListScreen extends StatefulWidget {
   static const routeName = '/content_list';
   final String appbartitle;
   final String id;
 
-  const ContentListScreen({Key key, this.appbartitle, this.id})
-      : super(key: key);
+  ContentListScreen({Key key, this.appbartitle, this.id}) : super(key: key);
+
+  final PinBookmarks bookmark = PinBookmarks();
+
+  updateBookmark(ContentLi cl, bool isPin) {
+    if (isPin) {
+      bookmark.addBookmark(cl);
+    } else {
+      bookmark.removeBookmark(cl);
+    }
+  }
+
+  @override
+  _ContentListScreenState createState() => _ContentListScreenState();
+}
+
+class _ContentListScreenState extends State<ContentListScreen> {
+  @override
+  void initState() {
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
-    final contentListTitle = appbartitle;
-    final contentListId = id;
+    final contentListTitle = widget.appbartitle;
+    final contentListId = widget.id;
     //This function is to call the data from the data folder(ContentListData) then it will generate the widget according to item number.
     final contentList = ContentListData.where((contentList) {
       return contentList.categories.contains(contentListId);
@@ -29,6 +50,12 @@ class ContentListScreen extends StatelessWidget {
               id: contentList[index].id,
               title: contentList[index].contentListTitle,
               image: contentList[index].image,
+              isBookmarked: widget.bookmark.isBookmark(contentList[index]),
+              onBookmarkChanged: (isBookmarked) {
+                setState(() {
+                  widget.updateBookmark(contentList[index], isBookmarked);
+                });
+              },
             );
           },
           itemCount: contentList.length,

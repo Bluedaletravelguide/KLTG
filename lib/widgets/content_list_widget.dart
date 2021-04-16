@@ -1,67 +1,42 @@
-import 'package:kltheguide/models/content_List.dart';
-import 'package:kltheguide/screens/bookmark_screen.dart';
 import '../widgets/bookmark_widget.dart';
 import '../screens/content_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_platform_widgets/flutter_platform_widgets.dart';
 import '../screens/medical_screen.dart';
 
-class ContentList extends StatefulWidget {
+class ContentList extends StatelessWidget {
   final String title;
   final String id;
   final String image;
   final String description;
-  final Set<ContentLi> _bookmark = new Set<ContentLi>();
-  ContentList({this.image, this.title, this.id, this.description});
+  final bool isBookmarked;
+  final void Function(bool isBookmark) onBookmarkChanged;
 
-  void execute() {
-    _ContentListState().pushToScreen(_ContentListState().context);
-  }
-
-  Set<ContentLi> getBookmark() {
-    return _ContentListState().getbookmark();
-  }
-
-  @override
-  _ContentListState createState() => _ContentListState();
-}
-
-class _ContentListState extends State<ContentList> {
-  void initState() {
-    super.initState();
-  }
+  ContentList(
+      {this.image,
+      this.title,
+      this.id,
+      this.description,
+      this.isBookmarked,
+      this.onBookmarkChanged});
 
   void selectContentList(BuildContext context) {
-    if (widget.id == 'cl1_14' ||
-        widget.id == 'cl2_14' ||
-        widget.id == 'cl3_14') {
+    if (id == 'cl1_14' || id == 'cl2_14' || id == 'cl3_14') {
       Navigator.of(context).push(
         platformPageRoute(
           context: context,
-          builder: (context) => new Medical(
-              appbartitle: widget.title, id: widget.id, image: widget.image),
+          builder: (context) =>
+              new Medical(appbartitle: title, id: id, image: image),
         ),
       );
     } else {
       Navigator.of(context).push(
         platformPageRoute(
           context: context,
-          builder: (context) => new ContentScreen(
-              appbartitle: widget.title, id: widget.id, image: widget.image),
+          builder: (context) =>
+              new ContentScreen(appbartitle: title, id: id, image: image),
         ),
       );
-    }
-  }
-
-  Set<ContentLi> getbookmark() {
-    return widget._bookmark;
-  }
-
-  Widget isBookmarked(bool bk) {
-    if (bk) {
-      return Icon(Icons.bookmark);
-    } else {
-      return Icon(Icons.bookmark_outline);
     }
   }
 
@@ -72,7 +47,7 @@ class _ContentListState extends State<ContentList> {
       borderRadius: BorderRadius.circular(10),
       autofocus: true,
       onTap: () => selectContentList(context),
-      onLongPress: () => print(widget.id),
+      onLongPress: () => print(id),
       child: Card(
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(15),
@@ -88,7 +63,7 @@ class _ContentListState extends State<ContentList> {
                   topRight: Radius.circular(15),
                 ),
                 child: Image.asset(
-                  widget.image,
+                  image,
                   height: constraints.maxHeight * 0.78,
                   width: double.infinity,
                   fit: BoxFit.cover,
@@ -101,16 +76,18 @@ class _ContentListState extends State<ContentList> {
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: <Widget>[
                       Container(
-                        height: 50,
-                        width: 50,
-                        child: BookmarkWidget(),
-                      ),
+                          height: 50,
+                          width: 50,
+                          child: BookmarkWidget(
+                            onBookmarkChanged: onBookmarkChanged,
+                            isBookmark: isBookmarked,
+                          )),
                       SizedBox(
                         width: constraints.maxWidth * 0.05,
                       ),
                       Expanded(
                         child: Text(
-                          widget.title,
+                          title,
                           style: Theme.of(context).textTheme.subtitle2,
                           softWrap: true,
                           overflow: TextOverflow.fade,
@@ -125,10 +102,5 @@ class _ContentListState extends State<ContentList> {
         ),
       ),
     );
-  }
-
-  Future pushToScreen(BuildContext context) {
-    return Navigator.of(context).push(
-        MaterialPageRoute(builder: (BuildContext context) => BookmarkScreen()));
   }
 }

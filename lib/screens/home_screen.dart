@@ -1,5 +1,7 @@
 import '../Data/content_list_data.dart';
 import '../widgets/content_list_widget.dart';
+import '../models/bookmark.dart';
+import '../models/content_List.dart';
 import 'content_list_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_platform_widgets/flutter_platform_widgets.dart';
@@ -151,11 +153,26 @@ class _HomeScreenState extends State<HomeScreen> {
 
 //Shows the top 3 items in the list tile.
 //Upon clicking it goes straight to the respective content screen.
-class ShowListTile extends StatelessWidget {
+class ShowListTile extends StatefulWidget {
   final String selectTerm;
+
+  final PinBookmarks bookmark = PinBookmarks();
+
+  updateBookmark(ContentLi cl, bool isPin) {
+    if (isPin) {
+      bookmark.addBookmark(cl);
+    } else {
+      bookmark.removeBookmark(cl);
+    }
+  }
 
   ShowListTile({Key key, @required this.selectTerm}) : super(key: key);
 
+  @override
+  _ShowListTileState createState() => _ShowListTileState();
+}
+
+class _ShowListTileState extends State<ShowListTile> {
   Widget build(BuildContext context) {
     final sightseeingList = ContentListData.where((sightseeingList) {
       return sightseeingList.categories.contains('sc4');
@@ -164,7 +181,7 @@ class ShowListTile extends StatelessWidget {
       return accomodationList.categories.contains('sc_15');
     }).toList();
 
-    if (selectTerm == 'Parks') {
+    if (widget.selectTerm == 'Parks') {
       return Padding(
         padding: const EdgeInsets.all(1.0),
         child: SafeArea(
@@ -177,9 +194,18 @@ class ShowListTile extends StatelessWidget {
                   enlargeCenterPage: true),
               itemBuilder: (context, index) {
                 return ContentList(
-                    id: sightseeingList[index].id,
-                    title: sightseeingList[index].contentListTitle,
-                    image: sightseeingList[index].image);
+                  id: sightseeingList[index].id,
+                  title: sightseeingList[index].contentListTitle,
+                  image: sightseeingList[index].image,
+                  isBookmarked:
+                      widget.bookmark.isBookmark(sightseeingList[index]),
+                  onBookmarkChanged: (isBookmarked) {
+                    setState(() {
+                      widget.updateBookmark(
+                          sightseeingList[index], isBookmarked);
+                    });
+                  },
+                );
               },
             ),
           ),
@@ -198,9 +224,18 @@ class ShowListTile extends StatelessWidget {
                   enlargeCenterPage: true),
               itemBuilder: (context, index) {
                 return ContentList(
-                    id: accomodationList[index].id,
-                    title: accomodationList[index].contentListTitle,
-                    image: accomodationList[index].image);
+                  id: accomodationList[index].id,
+                  title: accomodationList[index].contentListTitle,
+                  image: accomodationList[index].image,
+                  isBookmarked:
+                      widget.bookmark.isBookmark(accomodationList[index]),
+                  onBookmarkChanged: (isBookmarked) {
+                    setState(() {
+                      widget.updateBookmark(
+                          accomodationList[index], isBookmarked);
+                    });
+                  },
+                );
               },
             ),
           ),

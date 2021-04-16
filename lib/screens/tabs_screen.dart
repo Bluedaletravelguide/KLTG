@@ -1,13 +1,11 @@
 import 'dart:io';
 import 'package:kltheguide/screens/bookmark_screen.dart';
-
 import '../screens/home_screen.dart';
 import '../screens/catgeroies_screen.dart';
 import '../screens/search_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_platform_widgets/flutter_platform_widgets.dart';
-
 import 'contact_us_screen.dart';
 
 class TabsScreen extends StatefulWidget {
