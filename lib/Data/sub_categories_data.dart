@@ -61,7 +61,6 @@ const SubCategoriesData = const [
     image: 'assets/images/subCatedgories/food.jpg',
   ),
 
- 
   SubCategory(
     id: 'sc5',
     categories: 'c5',
@@ -99,10 +98,24 @@ const SubCategoriesData = const [
     image: 'assets/images/subCatedgories/nightlife.jpg',
   ),
   SubCategory(
+    id: 'sc_12a',
+    categories: 'sc_12',
+    subCategoryTitle: 'Places to be durng night',
+    description: 'Let Your Hair Down',
+    image: 'assets/images/subCatedgories/nightlife.jpg',
+  ),
+  SubCategory(
+    id: 'sc_12b',
+    categories: 'sc_12',
+    subCategoryTitle: 'Bars',
+    description: 'Let Your Hair Down',
+    image: 'assets/images/subCatedgories/nightlife.jpg',
+  ),
+  SubCategory(
     id: 'sc_13',
     categories: 'c5',
     subCategoryTitle: 'Where To Eat in KL',
-    description: 'KL\'s Gastronomic Hotspots',
+    description: 'Top 4 Street Food Spots In KL',
     image: 'assets/images/subCatedgories/Street.jpg',
   ),
   SubCategory(
@@ -126,5 +139,32 @@ const SubCategoriesData = const [
     description: 'Get Connected With Kuala Lumpur',
     image: 'assets/images/subCatedgories/transport.jpg',
   ),
- 
+  SubCategory(
+    id: 'sc_17',
+    categories: 'c7',
+    subCategoryTitle: 'Waterfall',
+    description: 'Get Connected With Kuala Lumpur',
+    image: 'assets/images/subCatedgories/transport.jpg',
+  ),
+  SubCategory(
+    id: 'sc_18',
+    categories: 'c7',
+    subCategoryTitle: 'Beaches',
+    description: 'Get Connected With Kuala Lumpur',
+    image: 'assets/images/subCatedgories/transport.jpg',
+  ),
+  SubCategory(
+    id: 'sc_19',
+    categories: 'c7',
+    subCategoryTitle: 'Transportation',
+    description: 'Get Connected With Kuala Lumpur',
+    image: 'assets/images/subCatedgories/transport.jpg',
+  ),
+  SubCategory(
+    id: 'sc_20',
+    categories: 'c7',
+    subCategoryTitle: 'Transportation',
+    description: 'Get Connected With Kuala Lumpur',
+    image: 'assets/images/subCatedgories/transport.jpg',
+  ),
 ];

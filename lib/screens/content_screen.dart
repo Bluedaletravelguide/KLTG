@@ -9,6 +9,7 @@ import '../widgets/content/fees_widget.dart';
 import '../widgets/content/tel_widget.dart';
 import '../widgets/content/workHour_widget.dart';
 import '../widgets/content/location_widget.dart';
+import '../widgets/content/website_widget.dart';
 
 class ContentScreen extends StatefulWidget {
   static const routeName = '/content_screen';
@@ -124,6 +125,10 @@ class _ContentScreenState extends State<ContentScreen> {
             Location(
                 text: selectcontent.locationText,
                 location: selectcontent.locationUrl),
+            Website(
+              text: selectcontent.webText,
+              webUrl: selectcontent.webUrl,
+            ),
             SizedBox(height: 50),
           ]),
         ),

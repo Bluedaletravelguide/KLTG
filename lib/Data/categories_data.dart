@@ -38,4 +38,10 @@ const CategoriesData = const [
     color: Color(0xff5711A1),
     image: 'assets/images/categories/Services.jpg',
   ),
+  Category(
+    id: 'c7',
+    title: 'Beyond KL',
+    color: Color(0xff5711A1),
+    image: 'assets/images/categories/Services.jpg',
+  ),
 ];

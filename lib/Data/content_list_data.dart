@@ -309,29 +309,61 @@ const ContentListData = const [
     image: 'assets/images/contentList/whereToShop/3.jpg',
   ),
 
-//nightLife 12
+//nightLife places 12a
   ContentLi(
     id: 'cl1_12',
-    categories: 'sc_12',
+    categories: 'sc_12a',
     contentListTitle: 'Changkat, Bukit Bintang',
     image: 'assets/images/contentList/nightLife/1.jpg',
   ),
   ContentLi(
     id: 'cl2_12',
-    categories: 'sc_12',
+    categories: 'sc_12a',
     contentListTitle: 'Bangsar',
     image: 'assets/images/contentList/nightLife/2.jpg',
   ),
   ContentLi(
     id: 'cl3_12',
-    categories: 'sc_12',
+    categories: 'sc_12a',
     contentListTitle: 'Ampang',
     image: 'assets/images/contentList/nightLife/3.jpg',
   ),
   ContentLi(
     id: 'cl4_12',
-    categories: 'sc_12',
+    categories: 'sc_12a',
     contentListTitle: 'Petaling Street',
+    image: 'assets/images/contentList/nightLife/4.jpg',
+  ),
+
+//bar 12b
+  ContentLi(
+    id: 'cl1_12b',
+    categories: 'sc_12b',
+    contentListTitle: 'Zeta bar',
+    image: 'assets/images/contentList/nightLife/1.jpg',
+  ),
+  ContentLi(
+    id: 'cl2_12b',
+    categories: 'sc_12b',
+    contentListTitle: 'PS150',
+    image: 'assets/images/contentList/nightLife/2.jpg',
+  ),
+  ContentLi(
+    id: 'cl3_12b',
+    categories: 'sc_12b',
+    contentListTitle: 'The Iron Fairies KL',
+    image: 'assets/images/contentList/nightLife/3.jpg',
+  ),
+  ContentLi(
+    id: 'cl4_12b',
+    categories: 'sc_12b',
+    contentListTitle: 'Pahit',
+    image: 'assets/images/contentList/nightLife/4.jpg',
+  ),
+  ContentLi(
+    id: 'cl5_12b',
+    categories: 'sc_12b',
+    contentListTitle: 'Mantra Rooftop Bar',
     image: 'assets/images/contentList/nightLife/4.jpg',
   ),
 
@@ -346,7 +378,7 @@ const ContentListData = const [
     id: 'cl2_13',
     categories: 'sc_13',
     contentListTitle: 'Taman Connaught Night Market',
-    image: 'assets/images/contentList/whereToEat/2.jpg',
+    image: 'assets/images/contentList/whereToEat/2.png',
   ),
   ContentLi(
     id: 'cl3_13',
@@ -358,7 +390,7 @@ const ContentListData = const [
     id: 'cl4_13',
     categories: 'sc_13',
     contentListTitle: 'Tapak Urban Street Dining',
-    image: 'assets/images/contentList/whereToEat/4.jpg',
+    image: 'assets/images/contentList/whereToEat/4.png',
   ),
 
 //medicalTourism 14
@@ -450,7 +482,7 @@ const ContentListData = const [
     contentListTitle: 'Joget',
     image: 'assets/images/contentList/dance/joget.jpg',
   ),
-  
+
   ContentLi(
     id: 'cl2_16',
     categories: 'sc9',
@@ -513,7 +545,7 @@ const ContentListData = const [
     contentListTitle: 'Bhangra',
     image: 'assets/images/contentList/dance/Bhangra.jpg',
   ),
-// Music 18 
+// Music 18
   ContentLi(
     id: 'cl1_18',
     categories: 'sc7',
