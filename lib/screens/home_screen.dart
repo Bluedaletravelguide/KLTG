@@ -1,4 +1,5 @@
-import 'package:kltheguide/screens/crosswordWidget.dart';
+import 'package:kltheguide/screens/crosswordScreen.dart';
+import 'package:kltheguide/widgets/crosswordWidget.dart';
 
 import '../Data/content_list_data.dart';
 import '../widgets/content_list_widget.dart';
@@ -153,7 +154,9 @@ class _HomeScreenState extends State<HomeScreen> {
                     Navigator.of(context).push(
                       platformPageRoute(
                         context: context,
-                        builder: (context) => new CrosswordWidget(),
+                        builder: (context) => new CrosswordScreen(
+                          title: 'Crossword',
+                        ),
                       ),
                     );
                   },
