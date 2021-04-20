@@ -674,4 +674,145 @@ const ContentListData = const [
     contentListTitle: 'Kite Flying (Wau)',
     image: 'assets/images/contentList/malaysianGames/wau.jpg',
   ),
+
+  //Island 20
+  ContentLi(
+    id: 'cl1_20',
+    categories: 'sc_21',
+    contentListTitle: 'Pangkor Island',
+    image: 'assets/images/contentList/island/1.jpg',
+  ),
+  ContentLi(
+    id: 'cl2_20',
+    categories: 'sc_21',
+    contentListTitle: 'Pulau Perhentian',
+    image: 'assets/images/contentList/island/2.jpg',
+  ),
+  ContentLi(
+    id: 'cl3_20',
+    categories: 'sc_21',
+    contentListTitle: 'Pulau Tioman',
+    image: 'assets/images/contentList/island/3.jpg',
+  ),
+
+  ContentLi(
+    id: 'cl4_20',
+    categories: 'sc_21',
+    contentListTitle: 'Pulau Besar',
+    image: 'assets/images/contentList/island/4.jpg',
+  ),
+  ContentLi(
+    id: 'cl5_20',
+    categories: 'sc_21',
+    contentListTitle: 'Manukan Island',
+    image: 'assets/images/contentList/island/5.jpg',
+  ),
+  ContentLi(
+    id: 'cl6_20',
+    categories: 'sc_21',
+    contentListTitle: 'Lang Tengah Island',
+    image: 'assets/images/contentList/island/6.jpg',
+  ),
+
+  //Hil Stations 21
+  ContentLi(
+    id: 'cl1_21',
+    categories: 'sc_18',
+    contentListTitle: 'Genting Highlands',
+    image: 'assets/images/contentList/hillside/1.jpg',
+  ),
+  ContentLi(
+    id: 'cl2_21',
+    categories: 'sc_18',
+    contentListTitle: 'Bukit Tinggi',
+    image: 'assets/images/contentList/hillside/2.jpg',
+  ),
+  ContentLi(
+    id: 'cl3_21',
+    categories: 'sc_18',
+    contentListTitle: 'Fraser Hill',
+    image: 'assets/images/contentList/hillside/3.jpg',
+  ),
+  ContentLi(
+    id: 'cl4_21',
+    categories: 'sc_18',
+    contentListTitle: 'Cameron Highland',
+    image: 'assets/images/contentList/hillside/4.jpg',
+  ),
+  ContentLi(
+    id: 'cl5_21',
+    categories: 'sc_18',
+    contentListTitle: 'Maxwell Hill',
+    image: 'assets/images/contentList/hillside/5.jpg',
+  ),
+  ContentLi(
+    id: 'cl6_21',
+    categories: 'sc_18',
+    contentListTitle: 'Penang Hill',
+    image: 'assets/images/contentList/hillside/6.jpg',
+  ),
+
+  //Waterfall 22
+  ContentLi(
+    id: 'cl1_22',
+    categories: 'sc_19',
+    contentListTitle: 'Sungai Pisang Waterfall',
+    image: 'assets/images/contentList/waterfall/1.jpg',
+  ),
+  ContentLi(
+    id: 'cl2_22',
+    categories: 'sc_19',
+    contentListTitle: 'Jeram Toi',
+    image: 'assets/images/contentList/waterfall/2.jpg',
+  ),
+  ContentLi(
+    id: 'cl3_22',
+    categories: 'sc_19',
+    contentListTitle: 'Ulu Chepor',
+    image: 'assets/images/contentList/waterfall/3.jpg',
+  ),
+  ContentLi(
+    id: 'cl4_22',
+    categories: 'sc_19',
+    contentListTitle: 'Rainbow Waterfall',
+    image: 'assets/images/contentList/waterfall/4.jpg',
+  ),
+  ContentLi(
+    id: 'cl5_22',
+    categories: 'sc_19',
+    contentListTitle: 'Seven Wells Waterfall',
+    image: 'assets/images/contentList/waterfall/5.jpg',
+  ),
+
+//Hiking 23
+  ContentLi(
+    id: 'cl1_23',
+    categories: 'sc_20',
+    contentListTitle: 'Broga Hill',
+    image: 'assets/images/contentList/hiking/1.jpg',
+  ),
+  ContentLi(
+    id: 'cl2_23',
+    categories: 'sc_20',
+    contentListTitle: 'Mount Pulai',
+    image: 'assets/images/contentList/hiking/2.jpg',
+  ),
+  ContentLi(
+    id: 'cl3_23',
+    categories: 'sc_20',
+    contentListTitle: 'Panorama Hill',
+    image: 'assets/images/contentList/hiking/3.jpg',
+  ),
+  ContentLi(
+    id: 'cl4_23',
+    categories: 'sc_20',
+    contentListTitle: 'Mossy Forest',
+    image: 'assets/images/contentList/hiking/4.jpg',
+  ),
+  ContentLi(
+    id: 'cl5_23',
+    categories: 'sc_20',
+    contentListTitle: 'Penang National Park',
+    image: 'assets/images/contentList/hiking/5.jpg',
+  ),
 ];

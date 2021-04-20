@@ -1390,6 +1390,302 @@ const ContentData = const [
       locationUrl: '-',
       webText: '-',
       webUrl: '-'),
+
+  //island 20
+  ContentClass(
+      id: 'cl1_20',
+      decrepitation:
+          'Check out Pangkor Island if you are looking for somewhere without tourists. Located near the coast of Perak, the island features empty beaches, clean water and a thick jungle overlooking the centre. ',
+      content:
+          'Visitors appreciate having the opportunity to sunbathe under the palm trees with no other soul in sight. Also, check out the Colonial Dutch fort and take pictures of a traditional wooden jetty. The best time to visit this island  is between Dec to August. ',
+      workhour: '-',
+      fees: '-',
+      phoneNo: '-',
+      locationText: '-',
+      locationUrl: '-',
+      webText: '-',
+      webUrl: '-'),
+
+  ContentClass(
+      id: 'cl2_20',
+      decrepitation:
+          'Perhentian Island is located off the coast of Terengganu and offers travellers scenic beaches and breathtaking views. It was formerly a trading post between Malaysia and Bangkok, Thailand, and is also known as Pulau Perhentian. The weather on the island is perfect, neither too hot nor too cold.',
+      content:
+          'Perhentian Island consists of two islands: Pulau Perhentian Besar and Pulau Perhentian Kecil. With perfect weather on Perhentian Island – neither too hot nor too cold – it\'s no surprise that it\'s a popular tourist destination. The Best time to visit: March - October, just before the monsoon season starts. The resorts are usually closed ',
+      workhour: '-',
+      fees: '-',
+      phoneNo: '-',
+      locationText: '-',
+      locationUrl: '-',
+      webText: '-',
+      webUrl: '-'),
+
+  ContentClass(
+      id: 'cl3_20',
+      decrepitation:
+          'Pulau Tioman is a duty-free island off Peninsular Malaysia\'s east coast. The island is 32 nautical miles from the mainland, but it is connected to Mersing and Tanjung Gemuk by ferry.',
+      content:
+          'The surrounding oceans are rich in coral reefs and aquatic life, making scuba diving possible. The bulk of the island is shrouded in pristine rainforest and is home to many endangered wildlife species. Tioman Island welcomes young visitors from all over the world. Best time to visit: May - October; Closed from Nov-Apr.',
+      workhour: '-',
+      fees: '-',
+      phoneNo: '-',
+      locationText: '-',
+      locationUrl: '-',
+      webText: '-',
+      webUrl: '-'),
+
+  ContentClass(
+      id: 'cl4_20',
+      decrepitation:
+          'Pulau Besar was formerly known as Pulau Babi Besar, which translates to "Big Boars Island." Swaying palm trees, sparkling lakes, and the finest white sands cover the island. The 15-kilometre-long island is located off the east coast of Johor. You can see tiny marine creatures and the coral reef because the water is so clear from the bottom. The island has been designated as a Marine Park to protect it.',
+      content:
+          'Good tropical jungles provide a diverse range of flora and fauna for nature lovers. Water sports activities on the island include canoeing, surfing, snorkelling, and diving. Canoeing, diving, snorkelling, and swimming are among the water sports available on the island. The presence of man on the island is reducing the number of wild boars on the island. Best time to visit: Oct-March; Closed from April - Sept.',
+      workhour: '-',
+      fees: '-',
+      phoneNo: '-',
+      locationText: '-',
+      locationUrl: '-',
+      webText: '-',
+      webUrl: '-'),
+  ContentClass(
+      id: 'cl5_20',
+      decrepitation:
+          'Manukan Island is part of Tunku Abdul Rahman National Park, Malaysia\'s first marine national park. Of the five islands, it also has the finest tourism facilities.',
+      content:
+          'It is renowned for its coral reefs, calm seas, white sand beaches, and lush vegetation. Divers can use the island\'s diving centre, while thrill-seekers can go paragliding for bird\'s-eye views. Best time to visit: Mid-January.',
+      workhour: '-',
+      fees: '-',
+      phoneNo: '-',
+      locationText: '-',
+      locationUrl: '-',
+      webText: '-',
+      webUrl: '-'),
+  ContentClass(
+      id: 'cl6_20',
+      decrepitation:
+          'Pulau Lang Tengah is located on Peninsular Malaysia\'s east coast. Its secluded beaches and abundant aquatic life have been dubbed "Malaysia\'s Maldives”.',
+      content:
+          'The shortage of roads in Lang Tengah is a highlight, with just a few jungle paths leading to the beaches. The clean air and lack of noise pollution make cycling, boating, and canoeing practices suitable since these are the only ways to get around. Best time to visit: March - October',
+      workhour: '-',
+      fees: '-',
+      phoneNo: '-',
+      locationText: '-',
+      locationUrl: '-',
+      webText: '-',
+      webUrl: '-'),
+
+  //Hill stations 21
+  ContentClass(
+      id: 'cl1_21',
+      decrepitation:
+          'Genting Highlands is a fun hill station 45 minutes from Kuala Lumpur. It is surrounded by a 100 million-year-old rainforest and is the location of Malaysia\'s largest strawberry plantation.',
+      content:
+          'Genting Highlands is home to a multitude of three and five-star hotels, each with onsite eateries and facilities. At the hill station, there are indoor and outdoor amusement parks, an 18-hole golf course, and a casino. Among the fun sports available in the area are abseiling, indoor rock climbing, a flying fox, and skydiving.',
+      workhour: '-',
+      fees: '-',
+      phoneNo: '-',
+      locationText: 'Genting Highlands, 69000 Genting Highlands, Pahang',
+      locationUrl: 'https://goo.gl/maps/WAnA9X5wcJio3Jux9',
+      webText: '-',
+      webUrl: '-'),
+
+  ContentClass(
+      id: 'cl2_21',
+      decrepitation:
+          'Hill resorts offer a welcome respite for tired travellers to the Far East. Hill resorts are ideal for a cool respite amid a hot and humid climate.',
+      content:
+          'In Bukit Tinggi, Pahang, Malaysia, there is a "French-themed" village and hotel called Colmar Tropicale. The original town of Colmar in Alsace, France, inspired the style. ',
+      workhour: '-',
+      fees: '-',
+      phoneNo: '-',
+      locationText: '28750 Bentong, Pahang',
+      locationUrl: 'https://goo.gl/maps/EhRaPRFEfvu5CrSE7',
+      webText: '-',
+      webUrl: '-'),
+  ContentClass(
+      id: 'cl3_21',
+      decrepitation:
+          'Fraser\'s Hill is one of Malaysia\'s few remaining hill stations, a relic of the country\'s former British colonial rulers. Bukit Fraser, as it is called locally, is well-known for its outdoor activities and cool atmosphere. Louis James Fraser, a Scottish prospector, built a tin mine on the hill in the 1890s. When searching for Fraser, the bishop of Singapore rediscovered the mine in 1915.',
+      content:
+          'Bukit Fraser averages 1,200 metres above sea level, although it reaches 1,500 metres at its highest point. The months of April and September saw the least rainfall, indicating a break in the monsoon season. Temperatures usually range from 22°C to 28°C during the day. Visitors are advised to visit during off-peak seasons, which are months with no significant public or school holidays.',
+      workhour: '-',
+      fees: '-',
+      phoneNo: '-',
+      locationText: 'Bukit Fraser, Pahang',
+      locationUrl: 'https://goo.gl/maps/DXknqvXux4Q7ZaKn7',
+      webText: 'fraserhill.info',
+      webUrl: 'http://www.fraserhill.info/'),
+  ContentClass(
+      id: 'cl4_21',
+      decrepitation:
+          'Cameron Highlands is Malaysia\'s most popular highland retreat. The average temperature during the day is around 25°C, and the average temperature at night is around 18°C. The climate is ideal for the cultivation of tropical trees, fruits, and vegetables.',
+      content:
+          'The surrounding oceans are rich in coral reefs and aquatic life, making scuba diving possible. The bulk of the island is shrouded in pristine rainforest and is home to many endangered wildlife species. Tioman Island welcomes young visitors from all over the world. Best time to visit: May - October; Closed from Nov-Apr.',
+      workhour: '-',
+      fees: '-',
+      phoneNo: '-',
+      locationText: 'Tanah Tinggi Cameron, Pahang',
+      locationUrl: 'https://goo.gl/maps/B9suRsYmX7XdTCV37',
+      webText: '-',
+      webUrl: '-'),
+  ContentClass(
+      id: 'cl5_21',
+      decrepitation:
+          'Bukit Larut, formerly known as Maxwell Hill, is a well-known highland destination in Malaysia. It is the world\'s wettest area, with the highest rainfall. William Edward Maxwell, a British Assistant Living in Perak at the time, designed the hill station in 1884.',
+      content:
+          'The access route, 13 km long, is a hike to Bukit Larut. The only exception would be at the foot of the hill, where you can choose to walk the first part through the jungle track. There are several trail diversions, the numbered checkpoints are labelled on the trees.',
+      workhour: '-',
+      fees: '-',
+      phoneNo: '-',
+      locationText: '34000 Taiping, Perak',
+      locationUrl: 'https://goo.gl/maps/HyfLX1yhCaCz5A7Q6',
+      webText: '-',
+      webUrl: '-'),
+  ContentClass(
+      id: 'cl6_21',
+      decrepitation:
+          'Penang Hill was the first colonial hill station in Peninsular Malaysia. Bukit Bendera is the only remaining patch of tropical rainforest in Penang. It is one of Penang\'s most popular tourist destinations.',
+      content:
+          'Penang Hill is home to over 100 bird species, ranging from common garden species to exotic deep forest dwellers. The hillside is also an ideal location for watching Georgetown\'s nighttime decorations.',
+      workhour: '-',
+      fees: '-',
+      phoneNo: '-',
+      locationText: '11500 Bukit Bendera, Penang',
+      locationUrl: 'https://goo.gl/maps/FENakEVe98nFSAfo8',
+      webText: 'penanghill.gov.my',
+      webUrl: 'https://penanghill.gov.my/index.php/en/'),
+
+  //Waterfall 22
+  ContentClass(
+      id: 'cl1_22',
+      decrepitation:
+          'The Canopy Walk is a 30-metre suspension bridge that spans a thick forest. It first opened in 2003 and lasted only a short time before closing due to a lack of customers.',
+      content:
+          'Near Batu Caves, a short jungle hike follows the Pisang River (Sungai Pisang) through a network of tunnels underneath the Karak Highway. At the top of the waterfall, there are some good picnic and hiking areas.',
+      workhour: '-',
+      fees: '-',
+      phoneNo: '-',
+      locationText: 'Kampung Gombak, 48200 Rawang, Selangor',
+      locationUrl: 'https://goo.gl/maps/N6ftWY5Ehes6Nndv5',
+      webText: '-',
+      webUrl: '-'),
+  ContentClass(
+      id: 'cl2_22',
+      decrepitation:
+          'The waterfalls are about halfway between Seremban and Kuala Kelawang. The British discovered them in 1895 and they quickly became a popular spot for a bath and a family picnic. The road is currently being expanded to a four-lane highway.',
+      content:
+          'There are tents, toilets, barbeque pits, and a cement walkway with steps leading up the gorge in this place. On weekends, this area is mostly busy, and it\'s worth remembering that the park\'s entrance is no longer off the main road.',
+      workhour: '-',
+      fees: '-',
+      phoneNo: '-',
+      locationText: '86, 71600 Kuala Klawang, Negeri Sembilan',
+      locationUrl: 'https://goo.gl/maps/HmKC3vH4keP3smpf7',
+      webText: '-',
+      webUrl: '-'),
+  ContentClass(
+      id: 'cl3_22',
+      decrepitation:
+          'Lata Ulu Chepor is located only 10 kilometres from Ipoh City and is surrounded by lush tropical rainforest hills. Route A1 to Chemor, near the Ipoh Utara Toll Plaza, leads to the park.',
+      content:
+          'This place is ideal for getting some fresh air, relaxing, and having a picnic on weekends. The park is well-kept, and signage is visible from the main thoroughfare. If you\'re feeling daring, there\'s even a downhill track line.',
+      workhour: '8.00 am - 6.00 am (Daily)',
+      fees: '-',
+      phoneNo: '-',
+      locationText: 'Kampung Ulu Chepor, 31200 Chemor, Perak',
+      locationUrl: 'https://goo.gl/maps/XTeRjPqqFhD5VEVB8',
+      webText: '-',
+      webUrl: '-'),
+  ContentClass(
+      id: 'cl4_22',
+      decrepitation:
+          'Rainbow waterfall is situated 45 kilometres northwest of Kuantan, Peninsular Malaysia, in the town of Sungei Lembing. A stunning rainbow can be seen at the key waterfalls when the weather conditions are favourable.',
+      content:
+          'The rainbow is created by the sun reflecting at the proper angle through the mist of the waterfall. The sun shines on the falling water at the base of the falls every morning between 9 and 10 a.m. People travel from all over the world to see natural beauty.',
+      workhour: '6.30 am - 1.00 pm (Daily)',
+      fees: '-',
+      phoneNo: '-',
+      locationText: 'Pahang',
+      locationUrl: 'https://goo.gl/maps/RsxPQVR2Wwe5xEEQA',
+      webText: 'airterjunpelangi-sglembing.blogspot.my',
+      webUrl: 'http://airterjunpelangi-sglembing.blogspot.my/'),
+  ContentClass(
+      id: 'cl5_22',
+      decrepitation:
+          'The Seven Wells Waterfall (Jalan Telaga Tujuh) is one of the island\'s most impressive natural attractions. The well-known Langkawi Sky Bridge is about a 20-minute walk away. According to legend, this waterfall is home to fairies, and the river has soothing properties.',
+      content:
+          'The waterfall cascades down Mount Mat Cincang, Langkawi\'s second-highest mountain, and is a popular attraction for both visitors and locals. It is divided into two sections that can be visited: the lower and upper sections. The total vertical drop is 91 metres high, but only a small portion of it is visible from the bottom.',
+      workhour: ' 8.30 am - 7.30 pm (Daily)',
+      fees: '-',
+      phoneNo: '-',
+      locationText: 'Mukim, Jalan Telaga Tujuh, 07000 Langkawi, Kedah',
+      locationUrl: 'https://goo.gl/maps/mH1yZ19z7byvd36g7',
+      webText: '-',
+      webUrl: '-'),
+
+  //Hiking 23
+  ContentClass(
+      id: 'cl1_23',
+      decrepitation: '-',
+      content:
+          'Broga Hill, also known as \'Bukit Lalang\' in the local dialect, is named after a native grass plant. It is situated on the outskirts of the Titiwangsa Range, in the lush tropical forest of Semenyih. Its breathtaking panoramic views are well popular with both locals and visitors.',
+      workhour: ' Open 24 hours',
+      fees: '-',
+      phoneNo: '-',
+      locationText: 'Jln Broga, 43500 Semenyih, Selangor',
+      locationUrl: 'https://goo.gl/maps/fqZrQDYG6kBMS7ip7',
+      webText: 'Facebook Page',
+      webUrl: 'https://www.facebook.com/BukitBrogaHill/'),
+  ContentClass(
+      id: 'cl2_23',
+      decrepitation: '-',
+      content:
+          'Gunung Pulai is a 654-meter-high mountain in the Malaysian state of Johor. It is a popular hiking destination for Singaporeans and locals alike. Mount Pulai is a 14.3-kilometre moderately trafficked loop trail near Kulai, Johor, Malaysia, that includes a waterfall and a difficulty rating. Camping, hiking, running, and nature walks are also common activities on the trail.',
+      workhour: '-',
+      fees: '-',
+      phoneNo: '-',
+      locationText: 'Gunung Pulai Recreational Forest, 81000, Johor',
+      locationUrl: 'https://goo.gl/maps/XVvZ9B2hv5vri8Si7',
+      webText: '-',
+      webUrl: '-'),
+  ContentClass(
+      id: 'cl3_23',
+      decrepitation:
+          'Bukit Panorama is a hill in Sungai Lembing, 45 kilometres northwest of Kuantan. It is approximately 271 metres high and has only one way up the hill. From the top of the hill, you\'d have a panoramic view of the surrounding city.',
+      content:
+          'This place is ideal for getting some fresh air, relaxing, and having a picnic on weekends. The park is well-kept, and signage is visible from the main thoroughfare. If you\'re feeling daring, there\'s even a downhill track line.',
+      workhour: '-',
+      fees: '-',
+      phoneNo: '-',
+      locationText: 'Panorama Foothills',
+      locationUrl: 'https://goo.gl/maps/XzfqksiXtsxBohDQ7',
+      webText: '-',
+      webUrl: '-'),
+  ContentClass(
+      id: 'cl4_23',
+      decrepitation: '-',
+      content:
+          'The mossy forest is a natural ecosystem that can only be found at higher elevations in the Cameron Highlands. Wind-driven low-level clouds in the sky create a persistent mist that envelops the trees. The wet tropical evergreen forest is also a haven for a variety of montane plants. Visitors will explore the mossy jungle on a boardwalk two kilometres before Gunung Brinchang\'s peak.',
+      workhour: '6.30 am - 1.00 pm (Daily)',
+      fees: '-',
+      phoneNo: '-',
+      locationText: '39000 Brinchang, Pahang',
+      locationUrl: 'https://goo.gl/maps/dbVyc1XKF55fVQna9',
+      webText: 'Mossy forest Website',
+      webUrl: 'http://www.cameronhighland.net/mossy-forest.htm'),
+  ContentClass(
+      id: 'cl5_23',
+      decrepitation: '-',
+      content:
+          'While being Malaysia\'s smallest national park, it is home to flying lemurs, leopard cats, and a plethora of lizard, amphibian, and reptile animals. If you want to climb in the park, you can normally get a copy of the hiking trails that are available on-site. There are two large trekking trails in the park that lead to Monkey Beach and Turtle Sanctuary. The Turtle Sanctuary is located on a number of the park\'s most isolated beaches.',
+      workhour: ' 8.00 am - 5.00 pm (Daily)',
+      fees: '-',
+      phoneNo: '-',
+      locationText:
+          'Pejabat Taman Negara P. Pinang, jalan Hassan Abbas, 11050 George Town, Penang',
+      locationUrl: 'https://goo.gl/maps/iQCcZsBWvx7D8M3e9',
+      webText: 'Penang Natinal Park Website',
+      webUrl:
+          'http://www.wildlife.gov.my/index.php/en/public/2016-05-10-02-34-43/peta'),
 ];
 
 const MedicalData = const [

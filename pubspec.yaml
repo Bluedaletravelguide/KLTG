@@ -153,6 +153,7 @@ flutter:
     - assets/images/categories/Sightseeing1.jpg
     - assets/images/categories/ThingsToDo.jpg
     - assets/images/categories/TravelTips1.jpg
+    - assets/images/categories/beyond.jpg
 
     #subCatedgories
     - assets/images/subCatedgories/accomifation.jpg
@@ -172,6 +173,10 @@ flutter:
     - assets/images/subCatedgories/whatToDo.jpg
     - assets/images/subCatedgories/dance.jpg
     - assets/images/subCatedgories/klatglance.jpg
+    - assets/images/subCatedgories/hillside.jpg
+    - assets/images/subCatedgories/waterfall.jpg
+    - assets/images/subCatedgories/hike.jpg
+    - assets/images/subCatedgories/island.jpg
 
     #placesToStay
     - assets/images/contentList/placesToStay/1.jpg
@@ -326,6 +331,36 @@ flutter:
     - assets/images/contentList/accomodation/8.jpg
     - assets/images/contentList/accomodation/9.jpg
     - assets/images/contentList/accomodation/10.jpg
+
+    #island
+    - assets/images/contentList/island/1.jpg
+    - assets/images/contentList/island/2.jpg
+    - assets/images/contentList/island/3.jpg
+    - assets/images/contentList/island/4.jpg
+    - assets/images/contentList/island/5.jpg
+    - assets/images/contentList/island/6.jpg
+
+    #hillside
+    - assets/images/contentList/hillside/1.jpg
+    - assets/images/contentList/hillside/2.jpg
+    - assets/images/contentList/hillside/3.jpg
+    - assets/images/contentList/hillside/4.jpg
+    - assets/images/contentList/hillside/5.jpg
+    - assets/images/contentList/hillside/6.jpg
+
+    #waterfall
+    - assets/images/contentList/waterfall/1.jpg
+    - assets/images/contentList/waterfall/2.jpg
+    - assets/images/contentList/waterfall/3.jpg
+    - assets/images/contentList/waterfall/4.jpg
+    - assets/images/contentList/waterfall/5.jpg
+
+    #hiking
+    - assets/images/contentList/hiking/1.jpg
+    - assets/images/contentList/hiking/2.jpg
+    - assets/images/contentList/hiking/3.jpg
+    - assets/images/contentList/hiking/4.jpg
+    - assets/images/contentList/hiking/5.jpg
 
     #logo
     - assets/images/Logo_100x50.png

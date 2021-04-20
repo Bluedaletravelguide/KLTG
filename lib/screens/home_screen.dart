@@ -1,6 +1,4 @@
 import 'package:kltheguide/screens/crosswordScreen.dart';
-import 'package:kltheguide/widgets/crosswordWidget.dart';
-
 import '../Data/content_list_data.dart';
 import '../widgets/content_list_widget.dart';
 import '../models/bookmark.dart';

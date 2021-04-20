@@ -42,6 +42,6 @@ const CategoriesData = const [
     id: 'c7',
     title: 'Beyond KL',
     color: Color(0xff5711A1),
-    image: 'assets/images/categories/Services.jpg',
+    image: 'assets/images/categories/beyond.jpg',
   ),
 ];
