@@ -1,21 +1,3 @@
-// import 'package:flutter/material.dart';
-
-// class CrosswordWidget extends StatefulWidget {
-//   CrosswordWidget({Key key}) : super(key: key);
-
-//   @override
-//   _CrosswordWidgetState createState() => _CrosswordWidgetState();
-// }
-
-// class _CrosswordWidgetState extends State<CrosswordWidget> {
-//   @override
-//   Widget build(BuildContext context) {
-//     return Container(
-//       child: Text("here"),
-//     );
-//   }
-// }
-
 import 'package:flutter/material.dart';
 import 'package:word_search/word_search.dart';
 
@@ -32,17 +14,22 @@ class _CrosswordWidgetState extends State<CrosswordWidget> {
 
   int numBoxPerRow = 6;
   double padding = 5;
+  double spacing = 2;
+  Size sizeBox = Size.zero;
 
   ValueNotifier<List<List<String>>> listChars;
   //save all answers on generate crossword data
   ValueNotifier<List<CrosswordAnswer>> answerList;
   ValueNotifier<CurrentDragObj> currentDragObj;
+  ValueNotifier<List<int>> charsDone;
 
   @override
   void initState() {
     super.initState();
     listChars = new ValueNotifier<List<List<String>>>([]);
     answerList = new ValueNotifier<List<CrosswordAnswer>>([]);
+    currentDragObj = new ValueNotifier<CurrentDragObj>(new CurrentDragObj());
+    charsDone = new ValueNotifier<List<int>>([]);
     //generate char array crossword
     generateRandomWord();
   }
@@ -85,6 +72,105 @@ class _CrosswordWidgetState extends State<CrosswordWidget> {
 
   void onDragUpdate(PointerMoveEvent event) {
     print("PointerMoveEvent");
+
+    //highlights paths & clears if cond is not met
+    generateLineOnDrag(event);
+
+    //retrieve index on drag
+
+    int indexFound = answerList.value.indexWhere((answer) {
+      return answer.answerLines.join("-") ==
+          currentDragObj.value.currentDragLine.join("-");
+    });
+
+    if (indexFound >= 0) {
+      answerList.value[indexFound].done = true;
+      // saves answer which complete
+      charsDone.value.addAll(answerList.value[indexFound].answerLines);
+      charsDone.notifyListeners();
+      answerList.notifyListeners();
+      onDragEnd(null);
+    }
+  }
+
+  int calculateIndexBasePosLocal(Offset localPosition) {
+    //retrieve size of the max box
+    double maxSizeBox =
+        ((sizeBox.width - (numBoxPerRow - 1) * padding) / numBoxPerRow);
+
+    if (localPosition.dy > sizeBox.width || localPosition.dx > sizeBox.width)
+      return -1;
+
+    int x = 0, y = 0;
+    double yAxis = 0, xAxis = 0;
+    double yAxisStart = 0, xAxisStart = 0;
+
+    for (var i = 0; i < numBoxPerRow; i++) {
+      xAxisStart = xAxis;
+      xAxis += maxSizeBox +
+          (i == 0 || i == (numBoxPerRow - 1) ? padding / 2 : padding);
+
+      if (xAxisStart < localPosition.dx && xAxis > localPosition.dx) {
+        x = i;
+        break;
+      }
+    }
+    for (var i = 0; i < numBoxPerRow; i++) {
+      yAxisStart = yAxis;
+      yAxis += maxSizeBox +
+          (i == 0 || i == (numBoxPerRow - 1) ? padding / 2 : padding);
+
+      if (yAxisStart < localPosition.dy && yAxis > localPosition.dy) {
+        y = i;
+        break;
+      }
+    }
+
+    return y * numBoxPerRow + x;
+  }
+
+  void generateLineOnDrag(PointerMoveEvent event) {
+    //create  new list to save value when drag line is null
+    if (currentDragObj.value.currentDragLine == null)
+      currentDragObj.value.currentDragLine = [];
+
+    //calculation of index array based on local position on drag
+    int indexBase = calculateIndexBasePosLocal(event.localPosition);
+
+    if (indexBase >= 0) {
+      //check drag line passes 2 box
+      if (currentDragObj.value.currentDragLine.length >= 2) {
+        //check drag line is straight line
+        WSOrientation wsOrientation;
+
+        if (currentDragObj.value.currentDragLine[0] % numBoxPerRow ==
+            currentDragObj.value.currentDragLine[1] % numBoxPerRow)
+          wsOrientation = WSOrientation.vertical;
+        else if (currentDragObj.value.currentDragLine[0] ~/ numBoxPerRow ==
+            currentDragObj.value.currentDragLine[1] ~/ numBoxPerRow)
+          wsOrientation = WSOrientation.horizontal;
+
+        if (wsOrientation == WSOrientation.horizontal) {
+          if (indexBase ~/ numBoxPerRow !=
+              currentDragObj.value.currentDragLine[1] ~/ numBoxPerRow)
+            onDragEnd(null);
+        } else if (wsOrientation == WSOrientation.vertical) {
+          if (indexBase % numBoxPerRow !=
+              currentDragObj.value.currentDragLine[1] % numBoxPerRow)
+            onDragEnd(null);
+        } else
+          onDragEnd(null);
+      }
+
+      if (!currentDragObj.value.currentDragLine.contains(indexBase))
+        currentDragObj.value.currentDragLine.add(indexBase);
+      else if (currentDragObj.value.currentDragLine.length >=
+          2) if (currentDragObj.value.currentDragLine[
+              currentDragObj.value.currentDragLine.length - 2] ==
+          indexBase) onDragEnd(null);
+
+      currentDragObj.notifyListeners();
+    }
   }
 
   void onDragStart(int indexArray) {
@@ -109,6 +195,7 @@ class _CrosswordWidgetState extends State<CrosswordWidget> {
       onPointerMove: (event) => onDragUpdate(event),
       child: LayoutBuilder(
         builder: (context, constraints) {
+          sizeBox = Size(constraints.maxWidth, constraints.maxWidth);
           return GridView.builder(
             gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
               childAspectRatio: 1,
@@ -122,17 +209,34 @@ class _CrosswordWidgetState extends State<CrosswordWidget> {
               //we need expand because to merge 2d array to one
               //
               String char = listChars.value.expand((e) => e).toList()[index];
+              Color color = Colors.yellow;
+              //highlight path of the pointer that is being dragged using valuelistener
               return Listener(
                 onPointerDown: (event) => onDragStart(index),
-                child: Container(
-                  decoration: BoxDecoration(
-                    color: Colors.yellow,
-                  ),
-                  alignment: Alignment.center,
-                  child: Text(
-                    char.toUpperCase(),
-                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-                  ),
+                child: ValueListenableBuilder(
+                  valueListenable: currentDragObj,
+                  builder: (context, CurrentDragObj value, child) {
+                    //change the  color when path line contains index
+                    if (value.currentDragLine.contains(index)) {
+                      color = Colors.blue;
+                    } else if (charsDone.value.contains(index)) {
+                      color = Colors.red;
+                    }
+
+                    // if word is done, it will be highlighted red
+
+                    return Container(
+                      decoration: BoxDecoration(
+                        color: color,
+                      ),
+                      alignment: Alignment.center,
+                      child: Text(
+                        char.toUpperCase(),
+                        style: TextStyle(
+                            fontSize: 20, fontWeight: FontWeight.bold),
+                      ),
+                    );
+                  },
                 ),
               );
             },
