@@ -3,7 +3,7 @@ description: A new Flutter project.
 
 # The following line prevents the package from being accidentally published to
 # pub.dev using `pub publish`. This is preferred for private packages.
-publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+publish_to: "none" # Remove this line if you wish to publish to pub.dev
 
 # The following defines the version and build number for your application.
 # A version number is three numbers separated by dots, like 1.2.43
@@ -22,8 +22,7 @@ environment:
 
 dependencies:
   flutter:
-    sdk: flutter    
-
+    sdk: flutter
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
@@ -50,8 +49,6 @@ dependencies:
   path_provider: ^2.0.1
   word_search: ^0.1.2
 
-
-
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -66,7 +63,6 @@ flutter_icons:
 
 # The following section is specific to Flutter.
 flutter:
-
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.
@@ -74,7 +70,7 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-  #ebook
+    #ebook
     - assets/images/ebook/kltg-38.jpg
     - assets/images/ebook/kltg-37.jpg
     - assets/images/ebook/kltg-36.jpg
@@ -114,7 +110,7 @@ flutter:
     - assets/images/ebook/kltg-2.jpg
     - assets/images/ebook/kltg-1.jpg
 
-  #client
+    #client
     - assets/images/client/button-1.png
     - assets/images/client/button-2.png
     - assets/images/client/button-3.png
@@ -133,28 +129,24 @@ flutter:
     - assets/images/client/univ-of-dundee.png
     - assets/images/client/WCT.png
 
-
-  #travelTips
-    - assets/images/TravelTips/breakdown.png  
-    - assets/images/TravelTips/clothing.png  
-    - assets/images/TravelTips/comfortable-wear.png  
-    - assets/images/TravelTips/currency-code.png  
-    - assets/images/TravelTips/emergency.png  
-    - assets/images/TravelTips/hotel.png  
-    - assets/images/TravelTips/timezone.png  
-    - assets/images/TravelTips/visa-and-passports.png  
-    - assets/images/TravelTips/weather.png  
-    - assets/images/TravelTips/sunscreen.png 
-    - assets/images/TravelTips/raingear.png 
-    - assets/images/TravelTips/medicine.png 
-    - assets/images/TravelTips/simcardanddiallingprefixes.png 
-    - assets/images/TravelTips/dialling.png 
+    #travelTips
+    - assets/images/TravelTips/breakdown.png
+    - assets/images/TravelTips/clothing.png
+    - assets/images/TravelTips/comfortable-wear.png
+    - assets/images/TravelTips/currency-code.png
+    - assets/images/TravelTips/emergency.png
+    - assets/images/TravelTips/hotel.png
+    - assets/images/TravelTips/timezone.png
+    - assets/images/TravelTips/visa-and-passports.png
+    - assets/images/TravelTips/weather.png
+    - assets/images/TravelTips/sunscreen.png
+    - assets/images/TravelTips/raingear.png
+    - assets/images/TravelTips/medicine.png
+    - assets/images/TravelTips/simcardanddiallingprefixes.png
+    - assets/images/TravelTips/dialling.png
     - assets/images/TravelTips/wifi-wifi-rental.png
 
-    
-
-
-  #categories
+    #categories
     - assets/images/categories/Culture.jpg
     - assets/images/categories/Overview.jpg
     - assets/images/categories/Services.jpg
@@ -162,7 +154,7 @@ flutter:
     - assets/images/categories/ThingsToDo.jpg
     - assets/images/categories/TravelTips1.jpg
 
-  #subCatedgories
+    #subCatedgories
     - assets/images/subCatedgories/accomifation.jpg
     - assets/images/subCatedgories/around.jpg
     - assets/images/subCatedgories/food.jpg
@@ -181,21 +173,21 @@ flutter:
     - assets/images/subCatedgories/dance.jpg
     - assets/images/subCatedgories/klatglance.jpg
 
-  #placesToStay
+    #placesToStay
     - assets/images/contentList/placesToStay/1.jpg
     - assets/images/contentList/placesToStay/2.jpg
     - assets/images/contentList/placesToStay/3.jpg
     - assets/images/contentList/placesToStay/4.jpg
-    - assets/images/contentList/placesToStay/5.jpg    
+    - assets/images/contentList/placesToStay/5.jpg
 
-  #historicalPlaces
+    #historicalPlaces
     - assets/images/contentList/historicalPlaces/1.jpg
     - assets/images/contentList/historicalPlaces/2.jpg
     - assets/images/contentList/historicalPlaces/3.jpg
     - assets/images/contentList/historicalPlaces/4.jpg
     - assets/images/contentList/historicalPlaces/5.jpg
 
-  #parks
+    #parks
     - assets/images/contentList/parks/1.jpg
     - assets/images/contentList/parks/2.jpg
     - assets/images/contentList/parks/3.jpg
@@ -207,7 +199,7 @@ flutter:
     - assets/images/contentList/parks/9.jpg
     - assets/images/contentList/parks/10.jpg
 
-  #music
+    #music
     - assets/images/contentList/music/bangu.jpg
     - assets/images/contentList/music/erhu.jpg
     - assets/images/contentList/music/gambus.jpg
@@ -223,9 +215,8 @@ flutter:
     - assets/images/contentList/music/tabla.jpg
     - assets/images/contentList/music/tanggu.jpg
     - assets/images/contentList/music/veena.jpg
-    
 
-  #dance
+    #dance
     - assets/images/contentList/dance/Bhangra.jpg
     - assets/images/contentList/dance/Bharata_Natyam.jpg
     - assets/images/contentList/dance/Dikir_barat.jpg
@@ -237,24 +228,21 @@ flutter:
     - assets/images/contentList/dance/sumazau.jpg
     - assets/images/contentList/dance/Zapin.jpg
 
-    
-
-  #malaysianGames
+    #malaysianGames
 
     - assets/images/contentList/malaysianGames/batu-seremban.jpg
     - assets/images/contentList/malaysianGames/congkak.jpg
     - assets/images/contentList/malaysianGames/top-spinning.jpg
     - assets/images/contentList/malaysianGames/wau.jpg
-  
-  
-  #localFood
+
+    #localFood
     - assets/images/contentList/localFood/1.jpg
     - assets/images/contentList/localFood/2.jpg
     - assets/images/contentList/localFood/3.jpg
     - assets/images/contentList/localFood/4.jpg
     - assets/images/contentList/localFood/5.jpg
-  
-  #relax
+
+    #relax
     - assets/images/contentList/relax/1.jpg
     - assets/images/contentList/relax/2.jpg
     - assets/images/contentList/relax/3.jpg
@@ -264,46 +252,46 @@ flutter:
     - assets/images/contentList/relax/7.jpg
     - assets/images/contentList/relax/8.jpg
     - assets/images/contentList/relax/9.jpg
-    - assets/images/contentList/relax/10.jpg 
-  
-  #klForKids
+    - assets/images/contentList/relax/10.jpg
+
+    #klForKids
     - assets/images/contentList/klForKids/KLTowerMiniZoo.jpg
     - assets/images/contentList/klForKids/KLUpsideDownHouse.jpg
     - assets/images/contentList/klForKids/planetariumNEgara.jpg
     - assets/images/contentList/klForKids/PusatSainsNegara.jpg
-  
-  #whatToDoInKl
-    - assets/images/contentList/whatToDoInKl/1.jpg 
-    - assets/images/contentList/whatToDoInKl/2.jpg 
-    - assets/images/contentList/whatToDoInKl/3.jpg 
-    - assets/images/contentList/whatToDoInKl/4.jpg 
-    - assets/images/contentList/whatToDoInKl/5.jpg  
 
-  #whereToShop
-    - assets/images/contentList/whereToShop/1.jpg 
-    - assets/images/contentList/whereToShop/2.jpg 
-    - assets/images/contentList/whereToShop/3.jpg 
-    - assets/images/contentList/whereToShop/4.jpg 
-    - assets/images/contentList/whereToShop/5.jpg  
+    #whatToDoInKl
+    - assets/images/contentList/whatToDoInKl/1.jpg
+    - assets/images/contentList/whatToDoInKl/2.jpg
+    - assets/images/contentList/whatToDoInKl/3.jpg
+    - assets/images/contentList/whatToDoInKl/4.jpg
+    - assets/images/contentList/whatToDoInKl/5.jpg
 
-  #nightLife
-    - assets/images/contentList/nightLife/1.jpg 
-    - assets/images/contentList/nightLife/2.jpg 
-    - assets/images/contentList/nightLife/3.jpg 
-    - assets/images/contentList/nightLife/4.jpg 
+    #whereToShop
+    - assets/images/contentList/whereToShop/1.jpg
+    - assets/images/contentList/whereToShop/2.jpg
+    - assets/images/contentList/whereToShop/3.jpg
+    - assets/images/contentList/whereToShop/4.jpg
+    - assets/images/contentList/whereToShop/5.jpg
 
-  #whereToEat
+    #nightLife
+    - assets/images/contentList/nightLife/1.jpg
+    - assets/images/contentList/nightLife/2.jpg
+    - assets/images/contentList/nightLife/3.jpg
+    - assets/images/contentList/nightLife/4.jpg
+
+    #whereToEat
     - assets/images/contentList/whereToEat/1.jpg
-    - assets/images/contentList/whereToEat/2.jpg 
-    - assets/images/contentList/whereToEat/3.jpg 
-    - assets/images/contentList/whereToEat/4.jpg  
-  
-  #medicalTourism
+    - assets/images/contentList/whereToEat/2.png
+    - assets/images/contentList/whereToEat/3.jpg
+    - assets/images/contentList/whereToEat/4.png
+
+    #medicalTourism
     - assets/images/contentList/medicalTourism/1.jpg
-    - assets/images/contentList/medicalTourism/2.jpg 
-    - assets/images/contentList/medicalTourism/3.jpg 
-  
-  #subMedicalTourism
+    - assets/images/contentList/medicalTourism/2.jpg
+    - assets/images/contentList/medicalTourism/3.jpg
+
+    #subMedicalTourism
     - assets/images/contentList/medicalTourism/sub-medical/Damai-Service-Hospital.jpg
     - assets/images/contentList/medicalTourism/sub-medical/Dental-Pro.jpg
     - assets/images/contentList/medicalTourism/sub-medical/Gleneagles-KL.jpg
@@ -312,9 +300,9 @@ flutter:
     - assets/images/contentList/medicalTourism/sub-medical/Klinik-Dr-KO.jpg
     - assets/images/contentList/medicalTourism/sub-medical/KPJ-Tawakkal-KL.jpg
     - assets/images/contentList/medicalTourism/sub-medical/Nexus-Clinic-KL.jpg
-    - assets/images/contentList/medicalTourism/sub-medical/Peter-Chng.jpg    
+    - assets/images/contentList/medicalTourism/sub-medical/Peter-Chng.jpg
 
-  #transportaion
+    #transportaion
     - assets/images/contentList/transportaion/lrt.png
     - assets/images/contentList/transportaion/mrt.png
     - assets/images/contentList/transportaion/ktm-komuter.png
@@ -327,30 +315,23 @@ flutter:
     - assets/images/contentList/transportaion/taxi.png
     - assets/images/contentList/transportaion/e-hailing-service.png
 
-  #accomodation
+    #accomodation
     - assets/images/contentList/accomodation/1.jpg
-    - assets/images/contentList/accomodation/2.jpg 
-    - assets/images/contentList/accomodation/3.jpg 
-    - assets/images/contentList/accomodation/4.jpg 
-    - assets/images/contentList/accomodation/5.jpg 
-    - assets/images/contentList/accomodation/6.jpg 
-    - assets/images/contentList/accomodation/7.jpg 
-    - assets/images/contentList/accomodation/8.jpg 
-    - assets/images/contentList/accomodation/9.jpg 
-    - assets/images/contentList/accomodation/10.jpg 
-    
-  #logo        
+    - assets/images/contentList/accomodation/2.jpg
+    - assets/images/contentList/accomodation/3.jpg
+    - assets/images/contentList/accomodation/4.jpg
+    - assets/images/contentList/accomodation/5.jpg
+    - assets/images/contentList/accomodation/6.jpg
+    - assets/images/contentList/accomodation/7.jpg
+    - assets/images/contentList/accomodation/8.jpg
+    - assets/images/contentList/accomodation/9.jpg
+    - assets/images/contentList/accomodation/10.jpg
+
+    #logo
     - assets/images/Logo_100x50.png
 
-  #aboutUs
+    #aboutUs
     - assets/images/aboutUs.jpg
-
-
-
-
-
-    
-    
 
   #   - images/a_dot_ham.jpeg
 
@@ -380,7 +361,7 @@ flutter:
         - asset: assets/fonts/RobotoCondensed-Bold.ttf
           weight: 700
         - asset: assets/fonts/RobotoCondensed-light.ttf
-          weight: 300    
+          weight: 300
         - asset: assets/fonts/RobotoCondensed-Italic.ttf
           style: italic
   #   - family: Trajan Pro

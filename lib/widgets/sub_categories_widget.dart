@@ -1,3 +1,4 @@
+import '../screens/sub_categories_screen.dart';
 import '../Data/SizeConfig.dart';
 import '../screens/content_list_screen.dart';
 import '../screens/kl_at_glance_screen.dart';
@@ -28,6 +29,14 @@ class SubCategories extends StatelessWidget {
           context: context,
           builder: (context) =>
               new TransportationScreen(appbartitle: title, id: id),
+        ),
+      );
+    } else if (id == 'sc_12') {
+      Navigator.of(context).push(
+        platformPageRoute(
+          context: context,
+          builder: (context) =>
+              new SubCategoriesScreen(appbartitle: title, id: id),
         ),
       );
     } else {
