@@ -209,13 +209,14 @@ class _CrosswordWidgetState extends State<CrosswordWidget> {
               //we need expand because to merge 2d array to one
               //
               String char = listChars.value.expand((e) => e).toList()[index];
-              Color color = Colors.yellow;
+
               //highlight path of the pointer that is being dragged using valuelistener
               return Listener(
                 onPointerDown: (event) => onDragStart(index),
                 child: ValueListenableBuilder(
                   valueListenable: currentDragObj,
                   builder: (context, CurrentDragObj value, child) {
+                    Color color = Colors.yellow;
                     //change the  color when path line contains index
                     if (value.currentDragLine.contains(index)) {
                       color = Colors.blue;

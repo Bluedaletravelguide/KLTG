@@ -186,6 +186,18 @@ flutter:
     - assets/images/subCatedgories/waterfall.jpg
     - assets/images/subCatedgories/hike.jpg
     - assets/images/subCatedgories/island.jpg
+    - assets/images/subCatedgories/inTemple.jpg
+    - assets/images/subCatedgories/mosque.jpg
+    - assets/images/subCatedgories/placesOfWorship.jpg
+    - assets/images/subCatedgories/cnTemple.jpg
+    - assets/images/subCatedgories/myfood.jpg
+    - assets/images/subCatedgories/mxfood.jpg
+    - assets/images/subCatedgories/cnfood.jpg
+    - assets/images/subCatedgories/infood.jpg
+    - assets/images/subCatedgories/jpfood.jpg
+    - assets/images/subCatedgories/krfood.jpg
+    - assets/images/subCatedgories/ffood.jpg
+    - assets/images/subCatedgories/arfood.jpg
 
     #placesToStay
     - assets/images/contentList/placesToStay/1.jpg
@@ -377,6 +389,36 @@ flutter:
     #aboutUs
     - assets/images/aboutUs.jpg
 
+<<<<<<< Updated upstream
+=======
+    #muslim
+    - assets/images/contentList/muslim/1.jpg
+    - assets/images/contentList/muslim/2.jpg
+    - assets/images/contentList/muslim/3.jpg
+    - assets/images/contentList/muslim/4.jpg
+    #hindu
+    - assets/images/contentList/hindu/1.jpg
+    - assets/images/contentList/hindu/2.jpg
+    #buddhist
+    - assets/images/contentList/buddhist/1.jpg
+    - assets/images/contentList/buddhist/2.jpg
+
+    #malayfood
+    - assets/images/contentList/malayFood/bijanrest.jpg
+    - assets/images/contentList/malayFood/bungaemas.jpg
+    - assets/images/contentList/malayFood/congkak.jpg
+    - assets/images/contentList/malayFood/jpteres.jpg
+    - assets/images/contentList/malayFood/manjaoldmalaya.jpg
+    - assets/images/contentList/malayFood/narenjtrad.jpg
+    - assets/images/contentList/malayFood/restorandcengkih.jpg
+    - assets/images/contentList/malayfood/restoranrebung.jpg
+    - assets/images/contentList/malayfood/sambalhijaurestaurant.jpg
+    - assets/images/contentList/malayfood/songket_rest.jpg
+
+
+  #   - images/a_dot_ham.jpeg
+
+>>>>>>> Stashed changes
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
 

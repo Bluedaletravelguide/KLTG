@@ -214,36 +214,6 @@ const ContentListData = const [
     image: 'assets/images/contentList/klForKids/KLTowerMiniZoo.jpg',
   ),
 //localFood 17
-  ContentLi(
-    id: 'cl1_17',
-    categories: 'sc_17',
-    contentListTitle: 'Nasi Lemak',
-    image: 'assets/images/contentList/localFood/1.jpg',
-  ),
-  ContentLi(
-    id: 'cl2_17',
-    categories: 'sc_17',
-    contentListTitle: 'Banana Leaf',
-    image: 'assets/images/contentList/localFood/2.jpg',
-  ),
-  ContentLi(
-    id: 'cl3_17',
-    categories: 'sc_17',
-    contentListTitle: 'Nasi Kandar',
-    image: 'assets/images/contentList/localFood/4.jpg',
-  ),
-  ContentLi(
-    id: 'cl4_17',
-    categories: 'sc_17',
-    contentListTitle: 'Street Burger',
-    image: 'assets/images/contentList/localFood/5.jpg',
-  ),
-  ContentLi(
-    id: 'cl5_17',
-    categories: 'sc_17',
-    contentListTitle: 'Roti Canai',
-    image: 'assets/images/contentList/localFood/3.jpg',
-  ),
 
 //whatToDoInKl 10
   ContentLi(
@@ -545,6 +515,576 @@ const ContentListData = const [
     contentListTitle: 'Bhangra',
     image: 'assets/images/contentList/dance/Bhangra.jpg',
   ),
+
+// Malay food 17a
+  ContentLi(
+    id: 'cl1_17a',
+    categories: 'sc_17a',
+    contentListTitle: 'Bijan Bar & Restaurant',
+    image: 'assets/images/contentList/malayFood/bijanrest.jpg',
+  ),
+
+  ContentLi(
+    id: 'cl2_17a',
+    categories: 'sc_17a',
+    contentListTitle: 'Songket Restaurant',
+    image: 'assets/images/contentList/malayFood/songket_rest.jpg',
+  ),
+
+  ContentLi(
+    id: 'cl3_17a',
+    categories: 'sc_17a',
+    contentListTitle: 'Manja Old Malaya',
+    image: 'assets/images/contentList/malayFood/manjaoldmalaya.jpg',
+  ),
+
+  ContentLi(
+    id: 'cl4_17a',
+    categories: 'sc_17a',
+    contentListTitle: 'JP Teres',
+    image: 'assets/images/contentList/malayFood/jpteres.jpg',
+  ),
+
+  ContentLi(
+    id: 'cl5_17a',
+    categories: 'sc_17a',
+    contentListTitle: 'Congkak',
+    image: 'assets/images/contentList/malayFood/congkak.jpg',
+  ),
+
+  ContentLi(
+    id: 'cl6_17a',
+    categories: 'sc_17a',
+    contentListTitle: 'Sambal Hijau Restaurant',
+    image: 'assets/images/contentList/malayFood/sambalhijaurestaurant.jpg',
+  ),
+
+  ContentLi(
+    id: 'cl7_17a',
+    categories: 'sc_17a',
+    contentListTitle: 'Restoran Rebung Dato Chef Ismail',
+    image: 'assets/images/contentList/malayFood/restoranrebung.jpg',
+  ),
+
+  ContentLi(
+    id: 'cl8_17a',
+    categories: 'sc_17a',
+    contentListTitle: 'Narenj Traditional Malay Restaurant',
+    image: 'assets/images/contentList/malayFood/narenjtrad.jpg',
+  ),
+
+  ContentLi(
+    id: 'cl9_17a',
+    categories: 'sc_17a',
+    contentListTitle: 'Bunga Emas Restaurant',
+    image: 'assets/images/contentList/malayFood/bungaemas.jpg',
+  ),
+
+  ContentLi(
+    id: 'cl20_17a',
+    categories: 'sc_17a',
+    contentListTitle: "Restoran D'Cengkih",
+    image: 'assets/images/contentList/malayFood/restorandcengkih.jpg',
+  ),
+
+  //Chinese Food 17b
+  ContentLi(
+    id: 'cl1_17b',
+    categories: 'sc_17b',
+    contentListTitle: 'Xin Cuisine',
+    image: 'assets/images/contentList/dance/joget.jpg',
+  ),
+
+  ContentLi(
+    id: 'cl2_17b',
+    categories: 'sc_17b',
+    contentListTitle: 'Restaurant Siu Siu',
+    image: 'assets/images/contentList/dance/Zapin.jpg',
+  ),
+
+  ContentLi(
+    id: 'cl3_17b',
+    categories: 'sc_17b',
+    contentListTitle: 'Ah Heng Food Corner',
+    image: 'assets/images/contentList/dance/Dikir_barat.jpg',
+  ),
+
+  ContentLi(
+    id: 'cl4_17b',
+    categories: 'sc_17b',
+    contentListTitle: 'Restoran Bak Kut Teh Klang Yip Yong',
+    image: 'assets/images/contentList/dance/Bharata_Natyam.jpg',
+  ),
+
+  ContentLi(
+    id: 'cl5_17b',
+    categories: 'sc_17b',
+    contentListTitle: 'Sek Yuen Restaurant',
+    image: 'assets/images/contentList/dance/odissi.jpg',
+  ),
+
+  ContentLi(
+    id: 'cl6_17b',
+    categories: 'sc_17b',
+    contentListTitle: 'Shanghai Restaurant',
+    image: 'assets/images/contentList/dance/khattak.jpg',
+  ),
+
+  ContentLi(
+    id: 'cl7_17b',
+    categories: 'sc_17b',
+    contentListTitle: 'Luk Yu Tea House',
+    image: 'assets/images/contentList/dance/Lion-Dance.jpg',
+  ),
+
+  ContentLi(
+    id: 'cl8_17b',
+    categories: 'sc_17b',
+    contentListTitle: 'Hakka Restaurant',
+    image: 'assets/images/contentList/dance/sumazau.jpg',
+  ),
+
+  ContentLi(
+    id: 'cl9_17b',
+    categories: 'sc_17b',
+    contentListTitle: 'Restoran Pik Wah',
+    image: 'assets/images/contentList/dance/ngajat.jpg',
+  ),
+
+  ContentLi(
+    id: 'cl20_17b',
+    categories: 'sc_17b',
+    contentListTitle: "Lai Po Heen",
+    image: 'assets/images/contentList/dance/Bhangra.jpg',
+  ),
+
+  //Indian Food 17c
+  ContentLi(
+    id: 'cl1_17c',
+    categories: 'sc_17c',
+    contentListTitle: 'Namaste India Hartamas',
+    image: 'assets/images/contentList/dance/joget.jpg',
+  ),
+
+  ContentLi(
+    id: 'cl2_17c',
+    categories: 'sc_17c',
+    contentListTitle: 'Gajaa at 8',
+    image: 'assets/images/contentList/dance/Zapin.jpg',
+  ),
+
+  ContentLi(
+    id: 'cl3_17c',
+    categories: 'sc_17c',
+    contentListTitle: 'Betel Leaf',
+    image: 'assets/images/contentList/dance/Dikir_barat.jpg',
+  ),
+
+  ContentLi(
+    id: 'cl4_17c',
+    categories: 'sc_17c',
+    contentListTitle: 'Tandoor Grill',
+    image: 'assets/images/contentList/dance/Bharata_Natyam.jpg',
+  ),
+
+  ContentLi(
+    id: 'cl5_17c',
+    categories: 'sc_17c',
+    contentListTitle: 'WTF Restaurant',
+    image: 'assets/images/contentList/dance/odissi.jpg',
+  ),
+
+  ContentLi(
+    id: 'cl6_17c',
+    categories: 'sc_17c',
+    contentListTitle: 'Tasty Capathi',
+    image: 'assets/images/contentList/dance/khattak.jpg',
+  ),
+
+  ContentLi(
+    id: 'cl7_17c',
+    categories: 'sc_17c',
+    contentListTitle: 'Woodlands',
+    image: 'assets/images/contentList/dance/Lion-Dance.jpg',
+  ),
+
+  ContentLi(
+    id: 'cl8_17c',
+    categories: 'sc_17c',
+    contentListTitle: 'GEM Restaurant Brickfields Sdn Bhd',
+    image: 'assets/images/contentList/dance/sumazau.jpg',
+  ),
+
+  ContentLi(
+    id: 'cl9_17c',
+    categories: 'sc_17c',
+    contentListTitle: 'Havelly Kuala Lumpur',
+    image: 'assets/images/contentList/dance/ngajat.jpg',
+  ),
+
+  ContentLi(
+    id: 'cl20_17c',
+    categories: 'sc_17c',
+    contentListTitle: "Taj Garden",
+    image: 'assets/images/contentList/dance/Bhangra.jpg',
+  ),
+
+  //Arabic 17d
+  ContentLi(
+    id: 'cl1_17d',
+    categories: 'sc_17d',
+    contentListTitle: 'Al Rawsha Restaurant',
+    image: 'assets/images/contentList/dance/joget.jpg',
+  ),
+
+  ContentLi(
+    id: 'cl2_17d',
+    categories: 'sc_17d',
+    contentListTitle: 'Tarbush Restaurant',
+    image: 'assets/images/contentList/dance/Zapin.jpg',
+  ),
+
+  ContentLi(
+    id: 'cl3_17d',
+    categories: 'sc_17d',
+    contentListTitle: 'Halab KL',
+    image: 'assets/images/contentList/dance/Dikir_barat.jpg',
+  ),
+
+  ContentLi(
+    id: 'cl4_17d',
+    categories: 'sc_17d',
+    contentListTitle: 'Wadi Hadramawt',
+    image: 'assets/images/contentList/dance/Bharata_Natyam.jpg',
+  ),
+
+  ContentLi(
+    id: 'cl5_17d',
+    categories: 'sc_17d',
+    contentListTitle: 'Bedouin Arabian Cuisine',
+    image: 'assets/images/contentList/dance/odissi.jpg',
+  ),
+
+  ContentLi(
+    id: 'cl6_17d',
+    categories: 'sc_17d',
+    contentListTitle: 'Al Diafah Restaurant',
+    image: 'assets/images/contentList/dance/khattak.jpg',
+  ),
+
+  ContentLi(
+    id: 'cl7_17d',
+    categories: 'sc_17d',
+    contentListTitle: 'Marosh Restaurant',
+    image: 'assets/images/contentList/dance/Lion-Dance.jpg',
+  ),
+
+  ContentLi(
+    id: 'cl8_17d',
+    categories: 'sc_17d',
+    contentListTitle: 'Al Halabi Gourment Restaurant',
+    image: 'assets/images/contentList/dance/sumazau.jpg',
+  ),
+
+  ContentLi(
+    id: 'cl9_17d',
+    categories: 'sc_17d',
+    contentListTitle: 'Naab Business & Dining Centre',
+    image: 'assets/images/contentList/dance/ngajat.jpg',
+  ),
+
+  ContentLi(
+    id: 'cl20_17d',
+    categories: 'sc_17d',
+    contentListTitle: "Arabella Restaurant",
+    image: 'assets/images/contentList/dance/Bhangra.jpg',
+  ),
+
+  //Korean Food 17e
+  ContentLi(
+    id: 'cl1_17e',
+    categories: 'sc_17e',
+    contentListTitle: 'Sae Ma Eul Korean BBQ',
+    image: 'assets/images/contentList/dance/joget.jpg',
+  ),
+
+  ContentLi(
+    id: 'cl2_17e',
+    categories: 'sc_17e',
+    contentListTitle: 'Seoul Korea Restaurant',
+    image: 'assets/images/contentList/dance/Zapin.jpg',
+  ),
+
+  ContentLi(
+    id: 'cl3_17e',
+    categories: 'sc_17e',
+    contentListTitle: 'Shinmapo Korean BBQ',
+    image: 'assets/images/contentList/dance/Dikir_barat.jpg',
+  ),
+
+  ContentLi(
+    id: 'cl4_17e',
+    categories: 'sc_17e',
+    contentListTitle: 'Don Dwae Ji Sam Gyeob Sal',
+    image: 'assets/images/contentList/dance/Bharata_Natyam.jpg',
+  ),
+
+  ContentLi(
+    id: 'cl5_17e',
+    categories: 'sc_17e',
+    contentListTitle: 'Dae Sa Kwan Korean Restaurant',
+    image: 'assets/images/contentList/dance/odissi.jpg',
+  ),
+
+  ContentLi(
+    id: 'cl6_17e',
+    categories: 'sc_17e',
+    contentListTitle: 'Da On Fine Korean Cuisine',
+    image: 'assets/images/contentList/dance/khattak.jpg',
+  ),
+
+  ContentLi(
+    id: 'cl7_17e',
+    categories: 'sc_17e',
+    contentListTitle: 'Namoo Korean Dessert Cafe and Bistro on the Park',
+    image: 'assets/images/contentList/dance/Lion-Dance.jpg',
+  ),
+
+  ContentLi(
+    id: 'cl8_17e',
+    categories: 'sc_17e',
+    contentListTitle: 'Seoul Nami Korean BBQ',
+    image: 'assets/images/contentList/dance/sumazau.jpg',
+  ),
+
+  ContentLi(
+    id: 'cl9_17e',
+    categories: 'sc_17e',
+    contentListTitle: 'B. bap',
+    image: 'assets/images/contentList/dance/ngajat.jpg',
+  ),
+
+  ContentLi(
+    id: 'cl20_17e',
+    categories: 'sc_17e',
+    contentListTitle: "Kung Jung Korean Restaurant",
+    image: 'assets/images/contentList/dance/Bhangra.jpg',
+  ),
+
+  //japanese restaurant 17f
+
+  ContentLi(
+    id: 'cl1_17f',
+    categories: 'sc_17f',
+    contentListTitle: 'Gen Japanese Restaurant',
+    image: 'assets/images/contentList/dance/joget.jpg',
+  ),
+
+  ContentLi(
+    id: 'cl2_17f',
+    categories: 'sc_17f',
+    contentListTitle: 'Donunie Sushi',
+    image: 'assets/images/contentList/dance/Zapin.jpg',
+  ),
+
+  ContentLi(
+    id: 'cl3_17f',
+    categories: 'sc_17f',
+    contentListTitle: 'Mitasu Japanese Restaurant',
+    image: 'assets/images/contentList/dance/Dikir_barat.jpg',
+  ),
+
+  ContentLi(
+    id: 'cl4_17f',
+    categories: 'sc_17f',
+    contentListTitle: 'Umai-Ya',
+    image: 'assets/images/contentList/dance/Bharata_Natyam.jpg',
+  ),
+
+  ContentLi(
+    id: 'cl5_17f',
+    categories: 'sc_17f',
+    contentListTitle: 'Hanare Japanese Restaurant',
+    image: 'assets/images/contentList/dance/odissi.jpg',
+  ),
+
+  ContentLi(
+    id: 'cl6_17f',
+    categories: 'sc_17f',
+    contentListTitle: "J'S GATE DINING",
+    image: 'assets/images/contentList/dance/khattak.jpg',
+  ),
+
+  ContentLi(
+    id: 'cl7_17f',
+    categories: 'sc_17f',
+    contentListTitle: 'Ishin Japanese Dining',
+    image: 'assets/images/contentList/dance/Lion-Dance.jpg',
+  ),
+
+  ContentLi(
+    id: 'cl8_17f',
+    categories: 'sc_17f',
+    contentListTitle: 'Pepper Lunch',
+    image: 'assets/images/contentList/dance/sumazau.jpg',
+  ),
+
+  ContentLi(
+    id: 'cl9_17f',
+    categories: 'sc_17f',
+    contentListTitle: 'Iketeru',
+    image: 'assets/images/contentList/dance/ngajat.jpg',
+  ),
+
+  ContentLi(
+    id: 'cl20_17f',
+    categories: 'sc_17f',
+    contentListTitle: "Sushi Oribe",
+    image: 'assets/images/contentList/dance/Bhangra.jpg',
+  ),
+
+  //Mexican Food 17g
+  ContentLi(
+    id: 'cl1_17g',
+    categories: 'sc_17g',
+    contentListTitle: 'La Boca Latino Bar',
+    image: 'assets/images/contentList/dance/joget.jpg',
+  ),
+
+  ContentLi(
+    id: 'cl2_17g',
+    categories: 'sc_17g',
+    contentListTitle: 'Loco Mexican Bar and Restaurant',
+    image: 'assets/images/contentList/dance/Zapin.jpg',
+  ),
+
+  ContentLi(
+    id: 'cl3_17g',
+    categories: 'sc_17g',
+    contentListTitle: 'Las Carretas Mexican Restaurant & Bar',
+    image: 'assets/images/contentList/dance/Dikir_barat.jpg',
+  ),
+
+  ContentLi(
+    id: 'cl4_17g',
+    categories: 'sc_17g',
+    contentListTitle: 'Sala Hartamas',
+    image: 'assets/images/contentList/dance/Bharata_Natyam.jpg',
+  ),
+
+  ContentLi(
+    id: 'cl5_17g',
+    categories: 'sc_17g',
+    contentListTitle: 'Fresca Mexican Kitchen & Bar',
+    image: 'assets/images/contentList/dance/odissi.jpg',
+  ),
+
+  ContentLi(
+    id: 'cl6_17g',
+    categories: 'sc_17g',
+    contentListTitle: 'Chica Bonita',
+    image: 'assets/images/contentList/dance/khattak.jpg',
+  ),
+
+  ContentLi(
+    id: 'cl7_17g',
+    categories: 'sc_17g',
+    contentListTitle: "Nick's Restaurant & Bar",
+    image: 'assets/images/contentList/dance/Lion-Dance.jpg',
+  ),
+
+  ContentLi(
+    id: 'cl8_17g',
+    categories: 'sc_17g',
+    contentListTitle: 'MoMosita Taco Bar',
+    image: 'assets/images/contentList/dance/sumazau.jpg',
+  ),
+
+  ContentLi(
+    id: 'cl9_17g',
+    categories: 'sc_17g',
+    contentListTitle: 'Elcantina Mexican Cuisine',
+    image: 'assets/images/contentList/dance/ngajat.jpg',
+  ),
+
+  ContentLi(
+    id: 'cl20_17g',
+    categories: 'sc_17g',
+    contentListTitle: "Carlos Mexican Canteena",
+    image: 'assets/images/contentList/dance/Bhangra.jpg',
+  ),
+
+  //Fast Food 17h
+  ContentLi(
+    id: 'cl1_17h',
+    categories: 'sc_17h',
+    contentListTitle: 'Burger on 16',
+    image: 'assets/images/contentList/dance/joget.jpg',
+  ),
+
+  ContentLi(
+    id: 'cl2_17h',
+    categories: 'sc_17h',
+    contentListTitle: "Giegit's Burger",
+    image: 'assets/images/contentList/dance/Zapin.jpg',
+  ),
+
+  ContentLi(
+    id: 'cl3_17h',
+    categories: 'sc_17h',
+    contentListTitle: 'Syriana Shawarma & Fast Food Restaurant',
+    image: 'assets/images/contentList/dance/Dikir_barat.jpg',
+  ),
+
+  ContentLi(
+    id: 'cl4_17h',
+    categories: 'sc_17h',
+    contentListTitle: 'Wayback Burgers',
+    image: 'assets/images/contentList/dance/Bharata_Natyam.jpg',
+  ),
+
+  ContentLi(
+    id: 'cl5_17h',
+    categories: 'sc_17h',
+    contentListTitle: 'The Daily Grind',
+    image: 'assets/images/contentList/dance/odissi.jpg',
+  ),
+
+  ContentLi(
+    id: 'cl6_17h',
+    categories: 'sc_17h',
+    contentListTitle: 'KGB TTDI',
+    image: 'assets/images/contentList/dance/khattak.jpg',
+  ),
+
+  ContentLi(
+    id: 'cl7_17h',
+    categories: 'sc_17h',
+    contentListTitle: "Kaw Kaw Burger",
+    image: 'assets/images/contentList/dance/Lion-Dance.jpg',
+  ),
+
+  ContentLi(
+    id: 'cl8_17h',
+    categories: 'sc_17h',
+    contentListTitle: 'J Boyz Fast Food Restaurant',
+    image: 'assets/images/contentList/dance/sumazau.jpg',
+  ),
+
+  ContentLi(
+    id: 'cl9_17h',
+    categories: 'sc_17h',
+    contentListTitle: 'Sugarbun Borneo Asian Food',
+    image: 'assets/images/contentList/dance/ngajat.jpg',
+  ),
+
+  ContentLi(
+    id: 'cl20_17h',
+    categories: 'sc_17h',
+    contentListTitle: "Broasted Chicken King",
+    image: 'assets/images/contentList/dance/Bhangra.jpg',
+  ),
+
 // Music 18
   ContentLi(
     id: 'cl1_18',
@@ -814,5 +1354,73 @@ const ContentListData = const [
     categories: 'sc_20',
     contentListTitle: 'Penang National Park',
     image: 'assets/images/contentList/hiking/5.jpg',
+  ),
+
+  //muslim worship place
+  ContentLi(
+    id: 'cl1_22a;',
+    categories: 'sc_22a',
+    contentListTitle: 'Masjid Negara',
+    image: 'assets/images/contentList/muslim/3.jpg',
+  ),
+
+  ContentLi(
+    id: 'cl2_22a',
+    categories: 'sc_22a',
+    contentListTitle: 'Masjid Jamek',
+    image: 'assets/images/contentList/muslim/2.jpg',
+  ),
+
+  ContentLi(
+    id: 'cl3_22a',
+    categories: 'sc_22a',
+    contentListTitle: 'Federal Territory Mosque Kuala Lumpur',
+    image: 'assets/images/contentList/muslim/1.jpg',
+  ),
+
+  ContentLi(
+    id: 'cl4_22a',
+    categories: 'sc_22a',
+    contentListTitle: 'Masjid Putra, Putrajaya',
+    image: 'assets/images/contentList/muslim/4.jpg',
+  ),
+
+  //buddhist worship place sc22b
+
+  ContentLi(
+    id: 'cl1_22b',
+    categories: 'sc_22b',
+    contentListTitle: 'Thean Hou Temple',
+    image: 'assets/images/contentList/buddhist/1.jpg',
+  ),
+
+  ContentLi(
+    id: 'cl2_22b',
+    categories: 'sc_22b',
+    contentListTitle: 'Guan Di Temple',
+    image: 'assets/images/contentList/buddhist/2.jpg',
+  ),
+
+  //hindu worship temple sc22c
+
+  ContentLi(
+    id: 'cl1_22c',
+    categories: 'sc_22c',
+    contentListTitle: 'Sri Mahamariamman Temple',
+    image: 'assets/images/contentList/hindu/2.jpg',
+  ),
+
+  ContentLi(
+    id: 'cl2_22c',
+    categories: 'sc_22c',
+    contentListTitle: 'Batu Caves Temple',
+    image: 'assets/images/subCatedgories/inTemple.jpg',
+  ),
+
+  ContentLi(
+    id: 'cl3_22c',
+    categories: 'sc_22c',
+    contentListTitle: 'Kandaswamy Temple',
+    image: 'assets/images/contentList/hindu/1.jpg',
   ),
 ];
