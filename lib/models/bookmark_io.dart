@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:kltheguide/models/content_List.dart';
 import 'package:path_provider/path_provider.dart';
 
+//This is the part where actual content list is written into the device
 class BookmarkStorage {
   Future get _localPath async {
     final directory = await getApplicationDocumentsDirectory();

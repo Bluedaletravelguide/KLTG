@@ -581,7 +581,7 @@ const ContentListData = const [
   ),
 
   ContentLi(
-    id: 'cl20_17a',
+    id: 'cl10_17a',
     categories: 'sc_17a',
     contentListTitle: "Restoran D'Cengkih",
     image: 'assets/images/contentList/malayFood/restorandcengkih.jpg',
@@ -877,70 +877,70 @@ const ContentListData = const [
     id: 'cl1_17f',
     categories: 'sc_17f',
     contentListTitle: 'Gen Japanese Restaurant',
-    image: 'assets/images/contentList/dance/joget.jpg',
+    image: 'assets/images/contentList/japaneseFood/1.png',
   ),
 
   ContentLi(
     id: 'cl2_17f',
     categories: 'sc_17f',
     contentListTitle: 'Donunie Sushi',
-    image: 'assets/images/contentList/dance/Zapin.jpg',
+    image: 'assets/images/contentList/japaneseFood/2.png',
   ),
 
   ContentLi(
     id: 'cl3_17f',
     categories: 'sc_17f',
     contentListTitle: 'Mitasu Japanese Restaurant',
-    image: 'assets/images/contentList/dance/Dikir_barat.jpg',
+    image: 'assets/images/contentList/japaneseFood/3.png',
   ),
 
   ContentLi(
     id: 'cl4_17f',
     categories: 'sc_17f',
     contentListTitle: 'Umai-Ya',
-    image: 'assets/images/contentList/dance/Bharata_Natyam.jpg',
+    image: 'assets/images/contentList/japaneseFood/4.png',
   ),
 
   ContentLi(
     id: 'cl5_17f',
     categories: 'sc_17f',
     contentListTitle: 'Hanare Japanese Restaurant',
-    image: 'assets/images/contentList/dance/odissi.jpg',
+    image: 'assets/images/contentList/japaneseFood/5.png',
   ),
 
   ContentLi(
     id: 'cl6_17f',
     categories: 'sc_17f',
     contentListTitle: "J'S GATE DINING",
-    image: 'assets/images/contentList/dance/khattak.jpg',
+    image: 'assets/images/contentList/japaneseFood/6.png',
   ),
 
   ContentLi(
     id: 'cl7_17f',
     categories: 'sc_17f',
     contentListTitle: 'Ishin Japanese Dining',
-    image: 'assets/images/contentList/dance/Lion-Dance.jpg',
+    image: 'assets/images/contentList/japaneseFood/7.png',
   ),
 
   ContentLi(
     id: 'cl8_17f',
     categories: 'sc_17f',
     contentListTitle: 'Pepper Lunch',
-    image: 'assets/images/contentList/dance/sumazau.jpg',
+    image: 'assets/images/contentList/japaneseFood/8.png',
   ),
 
   ContentLi(
     id: 'cl9_17f',
     categories: 'sc_17f',
     contentListTitle: 'Iketeru',
-    image: 'assets/images/contentList/dance/ngajat.jpg',
+    image: 'assets/images/contentList/japaneseFood/9.png',
   ),
 
   ContentLi(
     id: 'cl20_17f',
     categories: 'sc_17f',
     contentListTitle: "Sushi Oribe",
-    image: 'assets/images/contentList/dance/Bhangra.jpg',
+    image: 'assets/images/contentList/japaneseFood/10.png',
   ),
 
   //Mexican Food 17g
