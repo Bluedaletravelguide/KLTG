@@ -709,7 +709,7 @@ const ContentListData = const [
   ),
   ContentLi(
     id: 'cl6_20',
-    categories: 'sc_21',
+    categories: 'sc_w21',
     contentListTitle: 'Lang Tengah Island',
     image: 'assets/images/contentList/island/6.jpg',
   ),

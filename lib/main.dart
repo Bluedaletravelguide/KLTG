@@ -3,13 +3,19 @@ import 'package:flutter/services.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:kltheguide/screens/bookmark_screen.dart';
+import 'package:kltheguide/screens/tabs_screen.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'Data/SizeConfig.dart';
-import 'screens/tabs_screen.dart';
+import 'screens/introduction_screen.dart';
 import 'models/notification.dart';
 import 'package:animated_splash_screen/animated_splash_screen.dart';
 
-void main() {
+int initScreen;
+Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  SharedPreferences prefs = await SharedPreferences.getInstance();
+  initScreen = prefs.getInt("initScreen");
+  await prefs.setInt('initScreen', 1);
   MobileAds.instance.initialize();
   Firebase.initializeApp();
   SystemChrome.setPreferredOrientations([
@@ -139,10 +145,11 @@ class Loading extends StatelessWidget {
                       fontWeight: FontWeight.w300,
                       color: Colors.white),
                 )),
-        initialRoute: '/',
+        initialRoute:
+            initScreen == 0 || initScreen == null ? 'introduction' : '/',
         routes: {
           '/': (ctx) => TabsScreen(),
-          '/bookmark': (ctx) => BookmarkScreen()
+          'introduction': (ctx) => Introduction()
         });
   }
 }
