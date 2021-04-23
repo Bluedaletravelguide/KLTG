@@ -443,6 +443,17 @@ flutter:
     - assets/images/contentList/arabFood/tarbush.jpg
     - assets/images/contentList/arabFood/wadi.jpg
 
+    #koreanFood
+    - assets/images/contentList/koreanFood/1.png
+    - assets/images/contentList/koreanFood/2.png
+    - assets/images/contentList/koreanFood/3.png
+    - assets/images/contentList/koreanFood/4.png
+    - assets/images/contentList/koreanFood/5.png
+    - assets/images/contentList/koreanFood/6.png
+    - assets/images/contentList/koreanFood/7.png
+    - assets/images/contentList/koreanFood/8.png
+    - assets/images/contentList/koreanFood/9.png
+    - assets/images/contentList/koreanFood/10.png
 
     #japaneseFood
     - assets/images/contentList/japaneseFood/1.png
@@ -455,6 +466,30 @@ flutter:
     - assets/images/contentList/japaneseFood/8.png
     - assets/images/contentList/japaneseFood/9.png
     - assets/images/contentList/japaneseFood/10.png
+
+    #mexicanFood
+    - assets/images/contentList/mexicanFood/1.png
+    - assets/images/contentList/mexicanFood/2.png
+    - assets/images/contentList/mexicanFood/3.png
+    - assets/images/contentList/mexicanFood/4.png
+    - assets/images/contentList/mexicanFood/5.png
+    - assets/images/contentList/mexicanFood/6.png
+    - assets/images/contentList/mexicanFood/7.png
+    - assets/images/contentList/mexicanFood/8.png
+    - assets/images/contentList/mexicanFood/9.png
+    - assets/images/contentList/mexicanFood/10.png
+
+    #fastFood
+    - assets/images/contentList/fastFood/1.png
+    - assets/images/contentList/fastFood/2.png
+    - assets/images/contentList/fastFood/3.png
+    - assets/images/contentList/fastFood/4.png
+    - assets/images/contentList/fastFood/5.png
+    - assets/images/contentList/fastFood/6.png
+    - assets/images/contentList/fastFood/7.png
+    - assets/images/contentList/fastFood/8.png
+    - assets/images/contentList/fastFood/9.png
+    - assets/images/contentList/fastFood/10.png
 
     #logo
     - assets/images/Logo_100x50.png
