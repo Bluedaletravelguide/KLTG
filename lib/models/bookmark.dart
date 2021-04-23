@@ -1,6 +1,7 @@
 import '../models/content_List.dart';
 import '../models/bookmark_io.dart';
 
+//This is how bookmarks are manage within the app
 class PinBookmarks {
   BookmarkStorage storage = BookmarkStorage();
   List<ContentLi> bookmarks = [];
