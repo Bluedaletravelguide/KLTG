@@ -1634,6 +1634,253 @@ const ContentData = const [
       locationUrl: 'https://g.page/arabella-restaurant-kuala-lumpur?share',
       webText: 'arabellabb.com',
       webUrl: 'https://arabellabb.com/menu/'),
+  //Korean food 17e
+  ContentClass(
+      id: 'cl1_17e',
+      decrepitation: '-',
+      content: 'Note: Non-Halal',
+      workhour: '3.00pm - 1.00am (Daily)',
+      fees: '-',
+      phoneNo: '+6014-3686050',
+      locationText:
+          '1, Jalan Solaris 4, Solaris Mont Kiara, 50480 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
+      locationUrl: 'https://goo.gl/maps/Evcyg56oa9rpHGn67',
+      webText: 'Facebook Page',
+      webUrl: 'https://www.facebook.com/Saemaeulbbqsolaris/'),
+  ContentClass(
+      id: 'cl2_17e',
+      decrepitation: '-',
+      content: 'Note: Non-Halal',
+      workhour: '12.00pm - 10.00pm (Sat - Fri)\nClosed on Monday',
+      fees: '-',
+      phoneNo: '+6012-3731176',
+      locationText:
+          '1-1 Plaza Danau 2, 2, Jalan 3/109f, Taman Danau Desa, 58100 Kuala Lumpur',
+      locationUrl: 'https://goo.gl/maps/AfmDAq2HwSSsSoew9 ',
+      webText: 'Facebook Page',
+      webUrl:
+          'https://www.facebook.com/pages/Restaurant%20Seoul%20Korea/219538124741576/'),
+  ContentClass(
+      id: 'cl3_17e',
+      decrepitation: '-',
+      content: 'Note: Non-Halal',
+      workhour: '11.00am - 10.00pm (Daily)',
+      fees: '-',
+      phoneNo: '+603-22013252',
+      locationText:
+          '3rd Floor, T-216D, The Gardens Mall, Lingkaran Syed Putra, Mid Valley City, 59200 Kuala Lumpur',
+      locationUrl: 'https://goo.gl/maps/QHs9fLF5aaCB8rQn6',
+      webText: 'shinmapo.com',
+      webUrl: 'http://www.shinmapo.com/'),
+  ContentClass(
+      id: 'cl4_17e',
+      decrepitation: '-',
+      content: 'Note: Non-Halal',
+      workhour:
+          '3.00pm - 11.00pm (Sun - Tue)\n1.00pm - 12.00am (Wed)\n1.00pm - 11.00pm (Thu - Sat)',
+      fees: '-',
+      phoneNo: '+603-90562573',
+      locationText:
+          '91, 77, Jalan Radin Tengah, Sri Petaling, 57000 Kuala Lumpur, Federal Territory of Kuala Lumpur',
+      locationUrl: 'https://goo.gl/maps/VErUvQNwQosPbwA59',
+      webText: 'Facebook Page',
+      webUrl: 'https://www.facebook.com/dondwaeji/ '),
+  ContentClass(
+      id: 'cl5_17e',
+      decrepitation: '-',
+      content: 'Note: Non-Halal',
+      workhour: '11.30am - 3.00pm\n6.00pm - 10.30pm (Daily)',
+      fees: '-',
+      phoneNo: '+603-23001004',
+      locationText:
+          '40, Jalan 25/70a, Desa Sri Hartamas, 50480 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
+      locationUrl: 'https://goo.gl/maps/f4CFX6S2gad5LcdZA',
+      webText: 'Facebook Page',
+      webUrl:
+          'https://www.facebook.com/pages/Dae-Sa-Kwan-Korean-Restaurant-Desa-Sri-Hartamas/172784032753118 '),
+  ContentClass(
+      id: 'cl6_17e',
+      decrepitation: '-',
+      content: 'Note: Pork free but serves alcohol',
+      workhour: '11.00am - 10.00pm (Daily)',
+      fees: '-',
+      phoneNo: '+603-21412100',
+      locationText:
+          'Lot 6.40.00, 168, Bukit Bintang Street, Bukit Bintang, 55100 Kuala Lumpur, Federal Territory of Kuala Lumpur',
+      locationUrl: 'https://g.page/daonrestaurant?share',
+      webText: 'daonrestaurant.com',
+      webUrl: 'https://www.daonrestaurant.com/'),
+  ContentClass(
+      id: 'cl7_17e',
+      decrepitation: '-',
+      content: 'Note: Halal',
+      workhour: '10.00am - 8.30pm (Daily)',
+      fees: '-',
+      phoneNo: '+603-64116698',
+      locationText:
+          'one mont kiara mall, Jalan Kiara 1, Mont Kiara, 50480 Kuala Lumpur',
+      locationUrl: 'https://goo.gl/maps/5EaxMcEy1QU2DUHF6',
+      webText: 'Facebook Page',
+      webUrl: 'https://www.facebook.com/namoocafe'),
+  ContentClass(
+      id: 'cl8_17e',
+      decrepitation: '-',
+      content: 'Note: Halal',
+      workhour: '11.00am – 10.00pm (Daily)',
+      fees: '-',
+      phoneNo: '+603-22023336',
+      locationText:
+          'F-215 The Gardens Mall, Lingkaran Syed Putra, Mid Valley City, 59200 Kuala Lumpur',
+      locationUrl: 'https://g.page/seoulnamikoreanbbq?share',
+      webText: 'seoulnami.com',
+      webUrl: 'https://www.seoulnami.com/'),
+  ContentClass(
+      id: 'cl9_17e',
+      decrepitation: '-',
+      content: 'Note: Halal',
+      workhour: '10.00am - 10.00pm (Daily)',
+      fees: '-',
+      phoneNo: ' +603-28569719',
+      locationText:
+          'Lot GF08, NU Sentral, No.201, Jalan Tun Sambanthan, Brickfields, 50470 Kuala Lumpur, Federal Territory of Kuala Lumpur',
+      locationUrl: 'https://goo.gl/maps/KJeMHr3vxzcR41g16',
+      webText: 'Facebook Page',
+      webUrl: 'https://www.facebook.com/B.bap.my/'),
+  ContentClass(
+      id: 'cl10_17e',
+      decrepitation: '-',
+      content: 'Note: Halal',
+      workhour: '11.30am - 2.00pm, 5.30pm - 9.30pm (Mon - Sat)\nClosed on Sun',
+      fees: '-',
+      phoneNo: '+603-21667181',
+      locationText:
+          'Lot No 3.1 Level 3 PNB Perdana, Jalan Binjai, 50450 Kuala Lumpur, Malaysia',
+      locationUrl: 'https://g.page/Kungjungkoreanrestaurant?share',
+      webText: 'Facebook Page',
+      webUrl: 'https://www.facebook.com/kungjungkorean/'),
+
+  //Japanese food 17f
+  ContentClass(
+      id: 'cl1_17f',
+      decrepitation: '-',
+      content: '',
+      workhour: '12.00pm - 2.30pm, 6.00pm - 10.30pm (Sat - Tue)\nClosed on Mon',
+      fees: '-',
+      phoneNo: '+603-40429888',
+      locationText:
+          'Swarovski Sunway Putra Mall, 100, Jalan Putra, Chow Kit, 50350 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
+      locationUrl: 'https://goo.gl/maps/cx2BskQCVkriZZfD8',
+      webText: '-',
+      webUrl: '-'),
+  ContentClass(
+      id: 'cl2_17f',
+      decrepitation: '-',
+      content: '',
+      workhour: '9.00am - 10.00pm (Daily)',
+      fees: '-',
+      phoneNo: '+6012-3731176',
+      locationText:
+          '29-45, Jalan Hassan Salleh, Kampung Baru, 50300 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
+      locationUrl: 'https://goo.gl/maps/yntDR5RjdeUYjEGPA',
+      webText: '-',
+      webUrl: '-'),
+  ContentClass(
+      id: 'cl3_17f',
+      decrepitation: '-',
+      content: '',
+      workhour:
+          '11.30am - 3.00pm, 6.00pm - 10.00pm (Mon - Fri)\n12.00pm - 3.00pm, 6.00pm - 10.00pm (Sat & Sun)',
+      fees: '-',
+      phoneNo: '+603-21102833',
+      locationText:
+          'Central Plaza, 2506, Jalan Sultan Ismail, Bukit Bintang, 55100 Kuala Lumpur, Federal Territory of Kuala Lumpu',
+      locationUrl: 'https://goo.gl/maps/n2QFD8CC5hFn7oJw7',
+      webText: 'Facebook Page',
+      webUrl: 'https://www.facebook.com/mitasu2012/'),
+  ContentClass(
+      id: 'cl4_17f',
+      decrepitation: '-',
+      content: '',
+      workhour: '11.00am - 10.00pm (Daily)',
+      fees: '-',
+      phoneNo: '+603-21613939',
+      locationText:
+          'Lot 428 Suria KLCC, 50088 Kuala Lumpur, Federal Territory of Kuala Lumpur',
+      locationUrl: 'https://g.page/umaiyaklcc?share',
+      webText: 'umai-ya.com',
+      webUrl: 'http://www.umai-ya.com/'),
+  ContentClass(
+      id: 'cl5_17f',
+      decrepitation: '-',
+      content: '',
+      workhour: '12.00pm - 2.30pm\n6.00pm - 10.30pm (Daily)',
+      fees: '-',
+      phoneNo: '+603-23001004',
+      locationText:
+          'Vista Tower 182, Jalan Tun Razak, Kampung Datuk Keramat, 50400 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
+      locationUrl: 'https://goo.gl/maps/ZyrBULUSUDTTqETU6',
+      webText: '-',
+      webUrl: '-'),
+  ContentClass(
+      id: 'cl6_17f',
+      decrepitation: '-',
+      content: '',
+      workhour: '11.00am - 10.00pm (Daily)',
+      fees: '-',
+      phoneNo: '+603-21106850',
+      locationText:
+          'P1, Level 4, Lot 10, Jalan Sultan Ismail, 50250 Kuala Lumpur',
+      locationUrl: 'https://goo.gl/maps/QiEa4n7vzmb1FTmD6',
+      webText: 'js-gate.com',
+      webUrl: 'http://js-gate.com/'),
+  ContentClass(
+      id: 'cl7_17f',
+      decrepitation: '-',
+      content: '',
+      workhour: '12.00pm - 3.00pm\n6.00pm - 10.00pm (Daily)',
+      fees: '-',
+      phoneNo: '+603-79808228',
+      locationText:
+          '4 off, Persiaran Klang, Batu 3 3, 202, Jalan Kelang Lama, Taman Shanghai, 58000 Kuala Lumpur, Federal Territory of Kuala Lumpur',
+      locationUrl: 'https://goo.gl/maps/J3fBvSDhfpMCQW38A',
+      webText: 'inshin.my',
+      webUrl: 'http://ishin.my/'),
+  ContentClass(
+      id: 'cl8_17f',
+      decrepitation: '-',
+      content: '',
+      workhour: '11.00am - 10.00pm (Daily)',
+      fees: '-',
+      phoneNo: '+603-2141 0998',
+      locationText:
+          '168, Jalan Bukit Bintang, Bukit Bintang, 55100 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
+      locationUrl: 'https://goo.gl/maps/ShKu7M2W8NWmELEN7',
+      webText: 'seoulnami.com',
+      webUrl: 'https://www.seoulnami.com/'),
+  ContentClass(
+      id: 'cl9_17f',
+      decrepitation: '-',
+      content: '',
+      workhour: '12.00pm - 2.30pm\n6.00pm - 10.00pm (Tue - Sun)\nClosed on Mon',
+      fees: '-',
+      phoneNo: ' +603-28569719',
+      locationText:
+          'Level 8, 3, Jalan Stesen Sentral, Kuala Lumpur Sentral, 50470 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
+      locationUrl: 'https://g.page/iketeruhiltonkl?share ',
+      webText: 'Iketeru Web Page',
+      webUrl: 'https://www.eatdrinkhilton.com/iketeru/ '),
+  ContentClass(
+      id: 'cl10_17f',
+      decrepitation: '-',
+      content: 'Alternative phone number: +6018-2041781',
+      workhour: '12.00pm - 3.00pm\n6.00pm - 11.00pm (Mon - Sat)',
+      fees: '-',
+      phoneNo: '+603-21814099',
+      locationText:
+          'Vipod Residences, Ground Floor Block C-1, No 6, Jalan Kia Peng, Kuala Lumpur, 50450 Kuala Lumpur',
+      locationUrl: 'https://g.page/oribe-sushi?share',
+      webText: 'Facebook Page',
+      webUrl: 'https://www.facebook.com/oribe.sushi'),
 
   //music 18
   ContentClass(

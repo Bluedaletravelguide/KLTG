@@ -383,12 +383,6 @@ flutter:
     - assets/images/contentList/hiking/4.jpg
     - assets/images/contentList/hiking/5.jpg
 
-    #logo
-    - assets/images/Logo_100x50.png
-
-    #aboutUs
-    - assets/images/aboutUs.jpg
-
     #muslim
     - assets/images/contentList/muslim/1.jpg
     - assets/images/contentList/muslim/2.jpg
@@ -450,8 +444,23 @@ flutter:
     - assets/images/contentList/arabFood/wadi.jpg
 
 
+    #japaneseFood
+    - assets/images/contentList/japaneseFood/1.png
+    - assets/images/contentList/japaneseFood/2.png
+    - assets/images/contentList/japaneseFood/3.png
+    - assets/images/contentList/japaneseFood/4.png
+    - assets/images/contentList/japaneseFood/5.png
+    - assets/images/contentList/japaneseFood/6.png
+    - assets/images/contentList/japaneseFood/7.png
+    - assets/images/contentList/japaneseFood/8.png
+    - assets/images/contentList/japaneseFood/9.png
+    - assets/images/contentList/japaneseFood/10.png
 
-  #   - images/a_dot_ham.jpeg
+    #logo
+    - assets/images/Logo_100x50.png
+
+    #aboutUs
+    - assets/images/aboutUs.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
