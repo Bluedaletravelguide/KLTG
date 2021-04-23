@@ -581,7 +581,7 @@ const ContentListData = const [
   ),
 
   ContentLi(
-    id: 'cl20_17a',
+    id: 'cl10_17a',
     categories: 'sc_17a',
     contentListTitle: "Restoran D'Cengkih",
     image: 'assets/images/contentList/malayFood/restorandcengkih.jpg',
@@ -592,70 +592,70 @@ const ContentListData = const [
     id: 'cl1_17b',
     categories: 'sc_17b',
     contentListTitle: 'Xin Cuisine',
-    image: 'assets/images/contentList/dance/joget.jpg',
+    image: 'assets/images/contentList/chineseFood/xincuisine.jpg',
   ),
 
   ContentLi(
     id: 'cl2_17b',
     categories: 'sc_17b',
     contentListTitle: 'Restaurant Siu Siu',
-    image: 'assets/images/contentList/dance/Zapin.jpg',
+    image: 'assets/images/contentList/chineseFood/restsiu.jpg',
   ),
 
   ContentLi(
     id: 'cl3_17b',
     categories: 'sc_17b',
     contentListTitle: 'Ah Heng Food Corner',
-    image: 'assets/images/contentList/dance/Dikir_barat.jpg',
+    image: 'assets/images/contentList/chineseFood/AhFC.jpg',
   ),
 
   ContentLi(
     id: 'cl4_17b',
     categories: 'sc_17b',
     contentListTitle: 'Restoran Bak Kut Teh Klang Yip Yong',
-    image: 'assets/images/contentList/dance/Bharata_Natyam.jpg',
+    image: 'assets/images/contentList/chineseFood/restBKT.jpg',
   ),
 
   ContentLi(
     id: 'cl5_17b',
     categories: 'sc_17b',
     contentListTitle: 'Sek Yuen Restaurant',
-    image: 'assets/images/contentList/dance/odissi.jpg',
+    image: 'assets/images/contentList/chineseFood/SY_Rest.jpg',
   ),
 
   ContentLi(
     id: 'cl6_17b',
     categories: 'sc_17b',
     contentListTitle: 'Shanghai Restaurant',
-    image: 'assets/images/contentList/dance/khattak.jpg',
+    image: 'assets/images/contentList/chineseFood/Shang_Rest.jpg',
   ),
 
   ContentLi(
     id: 'cl7_17b',
     categories: 'sc_17b',
     contentListTitle: 'Luk Yu Tea House',
-    image: 'assets/images/contentList/dance/Lion-Dance.jpg',
+    image: 'assets/images/contentList/chineseFood/LYT_House.jpg',
   ),
 
   ContentLi(
     id: 'cl8_17b',
     categories: 'sc_17b',
     contentListTitle: 'Hakka Restaurant',
-    image: 'assets/images/contentList/dance/sumazau.jpg',
+    image: 'assets/images/contentList/chineseFood/Hak_Rest.jpg',
   ),
 
   ContentLi(
     id: 'cl9_17b',
     categories: 'sc_17b',
     contentListTitle: 'Restoran Pik Wah',
-    image: 'assets/images/contentList/dance/ngajat.jpg',
+    image: 'assets/images/contentList/chineseFood/RestPikWah.jpg',
   ),
 
   ContentLi(
-    id: 'cl20_17b',
+    id: 'cl10_17b',
     categories: 'sc_17b',
     contentListTitle: "Lai Po Heen",
-    image: 'assets/images/contentList/dance/Bhangra.jpg',
+    image: 'assets/images/contentList/chineseFood/LaiPoHeen.jpg',
   ),
 
   //Indian Food 17c
@@ -663,70 +663,70 @@ const ContentListData = const [
     id: 'cl1_17c',
     categories: 'sc_17c',
     contentListTitle: 'Namaste India Hartamas',
-    image: 'assets/images/contentList/dance/joget.jpg',
+    image: 'assets/images/contentList/indianFood/namaste.jpg',
   ),
 
   ContentLi(
     id: 'cl2_17c',
     categories: 'sc_17c',
     contentListTitle: 'Gajaa at 8',
-    image: 'assets/images/contentList/dance/Zapin.jpg',
+    image: 'assets/images/contentList/indianFood/gaja.jpg',
   ),
 
   ContentLi(
     id: 'cl3_17c',
     categories: 'sc_17c',
     contentListTitle: 'Betel Leaf',
-    image: 'assets/images/contentList/dance/Dikir_barat.jpg',
+    image: 'assets/images/contentList/indianFood/betel.jpg',
   ),
 
   ContentLi(
     id: 'cl4_17c',
     categories: 'sc_17c',
     contentListTitle: 'Tandoor Grill',
-    image: 'assets/images/contentList/dance/Bharata_Natyam.jpg',
+    image: 'assets/images/contentList/indianFood/tandoor.jpg',
   ),
 
   ContentLi(
     id: 'cl5_17c',
     categories: 'sc_17c',
     contentListTitle: 'WTF Restaurant',
-    image: 'assets/images/contentList/dance/odissi.jpg',
+    image: 'assets/images/contentList/indianFood/wtf.jpg',
   ),
 
   ContentLi(
     id: 'cl6_17c',
     categories: 'sc_17c',
     contentListTitle: 'Tasty Capathi',
-    image: 'assets/images/contentList/dance/khattak.jpg',
+    image: 'assets/images/contentList/indianFood/tasty.jpg',
   ),
 
   ContentLi(
     id: 'cl7_17c',
     categories: 'sc_17c',
     contentListTitle: 'Woodlands',
-    image: 'assets/images/contentList/dance/Lion-Dance.jpg',
+    image: 'assets/images/contentList/indianFood/wood.jpg',
   ),
 
   ContentLi(
     id: 'cl8_17c',
     categories: 'sc_17c',
     contentListTitle: 'GEM Restaurant Brickfields Sdn Bhd',
-    image: 'assets/images/contentList/dance/sumazau.jpg',
+    image: 'assets/images/contentList/indianFood/GEM.jpg',
   ),
 
   ContentLi(
     id: 'cl9_17c',
     categories: 'sc_17c',
     contentListTitle: 'Havelly Kuala Lumpur',
-    image: 'assets/images/contentList/dance/ngajat.jpg',
+    image: 'assets/images/contentList/indianFood/havelly.jpg',
   ),
 
   ContentLi(
-    id: 'cl20_17c',
+    id: 'cl10_17c',
     categories: 'sc_17c',
     contentListTitle: "Taj Garden",
-    image: 'assets/images/contentList/dance/Bhangra.jpg',
+    image: 'assets/images/contentList/indianFood/taj.jpg',
   ),
 
   //Arabic 17d
@@ -734,70 +734,70 @@ const ContentListData = const [
     id: 'cl1_17d',
     categories: 'sc_17d',
     contentListTitle: 'Al Rawsha Restaurant',
-    image: 'assets/images/contentList/dance/joget.jpg',
+    image: 'assets/images/contentList/arabFood/rawsha.jpg',
   ),
 
   ContentLi(
     id: 'cl2_17d',
     categories: 'sc_17d',
     contentListTitle: 'Tarbush Restaurant',
-    image: 'assets/images/contentList/dance/Zapin.jpg',
+    image: 'assets/images/contentList/arabFood/tarbush.jpg',
   ),
 
   ContentLi(
     id: 'cl3_17d',
     categories: 'sc_17d',
     contentListTitle: 'Halab KL',
-    image: 'assets/images/contentList/dance/Dikir_barat.jpg',
+    image: 'assets/images/contentList/arabFood/halab.jpg',
   ),
 
   ContentLi(
     id: 'cl4_17d',
     categories: 'sc_17d',
     contentListTitle: 'Wadi Hadramawt',
-    image: 'assets/images/contentList/dance/Bharata_Natyam.jpg',
+    image: 'assets/images/contentList/arabFood/wadi.jpg',
   ),
 
   ContentLi(
     id: 'cl5_17d',
     categories: 'sc_17d',
     contentListTitle: 'Bedouin Arabian Cuisine',
-    image: 'assets/images/contentList/dance/odissi.jpg',
+    image: 'assets/images/contentList/arabFood/bedouin.jpg',
   ),
 
   ContentLi(
     id: 'cl6_17d',
     categories: 'sc_17d',
     contentListTitle: 'Al Diafah Restaurant',
-    image: 'assets/images/contentList/dance/khattak.jpg',
+    image: 'assets/images/contentList/arabFood/diafah.jpg',
   ),
 
   ContentLi(
     id: 'cl7_17d',
     categories: 'sc_17d',
     contentListTitle: 'Marosh Restaurant',
-    image: 'assets/images/contentList/dance/Lion-Dance.jpg',
+    image: 'assets/images/contentList/arabFood/marosh.jpg',
   ),
 
   ContentLi(
     id: 'cl8_17d',
     categories: 'sc_17d',
     contentListTitle: 'Al Halabi Gourment Restaurant',
-    image: 'assets/images/contentList/dance/sumazau.jpg',
+    image: 'assets/images/contentList/arabFood/halabi.jpg',
   ),
 
   ContentLi(
     id: 'cl9_17d',
     categories: 'sc_17d',
     contentListTitle: 'Naab Business & Dining Centre',
-    image: 'assets/images/contentList/dance/ngajat.jpg',
+    image: 'assets/images/contentList/arabFood/naab.jpg',
   ),
 
   ContentLi(
-    id: 'cl20_17d',
+    id: 'cl10_17d',
     categories: 'sc_17d',
     contentListTitle: "Arabella Restaurant",
-    image: 'assets/images/contentList/dance/Bhangra.jpg',
+    image: 'assets/images/contentList/arabFood/arabella.jpg',
   ),
 
   //Korean Food 17e

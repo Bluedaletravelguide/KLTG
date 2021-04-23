@@ -1138,6 +1138,503 @@ const ContentData = const [
       webText: '-',
       webUrl: '-'),
 
+  //FOOD 17
+  //malayfood 17a
+  ContentClass(
+      id: 'cl1_17a',
+      decrepitation: '-',
+      content: '',
+      workhour: '12.00pm - 11.00pm (Daily)',
+      fees: '-',
+      phoneNo: '+603-20313575',
+      locationText:
+          'No 3, Jalan Ceylon, Bukit Ceylon, 50200 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
+      locationUrl: 'https://goo.gl/maps/pPoTKxxQibian39A8',
+      webText: 'bijanrestaurant.com',
+      webUrl: 'http://www.bijanrestaurant.com/'),
+  ContentClass(
+      id: 'cl2_17a',
+      decrepitation: '-',
+      content: '',
+      workhour: '12.00pm - 10.00pm (Daily)',
+      fees: '-',
+      phoneNo: '+6010-9589598',
+      locationText:
+          '31G, Plaza Crystavilla, 1, Jalan 22a/70a, Desa Sri Hartamas, 50480 Kuala Lumpur',
+      locationUrl: 'https://g.page/songketrestaurant?share',
+      webText: 'songketrestaurant.com',
+      webUrl: 'https://www.songketrestaurant.com/'),
+  ContentClass(
+      id: 'cl3_17a',
+      decrepitation: '-',
+      content: '',
+      workhour: '12.00pm - 12.00am (Daily)',
+      fees: '-',
+      phoneNo: '+6012-3737063',
+      locationText:
+          '6, Lorong Raja Chulan, Kuala Lumpur, 50250 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
+      locationUrl: 'https://g.page/manjakualalumpur?share',
+      webText: 'manja.com.my',
+      webUrl: 'https://www.manja.com.my/'),
+  ContentClass(
+      id: 'cl4_17a',
+      decrepitation: '-',
+      content: '',
+      workhour: '11.00am - 12.00am (Daily)',
+      fees: '-',
+      phoneNo: ' +603-22039188',
+      locationText:
+          'Grand Hyatt Kuala Lumpur, 12, Jalan Pinang, 50450 Kuala Lumpur, Federal Territory of Kuala Lumpur',
+      locationUrl: 'https://goo.gl/maps/DJ6ZDJa5EnYq6uMA8',
+      webText: 'hyatt.com',
+      webUrl:
+          'https://www.hyatt.com/en-US/hotel/malaysia/grand-hyatt-kuala-lumpur/kuagh/dining?src=nplk-kuagh-lclb-jp-teres'),
+  ContentClass(
+      id: 'cl5_17a',
+      decrepitation: '-',
+      content: '',
+      workhour:
+          '12.00pm - 10.00pm (Tue, Wed, Thu, Sun) 12.00pm - 11.00pm (Fri & Sat) Closed on Monday',
+      fees: '-',
+      phoneNo: '+603-21106005',
+      locationText:
+          '24, Jalan Beremi, Off, Jalan Sultan Ismail, Bukit Bintang, 50200 Kuala Lumpur',
+      locationUrl: 'https://g.page/congkak-kuala-lumpur?share',
+      webText: '-',
+      webUrl: '-'),
+  ContentClass(
+      id: 'cl6_17a',
+      decrepitation: '-',
+      content: '',
+      workhour: '7.30am - 8.00pm (Daily)',
+      fees: '-',
+      phoneNo: '+603-77312045',
+      locationText:
+          '2990, Jalan Sungai Penchala, Kampung Sungai Penchala, 60000 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
+      locationUrl: 'https://goo.gl/maps/tVjwkvsSSxzEV8n77',
+      webText: 'facebook.com',
+      webUrl: 'https://www.facebook.com/restoransambalhijau/'),
+  ContentClass(
+      id: 'cl7_17a',
+      decrepitation: '-',
+      content: '',
+      workhour: '8.00am - 10.30pm (Daily)',
+      fees: '-',
+      phoneNo: ' +603-22762525',
+      locationText:
+          '5-2 Cascade Parking, Jalan Bukit Aman, 1, Jalan Tanglin, 50480 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
+      locationUrl: 'https://goo.gl/maps/hXckoQnSjRsi46ww5',
+      webText: 'facebook page',
+      webUrl: 'https://www.facebook.com/RestoranRebungChefIsmail'),
+  ContentClass(
+      id: 'cl8_17a',
+      decrepitation: '-',
+      content: '',
+      workhour: '10.00am - 10.00pm (Daily)',
+      fees: '-',
+      phoneNo: '+603-40400028',
+      locationText:
+          'Jalan Tunku Putra, Sunway Vivaldi, 50480 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
+      locationUrl: 'https://goo.gl/maps/ZcHLZ7sqGZCeTraRA',
+      webText: '-',
+      webUrl: '-'),
+  ContentClass(
+      id: 'cl9_17a',
+      decrepitation: '-',
+      content: '',
+      workhour: '12.00pm - 2.30pm, 6.00pm - 10.30pm (Daily)',
+      fees: '-',
+      phoneNo: '+603-26889688',
+      locationText:
+          'Royale Chulan, 5, Jalan Conlay, Kuala Lumpur, 50450 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
+      locationUrl: 'https://goo.gl/maps/nmMo3at2eDGpkk5X6',
+      webText: '-',
+      webUrl: '-'),
+  ContentClass(
+      id: 'cl10_17a',
+      decrepitation: '-',
+      content: '-',
+      workhour: '7.00am - 6.00pm (Mon - Sat) Closed on Sun',
+      fees: '-',
+      phoneNo: '+6012-4999908',
+      locationText:
+          '2, Jalan Tun Mohd Fuad, Taman Tun Dr Ismail, 60000 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
+      locationUrl: 'https://goo.gl/maps/tM75Uafqbu5JGs3Z6',
+      webText: '-',
+      webUrl: '-'),
+
+  //CHINESE FOOD 17B
+  ContentClass(
+      id: 'cl1_17b',
+      decrepitation: '-',
+      content: '',
+      workhour:
+          '11.00am – 3.00pm (Mon - Fri) 9.00am – 3.00pm (Sat, Sun & Public Holidays)',
+      fees: '-',
+      phoneNo: ' +603-21448750',
+      locationText: '2 Jalan Sultan Ismail, 50250 Kuala Lumpur, Malaysia',
+      locationUrl: 'https://goo.gl/maps/1hCgy2WuawwWFgCH8',
+      webText: '-',
+      webUrl: 'https://kualalumpur.concordehotelsresorts.com/dining'),
+  ContentClass(
+      id: 'cl2_17b',
+      decrepitation: '-',
+      content: '',
+      workhour: '11.00am - 10.00pm (Daily)',
+      fees: '-',
+      phoneNo: '+6016-3098038',
+      locationText:
+          'Lorong Syed Putra Kiri, Taman Persiaran Desa, 50460 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
+      locationUrl: 'https://goo.gl/maps/QSctUF8mg1givKUs8',
+      webText: '-',
+      webUrl: 'https://www.facebook.com/Siu-Siu-Restaurant-158813080843557'),
+  ContentClass(
+      id: 'cl3_17b',
+      decrepitation: '-',
+      content: '',
+      workhour: '2.00 - 9.00pm (Daily)',
+      fees: '-',
+      phoneNo: '+6016-9569353',
+      locationText:
+          '2, Lorong Tiong Nam 3, Chow Kit, 50350 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
+      locationUrl: 'https://goo.gl/maps/x9KE5cLF67ZA9RPXA',
+      webText: '-',
+      webUrl: 'https://www.facebook.com/AhHengFoodCorner'),
+  ContentClass(
+      id: 'cl4_17b',
+      decrepitation: '-',
+      content: '',
+      workhour: '10.00am - 3.00pm, 5.30 - 9.00pm (Daily)',
+      fees: '-',
+      phoneNo: ' +6012-3575057',
+      locationText:
+          'Jalan Desa 2/1, Desa Aman Puri, 52100 Kuala Lumpur, Selangor',
+      locationUrl: 'https://goo.gl/maps/gGqTPihjaVtNHTvL7',
+      webText: '-',
+      webUrl: '-'),
+  ContentClass(
+      id: 'cl5_17b',
+      decrepitation: '-',
+      content: '',
+      workhour:
+          '11.30am - 2.30pm, 5.30 - 10.00pm (Tue - Sun), Closed on Monday',
+      fees: '-',
+      phoneNo: '+603-92229457',
+      locationText:
+          '313, Jalan Pudu, 55100 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
+      locationUrl: 'https://goo.gl/maps/QTeVhaFVvxb287aw8',
+      webText: '-',
+      webUrl: '-'),
+  ContentClass(
+      id: 'cl6_17b',
+      decrepitation: '-',
+      content: '',
+      workhour:
+          '12.00pm - 2.30pm, 6.00pm - 10.00pm (Tue - Sat), 10.30am - 2.30pm, 6.00pm - 10.00pm (Sun) ,Closed on Monday',
+      fees: '-',
+      phoneNo: '+6018-5918537/+603-27198537',
+      locationText:
+          'JW Marriott Kuala Lumpur, Level One, 183 Jalan Bukit Bintang, Kuala Lumpur 55100',
+      locationUrl: 'https://g.page/ShanghaiJWMKL?share',
+      webText: 'shanghairestaurant.com.my',
+      webUrl: 'https://www.shanghairestaurant.com.my/'),
+  ContentClass(
+      id: 'cl7_17b',
+      decrepitation: '-',
+      content: '',
+      workhour: ' 11.30am - 10.30pm (Daily)',
+      fees: '-',
+      phoneNo: '+6018-6328060',
+      locationText:
+          '181, Jalan Bukit Bintang, Bukit Bintang, 55100 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
+      locationUrl: 'https://goo.gl/maps/7HTEiCYCiVeejtfGA',
+      webText: 'thestarhilldining.com',
+      webUrl: 'https://www.thestarhilldining.com/outlets/luk-yu-tea-house/'),
+  ContentClass(
+      id: 'cl8_17b',
+      decrepitation: '-',
+      content: '',
+      workhour: '12.00pm - 2.30pm, 6.00pm - 11.00pm (Daily)',
+      fees: '-',
+      phoneNo: '+603-21431908/+6016-3755388',
+      locationText:
+          '90, Jalan Raja Chulan, 50200 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
+      locationUrl: 'https://goo.gl/maps/SZMJ7Pfw3Rq6vKvX6',
+      webText: 'hakkakl.com',
+      webUrl: 'http://hakkakl.com/'),
+  ContentClass(
+      id: 'cl9_17b',
+      decrepitation: '-',
+      content: '',
+      workhour: '12.00pm - 3.00pm, 6.00pm - 10.00pm (Daily)',
+      fees: '-',
+      phoneNo: '+603-20723668',
+      locationText:
+          '61A, Jalan Hang Jebat, City Centre, 50150 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
+      locationUrl: 'https://goo.gl/maps/uAE2YBwoUwdtqfRv7',
+      webText: '-',
+      webUrl: '-'),
+  ContentClass(
+      id: 'cl10_17b',
+      decrepitation: '-',
+      content: '-',
+      workhour:
+          '12.00pm - 2.30pm, 6.00 pm - 10.30pm (Mon - Fri), 10.30am - 2.30pm, 6.00pm - 10.30pm (Sat & Sun)',
+      fees: '-',
+      phoneNo: '+603-23308798',
+      locationText:
+          'Kuala Lumpur City Centre, 50088 Kuala Lumpur, Federal Territory of Kuala Lumpur',
+      locationUrl: 'https://goo.gl/maps/tM75Uafqbu5JGs3Z6',
+      webText: 'mandarianoriental.com',
+      webUrl:
+          'https://www.mandarinoriental.com/kuala-lumpur/petronas-towers/fine-dining/restaurants/cantonese-cuisine/lai-po-heen'),
+
+  //INDIAN FOOD 17C
+  ContentClass(
+      id: 'cl1_17c',
+      decrepitation: '-',
+      content: '',
+      workhour: '10.00am - 10.00pm (Mon - Sun)',
+      fees: '-',
+      phoneNo: '+603-58887537',
+      locationText:
+          'No 6-G, Jalan 31/70a, Desa Sri Hartamas, Kuala Lumpur, Malaysia 50480',
+      locationUrl: 'https://g.page/namasteindiahartamas?share',
+      webText: 'namasteindia.com.my',
+      webUrl: 'https://namasteindia.com.my/menu/'),
+  ContentClass(
+      id: 'cl2_17c',
+      decrepitation: '-',
+      content: '',
+      workhour: '11.30am - 11.30pm (Daily)',
+      fees: '-',
+      phoneNo: '+603-22017369',
+      locationText:
+          'No.8 Lorong Maarof, Bangsar Park, 59000 Kuala Lumpur, Malaysia',
+      locationUrl: 'https://g.page/gajaa8?share',
+      webText: 'gajaas.com',
+      webUrl: 'http://www.gajaas.com/menu'),
+  ContentClass(
+      id: 'cl3_17c',
+      decrepitation: '-',
+      content: '',
+      workhour: '11.00am - 11.00pm (Daily)',
+      fees: '-',
+      phoneNo: '+603-20325932',
+      locationText:
+          '77A, Leboh Ampang, City Centre, 50100 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
+      locationUrl: 'https://goo.gl/maps/ehesDSZEX9ixgnaTA',
+      webText: 'betel-leaf.com',
+      webUrl: 'http://www.betel-leaf.com/menu/'),
+  ContentClass(
+      id: 'cl4_17c',
+      decrepitation: '-',
+      content: '',
+      workhour: '11.30am - 9.00pm (Daily)',
+      fees: '-',
+      phoneNo: '+603-21810003',
+      locationText:
+          'Level 3A, Berjaya Central Park, Jalan Ampang, 50250 Kuala Lumpur, Federal Territory of Kuala Lumpur',
+      locationUrl: 'https://goo.gl/maps/xEMQCMYAJbvDwKWN7',
+      webText: '-',
+      webUrl: '-'),
+  ContentClass(
+      id: 'cl5_17c',
+      decrepitation: '-',
+      content: '',
+      workhour:
+          '11.30am -10.30pm (Mon - Thu), 11.30am -11.00pm (Fri), 11.30am -11.30pm (Sat & Sun)',
+      fees: '-',
+      phoneNo: '+6019-2617070',
+      locationText:
+          '98, Lorong Maarof, Bangsar, 59100 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
+      locationUrl: 'https://g.page/WTFBangsar?share',
+      webText: '-',
+      webUrl: 'http://www.wtfrestaurants.com.my/'),
+  ContentClass(
+      id: 'cl6_17c',
+      decrepitation: '-',
+      content: '',
+      workhour: '11.00am - 11.00pm (Daily)',
+      fees: '-',
+      phoneNo: '+603-20113608',
+      locationText:
+          'No. 27-G, Jalan Medan Setia 1, Plaza Damansara, Bukit Damansara, 50490 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
+      locationUrl: 'https://g.page/TastyChapathiBukitDamansara?share',
+      webText: 'tastychapathi.com',
+      webUrl: 'https://tastychapathi.com/'),
+  ContentClass(
+      id: 'cl7_17c',
+      decrepitation: '-',
+      content: '',
+      workhour: '7.30am - 10.30pm (Daily)',
+      fees: '-',
+      phoneNo: '+603-20342399',
+      locationText:
+          '55, Leboh Ampang, City Centre, 50100 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
+      locationUrl: 'https://g.page/WoodlandsMY?share',
+      webText: '-',
+      webUrl: 'https://woodlandsmy.com/'),
+  ContentClass(
+      id: 'cl8_17c',
+      decrepitation: '-',
+      content: '',
+      workhour: '11.30am - 11.30pm (Daily)',
+      fees: '-',
+      phoneNo: '+603-22601373',
+      locationText:
+          '124, Jalan Tun Sambanthan, Brickfields, 50470 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
+      locationUrl: 'https://goo.gl/maps/pLqwH8ZcBJ6uVAJk6',
+      webText: '-',
+      webUrl: '-'),
+  ContentClass(
+      id: 'cl9_17c',
+      decrepitation: '-',
+      content: '',
+      workhour: '10.00am - 11.00pm (Sun - Thu), 10.00am - 12.00am (Fri & Sat)',
+      fees: '-',
+      phoneNo: '+6012-2001385',
+      locationText:
+          '52, Jalan Tun Razak, Kampung Baru, 50400 Kuala Lumpur, Federal Territory of Kuala Lumpur',
+      locationUrl: 'https://goo.gl/maps/uAE2YBwoUwdtqfRv7',
+      webText: 'havellykl2u.com',
+      webUrl: 'https://www.havellykl2u.com/menu'),
+  ContentClass(
+      id: 'cl10_17c',
+      decrepitation: '-',
+      content: '-',
+      workhour: '11.00am - 11.00pm (Daily)',
+      fees: '-',
+      phoneNo: '+603-22606489',
+      locationText:
+          'Wisma Leopad, Annexxe, 5, Jalan Tun Sambanthan, Brickfields, 50470 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
+      locationUrl: 'https://goo.gl/maps/ZqPTaSDce23YTKGC6',
+      webText: '-',
+      webUrl: 'https://www.facebook.com/TajGarden/'),
+
+  //ARAB FOOD 17D
+  ContentClass(
+      id: 'cl1_17d',
+      decrepitation: '-',
+      content: '',
+      workhour: 'Open 24 hours',
+      fees: '-',
+      phoneNo: '+603-92006600',
+      locationText:
+          'No.8, Jalan Kampung Pandan, Kelab Golf di Raja Selangor, 55000 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
+      locationUrl: 'https://goo.gl/maps/kdmiTkkhfU8u9yZFA',
+      webText: 'namasteindia.com.my',
+      webUrl: 'https://www.facebook.com/Al-Rawsha-Restaurant-142261482522600'),
+  ContentClass(
+      id: 'cl2_17d',
+      decrepitation: '-',
+      content: '',
+      workhour: ' 9.00am - 2.00am (Daily)',
+      fees: '-',
+      phoneNo: '+603-21428558',
+      locationText:
+          '138, Bukit Bintang Street, Bukit Bintang, 55100 Kuala Lumpur, Federal Territory of Kuala Lumpur',
+      locationUrl: 'https://g.page/TarbushRestaurantMalaysia?share',
+      webText: '-',
+      webUrl: 'https://www.facebook.com/TarbushRestaurantMalaysia/'),
+  ContentClass(
+      id: 'cl3_17d',
+      decrepitation: '-',
+      content: '',
+      workhour: '11.00am - 12.00am (Daily)',
+      fees: '-',
+      phoneNo: '+603-21104146',
+      locationText:
+          '35, Jalan Berangan, Bukit Bintang, 50200 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
+      locationUrl: 'https://g.page/HalabKL?share',
+      webText: 'halab.my',
+      webUrl: 'https://halab.my/'),
+  ContentClass(
+      id: 'cl4_17d',
+      decrepitation: '-',
+      content: '',
+      workhour: '11.00am - 11.30pm (Daily)',
+      fees: '-',
+      phoneNo: '+603-42533333',
+      locationText:
+          '226, Jalan Ampang, Kampung Datuk Keramat, 50450 Kuala Lumpur, Selangor',
+      locationUrl: 'https://goo.gl/maps/1bjQ1dY9MvPRFB81A',
+      webText: 'wadihadramawt.com',
+      webUrl: 'http://www.wadihadramawt.com/'),
+  ContentClass(
+      id: 'cl5_17d',
+      decrepitation: '-',
+      content: '',
+      workhour: '12.00pm - 11.00pm (Sun - Thu), 12.00pm - 11.30pm (Fri & Sat)',
+      fees: '-',
+      phoneNo: '+603-77314712',
+      locationText:
+          '6, Jalan Wan Kadir, Taman Tun Dr Ismail, 60000 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
+      locationUrl: 'https://g.page/bedouin-my?share',
+      webText: 'bedouinttdi.com',
+      webUrl: 'https://www.bedouinttdi.com/'),
+  ContentClass(
+      id: 'cl6_17d',
+      decrepitation: '-',
+      content: '',
+      workhour:
+          '10.30am - 10.00pm (Sat - Thu), 10.30am - 1.00pm, 2.30pm - 10.00pm (Fri)',
+      fees: '-',
+      phoneNo: '+603-90596239',
+      locationText:
+          '45, Jalan Radin Anum, Sri Petaling, 57000 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
+      locationUrl: 'https://goo.gl/maps/w8C7cN37yanQ1WH68',
+      webText: '-',
+      webUrl: ''),
+  ContentClass(
+      id: 'cl7_17d',
+      decrepitation: '-',
+      content: '',
+      workhour: '10.00am - 3.00am (Daily)',
+      fees: '-',
+      phoneNo: '+6011-23237600',
+      locationText:
+          '001R, BB Park, Jalan Bukit Bintang, Bukit Bintang, 55100 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
+      locationUrl: 'https://goo.gl/maps/zT4xno8JRrN5ovH68',
+      webText: '-',
+      webUrl: 'https://www.facebook.com/marosh.restaurant'),
+  ContentClass(
+      id: 'cl8_17d',
+      decrepitation: '-',
+      content: '',
+      workhour: '11.30am - 1.00am (Daily)',
+      fees: '-',
+      phoneNo: '+603-27152785/+603-21130061',
+      locationText:
+          'JW Marriott Kuala Lumpur, Lot No. H 1, Upper Ground Adorn, No, 183, Jln Bukit Bintang, 55100 Kuala Lumpur',
+      locationUrl: 'https://goo.gl/maps/pLqwH8ZcBJ6uVAJk6',
+      webText: '-',
+      webUrl: 'https://alhalabirestaurant.com/'),
+  ContentClass(
+      id: 'cl9_17d',
+      decrepitation: '-',
+      content: '',
+      workhour: '11.00am - 2.00am (Daily',
+      fees: '-',
+      phoneNo: '+603-2143394',
+      locationText:
+          '130, Jalan Bukit Bintang, Bukit Bintang, 55100 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
+      locationUrl: 'https://goo.gl/maps/uAE2YBwoUwdtqfRv7',
+      webText: '-',
+      webUrl: 'https://www.facebook.com/NaabRestaurant/'),
+  ContentClass(
+      id: 'cl10_17d',
+      decrepitation: '-',
+      content: '-',
+      workhour: '10.00am - 2.00am (Sun - Wed), 10.00am - 4.00am (Thu & Sat)',
+      fees: '-',
+      phoneNo: '+6013-375 0750',
+      locationText:
+          'No.28 Ground floor, Jalan Nagasari, Bukit Bintang, 50250 Kuala Lumpur, Wilayah Persekutuan',
+      locationUrl: 'https://g.page/arabella-restaurant-kuala-lumpur?share',
+      webText: 'arabellabb.com',
+      webUrl: 'https://arabellabb.com/menu/'),
+
   //music 18
   ContentClass(
       id: 'cl1_18',

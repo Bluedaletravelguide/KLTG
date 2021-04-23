@@ -389,8 +389,6 @@ flutter:
     #aboutUs
     - assets/images/aboutUs.jpg
 
-<<<<<<< Updated upstream
-=======
     #muslim
     - assets/images/contentList/muslim/1.jpg
     - assets/images/contentList/muslim/2.jpg
@@ -415,10 +413,46 @@ flutter:
     - assets/images/contentList/malayfood/sambalhijaurestaurant.jpg
     - assets/images/contentList/malayfood/songket_rest.jpg
 
+    #chinesefood
+    - assets/images/contentList/chineseFood/xincuisine.jpg
+    - assets/images/contentList/chineseFood/AhFC.jpg
+    - assets/images/contentList/chineseFood/Hak_Rest.jpg
+    - assets/images/contentList/chineseFood/LaiPoHeen.jpg
+    - assets/images/contentList/chineseFood/LYT_House.jpg
+    - assets/images/contentList/chineseFood/restBKT.jpg
+    - assets/images/contentList/chineseFood/RestPikWah.jpg
+    - assets/images/contentList/chineseFood/restsiu.jpg
+    - assets/images/contentList/chineseFood/Shang_Rest.jpg
+    - assets/images/contentList/chineseFood/SY_Rest.jpg
+
+    #indianFood
+    - assets/images/contentList/indianFood/namaste.jpg
+    - assets/images/contentList/indianFood/betel.jpg
+    - assets/images/contentList/indianFood/gaja.jpg
+    - assets/images/contentList/indianFood/GEM.jpg
+    - assets/images/contentList/indianFood/havelly.jpg
+    - assets/images/contentList/indianFood/taj.jpg
+    - assets/images/contentList/indianFood/tandoor.jpg
+    - assets/images/contentList/indianFood/tasty.jpg
+    - assets/images/contentList/indianFood/wood.jpg
+    - assets/images/contentList/indianFood/wtf.jpg
+
+    #arabFood
+    - assets/images/contentList/arabFood/rawsha.jpg
+    - assets/images/contentList/arabFood/arabella.jpg
+    - assets/images/contentList/arabFood/bedouin.jpg
+    - assets/images/contentList/arabFood/diafah.jpg
+    - assets/images/contentList/arabFood/halab.jpg
+    - assets/images/contentList/arabFood/halabi.jpg
+    - assets/images/contentList/arabFood/marosh.jpg
+    - assets/images/contentList/arabFood/naab.jpg
+    - assets/images/contentList/arabFood/tarbush.jpg
+    - assets/images/contentList/arabFood/wadi.jpg
+
+
 
   #   - images/a_dot_ham.jpeg
 
->>>>>>> Stashed changes
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
 
