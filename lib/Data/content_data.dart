@@ -1253,7 +1253,7 @@ const ContentData = const [
   ContentClass(
       id: 'cl10_17a',
       decrepitation: '-',
-      content: '-',
+      content: '',
       workhour: '7.00am - 6.00pm (Mon - Sat) Closed on Sun',
       fees: '-',
       phoneNo: '+6012-4999908',
@@ -1377,7 +1377,7 @@ const ContentData = const [
   ContentClass(
       id: 'cl10_17b',
       decrepitation: '-',
-      content: '-',
+      content: '',
       workhour:
           '12.00pm - 2.30pm, 6.00 pm - 10.30pm (Mon - Fri), 10.30am - 2.30pm, 6.00pm - 10.30pm (Sat & Sun)',
       fees: '-',
@@ -1502,7 +1502,7 @@ const ContentData = const [
   ContentClass(
       id: 'cl10_17c',
       decrepitation: '-',
-      content: '-',
+      content: '',
       workhour: '11.00am - 11.00pm (Daily)',
       fees: '-',
       phoneNo: '+603-22606489',
@@ -1625,7 +1625,7 @@ const ContentData = const [
   ContentClass(
       id: 'cl10_17d',
       decrepitation: '-',
-      content: '-',
+      content: '',
       workhour: '10.00am - 2.00am (Sun - Wed), 10.00am - 4.00am (Thu & Sat)',
       fees: '-',
       phoneNo: '+6013-375 0750',
@@ -2683,8 +2683,8 @@ const ContentData = const [
   ContentClass(
       id: 'cl1_22a',
       decrepitation: '-',
-      content: '-',
-      workhour: ' 9.00 am - 11.00 pm (Sat- Thurs) ; 2.45 am - 6.00pm (Friday)',
+      content: '',
+      workhour: '9.00 am - 11.00 pm (Sat- Thurs) ; 2.45 am - 6.00pm (Friday)',
       fees: '-',
       phoneNo: '-',
       locationText:
@@ -2696,7 +2696,7 @@ const ContentData = const [
   ContentClass(
       id: 'cl2_22a',
       decrepitation: '-',
-      content: '-',
+      content: '',
       workhour:
           '10.00 am - 12.30 pm; 2.30 pm - 4.00 pm (Sat - Thurs) Closed on Fridays',
       fees: '-',
@@ -2710,7 +2710,7 @@ const ContentData = const [
   ContentClass(
       id: 'cl3_22a',
       decrepitation: '-',
-      content: '-',
+      content: '',
       workhour: '-',
       fees: '-',
       phoneNo: '+60362018791',
@@ -2723,7 +2723,7 @@ const ContentData = const [
   ContentClass(
       id: 'cl4_22a',
       decrepitation: '-',
-      content: '-',
+      content: '',
       workhour: '-',
       fees: '-',
       phoneNo: '+60388885678',
@@ -2736,7 +2736,7 @@ const ContentData = const [
   ContentClass(
       id: 'cl5_22a',
       decrepitation: '-',
-      content: '-',
+      content: '',
       workhour: '-',
       fees: '-',
       phoneNo: '+603-92210554',
@@ -2749,7 +2749,7 @@ const ContentData = const [
   ContentClass(
       id: 'cl6_22a',
       decrepitation: '-',
-      content: '-',
+      content: '',
       workhour: '-',
       fees: '-',
       phoneNo: '+603-22018492',
@@ -2761,7 +2761,7 @@ const ContentData = const [
   ContentClass(
       id: 'cl7_22a',
       decrepitation: '-',
-      content: '-',
+      content: '',
       workhour: '-',
       fees: '-',
       phoneNo: ' +603-23801293',
@@ -2773,7 +2773,7 @@ const ContentData = const [
   ContentClass(
       id: 'cl8_22a',
       decrepitation: '-',
-      content: '-',
+      content: '',
       workhour: '-',
       fees: '-',
       phoneNo: '+6011-28470032',
@@ -2786,7 +2786,7 @@ const ContentData = const [
   ContentClass(
       id: 'cl9_22a',
       decrepitation: '-',
-      content: '-',
+      content: '',
       workhour: '-',
       fees: '-',
       phoneNo: '-',
@@ -2799,7 +2799,7 @@ const ContentData = const [
   ContentClass(
       id: 'cl10_22a',
       decrepitation: '-',
-      content: '-',
+      content: '',
       workhour: '-',
       fees: '-',
       phoneNo: '+603-62618585',
@@ -2808,13 +2808,72 @@ const ContentData = const [
       locationUrl: '-',
       webText: '-',
       webUrl: '-'),
+  //buddist 22b
+  ContentClass(
+      id: 'cl1_22b',
+      decrepitation: '-',
+      content: '',
+      workhour: '-',
+      fees: '-',
+      phoneNo: '-',
+      locationText:
+          '65, Persiaran Endah, Taman Persiaran Desa, 50460 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
+      locationUrl: 'https://goo.gl/maps/4YbCZbmgbUj5JGuD9',
+      webText: '-',
+      webUrl: '-'),
+  ContentClass(
+      id: 'cl2_22b',
+      decrepitation: '-',
+      content: '',
+      workhour: '-',
+      fees: '-',
+      phoneNo: '-',
+      locationText:
+          '168, Jalan Tun H S Lee, City Centre, 50000 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
+      locationUrl: 'https://goo.gl/maps/Rrqn99sFc6Aqend8A',
+      webText: '-',
+      webUrl: '-'),
+  ContentClass(
+      id: 'cl3_22b',
+      decrepitation: '-',
+      content: '',
+      workhour: '-',
+      fees: '-',
+      phoneNo: '+603-22741141',
+      locationText: '123 Jalan Berhala, Brickfields, Kuala Lumpur',
+      locationUrl: 'https://goo.gl/maps/QqCGrwP2W3fAqcgo8',
+      webText: '-',
+      webUrl: '-'),
+  ContentClass(
+      id: 'cl4_22b',
+      decrepitation: '-',
+      content: '',
+      workhour: '-',
+      fees: '-',
+      phoneNo: ' +603-20789052',
+      locationText:
+          '113A, Jalan Tun H S Lee, City Centre, 50050 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
+      locationUrl: 'https://goo.gl/maps/1piwTh3a5RfzzRQd6',
+      webText: '-',
+      webUrl: '-'),
+  ContentClass(
+      id: 'cl5_22b',
+      decrepitation: '-',
+      content: '',
+      workhour: '-',
+      fees: '-',
+      phoneNo: '+603-40419459',
+      locationText:
+          'Jalan Tujuh, Sentul Selatan, 51000 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
+      locationUrl: 'https://goo.gl/maps/i8Ew5hSPQTDgNjZbA',
+      webText: '-',
+      webUrl: '-'),
 
   //hindu 22c
-
   ContentClass(
       id: 'cl1_22c',
       decrepitation: '-',
-      content: '-',
+      content: '',
       workhour: '-',
       fees: '-',
       phoneNo: '-',
@@ -2827,7 +2886,7 @@ const ContentData = const [
   ContentClass(
       id: 'cl2_22c',
       decrepitation: '-',
-      content: '-',
+      content: '',
       workhour: '-',
       fees: '-',
       phoneNo: '-',
@@ -2839,7 +2898,7 @@ const ContentData = const [
   ContentClass(
       id: 'cl3_22c',
       decrepitation: '-',
-      content: '-',
+      content: '',
       workhour: '-',
       fees: '-',
       phoneNo: '+603-22742987',
@@ -2851,7 +2910,7 @@ const ContentData = const [
   ContentClass(
       id: 'cl4_22c',
       decrepitation: '-',
-      content: '-',
+      content: '',
       workhour: '-',
       fees: '-',
       phoneNo: '+603-40412993',
@@ -2864,7 +2923,7 @@ const ContentData = const [
   ContentClass(
       id: 'cl5_22c',
       decrepitation: '-',
-      content: '-',
+      content: '',
       workhour: '-',
       fees: '-',
       phoneNo: '-',
@@ -2877,7 +2936,7 @@ const ContentData = const [
   ContentClass(
       id: 'cl6_22c',
       decrepitation: '-',
-      content: '-',
+      content: '',
       workhour: '-',
       fees: '-',
       phoneNo: '+603-22821317',
@@ -2890,13 +2949,149 @@ const ContentData = const [
   ContentClass(
       id: 'cl7_22c',
       decrepitation: '-',
-      content: '-',
+      content: '',
       workhour: '-',
       fees: '-',
       phoneNo: '-',
       locationText:
           'Jalan Persiaran Maybank, Bukit Bintang, 50200 Kuala Lumpur, Federal Territory of Kuala Lumpur',
       locationUrl: '-',
+      webText: '-',
+      webUrl: '-'),
+
+  //others 22d
+  ContentClass(
+      id: 'cl1_22d',
+      decrepitation: '-',
+      content: '',
+      workhour: '-',
+      fees: '-',
+      phoneNo: '+60326928672',
+      locationText:
+          'Jalan Raja, City Centre, 50050 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
+      locationUrl:
+          'https://www.google.com/maps/place/St+Marys+Anglican+Cathedral/@3.150382,101.6912203,17z/data=!3m1!4b1!4m5!3m4!1s0x31cc49cd3d6d5231:0x8d3f1ce01df008ce!8m2!3d3.150382!4d101.693409',
+      webText: 'stmaryscathedral.org.my',
+      webUrl: '-http://www.stmaryscathedral.org.my/'),
+  ContentClass(
+      id: 'cl2_22d',
+      decrepitation: '-',
+      content: '',
+      workhour:
+          '8.30a.m.-4.30p.m. (Mon-Fri)\n8.30a.m.-12.30p.m. (Sat)\n8.00a.m.-10.30a.m. (Sun)',
+      fees: '-',
+      phoneNo: '+60320720338',
+      locationText:
+          '2, Jalan Wesley, City Centre, 50150 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
+      locationUrl:
+          'https://www.google.com/maps/place/WMCKL+Wesley+Methodist+Church+Kuala+Lumpur/@3.14507,101.69136,15z/data=!3m1!4b1!4m5!3m4!1s0x31cc49d1393a9927:0x62eceacbc815fffc!8m2!3d3.1450712!4d101.7001193',
+      webText: 'WMCKL Website',
+      webUrl: 'https://linktr.ee/wmckl'),
+  ContentClass(
+      id: 'cl3_22d',
+      decrepitation: '-',
+      content: '',
+      workhour: '-',
+      fees: '-',
+      phoneNo: '+60322742747',
+      locationText:
+          'Holy Rosary Church, 10, Jalan Tun Sambanthan, 50470 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
+      locationUrl:
+          'https://www.google.com/maps/place/Church+of+The+Holy+Rosary/@3.1368634,101.6840917,15z/data=!3m1!4b1!4m5!3m4!1s0x31cc49c37e012ce7:0xdf2da4fb1dd28560!8m2!3d3.1368634!4d101.692825',
+      webText: 'hrckl.com',
+      webUrl: 'http://www.hrckl.com/'),
+  ContentClass(
+      id: 'cl4_22d',
+      decrepitation: '-',
+      content: '',
+      workhour:
+          '9.30a.m.-12.30p.m. (Sun)\n8.30a.m.-4.30p.m. (Mon-Fri)\nClosed on Sat',
+      fees: '-',
+      phoneNo: '+60321419154',
+      locationText:
+          '70, Changkat Bukit Bintang, Bukit Bintang, 50200 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
+      locationUrl:
+          'https://www.google.com/maps/place/Kuala+Lumpur+Baptist+Church+(KLBC)/@3.1467706,101.7012097,15z/data=!3m1!4b1!4m5!3m4!1s0x31cc362bd3ba553f:0x2b685cd518db94b8!8m2!3d3.1467867!4d101.7098576',
+      webText: 'klbc.org.my',
+      webUrl: 'http://www.klbc.org.my/'),
+  ContentClass(
+      id: 'cl5_22d',
+      decrepitation: '-',
+      content: '',
+      workhour:
+          '9.00a.m.-5.00p.m. (Tue-Fri)\n9.00a.m.-1.00p.m. (Weekend)\nClosed on Monday',
+      fees: '-',
+      phoneNo: '-',
+      locationText:
+          'No. 5 Jalan 1/118C, Desa Tun Razak Industrial Park, Bandar Tun Razak, 56000, Federal Territory of Kuala Lumpur',
+      locationUrl:
+          'https://www.google.com/maps/place/Praise+City+Church,+KL/@3.0809219,101.7240101,15z/data=!4m12!1m6!3m5!1s0x31cc4a69457c8ec5:0x953bf9b879689904!2sPraise+City+Church,+KL!8m2!3d3.0809219!4d101.7240101!3m4!1s0x31cc4a69457c8ec5:0x953bf9b879689904!8m2!3d3.0809219!4d101.7240101',
+      webText: 'praisecitykl.com',
+      webUrl: 'http://www.praisecitykl.com/'),
+  ContentClass(
+      id: 'cl6_22d',
+      decrepitation: '-',
+      content: '',
+      workhour: '-',
+      fees: '-',
+      phoneNo: '+60326922215',
+      locationText:
+          '24, Jalan Raja Alang, Chow Kit, 50300 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
+      locationUrl:
+          'https://www.google.com/maps/place/Guru+Nanak+Darbar+Tatt+Khalsa+Diwan+Gurdwara/@3.1640481,101.6914711,15z/data=!3m1!4b1!4m5!3m4!1s0x31cc48243a811907:0x26d182184a239421!8m2!3d3.1640395!4d101.7002039',
+      webText: 'Facebook Page',
+      webUrl: 'https://facebook.com/TattKhalsaDiwan/'),
+  ContentClass(
+      id: 'cl7_22d',
+      decrepitation: '-',
+      content: '',
+      workhour: '-',
+      fees: '-',
+      phoneNo: '-',
+      locationText:
+          '41, Jalan Pahang, Titiwangsa, 53000 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
+      locationUrl:
+          'https://www.google.com/maps/place/Gurudwara+Sahib+Titiwangsa/@3.1808631,101.6928694,15z/data=!3m1!4b1!4m5!3m4!1s0x31cc481ca934279b:0xea527cf1eff699d6!8m2!3d3.180909!4d101.7015028',
+      webText: '-',
+      webUrl: '-'),
+  ContentClass(
+      id: 'cl8_22d',
+      decrepitation: '-',
+      content: '',
+      workhour: '-',
+      fees: '-',
+      phoneNo: '+60189677083',
+      locationText:
+          'Sungai Besi, 57000 Kuala Lumpur, Federal Territory of Kuala Lumpur',
+      locationUrl:
+          'https://www.google.com/maps/place/Gurdwara+Sahib+Kuyow/@3.0527877,101.6970117,15z/data=!3m1!4b1!4m5!3m4!1s0x31cc4aa0195ee0fd:0xde6dd4232de3ced2!8m2!3d3.0527957!4d101.7057453',
+      webText: '+60189677083',
+      webUrl: 'https://www.facebook.com/GurdwaraSahibKuyow/'),
+  ContentClass(
+      id: 'cl9_22d',
+      decrepitation: '-',
+      content: '',
+      workhour: '-',
+      fees: '-',
+      phoneNo: '+60162627765',
+      locationText:
+          'No. 15, off, Jalan Haji Salleh, Sentul, 51100 Kuala Lumpur, Federal Territory of Kuala Lumpur',
+      locationUrl:
+          'https://www.google.com/maps/place/Gurdwara+Sahib+Sentul/@3.1822611,101.6822782,15z/data=!3m1!4b1!4m5!3m4!1s0x31cc480e15a64555:0x5b0b476495448625!8m2!3d3.1823081!4d101.690909',
+      webText: 'Facebook Page',
+      webUrl:
+          'https://m.facebook.com/pages/category/Sikh-Temple/Gurdwara-Sahib-Sentul-106385694171822/'),
+  ContentClass(
+      id: 'cl10_22d',
+      decrepitation: '-',
+      content: '',
+      workhour: '-',
+      fees: '-',
+      phoneNo: '-',
+      locationText:
+          '66-75, Jalan Pudu Lama, Bukit Bintang, 50200 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
+      locationUrl:
+          'https://www.google.com/maps/place/Gurdwara+Sahib+Mainduab+(Jalan+Pudu+Lama)/@3.1460813,101.6938371,15z/data=!3m1!4b1!4m5!3m4!1s0x31cc49d6989d4e89:0x8b6d2912428d9c64!8m2!3d3.1460894!4d101.7025721',
       webText: '-',
       webUrl: '-'),
 ];

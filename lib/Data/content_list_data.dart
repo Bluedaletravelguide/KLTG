@@ -1383,7 +1383,6 @@ const ContentListData = const [
     contentListTitle: 'Masjid Putra, Putrajaya',
     image: 'assets/images/contentList/muslim/4.jpg',
   ),
-
   ContentLi(
     id: 'cl5_22a',
     categories: 'sc_22a',
@@ -1434,12 +1433,29 @@ const ContentListData = const [
     contentListTitle: 'Thean Hou Temple',
     image: 'assets/images/contentList/buddhist/1.jpg',
   ),
-
   ContentLi(
     id: 'cl2_22b',
     categories: 'sc_22b',
     contentListTitle: 'Guan Di Temple',
     image: 'assets/images/contentList/buddhist/2.jpg',
+  ),
+  ContentLi(
+    id: 'cl3_22b',
+    categories: 'sc_22b',
+    contentListTitle: 'Buddhist Maha Vihara Temple',
+    image: 'assets/images/contentList/buddhist/3.jpg',
+  ),
+  ContentLi(
+    id: 'cl4_22b',
+    categories: 'sc_22b',
+    contentListTitle: 'Sin Sze Si Ya Temple',
+    image: 'assets/images/contentList/buddhist/4.jpg',
+  ),
+  ContentLi(
+    id: 'cl5_22b',
+    categories: 'sc_22b',
+    contentListTitle: 'Sri Jayanti Buddhist Temple Sentul',
+    image: 'assets/images/contentList/buddhist/5.jpg',
   ),
 
   //hindu worship temple sc22c
@@ -1464,7 +1480,6 @@ const ContentListData = const [
     contentListTitle: 'Kandaswamy Temple',
     image: 'assets/images/contentList/hindu/1.jpg',
   ),
-
   ContentLi(
     id: 'cl4_22c',
     categories: 'sc_22c',
@@ -1491,5 +1506,67 @@ const ContentListData = const [
     categories: 'sc_22c',
     contentListTitle: 'Korttu Malai Pillayar Temple',
     image: 'assets/images/contentList/hindu/korttu.jpg',
+  ),
+
+  //Others worship 22d
+  ContentLi(
+    id: 'cl1_22d',
+    categories: 'sc_22d',
+    contentListTitle: 'St Mary\'s Anglican Cathedral',
+    image: 'assets/images/contentList/otherWorship/1.jpg',
+  ),
+  ContentLi(
+    id: 'cl2_22d',
+    categories: 'sc_22d',
+    contentListTitle: 'WMCKL Wesley Methodist Church Kuala Lumpur',
+    image: 'assets/images/contentList/otherWorship/2.jpg',
+  ),
+  ContentLi(
+    id: 'cl3_22d',
+    categories: 'sc_22d',
+    contentListTitle: 'Church of The Holy Rosary',
+    image: 'assets/images/contentList/otherWorship/3.jpg',
+  ),
+  ContentLi(
+    id: 'cl4_22d',
+    categories: 'sc_22d',
+    contentListTitle: 'Kuala Lumpur Baptist Church',
+    image: 'assets/images/contentList/otherWorship/4.jpg',
+  ),
+  ContentLi(
+    id: 'cl5_22d',
+    categories: 'sc_22d',
+    contentListTitle: 'Praise City Church, KL',
+    image: 'assets/images/contentList/otherWorship/5.jpg',
+  ),
+  ContentLi(
+    id: 'cl6_22d',
+    categories: 'sc_22d',
+    contentListTitle: 'Guru Nanak Darbar Tatt Khalsa Diwan Gurdwara',
+    image: 'assets/images/contentList/otherWorship/6.jpg',
+  ),
+  ContentLi(
+    id: 'cl7_22d',
+    categories: 'sc_22d',
+    contentListTitle: 'Gurudwara Sahib Titiwangsa',
+    image: 'assets/images/contentList/otherWorship/7.jpg',
+  ),
+  ContentLi(
+    id: 'cl8_22d',
+    categories: 'sc_22d',
+    contentListTitle: 'Gurdwara Sahib Kuyow',
+    image: 'assets/images/contentList/otherWorship/8.jpg',
+  ),
+  ContentLi(
+    id: 'cl9_22d',
+    categories: 'sc_22d',
+    contentListTitle: 'Gurdwara Sahib Sentul',
+    image: 'assets/images/contentList/otherWorship/9.jpg',
+  ),
+  ContentLi(
+    id: 'cl10_22d',
+    categories: 'sc_22d',
+    contentListTitle: 'Gurdwara Sahib Mainduab (Jalan Pudu Lama)',
+    image: 'assets/images/contentList/otherWorship/10.jpg',
   ),
 ];

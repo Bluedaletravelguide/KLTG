@@ -146,6 +146,13 @@ const SubCategoriesData = const [
     description: 'Temples to pray at ',
     image: 'assets/images/subCatedgories/inTemple.jpg',
   ),
+  SubCategory(
+    id: 'sc_22d',
+    categories: 'sc_22',
+    subCategoryTitle: 'Others',
+    description: 'Churches and more ',
+    image: 'assets/images/subCatedgories/otherWorship.jpg',
+  ),
 
   SubCategory(
     id: 'sc5',
