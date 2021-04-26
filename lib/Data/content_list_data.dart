@@ -1358,7 +1358,7 @@ const ContentListData = const [
 
   //muslim worship place
   ContentLi(
-    id: 'cl1_22a;',
+    id: 'cl1_22a',
     categories: 'sc_22a',
     contentListTitle: 'Masjid Negara',
     image: 'assets/images/contentList/muslim/3.jpg',
@@ -1383,6 +1383,48 @@ const ContentListData = const [
     categories: 'sc_22a',
     contentListTitle: 'Masjid Putra, Putrajaya',
     image: 'assets/images/contentList/muslim/4.jpg',
+  ),
+
+  ContentLi(
+    id: 'cl5_22a',
+    categories: 'sc_22a',
+    contentListTitle: 'Masjid Al Bukhari',
+    image: 'assets/images/contentList/muslim/albukhary.jpg',
+  ),
+
+  ContentLi(
+    id: 'cl6_22a',
+    categories: 'sc_22a',
+    contentListTitle: 'Masjid Jamek Abdullah Hukum - KL Eco City',
+    image: 'assets/images/contentList/muslim/jamekabdullahhukum.jpg',
+  ),
+
+  ContentLi(
+    id: 'cl7_22a',
+    categories: 'sc_22a',
+    contentListTitle: 'Masjid Asy-Syakirin KLCC',
+    image: 'assets/images/contentList/muslim/asysyakirin.jpg',
+  ),
+
+  ContentLi(
+    id: 'cl8_22a',
+    categories: 'sc_22a',
+    contentListTitle: 'Masjid Al- Firdaus',
+    image: 'assets/images/contentList/muslim/alfirdaus.jpg',
+  ),
+
+  ContentLi(
+    id: 'cl9_22a',
+    categories: 'sc_22a',
+    contentListTitle: 'Masjid Jamiul Ehsan',
+    image: 'assets/images/contentList/muslim/jamiulehsan.jpg',
+  ),
+
+  ContentLi(
+    id: 'cl10_22a',
+    categories: 'sc_22a',
+    contentListTitle: 'Masjid Amaniah Kepong',
+    image: 'assets/images/contentList/muslim/amaniah.jpg',
   ),
 
   //buddhist worship place sc22b
@@ -1422,5 +1464,33 @@ const ContentListData = const [
     categories: 'sc_22c',
     contentListTitle: 'Kandaswamy Temple',
     image: 'assets/images/contentList/hindu/1.jpg',
+  ),
+
+  ContentLi(
+    id: 'cl4_22c',
+    categories: 'sc_22c',
+    contentListTitle: 'Shree Lakshmi Narayan Mandir',
+    image: 'assets/images/contentList/hindu/shree.jpg',
+  ),
+
+  ContentLi(
+    id: 'cl5_22c',
+    categories: 'sc_22c',
+    contentListTitle: 'Arulmigu Sri Ramalinga Eeswarar Temple',
+    image: 'assets/images/contentList/hindu/arulmigu.jpg',
+  ),
+
+  ContentLi(
+    id: 'cl6_22c',
+    categories: 'sc_22c',
+    contentListTitle: 'Sri Maha Sakthi Mohambigai Amman Temple',
+    image: 'assets/images/contentList/hindu/sri.jpg',
+  ),
+
+  ContentLi(
+    id: 'cl7_22c',
+    categories: 'sc_22c',
+    contentListTitle: 'Korttu Malai Pillayar Temple',
+    image: 'assets/images/contentList/hindu/korttu.jpg',
   ),
 ];

@@ -2430,6 +2430,227 @@ const ContentData = const [
       webText: 'Penang Natinal Park Website',
       webUrl:
           'http://www.wildlife.gov.my/index.php/en/public/2016-05-10-02-34-43/peta'),
+
+  //muslim worship 22a
+  ContentClass(
+      id: 'cl1_22a',
+      decrepitation: '-',
+      content: '-',
+      workhour: ' 9.00 am - 11.00 pm (Sat- Thurs) ; 2.45 am - 6.00pm (Friday)',
+      fees: '-',
+      phoneNo: '-',
+      locationText:
+          'Jalan Perdana, Tasik Perdana, 50480 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
+      locationUrl: 'https://goo.gl/maps/jCD63FU44Yx31zei9',
+      webText: 'masjidnegara.gov.my ',
+      webUrl: 'http://masjidnegara.gov.my/mn/'),
+
+  ContentClass(
+      id: 'cl2_22a',
+      decrepitation: '-',
+      content: '-',
+      workhour:
+          '10.00 am - 12.30 pm; 2.30 pm - 4.00 pm (Sat - Thurs) Closed on Fridays',
+      fees: '-',
+      phoneNo: '-',
+      locationText:
+          'Jalan Tun Perak, City Centre, 50050 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
+      locationUrl: 'https://goo.gl/maps/i2XSEkFcqsepWLH97',
+      webText: '-',
+      webUrl: '-'),
+
+  ContentClass(
+      id: 'cl3_22a',
+      decrepitation: '-',
+      content: '-',
+      workhour: '-',
+      fees: '-',
+      phoneNo: '+60362018791',
+      locationText:
+          'Jalan Sultan Mizan Zainal Abidin, Kompleks Kerajaan, Kuala Lumpur',
+      locationUrl: 'https://goo.gl/maps/qHuRt8jm4RRpru4z8',
+      webText: '-',
+      webUrl: '-'),
+
+  ContentClass(
+      id: 'cl4_22a',
+      decrepitation: '-',
+      content: '-',
+      workhour: '-',
+      fees: '-',
+      phoneNo: '+60388885678',
+      locationText:
+          'Persiaran Persekutuan, Presint 1, 62502 Putrajaya, Wilayah Persekutuan Putrajaya',
+      locationUrl: 'https://goo.gl/maps/DGYfid4kQ4TTTXaG9',
+      webText: '-',
+      webUrl: '-'),
+
+  ContentClass(
+      id: 'cl5_22a',
+      decrepitation: '-',
+      content: '-',
+      workhour: '-',
+      fees: '-',
+      phoneNo: '+603-92210554',
+      locationText:
+          '1, Jalan Hang Tuah, Bukit Bintang, 55200 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
+      locationUrl: 'https://goo.gl/maps/4NcsPT5NfGVvoCep7',
+      webText: '-',
+      webUrl: '-'),
+
+  ContentClass(
+      id: 'cl6_22a',
+      decrepitation: '-',
+      content: '-',
+      workhour: '-',
+      fees: '-',
+      phoneNo: '+603-22018492',
+      locationText: '59200 Kuala Lumpur, Federal Territory of Kuala Lumpur',
+      locationUrl: 'https://goo.gl/maps/zjQ7aCqmQbv1u3GZ6',
+      webText: '-',
+      webUrl: '-'),
+
+  ContentClass(
+      id: 'cl7_22a',
+      decrepitation: '-',
+      content: '-',
+      workhour: '-',
+      fees: '-',
+      phoneNo: ' +603-23801293',
+      locationText: 'Lot 41, Seksyen, 58, Jalan Pinang, 50450 Kuala Lumpur',
+      locationUrl: 'https://goo.gl/maps/4UJpdDWR8YssnxKN7',
+      webText: '-',
+      webUrl: '-'),
+
+  ContentClass(
+      id: 'cl8_22a',
+      decrepitation: '-',
+      content: '-',
+      workhour: '-',
+      fees: '-',
+      phoneNo: '+6011-28470032',
+      locationText:
+          'Jalan masjid Firdaus, Jalan 1/42, Segambut luar, 51200 Kuala Lumpur, Federal Territory of Kuala Lumpur',
+      locationUrl: '-',
+      webText: '-',
+      webUrl: '-'),
+
+  ContentClass(
+      id: 'cl9_22a',
+      decrepitation: '-',
+      content: '-',
+      workhour: '-',
+      fees: '-',
+      phoneNo: '-',
+      locationText:
+          'Jalan Pahang, Taman Setapak Indah Jaya, 53000 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
+      locationUrl: '-',
+      webText: '-',
+      webUrl: '-'),
+
+  ContentClass(
+      id: 'cl10_22a',
+      decrepitation: '-',
+      content: '-',
+      workhour: '-',
+      fees: '-',
+      phoneNo: '+603-62618585',
+      locationText:
+          'Jln Besar Kepong, Taman Kepong, 52100 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
+      locationUrl: '-',
+      webText: '-',
+      webUrl: '-'),
+
+  //hindu 22c
+
+  ContentClass(
+      id: 'cl1_22c',
+      decrepitation: '-',
+      content: '-',
+      workhour: '-',
+      fees: '-',
+      phoneNo: '-',
+      locationText:
+          'Jalan Tun H S Lee, City Centre, 50000 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
+      locationUrl: 'https://goo.gl/maps/brVyKZZPqjCLTrK56',
+      webText: '-',
+      webUrl: '-'),
+
+  ContentClass(
+      id: 'cl2_22c',
+      decrepitation: '-',
+      content: '-',
+      workhour: '-',
+      fees: '-',
+      phoneNo: '-',
+      locationText: 'Gombak, 68100 Batu Caves, Selangor',
+      locationUrl: 'https://goo.gl/maps/DNY4fTwsYxYKSTx6A',
+      webText: '-',
+      webUrl: '-'),
+
+  ContentClass(
+      id: 'cl3_22c',
+      decrepitation: '-',
+      content: '-',
+      workhour: '-',
+      fees: '-',
+      phoneNo: '+603-22742987',
+      locationText: 'Brickfields, 50470 Kuala Lumpur, Selangor',
+      locationUrl: '-',
+      webText: '-',
+      webUrl: '-'),
+
+  ContentClass(
+      id: 'cl4_22c',
+      decrepitation: '-',
+      content: '-',
+      workhour: '-',
+      fees: '-',
+      phoneNo: '+603-40412993',
+      locationText:
+          'Lot 68, 69, Jalan Kasipillay, Kampung Kasipillay, 51200 Kuala Lumpur, Federal Territory of Kuala Lumpur',
+      locationUrl: '-',
+      webText: '-',
+      webUrl: '-'),
+
+  ContentClass(
+      id: 'cl5_22c',
+      decrepitation: '-',
+      content: '-',
+      workhour: '-',
+      fees: '-',
+      phoneNo: '-',
+      locationText:
+          ' 8, Jalan Tandok, Bangsar, 59100 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
+      locationUrl: '-',
+      webText: '-',
+      webUrl: '-'),
+
+  ContentClass(
+      id: 'cl6_22c',
+      decrepitation: '-',
+      content: '-',
+      workhour: '-',
+      fees: '-',
+      phoneNo: '+603-22821317',
+      locationText:
+          'Mid Valley Megamall, 75, Lingkaran Syed Putra, Mid Valley City, 58000 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
+      locationUrl: '-',
+      webText: '-',
+      webUrl: '-'),
+
+  ContentClass(
+      id: 'cl7_22c',
+      decrepitation: '-',
+      content: '-',
+      workhour: '-',
+      fees: '-',
+      phoneNo: '-',
+      locationText:
+          'Jalan Persiaran Maybank, Bukit Bintang, 50200 Kuala Lumpur, Federal Territory of Kuala Lumpur',
+      locationUrl: '-',
+      webText: '-',
+      webUrl: '-'),
 ];
 
 const MedicalData = const [

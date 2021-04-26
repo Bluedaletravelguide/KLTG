@@ -388,9 +388,20 @@ flutter:
     - assets/images/contentList/muslim/2.jpg
     - assets/images/contentList/muslim/3.jpg
     - assets/images/contentList/muslim/4.jpg
+    - assets/images/contentList/muslim/albukhary.jpg
+    - assets/images/contentList/muslim/alfirdaus.jpg
+    - assets/images/contentList/muslim/amaniah.jpg
+    - assets/images/contentList/muslim/asysyakirin.jpg
+    - assets/images/contentList/muslim/jamekabdullahhukum.jpg
+    - assets/images/contentList/muslim/jamiulehsan.jpg
+
     #hindu
     - assets/images/contentList/hindu/1.jpg
     - assets/images/contentList/hindu/2.jpg
+    - assets/images/contentList/hindu/arulmigu.jpg
+    - assets/images/contentList/hindu/korttu.jpg
+    - assets/images/contentList/hindu/shree.jpg
+    - assets/images/contentList/hindu/sri.jpg
     #buddhist
     - assets/images/contentList/buddhist/1.jpg
     - assets/images/contentList/buddhist/2.jpg
