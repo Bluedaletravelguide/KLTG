@@ -1,6 +1,8 @@
 import 'dart:io';
-import 'package:kltheguide/screens/bookmark_screen.dart';
-import '../screens/home_screen.dart';
+import '../screens/crosswordScreen.dart';
+import '../screens/about_us_screen.dart';
+import '../screens/bookmark_screen.dart';
+import '../screens/e-book_screen.dart';
 import '../screens/catgeroies_screen.dart';
 import '../screens/search_screen.dart';
 import 'package:flutter/cupertino.dart';
@@ -20,6 +22,7 @@ class _TabsScreenState extends State<TabsScreen> {
     return CupertinoPageScaffold(
         child: SafeArea(child: Material(child: child)),
         navigationBar: CupertinoNavigationBar(
+            leading: createDrawerItems(context),
             middle: Text(text),
             trailing: Material(
               color: Colors.transparent,
@@ -36,10 +39,78 @@ class _TabsScreenState extends State<TabsScreen> {
             )));
   }
 
+  Widget createDrawerItems(BuildContext context) {
+    return Drawer(
+      child: ListView(
+        padding: EdgeInsets.zero,
+        children: [
+          DrawerHeader(
+            child: Text('KL THE GUIDE'),
+            decoration: BoxDecoration(color: Colors.blue),
+          ),
+          ListTile(
+            leading: Icon(
+              Icons.book,
+              color: Colors.black,
+            ),
+            title: Text(
+              'E-book',
+              style: TextStyle(color: Colors.black),
+            ),
+            onTap: () {
+              Navigator.pop(context);
+              Navigator.of(context).push(
+                platformPageRoute(
+                    context: context, builder: (context) => new FirstPage()),
+              );
+            },
+          ),
+          ListTile(
+            leading: Icon(
+              Icons.info,
+              color: Colors.black,
+            ),
+            title: Text(
+              'About Us',
+              style: TextStyle(color: Colors.black),
+            ),
+            onTap: () {
+              Navigator.pop(context);
+              Navigator.of(context).push(
+                platformPageRoute(
+                    context: context,
+                    builder: (context) => new AboutUsScreen()),
+              );
+            },
+          ),
+          ListTile(
+            leading: Icon(
+              Icons.games,
+              color: Colors.black,
+            ),
+            title: Text(
+              'Crossword',
+              style: TextStyle(color: Colors.black),
+            ),
+            onTap: () {
+              Navigator.pop(context);
+              Navigator.of(context).push(
+                platformPageRoute(
+                    context: context,
+                    builder: (context) => new CrosswordScreen(
+                          title: 'Crossword',
+                        )),
+              );
+            },
+          )
+        ],
+      ),
+    );
+  }
+
 //For android app bottom nevgation bar :
   final List<Map<String, Object>> _pages = [
-    {'page': HomeScreen(), 'title': 'KL THE GUIDE'},
-    {'page': CategoriesScreen(), 'title': 'All Categories'},
+    {'page': CategoriesScreen(), 'title': 'KL THE GUIDE'},
     {'page': BookmarkScreen(), 'title': 'My Bookmarks'},
     {
       'page': ContactUsScreen(),
@@ -66,11 +137,6 @@ class _TabsScreenState extends State<TabsScreen> {
         label: 'Home',
       ),
       BottomNavigationBarItem(
-        backgroundColor: Theme.of(context).primaryColorDark,
-        icon: Icon(Icons.list),
-        label: 'All Categories',
-      ),
-      BottomNavigationBarItem(
           backgroundColor: Theme.of(context).primaryColorDark,
           icon: Icon(Icons.bookmark),
           label: 'My Bookmarks'),
@@ -88,16 +154,13 @@ class _TabsScreenState extends State<TabsScreen> {
             tabBuilder: (context, index) {
               switch (index) {
                 case 1:
-                  return bottomNav(CategoriesScreen(), 'All Categories');
-
-                case 2:
                   return bottomNav(BookmarkScreen(), 'My Bookmarks');
 
-                case 3:
+                case 2:
                   return bottomNav(ContactUsScreen(), 'Contact Us');
 
                 default:
-                  return bottomNav(HomeScreen(), 'KL THE GUIDE');
+                  return bottomNav(CategoriesScreen(), 'KL THE GUIDE');
               }
             },
           )
@@ -120,6 +183,7 @@ class _TabsScreenState extends State<TabsScreen> {
               ],
             ),
             body: _pages[_selectedPageIndex]['page'],
+            drawer: createDrawerItems(context),
             bottomNavigationBar: BottomNavigationBar(
                 onTap: _selectPage,
                 backgroundColor: Theme.of(context).primaryColorDark,

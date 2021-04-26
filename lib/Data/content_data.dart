@@ -1793,7 +1793,7 @@ const ContentData = const [
       fees: '-',
       phoneNo: '+603-21102833',
       locationText:
-          'Central Plaza, 2506, Jalan Sultan Ismail, Bukit Bintang, 55100 Kuala Lumpur, Federal Territory of Kuala Lumpu',
+          'Central Plaza, 2506, Jalan Sultan Ismail, Bukit Bintang, 55100 Kuala Lumpur, Federal Territory of Kuala Lumpur',
       locationUrl: 'https://goo.gl/maps/n2QFD8CC5hFn7oJw7',
       webText: 'Facebook Page',
       webUrl: 'https://www.facebook.com/mitasu2012/'),
@@ -1881,6 +1881,254 @@ const ContentData = const [
       locationUrl: 'https://g.page/oribe-sushi?share',
       webText: 'Facebook Page',
       webUrl: 'https://www.facebook.com/oribe.sushi'),
+
+  //Mexican food 17g
+  ContentClass(
+      id: 'cl1_17g',
+      decrepitation: '-',
+      content: '',
+      workhour: '9.00am - 1.00am (Sun - Thu)\n9.00am - 3.00am (Fri & Sat)',
+      fees: '-',
+      phoneNo: '+603-21489977',
+      locationText:
+          'Lot C3 . 10 . 03, 168, Bukit Bintang Street, Bukit Bintang, 55100 Kuala Lumpur, Federal Territory of Kuala Lumpur',
+      locationUrl: 'https://g.page/labocalatinobar?share',
+      webText: 'laboca.com.my',
+      webUrl: 'http://www.laboca.com.my/'),
+  ContentClass(
+      id: 'cl2_17g',
+      decrepitation: '-',
+      content: '',
+      workhour: '11.00am - 3.00am (Daily)',
+      fees: '-',
+      phoneNo: '+603-21428260',
+      locationText:
+          '22, Changkat Bukit Bintang, Bukit Bintang, 50200 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
+      locationUrl: 'https://goo.gl/maps/hK8nBgrt3RvBDF3BA',
+      webText: 'locokl.com',
+      webUrl: 'http://www.locokl.com/'),
+  ContentClass(
+      id: 'cl3_17g',
+      decrepitation: '-',
+      content: '',
+      workhour:
+          '12.00pm - 2.30pm, 6.00pm - 10.30pm (Mon - Sat)\n5.00pm - 10.30pm (Sun)',
+      fees: '-',
+      phoneNo: '+603-42571668',
+      locationText:
+          '22, Persiaran Ampang, Desa Pahlawan, 55000 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
+      locationUrl: 'https://goo.gl/maps/xZM5jBxAtTQjRn9o8',
+      webText: 'lascarretas.com',
+      webUrl: 'https://lascarretas.com/'),
+  ContentClass(
+      id: 'cl4_17g',
+      decrepitation: '-',
+      content: '',
+      workhour: '11.00am - 10.00pm (Daily)',
+      fees: '-',
+      phoneNo: '+6011-11503606',
+      locationText:
+          'A-G-3A Galeria Hartamas, No 21, Jalan 26a/70a, Desa Sri Hartamas, 50480 Kuala Lumpur',
+      locationUrl: 'https://g.page/salakl?share',
+      webText: 'salakl.com',
+      webUrl: 'https://www.salakl.com/'),
+  ContentClass(
+      id: 'cl5_17g',
+      decrepitation: '-',
+      content: '',
+      workhour: '11.00am - 9.00pm (Sun - Thu)\n11.00am - 9.30pm (Fri & Sat)',
+      fees: '-',
+      phoneNo: '+6012-6787842',
+      locationText:
+          'Avenue K, Lot G9, Mall, 156, Jalan Ampang, Kuala Lumpur, 50450 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
+      locationUrl: 'https://goo.gl/maps/iHfbkkLy7yxqBQTx7',
+      webText: 'fresca.com.my',
+      webUrl: 'http://www.fresca.com.my/'),
+  ContentClass(
+      id: 'cl6_17g',
+      decrepitation: '-',
+      content: '',
+      workhour: '12.00pm - 11.00pm (Sun - Thu)\n12.00pm - 12.00am (Fri & Sat)',
+      fees: '-',
+      phoneNo: '+6017-4052279',
+      locationText:
+          'Lot 34, Level G2, Block C5, Publika Shopping Gallery, Solaris Dutamas, 50480 Kuala Lumpur',
+      locationUrl: 'https://g.page/chicabonita-publika?share',
+      webText: 'Facebook Page',
+      webUrl: 'https://www.facebook.com/chicabonita.publika'),
+  ContentClass(
+      id: 'cl7_17g',
+      decrepitation: '-',
+      content: '',
+      workhour: '11.30am - 10.00pm (Mon - Sat)\nClosed on Sunday',
+      fees: '-',
+      phoneNo: '+603-21814545',
+      locationText:
+          'Holiday Inn Express, No.84, Jalan Raja Chulan, 50200 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
+      locationUrl: 'https://goo.gl/maps/uzFs9peiMVJX9JTr8',
+      webText: 'nicks.com.my',
+      webUrl: 'http://www.nicks.com.my/'),
+  ContentClass(
+      id: 'cl8_17g',
+      decrepitation: '-',
+      content: '',
+      workhour: '12.00pm - 10.00pm (Daily)',
+      fees: '-',
+      phoneNo: '+603-27766666',
+      locationText:
+          '316, Jalan Tuanku Abdul Rahman, Chow Kit, 50100 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
+      locationUrl: 'https://goo.gl/maps/9rk7vzz6pFvJtYg17',
+      webText: '-',
+      webUrl: '-'),
+  ContentClass(
+      id: 'cl9_17g',
+      decrepitation: '-',
+      content: '',
+      workhour: '12.00pm - 10.00pm (Daily)',
+      fees: '-',
+      phoneNo: ' +6017-6012055',
+      locationText: '14, Lorong Perak, Taman Melawati, 53100 Kuala Lumpur',
+      locationUrl: 'https://goo.gl/maps/3vH95n1cC4j8bz4F8',
+      webText: '-',
+      webUrl: '-'),
+  ContentClass(
+      id: 'cl10_17g',
+      decrepitation: '-',
+      content: 'Alternative phone number: +6018-2041781',
+      workhour: '10.00am - 10.00pm (Daily)',
+      fees: '-',
+      phoneNo: '+603-21452996',
+      locationText:
+          'C3-03, Bukit Bintang St, Bukit Bintang, 55100 Kuala Lumpur, Federal Territory of Kuala Lumpur',
+      locationUrl: 'https://goo.gl/maps/GdQcTopN2jBKtR1AA',
+      webText: 'Facebook Page',
+      webUrl: 'https://www.facebook.com/oribe.sushi'),
+
+  //Fast food 17h
+  ContentClass(
+      id: 'cl1_17h',
+      decrepitation: '-',
+      content: '',
+      workhour: '11.00am - 11.30pm (Daily)',
+      fees: '-',
+      phoneNo: '+603-92242117',
+      locationText:
+          '16, Lorong 1/77a, Imbi, 55100 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
+      locationUrl: 'https://g.page/BurgerOn16?share',
+      webText: 'burgeron16.com',
+      webUrl: 'http://www.burgeron16.com/'),
+  ContentClass(
+      id: 'cl2_17h',
+      decrepitation: '-',
+      content: '',
+      workhour:
+          '2.00pm - 10.00pm (Mon - Thu)\n3.00pm - 12.00am (Fri)\nClosed on Sat & Sun',
+      fees: '-',
+      phoneNo: '+6012-3324070',
+      locationText:
+          'No 10, Jalan Solaris 3, Mont Kiara, 50480 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
+      locationUrl: 'https://goo.gl/maps/YVS5M5MEBQWr5boq5',
+      webText: 'giegits.blogspot.com',
+      webUrl: 'http://giegits.blogspot.com/'),
+  ContentClass(
+      id: 'cl3_17h',
+      decrepitation: '-',
+      content: '',
+      workhour: '11.00am - 2.00am (Mon - Sat)\n11.00am - 12.00am (Sun)',
+      fees: '-',
+      phoneNo: '+6016-6113629',
+      locationText:
+          'No. 42, Jalan Bukit Bintang, 55100 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
+      locationUrl: 'https://goo.gl/maps/CGbXnfDzKGn38yTa7',
+      webText: '-',
+      webUrl: '-'),
+  ContentClass(
+      id: 'cl4_17h',
+      decrepitation: '-',
+      content: '',
+      workhour: '10.00am - 11.00pm (Daily)',
+      fees: '-',
+      phoneNo: '+603-23893254',
+      locationText:
+          'G-03 Ground Floor, Wisma Lim Foo Yong, No.86, Jalan Raja Chulan, 50450 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
+      locationUrl: 'https://goo.gl/maps/DrmcFWJsAs5pW6489',
+      webText: 'waybackburgers.com',
+      webUrl:
+          'http://www.waybackburgers.com.my/?y_source=1_MTM4NTMyNjEtNzE1LWxvY2F0aW9uLndlYnNpdGU%3D'),
+  ContentClass(
+      id: 'cl5_17h',
+      decrepitation: '-',
+      content: '',
+      workhour: '11.00am - 11.00pm (Daily)',
+      fees: '-',
+      phoneNo: '+603-22876708',
+      locationText:
+          'LG Bangsar Village, 1, Jalan Telawi 1, 59100 Kuala Lumpur, Federal Territory of Kuala Lumpur',
+      locationUrl: 'https://goo.gl/maps/mHnJAjt2eff4GxZb8',
+      webText: 'thedailygrind.com.my',
+      webUrl: 'http://www.thedailygrind.com.my/'),
+  ContentClass(
+      id: 'cl6_17h',
+      decrepitation: '-',
+      content: '',
+      workhour:
+          '12.00pm - 9.45pm (Sun - Wed)\n12.00pm - 3.00pm, 4.00pm - 9.45pm (Thu)\n12.00pm - 10.00pm (Fri & Sat)',
+      fees: '-',
+      phoneNo: '+603-77332284',
+      locationText:
+          '107, Jalan Aminuddin Baki, Taman Tun Dr Ismail, 60000 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpu',
+      locationUrl: 'https://goo.gl/maps/UUkm8w6kzz76gCvt6',
+      webText: 'kgb.my',
+      webUrl: 'http://www.kgb.my/'),
+  ContentClass(
+      id: 'cl7_17h',
+      decrepitation: '-',
+      content: '',
+      workhour: '10.00am - 9.30pm (Daily)',
+      fees: '-',
+      phoneNo: '+6012-3355910',
+      locationText:
+          '50350, 90-100, Jalan Putra, Chow Kit, 50350 Kuala Lumpur, Federal Territory of Kuala Lumpur',
+      locationUrl: 'https://goo.gl/maps/HGRDGdcDfsYX1fEg6',
+      webText: 'Facebook Page',
+      webUrl: 'https://www.facebook.com/burgerbakarkawkaw/'),
+  ContentClass(
+      id: 'cl8_17h',
+      decrepitation: '-',
+      content: '',
+      workhour: '12.00pm - 9.00pm (Daily)',
+      fees: '-',
+      phoneNo: ' +6013-2263760',
+      locationText:
+          'Megan Ambassy, Taman U Thant, 55000 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
+      locationUrl: 'https://goo.gl/maps/dD8zZvFDrjZVeYbv5',
+      webText: '-',
+      webUrl: '-'),
+  ContentClass(
+      id: 'cl9_17h',
+      decrepitation: '-',
+      content: '',
+      workhour:
+          '8.00am - 8.00pm (Mon - Fri)\n8.00am - 3.00pm (Sat)\nClosed on Sun',
+      fees: '-',
+      phoneNo: '+603-20220003',
+      locationText:
+          'Menara Hap Seng, Jalan P. Ramlee, Wilayah Persekutuan Kuala Lumpur, 50250 Malaysia, Wilayah Persekutuan Kuala Lumpur',
+      locationUrl: 'https://goo.gl/maps/HQQohKsshjvggMvE6',
+      webText: 'sugarbun.com',
+      webUrl: 'http://www.sugarbun.com/'),
+  ContentClass(
+      id: 'cl10_17h',
+      decrepitation: '-',
+      content: 'Alternative phone number: +6018-2041781',
+      workhour: '12.00pm - 1.00am (Sat - Thu)\n2.15pm - 1.00am (Fri)',
+      fees: '-',
+      phoneNo: '+603-42652865',
+      locationText:
+          'Kementah, 54100 Kuala Lumpur, Federal Territory of Kuala Lumpur',
+      locationUrl: 'https://g.page/BCKrest?share',
+      webText: 'Facebook Page',
+      webUrl: 'https://www.facebook.com/broastedchickenking1'),
 
   //music 18
   ContentClass(
