@@ -1,4 +1,5 @@
 import 'dart:io';
+import '../screens/ios_menu_screen.dart';
 import '../screens/crosswordScreen.dart';
 import '../screens/about_us_screen.dart';
 import '../screens/bookmark_screen.dart';
@@ -22,7 +23,16 @@ class _TabsScreenState extends State<TabsScreen> {
     return CupertinoPageScaffold(
         child: SafeArea(child: Material(child: child)),
         navigationBar: CupertinoNavigationBar(
-            leading: createDrawerItems(context),
+            leading: Material(
+              color: Colors.transparent,
+              child: IconButton(
+                  icon: Icon(CupertinoIcons.list_bullet),
+                  onPressed: () {
+                    Navigator.of(context).push(platformPageRoute(
+                        context: context,
+                        builder: (context) => new IosMenuScreen()));
+                  }),
+            ),
             middle: Text(text),
             trailing: Material(
               color: Colors.transparent,

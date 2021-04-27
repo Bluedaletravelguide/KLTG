@@ -108,6 +108,7 @@ class AboutUsScreen extends StatelessWidget {
     final carsoulData = ClientCarsoulData;
     final socialData = SocialMediaData;
     return PlatformScaffold(
+      iosContentPadding: true,
         appBar: PlatformAppBar(
           title: Text('About Us'),
         ),
