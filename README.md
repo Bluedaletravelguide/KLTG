@@ -45,4 +45,18 @@ Due to ads annoyance, we removed the ad that goes full screen, and replaced it w
 
 We have added a new home screen upon launching the app as well as search engine for users to search and obtain the content neccessary based on their query. More info on the code functionalities can be found in search_screen.dart and home_screen.dart respectively. On top of that, these features are implemented across all other apps.
 
+## Updates3
 
+We have added 5 new functionalties throughout the apps. These include:
+Bookmark, which is locally saved into the device storage.
+Crossword, more to come soon as this is just the first version.
+Introduction screen, which is for first time users for the app.
+Push Notification, for engagement purposes via Firebase.
+Home screen; this is a minor adjustment based on the first home screen before update 2.
+Also, firebase_admob package is depreciated at April 2021, so we have migrated to google_mobile_ads for future proofing.
+
+Additionally, this new version has the minimum compile SDK version bumped on to 19 for Android and 10.0 in iOS in order to accomodate these new packages and features.
+
+If there is any question please feel free to contact me:
+Name: Nicholas C.
+Phone no.: +60192912198 / +447395272300
