@@ -114,9 +114,9 @@ flutter:
 
     #introduction
     - assets/images/introduction/1.png
-    - assets/images/introduction/2.png
-    - assets/images/introduction/3.png
-    - assets/images/introduction/4.png
+    - assets/images/introduction/2.jpg
+    - assets/images/introduction/3.jpg
+    - assets/images/introduction/4.jpg
     - assets/images/introduction/5.png
 
     #client
