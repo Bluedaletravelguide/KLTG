@@ -50,7 +50,7 @@ class IntroductionState extends State<Introduction> {
         PageViewModel(
             title: 'Home Screen',
             body:
-                'The four bottom navigator item is important, especially the \'All Categories\' item',
+                'The three bottom navigator icon is important, especially the \'Home\' icon',
             image: Center(
               child: Image.asset('assets/images/introduction/2.jpg'),
             ),
