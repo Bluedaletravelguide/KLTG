@@ -40,6 +40,7 @@ class _TravelTipsState extends State<TravelTips> {
   String urlWeather = 'https://www.ventusky.com/';
   String urlTimeZone = 'https://www.timeanddate.com/time/map/';
   String urlCurrency = 'https://www.xe.com/';
+  String urlExchange = 'https://www.bnm.gov.my/latest-rates';
   String urlPassports =
       'https://www.imi.gov.my/portal2017/index.php/en/entry-requirements-into-malaysia.html';
   String urlPrepaidSim = "https://www.phonetech.my/telco";
@@ -74,6 +75,8 @@ class _TravelTipsState extends State<TravelTips> {
             _launchInBrowser(urlTimeZone);
           } else if (widget.id == 'tt3') {
             _launchInBrowser(urlCurrency);
+          } else if (widget.id == 'tt4') {
+            _launchInBrowser(urlExchange);
           } else if (widget.id == 'tt5') {
             _launchInBrowser(urlPassports);
           } else if (widget.id == 'tt13') {
