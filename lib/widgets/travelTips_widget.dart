@@ -74,13 +74,13 @@ class _TravelTipsState extends State<TravelTips> {
             _launchInBrowser(urlTimeZone);
           } else if (widget.id == 'tt3') {
             _launchInBrowser(urlCurrency);
-          } else if (widget.id == 'tt4') {
+          } else if (widget.id == 'tt5') {
             _launchInBrowser(urlPassports);
-          } else if (widget.id == 'tt9') {
+          } else if (widget.id == 'tt13') {
             _launchInBrowser(urlPrepaidSim);
-          } else if (widget.id == 'tt10') {
+          } else if (widget.id == 'tt14') {
             _launchInBrowser(urlDialingPrefix);
-          } else if (widget.id == 'tt11') {
+          } else if (widget.id == 'tt15') {
             _launchInBrowser(urlEmergencyNumber);
           }
         },
