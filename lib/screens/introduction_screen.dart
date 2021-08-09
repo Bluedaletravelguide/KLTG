@@ -50,16 +50,16 @@ class IntroductionState extends State<Introduction> {
         PageViewModel(
             title: 'Home Screen',
             body:
-                'The four bottom navigator item is important, especially the \'All Categories\' item',
+                'The three bottom navigator icon is important, especially the \'Home\' icon',
             image: Center(
-              child: Image.asset('assets/images/introduction/2.png'),
+              child: Image.asset('assets/images/introduction/2.jpg'),
             ),
             decoration: pageDecorate),
         PageViewModel(
             title: 'Content List Screen',
             body: 'Bookmark the places you wanna go at the left for each item',
             image: Center(
-              child: Image.asset('assets/images/introduction/3.png'),
+              child: Image.asset('assets/images/introduction/3.jpg'),
             ),
             decoration: pageDecorate),
         PageViewModel(
@@ -67,7 +67,7 @@ class IntroductionState extends State<Introduction> {
             body:
                 'The arrow pointing to each widget can be interactable via touching on it.',
             image: Center(
-              child: Image.asset('assets/images/introduction/4.png'),
+              child: Image.asset('assets/images/introduction/4.jpg'),
             ),
             decoration: pageDecorate),
         PageViewModel(
