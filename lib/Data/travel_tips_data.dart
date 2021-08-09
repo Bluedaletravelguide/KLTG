@@ -5,30 +5,31 @@ const TravelTipsData = const {
       id: 'tt1',
       title: 'Weather',
       description:
-          'The climate in KL is quite humid all year-round. The best time to visit KL is from May-July or December-February.',
+          'The climate in KL is quite humid all year-round. The best time to visit KL is from May-July or December-February.\n\nClick Here To Know More Info',
       image: 'assets/images/TravelTips/weather.png'),
   TravelTips(
       id: 'tt2',
       title: 'Time Zone',
-      description: 'The Malaysian time zone is 8 hours ahead of GMT (+8GMT).',
+      description:
+          'The Malaysian time zone is 8 hours ahead of GMT (+8GMT).\n\nClick Here To Know More Info',
       image: 'assets/images/TravelTips/timezone.png'),
   TravelTips(
       id: 'tt3',
       title: 'Currency',
       description:
-          'Malaysia’s currency unit is divided into two. The term Ringgit Malaysia (RM) is used to refer to paper money. ',
+          'Malaysia’s currency unit is divided into two. The term Ringgit Malaysia (RM) is used to refer to paper money.\n\nClick Here To Know More Info',
       image: 'assets/images/TravelTips/currency-code.png'),
   TravelTips(
       id: 'tt4',
       title: 'Exchanging Money',
       description:
-          'Exchanging money in Malaysia is relatively easy as you can find money changers easily. ',
+          'Exchanging money in Malaysia is relatively easy as you can find money changers easily.\n\nClick Here To Know More Info',
       image: 'assets/images/TravelTips/breakdown.png'),
   TravelTips(
       id: 'tt5',
       title: 'Visas and Passports',
       description:
-          'Passports must be valid for at least 6 months at the time of entry. Visa requirements vary from time to time, so it is best to check with the Malaysian embassy or Immigration Department website.',
+          'Passports must be valid for at least 6 months at the time of entry. Visa requirements vary from time to time, so it is best to check with the Malaysian embassy or Immigration Department website.\n\nClick Here To Know More Info',
       image: 'assets/images/TravelTips/visa-and-passports.png'),
   TravelTips(
       id: 'tt6',
@@ -76,18 +77,18 @@ const TravelTipsData = const {
       id: 'tt13',
       title: 'Prepaid Sim Cards',
       description:
-          'Malaysia mobile phones use the GSM network if your phone has a roaming facility. prepaid sim cards can be purchased starting at RM20 for registration and talk time. The three main phone providers in Malaysia are Maxis, Celcom and DiGi.',
+          'Malaysia mobile phones use the GSM network if your phone has a roaming facility. prepaid sim cards can be purchased starting at RM20 for registration and talk time. The three main phone providers in Malaysia are Maxis, Celcom and DiGi.\n\nClick Here To Know More Info',
       image: 'assets/images/TravelTips/simcardanddiallingprefixes.png'),
   TravelTips(
       id: 'tt14',
       title: 'Dialling Prefixes',
       description:
-          'Each city has its unique area code for landlines. 03 is KL\'s area code followed by the eight-digit number when you call from your mobile phone. Every call to a mobile phone requires a three-digit prefix followed by the seven-digit subscriber number.',
+          'Each city has its unique area code for landlines. 03 is KL\'s area code followed by the eight-digit number when you call from your mobile phone. Every call to a mobile phone requires a three-digit prefix followed by the seven-digit subscriber number.\n\nClick Here To Know More Info',
       image: 'assets/images/TravelTips/dialling.png'),
   TravelTips(
       id: 'tt15',
       title: 'Emergency Numbers',
       description:
-          'Police/Ambulance:\n999 (112 from a mobile phone) \nFire and Rescue Department (Bomba): \n994 (112 from a mobile phone)\nCivil Defence Tel: \n991\nTourist Police Hotline Tel:\n+60321496590',
+          'Police/Ambulance:\n999 (112 from a mobile phone) \nFire and Rescue Department (Bomba): \n994 (112 from a mobile phone)\nCivil Defence Tel: \n991\nTourist Police Hotline Tel:\n+60321496590\n\nClick Here To Know More Info',
       image: 'assets/images/TravelTips/emergency.png'),
 };

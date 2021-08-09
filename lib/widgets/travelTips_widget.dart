@@ -150,6 +150,9 @@ class _TravelTipsState extends State<TravelTips> {
                                   textSpan(context,
                                       '\nTourist Police Hotline Tel:\n'),
                                   textSpanNo(context, '+60321496590'),
+                                  //-------------------//
+                                  textSpan(context,
+                                      '\n\nClick Here To Know More Info'),
                                 ]),
                           ),
                   ),
