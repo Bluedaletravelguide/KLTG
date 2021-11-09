@@ -209,7 +209,7 @@ const ContentData = const [
       phoneNo: '-',
       locationText:
           'Jalan Lingkaran Tengah 2, Kepong Metropolitan Lake-garden, 52100 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
-      locationUrl: 'https://goo.gl/maps/2EaktoudzTcGRXdd7',
+      locationUrl: 'https://goo.gl/maps/rWzPnAt3qgibPGY58',
       webText: '-',
       webUrl: '-'),
   ContentClass(
@@ -252,7 +252,7 @@ const ContentData = const [
       phoneNo: '-',
       locationText:
           'Lebuh Perdana Barat, Presint 1, 62000 Putrajaya, Wilayah Persekutuan Putrajaya',
-      locationUrl: 'https://goo.gl/maps/ToEyFjXX2UfNE7az5',
+      locationUrl: 'https://g.page/tamanbotaniputrajaya?share',
       webText: '-',
       webUrl: '-'),
   ContentClass(
@@ -325,7 +325,7 @@ const ContentData = const [
       phoneNo: '+603-21459933',
       locationText:
           'Wisma Mirama, Jalan Wisma Putra, Kampung Attap, 50460 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
-      locationUrl: 'https://goo.gl/maps/dewGmyZf9tawhDhXA',
+      locationUrl: 'https://goo.gl/maps/HWrbz5DgyEqzMkJy9',
       webText: '-',
       webUrl: '-'),
   ContentClass(
@@ -445,12 +445,11 @@ const ContentData = const [
           'KL Tower Upside Down House is one of the newest attractions in KL Tower. It was designed with a \'Cottage House\' theme, with an antique \'Morris 1974\' hanging upside down at the entrance. ',
       content:
           'Inside, visitors can explore a number of rooms that they’d find in a real house, including kitchen, living room, master bedroom and an attic – all upside down, of course. Depending on how long you need to pose for photos, a visit here takes between 30 minutes to an hour.',
-      workhour: '10.00 am - 10.00 pm (Daily)',
+      workhour: '9.00 am - 10.00 pm (Daily)',
       fees: '-',
-      phoneNo: '+603-50319458',
-      locationText:
-          'SB-1, Sunsuria Forum, No.1, Jalan Setia Dagang AL U13/AL, Seksyen U13, Setia Alam, 40170 Shah Alam, Selangor',
-      locationUrl: 'https://goo.gl/maps/LtuUHLMBwUkYXRKP9',
+      phoneNo: '+603-20205444',
+      locationText: 'Off, Jalan P Ramlee, &, Jalan Puncak, 50250 Kuala Lumpur',
+      locationUrl: 'https://g.page/klupsidedown?share',
       webText: '-',
       webUrl: '-'),
   ContentClass(
@@ -706,7 +705,7 @@ const ContentData = const [
       fees: '-',
       phoneNo: '-',
       locationText: 'Changkat, Bukit Bintang',
-      locationUrl: '-',
+      locationUrl: 'https://goo.gl/maps/CPZtTqYLjQtyDDev8',
       webText: '-',
       webUrl: '-'),
   ContentClass(
@@ -719,7 +718,7 @@ const ContentData = const [
       fees: '-',
       phoneNo: '-',
       locationText: 'Bangsar',
-      locationUrl: '-',
+      locationUrl: 'https://goo.gl/maps/AUCeSUyENM1NaaZ86',
       webText: '-',
       webUrl: '-'),
   ContentClass(
@@ -732,7 +731,7 @@ const ContentData = const [
       fees: '-',
       phoneNo: '-',
       locationText: 'Ampang',
-      locationUrl: '-',
+      locationUrl: 'https://goo.gl/maps/kZFRVxDd7RM9L6Ux6',
       webText: '-',
       webUrl: '-'),
   ContentClass(
@@ -745,7 +744,7 @@ const ContentData = const [
       fees: '-',
       phoneNo: '-',
       locationText: 'Petaling Street',
-      locationUrl: '-',
+      locationUrl: 'https://g.page/petaling-street-market?share',
       webText: '-',
       webUrl: '-'),
 //Bar 12b
@@ -842,7 +841,7 @@ const ContentData = const [
       phoneNo: '-',
       locationText:
           '130, 108, Jalan Cerdas, Taman Connaught, 56000 Kuala Lumpur, Federal Territory of Kuala Lumpur',
-      locationUrl: 'https://goo.gl/maps/YXLCNQ4q93scAV6t7',
+      locationUrl: 'https://goo.gl/maps/SWjQeFbJ3fDpQuWf6',
       webText: '-',
       webUrl: '-'),
   ContentClass(
@@ -870,7 +869,7 @@ const ContentData = const [
       phoneNo: '-',
       locationText:
           'Persiaran Hampshire, off, Jalan Ampang, Hampshire Park, 50450 Kuala Lumpur',
-      locationUrl: 'https://goo.gl/maps/NApkWHRQkrPgBkLMA',
+      locationUrl: 'https://goo.gl/maps/mgK5H5mdecVmdczs7',
       webText: '-',
       webUrl: '-'),
 
@@ -989,7 +988,7 @@ const ContentData = const [
       phoneNo: '+603-22642264',
       locationText:
           '3, Jalan Stesen Sentral, Kuala Lumpur Sentral, 50470 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
-      locationUrl: 'https://goo.gl/maps/9Qah1cjEtpi7LRAk8',
+      locationUrl: 'https://g.page/HiltonKualaLumpurHotel?share',
       webText: '-',
       webUrl: '-'),
   ContentClass(
@@ -1259,7 +1258,7 @@ const ContentData = const [
       phoneNo: '+6012-4999908',
       locationText:
           '2, Jalan Tun Mohd Fuad, Taman Tun Dr Ismail, 60000 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
-      locationUrl: 'https://goo.gl/maps/tM75Uafqbu5JGs3Z6',
+      locationUrl: 'https://goo.gl/maps/jNMGpgWR6JcgFrXW7',
       webText: '-',
       webUrl: '-'),
 
@@ -1384,7 +1383,7 @@ const ContentData = const [
       phoneNo: '+603-23308798',
       locationText:
           'Kuala Lumpur City Centre, 50088 Kuala Lumpur, Federal Territory of Kuala Lumpur',
-      locationUrl: 'https://goo.gl/maps/tM75Uafqbu5JGs3Z6',
+      locationUrl: 'https://goo.gl/maps/Wtn4tZBxvVQiiVMr8',
       webText: 'mandarianoriental.com',
       webUrl:
           'https://www.mandarinoriental.com/kuala-lumpur/petronas-towers/fine-dining/restaurants/cantonese-cuisine/lai-po-heen'),
@@ -1496,7 +1495,7 @@ const ContentData = const [
       phoneNo: '+6012-2001385',
       locationText:
           '52, Jalan Tun Razak, Kampung Baru, 50400 Kuala Lumpur, Federal Territory of Kuala Lumpur',
-      locationUrl: 'https://goo.gl/maps/uAE2YBwoUwdtqfRv7',
+      locationUrl: 'https://goo.gl/maps/KvSeccDAJZ8JdspH8',
       webText: 'havellykl2u.com',
       webUrl: 'https://www.havellykl2u.com/menu'),
   ContentClass(
@@ -1607,7 +1606,7 @@ const ContentData = const [
       phoneNo: '+603-27152785/+603-21130061',
       locationText:
           'JW Marriott Kuala Lumpur, Lot No. H 1, Upper Ground Adorn, No, 183, Jln Bukit Bintang, 55100 Kuala Lumpur',
-      locationUrl: 'https://goo.gl/maps/pLqwH8ZcBJ6uVAJk6',
+      locationUrl: 'https://goo.gl/maps/gfxFBLnAZ1bu88LB6',
       webText: '-',
       webUrl: 'https://alhalabirestaurant.com/'),
   ContentClass(
@@ -1619,7 +1618,7 @@ const ContentData = const [
       phoneNo: '+603-2143394',
       locationText:
           '130, Jalan Bukit Bintang, Bukit Bintang, 55100 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
-      locationUrl: 'https://goo.gl/maps/uAE2YBwoUwdtqfRv7',
+      locationUrl: 'https://goo.gl/maps/xD6dMXq5Vj7fFcGC9',
       webText: '-',
       webUrl: 'https://www.facebook.com/NaabRestaurant/'),
   ContentClass(
@@ -2779,7 +2778,7 @@ const ContentData = const [
       phoneNo: '+6011-28470032',
       locationText:
           'Jalan masjid Firdaus, Jalan 1/42, Segambut luar, 51200 Kuala Lumpur, Federal Territory of Kuala Lumpur',
-      locationUrl: '-',
+      locationUrl: 'https://goo.gl/maps/kgC88QWWp8EN7GRu8',
       webText: '-',
       webUrl: '-'),
 
@@ -2792,7 +2791,7 @@ const ContentData = const [
       phoneNo: '-',
       locationText:
           'Jalan Pahang, Taman Setapak Indah Jaya, 53000 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
-      locationUrl: '-',
+      locationUrl: 'https://goo.gl/maps/1NLmZdpRgphArHVJA',
       webText: '-',
       webUrl: '-'),
 
@@ -2805,7 +2804,7 @@ const ContentData = const [
       phoneNo: '+603-62618585',
       locationText:
           'Jln Besar Kepong, Taman Kepong, 52100 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
-      locationUrl: '-',
+      locationUrl: 'https://goo.gl/maps/SncTbpiDGNRFhtBB6',
       webText: '-',
       webUrl: '-'),
   //buddist 22b
@@ -2903,7 +2902,7 @@ const ContentData = const [
       fees: '-',
       phoneNo: '+603-22742987',
       locationText: 'Brickfields, 50470 Kuala Lumpur, Selangor',
-      locationUrl: '-',
+      locationUrl: 'https://goo.gl/maps/M7nvom9HFMLyaSVk6',
       webText: '-',
       webUrl: '-'),
 
@@ -2916,7 +2915,7 @@ const ContentData = const [
       phoneNo: '+603-40412993',
       locationText:
           'Lot 68, 69, Jalan Kasipillay, Kampung Kasipillay, 51200 Kuala Lumpur, Federal Territory of Kuala Lumpur',
-      locationUrl: '-',
+      locationUrl: 'https://goo.gl/maps/ZuftQQiZFDmPt95LA',
       webText: '-',
       webUrl: '-'),
 
@@ -2929,7 +2928,7 @@ const ContentData = const [
       phoneNo: '-',
       locationText:
           ' 8, Jalan Tandok, Bangsar, 59100 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
-      locationUrl: '-',
+      locationUrl: 'https://goo.gl/maps/BSL7EPh9s9oHp5Qr7',
       webText: '-',
       webUrl: '-'),
 
@@ -2942,7 +2941,7 @@ const ContentData = const [
       phoneNo: '+603-22821317',
       locationText:
           'Mid Valley Megamall, 75, Lingkaran Syed Putra, Mid Valley City, 58000 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
-      locationUrl: '-',
+      locationUrl: 'https://goo.gl/maps/8p7mtAM1RjT8RuTT8',
       webText: '-',
       webUrl: '-'),
 
@@ -2955,7 +2954,7 @@ const ContentData = const [
       phoneNo: '-',
       locationText:
           'Jalan Persiaran Maybank, Bukit Bintang, 50200 Kuala Lumpur, Federal Territory of Kuala Lumpur',
-      locationUrl: '-',
+      locationUrl: 'https://goo.gl/maps/awEwjnpK3Mde3k3o8',
       webText: '-',
       webUrl: '-'),
 
@@ -2972,7 +2971,7 @@ const ContentData = const [
       locationUrl:
           'https://www.google.com/maps/place/St+Marys+Anglican+Cathedral/@3.150382,101.6912203,17z/data=!3m1!4b1!4m5!3m4!1s0x31cc49cd3d6d5231:0x8d3f1ce01df008ce!8m2!3d3.150382!4d101.693409',
       webText: 'stmaryscathedral.org.my',
-      webUrl: '-http://www.stmaryscathedral.org.my/'),
+      webUrl: 'https://stmaryscathedral.org.my/'),
   ContentClass(
       id: 'cl2_22d',
       decrepitation: '-',
