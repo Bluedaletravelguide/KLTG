@@ -15,7 +15,7 @@ publish_to: "none" # Remove this line if you wish to publish to pub.dev
 # In iOS, build-name is used as CFBundleShortVersionString while build-number used as CFBundleVersion.
 # Read more about iOS versioning at
 # https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
-version: 1.2.1+23
+version: 1.2.2+24
 
 environment:
   sdk: ">=2.7.0 <3.0.0"
@@ -199,6 +199,9 @@ flutter:
     - assets/images/subCatedgories/krfood.jpg
     - assets/images/subCatedgories/ffood.jpg
     - assets/images/subCatedgories/arfood.jpg
+    - assets/images/subCatedgories/western.jpg
+    - assets/images/subCatedgories/nightmarket.jpg
+    - assets/images/subCatedgories/extreme.jpg
 
     #placesToStay
     - assets/images/contentList/placesToStay/1.jpg
@@ -213,6 +216,10 @@ flutter:
     - assets/images/contentList/historicalPlaces/3.jpg
     - assets/images/contentList/historicalPlaces/4.jpg
     - assets/images/contentList/historicalPlaces/5.jpg
+    - assets/images/contentList/historicalPlaces/6.jpg
+    - assets/images/contentList/historicalPlaces/7.jpg
+    - assets/images/contentList/historicalPlaces/8.jpg
+    - assets/images/contentList/historicalPlaces/9.jfif
 
     #parks
     - assets/images/contentList/parks/1.jpg
@@ -225,6 +232,17 @@ flutter:
     - assets/images/contentList/parks/8.jpg
     - assets/images/contentList/parks/9.jpg
     - assets/images/contentList/parks/10.jpg
+    - assets/images/contentList/parks/11.jpg
+    - assets/images/contentList/parks/12.jpg
+
+    #museums
+    - assets/images/contentList/museums/1.jpg
+    - assets/images/contentList/museums/2.jpg
+    - assets/images/contentList/museums/3.jpg
+    - assets/images/contentList/museums/4.jpg
+    - assets/images/contentList/museums/5.jpg
+    - assets/images/contentList/museums/6.jpg
+    - assets/images/contentList/museums/7.jpg
 
     #music
     - assets/images/contentList/music/bangu.jpg
@@ -286,6 +304,11 @@ flutter:
     - assets/images/contentList/klForKids/KLUpsideDownHouse.jpg
     - assets/images/contentList/klForKids/planetariumNEgara.jpg
     - assets/images/contentList/klForKids/PusatSainsNegara.jpg
+    - assets/images/contentList/klForKids/deer.jpg
+    - assets/images/contentList/klForKids/kidsnation.jpg
+    - assets/images/contentList/klForKids/rock.jpg
+    - assets/images/contentList/klForKids/bamboo.jpg
+    - assets/images/contentList/klForKids/beast.jpg
 
     #whatToDoInKl
     - assets/images/contentList/whatToDoInKl/1.jpg
@@ -300,12 +323,28 @@ flutter:
     - assets/images/contentList/whereToShop/3.jpg
     - assets/images/contentList/whereToShop/4.jpg
     - assets/images/contentList/whereToShop/5.jpg
+    - assets/images/contentList/whereToShop/6.jpg
+    - assets/images/contentList/whereToShop/7.jpg
+    - assets/images/contentList/whereToShop/7b.jpg
+    - assets/images/contentList/whereToShop/8.jpg
+    - assets/images/contentList/whereToShop/9.jpg
+    - assets/images/contentList/whereToShop/10.jpg
 
     #nightLife
     - assets/images/contentList/nightLife/1.jpg
     - assets/images/contentList/nightLife/2.jpg
     - assets/images/contentList/nightLife/3.jpg
     - assets/images/contentList/nightLife/4.jpg
+    - assets/images/contentList/nightLife/5.jpg
+    - assets/images/contentList/nightLife/6.jpg
+    - assets/images/contentList/nightLife/7.jpg
+    - assets/images/contentList/nightLife/8.jpg
+    - assets/images/contentList/nightLife/9.jpg
+    - assets/images/contentList/nightLife/10.jpg
+    - assets/images/contentList/nightLife/11.jpg
+    - assets/images/contentList/nightLife/12.jpg
+    - assets/images/contentList/nightLife/13.jpg
+    - assets/images/contentList/nightLife/14.jpg
 
     #whereToEat
     - assets/images/contentList/whereToEat/1.jpg
@@ -317,6 +356,7 @@ flutter:
     - assets/images/contentList/medicalTourism/1.jpg
     - assets/images/contentList/medicalTourism/2.jpg
     - assets/images/contentList/medicalTourism/3.jpg
+    - assets/images/contentList/medicalTourism/4.jpg
 
     #subMedicalTourism
     - assets/images/contentList/medicalTourism/sub-medical/Damai-Service-Hospital.jpg
@@ -328,6 +368,25 @@ flutter:
     - assets/images/contentList/medicalTourism/sub-medical/KPJ-Tawakkal-KL.jpg
     - assets/images/contentList/medicalTourism/sub-medical/Nexus-Clinic-KL.jpg
     - assets/images/contentList/medicalTourism/sub-medical/Peter-Chng.jpg
+    - assets/images/contentList/medicalTourism/sub-medical/ijn.jpg
+    - assets/images/contentList/medicalTourism/sub-medical/prince.jpg
+    - assets/images/contentList/medicalTourism/sub-medical/columbia.jpg
+    - assets/images/contentList/medicalTourism/sub-medical/kanak.jpg
+    - assets/images/contentList/medicalTourism/sub-medical/pantaikl.jpg
+    - assets/images/contentList/medicalTourism/sub-medical/tungshin.jpg
+    - assets/images/contentList/medicalTourism/sub-medical/um.jpg
+    - assets/images/contentList/medicalTourism/sub-medical/lau.jpg
+    - assets/images/contentList/medicalTourism/sub-medical/smile.jpg
+    - assets/images/contentList/medicalTourism/sub-medical/dutamas.jpg
+    - assets/images/contentList/medicalTourism/sub-medical/cleo.jpg
+    - assets/images/contentList/medicalTourism/sub-medical/premier.jpg
+    - assets/images/contentList/medicalTourism/sub-medical/chang.jpg
+    - assets/images/contentList/medicalTourism/sub-medical/asiaeye.jpg
+    - assets/images/contentList/medicalTourism/sub-medical/kleye.jpg
+    - assets/images/contentList/medicalTourism/sub-medical/ikonik.jpg
+    - assets/images/contentList/medicalTourism/sub-medical/optimax.jpg
+    - assets/images/contentList/medicalTourism/sub-medical/vista.jpg
+    - assets/images/contentList/medicalTourism/sub-medical/isec.jpg
 
     #transportaion
     - assets/images/contentList/transportaion/lrt.png
@@ -353,6 +412,30 @@ flutter:
     - assets/images/contentList/accomodation/8.jpg
     - assets/images/contentList/accomodation/9.jpg
     - assets/images/contentList/accomodation/10.jpg
+    - assets/images/contentList/accomodation/parkroyal.jpg
+    - assets/images/contentList/accomodation/pavilion.jpg
+    - assets/images/contentList/accomodation/westin.jpg
+    - assets/images/contentList/accomodation/hilton.jpg
+    - assets/images/contentList/accomodation/izumi.jpg
+    - assets/images/contentList/accomodation/joyinn.jpg
+    - assets/images/contentList/accomodation/lavana.jpg
+    - assets/images/contentList/accomodation/momo.jpg
+    - assets/images/contentList/accomodation/paloma.jpg
+    - assets/images/contentList/accomodation/pod.jpg
+    - assets/images/contentList/accomodation/raizzy.jpg
+    - assets/images/contentList/accomodation/replica.jpg
+    - assets/images/contentList/accomodation/valenza.jpg
+    - assets/images/contentList/accomodation/5bands.jpg
+    - assets/images/contentList/accomodation/amethyst.jpg
+    - assets/images/contentList/accomodation/capsule.jpg
+    - assets/images/contentList/accomodation/explore.jpg
+    - assets/images/contentList/accomodation/illuminate.jpg
+    - assets/images/contentList/accomodation/kitez.jpg
+    - assets/images/contentList/accomodation/leo.jpg
+    - assets/images/contentList/accomodation/mingle.jpg
+    - assets/images/contentList/accomodation/sekeping.jpg
+    - assets/images/contentList/accomodation/sunshines.jpg
+    - assets/images/contentList/accomodation/traders.jpg
 
     #island
     - assets/images/contentList/island/1.jpg
@@ -361,6 +444,9 @@ flutter:
     - assets/images/contentList/island/4.jpg
     - assets/images/contentList/island/5.jpg
     - assets/images/contentList/island/6.jpg
+    - assets/images/contentList/island/7.jpg
+    - assets/images/contentList/island/8.jpg
+    - assets/images/contentList/island/9.jpg
 
     #hillside
     - assets/images/contentList/hillside/1.jpg
@@ -376,6 +462,10 @@ flutter:
     - assets/images/contentList/waterfall/3.jpg
     - assets/images/contentList/waterfall/4.jpg
     - assets/images/contentList/waterfall/5.jpg
+    - assets/images/contentList/waterfall/5b.jpg
+    - assets/images/contentList/waterfall/6.jpeg
+    - assets/images/contentList/waterfall/7.jpg
+    - assets/images/contentList/waterfall/8.jpg
 
     #hiking
     - assets/images/contentList/hiking/1.jpg
@@ -383,6 +473,16 @@ flutter:
     - assets/images/contentList/hiking/3.jpg
     - assets/images/contentList/hiking/4.jpg
     - assets/images/contentList/hiking/5.jpg
+    - assets/images/contentList/hiking/6.jpg
+    - assets/images/contentList/hiking/7.jpg
+    - assets/images/contentList/hiking/8.jpg
+    - assets/images/contentList/hiking/2.jfif
+
+    #extremesports
+    - assets/images/contentList/extreme/1.jpg
+    - assets/images/contentList/extreme/1b.jpeg
+    - assets/images/contentList/extreme/2.jpg
+    - assets/images/contentList/extreme/3.jpg
 
     #muslim
     - assets/images/contentList/muslim/1.jpg
@@ -403,6 +503,7 @@ flutter:
     - assets/images/contentList/hindu/korttu.jpg
     - assets/images/contentList/hindu/shree.jpg
     - assets/images/contentList/hindu/sri.jpg
+    - assets/images/contentList/hindu/athi.jpg
 
     #buddhist
     - assets/images/contentList/buddhist/1.jpg
@@ -410,6 +511,9 @@ flutter:
     - assets/images/contentList/buddhist/3.jpg
     - assets/images/contentList/buddhist/4.jpg
     - assets/images/contentList/buddhist/5.jpg
+    - assets/images/contentList/buddhist/6.jpg
+    - assets/images/contentList/buddhist/7.jpg
+    - assets/images/contentList/buddhist/8.jpg
 
     #otherWorship
     - assets/images/contentList/otherWorship/1.jpg
@@ -434,6 +538,8 @@ flutter:
     - assets/images/contentList/malayfood/restoranrebung.jpg
     - assets/images/contentList/malayfood/sambalhijaurestaurant.jpg
     - assets/images/contentList/malayfood/songket_rest.jpg
+    - assets/images/contentList/malayfood/sarawak.jpg
+    - assets/images/contentList/malayfood/bowl.JPG
 
     #chinesefood
     - assets/images/contentList/chineseFood/xincuisine.jpg
@@ -446,6 +552,8 @@ flutter:
     - assets/images/contentList/chineseFood/restsiu.jpg
     - assets/images/contentList/chineseFood/Shang_Rest.jpg
     - assets/images/contentList/chineseFood/SY_Rest.jpg
+    - assets/images/contentList/chineseFood/opium.jpg
+    - assets/images/contentList/chineseFood/cerdo.jpg
 
     #indianFood
     - assets/images/contentList/indianFood/namaste.jpg
@@ -458,6 +566,7 @@ flutter:
     - assets/images/contentList/indianFood/tasty.jpg
     - assets/images/contentList/indianFood/wood.jpg
     - assets/images/contentList/indianFood/wtf.jpg
+    - assets/images/contentList/indianFood/khan.jpg
 
     #arabFood
     - assets/images/contentList/arabFood/rawsha.jpg
@@ -518,6 +627,24 @@ flutter:
     - assets/images/contentList/fastFood/8.png
     - assets/images/contentList/fastFood/9.png
     - assets/images/contentList/fastFood/10.png
+
+    #westernFood
+    - assets/images/contentList/westernFood/1.jpg
+    - assets/images/contentList/westernFood/2.jpg
+    - assets/images/contentList/westernFood/3.jpg
+    - assets/images/contentList/westernFood/4.jpg
+    - assets/images/contentList/westernFood/5.jpg
+    - assets/images/contentList/westernFood/6.jpg
+
+    #artscene
+    - assets/images/contentList/artscene/1.jpg
+    - assets/images/contentList/artscene/2.jpg
+    - assets/images/contentList/artscene/3.jpg
+    - assets/images/contentList/artscene/4.jpg
+    - assets/images/contentList/artscene/5.jpg
+    - assets/images/contentList/artscene/6.jpg
+    - assets/images/contentList/artscene/7.jpg
+    - assets/images/contentList/artscene/artscene.jpg
 
     #logo
     - assets/images/Logo_100x50.png

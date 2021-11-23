@@ -139,6 +139,63 @@ const ContentData = const [
       locationUrl: 'https://goo.gl/maps/z1hFQuuWN8tgrYiWA',
       webText: '-',
       webUrl: '-'),
+  ContentClass(
+      id: 'cl6_3',
+      decrepitation:
+          'Dataran Merdeka was formerly known as the Selangor Club Padang or simply the Padang. It was used as the cricket green of the Selangor Club. ',
+      content:
+          'The Queen Victoria fountain in Kuala Lumpur, Malaysia was completed in 1904. The two-tiered fountain is adorned with gargoyles on all four sides of its foundation. Lights are lit up at night time which illuminates the structure of the fountain as well as its reservoir.',
+      workhour: 'Open 24 hours',
+      fees: '-',
+      phoneNo: '-',
+      locationText:
+          'City Centre, 50050 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
+      locationUrl: 'https://goo.gl/maps/UsZ9bkAKVAuDYfzu5',
+      webText: '-',
+      webUrl: '-'),
+  ContentClass(
+      id: 'cl7_3',
+      decrepitation:
+          'Dataran Merdeka was formerly known as the Selangor Club Padang or simply the Padang. It was used as the cricket green of the Selangor Club. ',
+      content:
+          'The Ilham Baru Tower is a 58 storey skyscraper on Jalan Binjai, in the KLCC enclave in downtown Kuala Lumpur. Ilham Baru Tower is the third tallest skyscraper in the KLCC area with 978 feet of height.',
+      workhour: '',
+      fees: '-',
+      phoneNo: '+603-27713388',
+      locationText:
+          'Ilham Tower, 8, Jln Binjai, Kuala Lumpur, 50450 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
+      locationUrl: 'https://goo.gl/maps/A4AtsZyzAKmXhRDu6',
+      webText: '-',
+      webUrl: '-'),
+  ContentClass(
+      id: 'cl8_3',
+      decrepitation:
+          'Dataran Merdeka was formerly known as the Selangor Club Padang or simply the Padang. It was used as the cricket green of the Selangor Club. ',
+      content:
+          "Bangunan Sulaiman is one of Kuala Lumpur's most well-known British colonial monuments, spanning 16,430 square metres. It was founded in 1933 and has hosted a variety of government departments, including the Syariah court.",
+      workhour:
+          ' 8.30am - 5.30pm (Monday - Friday) \n Closed on Saturday & Sunday',
+      fees: '-',
+      phoneNo: '+603-22711000',
+      locationText:
+          'Jalan Sultan Hishamuddin, Kampung Attap, 50000 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
+      locationUrl: 'https://goo.gl/maps/ehXeiCt9utHiHpce7',
+      webText: '-',
+      webUrl: '-'),
+  ContentClass(
+      id: 'cl9_3',
+      decrepitation:
+          'Dataran Merdeka was formerly known as the Selangor Club Padang or simply the Padang. It was used as the cricket green of the Selangor Club. ',
+      content:
+          "During the British colonial period, Arthur B. Hubback constructed Panggung Bandaraya in 1904. Musicals and operas are currently performed at the theatre and it’s the oldest theatre in Kuala Lumpur.",
+      workhour: '10.00am - 8.30pm (on show days)',
+      fees: '-',
+      phoneNo: '+603-26023335',
+      locationText:
+          'Jalan Raja, City Centre, 50050 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
+      locationUrl: 'https://goo.gl/maps/U6nDv7juYrpuRdBJA',
+      webText: '-',
+      webUrl: '-'),
 
 //parks 4
 // need to add 2 more data Entry fee & tel number
@@ -281,6 +338,136 @@ const ContentData = const [
       locationText:
           'Bukit Kiara Trail, Sungai Penchala, 60000 Kuala Lumpur, Federal Territory of Kuala Lumpur',
       locationUrl: 'https://goo.gl/maps/T8fkzRYjJ9C8as3m8',
+      webText: '-',
+      webUrl: '-'),
+  ContentClass(
+      id: 'cl11_4',
+      decrepitation:
+          'Bukit Kiara Park is surrounded by nature, which is enjoyed by people of all walks of life and home to many wild plants , birds, monkeys and other animals.',
+      content:
+          'Kuala Lumpur Butterfly Park is where you’ll find more than 6000 types of butterflies among lots of dense greenery, colourful flowers, cascading waterfalls and ponds and its one of the famous tourist attractions in Kuala Lumpur.',
+      workhour: '9.00 am - 5.30 pm (Daily)',
+      fees: '-',
+      phoneNo: '+603-26934799',
+      locationText:
+          'Jalan Cendrawasih, Tasik Perdana, 50480 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
+      locationUrl: 'https://g.page/butterfly-park-kl?share',
+      webText: '-',
+      webUrl: '-'),
+  ContentClass(
+      id: 'cl12_4',
+      decrepitation:
+          'Bukit Kiara Park is surrounded by nature, which is enjoyed by people of all walks of life and home to many wild plants , birds, monkeys and other animals.',
+      content:
+          "The Orchid Gardens, which cover 10,000 square metres, are a highlight of the Perdana Botanical Gardens. The Hibiscus Garden, which is home to Malaysia's national flower that blooms in abundance here, is also popular.",
+      workhour: '7.00 am - 8.00 pm (Daily)',
+      fees: '-',
+      phoneNo: '-',
+      locationText: 'Jalan Kebun Bunga, Tasik Perdana, Kuala Lumpur',
+      locationUrl: 'https://g.page/perdana-botanical-garden-kl?share',
+      webText: '-',
+      webUrl: '-'),
+
+//Memorial & Museums
+  ContentClass(
+      id: 'cl1_23',
+      decrepitation:
+          'Bukit Kiara Park is surrounded by nature, which is enjoyed by people of all walks of life and home to many wild plants , birds, monkeys and other animals.',
+      content:
+          "Through dioramas of a traditional hamlet, a Wayang-Kulit (shadow-play) theatre, a Malay wedding dais, and the manufacture of Wau Bulan, the gallery illustrates the daily life of the Malays.",
+      workhour: '9.00 am - 5.00 pm (Tuesday - Sunday) \n Closed on Monday',
+      fees: '-',
+      phoneNo: '+603-22671000',
+      locationText:
+          'Jalan Damansara, Tasik Perdana, 50480 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
+      locationUrl: 'https://goo.gl/maps/M3kS7EFRPT9D45B18',
+      webText: '-',
+      webUrl: '-'),
+  ContentClass(
+      id: 'cl2_23',
+      decrepitation:
+          'Bukit Kiara Park is surrounded by nature, which is enjoyed by people of all walks of life and home to many wild plants , birds, monkeys and other animals.',
+      content:
+          "The objective of the National Textile Museum is to preserve trends and innovations in textiles and communal living in Malaysia throughout its history and into the future. In the gallery, visitors will be able to see a selection of four leading fabrics, accessories, and clothes, as well as a multimedia display.",
+      workhour: '9.00 am - 6.00 pm (Daily)',
+      fees: '-',
+      phoneNo: '-',
+      locationText:
+          '26, Jalan Sultan Hishamuddin, City Centre, 50000 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
+      locationUrl: 'https://goo.gl/maps/oxmKraYNqy91LRdd9',
+      webText: '-',
+      webUrl: '-'),
+  ContentClass(
+      id: 'cl3_23',
+      decrepitation:
+          'Bukit Kiara Park is surrounded by nature, which is enjoyed by people of all walks of life and home to many wild plants , birds, monkeys and other animals.',
+      content:
+          "The Museum exhibits about 7,000 artefacts spanning 4,000 years of Asian history and representing cultures from all around Asia. The museum displays Asian art and culture, unique material aesthetics and intellectual achievements.",
+      workhour:
+          '8.30 am - 5.00 pm (Monday - Thursday) \n 8.30am - 5.00pm (Friday)',
+      fees: '-',
+      phoneNo: '+603-7967380',
+      locationText:
+          'Jalan Ilmu, 50603 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur ',
+      locationUrl: 'https://goo.gl/maps/VWfYX9Y6TfFpVUzK7',
+      webText: '-',
+      webUrl: '-'),
+  ContentClass(
+      id: 'cl4_23',
+      decrepitation:
+          'Bukit Kiara Park is surrounded by nature, which is enjoyed by people of all walks of life and home to many wild plants , birds, monkeys and other animals.',
+      content:
+          "The Royal Malaysia Police Museum was constructed in 1958. The museum is divided into three sections, which are gallery A, Gallery B, and Gallery C and each of which highlights the role of Malaysian police across time as well as the police involvement in  various Malayan disasters.",
+      workhour:
+          '10.00 am - 6.00 pm (Tuesday - Thursday) \n 10.00 am - 6.00 pm (Friday)',
+      fees: '-',
+      phoneNo: '+603-22725689',
+      locationText:
+          '5, Jalan Perdana, Tasik Perdana, 50480 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
+      locationUrl: 'https://goo.gl/maps/AV7kSjqU2e1psMmC6',
+      webText: '-',
+      webUrl: '-'),
+  ContentClass(
+      id: 'cl5_23',
+      decrepitation:
+          'Bukit Kiara Park is surrounded by nature, which is enjoyed by people of all walks of life and home to many wild plants , birds, monkeys and other animals.',
+      content:
+          "The museum shows jewellery collections, tools, beautiful carvings, and pieces with complex workmanship that have spiritual meaning. Surprisingly,  it's more of a shop than a museum where tourists can purchase jades which are imported from Myanmar and China.",
+      workhour: '9.30 am - 5.00 pm (Daily)',
+      fees: '-',
+      phoneNo: '+603-21429648',
+      locationText:
+          '26, Jalan Delima, 55100 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
+      locationUrl: 'https://goo.gl/maps/A7SQyeXFwNcVyAB37',
+      webText: '-',
+      webUrl: '-'),
+  ContentClass(
+      id: 'cl6_23',
+      decrepitation:
+          'Bukit Kiara Park is surrounded by nature, which is enjoyed by people of all walks of life and home to many wild plants , birds, monkeys and other animals.',
+      content:
+          "Over ten thousand objects and an extraordinary library of Islamic art publications may be found at the Islamic Arts Museum Malaysia.",
+      workhour: '9.30 am - 6.00 pm (Daily)',
+      fees: '-',
+      phoneNo: '+603-20927070',
+      locationText:
+          'Jalan Lembah, Tasik Perdana, 50480 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
+      locationUrl: 'https://g.page/iamm_kl?share',
+      webText: '-',
+      webUrl: '-'),
+  ContentClass(
+      id: 'cl7_23',
+      decrepitation:
+          'Bukit Kiara Park is surrounded by nature, which is enjoyed by people of all walks of life and home to many wild plants , birds, monkeys and other animals.',
+      content:
+          "The Memorial Negarawan was created to honour and remember these Statesmen's achievements to the nation and society.",
+      workhour:
+          ' 9.00 am - 5.00 pm (Tuesday - Thursday) \n 9.00 am - 5.00 pm (Friday)',
+      fees: '-',
+      phoneNo: '+603-26040559',
+      locationText:
+          'Jalan Dato Onn, Kuala Lumpur, 50480 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
+      locationUrl: 'https://goo.gl/maps/cWMyFhfaX877G2Ei6',
       webText: '-',
       webUrl: '-'),
 
@@ -480,6 +667,71 @@ const ContentData = const [
       locationUrl: 'https://goo.gl/maps/i3Jwd9KvL129q3A2A',
       webText: '-',
       webUrl: '-'),
+  ContentClass(
+      id: 'cl5_6',
+      decrepitation: '',
+      content:
+          "The Kuala Lumpur Deer Park is a two-hectare enclosure in Lake Gardens, Kuala Lumpur. Fallow deer, axis deer, and sambar deer are among the park's other deer species. The park's rich foliage, attractive ponds, and calm environment will appeal to visitors.",
+      workhour: '10.00 am - 6.00 pm (Monday - Sunday)',
+      fees: '-',
+      phoneNo: '+603-92000039',
+      locationText: 'Jalan Perdana, Tasik Perdana, 50480 Kuala Lumpur',
+      locationUrl: 'https://goo.gl/maps/DqeYFNWVTyfGg4yr8',
+      webText: 'http://www.kuala-lumpur.ws/attractions/kl-deer-park.htm',
+      webUrl: 'http://www.kuala-lumpur.ws/attractions/kl-deer-park.htm '),
+  ContentClass(
+      id: 'cl6_6',
+      decrepitation: '',
+      content:
+          "The aviation-themed play park aims to enhance the experience of children by providing distinctive amenities such as ball pools, trampolines, and webbing bridges, among other things.",
+      workhour: '10.00 am - 8.00 pm (Monday - Sunday)',
+      fees: '-',
+      phoneNo: '+603-64194976',
+      locationText:
+          '3F - 06, 07 & 08, 8, Jalan Kiara, Mont Kiara, 50480 Kuala Lumpur',
+      locationUrl: 'https://g.page/kidsnationmy?share',
+      webText: 'https://www.kidsnation.my/',
+      webUrl: 'https://www.kidsnation.my/'),
+  ContentClass(
+      id: 'cl7_6',
+      decrepitation: '-',
+      content:
+          "The Kid's Gym provides a safe environment for children of all abilities to play and grow together. The meticulously built sensory gear, specifically created to assist youngsters with sensory processing issues, will be extremely beneficial to them.",
+      workhour: '9.00 am - 6.00 pm (Monday - Saturday) \nClosed on Sunday',
+      fees: '-',
+      phoneNo: '+6010-9395711',
+      locationText: '204, Jalan Limau Manis, Bangsar, 59000 Kuala Lumpur',
+      locationUrl: 'https://g.page/wrtsexpressbangsar?share',
+      webText: 'https://www.werockthespectrumbangsar.com/ ',
+      webUrl: 'https://www.werockthespectrumbangsar.com/ '),
+  ContentClass(
+      id: 'cl8_6',
+      decrepitation:
+          "The Bamboo Playhouse is a public pavilion in the Perdana Botanical Gardens, Kuala Lumpur's oldest and possibly most beautiful park.",
+      content:
+          "The pavilion is located on a small island in the middle of a big lake that runs through the park. Bamboo is rarely used in modern buildings in Malaysia, and this structure investigates its possibilities as a sustainable building material.",
+      workhour: '6.00 am - 8.00 pm (Monday - Sunday)',
+      fees: '-',
+      phoneNo: '-',
+      locationText: 'Perdana Botanical Garden, 50480 Kuala Lumpur',
+      locationUrl: 'https://goo.gl/maps/4pzhaToifVjNFcpFA',
+      webText: 'https://bit.ly/3oHAEbI',
+      webUrl: 'https://bit.ly/3oHAEbI'),
+  ContentClass(
+      id: 'cl9_6',
+      decrepitation:
+          "Beast Park, allow your children to unleash their inner beast at this one-of-a-kind indoor adventure and activity park.",
+      content:
+          "The Beast Net and ninja courses are also available for older kids! It is terrific fun for children over 120cm and is located in JUMPA in Sungei Wang. Beast Park and Camp5 have collaborated to create a venue where you and your kids can go rock climbing.",
+      workhour:
+          '10.00 am - 10.00 pm (Monday - Friday) \n10.00 am - 8.00 pm (Saturday - Sunday)',
+      fees: '-',
+      phoneNo: '+603-27137128',
+      locationText:
+          'Level 3, JUMPA @ Sungei Wang Plaza, Jl Sultan Ismail, 50250 Kuala Lumpur',
+      locationUrl: 'https://g.page/beastparkmy?share',
+      webText: 'https://beastpark.my/',
+      webUrl: 'https://beastpark.my/'),
 //localFood 17
   ContentClass(
       id: 'cl1_17',
@@ -693,6 +945,68 @@ const ContentData = const [
       locationUrl: 'https://g.page/pavilionmall-kuala-lumpur?share',
       webText: '-',
       webUrl: '-'),
+  ContentClass(
+      id: 'cl6_11',
+      decrepitation:
+          'The Mid Valley Shopping Mall is one of the largest in Southeast Asia.',
+      content:
+          'It is perhaps the most popular shopping destination in the Klang Valley. The mall is connected by a huge flyover that passes across the smaller Bangsar roads that link to other regions.',
+      workhour: '10.00 am - 10.00 pm (Monday - Sunday)',
+      fees: '-',
+      phoneNo: '+603-29383333',
+      locationText: 'Lingkaran Syed Putra, 59200 Kuala Lumpur',
+      locationUrl: 'https://goo.gl/maps/SuebrXyoyGWVYmEL9',
+      webText: 'https://www.midvalley.com.my/',
+      webUrl: 'https://www.midvalley.com.my/'),
+  ContentClass(
+      id: 'cl7_11',
+      decrepitation: '-',
+      content:
+          'The mall is well-known not only for its convenient location and luxury businesses, but also for tourist attractions for children such as Aquaria KLCC and Petrosains, an oceanarium and a science exploration centre, respectively.',
+      workhour: '10.00 am - 10.00 pm (Monday - Sunday)',
+      fees: '-',
+      phoneNo: '+603-23822828',
+      locationText:
+          '241, Suria KLCC, Kuala Lumpur City Centre, 50088 Kuala Lumpur',
+      locationUrl: 'https://g.page/SuriaKLCCMall?share',
+      webText: 'https://www.suriaklcc.com.my/',
+      webUrl: 'https://www.suriaklcc.com.my/'),
+  ContentClass(
+      id: 'cl8_11',
+      decrepitation:
+          'Starhill Gallery is a high-end shopping mall with seven levels of luxury retail experience that is directly connected to the five-star JW Marriott.',
+      content:
+          'The Feast and Relish floors offer a wide range of fine dining alternatives, while the Indulge and Adorn levels offer a wide range of designer brands, with the former emphasising fashion labels.',
+      workhour: '10.00 am - 10.00 pm (Monday - Sunday)',
+      fees: '-',
+      phoneNo: '+603-27823800',
+      locationText: '181, Bukit Bintang St, Bukit Bintang, 55100 Kuala Lumpur',
+      locationUrl: 'https://goo.gl/maps/GDP5WVhe4PFyihgL7',
+      webText: '-',
+      webUrl: '-'),
+  ContentClass(
+      id: 'cl9_11',
+      decrepitation: '-',
+      content:
+          'Berjaya Times Square is a one-stop entertainment centre for people of all ages. It includes an indoor theme park with an IMAX theatre, a cinema, a luxury spa and a games arcade. It is connected to a five-star hotel of the same brand name.',
+      workhour: '10.00 am - 10.00 pm (Monday - Sunday)',
+      fees: '-',
+      phoneNo: '1-300-88-8988',
+      locationText: 'No. 1, Jalan Imbi, Imbi, 55100 Kuala Lumpur',
+      locationUrl: 'https://goo.gl/maps/UqUTKnyHpMbaWDS18',
+      webText: 'https://berjayatimessquarekl.com/',
+      webUrl: 'https://berjayatimessquarekl.com/'),
+  ContentClass(
+      id: 'cl10_11',
+      decrepitation: '-',
+      content: '-',
+      workhour: '10.00 am - 10.00 pm (Monday - Sunday)',
+      fees: '-',
+      phoneNo: '+603-22970288',
+      locationText: 'Lingkaran Syed Putra, Mid Valley City, 59200 Kuala Lumpur',
+      locationUrl: 'https://goo.gl/maps/srg5ENqKkU8ZWbqA9',
+      webText: 'https://thegardensmall.com.my/',
+      webUrl: 'https://thegardensmall.com.my/'),
 
 //nightLife 12
   ContentClass(
@@ -814,6 +1128,117 @@ const ContentData = const [
       locationUrl: 'https://g.page/mantra-rooftop-bar-and-lounge?share',
       webText: 'mantrabarkl.com',
       webUrl: 'https://www.mantrabarkl.com/index'),
+  ContentClass(
+      id: 'cl6_12b',
+      decrepitation: '-',
+      content: '-',
+      workhour:
+          '4.00 pm - 12.00 am (Monday - Thursday) \n2.00 pm-12.00 am (Friday - Sunday)',
+      fees: '-',
+      phoneNo: '+6012-5175776',
+      locationText: '2 & 4, Changkat Bukit Bintang, 50200 Kuala Lumpur',
+      locationUrl: 'https://g.page/havanakl?share',
+      webText: '-',
+      webUrl: '-'),
+  ContentClass(
+      id: 'cl7_12b',
+      decrepitation: '-',
+      content: '-',
+      workhour:
+          '5.00 am - 3.00 am (Sunday - Tuesday)\n5.00 pm - 4.00 am (Wednesday-Thursday)\n5.00 pm - 5.00 am (Friday - Saturday)',
+      fees: '-',
+      phoneNo: '+603-21103888',
+      locationText:
+          '436, Jln Tun Razak, Kelab Golf di Raja Selangor, 50400 Kuala Lumpur',
+      locationUrl: 'https://g.page/zoukclubkl?share',
+      webText: '-',
+      webUrl: '-'),
+  ContentClass(
+      id: 'cl8_12b',
+      decrepitation: '-',
+      content: '-',
+      workhour: '4.00 pm - 12.00 am (Monday - Sunday)',
+      fees: '-',
+      phoneNo: '+6012-3938627',
+      locationText:
+          'Third Floor, No. 15, Jalan Balai Polis, 50000 Kuala Lumpur',
+      locationUrl: 'https://goo.gl/maps/AsYA7LxqeXWGXr776',
+      webText: '-',
+      webUrl: '-'),
+  ContentClass(
+      id: 'cl9_12b',
+      decrepitation: '-',
+      content: '-',
+      workhour: '5.00 pm - 10.00 pm (Monday - Sunday)',
+      fees: '-',
+      phoneNo: '+6012-7356709',
+      locationText: '46, Changkat Bukit Bintang, 50200 Kuala Lumpur',
+      locationUrl: 'https://g.page/thewhiskybarkl?share',
+      webText: '-',
+      webUrl: '-'),
+  ContentClass(
+      id: 'cl10_12b',
+      decrepitation: '-',
+      content: '-',
+      workhour: '12.00 pm - 12.00 am (Monday - Sunday)',
+      fees: '-',
+      phoneNo: '+603-20115715',
+      locationText:
+          '61M, Jalan Medan Setia 1, Bukit Damansara, 50490 Kuala Lumpur',
+      locationUrl: 'https://g.page/junglebirdkl?share',
+      webText: '-',
+      webUrl: '-'),
+
+//Night Markets in KL
+  ContentClass(
+      id: 'cl1_12c',
+      decrepitation: '-',
+      content:
+          "This street market is well-known among the locals for its wide selection of Chinese hawker fare such as curry noodles, char kuey teow, laksa, and satay, as well as local desserts, ice cream, and snacks.",
+      workhour: '6.00 pm - 1.00 am (Wednesday)',
+      fees: '-',
+      phoneNo: '-',
+      locationText:
+          '130, 108, Jalan Cerdas, Taman Connaught, 56000 Kuala Lumpur',
+      locationUrl: 'https://goo.gl/maps/PQhf2JKSAdALQDFv9',
+      webText: '-',
+      webUrl: '-'),
+  ContentClass(
+      id: 'cl2_12c',
+      decrepitation:
+          "Petaling Street, also known as Kuala Lumpur's most popular street market.",
+      content:
+          "A dynamic and vibrant retail centre in Chinatown KL that has hundreds of stalls selling a wide range of goods at bargain prices. A large green awning spans the length of the street, protecting merchants and shoppers from the sweltering sun and torrential rain as they browse for fake purses, watches, trainers, and apparel.",
+      workhour: '8.00 am - 8.00 pm (Monday - Sunday)',
+      fees: '-',
+      phoneNo: '+603-20325988',
+      locationText: 'Jalan Petaling, City Centre, 50000 Kuala Lumpur',
+      locationUrl: 'https://g.page/petaling-street-market?share',
+      webText: '-',
+      webUrl: '-'),
+  ContentClass(
+      id: 'cl3_12c',
+      decrepitation: "-",
+      content:
+          "Visitors come to Kasturi Walk, which is located next to Central Market, for fake-label handbags, watches, tee-shirts, and flip-flops while sampling a variety of local fruits and delicacies — without the frenetic crowds and (sometimes) unclean passageways of Petaling Street.",
+      workhour: 'Open 24 Hours',
+      fees: '-',
+      phoneNo: '-',
+      locationText: 'Jalan Hang Kasturi, City Centre, 50050 Kuala Lumpur',
+      locationUrl: 'https://goo.gl/maps/YTRCVNahSG9aQhqc9',
+      webText: '-',
+      webUrl: '-'),
+  ContentClass(
+      id: 'cl4_12c',
+      decrepitation: "-",
+      content: "-",
+      workhour: '5.00 pm - 9.00 pm (Friday)',
+      fees: '-',
+      phoneNo: '-',
+      locationText: '65, Jalan 1/48a, Bandar Baru Sentul, 51000 Kuala Lumpur',
+      locationUrl: 'https://goo.gl/maps/qFZJrinTb7KoW4rC6',
+      webText: '-',
+      webUrl: '-'),
 
 //whereToEat 13 // Street Food
   ContentClass(
@@ -873,9 +1298,9 @@ const ContentData = const [
       webText: '-',
       webUrl: '-'),
 
-//accomation 15 // staying in kl
+//accomodation 15 // staying in kl
   ContentClass(
-      id: 'cl1_15',
+      id: 'cl1_15a',
       decrepitation: '-',
       content:
           'Luxurious hotel in downtown Kuala Lumpur. Designed to represent Malaysia\'s true architectural heritage. A beautifully built hotel with a fantastic venue.',
@@ -888,7 +1313,7 @@ const ContentData = const [
       webText: '-',
       webUrl: '-'),
   ContentClass(
-      id: 'cl2_15',
+      id: 'cl2_15a',
       decrepitation: '-',
       content:
           'Strategically situated near Kuala Lumpur, Majestic Hotel opened its doors in December 2012. Established in 1932, the original hotel was one of the prominent of Kuala Lumpur in its day.',
@@ -901,7 +1326,7 @@ const ContentData = const [
       webText: '-',
       webUrl: '-'),
   ContentClass(
-      id: 'cl3_15',
+      id: 'cl3_15a',
       decrepitation: '-',
       content:
           'The Furama Hotel is 750 metres from Imbi Monorail Station and offers spacious accommodation with free WiFi and free on-site parking. Berjaya Times Square shopping centre is only a short 4-minute walk from the hotel.',
@@ -914,7 +1339,7 @@ const ContentData = const [
       webText: '-',
       webUrl: '-'),
   ContentClass(
-      id: 'cl4_15',
+      id: 'cl4_15a',
       decrepitation: '-',
       content:
           'JW Marriott Kuala Lumpur is located in close proximity to the bustling Bukit Bintang area. This 5-star luxury hotel provides luxurious comfort and convenience.',
@@ -927,7 +1352,7 @@ const ContentData = const [
       webText: '-',
       webUrl: '-'),
   ContentClass(
-      id: 'cl5_15',
+      id: 'cl5_15a',
       decrepitation: '-',
       content:
           'Mandarin Oriental is located between the famous Petronas Twin Towers and the lush gardens of Kuala Lumpur City Park. The hotel is situated approximately 45 km from KLIA.',
@@ -940,33 +1365,29 @@ const ContentData = const [
       webText: '-',
       webUrl: '-'),
   ContentClass(
-      id: 'cl6_15',
+      id: 'cl6_15a',
       decrepitation: '-',
-      content:
-          'Just 100m from Masjid Jamek LRT station, Citin Hotel is convenient for tourists in the heart of Kuala Lumpur.',
+      content: '-',
       workhour: '-',
       fees: '-',
-      phoneNo: '+603-26932999',
-      locationText:
-          '33, Jalan Melayu, City Centre, 50100 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
-      locationUrl: 'https://goo.gl/maps/9nUyxxMFWgcncPKb9',
+      phoneNo: '+603-23329888',
+      locationText: 'Kuala Lumpur City Centre, 50088 Kuala Lumpur',
+      locationUrl: 'https://goo.gl/maps/ctyZ3N8F9Gy7AqDV9',
       webText: '-',
       webUrl: '-'),
   ContentClass(
-      id: 'cl7_15',
+      id: 'cl7_15a',
       decrepitation: '-',
-      content:
-          'Prescott Hotel Kuala Lumpur is within easy reach of major financial districts, government buildings and entertainment and cultural centres.',
+      content: '-',
       workhour: '-',
       fees: '-',
-      phoneNo: '+603-27137887',
-      locationText:
-          'No 23, Lorong Medan Tuanku 1, Off, Jalan Sultan Ismail, 50300 Kuala Lumpur',
-      locationUrl: 'https://goo.gl/maps/e8KnC22y5p1R3k6N7',
+      phoneNo: '+603-21172888',
+      locationText: '170, Bukit Bintang St, 55100 Kuala Lumpur',
+      locationUrl: 'https://g.page/PavilionHotelKualaLumpur?share',
       webText: '-',
       webUrl: '-'),
   ContentClass(
-      id: 'cl8_15',
+      id: 'cl8_15a',
       decrepitation: '-',
       content:
           'The Westin Kuala Lumpur is located in the heart of the Golden Triangle of Kuala Lumpur. Shopping malls including Pavilion, Lot 10 and Sungei Wang are located within walking distance of the property.',
@@ -979,7 +1400,7 @@ const ContentData = const [
       webText: '-',
       webUrl: '-'),
   ContentClass(
-      id: 'cl9_15',
+      id: 'cl9_15a',
       decrepitation: '-',
       content:
           'A 2-minute walk to KL Sentral, Hilton Kuala Lumpur is located 750 m away from the 9-storey premium shopping mall, Nu Sentral.',
@@ -992,7 +1413,7 @@ const ContentData = const [
       webText: '-',
       webUrl: '-'),
   ContentClass(
-      id: 'cl10_15',
+      id: 'cl10_15a',
       decrepitation: '-',
       content:
           'InterContinental Kuala Lumpur offers facilities in the hustle and bustle of the city centre.',
@@ -1004,6 +1425,239 @@ const ContentData = const [
       locationUrl: 'https://goo.gl/maps/chLuAmGSRMYrMSyYA',
       webText: '-',
       webUrl: '-'),
+  //Accomodation Budget Hotels
+  ContentClass(
+      id: 'cl1_15b',
+      decrepitation: '-',
+      content: '-',
+      workhour: '-',
+      fees: '-',
+      phoneNo: '+603-21458833',
+      locationText:
+          '85, Jalan Berangan, Off, Jalan Bukit Bintang, 50200 Kuala Lumpur',
+      locationUrl: 'https://goo.gl/maps/y2sSpBXmdh1ranTb8',
+      webText: 'http://www.izumihotel.com/',
+      webUrl: 'http://www.izumihotel.com/'),
+  ContentClass(
+      id: 'cl2_15b',
+      decrepitation: '-',
+      content: '-',
+      workhour: '-',
+      fees: '-',
+      phoneNo: '+603-21421771',
+      locationText:
+          '64, Changkat Bukit Bintang, Bukit Bintang, 50200 Kuala Lumpur',
+      locationUrl: 'https://goo.gl/maps/yESkTueh4UxvqXk79',
+      webText: 'http://www.replicainn.com/',
+      webUrl: 'http://www.replicainn.com/'),
+  ContentClass(
+      id: 'cl3_15b',
+      decrepitation: '-',
+      content: '-',
+      workhour: '-',
+      fees: '-',
+      phoneNo: '+603-22763766',
+      locationText: '22, Jalan Thambipillay, Brickfields, 50470 Kuala Lumpur',
+      locationUrl: 'https://goo.gl/maps/JxykY7Cj7hz7UWBF7',
+      webText: 'http://joy-inn-hotel.kualalumpurshotels.com/en/',
+      webUrl: 'http://joy-inn-hotel.kualalumpurshotels.com/en/'),
+  ContentClass(
+      id: 'cl4_15b',
+      decrepitation: '-',
+      content: '-',
+      workhour: '-',
+      fees: '-',
+      phoneNo: '+603-67320555',
+      locationText:
+          '66-1 & 66-2 ,Jalan rimbunan raya 1,, Laman Rimbunan, Kepong, 52100 Kuala Lumpur',
+      locationUrl: 'https://g.page/5-bands-hotel?share',
+      webText: 'https://5-bands-hotel.business.site/',
+      webUrl: 'https://5-bands-hotel.business.site/'),
+  ContentClass(
+      id: 'cl5_15b',
+      decrepitation: '-',
+      content: '-',
+      workhour: '-',
+      fees: '-',
+      phoneNo: '+603-27766666',
+      locationText:
+          '316, Jalan Tuanku Abdul Rahman, Chow Kit, 50100 Kuala Lumpur',
+      locationUrl: 'https://g.page/stayatmomos?share',
+      webText: 'https://www.stayatmomos.com/',
+      webUrl: 'https://www.stayatmomos.com/'),
+  ContentClass(
+      id: 'cl6_15b',
+      decrepitation: '-',
+      content: '-',
+      workhour: '-',
+      fees: '-',
+      phoneNo: '+603-79726100',
+      locationText: 'Lot 118 Batu, 3, Jalan Klang Lama, 58100 Kuala Lumpur',
+      locationUrl: 'https://goo.gl/maps/cidKgoMpDDy18vKH9',
+      webText: '-',
+      webUrl: '-'),
+  ContentClass(
+      id: 'cl7_15b',
+      decrepitation: '-',
+      content: '-',
+      workhour: '-',
+      fees: '-',
+      phoneNo: '+603-20221731',
+      locationText: '2, Jalan Hang Kasturi, City Centre, 50050 Kuala Lumpur',
+      locationUrl: 'https://goo.gl/maps/WC51coq3bD8mCRXX8',
+      webText: 'http://www.lavanahotel.com/',
+      webUrl: 'http://www.lavanahotel.com/'),
+  ContentClass(
+      id: 'cl8_15b',
+      decrepitation: '-',
+      content: '-',
+      workhour: '-',
+      fees: '-',
+      phoneNo: '+603-22760858',
+      locationText:
+          'G-6, 30, Jalan Thambipillay, Brickfields, 50470 Kuala Lumpur',
+      locationUrl: 'https://g.page/podsbackpackers?share',
+      webText: 'http://www.podsbackpacker.com/',
+      webUrl: 'http://www.podsbackpacker.com/'),
+  ContentClass(
+      id: 'cl9_15b',
+      decrepitation: '-',
+      content: '-',
+      workhour: '-',
+      fees: '-',
+      phoneNo: '+603-28563998',
+      locationText: '165G, Jalan Tun H S Lee, City Centre, 50000 Kuala Lumpur',
+      locationUrl: 'https://goo.gl/maps/ofoUGUJ7EYFLeyjQ9',
+      webText: '-',
+      webUrl: '-'),
+  ContentClass(
+      id: 'cl10_15b',
+      decrepitation: '-',
+      content: '-',
+      workhour: '-',
+      fees: '-',
+      phoneNo: '+603-21106677',
+      locationText:
+          '712 & 14 Jalan Sin Chew Kee, Off Jln Pudu, 55100 Kuala Lumpur',
+      locationUrl: 'https://goo.gl/maps/wmHttE1WDLoYrFZr9',
+      webText: '-',
+      webUrl: '-'),
+
+  //Backpackers Lodge
+  ContentClass(
+      id: 'cl1_15c',
+      decrepitation: '-',
+      content: '-',
+      workhour: '-',
+      fees: '-',
+      phoneNo: '+603-27152413',
+      locationText:
+          'VORTEX KLCC, 12, Jalan Sultan Ismail, Kuala Lumpur, 50250 Kuala Lumpur',
+      locationUrl: 'https://g.page/thebedklcc?share',
+      webText: 'http://www.thebedklcc.com/',
+      webUrl: 'http://www.thebedklcc.com/'),
+  ContentClass(
+      id: 'cl2_15c',
+      decrepitation: '-',
+      content: '-',
+      workhour: '-',
+      fees: '-',
+      phoneNo: '+603-21435050',
+      locationText:
+          '65B, Jalan Sultan Ismail, Bukit Bintang, 50250 Kuala Lumpur',
+      locationUrl: 'https://goo.gl/maps/9LtHvxdVdoprnjHEA',
+      webText: 'https://sunshinebedz.com.my/home/',
+      webUrl: 'https://sunshinebedz.com.my/home/'),
+  ContentClass(
+      id: 'cl3_15c',
+      decrepitation: '-',
+      content: '-',
+      workhour: '-',
+      fees: '-',
+      phoneNo: '+603-20222078',
+      locationText: '53, Jalan Sultan, City Centre, 50000 Kuala Lumpur',
+      locationUrl: 'https://goo.gl/maps/crWvRtGSZ4Twog1u7',
+      webText: 'https://www.facebook.com/minglehostel/',
+      webUrl: 'https://www.facebook.com/minglehostel/'),
+  ContentClass(
+      id: 'cl4_15c',
+      decrepitation: '-',
+      content: '-',
+      workhour: '-',
+      fees: '-',
+      phoneNo: '+603-22760858',
+      locationText:
+          'G-6, 30, Jalan Thambipillay, Brickfields, 50470 Kuala Lumpur',
+      locationUrl: 'https://g.page/podsbackpackers?share',
+      webText: 'http://www.podsbackpacker.com/',
+      webUrl: 'http://www.podsbackpacker.com/'),
+  ContentClass(
+      id: 'cl5_15c',
+      decrepitation: '-',
+      content: '-',
+      workhour: '-',
+      fees: '-',
+      phoneNo: '+6016-7852682',
+      locationText: '9, Jalan Maharajalela, Kampung Attap, 50150 Kuala Lumpur',
+      locationUrl: 'https://g.page/illuminatehostel?share',
+      webText: 'https://illuminate-hotel.business.site/',
+      webUrl: 'https://illuminate-hotel.business.site/'),
+  ContentClass(
+      id: 'cl6_15c',
+      decrepitation: '-',
+      content: '-',
+      workhour: '-',
+      fees: '-',
+      phoneNo: '+603-20222928',
+      locationText:
+          '128, 130, Jalan Tun H S Lee, City Centre, 50000 Kuala Lumpur',
+      locationUrl: 'https://g.page/theexplorersguesthousekl?share',
+      webText: '-',
+      webUrl: '-'),
+  ContentClass(
+      id: 'cl7_15c',
+      decrepitation: '-',
+      content: '-',
+      workhour: '-',
+      fees: '-',
+      phoneNo: '+603-20311733',
+      locationText: 'Jalan Hang Kasturi, City Centre, 50000 Kuala Lumpur',
+      locationUrl: 'https://goo.gl/maps/ypCaqUDnMGnocsa37',
+      webText: '-',
+      webUrl: '-'),
+  ContentClass(
+      id: 'cl8_15c',
+      decrepitation: '-',
+      content: '-',
+      workhour: '-',
+      fees: '-',
+      phoneNo: '+603-23893754',
+      locationText: '37, Jalan Petaling, City Centre, 50000 Kuala Lumpur',
+      locationUrl: 'https://goo.gl/maps/KfpLDgUzWneB2Es19',
+      webText: 'https://kitezhotel.com/',
+      webUrl: 'https://kitezhotel.com/'),
+  ContentClass(
+      id: 'cl9_15c',
+      decrepitation: '-',
+      content: '-',
+      workhour: '-',
+      fees: '-',
+      phoneNo: '+6017-2075977',
+      locationText: 'No. 48, Jalan Tenggiri, 59100 Kuala Lumpur',
+      locationUrl: 'https://goo.gl/maps/AzuXsCerJqrdPwAR8',
+      webText: 'https://www.sekeping.com/tenggiri/',
+      webUrl: 'https://www.sekeping.com/tenggiri/'),
+  ContentClass(
+      id: 'cl10_15c',
+      decrepitation: '-',
+      content: '-',
+      workhour: '-',
+      fees: '-',
+      phoneNo: '+6018-3173435',
+      locationText: '13, Jalan Rembia, Bukit Bintang, 50200 Kuala Lumpur',
+      locationUrl: 'https://g.page/amethystLoveGuesthouse?share',
+      webText: 'https://amethyst.com.my/',
+      webUrl: 'https://amethyst.com.my/'),
 
   //dance 16
   ContentClass(
@@ -1261,6 +1915,31 @@ const ContentData = const [
       locationUrl: 'https://goo.gl/maps/jNMGpgWR6JcgFrXW7',
       webText: '-',
       webUrl: '-'),
+  ContentClass(
+      id: 'cl11_17a',
+      decrepitation: '-',
+      content: '',
+      workhour: '10.00 am - 10.00 pm (Monday - Sunday)',
+      fees: '-',
+      phoneNo: '+603-40317987',
+      locationText:
+          'No.19, Jalan Sarikei,, Off Jalan Pahang, Pekeliling, 53000 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
+      locationUrl: 'https://goo.gl/maps/sAtwQxL4hhXg63YN8',
+      webText: '-',
+      webUrl: '-'),
+
+  ContentClass(
+      id: 'cl12_17a',
+      decrepitation: '-',
+      content: '',
+      workhour: '10.00 am - 8.00 pm (Monday - Sunday)',
+      fees: '-',
+      phoneNo: '+603-40502518',
+      locationText:
+          'Lot 4-61, 4-69, Sunway Putra Mall, Jalan Putra, Chow Kit, 50350 Kuala Lumpur',
+      locationUrl: 'https://goo.gl/maps/f6WGknTq9uwuP98p6',
+      webText: '-',
+      webUrl: '-'),
 
   //CHINESE FOOD 17B
   ContentClass(
@@ -1387,6 +2066,29 @@ const ContentData = const [
       webText: 'mandarianoriental.com',
       webUrl:
           'https://www.mandarinoriental.com/kuala-lumpur/petronas-towers/fine-dining/restaurants/cantonese-cuisine/lai-po-heen'),
+  ContentClass(
+      id: 'cl11_17b',
+      decrepitation: '-',
+      content: '',
+      workhour: '5.00 pm - 11.00 pm (Monday - Sunday)',
+      fees: '-',
+      phoneNo: '+6012-5261335',
+      locationText: '50, Changkat Bukit Bintang, 50200 Kuala Lumpur',
+      locationUrl: 'https://g.page/opiumkl?share',
+      webText: '-',
+      webUrl: '-'),
+  ContentClass(
+      id: 'cl12_17b',
+      decrepitation: '-',
+      content: '',
+      workhour:
+          '6.00 pm - 12.00 am (Monday - Saturday) \n12.00 pm - 2.30 pm (Sunday) \n 6.00 pm - 12.00 am (Sunday)',
+      fees: '-',
+      phoneNo: '+6013-3094197',
+      locationText: '43 & 45, Changkat Bukit Bintang, 50200 Kuala Lumpur',
+      locationUrl: 'https://g.page/elcerdokl?share',
+      webText: 'https://elcerdokl.com',
+      webUrl: 'https://elcerdokl.com'),
 
   //INDIAN FOOD 17C
   ContentClass(
@@ -1510,6 +2212,18 @@ const ContentData = const [
       locationUrl: 'https://goo.gl/maps/ZqPTaSDce23YTKGC6',
       webText: '-',
       webUrl: 'https://www.facebook.com/TajGarden/'),
+  ContentClass(
+      id: 'cl11_17c',
+      decrepitation: '-',
+      content: '',
+      workhour: '12.00 pm - 10.00 pm (Monday - Sunday)',
+      fees: '-',
+      phoneNo: '+603-50332121',
+      locationText:
+          'No.8, Level 1, The Sphere No.1, Avenue 1, Jalan Kerinchi, Bangsar South, 59000 Kuala Lumpur',
+      locationUrl: 'https://goo.gl/maps/XBRc8NAApenMYiLc9',
+      webText: '-',
+      webUrl: '-'),
 
   //ARAB FOOD 17D
   ContentClass(
@@ -2129,20 +2843,85 @@ const ContentData = const [
       webText: 'Facebook Page',
       webUrl: 'https://www.facebook.com/broastedchickenking1'),
 
-  //music 18
+  //Western Food 17i
   ContentClass(
-      id: 'cl1_18',
+      id: 'cl1_17i',
       decrepitation: '-',
       content:
-          'The most traditional Malay instrument, the kompang is widely used in Malay social occasions such as National Day parades, official functions, and weddings. It is similar to the tambourine but without the jingling metal discs.',
-      workhour: '-',
+          "The menu at Dining in the Dark, KL is genuinely unique, simply because guests won't know what's on their plate until the meal's reveal.",
+      workhour: '6.00 pm - 9.30 pm (Tuesday - Sunday)',
       fees: '-',
-      phoneNo: '-',
-      locationText: '-',
-      locationUrl: '-',
-      webText: '-',
-      webUrl: '-'),
+      phoneNo: '+6012-3052011',
+      locationText: '50A, Changkat Bukit Bintang, 50200 Kuala Lumpur',
+      locationUrl: 'https://g.page/dininginthedarkkl?share',
+      webText: 'https://dininginthedarkkl.com/menu/',
+      webUrl: 'https://dininginthedarkkl.com/menu/'),
+  ContentClass(
+      id: 'cl2_17i',
+      decrepitation: '-',
+      content:
+          "Seasonal menus are available, providing a unique eating experience across the European continent.Its menu is also updated on a regular basis to match the seasonal products available in Europe.",
+      workhour:
+          '12.00 pm - 3.00 pm \n 5.00 pm - 8.00 pm (Tuesday - Sunday) Closed on Monday',
+      fees: '-',
+      phoneNo: '+6019-2121240',
+      locationText:
+          'Unit 1, Lot 163, Retail, No. 10, Jalan Perak, Kuala Lumpur, 50450 Kuala Lumpur',
+      locationUrl: 'https://goo.gl/maps/3GPUa86wr695A3vp7',
+      webText: 'https://www.skilletkl.com/',
+      webUrl: 'https://www.skilletkl.com/'),
+  ContentClass(
+      id: 'cl3_17i',
+      decrepitation: '-',
+      content:
+          "The cuisine of Beta KL is influenced by Malaysia's four regions: north, east, south, and centre.",
+      workhour:
+          '6.00 pm - 10.00 pm (Sunday - Thursday) \n6.00 pm - 11.00 pm (Friday - Saturday) Closed on Monday',
+      fees: '-',
+      phoneNo: '+603-21812990',
+      locationText:
+          'Unit 3 & 3A, Lot, Retail, 163 No. 10, Jalan Perak, Kuala Lumpur, 50450 Kuala Lumpur',
+      locationUrl: 'https://goo.gl/maps/6gBfTTUGMxT9mVLY6',
+      webText: 'https://www.betakl.com/',
+      webUrl: 'https://www.betakl.com/'),
+  ContentClass(
+      id: 'cl4_17i',
+      decrepitation: '-',
+      content: "",
+      workhour: '6.00 pm - 11.00 pm (Monday - Sunday)',
+      fees: '-',
+      phoneNo: '+603-21620886',
+      locationText:
+          'Level 23A Tower B, The Troika, 19, Persiaran KLCC, 50450 Kuala Lumpur',
+      locationUrl: 'https://g.page/cantaloupeattroikaskydining?share',
+      webText: 'https://troikaskydining.com/cantaloupe/',
+      webUrl: 'https://troikaskydining.com/cantaloupe/  '),
+  ContentClass(
+      id: 'cl5_17i',
+      decrepitation: '-',
+      content: "",
+      workhour: '7.00 am - 11.00 pm (Monday - Sunday)',
+      fees: '-',
+      phoneNo: '+603-22039188',
+      locationText:
+          'Grand Hyatt Kuala Lumpur, 12, Jalan Pinang, 50450 Kuala Lumpur',
+      locationUrl: 'https://goo.gl/maps/REy1wJQKdrYQi9hu5',
+      webText: 'https://bit.ly/3Fs40S7',
+      webUrl: 'https://bit.ly/3Fs40S7'),
+  ContentClass(
+      id: 'cl6_17i',
+      decrepitation: '-',
+      content: '',
+      workhour: '4.30 pm - 11.00 pm (Monday - Sunday)',
+      fees: '-',
+      phoneNo: '+603-77299030',
+      locationText:
+          'Lot 3213, Jalan Penchala Indah, Bukit Lanjan, 60000 Kuala Lumpur',
+      locationUrl: 'https://goo.gl/maps/d8mpNsTEoy5QdR3L7',
+      webText: 'http://www.subak.com.my/',
+      webUrl: 'http://www.subak.com.my/'),
 
+  //music 18
   ContentClass(
       id: 'cl2_18',
       decrepitation: '-',
@@ -2464,6 +3243,45 @@ const ContentData = const [
       locationUrl: '-',
       webText: '-',
       webUrl: '-'),
+  ContentClass(
+      id: 'cl7_20',
+      decrepitation:
+          'Pulau Lang Tengah is located on Peninsular Malaysia\'s east coast. Its secluded beaches and abundant aquatic life have been dubbed "Malaysia\'s Maldives”.',
+      content:
+          'The shortage of roads in Lang Tengah is a highlight, with just a few jungle paths leading to the beaches. The clean air and lack of noise pollution make cycling, boating, and canoeing practices suitable since these are the only ways to get around. Best time to visit: March - October',
+      workhour: '-',
+      fees: '-',
+      phoneNo: '-',
+      locationText: '-',
+      locationUrl: '-',
+      webText: '-',
+      webUrl: '-'),
+  ContentClass(
+      id: 'cl8_20',
+      decrepitation:
+          'Pulau Lang Tengah is located on Peninsular Malaysia\'s east coast. Its secluded beaches and abundant aquatic life have been dubbed "Malaysia\'s Maldives”.',
+      content:
+          'The shortage of roads in Lang Tengah is a highlight, with just a few jungle paths leading to the beaches. The clean air and lack of noise pollution make cycling, boating, and canoeing practices suitable since these are the only ways to get around. Best time to visit: March - October',
+      workhour: '-',
+      fees: '-',
+      phoneNo: '-',
+      locationText: '-',
+      locationUrl: '-',
+      webText: '-',
+      webUrl: '-'),
+  ContentClass(
+      id: 'cl9_20',
+      decrepitation:
+          'Pulau Lang Tengah is located on Peninsular Malaysia\'s east coast. Its secluded beaches and abundant aquatic life have been dubbed "Malaysia\'s Maldives”.',
+      content:
+          'The shortage of roads in Lang Tengah is a highlight, with just a few jungle paths leading to the beaches. The clean air and lack of noise pollution make cycling, boating, and canoeing practices suitable since these are the only ways to get around. Best time to visit: March - October',
+      workhour: '-',
+      fees: '-',
+      phoneNo: '-',
+      locationText: '-',
+      locationUrl: '-',
+      webText: '-',
+      webUrl: '-'),
 
   //Hill stations 21
   ContentClass(
@@ -2612,6 +3430,45 @@ const ContentData = const [
       locationUrl: 'https://goo.gl/maps/mH1yZ19z7byvd36g7',
       webText: '-',
       webUrl: '-'),
+  ContentClass(
+      id: 'cl6_22',
+      decrepitation:
+          "Chiling Waterfall is one of Selangor's most beautiful and impressive waterfalls.",
+      content:
+          'Visitors will need to walk and wade across the Chiling River five times to get there for about an hour, so be prepared to have a sense of adventure and not mind getting wet.',
+      workhour: '-',
+      fees: '-',
+      phoneNo: '+6012-3006564',
+      locationText: '44000, Selangor',
+      locationUrl: 'https://goo.gl/maps/cKwT7DhznzUvuQ43A',
+      webText: '-',
+      webUrl: '-'),
+  ContentClass(
+      id: 'cl7_22',
+      decrepitation:
+          "Lata Medang is a 10.0 km out and back trail that offers scenic views and is rated as difficult.",
+      content:
+          'In a remote area of hilly rainforest off Kuala Kubu Bharu, Lata Medang is a waterfall at Kampung Pertak, cascading down from a massive 60-meter drop over two stages.',
+      workhour: 'Open 24 hours',
+      fees: '-',
+      phoneNo: '-',
+      locationText: '44000 Kuala Kubu Baru, Selangor',
+      locationUrl: 'https://goo.gl/maps/a69ihcpBPgE3FTQp8',
+      webText: '-',
+      webUrl: '-'),
+  ContentClass(
+      id: 'cl8_22',
+      decrepitation:
+          "Serendah Waterfall, also known as Templer Kai or Recreational Waterfall Serendah which located 3 km from an indigenous village known as Perkampungan Orang Asli Serendah.",
+      content:
+          'Here, while the waterfall seems small and shallow, it delivers refreshingly cool, gushing water that splashes on anyone who sits by it.',
+      workhour: '-',
+      fees: '-',
+      phoneNo: '+6017-6091504',
+      locationText: ' Kampung Orang Asli Serendah, 48200 Serendah, Selangor',
+      locationUrl: 'https://goo.gl/maps/cHATZaQkeg9JsV6p8',
+      webText: '-',
+      webUrl: '-'),
 
   //Hiking 23
   ContentClass(
@@ -2677,6 +3534,98 @@ const ContentData = const [
       webText: 'Penang Natinal Park Website',
       webUrl:
           'http://www.wildlife.gov.my/index.php/en/public/2016-05-10-02-34-43/peta'),
+  ContentClass(
+      id: 'cl10_23',
+      decrepitation: '-',
+      content: '-',
+      workhour:
+          '8.30 am - 6.00 pm (Sunday, Monday, Tuesday, Wednesday, Friday) \n6.00 am - 6.00pm (Saturday) \nClosed on Thursday',
+      fees: '-',
+      phoneNo: '+6011-39292993',
+      locationText:
+          'Tanjung Tuan Recreational Forest, Puncak Bukit Batu Putih, Negeri Sembilan',
+      locationUrl: 'https://goo.gl/maps/fhNWubsXNEspztW16',
+      webText: '-',
+      webUrl: '-'),
+  ContentClass(
+      id: 'cl11_23',
+      decrepitation: '-',
+      content: '-',
+      workhour: '-',
+      fees: '-',
+      phoneNo: '-',
+      locationText: '44000, Selangor',
+      locationUrl: 'https://goo.gl/maps/XoAihj27Mt79nZmZA',
+      webText: '-',
+      webUrl: '-'),
+  ContentClass(
+      id: 'cl12_23',
+      decrepitation: '-',
+      content: '-',
+      workhour: '-',
+      fees: '-',
+      phoneNo: '-',
+      locationText: '44000 Kuala Kubu Bharu, Selangor',
+      locationUrl: 'https://goo.gl/maps/rCvT69f6BYpeWnZx9',
+      webText: '-',
+      webUrl: '-'),
+  ContentClass(
+      id: 'cl13_23',
+      decrepitation:
+          'Also referred to as Jugra Hill Trail, Puncak Rajawali is a challenging hiking trail that peaks at 140 metres at the hilltop.',
+      content:
+          'Located within a lush untouched forest reserve, witness various flora and fauna while hiking along the steep and winding trail.',
+      workhour: '-',
+      fees: '-',
+      phoneNo: '+603-31872825',
+      locationText:
+          'Jalan Bukit Jugra, Kampung Permatang Pasir, 42700 Jugra, Selangor',
+      locationUrl: 'https://goo.gl/maps/n6DcAMmwVH1QuSpq7',
+      webText: '-',
+      webUrl: '-'),
+
+  //Extreme Sports 24
+  ContentClass(
+      id: 'cl1_25',
+      decrepitation:
+          'For those with an adventurous heart, Kuala Kubu Bharu presents the best of extreme sports.',
+      content:
+          'As you fly through the air, you will have the privilege to appreciate the wonders of nature that encompass Kuala Kubu Bharu from an aerial point of view.',
+      workhour: '9.00 am - 6.00 pm (Monday - Sunday)',
+      fees: '-',
+      phoneNo: '+6019-2191144',
+      locationText: 'Jalan Ampang Pechah, 44000 Kuala Kubu Bharu, Selangor',
+      locationUrl: 'https://goo.gl/maps/5tjGcHhnUD1toqoN6',
+      webText: 'Facebook Page',
+      webUrl: 'https://m.facebook.com/KKBParaglidingPark'),
+  ContentClass(
+      id: 'cl2_25',
+      decrepitation:
+          'White water rafting trips take place along the Hulu Selangor River.',
+      content:
+          'White water rafting brings a sense of excitement through an exhilarating drift at the end of the rafting trips with a beautiful view of nature along the banks of the river.',
+      workhour: '-',
+      fees: '-',
+      phoneNo: '+6012-4653307',
+      locationText:
+          '12, Jalan Mat Kilau, Kampung Paya, 44000 Kuala Kubu Baru, Selangor',
+      locationUrl: 'https://goo.gl/maps/qxsJp6bfRe555VuT8',
+      webText: 'Website Page',
+      webUrl: 'http://www.malaysia-whitewater-rafting.com/raftingKKB.php'),
+  ContentClass(
+      id: 'cl3_25',
+      decrepitation:
+          'At the observation of the Jugra Hill lighthouse, experience the thrill of paragliding.',
+      content:
+          'Depending on wind conditions, March to September tends to be the best time to do it.',
+      workhour: '-',
+      fees: '-',
+      phoneNo: '+603-31872825',
+      locationText:
+          'Jalan Bukit Jugra, Kampung Permatang Pasir, 42700 Jugra, Selangor',
+      locationUrl: 'https://goo.gl/maps/n6DcAMmwVH1QuSpq7',
+      webText: '-',
+      webUrl: '-'),
 
   //muslim worship 22a
   ContentClass(
@@ -2867,6 +3816,42 @@ const ContentData = const [
       locationUrl: 'https://goo.gl/maps/i8Ew5hSPQTDgNjZbA',
       webText: '-',
       webUrl: '-'),
+  ContentClass(
+      id: 'cl6_22b',
+      decrepitation: '-',
+      content: '',
+      workhour: '-',
+      fees: '-',
+      phoneNo: '+603-20789052',
+      locationText:
+          '113A, Jalan Tun H S Lee, City Centre, 50050 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
+      locationUrl: 'https://goo.gl/maps/kbt4ab7UfBQNjGm49',
+      webText: '-',
+      webUrl: '-'),
+  ContentClass(
+      id: 'cl7_22b',
+      decrepitation: '-',
+      content: '',
+      workhour: '-',
+      fees: '-',
+      phoneNo: '+603-40223053',
+      locationText:
+          'Jalan Tun Razak, Pekeliling, 53000 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
+      locationUrl: 'https://goo.gl/maps/Bc3ASa5Rs7aTJnGU9',
+      webText: '-',
+      webUrl: '-'),
+  ContentClass(
+      id: 'cl8_22b',
+      decrepitation: '-',
+      content: '',
+      workhour: '-',
+      fees: '-',
+      phoneNo: '+603-92845396',
+      locationText:
+          'Off, Jalan Cheras & Jalan Lombong, Cheras Batu 2 1/2, 55200 Kuala Lumpur, Federal Territory of Kuala Lumpur',
+      locationUrl: 'https://goo.gl/maps/YAhbDCAyAuKaQ5Ks9',
+      webText: '-',
+      webUrl: '-'),
 
   //hindu 22c
   ContentClass(
@@ -2955,6 +3940,19 @@ const ContentData = const [
       locationText:
           'Jalan Persiaran Maybank, Bukit Bintang, 50200 Kuala Lumpur, Federal Territory of Kuala Lumpur',
       locationUrl: 'https://goo.gl/maps/awEwjnpK3Mde3k3o8',
+      webText: '-',
+      webUrl: '-'),
+  ContentClass(
+      id: 'cl8_22c',
+      decrepitation: '-',
+      content: '',
+      workhour:
+          '6.00 am - 10.00 am\n11.30 am - 1.00 pm\n5.30 pm - 9.00 pm (Daily)',
+      fees: '-',
+      phoneNo: '+603-40411028',
+      locationText:
+          'Jalan Tanah Lapang, Sentul Selatan, 51000 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
+      locationUrl: 'https://goo.gl/maps/tHU2GtJix2Ahr7Xy8',
       webText: '-',
       webUrl: '-'),
 
@@ -3093,9 +4091,102 @@ const ContentData = const [
           'https://www.google.com/maps/place/Gurdwara+Sahib+Mainduab+(Jalan+Pudu+Lama)/@3.1460813,101.6938371,15z/data=!3m1!4b1!4m5!3m4!1s0x31cc49d6989d4e89:0x8b6d2912428d9c64!8m2!3d3.1460894!4d101.7025721',
       webText: '-',
       webUrl: '-'),
+
+  //KL Art Scene
+  ContentClass(
+      id: 'cl1_24',
+      decrepitation: '-',
+      content:
+          'The National Art Gallery achieves its purpose of gathering, conserving, preserving, displaying, and promoting artwork, as well as fostering knowledge, understanding, and appreciation of the arts at all levels of society.',
+      workhour: '10.00 am - 4.00 pm (Tuesday - Sunday) Closed on Monday',
+      fees: '-',
+      phoneNo: '+603-40267000',
+      locationText: 'No. 2, Jalan Temerloh, Titiwangsa, 53200 Kuala Lumpur',
+      locationUrl: 'https://goo.gl/maps/2nikEc6pT2XCjdxs6',
+      webText: '-',
+      webUrl: '-'),
+  ContentClass(
+      id: 'cl2_24',
+      decrepitation: '-',
+      content:
+          "The gallery OUR ArtProjects is dedicated to promoting modern Southeast Asian art. Other tenants in the building include Malaysian Design Archive, Tandang record store, Ricecooker Gallery, and others. You can look around the remainder of the Zongshan building while you're there.",
+      workhour:
+          '11.00 am - 7.00 pm (Tuesday - Saturday) Closed on Sunday & Monday',
+      fees: '-',
+      phoneNo: '+6016-6602585',
+      locationText: '80A, Jalan Rotan, Kampung Attap, 50460 Kuala Lumpur',
+      locationUrl: 'https://goo.gl/maps/xSYUMefcxFaQ5qis8',
+      webText: '-',
+      webUrl: '-'),
+  ContentClass(
+      id: 'cl3_24',
+      decrepitation: '-',
+      content:
+          "Taksu Art gallery was opened in 1989 and since then it's been a home for Southeast Asian contemporary art gallery and showcases artworks of local Malaysian artists.",
+      workhour: '10.00 am - 6.00 pm (Monday - Saturday) Closed on Sunday',
+      fees: '-',
+      phoneNo: '+603-42514396',
+      locationText:
+          '17, Jalan Pawang, Kampung Datuk Keramat, 54000 Kuala Lumpur',
+      locationUrl: 'https://g.page/taksu-kuala-lumpur?share',
+      webText: '-',
+      webUrl: '-'),
+  ContentClass(
+      id: 'cl4_24',
+      decrepitation: '-',
+      content:
+          "The excellent art gallery is dedicated to fostering a love of art, assisting the next generation of Malaysian artists, and raising awareness through the arts. It is without a doubt one of the top tourist attractions, especially for art lovers!",
+      workhour:
+          '10.00 am - 6.00 pm (Tuesday - Friday) \n10.00 am - 5.00 pm (Saturday) \nClosed on Sunday & Monday',
+      fees: '-',
+      phoneNo: '+603-22601106',
+      locationText: '8, Jalan Scott, Brickfields, 50470 Kuala Lumpur',
+      locationUrl: 'https://goo.gl/maps/3em3of76U4eWYbv4A',
+      webText: '-',
+      webUrl: '-'),
+  ContentClass(
+      id: 'cl5_24',
+      decrepitation: '-',
+      content:
+          "Valentine Willie Fine Art was established in Kuala Lumpur in 1996 as a modern and contemporary art consultancy. It has helped to bring many Southeast Asian artists, notably Yee I-Lann and Wong Hoy Cheong.",
+      workhour:
+          '11.00 am-7.00 pm (Monday - Friday) \n11.00 am-5.00 pm (Saturday) \nClosed on Sunday',
+      fees: '-',
+      phoneNo: '+60322842348',
+      locationText: '17, Jalan Telawi 3, Bangsar, 59100 Kuala Lumpur',
+      locationUrl: 'https://goo.gl/maps/b9MXMNBU4nFEPjnq7',
+      webText: '-',
+      webUrl: '-'),
+  ContentClass(
+      id: 'cl6_24',
+      decrepitation: '-',
+      content:
+          "The main purpose is to become a focal point for cross-cultural conversations in art from many traditions and backgrounds. They have private collections of local and international artworks that will be displayed periodically.",
+      workhour: '-',
+      fees: '-',
+      phoneNo: '+60377856363',
+      locationText:
+          'No.10 & 12, 2nd & 3rd floor, Pusat Elken, Jalan 1/137C 58000 Kuala Lumpur',
+      locationUrl: 'https://goo.gl/maps/4MhE8EcyajN5Ea73A',
+      webText: '-',
+      webUrl: '-'),
+  ContentClass(
+      id: 'cl7_24',
+      decrepitation: '-',
+      content:
+          "ARCH owns the Kuala Lumpur City Gallery, a Gold Award Winning Centre in Kuala Lumpur. The massive model depicts the city's past, present, and future, and includes a light and sound show. Immerse yourself in nine innovative exhibits.",
+      workhour: '9.00 am - 6.30 pm',
+      fees: '-',
+      phoneNo: '+603-26983333',
+      locationText:
+          'Dataran Merdeka, 27, Jalan Raja, City Centre, 50050 Kuala Lumpur',
+      locationUrl: 'https://goo.gl/maps/amMfJUe881tNYS5h8',
+      webText: '-',
+      webUrl: '-'),
 ];
 
 const MedicalData = const [
+  //Hospitals
   MedicalClass(
     id: 'cl1_14',
     categories: 'cl1_14',
@@ -3148,6 +4239,107 @@ const MedicalData = const [
     locationUrl: 'https://goo.gl/maps/Umg3NfnEZZxssPys7',
   ),
   MedicalClass(
+    id: 'cl4_14',
+    categories: 'cl1_14',
+    title: 'Institut Jantung Negara',
+    decrepitation:
+        'Founded in 1992, Institut Jantung Negara is a reliable heart specialist institution that offers the latest technological advancements and treatments in cardiovascular and thoracic medicine.',
+    content:
+        ' The cardiology services include invasive and non-invasive procedures such as coronary angiograms, angioplasty, stenting, cardiac resynchronisation therapy,  radiofrequency ablation, atrial fibrillation, echocardiography and much more.',
+    workhour: 'Open 24 hours (Monday - Sunday)',
+    fees: '-',
+    phoneNo: '+603-26178200',
+    image: 'assets/images/contentList/medicalTourism/sub-medical/ijn.jpg',
+    locationText: '145, Jalan Tun Razak, 50400 Kuala Lumpur',
+    locationUrl: 'https://goo.gl/maps/9xBfnhU1PGK13JneA',
+  ),
+  MedicalClass(
+    id: 'cl5_14',
+    categories: 'cl1_14',
+    title: 'Prince Court Medical Centre',
+    decrepitation:
+        'The multi award-winning Prince Court Medical Centre is one of the leading one-stop private healthcare facilities in the nation.',
+    content:
+        'Here are some of the departments available: cardiology, dermatology, endocrinology, haematology, nephrology, oncology, orthopaedic, paediatric, rheumatology, obstetrics and gynaecology. Plastic reconstructive, neurosurgery and LASIK are some of the surgical procedures conducted here.',
+    workhour: 'Open 24 hours (Monday - Sunday)',
+    fees: '-',
+    phoneNo: '+603-21600000',
+    image: 'assets/images/contentList/medicalTourism/sub-medical/prince.jpg',
+    locationText: '39, Jalan Kia Peng, 50450 Kuala Lumpur',
+    locationUrl: 'https://g.page/PrinceCourtMC?share',
+  ),
+  MedicalClass(
+    id: 'cl6_14',
+    categories: 'cl1_14',
+    title: 'Columbia Asia Hospital (Setapak)',
+    decrepitation: '-',
+    content: '',
+    workhour: 'Open 24 hours (Monday - Sunday)',
+    fees: '-',
+    phoneNo: '+603-41459999',
+    image: 'assets/images/contentList/medicalTourism/sub-medical/columbia.jpg',
+    locationText:
+        'No. 1, Jalan Danau Saujana, Taman Danau Kota, 53300 Kuala Lumpur',
+    locationUrl: 'https://g.page/ColumbiaAsiaHospitalSetapak?share',
+  ),
+  MedicalClass(
+    id: 'cl7_14',
+    categories: 'cl1_14',
+    title: 'Pantai Hospital Kuala Lumpur',
+    decrepitation: '-',
+    content: '',
+    workhour: 'Open 24 hours (Monday - Sunday)',
+    fees: '-',
+    phoneNo: '+603-22960888',
+    image: 'assets/images/contentList/medicalTourism/sub-medical/pantaikl.jpg',
+    locationText:
+        '8, Jalan Bukit Pantai, Taman Bukit Pantai, 59100 Kuala Lumpur',
+    locationUrl: 'https://g.page/pantaihospitalkl?share',
+  ),
+  MedicalClass(
+    id: 'cl8_14',
+    categories: 'cl1_14',
+    title: 'Tung Shin Hospital',
+    decrepitation: '-',
+    content: '',
+    workhour: 'Open 24 hours (Monday - Sunday)',
+    fees: '-',
+    phoneNo: '+603-20372288',
+    image: 'assets/images/contentList/medicalTourism/sub-medical/tungshin.jpg',
+    locationText: '102, Jalan Pudu, Bukit Bintang, 55100 Kuala Lumpur',
+    locationUrl: 'https://goo.gl/maps/kgtu7gMAXhxud5qi7',
+  ),
+  MedicalClass(
+    id: 'cl9_14',
+    categories: 'cl1_14',
+    title: 'UM Specialist Centre',
+    decrepitation: '-',
+    content: '',
+    workhour:
+        '9.00 am - 9.00 pm (Monday-Friday)\n8.30 am - 5.00 pm (Saturday) \nClosed on Sunday',
+    fees: '-',
+    phoneNo: '+603-78414000',
+    image: 'assets/images/contentList/medicalTourism/sub-medical/um.jpg',
+    locationText:
+        'Lot 28, Lorong Universiti, Lembah Pantai, 50603 Kuala Lumpur',
+    locationUrl: 'https://goo.gl/maps/7U2VxEoKimjk1tu66',
+  ),
+  MedicalClass(
+    id: 'cl10_14',
+    categories: 'cl1_14',
+    title: 'Kiara Child Specialist Clinic',
+    decrepitation: '-',
+    content: '',
+    workhour:
+        '9.00 am - 6.00 pm (Monday, Tuesday, Thursday, Friday) \n9.00 am - 2.00 pm \n(Wednesday & Saturday)\nClosed on Sunday',
+    fees: '-',
+    phoneNo: '+603-62037704',
+    image: 'assets/images/contentList/medicalTourism/sub-medical/kanak.jpg',
+    locationText: '8, Jalan Solaris 4, Solaris Mont Kiara, 50480 Kuala Lumpur',
+    locationUrl: 'https://goo.gl/maps/3uMjBGwbyd5vP55J9',
+  ),
+  //Dental
+  MedicalClass(
     id: 'cl1_14',
     categories: 'cl2_14',
     title: 'DentalPro (Kuala Lumpur, Malaysia)',
@@ -3196,6 +4388,52 @@ const MedicalData = const [
     locationText: 'G-01 M SUITES, 283, Jalan Ampang, 50450 Kuala Lumpur',
     locationUrl: 'https://goo.gl/maps/CPhmyuAfvA86YGeH9',
   ),
+  MedicalClass(
+    id: 'cl4_14',
+    categories: 'cl2_14',
+    title: 'Smile Avenue Dental Surgery Publika',
+    image: 'assets/images/contentList/medicalTourism/sub-medical/smile.jpg',
+    decrepitation: '-',
+    content: '',
+    workhour:
+        '9.00 am - 7.00 pm (Monday-Thursday) \n10.00 am - 5.00 pm (Friday-Saturday) \nClosed on Sunday',
+    fees: '-',
+    phoneNo: '+601-93432328',
+    locationText:
+        'A4-UG1-6, Level UG1, Block A4,  Jalan Dutamas 1, Solaris Dutamas, 50480 Kuala Lumpur',
+    locationUrl: 'https://g.page/SmileAvenueDentalSurgery?share',
+  ),
+  MedicalClass(
+    id: 'cl5_14',
+    categories: 'cl2_14',
+    title: 'Lau Dental Clinic & Surgery Sri Petaling',
+    image: 'assets/images/contentList/medicalTourism/sub-medical/lau.jpg',
+    decrepitation: '-',
+    content: '',
+    workhour:
+        '9.00 am  - 9.00 pm (Monday - Friday) \n9.00 am - 6.00 pm (Saturday - Sunday)',
+    fees: '-',
+    phoneNo: '+601-89191433',
+    locationText: '65-1, Jalan Radin Tengah, Sri Petaling, 57000 Kuala Lumpur',
+    locationUrl: 'https://g.page/laudental-sp?share',
+  ),
+  MedicalClass(
+    id: 'cl6_14',
+    categories: 'cl2_14',
+    title: 'Dutamas Dental Clinic',
+    image: 'assets/images/contentList/medicalTourism/sub-medical/dutamas.jpg',
+    decrepitation: '-',
+    content: '',
+    workhour:
+        '9.00 am – 7.00 pm (Monday - Friday) \n9.00 am - 5.00 pm (Saturday)\n9.00 am - 3.00 pm (Sunday)',
+    fees: '-',
+    phoneNo: '+601-92440653',
+    locationText:
+        'A3-1-8, Publika, Jalan Dutamas 1, Solaris Dutamas, 50480 Kuala Lumpur',
+    locationUrl: 'https://g.page/DutamasDental?share',
+  ),
+
+  //Dermatologist
   MedicalClass(
     id: 'cl1_14',
     categories: 'cl3_14',
@@ -3246,5 +4484,132 @@ const MedicalData = const [
     locationText:
         'G-G-1 Plaza Arkadia, 3 Jalan Intisari Perdana, Desa Parkcity, 52200 Kuala Lumpur',
     locationUrl: 'https://g.page/peterchngdpc?share',
+  ),
+  MedicalClass(
+    id: 'cl4_14',
+    categories: 'cl3_14',
+    title: 'CLEO Clinic',
+    image: 'assets/images/contentList/medicalTourism/sub-medical/cleo.jpg',
+    decrepitation: '-',
+    content: '',
+    workhour:
+        '10.00 am – 7.00 pm (Monday - Friday) \n10.00 am - 6.00 pm (Saturday) \n10.00 am - 4.00 pm (Sunday)',
+    fees: '-',
+    phoneNo: '+601-02521883',
+    locationText: '14, Jalan 30/70a, Desa Sri Hartamas, 50480 Kuala Lumpur',
+    locationUrl: 'https://g.page/cleoclinicmalaysia?share',
+  ),
+  MedicalClass(
+    id: 'cl5_14',
+    categories: 'cl3_14',
+    title: 'Premier Clinic',
+    image: 'assets/images/contentList/medicalTourism/sub-medical/premier.jpg',
+    decrepitation: '-',
+    content: '',
+    workhour: '10.00 am - 7.00 pm (Monday-Sunday)',
+    fees: '-',
+    phoneNo: '+6012-6625552',
+    locationText:
+        'A-0-8, Megan Avenue 1, 189, Jalan Tun Razak, 50400 Kuala Lumpur',
+    locationUrl: 'https://goo.gl/maps/mwddkbD1t8Divg5s7',
+  ),
+  MedicalClass(
+    id: 'cl6_14',
+    categories: 'cl3_14',
+    title: 'CC Chang Skin Specialist',
+    image: 'assets/images/contentList/medicalTourism/sub-medical/chang.jpg',
+    decrepitation: '-',
+    content: '',
+    workhour:
+        ' 9.00 am – 4.00 pm \n(Monday, Wednesday, Thursday) \n9.00 am - 1.00 pm \n(Tuesday, Friday, Saturday ) \nClosed on Sunday',
+    fees: '-',
+    phoneNo: '+603-42516233',
+    locationText:
+        'Gleneagles Hospital, 282 & 286, Jalan Ampang, 50450 Kuala Lumpur',
+    locationUrl: 'https://g.page/CCChangSkinSpecialist?share',
+  ),
+  MedicalClass(
+    id: 'cl1_14',
+    categories: 'cl4_14',
+    title: 'International Specialist Eye Centre',
+    image: 'assets/images/contentList/medicalTourism/sub-medical/isec.jpg',
+    decrepitation: '-',
+    content: '',
+    workhour:
+        '8.30 am - 5.30 pm (Monday - Friday) \n8.30 am - 1.00 pm (Saturday) \nClosed on Sunday',
+    fees: '-',
+    phoneNo: '+603-22848989',
+    locationText:
+        'Centrepoint South, Lingkaran Syed Putra, Mid Valley City, 59200 Kuala Lumpur',
+    locationUrl: 'https://g.page/ISECKL?share',
+  ),
+  MedicalClass(
+    id: 'cl2_14',
+    categories: 'cl4_14',
+    title: 'VISTA Eye Specialist',
+    image: 'assets/images/contentList/medicalTourism/sub-medical/vista.jpg',
+    decrepitation: '-',
+    content: '',
+    workhour: '9.00 am - 6.00 pm (Monday - Saturday) \nClosed on Sunday',
+    fees: '-',
+    phoneNo: '+603-22423937',
+    locationText: '5, Jalan Kerinchi, Bangsar South, 59200 Kuala Lumpur',
+    locationUrl: 'https://g.page/vistabss?share',
+  ),
+  MedicalClass(
+    id: 'cl3_14',
+    categories: 'cl4_14',
+    title: 'OPTIMAX Eye Specialist',
+    image: 'assets/images/contentList/medicalTourism/sub-medical/optimax.jpg',
+    decrepitation: '-',
+    content: '',
+    workhour: '9.00 am - 6.00 pm \n(Monday-Sunday)',
+    fees: '-',
+    phoneNo: '+603-90577300',
+    locationText: '145, Jalan Radin Bagus, Sri Petaling, 57000 Kuala Lumpur',
+    locationUrl: 'https://goo.gl/maps/Sum4mrCRrbYmvThY6',
+  ),
+  MedicalClass(
+    id: 'cl4_14',
+    categories: 'cl4_14',
+    title: 'Ikonik Eye Specialist Centre',
+    image: 'assets/images/contentList/medicalTourism/sub-medical/ikonik.jpg',
+    decrepitation: '-',
+    content: '',
+    workhour:
+        '8.30 am - 5.30 pm \n(Monday - Friday) \nClosed on Saturday & Sunday',
+    fees: '-',
+    phoneNo: '+603-97651368',
+    locationText:
+        'Residensi Park, 9, 10, 11, Persiaran Jalil Utama, Bandar Bukit Jalil, 57000 Kuala Lumpur',
+    locationUrl: 'https://g.page/IKONIKeye?share',
+  ),
+  MedicalClass(
+    id: 'cl5_14',
+    categories: 'cl4_14',
+    title: 'KL Eye Specialist Centre',
+    image: 'assets/images/contentList/medicalTourism/sub-medical/kleye.jpg',
+    decrepitation: '-',
+    content: '',
+    workhour: '9.00 am - 5.00 pm \n(Monday-Sunday)',
+    fees: '-',
+    phoneNo: '+603-62500077',
+    locationText:
+        '73, Jalan Metro Perdana Barat 1, Taman Usahawan Kepong, 52100 Kuala Lumpur',
+    locationUrl: 'https://g.page/KLEyeCentre?share',
+  ),
+  MedicalClass(
+    id: 'cl6_14',
+    categories: 'cl4_14',
+    title: 'Asia Eye Specialist Centre Kepong',
+    image: 'assets/images/contentList/medicalTourism/sub-medical/asiaeye.jpg',
+    decrepitation: '-',
+    content: '',
+    workhour:
+        '8.30 am - 5.30 pm (Monday-Friday) \n8.30 am - 3.00 pm (Saturday) \nClosed on Sunday',
+    fees: '-',
+    phoneNo: '+603-62418011',
+    locationText: '60, Jalan Ambong 1, Kepong Baru, 52100 Kuala Lumpur',
+    locationUrl: 'https://goo.gl/maps/TvQnTXa63KCemeLT6',
   ),
 ];

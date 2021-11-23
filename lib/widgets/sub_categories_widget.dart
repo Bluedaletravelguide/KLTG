@@ -31,7 +31,10 @@ class SubCategories extends StatelessWidget {
               new TransportationScreen(appbartitle: title, id: id),
         ),
       );
-    } else if (id == 'sc_12' || id == 'sc_22' || id == 'sc_17') {
+    } else if (id == 'sc_12' ||
+        id == 'sc_22' ||
+        id == 'sc_17' ||
+        id == 'sc_15') {
       Navigator.of(context).push(
         platformPageRoute(
           context: context,

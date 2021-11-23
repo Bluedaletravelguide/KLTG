@@ -29,6 +29,13 @@ const SubCategoriesData = const [
     description: 'Dive into nature with your loved ones',
     image: 'assets/images/subCatedgories/parks.jpg',
   ),
+  SubCategory(
+    id: 'sc23',
+    categories: 'c3',
+    subCategoryTitle: 'Memorials & Museums',
+    description: 'Dive into nature with your loved ones',
+    image: 'assets/images/contentList/museums/6.jpg',
+  ),
 
 //////
   SubCategory(
@@ -117,6 +124,13 @@ const SubCategoriesData = const [
     description: 'Have a quick bite with our burgers & fried chicken',
     image: 'assets/images/subCatedgories/ffood.jpg',
   ),
+  SubCategory(
+    id: 'sc_17i',
+    categories: 'sc_17',
+    subCategoryTitle: 'Western Foods',
+    description: 'Have a quick bite with our burgers & fried chicken',
+    image: 'assets/images/subCatedgories/western.jpg',
+  ),
 
   SubCategory(
     id: 'sc_22',
@@ -152,6 +166,13 @@ const SubCategoriesData = const [
     subCategoryTitle: 'Others',
     description: 'Churches and more ',
     image: 'assets/images/subCatedgories/otherWorship.jpg',
+  ),
+  SubCategory(
+    id: 'sc24',
+    categories: 'c4',
+    subCategoryTitle: 'KL Art Scene',
+    description: 'Dive into nature with your loved ones',
+    image: 'assets/images/contentList/artscene/artscene.jpg',
   ),
 
   SubCategory(
@@ -205,6 +226,13 @@ const SubCategoriesData = const [
     image: 'assets/images/subCatedgories/nightlife.jpg',
   ),
   SubCategory(
+    id: 'sc_12c',
+    categories: 'sc_12',
+    subCategoryTitle: 'Night Markets in KL',
+    description: 'Shop away for the night',
+    image: 'assets/images/subCatedgories/nightmarket.jpg',
+  ),
+  SubCategory(
     id: 'sc_13',
     categories: 'c5',
     subCategoryTitle: 'Where To Eat in KL',
@@ -224,6 +252,27 @@ const SubCategoriesData = const [
     subCategoryTitle: 'Accomodation',
     description: 'Your Home Away From Home',
     image: 'assets/images/subCatedgories/accomifation.jpg',
+  ),
+  SubCategory(
+    id: 'sc_15a',
+    categories: 'sc_15',
+    subCategoryTitle: 'Hotels',
+    description: 'Your Home Away From Home',
+    image: 'assets/images/contentList/accomodation/10.jpg',
+  ),
+  SubCategory(
+    id: 'sc_15b',
+    categories: 'sc_15',
+    subCategoryTitle: 'Budget Hotels',
+    description: 'Your Home Away From Home',
+    image: 'assets/images/contentList/accomodation/izumi.jpg',
+  ),
+  SubCategory(
+    id: 'sc_15c',
+    categories: 'sc_15',
+    subCategoryTitle: 'Backpackers Lodge',
+    description: 'Your Home Away From Home',
+    image: 'assets/images/contentList/accomodation/amethyst.jpg',
   ),
   SubCategory(
     id: 'sc_16',
@@ -259,5 +308,12 @@ const SubCategoriesData = const [
     subCategoryTitle: 'Places to Hike',
     description: 'Walk with the greenery',
     image: 'assets/images/subCatedgories/hike.jpg',
+  ),
+  SubCategory(
+    id: 'sc_24',
+    categories: 'c7',
+    subCategoryTitle: 'Extreme Sports',
+    description: 'Walk with the greenery',
+    image: 'assets/images/subCatedgories/extreme.jpg',
   ),
 ];

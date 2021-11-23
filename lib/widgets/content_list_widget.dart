@@ -21,7 +21,7 @@ class ContentList extends StatelessWidget {
       this.onBookmarkChanged});
 
   void selectContentList(BuildContext context) {
-    if (id == 'cl1_14' || id == 'cl2_14' || id == 'cl3_14') {
+    if (id == 'cl1_14' || id == 'cl2_14' || id == 'cl3_14' || id == 'cl4_14') {
       Navigator.of(context).push(
         platformPageRoute(
           context: context,

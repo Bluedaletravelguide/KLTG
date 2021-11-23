@@ -64,6 +64,30 @@ const ContentListData = const [
     contentListTitle: 'Dataran Merdeka',
     image: 'assets/images/contentList/historicalPlaces/5.jpg',
   ),
+  ContentLi(
+    id: 'cl6_3',
+    categories: 'sc3',
+    contentListTitle: 'Victoria Fountain',
+    image: 'assets/images/contentList/historicalPlaces/6.jpg',
+  ),
+  ContentLi(
+    id: 'cl7_3',
+    categories: 'sc3',
+    contentListTitle: 'Ilham Baru Tower',
+    image: 'assets/images/contentList/historicalPlaces/7.jpg',
+  ),
+  ContentLi(
+    id: 'cl8_3',
+    categories: 'sc3',
+    contentListTitle: 'Bangunan Sulaiman',
+    image: 'assets/images/contentList/historicalPlaces/8.jpg',
+  ),
+  ContentLi(
+    id: 'cl9_3',
+    categories: 'sc3',
+    contentListTitle: 'City Theater (Panggung Bandaraya)',
+    image: 'assets/images/contentList/historicalPlaces/9.jfif',
+  ),
 
 //parks 4
   ContentLi(
@@ -75,7 +99,7 @@ const ContentListData = const [
   ContentLi(
     id: 'cl2_4',
     categories: 'sc4',
-    contentListTitle: 'ASEAN Culture Garden',
+    contentListTitle: 'ASEAN Sculpture Garden',
     image: 'assets/images/contentList/parks/2.jpg',
   ),
   ContentLi(
@@ -125,6 +149,62 @@ const ContentListData = const [
     categories: 'sc4',
     contentListTitle: 'Bukit Kiara Trail',
     image: 'assets/images/contentList/parks/10.jpg',
+  ),
+  ContentLi(
+    id: 'cl11_4',
+    categories: 'sc4',
+    contentListTitle: 'KL Butterfly Park',
+    image: 'assets/images/contentList/parks/11.jpg',
+  ),
+  ContentLi(
+    id: 'cl12_4',
+    categories: 'sc4',
+    contentListTitle: 'Perdana Botanical Garden',
+    image: 'assets/images/contentList/parks/12.jpg',
+  ),
+
+//Memorial & Museums
+  ContentLi(
+    id: 'cl1_23',
+    categories: 'sc23',
+    contentListTitle: 'Ethnology of the Malay World Museum',
+    image: 'assets/images/contentList/museums/1.jpg',
+  ),
+  ContentLi(
+    id: 'cl2_23',
+    categories: 'sc23',
+    contentListTitle: 'National Textiles Museum',
+    image: 'assets/images/contentList/museums/2.jpg',
+  ),
+  ContentLi(
+    id: 'cl3_23',
+    categories: 'sc23',
+    contentListTitle: 'Museum of Asian Arts',
+    image: 'assets/images/contentList/museums/3.jpg',
+  ),
+  ContentLi(
+    id: 'cl4_23',
+    categories: 'sc23',
+    contentListTitle: 'Royal Malaysia Police Museum',
+    image: 'assets/images/contentList/museums/4.jpg',
+  ),
+  ContentLi(
+    id: 'cl5_23',
+    categories: 'sc23',
+    contentListTitle: 'Jade Museum',
+    image: 'assets/images/contentList/museums/5.jpg',
+  ),
+  ContentLi(
+    id: 'cl6_23',
+    categories: 'sc23',
+    contentListTitle: 'Islamic Arts Museum',
+    image: 'assets/images/contentList/museums/6.jpg',
+  ),
+  ContentLi(
+    id: 'cl7_23',
+    categories: 'sc23',
+    contentListTitle: 'Memorial Negarawan',
+    image: 'assets/images/contentList/museums/7.jpg',
   ),
 
 //Spa 5
@@ -213,6 +293,36 @@ const ContentListData = const [
     contentListTitle: 'KL Tower Mini Zoo',
     image: 'assets/images/contentList/klForKids/KLTowerMiniZoo.jpg',
   ),
+  ContentLi(
+    id: 'cl5_6',
+    categories: 'sc6',
+    contentListTitle: 'Deer Park',
+    image: 'assets/images/contentList/klForKids/deer.jpg',
+  ),
+  ContentLi(
+    id: 'cl6_6',
+    categories: 'sc6',
+    contentListTitle: 'Kids Nation',
+    image: 'assets/images/contentList/klForKids/kidsnation.jpg',
+  ),
+  ContentLi(
+    id: 'cl7_6',
+    categories: 'sc6',
+    contentListTitle: 'We Rock The Spectrum Express',
+    image: 'assets/images/contentList/klForKids/rock.jpg',
+  ),
+  ContentLi(
+    id: 'cl8_6',
+    categories: 'sc6',
+    contentListTitle: 'Bamboo Playhouse',
+    image: 'assets/images/contentList/klForKids/bamboo.jpg',
+  ),
+  ContentLi(
+    id: 'cl9_6',
+    categories: 'sc6',
+    contentListTitle: 'Beast Park (JUMPA)',
+    image: 'assets/images/contentList/klForKids/beast.jpg',
+  ),
 //localFood 17
 
 //whatToDoInKl 10
@@ -278,6 +388,36 @@ const ContentListData = const [
     contentListTitle: 'Pavilion KL',
     image: 'assets/images/contentList/whereToShop/3.jpg',
   ),
+  ContentLi(
+    id: 'cl6_11',
+    categories: 'sc_11',
+    contentListTitle: 'Mid Valley Megamall',
+    image: 'assets/images/contentList/whereToShop/6.jpg',
+  ),
+  ContentLi(
+    id: 'cl7_11',
+    categories: 'sc_11',
+    contentListTitle: 'Suria KLCC',
+    image: 'assets/images/contentList/whereToShop/7.jpg',
+  ),
+  ContentLi(
+    id: 'cl8_11',
+    categories: 'sc_11',
+    contentListTitle: 'Starhill Gallery Kuala Lumpur',
+    image: 'assets/images/contentList/whereToShop/8.jpg',
+  ),
+  ContentLi(
+    id: 'cl9_11',
+    categories: 'sc_11',
+    contentListTitle: 'Berjaya Times Square',
+    image: 'assets/images/contentList/whereToShop/9.jpg',
+  ),
+  ContentLi(
+    id: 'cl10_11',
+    categories: 'sc_11',
+    contentListTitle: 'The Gardens Mall',
+    image: 'assets/images/contentList/whereToShop/10.jpg',
+  ),
 
 //nightLife places 12a
   ContentLi(
@@ -334,7 +474,63 @@ const ContentListData = const [
     id: 'cl5_12b',
     categories: 'sc_12b',
     contentListTitle: 'Mantra Rooftop Bar',
-    image: 'assets/images/contentList/nightLife/4.jpg',
+    image: 'assets/images/contentList/nightLife/5.jpg',
+  ),
+  ContentLi(
+    id: 'cl6_12b',
+    categories: 'sc_12b',
+    contentListTitle: 'Havana Bar & Grill',
+    image: 'assets/images/contentList/nightLife/6.jpg',
+  ),
+  ContentLi(
+    id: 'cl7_12b',
+    categories: 'sc_12b',
+    contentListTitle: 'Zouk Club KL',
+    image: 'assets/images/contentList/nightLife/7.jpg',
+  ),
+  ContentLi(
+    id: 'cl8_12b',
+    categories: 'sc_12b',
+    contentListTitle: 'The Attic Bar',
+    image: 'assets/images/contentList/nightLife/8.jpg',
+  ),
+  ContentLi(
+    id: 'cl9_12b',
+    categories: 'sc_12b',
+    contentListTitle: 'The Whisky Bar KL ',
+    image: 'assets/images/contentList/nightLife/9.jpg',
+  ),
+  ContentLi(
+    id: 'cl10_12b',
+    categories: 'sc_12b',
+    contentListTitle: 'JungleBird',
+    image: 'assets/images/contentList/nightLife/10.jpg',
+  ),
+
+//Night Markets in KL
+  ContentLi(
+    id: 'cl1_12c',
+    categories: 'sc_12c',
+    contentListTitle: 'Connaught Night market',
+    image: 'assets/images/contentList/nightLife/11.jpg',
+  ),
+  ContentLi(
+    id: 'cl2_12c',
+    categories: 'sc_12c',
+    contentListTitle: 'Petaling Street',
+    image: 'assets/images/contentList/nightLife/12.jpg',
+  ),
+  ContentLi(
+    id: 'cl3_12c',
+    categories: 'sc_12c',
+    contentListTitle: 'Kasturi Walk',
+    image: 'assets/images/contentList/nightLife/13.jpg',
+  ),
+  ContentLi(
+    id: 'cl4_12c',
+    categories: 'sc_12c',
+    contentListTitle: 'Pasar Malam Sentul',
+    image: 'assets/images/contentList/nightLife/14.jpg',
   ),
 
 //whereToEat 13
@@ -367,7 +563,7 @@ const ContentListData = const [
   ContentLi(
     id: 'cl1_14',
     categories: 'sc_14',
-    contentListTitle: 'Health Care Services',
+    contentListTitle: 'Hospitals',
     image: 'assets/images/contentList/medicalTourism/1.jpg',
   ),
   ContentLi(
@@ -382,67 +578,196 @@ const ContentListData = const [
     contentListTitle: 'Dermatologist',
     image: 'assets/images/contentList/medicalTourism/3.jpg',
   ),
+  ContentLi(
+    id: 'cl4_14',
+    categories: 'sc_14',
+    contentListTitle: 'Ophthalmologist',
+    image: 'assets/images/contentList/medicalTourism/4.jpg',
+  ),
 
 //accomation 15
   ContentLi(
-    id: 'cl1_15',
-    categories: 'sc_15',
+    id: 'cl1_15a',
+    categories: 'sc_15a',
     contentListTitle: 'Royale Chulan, KL',
     image: 'assets/images/contentList/accomodation/1.jpg',
   ),
   ContentLi(
-    id: 'cl2_15',
-    categories: 'sc_15',
+    id: 'cl2_15a',
+    categories: 'sc_15a',
     contentListTitle: 'Majestic Hotel, KL',
     image: 'assets/images/contentList/accomodation/2.jpg',
   ),
   ContentLi(
-    id: 'cl3_15',
-    categories: 'sc_15',
+    id: 'cl3_15a',
+    categories: 'sc_15a',
     contentListTitle: 'Furama Hotel, Bukit Bintang',
     image: 'assets/images/contentList/accomodation/3.jpg',
   ),
   ContentLi(
-    id: 'cl4_15',
-    categories: 'sc_15',
+    id: 'cl4_15a',
+    categories: 'sc_15a',
     contentListTitle: 'JW Marriot',
     image: 'assets/images/contentList/accomodation/4.jpg',
   ),
   ContentLi(
-    id: 'cl5_15',
-    categories: 'Mandarin Oriental, KL',
-    contentListTitle: 'Pavilion, Kuala Lumpur',
+    id: 'cl5_15a',
+    categories: 'sc_15a',
+    contentListTitle: 'Mandarin Oriental, KL',
     image: 'assets/images/contentList/accomodation/5.jpg',
   ),
   ContentLi(
-    id: 'cl6_15',
-    categories: 'Citin Hotel, Masjid Jamek',
-    contentListTitle: 'Pavilion, Kuala Lumpur',
-    image: 'assets/images/contentList/accomodation/6.jpg',
+    id: 'cl6_15a',
+    categories: 'sc_15a',
+    contentListTitle: 'Traders Hotel Kuala Lumpur',
+    image: 'assets/images/contentList/accomodation/traders.jpg',
   ),
   ContentLi(
-    id: 'cl7_15',
-    categories: 'sc_15',
-    contentListTitle: 'Prescott Hotel',
-    image: 'assets/images/contentList/accomodation/7.jpg',
+    id: 'cl7_15a',
+    categories: 'sc_15a',
+    contentListTitle: 'Pavilion Hotel Kuala Lumpur',
+    image: 'assets/images/contentList/accomodation/pavilion.jpg',
   ),
   ContentLi(
-    id: 'cl8_15',
-    categories: 'sc_15',
+    id: 'cl8_15a',
+    categories: 'sc_15a',
     contentListTitle: 'Westin, Kuala Lumpur',
-    image: 'assets/images/contentList/accomodation/8.jpg',
+    image: 'assets/images/contentList/accomodation/westin.jpg',
   ),
   ContentLi(
-    id: 'cl9_15',
-    categories: 'sc_15',
+    id: 'cl9_15a',
+    categories: 'sc_15a',
     contentListTitle: 'Hilton, KL',
-    image: 'assets/images/contentList/accomodation/9.jpg',
+    image: 'assets/images/contentList/accomodation/hilton.jpg',
   ),
   ContentLi(
-    id: 'cl10_15',
-    categories: 'sc_15',
+    id: 'cl10_15a',
+    categories: 'sc_15a',
     contentListTitle: 'InterContinental Hotel, KL',
     image: 'assets/images/contentList/accomodation/10.jpg',
+  ),
+  //Budget Hotels
+  ContentLi(
+    id: 'cl1_15b',
+    categories: 'sc_15b',
+    contentListTitle: 'Izumi Hotel Bukit Bintang',
+    image: 'assets/images/contentList/accomodation/izumi.jpg',
+  ),
+  ContentLi(
+    id: 'cl2_15b',
+    categories: 'sc_15b',
+    contentListTitle: 'Replica Inn',
+    image: 'assets/images/contentList/accomodation/replica.jpg',
+  ),
+  ContentLi(
+    id: 'cl3_15b',
+    categories: 'sc_15b',
+    contentListTitle: 'Joy Inn Hotel',
+    image: 'assets/images/contentList/accomodation/joyinn.jpg',
+  ),
+  ContentLi(
+    id: 'cl4_15b',
+    categories: 'sc_15b',
+    contentListTitle: '5 Bands Hotel',
+    image: 'assets/images/contentList/accomodation/5bands.jpg',
+  ),
+  ContentLi(
+    id: 'cl5_15b',
+    categories: 'sc_15b',
+    contentListTitle: "MoMo's Kuala Lumpur",
+    image: 'assets/images/contentList/accomodation/momo.jpg',
+  ),
+  ContentLi(
+    id: 'cl6_15b',
+    categories: 'sc_15b',
+    contentListTitle: 'Valenza Hotel & Cafe',
+    image: 'assets/images/contentList/accomodation/valenza.jpg',
+  ),
+  ContentLi(
+    id: 'cl7_15b',
+    categories: 'sc_15b',
+    contentListTitle: 'Lavana Hotel Chinatown',
+    image: 'assets/images/contentList/accomodation/lavana.jpg',
+  ),
+  ContentLi(
+    id: 'cl8_15b',
+    categories: 'sc_15b',
+    contentListTitle: 'PODs The Backpackers Home & Cafe, Kuala Lumpur',
+    image: 'assets/images/contentList/accomodation/pod.jpg',
+  ),
+  ContentLi(
+    id: 'cl9_15b',
+    categories: 'sc_15b',
+    contentListTitle: "Raizzy's Guesthouse",
+    image: 'assets/images/contentList/accomodation/raizzy.jpg',
+  ),
+  ContentLi(
+    id: 'cl10_15b',
+    categories: 'sc_15b',
+    contentListTitle: 'Hotel Paloma Inn',
+    image: 'assets/images/contentList/accomodation/paloma.jpg',
+  ),
+
+  //Backpackers Lodge
+  ContentLi(
+    id: 'cl1_15c',
+    categories: 'sc_15c',
+    contentListTitle: 'The Bed KLCC',
+    image: 'assets/images/contentList/accomodation/capsule.jpg',
+  ),
+  ContentLi(
+    id: 'cl2_15c',
+    categories: 'sc_15c',
+    contentListTitle: 'SUNSHINE BEDZ KL',
+    image: 'assets/images/contentList/accomodation/sunshines.jpg',
+  ),
+  ContentLi(
+    id: 'cl3_15c',
+    categories: 'sc_15c',
+    contentListTitle: 'Mingle Hostel Kuala Lumpur',
+    image: 'assets/images/contentList/accomodation/mingle.jpg',
+  ),
+  ContentLi(
+    id: 'cl4_15c',
+    categories: 'sc_15c',
+    contentListTitle: 'PODs The Backpackers Home & Cafe, Kuala Lumpur',
+    image: 'assets/images/contentList/accomodation/pod.jpg',
+  ),
+  ContentLi(
+    id: 'cl5_15c',
+    categories: 'sc_15c',
+    contentListTitle: 'Illuminate Boutique Hostel',
+    image: 'assets/images/contentList/accomodation/illuminate.jpg',
+  ),
+  ContentLi(
+    id: 'cl6_15c',
+    categories: 'sc_15c',
+    contentListTitle: 'The Explorers Guesthouse',
+    image: 'assets/images/contentList/accomodation/explore.jpg',
+  ),
+  ContentLi(
+    id: 'cl7_15c',
+    categories: 'sc_15c',
+    contentListTitle: 'Leo Backpackers @ Central Market',
+    image: 'assets/images/contentList/accomodation/leo.jpg',
+  ),
+  ContentLi(
+    id: 'cl8_15c',
+    categories: 'sc_15c',
+    contentListTitle: 'KITEZ Hotel & Hostel',
+    image: 'assets/images/contentList/accomodation/kitez.jpg',
+  ),
+  ContentLi(
+    id: 'cl9_15c',
+    categories: 'sc_15c',
+    contentListTitle: 'Sekeping Tenggiri',
+    image: 'assets/images/contentList/accomodation/sekeping.jpg',
+  ),
+  ContentLi(
+    id: 'cl10_15c',
+    categories: 'sc_15c',
+    contentListTitle: 'Amethyst Love Guesthouse',
+    image: 'assets/images/contentList/accomodation/amethyst.jpg',
   ),
 
   //dance 9
@@ -587,6 +912,20 @@ const ContentListData = const [
     image: 'assets/images/contentList/malayFood/restorandcengkih.jpg',
   ),
 
+  ContentLi(
+    id: 'cl11_17a',
+    categories: 'sc_17a',
+    contentListTitle: "Restoran Dapur Sarawak",
+    image: 'assets/images/contentList/malayFood/sarawak.jpg',
+  ),
+
+  ContentLi(
+    id: 'cl12_17a',
+    categories: 'sc_17a',
+    contentListTitle: "Sarawak Bowl",
+    image: 'assets/images/contentList/malayFood/bowl.JPG',
+  ),
+
   //Chinese Food 17b
   ContentLi(
     id: 'cl1_17b',
@@ -658,6 +997,20 @@ const ContentListData = const [
     image: 'assets/images/contentList/chineseFood/LaiPoHeen.jpg',
   ),
 
+  ContentLi(
+    id: 'cl11_17b',
+    categories: 'sc_17b',
+    contentListTitle: "Opium KL",
+    image: 'assets/images/contentList/chineseFood/opium.jpg',
+  ),
+
+  ContentLi(
+    id: 'cl12_17b',
+    categories: 'sc_17b',
+    contentListTitle: "El Cerdo",
+    image: 'assets/images/contentList/chineseFood/cerdo.jpg',
+  ),
+
   //Indian Food 17c
   ContentLi(
     id: 'cl1_17c',
@@ -727,6 +1080,13 @@ const ContentListData = const [
     categories: 'sc_17c',
     contentListTitle: "Taj Garden",
     image: 'assets/images/contentList/indianFood/taj.jpg',
+  ),
+
+  ContentLi(
+    id: 'cl11_17c',
+    categories: 'sc_17c',
+    contentListTitle: "Khan's Indian Cuisine",
+    image: 'assets/images/contentList/indianFood/khan.jpg',
   ),
 
   //Arabic 17d
@@ -1084,6 +1444,44 @@ const ContentListData = const [
     image: 'assets/images/contentList/fastFood/10.png',
   ),
 
+  //Western Food 17i
+  ContentLi(
+    id: 'cl1_17i',
+    categories: 'sc_17i',
+    contentListTitle: "Dining In The Dark KL",
+    image: 'assets/images/contentList/westernFood/1.jpg',
+  ),
+  ContentLi(
+    id: 'cl2_17i',
+    categories: 'sc_17i',
+    contentListTitle: "Skillet KL",
+    image: 'assets/images/contentList/westernFood/2.jpg',
+  ),
+  ContentLi(
+    id: 'cl3_17i',
+    categories: 'sc_17i',
+    contentListTitle: "Beta KL",
+    image: 'assets/images/contentList/westernFood/3.jpg',
+  ),
+  ContentLi(
+    id: 'cl4_17i',
+    categories: 'sc_17i',
+    contentListTitle: "Cantaloupe at Troika Sky DIning",
+    image: 'assets/images/contentList/westernFood/4.jpg',
+  ),
+  ContentLi(
+    id: 'cl5_17i',
+    categories: 'sc_17i',
+    contentListTitle: "THIRTY8 Restaurant, Bar & Lounge",
+    image: 'assets/images/contentList/westernFood/5.jpg',
+  ),
+  ContentLi(
+    id: 'cl6_17i',
+    categories: 'sc_17i',
+    contentListTitle: "Subak Restaurant",
+    image: 'assets/images/contentList/westernFood/6.jpg',
+  ),
+
 // Music 18
   ContentLi(
     id: 'cl1_18',
@@ -1248,9 +1646,27 @@ const ContentListData = const [
   ),
   ContentLi(
     id: 'cl6_20',
-    categories: 'sc_w21',
+    categories: 'sc_21',
     contentListTitle: 'Lang Tengah Island',
     image: 'assets/images/contentList/island/6.jpg',
+  ),
+  ContentLi(
+    id: 'cl7_20',
+    categories: 'sc_21',
+    contentListTitle: 'Rawa Island',
+    image: 'assets/images/contentList/island/7.jpg',
+  ),
+  ContentLi(
+    id: 'cl8_20',
+    categories: 'sc_21',
+    contentListTitle: 'Tengah Island',
+    image: 'assets/images/contentList/island/8.jpg',
+  ),
+  ContentLi(
+    id: 'cl9_20',
+    categories: 'sc_21',
+    contentListTitle: 'Redang Island',
+    image: 'assets/images/contentList/island/9.jpg',
   ),
 
   //Hil Stations 21
@@ -1320,7 +1736,25 @@ const ContentListData = const [
     id: 'cl5_22',
     categories: 'sc_19',
     contentListTitle: 'Seven Wells Waterfall',
-    image: 'assets/images/contentList/waterfall/5.jpg',
+    image: 'assets/images/contentList/waterfall/5b.jpg',
+  ),
+  ContentLi(
+    id: 'cl6_22',
+    categories: 'sc_19',
+    contentListTitle: 'Sungai Chiling',
+    image: 'assets/images/contentList/waterfall/6.jpeg',
+  ),
+  ContentLi(
+    id: 'cl7_22',
+    categories: 'sc_19',
+    contentListTitle: 'Lata Medang',
+    image: 'assets/images/contentList/waterfall/7.jpg',
+  ),
+  ContentLi(
+    id: 'cl8_22',
+    categories: 'sc_19',
+    contentListTitle: 'Serendah Waterfall',
+    image: 'assets/images/contentList/waterfall/8.jpg',
   ),
 
 //Hiking 23
@@ -1353,6 +1787,50 @@ const ContentListData = const [
     categories: 'sc_20',
     contentListTitle: 'Penang National Park',
     image: 'assets/images/contentList/hiking/5.jpg',
+  ),
+  ContentLi(
+    id: 'cl10_23',
+    categories: 'sc_20',
+    contentListTitle: 'Bukit Batu Putih',
+    image: 'assets/images/contentList/hiking/6.jpg',
+  ),
+  ContentLi(
+    id: 'cl11_23',
+    categories: 'sc_20',
+    contentListTitle: 'Bukit Kutu',
+    image: 'assets/images/contentList/hiking/7.jpg',
+  ),
+  ContentLi(
+    id: 'cl12_23',
+    categories: 'sc_20',
+    contentListTitle: 'Bukit Batu Pahat',
+    image: 'assets/images/contentList/hiking/8.jpg',
+  ),
+  ContentLi(
+    id: 'cl13_23',
+    categories: 'sc_20',
+    contentListTitle: 'Puncak Rajawali',
+    image: 'assets/images/contentList/hiking/2.jfif',
+  ),
+
+//Extreme Sports 24
+  ContentLi(
+    id: 'cl1_25',
+    categories: 'sc_24',
+    contentListTitle: 'KKB Paragliding Park',
+    image: 'assets/images/contentList/extreme/1b.jpeg',
+  ),
+  ContentLi(
+    id: 'cl2_25',
+    categories: 'sc_24',
+    contentListTitle: 'Whitewater Rafting Kuala Kubu Bharu',
+    image: 'assets/images/contentList/extreme/2.jpg',
+  ),
+  ContentLi(
+    id: 'cl3_25',
+    categories: 'sc_24',
+    contentListTitle: 'Jugra Hill',
+    image: 'assets/images/contentList/extreme/3.jpg',
   ),
 
   //muslim worship place
@@ -1426,7 +1904,6 @@ const ContentListData = const [
   ),
 
   //buddhist worship place sc22b
-
   ContentLi(
     id: 'cl1_22b',
     categories: 'sc_22b',
@@ -1457,9 +1934,26 @@ const ContentListData = const [
     contentListTitle: 'Sri Jayanti Buddhist Temple Sentul',
     image: 'assets/images/contentList/buddhist/5.jpg',
   ),
+  ContentLi(
+    id: 'cl6_22b',
+    categories: 'sc_22b',
+    contentListTitle: 'Sin Sze Si Ya Temple',
+    image: 'assets/images/contentList/buddhist/6.jpg',
+  ),
+  ContentLi(
+    id: 'cl7_22b',
+    categories: 'sc_22b',
+    contentListTitle: 'Wat Meh Liew Thai Buddhist Temple',
+    image: 'assets/images/contentList/buddhist/7.jpg',
+  ),
+  ContentLi(
+    id: 'cl8_22b',
+    categories: 'sc_22b',
+    contentListTitle: 'Wong Loo Sen See Chee Choong Temple',
+    image: 'assets/images/contentList/buddhist/8.jpg',
+  ),
 
   //hindu worship temple sc22c
-
   ContentLi(
     id: 'cl1_22c',
     categories: 'sc_22c',
@@ -1506,6 +2000,12 @@ const ContentListData = const [
     categories: 'sc_22c',
     contentListTitle: 'Korttu Malai Pillayar Temple',
     image: 'assets/images/contentList/hindu/korttu.jpg',
+  ),
+  ContentLi(
+    id: 'cl8_22c',
+    categories: 'sc_22c',
+    contentListTitle: 'Athi Eeswaran Temple Sentul Timur',
+    image: 'assets/images/contentList/hindu/athi.jpg',
   ),
 
   //Others worship 22d
@@ -1568,5 +2068,49 @@ const ContentListData = const [
     categories: 'sc_22d',
     contentListTitle: 'Gurdwara Sahib Mainduab (Jalan Pudu Lama)',
     image: 'assets/images/contentList/otherWorship/10.jpg',
+  ),
+
+  //KL Art Scene
+  ContentLi(
+    id: 'cl1_24',
+    categories: 'sc24',
+    contentListTitle: 'National Art Gallery',
+    image: 'assets/images/contentList/artscene/1.jpg',
+  ),
+  ContentLi(
+    id: 'cl2_24',
+    categories: 'sc24',
+    contentListTitle: 'OUR ArtProjects (The Zhongshan Building)',
+    image: 'assets/images/contentList/artscene/2.jpg',
+  ),
+  ContentLi(
+    id: 'cl3_24',
+    categories: 'sc24',
+    contentListTitle: 'TAKSU Kuala Lumpur',
+    image: 'assets/images/contentList/artscene/3.jpg',
+  ),
+  ContentLi(
+    id: 'cl4_24',
+    categories: 'sc24',
+    contentListTitle: 'Wei Ling Gallery',
+    image: 'assets/images/contentList/artscene/4.jpg',
+  ),
+  ContentLi(
+    id: 'cl5_24',
+    categories: 'sc24',
+    contentListTitle: 'Valentine Willie Fine Art',
+    image: 'assets/images/contentList/artscene/5.jpg',
+  ),
+  ContentLi(
+    id: 'cl6_24',
+    categories: 'sc24',
+    contentListTitle: 'Oriental Art and Cultural Association',
+    image: 'assets/images/contentList/artscene/6.jpg',
+  ),
+  ContentLi(
+    id: 'cl7_24',
+    categories: 'sc24',
+    contentListTitle: 'Kuala Lumpur City Gallery',
+    image: 'assets/images/contentList/artscene/7.jpg',
   ),
 ];
