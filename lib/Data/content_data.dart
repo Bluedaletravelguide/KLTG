@@ -669,9 +669,10 @@ const ContentData = const [
       webUrl: '-'),
   ContentClass(
       id: 'cl5_6',
-      decrepitation: '',
+      decrepitation:
+          'Wildlife enthusiasts should take a chance to enter the majestic Deer Park to witness tons of the adorable namesake animal roaming around the park.',
       content:
-          "The Kuala Lumpur Deer Park is a two-hectare enclosure in Lake Gardens, Kuala Lumpur. Fallow deer, axis deer, and sambar deer are among the park's other deer species. The park's rich foliage, attractive ponds, and calm environment will appeal to visitors.",
+          "Housed within a two hectare enclosure, the locally beloved Deer Park is home to the medium-sized fallow deer (also known as Dama Dama) from Holland with a pretty spotted coat. This park is also situated to other popular attractions such as the Tun Abdul Razak Memorial and the Orchid Garden.",
       workhour: '10.00 am - 6.00 pm (Monday - Sunday)',
       fees: '-',
       phoneNo: '+603-92000039',
@@ -681,9 +682,10 @@ const ContentData = const [
       webUrl: 'http://www.kuala-lumpur.ws/attractions/kl-deer-park.htm '),
   ContentClass(
       id: 'cl6_6',
-      decrepitation: '',
+      decrepitation:
+          'At Kids Nation, experience an aviation-themed indoor wonderland that promises endless interactive yet educational fun!',
       content:
-          "The aviation-themed play park aims to enhance the experience of children by providing distinctive amenities such as ball pools, trampolines, and webbing bridges, among other things.",
+          "Let the children enjoy exciting facilities such as donut slides, spiral slides, trampolines, webbing bridges, crawling tunnels, magic mirrors, ball pools and so much more at the aviation-themed play park known as Kids Nation! Designed with safety and ingenuity, it’s a child’s haven that guarantees tons of fun.",
       workhour: '10.00 am - 8.00 pm (Monday - Sunday)',
       fees: '-',
       phoneNo: '+603-64194976',
@@ -694,9 +696,10 @@ const ContentData = const [
       webUrl: 'https://www.kidsnation.my/'),
   ContentClass(
       id: 'cl7_6',
-      decrepitation: '-',
+      decrepitation:
+          'Expect hours of exciting entertainment at We Rock The Spectrum that focuses on physical as well as mental development of a child.',
       content:
-          "The Kid's Gym provides a safe environment for children of all abilities to play and grow together. The meticulously built sensory gear, specifically created to assist youngsters with sensory processing issues, will be extremely beneficial to them.",
+          "If your child has oodles of pent up energy to work off, do not hesitate to bring them over to We Rock The Spectrum. Better yet, it is the only kid’s gym that provides uniquely crafted sensory equipment for the benefit of little ones with sensory processing disorders.",
       workhour: '9.00 am - 6.00 pm (Monday - Saturday) \nClosed on Sunday',
       fees: '-',
       phoneNo: '+6010-9395711',
@@ -960,9 +963,10 @@ const ContentData = const [
       webUrl: 'https://www.midvalley.com.my/'),
   ContentClass(
       id: 'cl7_11',
-      decrepitation: '-',
+      decrepitation:
+          'If there’s one must-visit mall for any first-timer in Kuala Lumpur, it is definitely Suria KLCC that’s located right near the iconic Twin Towers.',
       content:
-          'The mall is well-known not only for its convenient location and luxury businesses, but also for tourist attractions for children such as Aquaria KLCC and Petrosains, an oceanarium and a science exploration centre, respectively.',
+          'Apart from rows of conveniently located luxury shops, feel free to also head over to other exciting attractions such as Aquaria KLCC, Petrosains and KLCC Park.',
       workhour: '10.00 am - 10.00 pm (Monday - Sunday)',
       fees: '-',
       phoneNo: '+603-23822828',
@@ -986,7 +990,8 @@ const ContentData = const [
       webUrl: '-'),
   ContentClass(
       id: 'cl9_11',
-      decrepitation: '-',
+      decrepitation:
+          'As a one-stop entertainment centre, Berjaya Times Square has certainly got it all. In fact, it also holds the largest indoor theme park in Malaysia!',
       content:
           'Berjaya Times Square is a one-stop entertainment centre for people of all ages. It includes an indoor theme park with an IMAX theatre, a cinema, a luxury spa and a games arcade. It is connected to a five-star hotel of the same brand name.',
       workhour: '10.00 am - 10.00 pm (Monday - Sunday)',
@@ -998,8 +1003,10 @@ const ContentData = const [
       webUrl: 'https://berjayatimessquarekl.com/'),
   ContentClass(
       id: 'cl10_11',
-      decrepitation: '-',
-      content: '-',
+      decrepitation:
+          'In search of a refined shopping experience? Look no further than The Gardens Mall; an undoubtedly excellent choice to fulfill all your shopping needs.',
+      content:
+          'Nestled in the centre of Mid Valley City is the one and only The Gardens Mall. This premium six-level shopping central has over 200 outlets filled with the best local and international brands around. From apparel to homeware, all your essential and luxury requirements are fulfilled.',
       workhour: '10.00 am - 10.00 pm (Monday - Sunday)',
       fees: '-',
       phoneNo: '+603-22970288',
@@ -1130,8 +1137,10 @@ const ContentData = const [
       webUrl: 'https://www.mantrabarkl.com/index'),
   ContentClass(
       id: 'cl6_12b',
-      decrepitation: '-',
-      content: '-',
+      decrepitation:
+          'After an exhausting day of exploring the city, stop by Havana Bar & Grill to rest, unwind and bask in the lively ambience with the help of a hearty meal.',
+      content:
+          'Offering a medley of Western cuisine and bubbling booze, Havana Bar & Grill in Changkat is the place to be. Not only will you be able to satisfy your ravenous appetite after a busy day, but you are also guaranteed fun thanks to the wide range of craft beers and cocktails, pool table as well as dart boards.',
       workhour:
           '4.00 pm - 12.00 am (Monday - Thursday) \n2.00 pm-12.00 am (Friday - Sunday)',
       fees: '-',
@@ -1142,8 +1151,10 @@ const ContentData = const [
       webUrl: '-'),
   ContentClass(
       id: 'cl7_12b',
-      decrepitation: '-',
-      content: '-',
+      decrepitation:
+          'Get ready to party the night away at Zouk Club KL! After all, it is one of the ultimate go-to nightclubs favoured by both locals and foreigners.',
+      content:
+          'Recently relocated to Jalan Tun Razak after 10 long years of inhabiting Jalan Tun Razak, Zouk Club KL still remains as an ultra popular spot to dance away -- especially on the Friday nights and weekends. It basically encompasses an entertaining mix of nightclub, bar, live music venue and restaurant.',
       workhour:
           '5.00 am - 3.00 am (Sunday - Tuesday)\n5.00 pm - 4.00 am (Wednesday-Thursday)\n5.00 pm - 5.00 am (Friday - Saturday)',
       fees: '-',
@@ -1155,8 +1166,10 @@ const ContentData = const [
       webUrl: '-'),
   ContentClass(
       id: 'cl8_12b',
-      decrepitation: '-',
-      content: '-',
+      decrepitation:
+          'For privacy and exclusivity that does not skimp out on finesse, pop by The Attic Bar -- a hidden cocktail bar and restaurant in Chinatown.',
+      content:
+          'Concealed on the rooftop of the hip Travel Hub Guesthouse in vibrant Chinatown, step into the hidden upscale world of The Attic Bar. Aside from creatively reinvented cocktails that have been given a local twist, dig into an exquisite Italian meal while viewing the breathtaking sunset along the skyline of KL.',
       workhour: '4.00 pm - 12.00 am (Monday - Sunday)',
       fees: '-',
       phoneNo: '+6012-3938627',
@@ -1167,8 +1180,10 @@ const ContentData = const [
       webUrl: '-'),
   ContentClass(
       id: 'cl9_12b',
-      decrepitation: '-',
-      content: '-',
+      decrepitation:
+          'Offering an expansive and diverse selection of whiskies, connoisseurs and fans of this particular liquor should not hesitate to make a stop at The Whisky Bar KL.',
+      content:
+          'With nearly 800 labels of the finest whiskies from around the globe including the old and rare varieties (from Irish-made to Japanese-made), The Whisky Bar KL is the perfect choice to indulge in this beloved liquor.',
       workhour: '5.00 pm - 10.00 pm (Monday - Sunday)',
       fees: '-',
       phoneNo: '+6012-7356709',
@@ -1178,8 +1193,10 @@ const ContentData = const [
       webUrl: '-'),
   ContentClass(
       id: 'cl10_12b',
-      decrepitation: '-',
-      content: '-',
+      decrepitation:
+          'If you are a fan of rum, do not hesitate to pop by one of the recent bar establishments in town: JungleBird!',
+      content:
+          'With an eclectic Caribbean and Brazilian theme running through, the JungleBird is undoubtedly the place to be for rum-lovers. Opened back in 2017, guests can have the opportunity to taste some of the over 240 types of the finest rum from around the globe while nibbling on a Caribbean-influenced meal.',
       workhour: '12.00 pm - 12.00 am (Monday - Sunday)',
       fees: '-',
       phoneNo: '+603-20115715',
@@ -1230,8 +1247,10 @@ const ContentData = const [
       webUrl: '-'),
   ContentClass(
       id: 'cl4_12c',
-      decrepitation: "-",
-      content: "-",
+      decrepitation:
+          "Offering a wide variety of snacks and non-perishable items, Pasar Malam Sentul is a friendly neighbourhood night market that can’t be missed!",
+      content:
+          "In terms of night markets, Pasar Malam Sentul has been a long-time neighbourhood favourite among the locals. From an affordable assortment of sweet and savoury snacks to fresh seafood and vegetables, the night market experience here is indeed a lively one.",
       workhour: '5.00 pm - 9.00 pm (Friday)',
       fees: '-',
       phoneNo: '-',
@@ -1366,8 +1385,10 @@ const ContentData = const [
       webUrl: '-'),
   ContentClass(
       id: 'cl6_15a',
-      decrepitation: '-',
-      content: '-',
+      decrepitation:
+          'Exuding contemporary elegance and refined comfort, Traders Hotel KL is an excellent accommodation choice that is popular among tourists.',
+      content:
+          'Conveniently located within the heart of Kuala Lumpur, Traders Hotel KL oozes luxury with every room and service available while offering an unobstructed view of the Petronas Twin Towers. Better yet, it is within walking distance to Suria KLCC and other iconic attractions to ease the cultural immersion process.',
       workhour: '-',
       fees: '-',
       phoneNo: '+603-23329888',
@@ -1377,8 +1398,10 @@ const ContentData = const [
       webUrl: '-'),
   ContentClass(
       id: 'cl7_15a',
-      decrepitation: '-',
-      content: '-',
+      decrepitation:
+          'Get ready to stay in luxury and style at the elegant Pavilion Hotel KL that is strategically located within the heart of Bukit Bintang.',
+      content:
+          'Under the management of Banyan Tree, the luxurious Pavilion Hotel KL is located smack dab in the middle of the bustling metropolis. With impeccable services and modern facilities, this hotel is right within walking distance of the latest restaurants, shopping malls and other exciting attractions.',
       workhour: '-',
       fees: '-',
       phoneNo: '+603-21172888',
@@ -1428,8 +1451,10 @@ const ContentData = const [
   //Accomodation Budget Hotels
   ContentClass(
       id: 'cl1_15b',
-      decrepitation: '-',
-      content: '-',
+      decrepitation:
+          'If you’re in search of a conveniently located, wallet-friendly and decently comfortable accommodation to rest your weary feet after a long day of exploring the city’s sights and attractions, head over to Izumi Hotel Bukit Bintang.',
+      content:
+          'Conveniently situated in Bukit Bintang is an affordable accommodation option that offers basic yet quality services and is within walking distance of many interesting attractions. ',
       workhour: '-',
       fees: '-',
       phoneNo: '+603-21458833',
@@ -1440,8 +1465,10 @@ const ContentData = const [
       webUrl: 'http://www.izumihotel.com/'),
   ContentClass(
       id: 'cl2_15b',
-      decrepitation: '-',
-      content: '-',
+      decrepitation:
+          'If you’re in search of a conveniently located, wallet-friendly and decently comfortable accommodation to rest your weary feet after a long day of exploring the city’s sights and attractions, head over to Replica Inn.',
+      content:
+          'Conveniently situated in Bukit Bintang is an affordable accommodation option that offers basic yet quality services and is within walking distance of many interesting attractions. ',
       workhour: '-',
       fees: '-',
       phoneNo: '+603-21421771',
@@ -1452,8 +1479,10 @@ const ContentData = const [
       webUrl: 'http://www.replicainn.com/'),
   ContentClass(
       id: 'cl3_15b',
-      decrepitation: '-',
-      content: '-',
+      decrepitation:
+          'If you’re in search of a conveniently located, wallet-friendly and decently comfortable accommodation to rest your weary feet after a long day of exploring the city’s sights and attractions, head over to Joy Inn Hotel.',
+      content:
+          'Conveniently situated in Brickfields is an affordable accommodation option that offers basic yet quality services and is within walking distance of many interesting attractions.',
       workhour: '-',
       fees: '-',
       phoneNo: '+603-22763766',
@@ -1463,8 +1492,10 @@ const ContentData = const [
       webUrl: 'http://joy-inn-hotel.kualalumpurshotels.com/en/'),
   ContentClass(
       id: 'cl4_15b',
-      decrepitation: '-',
-      content: '-',
+      decrepitation:
+          'If you’re in search of a conveniently located, wallet-friendly and decently comfortable accommodation to rest your weary feet after a long day of exploring the city’s sights and attractions, head over to 5 Bands Hotel.',
+      content:
+          'Conveniently situated in Kepong is an affordable accommodation option that offers basic yet quality services and is within walking distance of many interesting attractions.',
       workhour: '-',
       fees: '-',
       phoneNo: '+603-67320555',
@@ -1475,8 +1506,10 @@ const ContentData = const [
       webUrl: 'https://5-bands-hotel.business.site/'),
   ContentClass(
       id: 'cl5_15b',
-      decrepitation: '-',
-      content: '-',
+      decrepitation:
+          "If you’re in search of a conveniently located, wallet-friendly and decently comfortable accommodation to rest your weary feet after a long day of exploring the city’s sights and attractions, head over to MoMo's Kuala Lumpur.",
+      content:
+          'Conveniently situated in Chow Kit, Kuala Lumpur is an affordable accommodation option that offers basic yet quality services and is within walking distance of many interesting attractions. ',
       workhour: '-',
       fees: '-',
       phoneNo: '+603-27766666',
@@ -1487,8 +1520,10 @@ const ContentData = const [
       webUrl: 'https://www.stayatmomos.com/'),
   ContentClass(
       id: 'cl6_15b',
-      decrepitation: '-',
-      content: '-',
+      decrepitation:
+          'If you’re in search of a conveniently located, wallet-friendly and decently comfortable accommodation to rest your weary feet after a long day of exploring the city’s sights and attractions, head over to Valenza Hotel & Cafe.',
+      content:
+          'Conveniently situated in Klang Lama, Kuala Lumpur is an affordable accommodation option that offers basic yet quality services and is within walking distance of many interesting attractions.',
       workhour: '-',
       fees: '-',
       phoneNo: '+603-79726100',
@@ -1498,8 +1533,10 @@ const ContentData = const [
       webUrl: '-'),
   ContentClass(
       id: 'cl7_15b',
-      decrepitation: '-',
-      content: '-',
+      decrepitation:
+          'If you’re in search of a conveniently located, wallet-friendly and decently comfortable accommodation to rest your weary feet after a long day of exploring the city’s sights and attractions, head over to Lavana Hotel Chinatown.',
+      content:
+          'Conveniently situated in City Centre, Kuala Lumpur is an affordable accommodation option that offers basic yet quality services and is within walking distance of many interesting attractions.',
       workhour: '-',
       fees: '-',
       phoneNo: '+603-20221731',
@@ -1509,8 +1546,10 @@ const ContentData = const [
       webUrl: 'http://www.lavanahotel.com/'),
   ContentClass(
       id: 'cl8_15b',
-      decrepitation: '-',
-      content: '-',
+      decrepitation:
+          'If you’re in search of a conveniently located, wallet-friendly and decently comfortable accommodation to rest your weary feet after a long day of exploring the city’s sights and attractions, head over to PODs The Backpackers.',
+      content:
+          'Conveniently situated in Brickfields, Kuala Lumpur is an affordable accommodation option that offers basic yet quality services and is within walking distance of many interesting attractions.',
       workhour: '-',
       fees: '-',
       phoneNo: '+603-22760858',
@@ -1521,8 +1560,10 @@ const ContentData = const [
       webUrl: 'http://www.podsbackpacker.com/'),
   ContentClass(
       id: 'cl9_15b',
-      decrepitation: '-',
-      content: '-',
+      decrepitation:
+          "If you’re in search of a conveniently located, wallet-friendly and decently comfortable accommodation to rest your weary feet after a long day of exploring the city’s sights and attractions, head over to Raizzy's Guesthouse.",
+      content:
+          'Conveniently situated in City Centre, Kuala Lumpur is an affordable accommodation option that offers basic yet quality services and is within walking distance of many interesting attractions.',
       workhour: '-',
       fees: '-',
       phoneNo: '+603-28563998',
@@ -1532,8 +1573,10 @@ const ContentData = const [
       webUrl: '-'),
   ContentClass(
       id: 'cl10_15b',
-      decrepitation: '-',
-      content: '-',
+      decrepitation:
+          'If you’re in search of a conveniently located, wallet-friendly and decently comfortable accommodation to rest your weary feet after a long day of exploring the city’s sights and attractions, head over to Hotel Paloma Inn.',
+      content:
+          'Conveniently situated in Jalan Pudu, Kuala Lumpur is an affordable accommodation option that offers basic yet quality services and is within walking distance of many interesting attractions.',
       workhour: '-',
       fees: '-',
       phoneNo: '+603-21106677',
@@ -1546,8 +1589,10 @@ const ContentData = const [
   //Backpackers Lodge
   ContentClass(
       id: 'cl1_15c',
-      decrepitation: '-',
-      content: '-',
+      decrepitation:
+          'Conveniently situated in Jalan Sultan Ismail, Kuala Lumpur is an affordable accommodation option that offers basic yet quality services and is within walking distance of many interesting attractions.',
+      content:
+          'Worried about not being able to afford a decent, reasonable accommodation that still possesses an acceptable standard of living without skimping on hygiene? Fret not and head over to The Bed KLCC for a comfortable stay that is strategically positioned within the heart of the city.',
       workhour: '-',
       fees: '-',
       phoneNo: '+603-27152413',
@@ -1558,8 +1603,10 @@ const ContentData = const [
       webUrl: 'http://www.thebedklcc.com/'),
   ContentClass(
       id: 'cl2_15c',
-      decrepitation: '-',
-      content: '-',
+      decrepitation:
+          'Conveniently situated in Bukit Bintang, Kuala Lumpur is an affordable accommodation option that offers basic yet quality services and is within walking distance of many interesting attractions.',
+      content:
+          'Worried about not being able to afford a decent, reasonable accommodation that still possesses an acceptable standard of living without skimping on hygiene? Fret not and head over to SUNSHINE BEDZ KL for a comfortable stay that is strategically positioned within the heart of the city.',
       workhour: '-',
       fees: '-',
       phoneNo: '+603-21435050',
@@ -1570,8 +1617,10 @@ const ContentData = const [
       webUrl: 'https://sunshinebedz.com.my/home/'),
   ContentClass(
       id: 'cl3_15c',
-      decrepitation: '-',
-      content: '-',
+      decrepitation:
+          'Conveniently situated in City Centre, Kuala Lumpur is an affordable accommodation option that offers basic yet quality services and is within walking distance of many interesting attractions.',
+      content:
+          'Worried about not being able to afford a decent, reasonable accommodation that still possesses an acceptable standard of living without skimping on hygiene? Fret not and head over to Mingle Hostel Kuala Lumpur for a comfortable stay that is strategically positioned within the heart of the city. ',
       workhour: '-',
       fees: '-',
       phoneNo: '+603-20222078',
@@ -1581,8 +1630,10 @@ const ContentData = const [
       webUrl: 'https://www.facebook.com/minglehostel/'),
   ContentClass(
       id: 'cl4_15c',
-      decrepitation: '-',
-      content: '-',
+      decrepitation:
+          'Conveniently situated in Brickfields, Kuala Lumpur is an affordable accommodation option that offers basic yet quality services and is within walking distance of many interesting attractions.',
+      content:
+          'Worried about not being able to afford a decent, reasonable accommodation that still possesses an acceptable standard of living without skimping on hygiene? Fret not and head over to PODs The Backpackers for a comfortable stay that is strategically positioned within the heart of the city.',
       workhour: '-',
       fees: '-',
       phoneNo: '+603-22760858',
@@ -1593,8 +1644,10 @@ const ContentData = const [
       webUrl: 'http://www.podsbackpacker.com/'),
   ContentClass(
       id: 'cl5_15c',
-      decrepitation: '-',
-      content: '-',
+      decrepitation:
+          'Conveniently situated in Jalan Maharajalela, Kuala Lumpur is an affordable accommodation option that offers basic yet quality services and is within walking distance of many interesting attractions.',
+      content:
+          'Worried about not being able to afford a decent, reasonable accommodation that still possesses an acceptable standard of living without skimping on hygiene? Fret not and head over to Illuminate Boutique for a comfortable stay that is strategically positioned within the heart of the city.',
       workhour: '-',
       fees: '-',
       phoneNo: '+6016-7852682',
@@ -1604,8 +1657,10 @@ const ContentData = const [
       webUrl: 'https://illuminate-hotel.business.site/'),
   ContentClass(
       id: 'cl6_15c',
-      decrepitation: '-',
-      content: '-',
+      decrepitation:
+          'Conveniently situated in City Centre, Kuala Lumpur is an affordable accommodation option that offers basic yet quality services and is within walking distance of many interesting attractions.',
+      content:
+          'Worried about not being able to afford a decent, reasonable accommodation that still possesses an acceptable standard of living without skimping on hygiene? Fret not and head over to The Explorers Guesthouse for a comfortable stay that is strategically positioned within the heart of the city.',
       workhour: '-',
       fees: '-',
       phoneNo: '+603-20222928',
@@ -1616,8 +1671,10 @@ const ContentData = const [
       webUrl: '-'),
   ContentClass(
       id: 'cl7_15c',
-      decrepitation: '-',
-      content: '-',
+      decrepitation:
+          'Conveniently situated in City Centre, Kuala Lumpur is an affordable accommodation option that offers basic yet quality services and is within walking distance of many interesting attractions.',
+      content:
+          'Worried about not being able to afford a decent, reasonable accommodation that still possesses an acceptable standard of living without skimping on hygiene? Fret not and head over to Leo Backpackers for a comfortable stay that is strategically positioned within the heart of the city.',
       workhour: '-',
       fees: '-',
       phoneNo: '+603-20311733',
@@ -1627,8 +1684,10 @@ const ContentData = const [
       webUrl: '-'),
   ContentClass(
       id: 'cl8_15c',
-      decrepitation: '-',
-      content: '-',
+      decrepitation:
+          'Conveniently situated in City Centre, Kuala Lumpur is an affordable accommodation option that offers basic yet quality services and is within walking distance of many interesting attractions.',
+      content:
+          'Worried about not being able to afford a decent, reasonable accommodation that still possesses an acceptable standard of living without skimping on hygiene? Fret not and head over to KITEZ Hotel & Hostel for a comfortable stay that is strategically positioned within the heart of the city.',
       workhour: '-',
       fees: '-',
       phoneNo: '+603-23893754',
@@ -1638,8 +1697,10 @@ const ContentData = const [
       webUrl: 'https://kitezhotel.com/'),
   ContentClass(
       id: 'cl9_15c',
-      decrepitation: '-',
-      content: '-',
+      decrepitation:
+          'Conveniently situated in Jalan Tenggiri, Kuala Lumpur is an affordable accommodation option that offers basic yet quality services and is within walking distance of many interesting attractions.',
+      content:
+          'Worried about not being able to afford a decent, reasonable accommodation that still possesses an acceptable standard of living without skimping on hygiene? Fret not and head over to Sekeping Tenggiri for a comfortable stay that is strategically positioned within the heart of the city.',
       workhour: '-',
       fees: '-',
       phoneNo: '+6017-2075977',
@@ -1649,8 +1710,10 @@ const ContentData = const [
       webUrl: 'https://www.sekeping.com/tenggiri/'),
   ContentClass(
       id: 'cl10_15c',
-      decrepitation: '-',
-      content: '-',
+      decrepitation:
+          'Conveniently situated in Bukit Bintang, Kuala Lumpur is an affordable accommodation option that offers basic yet quality services and is within walking distance of many interesting attractions.',
+      content:
+          'Worried about not being able to afford a decent, reasonable accommodation that still possesses an acceptable standard of living without skimping on hygiene? Fret not and head over to Amethyst Love Guesthouse for a comfortable stay that is strategically positioned within the heart of the city.',
       workhour: '-',
       fees: '-',
       phoneNo: '+6018-3173435',
@@ -3246,9 +3309,9 @@ const ContentData = const [
   ContentClass(
       id: 'cl7_20',
       decrepitation:
-          'Pulau Lang Tengah is located on Peninsular Malaysia\'s east coast. Its secluded beaches and abundant aquatic life have been dubbed "Malaysia\'s Maldives”.',
+          'In need of an escape from the hustle and bustle of the city? Discover exciting wildlife and peaceful tranquility near the sea at Rawa Island.',
       content:
-          'The shortage of roads in Lang Tengah is a highlight, with just a few jungle paths leading to the beaches. The clean air and lack of noise pollution make cycling, boating, and canoeing practices suitable since these are the only ways to get around. Best time to visit: March - October',
+          'Located in the Mersing District of Johor, Rawa Island is an underrated but beautiful coral island that should be visited. Considering ‘Rawa’ translates to ‘White Doves’ in the Johorian slang, visitors can find an abundance of alabaster white doves scattered around the relatively small island.',
       workhour: '-',
       fees: '-',
       phoneNo: '-',
@@ -3259,9 +3322,9 @@ const ContentData = const [
   ContentClass(
       id: 'cl8_20',
       decrepitation:
-          'Pulau Lang Tengah is located on Peninsular Malaysia\'s east coast. Its secluded beaches and abundant aquatic life have been dubbed "Malaysia\'s Maldives”.',
+          'In need of an escape from the hustle and bustle of the city? Discover exciting wildlife and peaceful tranquility near the sea at Tengah Island.',
       content:
-          'The shortage of roads in Lang Tengah is a highlight, with just a few jungle paths leading to the beaches. The clean air and lack of noise pollution make cycling, boating, and canoeing practices suitable since these are the only ways to get around. Best time to visit: March - October',
+          'Located in the Mersing District of Johor, Tengah Island is an underrated but beautiful privately-owned island that should be visited. Within the vicinity of Besar Island, this secluded oasis is easily reachable with an approximate 45-minute boat ride. The Sea Turtle Conservation project also takes place here.',
       workhour: '-',
       fees: '-',
       phoneNo: '-',
@@ -3272,9 +3335,9 @@ const ContentData = const [
   ContentClass(
       id: 'cl9_20',
       decrepitation:
-          'Pulau Lang Tengah is located on Peninsular Malaysia\'s east coast. Its secluded beaches and abundant aquatic life have been dubbed "Malaysia\'s Maldives”.',
+          'In need of an escape from the hustle and bustle of the city? Discover exciting wildlife and peaceful tranquility near the sea at Redang Island.',
       content:
-          'The shortage of roads in Lang Tengah is a highlight, with just a few jungle paths leading to the beaches. The clean air and lack of noise pollution make cycling, boating, and canoeing practices suitable since these are the only ways to get around. Best time to visit: March - October',
+          'Located in the Kuala Nerus District of Terengganu, Redang Island is one of the largest islands off the east coast of Peninsular Malaysia that has always been a local favourite. Witness crystal clear waters and white sandy beaches that will make the perfect Instagramable backdrop.',
       workhour: '-',
       fees: '-',
       phoneNo: '-',
@@ -3433,9 +3496,9 @@ const ContentData = const [
   ContentClass(
       id: 'cl6_22',
       decrepitation:
-          "Chiling Waterfall is one of Selangor's most beautiful and impressive waterfalls.",
+          "Is there anything better than escaping the city to immerse in the beauty of Mother Nature? Enjoy the bone-chilling cooling waters at the one and only Sungai Chiling.",
       content:
-          'Visitors will need to walk and wade across the Chiling River five times to get there for about an hour, so be prepared to have a sense of adventure and not mind getting wet.',
+          'Situated on the path to Fraser’s Hill, Sungai Chiling has been touted as one of the must-visit waterfalls in Selangor. It consists of three split vertical waterfalls that flow with such force, especially after heavy rainfall. Therefore, it is advised to visit soon after such weather to enjoy this waterfall in all its glory.',
       workhour: '-',
       fees: '-',
       phoneNo: '+6012-3006564',
@@ -3446,9 +3509,9 @@ const ContentData = const [
   ContentClass(
       id: 'cl7_22',
       decrepitation:
-          "Lata Medang is a 10.0 km out and back trail that offers scenic views and is rated as difficult.",
+          "Is there anything better than escaping the city to immerse in the beauty of Mother Nature? Enjoy the bone-chilling cooling waters at the one and only Lata Medang Waterfall.",
       content:
-          'In a remote area of hilly rainforest off Kuala Kubu Bharu, Lata Medang is a waterfall at Kampung Pertak, cascading down from a massive 60-meter drop over two stages.',
+          'Located in Kampung Pertak within Kuala Kubu Baru, Lata Medang Waterfall has been touted as one of the must-visit waterfalls in Selangor. In order to reach this majestic waterfall that gushes crystal clear waters, a rather long and challenging but worthwhile hike is required.',
       workhour: 'Open 24 hours',
       fees: '-',
       phoneNo: '-',
@@ -3459,9 +3522,9 @@ const ContentData = const [
   ContentClass(
       id: 'cl8_22',
       decrepitation:
-          "Serendah Waterfall, also known as Templer Kai or Recreational Waterfall Serendah which located 3 km from an indigenous village known as Perkampungan Orang Asli Serendah.",
+          "Is there anything better than escaping the city to immerse in the beauty of Mother Nature? Enjoy the bone-chilling cooling waters at the one and only Serendah Waterfall.",
       content:
-          'Here, while the waterfall seems small and shallow, it delivers refreshingly cool, gushing water that splashes on anyone who sits by it.',
+          'Located in Kampung Orang Asli Serendah, Serendah Waterfall is one of the few underrated but beautiful must-visit waterfalls in Selangor. Although it is considered to be relatively small as opposed to the one in the nearby Kanching Recreational Forest, it is still a great spot equipped with basic facilities for picnics.',
       workhour: '-',
       fees: '-',
       phoneNo: '+6017-6091504',
@@ -3536,8 +3599,10 @@ const ContentData = const [
           'http://www.wildlife.gov.my/index.php/en/public/2016-05-10-02-34-43/peta'),
   ContentClass(
       id: 'cl10_23',
-      decrepitation: '-',
-      content: '-',
+      decrepitation:
+          'In need of a vigorous nature-themed activity away from the hustle and bustle of the city? Look no further than a lengthy hike at Bukit Batu Putih.',
+      content:
+          'Situated in Tanjung Tuan, Bukit Batu Putih is a part of a 200 million year old quartz ridge enveloped by one of the nation’s last remaining coastal rainforests. Enjoy a relatively short hike, regardless of the route chosen (either the forest trail or beach trail), where a clear view of the pristine blue waters await you.',
       workhour:
           '8.30 am - 6.00 pm (Sunday, Monday, Tuesday, Wednesday, Friday) \n6.00 am - 6.00pm (Saturday) \nClosed on Thursday',
       fees: '-',
@@ -3549,8 +3614,10 @@ const ContentData = const [
       webUrl: '-'),
   ContentClass(
       id: 'cl11_23',
-      decrepitation: '-',
-      content: '-',
+      decrepitation:
+          'In need of a vigorous nature-themed activity away from the hustle and bustle of the city? Look no further than a lengthy hike at Bukit Kutu.',
+      content:
+          'Situated 290 metres above sea level in Kuala Kubu Baru, Bukit Kutu is a moderately challenging hike that requires good stamina to overcome the steep areas and the three ladders that will enable you to reach the final boulder. The entire hike can take up to about six hours in total to complete.',
       workhour: '-',
       fees: '-',
       phoneNo: '-',
@@ -3560,8 +3627,10 @@ const ContentData = const [
       webUrl: '-'),
   ContentClass(
       id: 'cl12_23',
-      decrepitation: '-',
-      content: '-',
+      decrepitation:
+          'In need of a vigorous nature-themed activity away from the hustle and bustle of the city? Look no further than a lengthy hike at Bukit Batu Pahat.',
+      content:
+          'Situated in Kuala Kubu Baru, Bukit Batu Pahat has approximately 306 metres of elevation gain which can make it a rather difficult hike to the top. On top of that, the shady trail is covered with many rocks and boulders. However, the climb is deemed worthwhile thanks to the magnificent forest backdrop that can be viewed in an unobstructed manner at the peak.',
       workhour: '-',
       fees: '-',
       phoneNo: '-',
@@ -4272,8 +4341,10 @@ const MedicalData = const [
     id: 'cl6_14',
     categories: 'cl1_14',
     title: 'Columbia Asia Hospital (Setapak)',
-    decrepitation: '-',
-    content: '',
+    decrepitation:
+        'As a multi-specialty hospital, the Columbia Asia Hospital branch in Setapak is a well-regarded healthcare facility that ensures specialty services with high-trained medical experts.',
+    content:
+        'Owning an accreditation by the Malaysian Society for Quality of Health (MSQH) back in 2019, the technologically advanced medical facilities lead to specialist services such as Cardiology, Ear, Nose & Throat, General Surgery, Obstetrics and Gynecology, Orthopedics, Pediatrics and Internal Medicine.',
     workhour: 'Open 24 hours (Monday - Sunday)',
     fees: '-',
     phoneNo: '+603-41459999',
@@ -4286,8 +4357,10 @@ const MedicalData = const [
     id: 'cl7_14',
     categories: 'cl1_14',
     title: 'Pantai Hospital Kuala Lumpur',
-    decrepitation: '-',
-    content: '',
+    decrepitation:
+        'As a multi-specialty hospital, the Pantai Hospital branch in Kuala Lumpur is a well-regarded healthcare facility that ensures specialty services with high-trained medical experts.',
+    content:
+        'Founded in 1974, Pantai Hospital Kuala Lumpur is one of the leading private hospitals in the Klang Valley. With more than 200 specialist doctors accompanied by the latest medical equipment, it has been accredited with Joint Commission International (JCI), Malaysian Society for Quality in Health (MSQH) and has been certified as a Baby Friendly Hospital.',
     workhour: 'Open 24 hours (Monday - Sunday)',
     fees: '-',
     phoneNo: '+603-22960888',
@@ -4300,8 +4373,10 @@ const MedicalData = const [
     id: 'cl8_14',
     categories: 'cl1_14',
     title: 'Tung Shin Hospital',
-    decrepitation: '-',
-    content: '',
+    decrepitation:
+        'As the first hospital that offers both Chinese and Western medical services, Tung Shin Hospital has been a leading healthcare facility since the 19th century.',
+    content:
+        'Established way back in 1881 when Kuala Lumpur was still a village, this once modest clinic named Pooi Shin Thong turned into the first hospital which provides both Chinese and Western medical services. As a side note, this non-profit hospital was only officially named Tung Shin Hospital in 1895.',
     workhour: 'Open 24 hours (Monday - Sunday)',
     fees: '-',
     phoneNo: '+603-20372288',
@@ -4313,8 +4388,10 @@ const MedicalData = const [
     id: 'cl9_14',
     categories: 'cl1_14',
     title: 'UM Specialist Centre',
-    decrepitation: '-',
-    content: '',
+    decrepitation:
+        'Known as one of the top private medical centres in Malaysia, the University of Malaya Specialist Centre has been a long time trusted healthcare facility that offers the best care in the country.',
+    content:
+        'As a tertiary medical centre, University of Malaya Specialist Hospital was established in 1998. This healthcare facility specialises in over 40 areas of medicine including cardiology, urology, neurosurgery, orthopaedics, rheumatology, nephrology, ophthalmology and psychiatry.',
     workhour:
         '9.00 am - 9.00 pm (Monday-Friday)\n8.30 am - 5.00 pm (Saturday) \nClosed on Sunday',
     fees: '-',
@@ -4328,8 +4405,10 @@ const MedicalData = const [
     id: 'cl10_14',
     categories: 'cl1_14',
     title: 'Kiara Child Specialist Clinic',
-    decrepitation: '-',
-    content: '',
+    decrepitation:
+        'Focusing on the mental and physical development and well-being of children, the Kiara Kiara Child Specialist Clinic has proven to be a trusted healthcare facility.',
+    content:
+        'Situated in upscale Solaris Mont Kiara, Kiara Child Specialist Clinic (Paediatrician Clinic) is a trusted child healthcare facility that offers professional care and paediatric consultation in health matters such as basic emergency care, childhood immunisation, asthma and allergy management.',
     workhour:
         '9.00 am - 6.00 pm (Monday, Tuesday, Thursday, Friday) \n9.00 am - 2.00 pm \n(Wednesday & Saturday)\nClosed on Sunday',
     fees: '-',
@@ -4393,8 +4472,10 @@ const MedicalData = const [
     categories: 'cl2_14',
     title: 'Smile Avenue Dental Surgery Publika',
     image: 'assets/images/contentList/medicalTourism/sub-medical/smile.jpg',
-    decrepitation: '-',
-    content: '',
+    decrepitation:
+        'If you’re looking for a trusted dental care expert that offers top quality services, look no further than Smile Avenue Dental Surgery located right in Publika.',
+    content:
+        'Expect the very best of dental care at Smile Avenue Dental Surgery Publika. Using the latest technological advancements in the business, this facility offers an extensive range of dental treatments including general dentistry, cosmetic dentistry, implant dentistry and even facial aesthetic treatments.',
     workhour:
         '9.00 am - 7.00 pm (Monday-Thursday) \n10.00 am - 5.00 pm (Friday-Saturday) \nClosed on Sunday',
     fees: '-',
@@ -4408,8 +4489,10 @@ const MedicalData = const [
     categories: 'cl2_14',
     title: 'Lau Dental Clinic & Surgery Sri Petaling',
     image: 'assets/images/contentList/medicalTourism/sub-medical/lau.jpg',
-    decrepitation: '-',
-    content: '',
+    decrepitation:
+        'If you’re looking for a trusted dental care expert that offers top quality services, look no further than Lau Dental Clinic & Surgery located right in Sri Petaling.',
+    content:
+        'Expect the very best of dental care at Lau Dental Clinic & Surgery Sri Petaling. Using the latest technological advancements in the business, this facility offers an extensive range of dental treatments including general dentistry, cosmetic dentistry, implant dentistry and even facial aesthetic treatments.',
     workhour:
         '9.00 am  - 9.00 pm (Monday - Friday) \n9.00 am - 6.00 pm (Saturday - Sunday)',
     fees: '-',
@@ -4422,8 +4505,10 @@ const MedicalData = const [
     categories: 'cl2_14',
     title: 'Dutamas Dental Clinic',
     image: 'assets/images/contentList/medicalTourism/sub-medical/dutamas.jpg',
-    decrepitation: '-',
-    content: '',
+    decrepitation:
+        'If you’re looking for a trusted dental care expert that offers top quality services, look no further than Dutamas Dental Clinic located right in Publika.',
+    content:
+        'Expect the very best of dental care at Dutamas Dental Clinic. Using the latest technological advancements in the business, this facility offers an extensive range of dental treatments including general dentistry, cosmetic dentistry, implant dentistry and even facial aesthetic treatments.',
     workhour:
         '9.00 am – 7.00 pm (Monday - Friday) \n9.00 am - 5.00 pm (Saturday)\n9.00 am - 3.00 pm (Sunday)',
     fees: '-',
@@ -4490,8 +4575,10 @@ const MedicalData = const [
     categories: 'cl3_14',
     title: 'CLEO Clinic',
     image: 'assets/images/contentList/medicalTourism/sub-medical/cleo.jpg',
-    decrepitation: '-',
-    content: '',
+    decrepitation:
+        'At CLEO Clinic, expect the very best of the latest premium aesthetics and dermatology practices in the market.',
+    content:
+        'If you are in search of boosting your self-confidence and enhancing your natural beauty, prepare to receive the very best in aesthetics and dermatology practice at CLEO Clinic. From chemical skin peels to microneedling, they’ve got all your beauty needs covered. ',
     workhour:
         '10.00 am – 7.00 pm (Monday - Friday) \n10.00 am - 6.00 pm (Saturday) \n10.00 am - 4.00 pm (Sunday)',
     fees: '-',
@@ -4504,8 +4591,10 @@ const MedicalData = const [
     categories: 'cl3_14',
     title: 'Premier Clinic',
     image: 'assets/images/contentList/medicalTourism/sub-medical/premier.jpg',
-    decrepitation: '-',
-    content: '',
+    decrepitation:
+        'At Premier Clinic, expect the very best of the latest premium aesthetics and dermatology practices in the market. ',
+    content:
+        'If you are in search of boosting your self-confidence and enhancing your natural beauty, prepare to receive the very best in aesthetics and dermatology practice at Premier Clinic. From chemical skin peels to microneedling, they’ve got all your beauty needs covered. ',
     workhour: '10.00 am - 7.00 pm (Monday-Sunday)',
     fees: '-',
     phoneNo: '+6012-6625552',
@@ -4518,8 +4607,10 @@ const MedicalData = const [
     categories: 'cl3_14',
     title: 'CC Chang Skin Specialist',
     image: 'assets/images/contentList/medicalTourism/sub-medical/chang.jpg',
-    decrepitation: '-',
-    content: '',
+    decrepitation:
+        'At CC Chang Skin Specialist, expect the very best of the latest premium aesthetics and dermatology practices in the market. ',
+    content:
+        'If you are in search of boosting your self-confidence and enhancing your natural beauty, prepare to receive the very best in aesthetics and dermatology practice at CC Chang Skin Specialist. From chemical skin peels to microneedling, they’ve got all your beauty needs covered.',
     workhour:
         ' 9.00 am – 4.00 pm \n(Monday, Wednesday, Thursday) \n9.00 am - 1.00 pm \n(Tuesday, Friday, Saturday ) \nClosed on Sunday',
     fees: '-',
@@ -4528,13 +4619,16 @@ const MedicalData = const [
         'Gleneagles Hospital, 282 & 286, Jalan Ampang, 50450 Kuala Lumpur',
     locationUrl: 'https://g.page/CCChangSkinSpecialist?share',
   ),
+  //Ophthalmologist
   MedicalClass(
     id: 'cl1_14',
     categories: 'cl4_14',
     title: 'International Specialist Eye Centre',
     image: 'assets/images/contentList/medicalTourism/sub-medical/isec.jpg',
-    decrepitation: '-',
-    content: '',
+    decrepitation:
+        'As our eyesight is an absolute priority, seek the absolute best eye care services and the latest treatments executed with cutting-edge technology at International Specialist Eye Centre.',
+    content:
+        'Located in Mid Valley City is one of the most trusted, go-to ophthalmologists in the concrete jungle. Incorporating the latest technological advancements in the business, this facility offers an extensive range of ophthalmology treatments from laser eye surgery to offering corrective measures to a slew of disorders.',
     workhour:
         '8.30 am - 5.30 pm (Monday - Friday) \n8.30 am - 1.00 pm (Saturday) \nClosed on Sunday',
     fees: '-',
@@ -4548,8 +4642,10 @@ const MedicalData = const [
     categories: 'cl4_14',
     title: 'VISTA Eye Specialist',
     image: 'assets/images/contentList/medicalTourism/sub-medical/vista.jpg',
-    decrepitation: '-',
-    content: '',
+    decrepitation:
+        'As our eyesight is an absolute priority, seek the absolute best eye care services and the latest treatments executed with cutting-edge technology at VISTA Eye Specialist.',
+    content:
+        'Located in Bangsar South is one of the most trusted, go-to ophthalmologists in the concrete jungle. Incorporating the latest technological advancements in the business, this facility offers an extensive range of ophthalmology treatments from laser eye surgery to offering corrective measures to a slew of disorders.',
     workhour: '9.00 am - 6.00 pm (Monday - Saturday) \nClosed on Sunday',
     fees: '-',
     phoneNo: '+603-22423937',
@@ -4561,8 +4657,10 @@ const MedicalData = const [
     categories: 'cl4_14',
     title: 'OPTIMAX Eye Specialist',
     image: 'assets/images/contentList/medicalTourism/sub-medical/optimax.jpg',
-    decrepitation: '-',
-    content: '',
+    decrepitation:
+        'As our eyesight is an absolute priority, seek the absolute best eye care services and the latest treatments executed with cutting-edge technology at OPTIMAX Eye Specialist.',
+    content:
+        'Located in Sri Petaling is one of the most trusted, go-to ophthalmologists in the concrete jungle. Incorporating the latest technological advancements in the business, this facility offers an extensive range of ophthalmology treatments from laser eye surgery to offering corrective measures to a slew of disorders.',
     workhour: '9.00 am - 6.00 pm \n(Monday-Sunday)',
     fees: '-',
     phoneNo: '+603-90577300',
@@ -4574,8 +4672,10 @@ const MedicalData = const [
     categories: 'cl4_14',
     title: 'Ikonik Eye Specialist Centre',
     image: 'assets/images/contentList/medicalTourism/sub-medical/ikonik.jpg',
-    decrepitation: '-',
-    content: '',
+    decrepitation:
+        'As our eyesight is an absolute priority, seek the absolute best eye care services and the latest treatments executed with cutting-edge technology at Ikonik Eye Specialist Centre.',
+    content:
+        'Located in Bandar Bukit Jalil is one of the most trusted, go-to ophthalmologists in the concrete jungle. Incorporating the latest technological advancements in the business, this facility offers an extensive range of ophthalmology treatments from laser eye surgery to offering corrective measures to a slew of disorders.',
     workhour:
         '8.30 am - 5.30 pm \n(Monday - Friday) \nClosed on Saturday & Sunday',
     fees: '-',
@@ -4589,8 +4689,10 @@ const MedicalData = const [
     categories: 'cl4_14',
     title: 'KL Eye Specialist Centre',
     image: 'assets/images/contentList/medicalTourism/sub-medical/kleye.jpg',
-    decrepitation: '-',
-    content: '',
+    decrepitation:
+        'As our eyesight is an absolute priority, seek the absolute best eye care services and the latest treatments executed with cutting-edge technology at KL Eye Specialist Centre.',
+    content:
+        'Located in Kepong is one of the most trusted, go-to ophthalmologists in the concrete jungle. Incorporating the latest technological advancements in the business, this facility offers an extensive range of ophthalmology treatments from laser eye surgery to offering corrective measures to a slew of disorders.',
     workhour: '9.00 am - 5.00 pm \n(Monday-Sunday)',
     fees: '-',
     phoneNo: '+603-62500077',
@@ -4603,8 +4705,10 @@ const MedicalData = const [
     categories: 'cl4_14',
     title: 'Asia Eye Specialist Centre Kepong',
     image: 'assets/images/contentList/medicalTourism/sub-medical/asiaeye.jpg',
-    decrepitation: '-',
-    content: '',
+    decrepitation:
+        'As our eyesight is an absolute priority, seek the absolute best eye care services and the latest treatments executed with cutting-edge technology at Asia Eye Specialist Centre Kepong.',
+    content:
+        'Located in Kepong Baru is one of the most trusted, go-to ophthalmologists in the concrete jungle. Incorporating the latest technological advancements in the business, this facility offers an extensive range of ophthalmology treatments from laser eye surgery to offering corrective measures to a slew of disorders.',
     workhour:
         '8.30 am - 5.30 pm (Monday-Friday) \n8.30 am - 3.00 pm (Saturday) \nClosed on Sunday',
     fees: '-',
