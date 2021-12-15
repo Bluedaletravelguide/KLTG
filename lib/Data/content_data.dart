@@ -998,7 +998,7 @@ const ContentData = const [
       fees: '-',
       phoneNo: '1-300-88-8988',
       locationText: 'No. 1, Jalan Imbi, Imbi, 55100 Kuala Lumpur',
-      locationUrl: 'https://goo.gl/maps/UqUTKnyHpMbaWDS18',
+      locationUrl: '  ',
       webText: 'https://berjayatimessquarekl.com/',
       webUrl: 'https://berjayatimessquarekl.com/'),
   ContentClass(
@@ -1184,7 +1184,7 @@ const ContentData = const [
           'Offering an expansive and diverse selection of whiskies, connoisseurs and fans of this particular liquor should not hesitate to make a stop at The Whisky Bar KL.',
       content:
           'With nearly 800 labels of the finest whiskies from around the globe including the old and rare varieties (from Irish-made to Japanese-made), The Whisky Bar KL is the perfect choice to indulge in this beloved liquor.',
-      workhour: '5.00 pm - 10.00 pm (Monday - Sunday)',
+      workhour: '5.00 pm - 12.00 am (Monday - Sunday)',
       fees: '-',
       phoneNo: '+6012-7356709',
       locationText: '46, Changkat Bukit Bintang, 50200 Kuala Lumpur',
@@ -4314,7 +4314,7 @@ const MedicalData = const [
     decrepitation:
         'Founded in 1992, Institut Jantung Negara is a reliable heart specialist institution that offers the latest technological advancements and treatments in cardiovascular and thoracic medicine.',
     content:
-        ' The cardiology services include invasive and non-invasive procedures such as coronary angiograms, angioplasty, stenting, cardiac resynchronisation therapy,  radiofrequency ablation, atrial fibrillation, echocardiography and much more.',
+        'The cardiology services include invasive and non-invasive procedures such as coronary angiograms, angioplasty, stenting, cardiac resynchronisation therapy,  radiofrequency ablation, atrial fibrillation, echocardiography and much more.',
     workhour: 'Open 24 hours (Monday - Sunday)',
     fees: '-',
     phoneNo: '+603-26178200',
