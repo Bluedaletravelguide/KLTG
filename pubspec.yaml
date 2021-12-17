@@ -73,6 +73,7 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     #ebook
+    - assets/images/ebook/kltg-39.jpg
     - assets/images/ebook/kltg-38.jpg
     - assets/images/ebook/kltg-37.jpg
     - assets/images/ebook/kltg-36.jpg
@@ -219,7 +220,7 @@ flutter:
     - assets/images/contentList/historicalPlaces/6.jpg
     - assets/images/contentList/historicalPlaces/7.jpg
     - assets/images/contentList/historicalPlaces/8.jpg
-    - assets/images/contentList/historicalPlaces/9.jfif
+    - assets/images/contentList/historicalPlaces/9.jpg
 
     #parks
     - assets/images/contentList/parks/1.jpg
@@ -480,7 +481,7 @@ flutter:
 
     #extremesports
     - assets/images/contentList/extreme/1.jpg
-    - assets/images/contentList/extreme/1b.jpeg
+    - assets/images/contentList/extreme/1b.jpg
     - assets/images/contentList/extreme/2.jpg
     - assets/images/contentList/extreme/3.jpg
 
@@ -581,52 +582,52 @@ flutter:
     - assets/images/contentList/arabFood/wadi.jpg
 
     #koreanFood
-    - assets/images/contentList/koreanFood/1.png
-    - assets/images/contentList/koreanFood/2.png
-    - assets/images/contentList/koreanFood/3.png
-    - assets/images/contentList/koreanFood/4.png
-    - assets/images/contentList/koreanFood/5.png
-    - assets/images/contentList/koreanFood/6.png
-    - assets/images/contentList/koreanFood/7.png
-    - assets/images/contentList/koreanFood/8.png
-    - assets/images/contentList/koreanFood/9.png
-    - assets/images/contentList/koreanFood/10.png
+    - assets/images/contentList/koreanFood/1.jpg
+    - assets/images/contentList/koreanFood/2.jpg
+    - assets/images/contentList/koreanFood/3.jpg
+    - assets/images/contentList/koreanFood/4.jpg
+    - assets/images/contentList/koreanFood/5.jpg
+    - assets/images/contentList/koreanFood/6.jpg
+    - assets/images/contentList/koreanFood/7.jpg
+    - assets/images/contentList/koreanFood/8.jpg
+    - assets/images/contentList/koreanFood/9.jpg
+    - assets/images/contentList/koreanFood/10.jpg
 
     #japaneseFood
-    - assets/images/contentList/japaneseFood/1.png
-    - assets/images/contentList/japaneseFood/2.png
-    - assets/images/contentList/japaneseFood/3.png
-    - assets/images/contentList/japaneseFood/4.png
-    - assets/images/contentList/japaneseFood/5.png
-    - assets/images/contentList/japaneseFood/6.png
-    - assets/images/contentList/japaneseFood/7.png
-    - assets/images/contentList/japaneseFood/8.png
-    - assets/images/contentList/japaneseFood/9.png
-    - assets/images/contentList/japaneseFood/10.png
+    - assets/images/contentList/japaneseFood/1.jpg
+    - assets/images/contentList/japaneseFood/2.jpg
+    - assets/images/contentList/japaneseFood/3.jpg
+    - assets/images/contentList/japaneseFood/4.jpg
+    - assets/images/contentList/japaneseFood/5.jpg
+    - assets/images/contentList/japaneseFood/6.jpg
+    - assets/images/contentList/japaneseFood/7.jpg
+    - assets/images/contentList/japaneseFood/8.jpg
+    - assets/images/contentList/japaneseFood/9.jpg
+    - assets/images/contentList/japaneseFood/10.jpg
 
     #mexicanFood
-    - assets/images/contentList/mexicanFood/1.png
-    - assets/images/contentList/mexicanFood/2.png
-    - assets/images/contentList/mexicanFood/3.png
-    - assets/images/contentList/mexicanFood/4.png
-    - assets/images/contentList/mexicanFood/5.png
-    - assets/images/contentList/mexicanFood/6.png
-    - assets/images/contentList/mexicanFood/7.png
-    - assets/images/contentList/mexicanFood/8.png
-    - assets/images/contentList/mexicanFood/9.png
-    - assets/images/contentList/mexicanFood/10.png
+    - assets/images/contentList/mexicanFood/1.jpg
+    - assets/images/contentList/mexicanFood/2.jpg
+    - assets/images/contentList/mexicanFood/3.jpg
+    - assets/images/contentList/mexicanFood/4.jpg
+    - assets/images/contentList/mexicanFood/5.jpg
+    - assets/images/contentList/mexicanFood/6.jpg
+    - assets/images/contentList/mexicanFood/7.jpg
+    - assets/images/contentList/mexicanFood/8.jpg
+    - assets/images/contentList/mexicanFood/9.jpg
+    - assets/images/contentList/mexicanFood/10.jpg
 
     #fastFood
-    - assets/images/contentList/fastFood/1.png
-    - assets/images/contentList/fastFood/2.png
-    - assets/images/contentList/fastFood/3.png
-    - assets/images/contentList/fastFood/4.png
-    - assets/images/contentList/fastFood/5.png
-    - assets/images/contentList/fastFood/6.png
-    - assets/images/contentList/fastFood/7.png
-    - assets/images/contentList/fastFood/8.png
-    - assets/images/contentList/fastFood/9.png
-    - assets/images/contentList/fastFood/10.png
+    - assets/images/contentList/fastFood/1.jpg
+    - assets/images/contentList/fastFood/2.jpg
+    - assets/images/contentList/fastFood/3.jpg
+    - assets/images/contentList/fastFood/4.jpg
+    - assets/images/contentList/fastFood/5.jpg
+    - assets/images/contentList/fastFood/6.jpg
+    - assets/images/contentList/fastFood/7.jpg
+    - assets/images/contentList/fastFood/8.jpg
+    - assets/images/contentList/fastFood/9.jpg
+    - assets/images/contentList/fastFood/10.jpg
 
     #westernFood
     - assets/images/contentList/westernFood/1.jpg

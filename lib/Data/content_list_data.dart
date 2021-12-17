@@ -86,7 +86,7 @@ const ContentListData = const [
     id: 'cl9_3',
     categories: 'sc3',
     contentListTitle: 'City Theater (Panggung Bandaraya)',
-    image: 'assets/images/contentList/historicalPlaces/9.jfif',
+    image: 'assets/images/contentList/historicalPlaces/9.jpg',
   ),
 
 //parks 4
@@ -1165,70 +1165,70 @@ const ContentListData = const [
     id: 'cl1_17e',
     categories: 'sc_17e',
     contentListTitle: 'Sae Ma Eul Korean BBQ',
-    image: 'assets/images/contentList/koreanFood/1.png',
+    image: 'assets/images/contentList/koreanFood/1.jpg',
   ),
 
   ContentLi(
     id: 'cl2_17e',
     categories: 'sc_17e',
     contentListTitle: 'Seoul Korea Restaurant',
-    image: 'assets/images/contentList/koreanFood/2.png',
+    image: 'assets/images/contentList/koreanFood/2.jpg',
   ),
 
   ContentLi(
     id: 'cl3_17e',
     categories: 'sc_17e',
     contentListTitle: 'Shinmapo Korean BBQ',
-    image: 'assets/images/contentList/koreanFood/3.png',
+    image: 'assets/images/contentList/koreanFood/3.jpg',
   ),
 
   ContentLi(
     id: 'cl4_17e',
     categories: 'sc_17e',
     contentListTitle: 'Don Dwae Ji Sam Gyeob Sal',
-    image: 'assets/images/contentList/koreanFood/4.png',
+    image: 'assets/images/contentList/koreanFood/4.jpg',
   ),
 
   ContentLi(
     id: 'cl5_17e',
     categories: 'sc_17e',
     contentListTitle: 'Dae Sa Kwan Korean Restaurant',
-    image: 'assets/images/contentList/koreanFood/5.png',
+    image: 'assets/images/contentList/koreanFood/5.jpg',
   ),
 
   ContentLi(
     id: 'cl6_17e',
     categories: 'sc_17e',
     contentListTitle: 'Da On Fine Korean Cuisine',
-    image: 'assets/images/contentList/koreanFood/6.png',
+    image: 'assets/images/contentList/koreanFood/6.jpg',
   ),
 
   ContentLi(
     id: 'cl7_17e',
     categories: 'sc_17e',
     contentListTitle: 'Namoo Korean Dessert Cafe and Bistro on the Park',
-    image: 'assets/images/contentList/koreanFood/7.png',
+    image: 'assets/images/contentList/koreanFood/7.jpg',
   ),
 
   ContentLi(
     id: 'cl8_17e',
     categories: 'sc_17e',
     contentListTitle: 'Seoul Nami Korean BBQ',
-    image: 'assets/images/contentList/koreanFood/8.png',
+    image: 'assets/images/contentList/koreanFood/8.jpg',
   ),
 
   ContentLi(
     id: 'cl9_17e',
     categories: 'sc_17e',
     contentListTitle: 'B. bap',
-    image: 'assets/images/contentList/koreanFood/9.png',
+    image: 'assets/images/contentList/koreanFood/9.jpg',
   ),
 
   ContentLi(
     id: 'cl10_17e',
     categories: 'sc_17e',
     contentListTitle: "Kung Jung Korean Restaurant",
-    image: 'assets/images/contentList/koreanFood/10.png',
+    image: 'assets/images/contentList/koreanFood/10.jpg',
   ),
 
   //japanese restaurant 17f
@@ -1236,70 +1236,70 @@ const ContentListData = const [
     id: 'cl1_17f',
     categories: 'sc_17f',
     contentListTitle: 'Gen Japanese Restaurant',
-    image: 'assets/images/contentList/japaneseFood/1.png',
+    image: 'assets/images/contentList/japaneseFood/1.jpg',
   ),
 
   ContentLi(
     id: 'cl2_17f',
     categories: 'sc_17f',
     contentListTitle: 'Donunie Sushi',
-    image: 'assets/images/contentList/japaneseFood/2.png',
+    image: 'assets/images/contentList/japaneseFood/2.jpg',
   ),
 
   ContentLi(
     id: 'cl3_17f',
     categories: 'sc_17f',
     contentListTitle: 'Mitasu Japanese Restaurant',
-    image: 'assets/images/contentList/japaneseFood/3.png',
+    image: 'assets/images/contentList/japaneseFood/3.jpg',
   ),
 
   ContentLi(
     id: 'cl4_17f',
     categories: 'sc_17f',
     contentListTitle: 'Umai-Ya',
-    image: 'assets/images/contentList/japaneseFood/4.png',
+    image: 'assets/images/contentList/japaneseFood/4.jpg',
   ),
 
   ContentLi(
     id: 'cl5_17f',
     categories: 'sc_17f',
     contentListTitle: 'Hanare Japanese Restaurant',
-    image: 'assets/images/contentList/japaneseFood/5.png',
+    image: 'assets/images/contentList/japaneseFood/5.jpg',
   ),
 
   ContentLi(
     id: 'cl6_17f',
     categories: 'sc_17f',
     contentListTitle: "J'S GATE DINING",
-    image: 'assets/images/contentList/japaneseFood/6.png',
+    image: 'assets/images/contentList/japaneseFood/6.jpg',
   ),
 
   ContentLi(
     id: 'cl7_17f',
     categories: 'sc_17f',
     contentListTitle: 'Ishin Japanese Dining',
-    image: 'assets/images/contentList/japaneseFood/7.png',
+    image: 'assets/images/contentList/japaneseFood/7.jpg',
   ),
 
   ContentLi(
     id: 'cl8_17f',
     categories: 'sc_17f',
     contentListTitle: 'Pepper Lunch',
-    image: 'assets/images/contentList/japaneseFood/8.png',
+    image: 'assets/images/contentList/japaneseFood/8.jpg',
   ),
 
   ContentLi(
     id: 'cl9_17f',
     categories: 'sc_17f',
     contentListTitle: 'Iketeru',
-    image: 'assets/images/contentList/japaneseFood/9.png',
+    image: 'assets/images/contentList/japaneseFood/9.jpg',
   ),
 
   ContentLi(
     id: 'cl10_17f',
     categories: 'sc_17f',
     contentListTitle: "Sushi Oribe",
-    image: 'assets/images/contentList/japaneseFood/10.png',
+    image: 'assets/images/contentList/japaneseFood/10.jpg',
   ),
 
   //Mexican Food 17g
@@ -1307,70 +1307,70 @@ const ContentListData = const [
     id: 'cl1_17g',
     categories: 'sc_17g',
     contentListTitle: 'La Boca Latino Bar',
-    image: 'assets/images/contentList/mexicanFood/1.png',
+    image: 'assets/images/contentList/mexicanFood/1.jpg',
   ),
 
   ContentLi(
     id: 'cl2_17g',
     categories: 'sc_17g',
     contentListTitle: 'Loco Mexican Bar and Restaurant',
-    image: 'assets/images/contentList/mexicanFood/2.png',
+    image: 'assets/images/contentList/mexicanFood/2.jpg',
   ),
 
   ContentLi(
     id: 'cl3_17g',
     categories: 'sc_17g',
     contentListTitle: 'Las Carretas Mexican Restaurant & Bar',
-    image: 'assets/images/contentList/mexicanFood/3.png',
+    image: 'assets/images/contentList/mexicanFood/3.jpg',
   ),
 
   ContentLi(
     id: 'cl4_17g',
     categories: 'sc_17g',
     contentListTitle: 'Sala Hartamas',
-    image: 'assets/images/contentList/mexicanFood/4.png',
+    image: 'assets/images/contentList/mexicanFood/4.jpg',
   ),
 
   ContentLi(
     id: 'cl5_17g',
     categories: 'sc_17g',
     contentListTitle: 'Fresca Mexican Kitchen & Bar',
-    image: 'assets/images/contentList/mexicanFood/5.png',
+    image: 'assets/images/contentList/mexicanFood/5.jpg',
   ),
 
   ContentLi(
     id: 'cl6_17g',
     categories: 'sc_17g',
     contentListTitle: 'Chica Bonita',
-    image: 'assets/images/contentList/mexicanFood/6.png',
+    image: 'assets/images/contentList/mexicanFood/6.jpg',
   ),
 
   ContentLi(
     id: 'cl7_17g',
     categories: 'sc_17g',
     contentListTitle: "Nick's Restaurant & Bar",
-    image: 'assets/images/contentList/mexicanFood/7.png',
+    image: 'assets/images/contentList/mexicanFood/7.jpg',
   ),
 
   ContentLi(
     id: 'cl8_17g',
     categories: 'sc_17g',
     contentListTitle: 'MoMosita Taco Bar',
-    image: 'assets/images/contentList/mexicanFood/8.png',
+    image: 'assets/images/contentList/mexicanFood/8.jpg',
   ),
 
   ContentLi(
     id: 'cl9_17g',
     categories: 'sc_17g',
     contentListTitle: 'Elcantina Mexican Cuisine',
-    image: 'assets/images/contentList/mexicanFood/9.png',
+    image: 'assets/images/contentList/mexicanFood/9.jpg',
   ),
 
   ContentLi(
     id: 'cl10_17g',
     categories: 'sc_17g',
     contentListTitle: "Carlos Mexican Canteena",
-    image: 'assets/images/contentList/mexicanFood/10.png',
+    image: 'assets/images/contentList/mexicanFood/10.jpg',
   ),
 
   //Fast Food 17h
@@ -1378,70 +1378,70 @@ const ContentListData = const [
     id: 'cl1_17h',
     categories: 'sc_17h',
     contentListTitle: 'Burger on 16',
-    image: 'assets/images/contentList/fastFood/1.png',
+    image: 'assets/images/contentList/fastFood/1.jpg',
   ),
 
   ContentLi(
     id: 'cl2_17h',
     categories: 'sc_17h',
     contentListTitle: "Giegit's Burger",
-    image: 'assets/images/contentList/fastFood/2.png',
+    image: 'assets/images/contentList/fastFood/2.jpg',
   ),
 
   ContentLi(
     id: 'cl3_17h',
     categories: 'sc_17h',
     contentListTitle: 'Syriana Shawarma & Fast Food Restaurant',
-    image: 'assets/images/contentList/fastFood/3.png',
+    image: 'assets/images/contentList/fastFood/3.jpg',
   ),
 
   ContentLi(
     id: 'cl4_17h',
     categories: 'sc_17h',
     contentListTitle: 'Wayback Burgers',
-    image: 'assets/images/contentList/fastFood/4.png',
+    image: 'assets/images/contentList/fastFood/4.jpg',
   ),
 
   ContentLi(
     id: 'cl5_17h',
     categories: 'sc_17h',
     contentListTitle: 'The Daily Grind',
-    image: 'assets/images/contentList/fastFood/5.png',
+    image: 'assets/images/contentList/fastFood/5.jpg',
   ),
 
   ContentLi(
     id: 'cl6_17h',
     categories: 'sc_17h',
     contentListTitle: 'KGB TTDI',
-    image: 'assets/images/contentList/fastFood/6.png',
+    image: 'assets/images/contentList/fastFood/6.jpg',
   ),
 
   ContentLi(
     id: 'cl7_17h',
     categories: 'sc_17h',
     contentListTitle: "Kaw Kaw Burger",
-    image: 'assets/images/contentList/fastFood/7.png',
+    image: 'assets/images/contentList/fastFood/7.jpg',
   ),
 
   ContentLi(
     id: 'cl8_17h',
     categories: 'sc_17h',
     contentListTitle: 'J Boyz Fast Food Restaurant',
-    image: 'assets/images/contentList/fastFood/8.png',
+    image: 'assets/images/contentList/fastFood/8.jpg',
   ),
 
   ContentLi(
     id: 'cl9_17h',
     categories: 'sc_17h',
     contentListTitle: 'Sugarbun Borneo Asian Food',
-    image: 'assets/images/contentList/fastFood/9.png',
+    image: 'assets/images/contentList/fastFood/9.jpg',
   ),
 
   ContentLi(
     id: 'cl10_17h',
     categories: 'sc_17h',
     contentListTitle: "Broasted Chicken King",
-    image: 'assets/images/contentList/fastFood/10.png',
+    image: 'assets/images/contentList/fastFood/10.jpg',
   ),
 
   //Western Food 17i
@@ -1818,7 +1818,7 @@ const ContentListData = const [
     id: 'cl1_25',
     categories: 'sc_24',
     contentListTitle: 'KKB Paragliding Park',
-    image: 'assets/images/contentList/extreme/1b.jpeg',
+    image: 'assets/images/contentList/extreme/1b.jpg',
   ),
   ContentLi(
     id: 'cl2_25',

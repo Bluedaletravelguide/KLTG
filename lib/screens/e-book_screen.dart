@@ -12,17 +12,17 @@ class FirstPage extends StatefulWidget {
 }
 
 class _FirstPageState extends State<FirstPage> {
-  int bookIndex = 39;
+  int bookIndex = 40;
   String edition;
 //Function to create book edtion numbers
   String bookEdition() {
     setState(() {
       bookIndex--;
     });
-    if (bookIndex < 39 && bookIndex > 0) {
+    if (bookIndex < 40 && bookIndex > 0) {
       return edition = bookIndex.toString();
     }
-    return (bookIndex = 38).toString();
+    return (bookIndex = 40).toString();
   }
 
   @override
