@@ -288,6 +288,55 @@ const SubCategoriesData = const [
     description: 'Get away to enjoy paradise across te ocean',
     image: 'assets/images/subCatedgories/island.jpg',
   ),
+
+  SubCategory(
+    id: 'sc_21a',
+    categories: 'sc_21',
+    subCategoryTitle: 'Perak',
+    description: 'Perak',
+    image: 'assets/images/contentList/island/1.jpg',
+  ),
+
+  SubCategory(
+    id: 'sc_21b',
+    categories: 'sc_21',
+    subCategoryTitle: 'Terengganu',
+    description: 'Terengganu',
+    image: 'assets/images/contentList/island/6.jpg',
+  ),
+
+  SubCategory(
+    id: 'sc_21c',
+    categories: 'sc_21',
+    subCategoryTitle: 'Pahang',
+    description: 'Pahang',
+    image: 'assets/images/contentList/island/3.jpg',
+  ),
+
+  SubCategory(
+    id: 'sc_21d',
+    categories: 'sc_21',
+    subCategoryTitle: 'Melaka',
+    description: 'Melaka',
+    image: 'assets/images/contentList/island/4.jpg',
+  ),
+
+  SubCategory(
+    id: 'sc_21e',
+    categories: 'sc_21',
+    subCategoryTitle: 'Sabah',
+    description: 'Sabah',
+    image: 'assets/images/contentList/island/5.jpg',
+  ),
+
+  SubCategory(
+    id: 'sc_21f',
+    categories: 'sc_21',
+    subCategoryTitle: 'Johor',
+    description: 'Johor',
+    image: 'assets/images/contentList/island/7.jpg',
+  ),
+
   SubCategory(
     id: 'sc_18',
     categories: 'c7',
@@ -296,12 +345,64 @@ const SubCategoriesData = const [
     image: 'assets/images/subCatedgories/hillside.jpg',
   ),
   SubCategory(
+    id: 'sc_18a',
+    categories: 'sc_18',
+    subCategoryTitle: 'Pahang',
+    description: 'Pahang',
+    image: 'assets/images/contentList/hillside/1.jpg',
+  ),
+  SubCategory(
+    id: 'sc_18b',
+    categories: 'sc_18',
+    subCategoryTitle: 'Perak',
+    description: 'Perak',
+    image: 'assets/images/contentList/hillside/5.jpg',
+  ),
+  SubCategory(
+    id: 'sc_18c',
+    categories: 'sc_18',
+    subCategoryTitle: 'Penang',
+    description: 'Penang',
+    image: 'assets/images/contentList/hillside/6.jpg',
+  ),
+
+  SubCategory(
     id: 'sc_19',
     categories: 'c7',
     subCategoryTitle: 'Waterfall',
     description: 'Stunning nature point to observe',
     image: 'assets/images/subCatedgories/waterfall.jpg',
   ),
+
+  SubCategory(
+    id: 'sc_19a',
+    categories: 'sc_19',
+    subCategoryTitle: 'Selangor',
+    description: 'Selangor',
+    image: 'assets/images/contentList/waterfall/6.jpeg',
+  ),
+  SubCategory(
+    id: 'sc_19b',
+    categories: 'sc_19',
+    subCategoryTitle: 'Negari Sembilan',
+    description: 'Negari Sembilan',
+    image: 'assets/images/contentList/waterfall/2.jpg',
+  ),
+  SubCategory(
+    id: 'sc_19c',
+    categories: 'sc_19',
+    subCategoryTitle: 'Pahang',
+    description: 'Pahang',
+    image: 'assets/images/contentList/waterfall/4.jpg',
+  ),
+  SubCategory(
+    id: 'sc_19d',
+    categories: 'sc_19',
+    subCategoryTitle: 'Kedah',
+    description: 'Kedah',
+    image: 'assets/images/contentList/waterfall/5b.jpg',
+  ),
+
   SubCategory(
     id: 'sc_20',
     categories: 'c7',
@@ -310,10 +411,56 @@ const SubCategoriesData = const [
     image: 'assets/images/subCatedgories/hike.jpg',
   ),
   SubCategory(
+    id: 'sc_20a',
+    categories: 'sc_20',
+    subCategoryTitle: 'Selangor',
+    description: 'Selangor',
+    image: 'assets/images/contentList/hiking/2.jfif',
+  ),
+
+  SubCategory(
+    id: 'sc_20b',
+    categories: 'sc_20',
+    subCategoryTitle: 'Johor',
+    description: 'Johor',
+    image: 'assets/images/contentList/hiking/2.jpg',
+  ),
+  SubCategory(
+    id: 'sc_20c',
+    categories: 'sc_20',
+    subCategoryTitle: 'Pahang',
+    description: 'Pahang',
+    image: 'assets/images/contentList/hiking/4.jpg',
+  ),
+
+  SubCategory(
+    id: 'sc_20d',
+    categories: 'sc_20',
+    subCategoryTitle: 'Penang',
+    description: 'Penang',
+    image: 'assets/images/contentList/hiking/5.jpg',
+  ),
+  SubCategory(
+    id: 'sc_20e',
+    categories: 'sc_20',
+    subCategoryTitle: 'Negeri Sembilan',
+    description: 'Negeri Sembilan',
+    image: 'assets/images/contentList/hiking/6.jpg',
+  ),
+
+  SubCategory(
     id: 'sc_24',
     categories: 'c7',
     subCategoryTitle: 'Extreme Sports',
     description: 'Walk with the greenery',
     image: 'assets/images/subCatedgories/extreme.jpg',
+  ),
+
+  SubCategory(
+    id: 'sc_24a',
+    categories: 'sc_24',
+    subCategoryTitle: 'Selangor',
+    description: 'Selangor',
+    image: 'assets/images/contentList/extreme/1b.jpg',
   ),
 ];

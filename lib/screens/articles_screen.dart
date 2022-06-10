@@ -1,58 +1,45 @@
 import '../Data/SizeConfig.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
-import '../Data/ebook-data.dart';
+import '../Data/articles-data.dart';
 import 'package:flutter_platform_widgets/flutter_platform_widgets.dart';
 
-class FirstPage extends StatefulWidget {
-  static const routeName = '/ebooks';
+class SecondPage extends StatefulWidget {
+  static const routeName = '/articles';
 
   @override
-  _FirstPageState createState() => _FirstPageState();
+  _SecondPageState createState() => _SecondPageState();
 }
 
-class _FirstPageState extends State<FirstPage> {
-  int bookIndex = 40;
+class _SecondPageState extends State<SecondPage> {
   String edition;
 //Function to create book edtion numbers
-  String bookEdition() {
-    setState(() {
-      bookIndex--;
-    });
-    if (bookIndex < 40 && bookIndex > 0) {
-      return edition = bookIndex.toString();
-    }
-    return (bookIndex = 40).toString();
-  }
 
   @override
   Widget build(BuildContext context) {
     SizeConfig().init(context);
     return PlatformScaffold(
-      appBar: PlatformAppBar(
-        title: Text('E-book'),
-      ),
       body: SafeArea(
         child: Material(
           child: Padding(
             padding: const EdgeInsets.all(6),
             child: Column(children: [
               Text(
-                'KL The Guide1 Editions',
+                'Articles Editions',
                 style: Theme.of(context).textTheme.headline1,
               ),
               Expanded(
                 child: GridView.count(
                   crossAxisCount: 2,
                   //This function is to import the e-book data into this widget:
-                  children: EbookData.map(
+                  children: ArticlesData.map(
                     (con) => Padding(
                       padding: EdgeInsets.all(15),
                       child: InkWell(
                         splashColor: Theme.of(context).accentColor,
                         borderRadius: BorderRadius.circular(10),
                         onTap: () async {
-                          final url = con.bookPdf;
+                          final url = con.article_pdf;
                           if (await canLaunch(url)) {
                             await launch(url);
                           } else {
@@ -71,35 +58,8 @@ class _FirstPageState extends State<FirstPage> {
                                   child: Container(
                                     height: SizeConfig.blockSizeVertical * 30,
                                     child: Image.asset(
-                                      con.bookcover,
+                                      con.article_cover,
                                       fit: BoxFit.fill,
-                                    ),
-                                  ),
-                                ),
-                              ),
-                              Container(
-                                height: SizeConfig.blockSizeVertical * 10,
-                                width: SizeConfig.blockSizeHorizontal * 7,
-                                color: Colors.transparent,
-                                child: new Container(
-                                  decoration: new BoxDecoration(
-                                      gradient: LinearGradient(colors: [
-                                        Color(0xff103783),
-                                        Color(0xff9bafd9),
-                                      ]),
-                                      borderRadius: new BorderRadius.only(
-                                          topRight: const Radius.circular(40.0),
-                                          bottomRight:
-                                              const Radius.circular(40.0))),
-                                  child: Center(
-                                    child: Padding(
-                                      padding: const EdgeInsets.only(right: 4),
-                                      child: Text(
-                                        bookEdition(),
-                                        style: Theme.of(context)
-                                            .textTheme
-                                            .bodyText1,
-                                      ),
                                     ),
                                   ),
                                 ),

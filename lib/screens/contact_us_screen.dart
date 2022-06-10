@@ -1,17 +1,23 @@
 import 'dart:async';
+import 'package:carousel_slider/carousel_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import '../Data/about_us.dart';
+import '../Data/SizeConfig.dart';
 import 'package:flutter_email_sender/flutter_email_sender.dart';
 import 'package:dropdown_formfield/dropdown_formfield.dart';
 import 'package:flutter_platform_widgets/flutter_platform_widgets.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class ContactUsScreen extends StatefulWidget {
   static const routeName = '/contact';
+
   @override
   _ContactUsScreenState createState() => _ContactUsScreenState();
 }
 
 class _ContactUsScreenState extends State<ContactUsScreen> {
+  final CarouselController buttonCarouselController = CarouselController();
   List<String> attachments = [];
   bool isHTML = false;
   final body = FocusNode();
@@ -74,9 +80,26 @@ class _ContactUsScreenState extends State<ContactUsScreen> {
     super.dispose();
   }
 
+  Widget socialMedia(BuildContext context, String url, Icon icon, Color color) {
+    return IconButton(
+      onPressed: () async {
+        url = url;
+        if (await canLaunch(url)) {
+          await launch(url);
+        } else {
+          throw 'Could not launch $url';
+        }
+      },
+      icon: icon,
+      iconSize: SizeConfig.blockSizeVertical * 4,
+      color: color,
+    );
+  }
+
 //The main widget:
   @override
   Widget build(BuildContext context) {
+    final socialData = SocialMediaData;
     return Scaffold(
       key: _scaffoldKey,
       body: Padding(
@@ -93,6 +116,22 @@ class _ContactUsScreenState extends State<ContactUsScreen> {
                   child: Column(
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: <Widget>[
+                        Container(
+                          height: constraints.maxHeight * 0.2,
+                          child: ListView.builder(
+                              scrollDirection: Axis.horizontal,
+                              shrinkWrap: true,
+                              itemCount: socialData.length,
+                              itemBuilder: (BuildContext context, int index) {
+                                //here we call the widget
+                                return socialMedia(
+                                  context,
+                                  socialData[index].url,
+                                  socialData[index].icon,
+                                  socialData[index].color,
+                                );
+                              }),
+                        ),
                         Container(
                           height: constraints.maxHeight * 0.15,
                           child: TextFormField(

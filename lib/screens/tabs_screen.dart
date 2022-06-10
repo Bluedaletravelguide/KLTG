@@ -4,6 +4,7 @@ import '../screens/crosswordScreen.dart';
 import '../screens/about_us_screen.dart';
 import '../screens/bookmark_screen.dart';
 import '../screens/e-book_screen.dart';
+import '../screens/articles_screen.dart';
 import '../screens/catgeroies_screen.dart';
 import '../screens/search_screen.dart';
 import 'package:flutter/cupertino.dart';
@@ -56,7 +57,11 @@ class _TabsScreenState extends State<TabsScreen> {
         children: [
           DrawerHeader(
             child: Text('KL THE GUIDE'),
-            decoration: BoxDecoration(color: Colors.blue),
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage('assets/images/Logo_100x50.png'),
+              ),
+            ),
           ),
           ListTile(
             leading: Icon(
@@ -122,6 +127,7 @@ class _TabsScreenState extends State<TabsScreen> {
   final List<Map<String, Object>> _pages = [
     {'page': CategoriesScreen(), 'title': 'KL THE GUIDE'},
     {'page': BookmarkScreen(), 'title': 'My Bookmarks'},
+    {'page': SecondPage(), 'title': 'Articles'},
     {
       'page': ContactUsScreen(),
       'title': 'Contact Us',
@@ -152,6 +158,10 @@ class _TabsScreenState extends State<TabsScreen> {
           label: 'My Bookmarks'),
       BottomNavigationBarItem(
           backgroundColor: Theme.of(context).primaryColorDark,
+          icon: Icon(Icons.article),
+          label: 'Articles'),
+      BottomNavigationBarItem(
+          backgroundColor: Theme.of(context).primaryColorDark,
           icon: Icon(Icons.contacts),
           label: 'Contact Us'),
     ];
@@ -168,6 +178,9 @@ class _TabsScreenState extends State<TabsScreen> {
 
                 case 2:
                   return bottomNav(ContactUsScreen(), 'Contact Us');
+
+                case 3:
+                  return bottomNav(SecondPage(), 'Articles');
 
                 default:
                   return bottomNav(CategoriesScreen(), 'KL THE GUIDE');

@@ -34,6 +34,11 @@ class SubCategories extends StatelessWidget {
     } else if (id == 'sc_12' ||
         id == 'sc_22' ||
         id == 'sc_17' ||
+        id == 'sc_18' ||
+        id == 'sc_19' ||
+        id == 'sc_20' ||
+        id == 'sc_21' ||
+        id == 'sc_24' ||
         id == 'sc_15') {
       Navigator.of(context).push(
         platformPageRoute(

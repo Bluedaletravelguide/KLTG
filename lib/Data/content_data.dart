@@ -142,9 +142,9 @@ const ContentData = const [
   ContentClass(
       id: 'cl6_3',
       decrepitation:
-          'Dataran Merdeka was formerly known as the Selangor Club Padang or simply the Padang. It was used as the cricket green of the Selangor Club. ',
+          'The Queen Victoria fountain in Kuala Lumpur, Malaysia was completed in 1904.',
       content:
-          'The Queen Victoria fountain in Kuala Lumpur, Malaysia was completed in 1904. The two-tiered fountain is adorned with gargoyles on all four sides of its foundation. Lights are lit up at night time which illuminates the structure of the fountain as well as its reservoir.',
+          'The two-tiered fountain is adorned with gargoyles on all four sides of its foundation. Lights are lit up at night time which illuminates the structure of the fountain as well as its reservoir.',
       workhour: 'Open 24 hours',
       fees: '-',
       phoneNo: '-',
@@ -155,11 +155,10 @@ const ContentData = const [
       webUrl: '-'),
   ContentClass(
       id: 'cl7_3',
-      decrepitation:
-          'Dataran Merdeka was formerly known as the Selangor Club Padang or simply the Padang. It was used as the cricket green of the Selangor Club. ',
+      decrepitation: '-',
       content:
           'The Ilham Baru Tower is a 58 storey skyscraper on Jalan Binjai, in the KLCC enclave in downtown Kuala Lumpur. Ilham Baru Tower is the third tallest skyscraper in the KLCC area with 978 feet of height.',
-      workhour: '',
+      workhour: '-',
       fees: '-',
       phoneNo: '+603-27713388',
       locationText:
@@ -169,8 +168,7 @@ const ContentData = const [
       webUrl: '-'),
   ContentClass(
       id: 'cl8_3',
-      decrepitation:
-          'Dataran Merdeka was formerly known as the Selangor Club Padang or simply the Padang. It was used as the cricket green of the Selangor Club. ',
+      decrepitation: '-',
       content:
           "Bangunan Sulaiman is one of Kuala Lumpur's most well-known British colonial monuments, spanning 16,430 square metres. It was founded in 1933 and has hosted a variety of government departments, including the Syariah court.",
       workhour:
@@ -184,8 +182,7 @@ const ContentData = const [
       webUrl: '-'),
   ContentClass(
       id: 'cl9_3',
-      decrepitation:
-          'Dataran Merdeka was formerly known as the Selangor Club Padang or simply the Padang. It was used as the cricket green of the Selangor Club. ',
+      decrepitation: '-',
       content:
           "During the British colonial period, Arthur B. Hubback constructed Panggung Bandaraya in 1904. Musicals and operas are currently performed at the theatre and it’s the oldest theatre in Kuala Lumpur.",
       workhour: '10.00am - 8.30pm (on show days)',
@@ -343,9 +340,9 @@ const ContentData = const [
   ContentClass(
       id: 'cl11_4',
       decrepitation:
-          'Bukit Kiara Park is surrounded by nature, which is enjoyed by people of all walks of life and home to many wild plants , birds, monkeys and other animals.',
+          'KL Butterfly Park is the largest public butterfly park zoo in Kuala Lumpur.They have around 6000 different butterflies from more than 120 different species.',
       content:
-          'Kuala Lumpur Butterfly Park is where you’ll find more than 6000 types of butterflies among lots of dense greenery, colourful flowers, cascading waterfalls and ponds and its one of the famous tourist attractions in Kuala Lumpur.',
+          'It is a great attraction that has been attraction even tourist and locals alike. It is located near the Kuala Lumpur Bird Park and Perdana Botanical Garden Kuala Lumpur.',
       workhour: '9.00 am - 5.30 pm (Daily)',
       fees: '-',
       phoneNo: '+603-26934799',
@@ -357,9 +354,9 @@ const ContentData = const [
   ContentClass(
       id: 'cl12_4',
       decrepitation:
-          'Bukit Kiara Park is surrounded by nature, which is enjoyed by people of all walks of life and home to many wild plants , birds, monkeys and other animals.',
+          'The Perdana Botanical Garden that is located in Kuala Lumpur is filled with different types of flora and fauna.',
       content:
-          "The Orchid Gardens, which cover 10,000 square metres, are a highlight of the Perdana Botanical Gardens. The Hibiscus Garden, which is home to Malaysia's national flower that blooms in abundance here, is also popular.",
+          "The entrance is free which anyone is able to enjoy themselves, within the park picnic are fine as long as you clean up after yourselves. Within the park itself there is also a deer park which houses a number of deer species such as mousedeer, axis deer and sambar deer.",
       workhour: '7.00 am - 8.00 pm (Daily)',
       fees: '-',
       phoneNo: '-',
@@ -372,9 +369,9 @@ const ContentData = const [
   ContentClass(
       id: 'cl1_23',
       decrepitation:
-          'Bukit Kiara Park is surrounded by nature, which is enjoyed by people of all walks of life and home to many wild plants , birds, monkeys and other animals.',
+          'Ethnology of the Malay World Museum is filled with different artifacts, traditional arts, clothing and jewellery.',
       content:
-          "Through dioramas of a traditional hamlet, a Wayang-Kulit (shadow-play) theatre, a Malay wedding dais, and the manufacture of Wau Bulan, the gallery illustrates the daily life of the Malays.",
+          "Its entrance fee is RM 2 per entry and RM 1 for OKU or elderly. In addition, the gallery depicts the social and cultural life of Malays in Malaysia with dioramas of a Malay traditional hamlet and a Wayang-Kulit (shadow-play) theatre.",
       workhour: '9.00 am - 5.00 pm (Tuesday - Sunday) \n Closed on Monday',
       fees: '-',
       phoneNo: '+603-22671000',
@@ -386,7 +383,7 @@ const ContentData = const [
   ContentClass(
       id: 'cl2_23',
       decrepitation:
-          'Bukit Kiara Park is surrounded by nature, which is enjoyed by people of all walks of life and home to many wild plants , birds, monkeys and other animals.',
+          'National Textiles Museum is filled with many different parts of different Malaysia culture and traditions.',
       content:
           "The objective of the National Textile Museum is to preserve trends and innovations in textiles and communal living in Malaysia throughout its history and into the future. In the gallery, visitors will be able to see a selection of four leading fabrics, accessories, and clothes, as well as a multimedia display.",
       workhour: '9.00 am - 6.00 pm (Daily)',
@@ -400,9 +397,9 @@ const ContentData = const [
   ContentClass(
       id: 'cl3_23',
       decrepitation:
-          'Bukit Kiara Park is surrounded by nature, which is enjoyed by people of all walks of life and home to many wild plants , birds, monkeys and other animals.',
+          'Museum of Asian Arts has many different types of artifacts that has been built up 50 years. From countries such as China since the Chiengsen between 1400-1550 AD period, Thailand and Singapore.',
       content:
-          "The Museum exhibits about 7,000 artefacts spanning 4,000 years of Asian history and representing cultures from all around Asia. The museum displays Asian art and culture, unique material aesthetics and intellectual achievements.",
+          "The museum also displays numerous unique objects, such as Sawankhalok ceramics manhunt elephant figures produced in Thailand during the 14th and 15th centuries A.D. The rare collections of stone carvings, copper objects, Malays' weapons, and other items are also on display as part of the university's duty to convey a message to our cherished students and country- our ancestors passing on a magnificent civilisation to us.",
       workhour:
           '8.30 am - 5.00 pm (Monday - Thursday) \n 8.30am - 5.00pm (Friday)',
       fees: '-',
@@ -415,9 +412,9 @@ const ContentData = const [
   ContentClass(
       id: 'cl4_23',
       decrepitation:
-          'Bukit Kiara Park is surrounded by nature, which is enjoyed by people of all walks of life and home to many wild plants , birds, monkeys and other animals.',
+          'The Royal Malaysia Police Museum is a museum in Kuala Lumpur, Malaysia, dedicated to the history of the Malaysian police force.',
       content:
-          "The Royal Malaysia Police Museum was constructed in 1958. The museum is divided into three sections, which are gallery A, Gallery B, and Gallery C and each of which highlights the role of Malaysian police across time as well as the police involvement in  various Malayan disasters.",
+          "The museum has displays on the Royal Malaysia Police's history, from its beginnings under British colonial authority until the 1970s. The museum has been refurbished to accommodate additional exhibits and has been relocated from its original location at the Police Training Centre in Jalan Semarak.",
       workhour:
           '10.00 am - 6.00 pm (Tuesday - Thursday) \n 10.00 am - 6.00 pm (Friday)',
       fees: '-',
@@ -430,9 +427,9 @@ const ContentData = const [
   ContentClass(
       id: 'cl5_23',
       decrepitation:
-          'Bukit Kiara Park is surrounded by nature, which is enjoyed by people of all walks of life and home to many wild plants , birds, monkeys and other animals.',
+          'The museum shows jewellery collections, tools, beautiful carvings, and pieces with complex workmanship that have spiritual meaning.',
       content:
-          "The museum shows jewellery collections, tools, beautiful carvings, and pieces with complex workmanship that have spiritual meaning. Surprisingly,  it's more of a shop than a museum where tourists can purchase jades which are imported from Myanmar and China.",
+          "One of the pieces they have is the Twin Dragon Thrones, made out of jade these thrones are supposed to represent the thrones of the Emperor and Empress.There are also some pieces that tourists are able to buy as a survivor or something remember the trip with, along with that tourist are also able to join the jade cutting workshop to experience it.",
       workhour: '9.30 am - 5.00 pm (Daily)',
       fees: '-',
       phoneNo: '+603-21429648',
@@ -444,9 +441,9 @@ const ContentData = const [
   ContentClass(
       id: 'cl6_23',
       decrepitation:
-          'Bukit Kiara Park is surrounded by nature, which is enjoyed by people of all walks of life and home to many wild plants , birds, monkeys and other animals.',
+          'Islamic Art museum is officially opened since 12 December 1998. It is the largest museum of Islamic arts in South East Asia which houses more than 7000 artifacts from the Islamic world.',
       content:
-          "Over ten thousand objects and an extraordinary library of Islamic art publications may be found at the Islamic Arts Museum Malaysia.",
+          "The collection includes galleries dedicated to Chinese, Indian, and Malay art, as well as specialised areas for the Quran, manuscripts, textiles, jewellery, coins, metal, wood, and ceramics. The IAMM contains two floors of permanent galleries and two temporary exhibition galleries.",
       workhour: '9.30 am - 6.00 pm (Daily)',
       fees: '-',
       phoneNo: '+603-20927070',
@@ -458,9 +455,9 @@ const ContentData = const [
   ContentClass(
       id: 'cl7_23',
       decrepitation:
-          'Bukit Kiara Park is surrounded by nature, which is enjoyed by people of all walks of life and home to many wild plants , birds, monkeys and other animals.',
+          'The Memorial Negarawan was created to honour and remember these Statesmen achivements to the nation and society.',
       content:
-          "The Memorial Negarawan was created to honour and remember these Statesmen's achievements to the nation and society.",
+          "Here we have historical memories of 7 individuals who are peoples who were closely related in the independent of Malaysia along side Malaysia’s first Prime minister, Tunku Abdul Rahman such as, Tun Tan Cheng Lock, Tun V.T. Sambanthan and Tun Dr Ismail just to name a few.",
       workhour:
           ' 9.00 am - 5.00 pm (Tuesday - Thursday) \n 9.00 am - 5.00 pm (Friday)',
       fees: '-',
@@ -484,25 +481,11 @@ const ContentData = const [
       phoneNo: '+603-22870380',
       locationText:
           '16-1, Jalan Telawi 2, Bangsar, 59100 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
-      locationUrl: 'https://g.page/OzmosisSpaBangsar?share',
+      locationUrl: 'https://goo.gl/maps/jtAuL659rU8skLtz8',
       webText: '-',
       webUrl: '-'),
   ContentClass(
       id: 'cl2_5',
-      decrepitation:
-          'Nestled in the heart of Kuala Lumpur in Fahrenheit 88, Luxurious Spa provides a holistic paradise for those willing to escape the tedium of everyday life.',
-      content:
-          'Customers can take a dip in the outdoor swimming pool, relax in the Jacuzzi or carry out an invigorating workout in a professionally fitted gym, before indulging in the skills of professional therapists for a soothing massage or a mani-pedi service. Other facilities offered include a movie theatre, a lounge and a café serving foreign cuisine to soak up appetites between sampling sessions.',
-      workhour: '24 Hours (Daily)',
-      fees: '-',
-      phoneNo: '+603-21485888',
-      locationText:
-          'Lot 5-02-06, 179, Jalan Gading, Bukit Bintang, 55100 Kuala Lumpur',
-      locationUrl: 'https://goo.gl/maps/Gn427GNsEJEYQNc77',
-      webText: '-',
-      webUrl: '-'),
-  ContentClass(
-      id: 'cl3_5',
       decrepitation:
           'Ossoto Spa KL is the best place to treat yourself without breaking your wallet. This intimate spa is located deep in the heart of Kuala Lumpur.',
       content:
@@ -516,7 +499,7 @@ const ContentData = const [
       webText: '-',
       webUrl: '-'),
   ContentClass(
-    id: 'cl4_5',
+    id: 'cl3_5',
     decrepitation:
         'Swasana Spa provides a range of seven body massages in the form of traditional Balinese, Thai and Malaysian treatments.',
     content:
@@ -527,9 +510,11 @@ const ContentData = const [
     locationText:
         'Impiana @ Klcc Hotel, No. 13, Jalan Pinang, Kuala Lumpur, 50450 Kuala Lumpur, Wilayah Persekutuan',
     locationUrl: 'https://goo.gl/maps/6nVjzutv333RFHup6',
+    webText: '-',
+    webUrl: '-',
   ),
   ContentClass(
-      id: 'cl5_5',
+      id: 'cl4_5',
       decrepitation:
           'Located within Anggun Hotel, the spa offers a wide range of massage treatments along with facials and manicures.',
       content:
@@ -542,7 +527,7 @@ const ContentData = const [
       webText: '-',
       webUrl: '-'),
   ContentClass(
-      id: 'cl6_5',
+      id: 'cl5_5',
       decrepitation:
           'The Uroot Spa is one of the best massage spa in Malaysia\'s capital, Kuala Lumpur. It offers a wide range of local relaxation methods that will relieve the muscles in order to have a peaceful sleep.',
       content:
@@ -556,7 +541,7 @@ const ContentData = const [
       webText: '-',
       webUrl: '-'),
   ContentClass(
-      id: 'cl7_5',
+      id: 'cl6_5',
       decrepitation:
           'Indulge in aromatherapy, body scrubs, facials, hot stone and herbal compression treatments, and more. ',
       content:
@@ -570,7 +555,7 @@ const ContentData = const [
       webText: '-',
       webUrl: '-'),
   ContentClass(
-      id: 'cl8_5',
+      id: 'cl7_5',
       decrepitation:
           'With 18 branches in the malls and hypermarkets across KL and Klang Valley, Manjakaki has become one of the most convenient spas.',
       content:
@@ -584,7 +569,7 @@ const ContentData = const [
       webText: '-',
       webUrl: '-'),
   ContentClass(
-      id: 'cl9_5',
+      id: 'cl8_5',
       decrepitation:
           'Erawan Wellness offers relaxation in the form of a variety of aromatic enclosure massages. Customers can request different types of massage and target areas.',
       content:
@@ -598,7 +583,7 @@ const ContentData = const [
       webText: '-',
       webUrl: '-'),
   ContentClass(
-      id: 'cl10_5',
+      id: 'cl9_5',
       decrepitation:
           'Though Thai massages give you intense and pleasant relaxation, Chinese massage is a gentler way to treat chronic problems and calming tension in your body.',
       content:
@@ -678,7 +663,7 @@ const ContentData = const [
       phoneNo: '+603-92000039',
       locationText: 'Jalan Perdana, Tasik Perdana, 50480 Kuala Lumpur',
       locationUrl: 'https://goo.gl/maps/DqeYFNWVTyfGg4yr8',
-      webText: 'http://www.kuala-lumpur.ws/attractions/kl-deer-park.htm',
+      webText: 'https://www.kuala-lumpur.ws/attractions/kl-deer-park.htm',
       webUrl: 'http://www.kuala-lumpur.ws/attractions/kl-deer-park.htm '),
   ContentClass(
       id: 'cl6_6',
@@ -998,7 +983,7 @@ const ContentData = const [
       fees: '-',
       phoneNo: '1-300-88-8988',
       locationText: 'No. 1, Jalan Imbi, Imbi, 55100 Kuala Lumpur',
-      locationUrl: '  ',
+      locationUrl: 'https://goo.gl/maps/3TEu4rJ8KQDPqA72A',
       webText: 'https://berjayatimessquarekl.com/',
       webUrl: 'https://berjayatimessquarekl.com/'),
   ContentClass(
@@ -1329,8 +1314,9 @@ const ContentData = const [
       locationText:
           '5, Jalan Conlay, Kuala Lumpur, 50450 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
       locationUrl: 'https://goo.gl/maps/rtDQU65UC6bsNpi46',
-      webText: '-',
-      webUrl: '-'),
+      webText: 'https://www.agoda.com/search',
+      webUrl:
+          'https://www.agoda.com/search?site_id=1736413&checkout=2022-04-05&campaignid=16027188857&SearchDateType=default&NumberOfAdults=2&LT=0&NumberOfChildren=0&childages=&NumberOfRooms=1&gsite=localuniversal&los=1&PartnerCurrency=MYR&RoomID=9014628&PriceTax=10.75&PriceTotal=190.06&RatePlan=&UserCountry=MY&Currency=MYR&UserDevice=desktop&Verif=false&audience_list=&mcid=332&booking_source=cpc&adType=1&gclid=CjwKCAjwrqqSBhBbEiwAlQeqGoOQ85hdn8sr2R-f-FrDQg3iRBpYNhNhguYLIpJuScVj1ZtEJJHMtRoCgfkQAvD_BwE&selectedproperty=159253&city=14524&adults=2&children=0&rooms=1&hc=MYR&checkin=2022-04-04'),
   ContentClass(
       id: 'cl2_15a',
       decrepitation: '-',
@@ -1342,8 +1328,9 @@ const ContentData = const [
       locationText:
           '5, Jalan Sultan Hishamuddin, Tasik Perdana, 50000 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
       locationUrl: 'https://goo.gl/maps/zvxfPSXEWP6a6PSE7',
-      webText: '-',
-      webUrl: '-'),
+      webText: 'https://www.booking.com/search',
+      webUrl:
+          'https://www.booking.com/searchresults.en-gb.html?aid=2127705;label=metagha-link-LUMY-hotel-449884_dev-desktop_los-1_bw-0_dow-Monday_defdate-1_room-0_gstadt-2_rateid-0_aud-0_gacid-_mcid-10_ppa-0_clrid-0_ad-0_gstkid-0_checkin-20220404;sid=fbbfd35eebce86b428f96e8e30963f6e;checkin=2022-04-04;checkout=2022-04-05;city=-2403010;ext_price_total=382.80;group_children=0;highlighted_hotels=449884;hlrd=with_dates;keep_landing=1;no_rooms=1;redirected=1;show_room=44988428_88830571_2_2_0;source=hotel&utm_campaign=MY&utm_content=dev-desktop_los-1_bw-0_dow-Monday_defdate-1_room-0_gstadt-2_rateid-0_aud-0_gacid-_mcid-10_ppa-0_clrid-0_ad-0_gstkid-0_checkin-20220404&utm_medium=localuniversal&utm_source=metagha&utm_term=hotel-449884&room1=A,A,;'),
   ContentClass(
       id: 'cl3_15a',
       decrepitation: '-',
@@ -1355,8 +1342,8 @@ const ContentData = const [
       locationText:
           '136, Jalan Changkat Thambi Dollah, Bukit Bintang, 55100 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
       locationUrl: 'https://g.page/furamabukitbintang?share',
-      webText: '-',
-      webUrl: '-'),
+      webText: 'https://www.furama.com/bukitbintang/',
+      webUrl: 'https://www.furama.com/bukitbintang/'),
   ContentClass(
       id: 'cl4_15a',
       decrepitation: '-',
@@ -1368,8 +1355,9 @@ const ContentData = const [
       locationText:
           '183, Bukit Bintang Street, Bukit Bintang, 55100 Kuala Lumpur, Federal Territory of Kuala Lumpur',
       locationUrl: 'https://goo.gl/maps/n8fbrfVVfR126DQb6',
-      webText: '-',
-      webUrl: '-'),
+      webText: 'https://www.booking.com/hotel/my/jw-marriott-kuala-lumpur',
+      webUrl:
+          'https://www.booking.com/hotel/my/jw-marriott-kuala-lumpur.en-gb.html?aid=356938;label=metagha-link-LUMY-hotel-25710_dev-desktop_los-1_bw-0_dow-Monday_defdate-1_room-0_gstadt-2_rateid-0_aud-0_gacid-6641364928_mcid-10_ppa-0_clrid-0_ad-1_gstkid-0_checkin-20220404_lp-1010275_r-191672924066148033;sid=fbbfd35eebce86b428f96e8e30963f6e;all_sr_blocks=2571020_95149425_0_2_0;checkin=2022-04-04;checkout=2022-04-05;dest_id=-2403010;dest_type=city;dist=0;group_adults=2;group_children=0;hapos=1;highlighted_blocks=2571020_95149425_0_2_0;hpos=1;matching_block_id=2571020_95149425_0_2_0;no_rooms=1;req_adults=2;req_children=0;room1=A%2CA;sb_price_type=total;sr_order=popularity;sr_pri_blocks=2571020_95149425_0_2_0__33000;srepoch=1649059479;srpvid=5f3638ca2c1c016f;type=total;ucfs=1&#hotelTmpl'),
   ContentClass(
       id: 'cl5_15a',
       decrepitation: '-',
@@ -1381,8 +1369,9 @@ const ContentData = const [
       locationText:
           'Kuala Lumpur City Centre, 50088 Kuala Lumpur, Federal Territory of Kuala Lumpur',
       locationUrl: 'https://g.page/mandarin-oriental-kuala-lumpur?share',
-      webText: '-',
-      webUrl: '-'),
+      webText: 'https://www.booking.com/',
+      webUrl:
+          'https://www.booking.com/searchresults.en-gb.html?aid=356938;label=metagha-link-MRMY-hotel-25770_dev-desktop_los-1_bw-5_dow-Saturday_defdate-1_room-0_gstadt-2_rateid-0_aud-0_gacid-6641364928_mcid-10_ppa-0_clrid-0_ad-1_gstkid-0_checkin-20220409_lp-1010275_r-7107836251836340761;sid=b6ea80b2559c861b46b20e2164f5629a;checkin=2022-04-09;checkout=2022-04-10;city=-2403010;ext_price_total=530.00;group_children=0;highlighted_hotels=25770;hlrd=with_dates;keep_landing=1;no_rooms=1;redirected=1;show_room=2577001_236062857_2_2_0;source=hotel&gclid=CjwKCAjwi6WSBhA-EiwA6NiokyJFEmSVFOj7s6mpER3lvwdRYXmCfIDwk05Wpark8Fr66bCqaPwyNRoCugsQAvD_BwE&utm_campaign=MY&utm_content=dev-desktop_los-1_bw-5_dow-Saturday_defdate-1_room-0_gstadt-2_rateid-0_aud-0_gacid-6641364928_mcid-10_ppa-0_clrid-0_ad-1_gstkid-0_checkin-20220409&utm_medium=mapresults&utm_source=metagha&utm_term=hotel-25770&room1=A,A,;'),
   ContentClass(
       id: 'cl6_15a',
       decrepitation:
@@ -1394,8 +1383,9 @@ const ContentData = const [
       phoneNo: '+603-23329888',
       locationText: 'Kuala Lumpur City Centre, 50088 Kuala Lumpur',
       locationUrl: 'https://goo.gl/maps/ctyZ3N8F9Gy7AqDV9',
-      webText: '-',
-      webUrl: '-'),
+      webText: 'https://guest.klook.com/',
+      webUrl:
+          'https://guest.klook.com/en-US/hotels/detail/114747-traders-hotel-kuala-lumpur/?hotelid=114747&check_in=2022-04-25&check_out=2022-04-26&room_num=1&adult_num=2&child_num=0&rate_key=1-14-113221370991&device=desktop&click_id=44273226029768704&aid=27815&aff_pid=DSGOOGLE&google_site=mapresults&campaignid=16370357433&dsclid=44273226029768704&utm_medium=affiliate-alwayson&utm_source=non-network&utm_campaign=27815&utm_term=DSGOOGLE&utm_content='),
   ContentClass(
       id: 'cl7_15a',
       decrepitation:
@@ -1407,8 +1397,9 @@ const ContentData = const [
       phoneNo: '+603-21172888',
       locationText: '170, Bukit Bintang St, 55100 Kuala Lumpur',
       locationUrl: 'https://g.page/PavilionHotelKualaLumpur?share',
-      webText: '-',
-      webUrl: '-'),
+      webText: 'https://www.agoda.com/search',
+      webUrl:
+          'https://www.agoda.com/search?currency=MYR&checkin=2022-04-18&checkout=2022-04-19&Rooms=1&NumberofAdults=2&NumberofChildren=0&tag=595444564D4F637576626644546865475A4C704F6577&cid=1830536&selectedproperty=5813462&city=14524&adults=2&children=0&hc=MYR&los=1'),
   ContentClass(
       id: 'cl8_15a',
       decrepitation: '-',
@@ -1420,8 +1411,9 @@ const ContentData = const [
       locationText:
           '199, Bukit Bintang Street, Bukit Bintang, 55100 Kuala Lumpur, Federal Territory of Kuala Lumpur',
       locationUrl: 'https://goo.gl/maps/WGBnEt42Bz717M53A',
-      webText: '-',
-      webUrl: '-'),
+      webText: 'https://www.agoda.com/search',
+      webUrl:
+          'https://www.agoda.com/search?cid=1807747&currency=MYR&checkin=2022-04-08&checkout=2022-04-09&NumberofAdults=1&NumberofChildren=0&Rooms=1&mcid=29002&tag=436d7bad-1cf8-4f52-921c-532c8f523f67&selectedproperty=91700&city=14524&adults=1&children=0&hc=MYR&los=1'),
   ContentClass(
       id: 'cl9_15a',
       decrepitation: '-',
@@ -1433,8 +1425,9 @@ const ContentData = const [
       locationText:
           '3, Jalan Stesen Sentral, Kuala Lumpur Sentral, 50470 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
       locationUrl: 'https://g.page/HiltonKualaLumpurHotel?share',
-      webText: '-',
-      webUrl: '-'),
+      webText: 'https://www.booking.com/searchresults',
+      webUrl:
+          'https://www.booking.com/searchresults.en-gb.html?aid=2174455;label=5c080629-e7c3-4c45-8459-64a579113531;sid=b6ea80b2559c861b46b20e2164f5629a;checkin=2022-04-05;checkout=2022-04-06;city=-2403010;highlighted_hotels=25798;hlrd=with_dates;keep_landing=1;no_rooms=1;redirected=1;show_room=2579805_274536424_2_42_0;source=hotel&room1=A,A,;'),
   ContentClass(
       id: 'cl10_15a',
       decrepitation: '-',
@@ -1446,8 +1439,9 @@ const ContentData = const [
       locationText:
           '165, Jalan Ampang, Kuala Lumpur, 50450 Kuala Lumpur, Federal Territory of Kuala Lumpur',
       locationUrl: 'https://goo.gl/maps/chLuAmGSRMYrMSyYA',
-      webText: '-',
-      webUrl: '-'),
+      webText: 'https://www.agoda.com/search',
+      webUrl:
+          'https://www.agoda.com/search?cid=1807747&currency=MYR&checkin=2022-04-12&checkout=2022-04-13&NumberofAdults=2&NumberofChildren=0&Rooms=1&mcid=27800&tag=c267c718-1087-4c80-8cd8-92e73314a08f&selectedproperty=10409&city=14524&adults=2&children=0&hc=MYR&los=1'),
   //Accomodation Budget Hotels
   ContentClass(
       id: 'cl1_15b',
@@ -1461,8 +1455,9 @@ const ContentData = const [
       locationText:
           '85, Jalan Berangan, Off, Jalan Bukit Bintang, 50200 Kuala Lumpur',
       locationUrl: 'https://goo.gl/maps/y2sSpBXmdh1ranTb8',
-      webText: 'http://www.izumihotel.com/',
-      webUrl: 'http://www.izumihotel.com/'),
+      webText: 'https://www.booking.com/searchresults.en-gb.html',
+      webUrl:
+          'https://www.booking.com/searchresults.en-gb.html?aid=356938;label=metagha-link-MRMY-hotel-775065_dev-desktop_los-1_bw-15_dow-Tuesday_defdate-1_room-0_gstadt-2_rateid-0_aud-0_gacid-6641364928_mcid-50_ppa-0_clrid-0_ad-1_gstkid-0_checkin-20220419_lp-1010275_r-6497029781751089898;sid=b6ea80b2559c861b46b20e2164f5629a;checkin=2022-04-19;checkout=2022-04-20;city=-2403010;ext_price_total=138.25;group_children=0;highlighted_hotels=775065;hlrd=with_dates;keep_landing=1;no_rooms=1;redirected=1;show_room=77506503_88830630_0_0_0;source=hotel&gclid=CjwKCAjwrqqSBhBbEiwAlQeqGgVNwo8BAAhnUljpDtwCgaXz2TWCO0zddy_9wN6rHzHDB8SGa0nzxxoCDCoQAvD_BwE&utm_campaign=MY&utm_content=dev-desktop_los-1_bw-15_dow-Tuesday_defdate-1_room-0_gstadt-2_rateid-0_aud-0_gacid-6641364928_mcid-50_ppa-0_clrid-0_ad-1_gstkid-0_checkin-20220419&utm_medium=mapresults&utm_source=metagha&utm_term=hotel-775065&room1=A,A,;'),
   ContentClass(
       id: 'cl2_15b',
       decrepitation:
@@ -1475,8 +1470,9 @@ const ContentData = const [
       locationText:
           '64, Changkat Bukit Bintang, Bukit Bintang, 50200 Kuala Lumpur',
       locationUrl: 'https://goo.gl/maps/yESkTueh4UxvqXk79',
-      webText: 'http://www.replicainn.com/',
-      webUrl: 'http://www.replicainn.com/'),
+      webText: 'https://www.agoda.com/replica-inn-bukit-bintang/',
+      webUrl:
+          'https://www.agoda.com/replica-inn-bukit-bintang/hotel/kuala-lumpur-my.html?cid=1844104'),
   ContentClass(
       id: 'cl3_15b',
       decrepitation:
@@ -1529,8 +1525,9 @@ const ContentData = const [
       phoneNo: '+603-79726100',
       locationText: 'Lot 118 Batu, 3, Jalan Klang Lama, 58100 Kuala Lumpur',
       locationUrl: 'https://goo.gl/maps/cidKgoMpDDy18vKH9',
-      webText: '-',
-      webUrl: '-'),
+      webText: 'https://www.agoda.com/search?site_id=1736413',
+      webUrl:
+          'https://www.agoda.com/search?site_id=1736413&checkout=2022-04-05&campaignid=16027188854&SearchDateType=default&NumberOfAdults=2&LT=0&NumberOfChildren=0&childages=&NumberOfRooms=1&gsite=mapresults&los=1&PartnerCurrency=MYR&RoomID=3355573&PriceTax=8.45&PriceTotal=61.24&RatePlan=&UserCountry=MY&Currency=MYR&UserDevice=desktop&Verif=false&audience_list=&mcid=332&booking_source=cpc&adType=1&gclid=CjwKCAjwrqqSBhBbEiwAlQeqGntQbXasIQjufKnSA0gbSI1_sCJyl0UeFfpAoct3xbd0gvdXgqHauxoCa3QQAvD_BwE&selectedproperty=409872&city=14524&adults=2&children=0&rooms=1&hc=MYR&checkin=2022-04-04'),
   ContentClass(
       id: 'cl7_15b',
       decrepitation:
@@ -1569,8 +1566,9 @@ const ContentData = const [
       phoneNo: '+603-28563998',
       locationText: '165G, Jalan Tun H S Lee, City Centre, 50000 Kuala Lumpur',
       locationUrl: 'https://goo.gl/maps/ofoUGUJ7EYFLeyjQ9',
-      webText: '-',
-      webUrl: '-'),
+      webText: 'https://www.expedia.com.my/Hotel-Search',
+      webUrl:
+          'https://www.expedia.com.my/Hotel-Search?MDPCID=MY.META.HPA.HOTEL-CORESEARCH-desktop.HOTEL&MDPDTL=HTL.8694523.20220405.20220406.DDT.1.CID.6495567358.AUDID.&ad=2&adults=2&children=&ct=hotel&destination=Kuala%20Lumpur%2C%20Federal%20Territory%20of%20Kuala%20Lumpur%2C%20Malaysia&endDate=2022-04-06&exp_curr=MYR&exp_dp=18.02&exp_pg=google&exp_tx=2.49&gclid=CjwKCAjwrqqSBhBbEiwAlQeqGs_H5ONLFuH0asxAQZS6OgOkEZtzlHYWwBB-O3lG-C-ATeIKNdUCOhoCGGIQAvD_BwE&langid=en&mctc=10&regionId=1951&rrid=bex_us_desktop&selected=8694523&semdtl=&sort=RECOMMENDED&startDate=2022-04-05&theme=&tp=&useRewards=false&userIntent=&utm_campaign=HotelAds&utm_content=mapresults&utm_medium=cpc&utm_source=google&utm_term=8694523'),
   ContentClass(
       id: 'cl10_15b',
       decrepitation:
@@ -1583,8 +1581,8 @@ const ContentData = const [
       locationText:
           '712 & 14 Jalan Sin Chew Kee, Off Jln Pudu, 55100 Kuala Lumpur',
       locationUrl: 'https://goo.gl/maps/wmHttE1WDLoYrFZr9',
-      webText: '-',
-      webUrl: '-'),
+      webText: 'https://live.ipms247.com/booking/book-rooms-hotelpalomainn',
+      webUrl: 'https://live.ipms247.com/booking/book-rooms-hotelpalomainn'),
 
   //Backpackers Lodge
   ContentClass(
@@ -1626,8 +1624,9 @@ const ContentData = const [
       phoneNo: '+603-20222078',
       locationText: '53, Jalan Sultan, City Centre, 50000 Kuala Lumpur',
       locationUrl: 'https://goo.gl/maps/crWvRtGSZ4Twog1u7',
-      webText: 'https://www.facebook.com/minglehostel/',
-      webUrl: 'https://www.facebook.com/minglehostel/'),
+      webText: 'https://www.orbitz.com/Hotel-Search',
+      webUrl:
+          'https://www.orbitz.com/Hotel-Search?adults=1&children=0&destination=Kuala%20Lumpur%20%28and%20vicinity%29%2C%20Federal%20Territory%20of%20Kuala%20Lumpur%2C%20Malaysia&endDate=2022-04-05&regionId=180008&rfrr=HOT.HIS.HSRHotels&rooms=1&selected=16380469&semdtl=&sort=RECOMMENDED&startDate=2022-04-04&theme=&ts=1649071988434&useRewards=false&userIntent='),
   ContentClass(
       id: 'cl4_15c',
       decrepitation:
@@ -1667,8 +1666,9 @@ const ContentData = const [
       locationText:
           '128, 130, Jalan Tun H S Lee, City Centre, 50000 Kuala Lumpur',
       locationUrl: 'https://g.page/theexplorersguesthousekl?share',
-      webText: '-',
-      webUrl: '-'),
+      webText: 'https://www.agoda.com/search?cid=1844104',
+      webUrl:
+          'https://www.agoda.com/search?cid=1844104&aid=130589&city=14524&checkIn=2022-04-04&checkOut=2022-04-04T00%3A00%3A00&los=1&rooms=1&adults=2&children=0&childages=&travellerType=-1&selectedproperty=266775'),
   ContentClass(
       id: 'cl7_15c',
       decrepitation:
@@ -1680,8 +1680,9 @@ const ContentData = const [
       phoneNo: '+603-20311733',
       locationText: 'Jalan Hang Kasturi, City Centre, 50000 Kuala Lumpur',
       locationUrl: 'https://goo.gl/maps/ypCaqUDnMGnocsa37',
-      webText: '-',
-      webUrl: '-'),
+      webText: 'https://www.agoda.com/search?site_id=1736413&',
+      webUrl:
+          'https://www.agoda.com/search?site_id=1736413&checkout=2022-04-05&campaignid=16027188953&SearchDateType=default&NumberOfAdults=2&LT=0&NumberOfChildren=0&childages=&NumberOfRooms=1&gsite=localuniversal&los=1&PartnerCurrency=MYR&RoomID=2984955&PriceTax=2.15&PriceTotal=38.11&RatePlan=28ed4aa7-888b-531d-3c5d-834537d63f2a&UserCountry=MY&Currency=MYR&UserDevice=desktop&Verif=false&rr=&audience_list=&mcid=332&booking_source=cpc&adType=1&gclid=CjwKCAjwrqqSBhBbEiwAlQeqGk39zQNBKz9gqNgu0tlqy50FF2hH77Ac0ibCRcuMqQshPz16d5Va-BoCxlAQAvD_BwE&selectedproperty=685105&city=14524&adults=2&children=0&rooms=1&hc=MYR&checkin=2022-04-04'),
   ContentClass(
       id: 'cl8_15c',
       decrepitation:
@@ -1752,9 +1753,9 @@ const ContentData = const [
   ContentClass(
       id: 'cl3_16',
       decrepitation:
-          'Dikir Barat is a fine mix of Malay music, dance and poetry. It is typically carried out during the harvest season and on family events. Dikir Barat is a way for educating viewers, addressing key issues and passing social statements in a comic or satirical tone. ',
+          'Dikir Barat is a fine mix of Malay music, dance and poetry. It is typically carried out during the harvest season and on family events.',
       content:
-          'This dance style is said to have emerged from Malay villages in southern Thailand. In the native language, Barat means "Western" and Dikir is related to Zikir, which means "religious singing and singing." Dikir Barat is very popular in Kelantan. In May 1998, the Government of Kelantan prohibited this form of dance. It was a short time, though, and the ban was lifted in no time.',
+          'Dikir Barat is a way for educating viewers, addressing key issues and passing social statements in a comic or satirical tone.This dance style is said to have emerged from Malay villages in southern Thailand. In the native language, Barat means "Western" and Dikir is related to Zikir, which means "religious singing and singing." Dikir Barat is very popular in Kelantan. In May 1998, the Government of Kelantan prohibited this form of dance. It was a short time, though, and the ban was lifted in no time.',
       workhour: '-',
       fees: '-',
       phoneNo: '-',
@@ -1791,9 +1792,9 @@ const ContentData = const [
   ContentClass(
       id: 'cl6_16',
       decrepitation:
-          'The emergence of Kathak is traditionally linked to the travel bards of ancient northern India known as Kathakars or storytellers. The term Kathak is derived from the Vedic Sanskrit word Katha, which means "story" and Kathakar, which means "the one who tells stories" or "to do with stories."',
+          'The emergence of Kathak is traditionally linked to the travel bards of ancient northern India known as Kathakars or storytellers."',
       content:
-          'Kathak has continued to thrive as an oral tradition, innovated and taught, and verbally and through practice, from one generation to the next. It was changed, adapted and integrated the tastes of the Mughal courts in the 16th and 17th centuries, particularly Akbar. It was ridiculed and declined in the British colonial era, then reborn as India attained independence and sought to reclaim its ancient roots and a sense of national identity through the arts.',
+          'The term Kathak is derived from the Vedic Sanskrit word Katha, which means "story" and Kathakar, which means "the one who tells stories" or "to do with stories.Kathak has continued to thrive as an oral tradition, innovated and taught, and verbally and through practice, from one generation to the next. It was changed, adapted and integrated the tastes of the Mughal courts in the 16th and 17th centuries, particularly Akbar.',
       workhour: '-',
       fees: '-',
       phoneNo: '-',
@@ -1817,9 +1818,9 @@ const ContentData = const [
   ContentClass(
       id: 'cl8_16',
       decrepitation:
-          'Sumazau is a popular dance in Sabah and Malaysia. It is a traditional dance of the two unified social groups called "Kadazan Dusun." Sumazau is commonly performed at the harvest festival in May. This dance is commonly performed by farmers, where both males and females are styled in traditional black and red clothes.',
+          'Sumazau is a popular dance in Sabah and Malaysia. It is a traditional dance of the two unified social groups called "Kadazan Dusun."',
       content:
-          'The flying patterns of the eagles observed by the farmers during harvesting is what inspired Sumazau. While dancing, it is made sure that the dancers are lined up a few centimetres away from one another to avoid touching the other performer.',
+          'Sumazau is commonly performed at the harvest festival in May.This dance is commonly performed by farmers, where both males and females are styled in traditional black and red clothes.The flying patterns of the eagles observed by the farmers during harvesting is what inspired Sumazau. While dancing, it is made sure that the dancers are lined up a few centimetres away from one another to avoid touching the other performer.',
       workhour: '-',
       fees: '-',
       phoneNo: '-',
@@ -1843,9 +1844,9 @@ const ContentData = const [
   ContentClass(
       id: 'cl10_16',
       decrepitation:
-          'The term bhangra refers to a particular dance performed by Sikh men in the Punjab agricultural districts. The dance was primarily associated with the Baisakhi Spring Harvest Festival, and it was from one of the main products of the harvest — bhang (hemp)—that Bhangra took its name. ',
+          'The term bhangra refers to a particular dance performed by Sikh men in the Punjab agricultural districts.',
       content:
-          'In a traditional performance, several dancers will perform vigorous kicks, leaps and bends of the body to accompany short songs called boliyan and, most significantly, to beat the dhol (double-headed drum). Struck with a heavy beater on one end and a lighter stick on the other, the dhol imbued the music with a syncopated (slow beat accents), a swinging rhythmic character that has generally remained the hallmark of any music that has come to bear the name of the bhangra.',
+          'The dance was primarily associated with the Baisakhi Spring Harvest Festival, and it was from one of the main products of the harvest — bhang (hemp)—that Bhangra took its name.In a traditional performance, several dancers will perform vigorous kicks, leaps and bends of the body to accompany short songs called boliyan and, most significantly, to beat the dhol (double-headed drum). Struck with a heavy beater on one end and a lighter stick on the other, the dhol imbued the music with a syncopated (slow beat accents), a swinging rhythmic character that has generally remained the hallmark of any music that has come to bear the name of the bhangra.',
       workhour: '-',
       fees: '-',
       phoneNo: '-',
@@ -1991,19 +1992,6 @@ const ContentData = const [
       webText: '-',
       webUrl: '-'),
 
-  ContentClass(
-      id: 'cl12_17a',
-      decrepitation: '-',
-      content: '',
-      workhour: '10.00 am - 8.00 pm (Monday - Sunday)',
-      fees: '-',
-      phoneNo: '+603-40502518',
-      locationText:
-          'Lot 4-61, 4-69, Sunway Putra Mall, Jalan Putra, Chow Kit, 50350 Kuala Lumpur',
-      locationUrl: 'https://goo.gl/maps/f6WGknTq9uwuP98p6',
-      webText: '-',
-      webUrl: '-'),
-
   //CHINESE FOOD 17B
   ContentClass(
       id: 'cl1_17b',
@@ -2073,7 +2061,7 @@ const ContentData = const [
       workhour:
           '12.00pm - 2.30pm, 6.00pm - 10.00pm (Tue - Sat), 10.30am - 2.30pm, 6.00pm - 10.00pm (Sun) ,Closed on Monday',
       fees: '-',
-      phoneNo: '+6018-5918537/+603-27198537',
+      phoneNo: '+6018-5918537',
       locationText:
           'JW Marriott Kuala Lumpur, Level One, 183 Jalan Bukit Bintang, Kuala Lumpur 55100',
       locationUrl: 'https://g.page/ShanghaiJWMKL?share',
@@ -2097,7 +2085,7 @@ const ContentData = const [
       content: '',
       workhour: '12.00pm - 2.30pm, 6.00pm - 11.00pm (Daily)',
       fees: '-',
-      phoneNo: '+603-21431908/+6016-3755388',
+      phoneNo: '+603-21431908',
       locationText:
           '90, Jalan Raja Chulan, 50200 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
       locationUrl: 'https://goo.gl/maps/SZMJ7Pfw3Rq6vKvX6',
@@ -2137,7 +2125,7 @@ const ContentData = const [
       fees: '-',
       phoneNo: '+6012-5261335',
       locationText: '50, Changkat Bukit Bintang, 50200 Kuala Lumpur',
-      locationUrl: 'https://g.page/opiumkl?share',
+      locationUrl: 'https://goo.gl/maps/8v3tjAqPy2ji99x9A',
       webText: '-',
       webUrl: '-'),
   ContentClass(
@@ -2262,7 +2250,7 @@ const ContentData = const [
           '52, Jalan Tun Razak, Kampung Baru, 50400 Kuala Lumpur, Federal Territory of Kuala Lumpur',
       locationUrl: 'https://goo.gl/maps/KvSeccDAJZ8JdspH8',
       webText: 'havellykl2u.com',
-      webUrl: 'https://www.havellykl2u.com/menu'),
+      webUrl: 'https://www.facebook.com/havellyKL/'),
   ContentClass(
       id: 'cl10_17c',
       decrepitation: '-',
@@ -2366,28 +2354,16 @@ const ContentData = const [
       id: 'cl7_17d',
       decrepitation: '-',
       content: '',
-      workhour: '10.00am - 3.00am (Daily)',
-      fees: '-',
-      phoneNo: '+6011-23237600',
-      locationText:
-          '001R, BB Park, Jalan Bukit Bintang, Bukit Bintang, 55100 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
-      locationUrl: 'https://goo.gl/maps/zT4xno8JRrN5ovH68',
-      webText: '-',
-      webUrl: 'https://www.facebook.com/marosh.restaurant'),
-  ContentClass(
-      id: 'cl8_17d',
-      decrepitation: '-',
-      content: '',
       workhour: '11.30am - 1.00am (Daily)',
       fees: '-',
-      phoneNo: '+603-27152785/+603-21130061',
+      phoneNo: '+603-27152785',
       locationText:
           'JW Marriott Kuala Lumpur, Lot No. H 1, Upper Ground Adorn, No, 183, Jln Bukit Bintang, 55100 Kuala Lumpur',
       locationUrl: 'https://goo.gl/maps/gfxFBLnAZ1bu88LB6',
       webText: '-',
       webUrl: 'https://alhalabirestaurant.com/'),
   ContentClass(
-      id: 'cl9_17d',
+      id: 'cl8_17d',
       decrepitation: '-',
       content: '',
       workhour: '11.00am - 2.00am (Daily',
@@ -2399,7 +2375,7 @@ const ContentData = const [
       webText: '-',
       webUrl: 'https://www.facebook.com/NaabRestaurant/'),
   ContentClass(
-      id: 'cl10_17d',
+      id: 'cl9_17d',
       decrepitation: '-',
       content: '',
       workhour: '10.00am - 2.00am (Sun - Wed), 10.00am - 4.00am (Thu & Sat)',
@@ -2540,18 +2516,6 @@ const ContentData = const [
       id: 'cl1_17f',
       decrepitation: '-',
       content: '',
-      workhour: '12.00pm - 2.30pm, 6.00pm - 10.30pm (Sat - Tue)\nClosed on Mon',
-      fees: '-',
-      phoneNo: '+603-40429888',
-      locationText:
-          'Swarovski Sunway Putra Mall, 100, Jalan Putra, Chow Kit, 50350 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
-      locationUrl: 'https://goo.gl/maps/cx2BskQCVkriZZfD8',
-      webText: '-',
-      webUrl: '-'),
-  ContentClass(
-      id: 'cl2_17f',
-      decrepitation: '-',
-      content: '',
       workhour: '9.00am - 10.00pm (Daily)',
       fees: '-',
       phoneNo: '+6012-3731176',
@@ -2561,7 +2525,7 @@ const ContentData = const [
       webText: '-',
       webUrl: '-'),
   ContentClass(
-      id: 'cl3_17f',
+      id: 'cl2_17f',
       decrepitation: '-',
       content: '',
       workhour:
@@ -2571,22 +2535,11 @@ const ContentData = const [
       locationText:
           'Central Plaza, 2506, Jalan Sultan Ismail, Bukit Bintang, 55100 Kuala Lumpur, Federal Territory of Kuala Lumpur',
       locationUrl: 'https://goo.gl/maps/n2QFD8CC5hFn7oJw7',
-      webText: 'Facebook Page',
-      webUrl: 'https://www.facebook.com/mitasu2012/'),
+      webText: '-',
+      webUrl: '-'),
+
   ContentClass(
-      id: 'cl4_17f',
-      decrepitation: '-',
-      content: '',
-      workhour: '11.00am - 10.00pm (Daily)',
-      fees: '-',
-      phoneNo: '+603-21613939',
-      locationText:
-          'Lot 428 Suria KLCC, 50088 Kuala Lumpur, Federal Territory of Kuala Lumpur',
-      locationUrl: 'https://g.page/umaiyaklcc?share',
-      webText: 'umai-ya.com',
-      webUrl: 'http://www.umai-ya.com/'),
-  ContentClass(
-      id: 'cl5_17f',
+      id: 'cl3_17f',
       decrepitation: '-',
       content: '',
       workhour: '12.00pm - 2.30pm\n6.00pm - 10.30pm (Daily)',
@@ -2598,7 +2551,7 @@ const ContentData = const [
       webText: '-',
       webUrl: '-'),
   ContentClass(
-      id: 'cl6_17f',
+      id: 'cl4_17f',
       decrepitation: '-',
       content: '',
       workhour: '11.00am - 10.00pm (Daily)',
@@ -2610,7 +2563,7 @@ const ContentData = const [
       webText: 'js-gate.com',
       webUrl: 'http://js-gate.com/'),
   ContentClass(
-      id: 'cl7_17f',
+      id: 'cl5_17f',
       decrepitation: '-',
       content: '',
       workhour: '12.00pm - 3.00pm\n6.00pm - 10.00pm (Daily)',
@@ -2622,7 +2575,7 @@ const ContentData = const [
       webText: 'inshin.my',
       webUrl: 'http://ishin.my/'),
   ContentClass(
-      id: 'cl8_17f',
+      id: 'cl6_17f',
       decrepitation: '-',
       content: '',
       workhour: '11.00am - 10.00pm (Daily)',
@@ -2634,7 +2587,7 @@ const ContentData = const [
       webText: 'seoulnami.com',
       webUrl: 'https://www.seoulnami.com/'),
   ContentClass(
-      id: 'cl9_17f',
+      id: 'cl7_17f',
       decrepitation: '-',
       content: '',
       workhour: '12.00pm - 2.30pm\n6.00pm - 10.00pm (Tue - Sun)\nClosed on Mon',
@@ -2646,7 +2599,7 @@ const ContentData = const [
       webText: 'Iketeru Web Page',
       webUrl: 'https://www.eatdrinkhilton.com/iketeru/ '),
   ContentClass(
-      id: 'cl10_17f',
+      id: 'cl8_17f',
       decrepitation: '-',
       content: 'Alternative phone number: +6018-2041781',
       workhour: '12.00pm - 3.00pm\n6.00pm - 11.00pm (Mon - Sat)',
@@ -2669,8 +2622,8 @@ const ContentData = const [
       locationText:
           'Lot C3 . 10 . 03, 168, Bukit Bintang Street, Bukit Bintang, 55100 Kuala Lumpur, Federal Territory of Kuala Lumpur',
       locationUrl: 'https://g.page/labocalatinobar?share',
-      webText: 'laboca.com.my',
-      webUrl: 'http://www.laboca.com.my/'),
+      webText: 'https://www.pavilion-kl.com/viewstore/La-Boca-Latino-Bar',
+      webUrl: 'https://www.pavilion-kl.com/viewstore/La-Boca-Latino-Bar'),
   ContentClass(
       id: 'cl2_17g',
       decrepitation: '-',
@@ -2712,18 +2665,6 @@ const ContentData = const [
       id: 'cl5_17g',
       decrepitation: '-',
       content: '',
-      workhour: '11.00am - 9.00pm (Sun - Thu)\n11.00am - 9.30pm (Fri & Sat)',
-      fees: '-',
-      phoneNo: '+6012-6787842',
-      locationText:
-          'Avenue K, Lot G9, Mall, 156, Jalan Ampang, Kuala Lumpur, 50450 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
-      locationUrl: 'https://goo.gl/maps/iHfbkkLy7yxqBQTx7',
-      webText: 'fresca.com.my',
-      webUrl: 'http://www.fresca.com.my/'),
-  ContentClass(
-      id: 'cl6_17g',
-      decrepitation: '-',
-      content: '',
       workhour: '12.00pm - 11.00pm (Sun - Thu)\n12.00pm - 12.00am (Fri & Sat)',
       fees: '-',
       phoneNo: '+6017-4052279',
@@ -2733,7 +2674,7 @@ const ContentData = const [
       webText: 'Facebook Page',
       webUrl: 'https://www.facebook.com/chicabonita.publika'),
   ContentClass(
-      id: 'cl7_17g',
+      id: 'cl6_17g',
       decrepitation: '-',
       content: '',
       workhour: '11.30am - 10.00pm (Mon - Sat)\nClosed on Sunday',
@@ -2745,7 +2686,7 @@ const ContentData = const [
       webText: 'nicks.com.my',
       webUrl: 'http://www.nicks.com.my/'),
   ContentClass(
-      id: 'cl8_17g',
+      id: 'cl7_17g',
       decrepitation: '-',
       content: '',
       workhour: '12.00pm - 10.00pm (Daily)',
@@ -2757,7 +2698,7 @@ const ContentData = const [
       webText: '-',
       webUrl: '-'),
   ContentClass(
-      id: 'cl9_17g',
+      id: 'cl8_17g',
       decrepitation: '-',
       content: '',
       workhour: '12.00pm - 10.00pm (Daily)',
@@ -2768,7 +2709,7 @@ const ContentData = const [
       webText: '-',
       webUrl: '-'),
   ContentClass(
-      id: 'cl10_17g',
+      id: 'cl9_17g',
       decrepitation: '-',
       content: 'Alternative phone number: +6018-2041781',
       workhour: '10.00am - 10.00pm (Daily)',
@@ -2822,19 +2763,6 @@ const ContentData = const [
       id: 'cl4_17h',
       decrepitation: '-',
       content: '',
-      workhour: '10.00am - 11.00pm (Daily)',
-      fees: '-',
-      phoneNo: '+603-23893254',
-      locationText:
-          'G-03 Ground Floor, Wisma Lim Foo Yong, No.86, Jalan Raja Chulan, 50450 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
-      locationUrl: 'https://goo.gl/maps/DrmcFWJsAs5pW6489',
-      webText: 'waybackburgers.com',
-      webUrl:
-          'http://www.waybackburgers.com.my/?y_source=1_MTM4NTMyNjEtNzE1LWxvY2F0aW9uLndlYnNpdGU%3D'),
-  ContentClass(
-      id: 'cl5_17h',
-      decrepitation: '-',
-      content: '',
       workhour: '11.00am - 11.00pm (Daily)',
       fees: '-',
       phoneNo: '+603-22876708',
@@ -2844,7 +2772,7 @@ const ContentData = const [
       webText: 'thedailygrind.com.my',
       webUrl: 'http://www.thedailygrind.com.my/'),
   ContentClass(
-      id: 'cl6_17h',
+      id: 'cl5_17h',
       decrepitation: '-',
       content: '',
       workhour:
@@ -2857,7 +2785,7 @@ const ContentData = const [
       webText: 'kgb.my',
       webUrl: 'http://www.kgb.my/'),
   ContentClass(
-      id: 'cl7_17h',
+      id: 'cl6_17h',
       decrepitation: '-',
       content: '',
       workhour: '10.00am - 9.30pm (Daily)',
@@ -2869,7 +2797,7 @@ const ContentData = const [
       webText: 'Facebook Page',
       webUrl: 'https://www.facebook.com/burgerbakarkawkaw/'),
   ContentClass(
-      id: 'cl8_17h',
+      id: 'cl7_17h',
       decrepitation: '-',
       content: '',
       workhour: '12.00pm - 9.00pm (Daily)',
@@ -2881,7 +2809,7 @@ const ContentData = const [
       webText: '-',
       webUrl: '-'),
   ContentClass(
-      id: 'cl9_17h',
+      id: 'cl8_17h',
       decrepitation: '-',
       content: '',
       workhour:
@@ -2894,7 +2822,7 @@ const ContentData = const [
       webText: 'sugarbun.com',
       webUrl: 'http://www.sugarbun.com/'),
   ContentClass(
-      id: 'cl10_17h',
+      id: 'cl9_17h',
       decrepitation: '-',
       content: 'Alternative phone number: +6018-2041781',
       workhour: '12.00pm - 1.00am (Sat - Thu)\n2.15pm - 1.00am (Fri)',
@@ -2985,6 +2913,20 @@ const ContentData = const [
       webUrl: 'http://www.subak.com.my/'),
 
   //music 18
+
+  ContentClass(
+      id: 'cl1_18',
+      decrepitation: '-',
+      content:
+          'Kompang is one of Asia traditional instrument that originate from Ponorogo, East Java and Indonesia which during the 15th century has slowly spread over to Singapore, Malaysia, Brunei and Thailand. It is like a tambourine when you make music from hitting the drum itself.',
+      workhour: '-',
+      fees: '-',
+      phoneNo: '-',
+      locationText: '-',
+      locationUrl: '-',
+      webText: '-',
+      webUrl: '-'),
+
   ContentClass(
       id: 'cl2_18',
       decrepitation: '-',
@@ -3234,8 +3176,8 @@ const ContentData = const [
       workhour: '-',
       fees: '-',
       phoneNo: '-',
-      locationText: '-',
-      locationUrl: '-',
+      locationText: 'Pangkor Island , Perak',
+      locationUrl: 'https://goo.gl/maps/GFGUigqXbM7Y8EfLA',
       webText: '-',
       webUrl: '-'),
 
@@ -3248,8 +3190,8 @@ const ContentData = const [
       workhour: '-',
       fees: '-',
       phoneNo: '-',
-      locationText: '-',
-      locationUrl: '-',
+      locationText: 'Pulau Perhentian ,Terengganu',
+      locationUrl: 'https://goo.gl/maps/FAsUAwtSDG4Zrnoy8',
       webText: '-',
       webUrl: '-'),
 
@@ -3262,8 +3204,8 @@ const ContentData = const [
       workhour: '-',
       fees: '-',
       phoneNo: '-',
-      locationText: '-',
-      locationUrl: '-',
+      locationText: 'Pulau Tioman , Mersing, Pahang',
+      locationUrl: 'https://goo.gl/maps/t4Epomg9xwB9i4YQA',
       webText: '-',
       webUrl: '-'),
 
@@ -3276,8 +3218,8 @@ const ContentData = const [
       workhour: '-',
       fees: '-',
       phoneNo: '-',
-      locationText: '-',
-      locationUrl: '-',
+      locationText: 'Pulau Besar , Melaka',
+      locationUrl: 'https://goo.gl/maps/A1TPJtqEqGZj4kL66',
       webText: '-',
       webUrl: '-'),
   ContentClass(
@@ -3289,8 +3231,8 @@ const ContentData = const [
       workhour: '-',
       fees: '-',
       phoneNo: '-',
-      locationText: '-',
-      locationUrl: '-',
+      locationText: 'Manukan Island, Sabah',
+      locationUrl: 'https://goo.gl/maps/GULoxE5aJ1oFhuss5',
       webText: '-',
       webUrl: '-'),
   ContentClass(
@@ -3302,8 +3244,8 @@ const ContentData = const [
       workhour: '-',
       fees: '-',
       phoneNo: '-',
-      locationText: '-',
-      locationUrl: '-',
+      locationText: 'Pulau Lang Tengah, Kuala Terengganu, Terengganu',
+      locationUrl: 'https://goo.gl/maps/N7B69g7Sgy2E1Gy77',
       webText: '-',
       webUrl: '-'),
   ContentClass(
@@ -3315,8 +3257,8 @@ const ContentData = const [
       workhour: '-',
       fees: '-',
       phoneNo: '-',
-      locationText: '-',
-      locationUrl: '-',
+      locationText: 'Rawa Island , Johor',
+      locationUrl: 'https://goo.gl/maps/C4mRpvtPadVBr9ef6',
       webText: '-',
       webUrl: '-'),
   ContentClass(
@@ -3328,8 +3270,8 @@ const ContentData = const [
       workhour: '-',
       fees: '-',
       phoneNo: '-',
-      locationText: '-',
-      locationUrl: '-',
+      locationText: 'Tengah Island , Johor',
+      locationUrl: 'https://goo.gl/maps/JVMXr2EjW1k4UENAA',
       webText: '-',
       webUrl: '-'),
   ContentClass(
@@ -3341,8 +3283,8 @@ const ContentData = const [
       workhour: '-',
       fees: '-',
       phoneNo: '-',
-      locationText: '-',
-      locationUrl: '-',
+      locationText: 'Pulau Redang, 21090 Kuala Terengganu, Terengganu',
+      locationUrl: 'https://goo.gl/maps/G1ApF47PnBjAACFq6',
       webText: '-',
       webUrl: '-'),
 
@@ -3457,19 +3399,6 @@ const ContentData = const [
   ContentClass(
       id: 'cl3_22',
       decrepitation:
-          'Lata Ulu Chepor is located only 10 kilometres from Ipoh City and is surrounded by lush tropical rainforest hills. Route A1 to Chemor, near the Ipoh Utara Toll Plaza, leads to the park.',
-      content:
-          'This place is ideal for getting some fresh air, relaxing, and having a picnic on weekends. The park is well-kept, and signage is visible from the main thoroughfare. If you\'re feeling daring, there\'s even a downhill track line.',
-      workhour: '8.00 am - 6.00 am (Daily)',
-      fees: '-',
-      phoneNo: '-',
-      locationText: 'Kampung Ulu Chepor, 31200 Chemor, Perak',
-      locationUrl: 'https://goo.gl/maps/XTeRjPqqFhD5VEVB8',
-      webText: '-',
-      webUrl: '-'),
-  ContentClass(
-      id: 'cl4_22',
-      decrepitation:
           'Rainbow waterfall is situated 45 kilometres northwest of Kuantan, Peninsular Malaysia, in the town of Sungei Lembing. A stunning rainbow can be seen at the key waterfalls when the weather conditions are favourable.',
       content:
           'The rainbow is created by the sun reflecting at the proper angle through the mist of the waterfall. The sun shines on the falling water at the base of the falls every morning between 9 and 10 a.m. People travel from all over the world to see natural beauty.',
@@ -3481,7 +3410,7 @@ const ContentData = const [
       webText: 'airterjunpelangi-sglembing.blogspot.my',
       webUrl: 'http://airterjunpelangi-sglembing.blogspot.my/'),
   ContentClass(
-      id: 'cl5_22',
+      id: 'cl4_22',
       decrepitation:
           'The Seven Wells Waterfall (Jalan Telaga Tujuh) is one of the island\'s most impressive natural attractions. The well-known Langkawi Sky Bridge is about a 20-minute walk away. According to legend, this waterfall is home to fairies, and the river has soothing properties.',
       content:
@@ -3494,7 +3423,7 @@ const ContentData = const [
       webText: '-',
       webUrl: '-'),
   ContentClass(
-      id: 'cl6_22',
+      id: 'cl5_22',
       decrepitation:
           "Is there anything better than escaping the city to immerse in the beauty of Mother Nature? Enjoy the bone-chilling cooling waters at the one and only Sungai Chiling.",
       content:
@@ -3507,7 +3436,7 @@ const ContentData = const [
       webText: '-',
       webUrl: '-'),
   ContentClass(
-      id: 'cl7_22',
+      id: 'cl6_22',
       decrepitation:
           "Is there anything better than escaping the city to immerse in the beauty of Mother Nature? Enjoy the bone-chilling cooling waters at the one and only Lata Medang Waterfall.",
       content:
@@ -3520,7 +3449,7 @@ const ContentData = const [
       webText: '-',
       webUrl: '-'),
   ContentClass(
-      id: 'cl8_22',
+      id: 'cl7_22',
       decrepitation:
           "Is there anything better than escaping the city to immerse in the beauty of Mother Nature? Enjoy the bone-chilling cooling waters at the one and only Serendah Waterfall.",
       content:
@@ -3535,7 +3464,7 @@ const ContentData = const [
 
   //Hiking 23
   ContentClass(
-      id: 'cl1_23',
+      id: 'cl8_23',
       decrepitation: '-',
       content:
           'Broga Hill, also known as \'Bukit Lalang\' in the local dialect, is named after a native grass plant. It is situated on the outskirts of the Titiwangsa Range, in the lush tropical forest of Semenyih. Its breathtaking panoramic views are well popular with both locals and visitors.',
@@ -3547,7 +3476,7 @@ const ContentData = const [
       webText: 'Facebook Page',
       webUrl: 'https://www.facebook.com/BukitBrogaHill/'),
   ContentClass(
-      id: 'cl2_23',
+      id: 'cl14_23',
       decrepitation: '-',
       content:
           'Gunung Pulai is a 654-meter-high mountain in the Malaysian state of Johor. It is a popular hiking destination for Singaporeans and locals alike. Mount Pulai is a 14.3-kilometre moderately trafficked loop trail near Kulai, Johor, Malaysia, that includes a waterfall and a difficulty rating. Camping, hiking, running, and nature walks are also common activities on the trail.',
@@ -3559,7 +3488,7 @@ const ContentData = const [
       webText: '-',
       webUrl: '-'),
   ContentClass(
-      id: 'cl3_23',
+      id: 'cl15_23',
       decrepitation:
           'Bukit Panorama is a hill in Sungai Lembing, 45 kilometres northwest of Kuantan. It is approximately 271 metres high and has only one way up the hill. From the top of the hill, you\'d have a panoramic view of the surrounding city.',
       content:
@@ -3572,7 +3501,7 @@ const ContentData = const [
       webText: '-',
       webUrl: '-'),
   ContentClass(
-      id: 'cl4_23',
+      id: 'cl16_23',
       decrepitation: '-',
       content:
           'The mossy forest is a natural ecosystem that can only be found at higher elevations in the Cameron Highlands. Wind-driven low-level clouds in the sky create a persistent mist that envelops the trees. The wet tropical evergreen forest is also a haven for a variety of montane plants. Visitors will explore the mossy jungle on a boardwalk two kilometres before Gunung Brinchang\'s peak.',
@@ -3584,7 +3513,7 @@ const ContentData = const [
       webText: 'Mossy forest Website',
       webUrl: 'http://www.cameronhighland.net/mossy-forest.htm'),
   ContentClass(
-      id: 'cl5_23',
+      id: 'cl17_23',
       decrepitation: '-',
       content:
           'While being Malaysia\'s smallest national park, it is home to flying lemurs, leopard cats, and a plethora of lizard, amphibian, and reptile animals. If you want to climb in the park, you can normally get a copy of the hiking trails that are available on-site. There are two large trekking trails in the park that lead to Monkey Beach and Turtle Sanctuary. The Turtle Sanctuary is located on a number of the park\'s most isolated beaches.',
@@ -4052,7 +3981,7 @@ const ContentData = const [
       locationUrl:
           'https://www.google.com/maps/place/WMCKL+Wesley+Methodist+Church+Kuala+Lumpur/@3.14507,101.69136,15z/data=!3m1!4b1!4m5!3m4!1s0x31cc49d1393a9927:0x62eceacbc815fffc!8m2!3d3.1450712!4d101.7001193',
       webText: 'WMCKL Website',
-      webUrl: 'https://linktr.ee/wmckl'),
+      webUrl: 'https://klwesley.org/'),
   ContentClass(
       id: 'cl3_22d',
       decrepitation: '-',

@@ -217,53 +217,47 @@ const ContentListData = const [
   ContentLi(
     id: 'cl2_5',
     categories: 'sc5',
-    contentListTitle: 'Lavish Spa',
-    image: 'assets/images/contentList/relax/2.jpg',
-  ),
-  ContentLi(
-    id: 'cl3_5',
-    categories: 'sc5',
     contentListTitle: 'Ossoto Recreation Hub',
     image: 'assets/images/contentList/relax/3.jpg',
   ),
   ContentLi(
-    id: 'cl4_5',
+    id: 'cl3_5',
     categories: 'sc5',
     contentListTitle: 'Swasana Spa',
     image: 'assets/images/contentList/relax/4.jpg',
   ),
   ContentLi(
-    id: 'cl5_5',
+    id: 'cl4_5',
     categories: 'sc5',
     contentListTitle: 'Alam Beauty and Wellness Spa',
     image: 'assets/images/contentList/relax/5.jpg',
   ),
   ContentLi(
-    id: 'cl6_5',
+    id: 'cl5_5',
     categories: 'sc5',
     contentListTitle: 'Uroot Spa',
     image: 'assets/images/contentList/relax/6.jpg',
   ),
   ContentLi(
-    id: 'cl7_5',
+    id: 'cl6_5',
     categories: 'sc5',
     contentListTitle: 'Bali Ayu Spa Sanctuary',
     image: 'assets/images/contentList/relax/7.jpg',
   ),
   ContentLi(
-    id: 'cl8_5',
+    id: 'cl7_5',
     categories: 'sc5',
     contentListTitle: 'Manjakaki',
     image: 'assets/images/contentList/relax/8.jpg',
   ),
   ContentLi(
-    id: 'cl9_5',
+    id: 'cl8_5',
     categories: 'sc5',
     contentListTitle: 'Erawan Wellness Massage',
     image: 'assets/images/contentList/relax/9.jpg',
   ),
   ContentLi(
-    id: 'cl10_5',
+    id: 'cl9_5',
     categories: 'sc5',
     contentListTitle: 'Reborn Foot Reflexology',
     image: 'assets/images/contentList/relax/10.jpg',
@@ -919,13 +913,6 @@ const ContentListData = const [
     image: 'assets/images/contentList/malayFood/sarawak.jpg',
   ),
 
-  ContentLi(
-    id: 'cl12_17a',
-    categories: 'sc_17a',
-    contentListTitle: "Sarawak Bowl",
-    image: 'assets/images/contentList/malayFood/bowl.JPG',
-  ),
-
   //Chinese Food 17b
   ContentLi(
     id: 'cl1_17b',
@@ -1135,26 +1122,19 @@ const ContentListData = const [
   ContentLi(
     id: 'cl7_17d',
     categories: 'sc_17d',
-    contentListTitle: 'Marosh Restaurant',
-    image: 'assets/images/contentList/arabFood/marosh.jpg',
+    contentListTitle: 'Al Halabi Gourment Restaurant',
+    image: 'assets/images/contentList/arabFood/halabi.PNG',
   ),
 
   ContentLi(
     id: 'cl8_17d',
-    categories: 'sc_17d',
-    contentListTitle: 'Al Halabi Gourment Restaurant',
-    image: 'assets/images/contentList/arabFood/halabi.jpg',
-  ),
-
-  ContentLi(
-    id: 'cl9_17d',
     categories: 'sc_17d',
     contentListTitle: 'Naab Business & Dining Centre',
     image: 'assets/images/contentList/arabFood/naab.jpg',
   ),
 
   ContentLi(
-    id: 'cl10_17d',
+    id: 'cl9_17d',
     categories: 'sc_17d',
     contentListTitle: "Arabella Restaurant",
     image: 'assets/images/contentList/arabFood/arabella.jpg',
@@ -1232,71 +1212,58 @@ const ContentListData = const [
   ),
 
   //japanese restaurant 17f
-  ContentLi(
-    id: 'cl1_17f',
-    categories: 'sc_17f',
-    contentListTitle: 'Gen Japanese Restaurant',
-    image: 'assets/images/contentList/japaneseFood/1.jpg',
-  ),
 
   ContentLi(
-    id: 'cl2_17f',
+    id: 'cl1_17f',
     categories: 'sc_17f',
     contentListTitle: 'Donunie Sushi',
     image: 'assets/images/contentList/japaneseFood/2.jpg',
   ),
 
   ContentLi(
-    id: 'cl3_17f',
+    id: 'cl2_17f',
     categories: 'sc_17f',
     contentListTitle: 'Mitasu Japanese Restaurant',
     image: 'assets/images/contentList/japaneseFood/3.jpg',
   ),
 
   ContentLi(
-    id: 'cl4_17f',
-    categories: 'sc_17f',
-    contentListTitle: 'Umai-Ya',
-    image: 'assets/images/contentList/japaneseFood/4.jpg',
-  ),
-
-  ContentLi(
-    id: 'cl5_17f',
+    id: 'cl3_17f',
     categories: 'sc_17f',
     contentListTitle: 'Hanare Japanese Restaurant',
     image: 'assets/images/contentList/japaneseFood/5.jpg',
   ),
 
   ContentLi(
-    id: 'cl6_17f',
+    id: 'cl4_17f',
     categories: 'sc_17f',
     contentListTitle: "J'S GATE DINING",
     image: 'assets/images/contentList/japaneseFood/6.jpg',
   ),
 
   ContentLi(
-    id: 'cl7_17f',
+    id: 'cl5_17f',
     categories: 'sc_17f',
     contentListTitle: 'Ishin Japanese Dining',
     image: 'assets/images/contentList/japaneseFood/7.jpg',
   ),
 
   ContentLi(
-    id: 'cl8_17f',
+    id: 'cl6_17f',
     categories: 'sc_17f',
     contentListTitle: 'Pepper Lunch',
     image: 'assets/images/contentList/japaneseFood/8.jpg',
   ),
 
   ContentLi(
-    id: 'cl9_17f',
+    id: 'cl7_17f',
     categories: 'sc_17f',
     contentListTitle: 'Iketeru',
     image: 'assets/images/contentList/japaneseFood/9.jpg',
   ),
 
   ContentLi(
-    id: 'cl10_17f',
+    id: 'cl8_17f',
     categories: 'sc_17f',
     contentListTitle: "Sushi Oribe",
     image: 'assets/images/contentList/japaneseFood/10.jpg',
@@ -1334,40 +1301,33 @@ const ContentListData = const [
   ContentLi(
     id: 'cl5_17g',
     categories: 'sc_17g',
-    contentListTitle: 'Fresca Mexican Kitchen & Bar',
-    image: 'assets/images/contentList/mexicanFood/5.jpg',
-  ),
-
-  ContentLi(
-    id: 'cl6_17g',
-    categories: 'sc_17g',
     contentListTitle: 'Chica Bonita',
     image: 'assets/images/contentList/mexicanFood/6.jpg',
   ),
 
   ContentLi(
-    id: 'cl7_17g',
+    id: 'cl6_17g',
     categories: 'sc_17g',
     contentListTitle: "Nick's Restaurant & Bar",
     image: 'assets/images/contentList/mexicanFood/7.jpg',
   ),
 
   ContentLi(
-    id: 'cl8_17g',
+    id: 'cl7_17g',
     categories: 'sc_17g',
     contentListTitle: 'MoMosita Taco Bar',
     image: 'assets/images/contentList/mexicanFood/8.jpg',
   ),
 
   ContentLi(
-    id: 'cl9_17g',
+    id: 'cl8_17g',
     categories: 'sc_17g',
     contentListTitle: 'Elcantina Mexican Cuisine',
     image: 'assets/images/contentList/mexicanFood/9.jpg',
   ),
 
   ContentLi(
-    id: 'cl10_17g',
+    id: 'cl9_17g',
     categories: 'sc_17g',
     contentListTitle: "Carlos Mexican Canteena",
     image: 'assets/images/contentList/mexicanFood/10.jpg',
@@ -1398,47 +1358,40 @@ const ContentListData = const [
   ContentLi(
     id: 'cl4_17h',
     categories: 'sc_17h',
-    contentListTitle: 'Wayback Burgers',
-    image: 'assets/images/contentList/fastFood/4.jpg',
-  ),
-
-  ContentLi(
-    id: 'cl5_17h',
-    categories: 'sc_17h',
     contentListTitle: 'The Daily Grind',
     image: 'assets/images/contentList/fastFood/5.jpg',
   ),
 
   ContentLi(
-    id: 'cl6_17h',
+    id: 'cl5_17h',
     categories: 'sc_17h',
     contentListTitle: 'KGB TTDI',
     image: 'assets/images/contentList/fastFood/6.jpg',
   ),
 
   ContentLi(
-    id: 'cl7_17h',
+    id: 'cl6_17h',
     categories: 'sc_17h',
     contentListTitle: "Kaw Kaw Burger",
     image: 'assets/images/contentList/fastFood/7.jpg',
   ),
 
   ContentLi(
-    id: 'cl8_17h',
+    id: 'cl7_17h',
     categories: 'sc_17h',
     contentListTitle: 'J Boyz Fast Food Restaurant',
     image: 'assets/images/contentList/fastFood/8.jpg',
   ),
 
   ContentLi(
-    id: 'cl9_17h',
+    id: 'cl8_17h',
     categories: 'sc_17h',
     contentListTitle: 'Sugarbun Borneo Asian Food',
     image: 'assets/images/contentList/fastFood/9.jpg',
   ),
 
   ContentLi(
-    id: 'cl10_17h',
+    id: 'cl9_17h',
     categories: 'sc_17h',
     contentListTitle: "Broasted Chicken King",
     image: 'assets/images/contentList/fastFood/10.jpg',
@@ -1615,56 +1568,56 @@ const ContentListData = const [
   //Island 20
   ContentLi(
     id: 'cl1_20',
-    categories: 'sc_21',
+    categories: 'sc_21a',
     contentListTitle: 'Pangkor Island',
     image: 'assets/images/contentList/island/1.jpg',
   ),
   ContentLi(
     id: 'cl2_20',
-    categories: 'sc_21',
+    categories: 'sc_21b',
     contentListTitle: 'Pulau Perhentian',
     image: 'assets/images/contentList/island/2.jpg',
   ),
   ContentLi(
     id: 'cl3_20',
-    categories: 'sc_21',
+    categories: 'sc_21c',
     contentListTitle: 'Pulau Tioman',
     image: 'assets/images/contentList/island/3.jpg',
   ),
 
   ContentLi(
     id: 'cl4_20',
-    categories: 'sc_21',
+    categories: 'sc_21d',
     contentListTitle: 'Pulau Besar',
     image: 'assets/images/contentList/island/4.jpg',
   ),
   ContentLi(
     id: 'cl5_20',
-    categories: 'sc_21',
+    categories: 'sc_21e',
     contentListTitle: 'Manukan Island',
     image: 'assets/images/contentList/island/5.jpg',
   ),
   ContentLi(
     id: 'cl6_20',
-    categories: 'sc_21',
+    categories: 'sc_21b',
     contentListTitle: 'Lang Tengah Island',
     image: 'assets/images/contentList/island/6.jpg',
   ),
   ContentLi(
     id: 'cl7_20',
-    categories: 'sc_21',
+    categories: 'sc_21f',
     contentListTitle: 'Rawa Island',
     image: 'assets/images/contentList/island/7.jpg',
   ),
   ContentLi(
     id: 'cl8_20',
-    categories: 'sc_21',
+    categories: 'sc_21f',
     contentListTitle: 'Tengah Island',
     image: 'assets/images/contentList/island/8.jpg',
   ),
   ContentLi(
     id: 'cl9_20',
-    categories: 'sc_21',
+    categories: 'sc_21b',
     contentListTitle: 'Redang Island',
     image: 'assets/images/contentList/island/9.jpg',
   ),
@@ -1672,37 +1625,37 @@ const ContentListData = const [
   //Hil Stations 21
   ContentLi(
     id: 'cl1_21',
-    categories: 'sc_18',
+    categories: 'sc_18a',
     contentListTitle: 'Genting Highlands',
     image: 'assets/images/contentList/hillside/1.jpg',
   ),
   ContentLi(
     id: 'cl2_21',
-    categories: 'sc_18',
+    categories: 'sc_18a',
     contentListTitle: 'Bukit Tinggi',
     image: 'assets/images/contentList/hillside/2.jpg',
   ),
   ContentLi(
     id: 'cl3_21',
-    categories: 'sc_18',
+    categories: 'sc_18a',
     contentListTitle: 'Fraser Hill',
     image: 'assets/images/contentList/hillside/3.jpg',
   ),
   ContentLi(
     id: 'cl4_21',
-    categories: 'sc_18',
+    categories: 'sc_18a',
     contentListTitle: 'Cameron Highland',
     image: 'assets/images/contentList/hillside/4.jpg',
   ),
   ContentLi(
     id: 'cl5_21',
-    categories: 'sc_18',
+    categories: 'sc_18b',
     contentListTitle: 'Maxwell Hill',
     image: 'assets/images/contentList/hillside/5.jpg',
   ),
   ContentLi(
     id: 'cl6_21',
-    categories: 'sc_18',
+    categories: 'sc_18c',
     contentListTitle: 'Penang Hill',
     image: 'assets/images/contentList/hillside/6.jpg',
   ),
@@ -1710,105 +1663,100 @@ const ContentListData = const [
   //Waterfall 22
   ContentLi(
     id: 'cl1_22',
-    categories: 'sc_19',
+    categories: 'sc_19a',
     contentListTitle: 'Sungai Pisang Waterfall',
     image: 'assets/images/contentList/waterfall/1.jpg',
   ),
   ContentLi(
     id: 'cl2_22',
-    categories: 'sc_19',
+    categories: 'sc_19b',
     contentListTitle: 'Jeram Toi',
     image: 'assets/images/contentList/waterfall/2.jpg',
   ),
+
   ContentLi(
     id: 'cl3_22',
-    categories: 'sc_19',
-    contentListTitle: 'Ulu Chepor',
-    image: 'assets/images/contentList/waterfall/3.jpg',
-  ),
-  ContentLi(
-    id: 'cl4_22',
-    categories: 'sc_19',
+    categories: 'sc_19c',
     contentListTitle: 'Rainbow Waterfall',
     image: 'assets/images/contentList/waterfall/4.jpg',
   ),
   ContentLi(
-    id: 'cl5_22',
-    categories: 'sc_19',
+    id: 'cl4_22',
+    categories: 'sc_19d',
     contentListTitle: 'Seven Wells Waterfall',
     image: 'assets/images/contentList/waterfall/5b.jpg',
   ),
   ContentLi(
-    id: 'cl6_22',
-    categories: 'sc_19',
+    id: 'cl5_22',
+    categories: 'sc_19a',
     contentListTitle: 'Sungai Chiling',
     image: 'assets/images/contentList/waterfall/6.jpeg',
   ),
   ContentLi(
-    id: 'cl7_22',
-    categories: 'sc_19',
+    id: 'cl6_22',
+    categories: 'sc_19a',
     contentListTitle: 'Lata Medang',
     image: 'assets/images/contentList/waterfall/7.jpg',
   ),
   ContentLi(
-    id: 'cl8_22',
-    categories: 'sc_19',
+    id: 'cl7_22',
+    categories: 'sc_19a',
     contentListTitle: 'Serendah Waterfall',
     image: 'assets/images/contentList/waterfall/8.jpg',
   ),
 
 //Hiking 23
   ContentLi(
-    id: 'cl1_23',
-    categories: 'sc_20',
+    id: 'cl8_23',
+    categories: 'sc_20a',
     contentListTitle: 'Broga Hill',
     image: 'assets/images/contentList/hiking/1.jpg',
   ),
   ContentLi(
-    id: 'cl2_23',
-    categories: 'sc_20',
+    id: 'cl14_23',
+    categories: 'sc_20b',
     contentListTitle: 'Mount Pulai',
     image: 'assets/images/contentList/hiking/2.jpg',
   ),
   ContentLi(
-    id: 'cl3_23',
-    categories: 'sc_20',
+    id: 'cl15_23',
+    categories: 'sc_20c',
     contentListTitle: 'Panorama Hill',
     image: 'assets/images/contentList/hiking/3.jpg',
   ),
   ContentLi(
-    id: 'cl4_23',
-    categories: 'sc_20',
+    id: 'cl16_23',
+    categories: 'sc_20c',
     contentListTitle: 'Mossy Forest',
     image: 'assets/images/contentList/hiking/4.jpg',
   ),
   ContentLi(
-    id: 'cl5_23',
-    categories: 'sc_20',
+    id: 'cl17_23',
+    categories: 'sc_20d',
     contentListTitle: 'Penang National Park',
     image: 'assets/images/contentList/hiking/5.jpg',
   ),
   ContentLi(
     id: 'cl10_23',
-    categories: 'sc_20',
+    categories: 'sc_20e',
     contentListTitle: 'Bukit Batu Putih',
     image: 'assets/images/contentList/hiking/6.jpg',
   ),
   ContentLi(
     id: 'cl11_23',
-    categories: 'sc_20',
+    categories: 'sc_20a',
     contentListTitle: 'Bukit Kutu',
     image: 'assets/images/contentList/hiking/7.jpg',
   ),
   ContentLi(
     id: 'cl12_23',
-    categories: 'sc_20',
+    categories: 'sc_20a',
     contentListTitle: 'Bukit Batu Pahat',
     image: 'assets/images/contentList/hiking/8.jpg',
   ),
   ContentLi(
     id: 'cl13_23',
-    categories: 'sc_20',
+    categories: 'sc_20a',
     contentListTitle: 'Puncak Rajawali',
     image: 'assets/images/contentList/hiking/2.jfif',
   ),
@@ -1816,19 +1764,19 @@ const ContentListData = const [
 //Extreme Sports 24
   ContentLi(
     id: 'cl1_25',
-    categories: 'sc_24',
+    categories: 'sc_24a',
     contentListTitle: 'KKB Paragliding Park',
     image: 'assets/images/contentList/extreme/1b.jpg',
   ),
   ContentLi(
     id: 'cl2_25',
-    categories: 'sc_24',
+    categories: 'sc_24a',
     contentListTitle: 'Whitewater Rafting Kuala Kubu Bharu',
     image: 'assets/images/contentList/extreme/2.jpg',
   ),
   ContentLi(
     id: 'cl3_25',
-    categories: 'sc_24',
+    categories: 'sc_24a',
     contentListTitle: 'Jugra Hill',
     image: 'assets/images/contentList/extreme/3.jpg',
   ),
