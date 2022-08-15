@@ -177,10 +177,10 @@ class _TabsScreenState extends State<TabsScreen> {
                   return bottomNav(BookmarkScreen(), 'My Bookmarks');
 
                 case 2:
-                  return bottomNav(ContactUsScreen(), 'Contact Us');
+                  return bottomNav(SecondPage(), 'Articles');
 
                 case 3:
-                  return bottomNav(SecondPage(), 'Articles');
+                  return bottomNav(ContactUsScreen(), 'Contact Us');
 
                 default:
                   return bottomNav(CategoriesScreen(), 'KL THE GUIDE');
