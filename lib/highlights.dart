@@ -2,8 +2,8 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:kltheguide/main.dart';
 import 'package:url_launcher/url_launcher.dart';
-import 'package:http/http.dart' as http;
-import 'dart:convert';
+//import 'package:http/http.dart' as http;
+//import 'dart:convert';
 
 class GlancePage extends StatelessWidget {
   @override
@@ -13,7 +13,8 @@ class GlancePage extends StatelessWidget {
         iconTheme: const IconThemeData(
           color: Colors.white, //change your color here
         ),
-        title: const Text("KL @ A Glance", style: TextStyle(color: Colors.white)),
+        title:
+            const Text("KL @ A Glance", style: TextStyle(color: Colors.white)),
         // foregroundColor: const Color.fromARGB(255, 0, 71, 133),
         backgroundColor: const Color.fromARGB(255, 0, 71, 133),
         actions: const <Widget>[
@@ -25,8 +26,10 @@ class GlancePage extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            CachedNetworkImage(imageUrl: 'https://www.kltheguide.com.my/assets/img/highlights/KLATGLANCE-01-2.jpg' ,
-               ),
+            CachedNetworkImage(
+              imageUrl:
+                  'https://www.kltheguide.com.my/assets/img/highlights/KLATGLANCE-01-2.jpg',
+            ),
             SizedBox(height: 16),
             Text(
               'KL @ A Glance',
@@ -48,68 +51,6 @@ class GlancePage extends StatelessWidget {
               style: TextStyle(fontSize: 16),
             ),
             SizedBox(height: 8),
-            // const Text(
-            //   "No.31-2, Block F2, Level 2, Jalan PJU 1/42a, Dataran Prima, 47301 Petaling Jaya, Selangor.",
-            //   textAlign: TextAlign.justify,
-            //   style: TextStyle(fontSize: 16),
-            // ),
-            // const SizedBox(height: 8),
-            // Container(
-            //   child: const Text(
-            //     "Opening Hours:",
-            //     textAlign: TextAlign.start,
-            //     style: TextStyle(fontSize: 16),
-            //   ),
-            // ),
-            // RichText(
-            //   text: const TextSpan(
-            //     text: 'Monday-Friday :',
-            //     style:
-            //         TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
-            //     children: [
-            //       TextSpan(
-            //         text: '9:00AM - 6:00PM',
-            //         style: TextStyle(color: Colors.black),
-            //       ),
-            //     ],
-            //   ),
-            // ),
-            // const SizedBox(height: 8),
-            // RichText(
-            //   text: TextSpan(
-            //     text: 'Mobile Num.: ',
-            //     style: const TextStyle(
-            //         color: Colors.black, fontWeight: FontWeight.bold),
-            //     children: [
-            //       TextSpan(
-            //         text: '+6012-2200622',
-            //         style: const TextStyle(color: Colors.blue),
-            //         recognizer: TapGestureRecognizer()
-            //           ..onTap = () {
-            //             _launchURL('tel:+60122200622');
-            //           },
-            //       ),
-            //     ],
-            //   ),
-            // ),
-            // const SizedBox(height: 8),
-            // RichText(
-            //   text: TextSpan(
-            //     text: 'Telephone Num.: ',
-            //     style: const TextStyle(
-            //         color: Colors.black, fontWeight: FontWeight.bold),
-            //     children: [
-            //       TextSpan(
-            //         text: '+603-7886 9219',
-            //         style: const TextStyle(color: Colors.blue),
-            //         recognizer: TapGestureRecognizer()
-            //           ..onTap = () {
-            //             _launchURL('tel:+60378869219');
-            //           },
-            //       ),
-            //     ],
-            //   ),
-            // ),
             SizedBox(height: 8),
           ],
         ),
@@ -131,17 +72,16 @@ class _GetAroundState extends State<GetAround> {
     return Scaffold(
       appBar: AppBar(
         iconTheme: const IconThemeData(
-          color: Colors.white, //change your color here
+          color: Colors.white,
         ),
         title: const Text("Getting Around KL",
             style: TextStyle(color: Colors.white)),
-        // foregroundColor: const Color.fromARGB(255, 0, 71, 133),
         backgroundColor: const Color.fromARGB(255, 0, 71, 133),
         actions: const <Widget>[
           AppBarMore(),
         ],
       ),
-      body: MyList(),
+      body: MyList(), // This is where the images and text will be displayed.
     );
   }
 }
@@ -181,8 +121,8 @@ class MyList extends StatelessWidget {
       itemCount: items.length,
       itemBuilder: (context, index) {
         return Card(
-          elevation: 3.0, // Adjust the elevation as needed
-          margin: const EdgeInsets.all(16.0), // Adjust the margin as needed
+          elevation: 3.0,
+          margin: const EdgeInsets.all(16.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -194,24 +134,23 @@ class MyList extends StatelessWidget {
                 ),
               ),
               Padding(
-                padding:
-                    const EdgeInsets.all(16.0), // Adjust the padding as needed
+                padding: const EdgeInsets.all(16.0),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
                       items[index].text,
                       style: const TextStyle(
-                        fontSize: 20.0, // Adjust the font size as needed
+                        fontSize: 20.0,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                    const SizedBox(
-                        height: 8.0), // Add spacing between title and content
+                    const SizedBox(height: 8.0),
                     Text(
                       items[index].content,
                       style: const TextStyle(
-                          fontSize: 16.0), // Adjust the font size as needed
+                        fontSize: 16.0,
+                      ),
                     ),
                   ],
                 ),
@@ -348,15 +287,14 @@ class MyList2 extends StatelessWidget {
   }
 }
 
-
 class ApiData {
   final String title;
   final String content;
   final String image;
   final String location;
 
-  ApiData(
-     {required this.location,
+  ApiData({
+    required this.location,
     required this.title,
     required this.content,
     required this.image,
@@ -372,21 +310,38 @@ class ApiData {
   }
 }
 
+// Future<List<ApiData>> fetchData2(bodyparse, category) async {
+//   final response = await http.post(
+//     Uri.parse('https://www.kltheguide.com.my/admin/functions.php'),
+//     body: {bodyparse: bodyparse, 'category': category},
+//   );
 
+//   if (response.statusCode == 200) {
+//     // Check if the response is JSON by inspecting the Content-Type header
+//     if (response.headers['content-type']?.contains('application/json') ==
+//         true) {
+//       // Try to parse the response body as JSON
+//       try {
+//         final List<dynamic> jsonData = jsonDecode(response.body);
+//         return jsonData.map((json) => ApiData.fromJson(json)).toList();
+//       } catch (e) {
+//         // Handle JSON decoding error
+//         throw Exception('Failed to decode JSON: $e');
+//       }
+//     } else {
+//       // Log the response body for inspection
+//       print('Unexpected content type: ${response.headers['content-type']}');
+//       print('Response body: ${response.body}');
 
-Future<List<ApiData>> fetchData2(bodyparse, category) async {
-  final response = await http.post(
-    Uri.parse('https://www.kltheguide.com.my/admin/functions.php'),
-    body: {bodyparse: bodyparse, 'category': category},
-  );
+//       // Handle non-JSON response
+//       throw Exception(
+//           'Unexpected response format: ${response.headers['content-type']}');
+//     }
+//   } else {
+//     throw Exception('Failed to load data. Status code: ${response.statusCode}');
+//   }
+// }
 
-  if (response.statusCode == 200) {
-    final List<dynamic> jsonData = jsonDecode(response.body);
-    return jsonData.map((json) => ApiData.fromJson(json)).toList();
-  } else {
-    throw Exception('Failed to load data');
-  }
-}
 class CardListWidget extends StatelessWidget {
   final List<ApiData> data;
 
@@ -402,11 +357,9 @@ class CardListWidget extends StatelessWidget {
         return GestureDetector(
           onTap: () {
             // print(item.location);
-            if(item.location != ''){
-            _launchURL(item.location);
-
+            if (item.location != '') {
+              _launchURL(item.location);
             }
-            
           },
           child: Card(
             elevation: 4.0,
@@ -446,7 +399,6 @@ class CardListWidget extends StatelessWidget {
   }
 }
 
-
 class CardItem extends StatelessWidget {
   final String name;
   final String image;
@@ -461,7 +413,6 @@ class CardItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-
       child: Card(
         elevation: 3,
         margin: const EdgeInsets.all(10),
@@ -496,104 +447,98 @@ class CardItem extends StatelessWidget {
   }
 }
 
+// class GetAround2 extends StatefulWidget {
+//   const GetAround2({super.key});
 
+//   @override
+//   _GetAround2State createState() => _GetAround2State();
+// }
 
-class GetAround2 extends StatefulWidget {
-  const GetAround2({super.key});
+// class _GetAround2State extends State<GetAround2> {
+//   late Future<List<ApiData>> _data;
 
-  @override
-  _GetAround2State createState() => _GetAround2State();
-}
+//   // @override
+//   // void initState() {
+//   //   super.initState();
+//   //   _data = fetchData2('appHighlights', 'traveltips');
+//   // }
 
-class _GetAround2State extends State<GetAround2> {
-  late Future<List<ApiData>> _data;
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       appBar: AppBar(
+//         iconTheme: const IconThemeData(
+//           color: Colors.white, //change your color here
+//         ),
+//         title: const Text("Getting Around KL",
+//             style: TextStyle(color: Colors.white)),
+//         // foregroundColor: const Color.fromARGB(255, 0, 71, 133),
+//         backgroundColor: const Color.fromARGB(255, 0, 71, 133),
+//         actions: const <Widget>[
+//           AppBarMore(),
+//         ],
+//       ),
+//       body: FutureBuilder<List<ApiData>>(
+//         future: _data,
+//         builder: (context, snapshot) {
+//           if (snapshot.connectionState == ConnectionState.waiting) {
+//             return const Center(child: CircularProgressIndicator());
+//           } else if (snapshot.hasError) {
+//             return Center(child: Text('Error: ${snapshot.error}'));
+//           } else {
+//             return CardListWidget(data: snapshot.data ?? []);
+//           }
+//         },
+//       ),
+//     );
+//   }
+// }
 
-  @override
-  void initState() {
-    super.initState();
-    _data = fetchData2('appHighlights','traveltips');
-  }
+// class TravelTips2 extends StatefulWidget {
+//   const TravelTips2({super.key});
 
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        iconTheme: const IconThemeData(
-          color: Colors.white, //change your color here
-        ),
-        title: const Text("Getting Around KL", style: TextStyle(color: Colors.white)),
-        // foregroundColor: const Color.fromARGB(255, 0, 71, 133),
-        backgroundColor: const Color.fromARGB(255, 0, 71, 133),
-        actions: const <Widget>[
-          AppBarMore(),
-        ],
-      ),
-      body: FutureBuilder<List<ApiData>>(
-        future: _data,
-        builder: (context, snapshot) {
-          if (snapshot.connectionState == ConnectionState.waiting) {
-            return const Center(child: CircularProgressIndicator());
-          } else if (snapshot.hasError) {
-            return Center(child: Text('Error: ${snapshot.error}'));
-          } else {
-            return CardListWidget(data: snapshot.data ?? []);
-          }
-        },
-      ),
-    );
-  }
-}
+//   @override
+//   _TravelTips2State createState() => _TravelTips2State();
+// }
 
+// class _TravelTips2State extends State<TravelTips2> {
+//   late Future<List<ApiData>> _data;
 
+//   // @override
+//   // void initState() {
+//   //   super.initState();
+//   //   _data = fetchData2('appHighlights', 'gettingaround');
+//   // }
 
-
-
-class TravelTips2 extends StatefulWidget {
-  const TravelTips2({super.key});
-
-  @override
-  _TravelTips2State createState() => _TravelTips2State();
-}
-
-class _TravelTips2State extends State<TravelTips2> {
-  late Future<List<ApiData>> _data;
-
-  @override
-  void initState() {
-    super.initState();
-    _data = fetchData2('appHighlights','gettingaround');
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        iconTheme: const IconThemeData(
-          color: Colors.white, //change your color here
-        ),
-        title: const Text("Travel Tips", style: TextStyle(color: Colors.white)),
-        // foregroundColor: const Color.fromARGB(255, 0, 71, 133),
-        backgroundColor: const Color.fromARGB(255, 0, 71, 133),
-        actions: const <Widget>[
-          AppBarMore(),
-        ],
-      ),
-      body: FutureBuilder<List<ApiData>>(
-        future: _data,
-        builder: (context, snapshot) {
-          if (snapshot.connectionState == ConnectionState.waiting) {
-            return const Center(child: CircularProgressIndicator());
-          } else if (snapshot.hasError) {
-            return Center(child: Text('Error: ${snapshot.error}'));
-          } else {
-            return CardListWidget(data: snapshot.data ?? []);
-          }
-        },
-      ),
-    );
-  }
-}
-
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       appBar: AppBar(
+//         iconTheme: const IconThemeData(
+//           color: Colors.white, //change your color here
+//         ),
+//         title: const Text("Travel Tips", style: TextStyle(color: Colors.white)),
+//         // foregroundColor: const Color.fromARGB(255, 0, 71, 133),
+//         backgroundColor: const Color.fromARGB(255, 0, 71, 133),
+//         actions: const <Widget>[
+//           AppBarMore(),
+//         ],
+//       ),
+//       body: FutureBuilder<List<ApiData>>(
+//         future: _data,
+//         builder: (context, snapshot) {
+//           if (snapshot.connectionState == ConnectionState.waiting) {
+//             return const Center(child: CircularProgressIndicator());
+//           } else if (snapshot.hasError) {
+//             return Center(child: Text('Error: ${snapshot.error}'));
+//           } else {
+//             return CardListWidget(data: snapshot.data ?? []);
+//           }
+//         },
+//       ),
+//     );
+//   }
+// }
 
 void _launchURL(url) async {
   var url2 = Uri.parse(url);
