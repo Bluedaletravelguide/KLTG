@@ -1,6 +1,7 @@
 # KlTheGuide
 
 - New event screen added
+- New Voucher screen added
 
 ## Getting Started
 
