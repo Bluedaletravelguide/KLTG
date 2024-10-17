@@ -20,12 +20,11 @@ import 'package:kltheguide/home_page.dart';
 import 'package:kltheguide/about_us.dart';
 import 'package:flutter_downloader/flutter_downloader.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
-// import 'package:kltheguide/voucher.dart';
+import 'package:kltheguide/voucher.dart';
 import 'package:url_launcher/url_launcher.dart';
 // import 'package:flutter_native_splash/flutter_native_splash.dart';
 // import 'package:shared_preferences/shared_preferences.dart';
 import 'package:package_info_plus/package_info_plus.dart';
-
 import 'event.dart';
 
 void main() async {
@@ -571,11 +570,11 @@ class _MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver {
                     Icon(Icons.event, color: Color.fromARGB(255, 0, 71, 133)),
                 icon: Icon(Icons.event_available_outlined),
                 label: 'Events'),
-            // NavigationDestination(
-            //     selectedIcon: Icon(Icons.discount,
-            //         color: Color.fromARGB(255, 0, 71, 133)),
-            //     icon: Icon(Icons.discount_outlined),
-            //     label: 'Contest'),
+            NavigationDestination(
+                selectedIcon: Icon(Icons.discount,
+                    color: Color.fromARGB(255, 0, 71, 133)),
+                icon: Icon(Icons.discount_outlined),
+                label: 'Contest'),
           ],
         ),
         body: [
@@ -584,7 +583,7 @@ class _MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver {
           const BlogListScreen(),
           Ebook(),
           EventScreen(),
-          // VoucherScreen(),
+          VoucherScreen(),
         ][currentPageIndex],
       ),
     );
