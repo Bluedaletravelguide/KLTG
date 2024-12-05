@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'generated/l10n.dart';
 
 // Model class for Voucher Data
 class VoucherData {
@@ -32,15 +33,15 @@ class VoucherData {
 List<VoucherData> fallbackVoucherData = [
   VoucherData(
     voucher: 'Voucher 1',
-    title: 'Stand a chance to win this voucher now!',
+    title: 'Stand a chance to win complimentary vouchers. Click participate.',
     image: 'assets/images/voucher_1.jpg', // Local asset image 1
-    expiryDate: '31st October 2024',
+    expiryDate: '30 November 2024',
   ),
   VoucherData(
     voucher: 'Voucher 2',
-    title: 'Stand a chance to win this voucher now!',
+    title: 'Stand a chance to win complimentary vouchers. Click participate.',
     image: 'assets/images/voucher_2.jpg', // Local asset image 2
-    expiryDate: '31st October 2024',
+    expiryDate: '30 November 2024',
   ),
 ];
 
@@ -123,7 +124,7 @@ class VoucherCardList extends StatelessWidget {
                         onPressed: () {
                           _launchURL();
                         },
-                        child: Text('Click to claim'),
+                        child: Text('Click'),
                       ),
                     ),
                   ],
@@ -158,13 +159,40 @@ class VoucherScreen extends StatefulWidget {
 
 class _VoucherScreenState extends State<VoucherScreen> {
   late Future<List<VoucherData>> _data = fetchVouchers();
+  List<VoucherData> _previousData = [];
+
+  @override
+  void initState() {
+    super.initState();
+    _fetchData(); // Simulate new vouchers being added for testing
+  }
+
+  void _fetchData() {
+    _data = fetchVouchers();
+    _data.then((newData) {
+      if (_previousData.isNotEmpty && newData.length > _previousData.length) {
+        // Return true to indicate new vouchers were added, NO SnackBar here
+        Navigator.pop(context, true);
+      }
+      // Update the previous data within setState to trigger rebuild if necessary
+      setState(() {
+        _previousData = newData;
+      });
+    }).catchError((error) {
+      // Handle errors if needed
+      Navigator.pop(context,
+          false); // Return false if there's an error or no new vouchers
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Vouchers', style: TextStyle(color: Colors.white)),
+        title:
+            Text(S.of(context).vouchers, style: TextStyle(color: Colors.white)),
         backgroundColor: const Color.fromARGB(255, 0, 71, 133),
+        iconTheme: const IconThemeData(color: Colors.white),
       ),
       body: FutureBuilder<List<VoucherData>>(
         future: _data,
@@ -174,8 +202,12 @@ class _VoucherScreenState extends State<VoucherScreen> {
           } else if (snapshot.hasError) {
             // Display fallback data when there is an error fetching from the server
             return VoucherCardList(data: fallbackVoucherData);
+          } else if (snapshot.hasData) {
+            final newData = snapshot.data ?? [];
+            _previousData = newData; // Store the fetched data
+            return VoucherCardList(data: newData);
           } else {
-            return VoucherCardList(data: snapshot.data ?? []);
+            return VoucherCardList(data: fallbackVoucherData);
           }
         },
       ),

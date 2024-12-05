@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:cached_network_image/cached_network_image.dart';
+// import 'package:kltheguide/voucher.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:kltheguide/main.dart';
+import 'generated/l10n.dart';
 
 class HomeScreen extends StatefulWidget {
   HomeScreen({super.key});
@@ -24,13 +26,6 @@ class _HomeScreenState extends State<HomeScreen> {
     // Add more image URLs as needed
   ];
 
-  final List<String> titlesHighlights = [
-    'KL @ A Glance',
-    'Getting Around KL',
-    'Travel Tips',
-    // Add more titles corresponding to image URLs
-  ];
-
   final List<String> imagesRmd = [
     'https://www.kltheguide.com.my/assets/img/recommendation/where-to-shop-in-kl.png',
     'https://www.kltheguide.com.my/assets/img/recommendation/9.nightout.png',
@@ -38,22 +33,28 @@ class _HomeScreenState extends State<HomeScreen> {
     'https://www.kltheguide.com.my/assets/img/recommendation/Spa.jpg',
     'https://www.kltheguide.com.my/assets/img/recommendation/11.medical-tourism.png',
     'https://www.kltheguide.com.my/assets/img/recommendation/2.malaysian-festival.png',
-
     // Add more image URLs as needed
-  ];
-
-  final List<String> titlesRmd = [
-    'Explore KL',
-    'Shop Like Locals',
-    'Places To Stay',
-    'Spa Time',
-    'Medical Tourism',
-    'Beyond KL',
-    // Add more titles corresponding to image URLs
   ];
 
   @override
   Widget build(BuildContext context) {
+    // Use localized strings for the highlights titles
+    final List<String> titlesHighlights = [
+      S.of(context).klAtAGlance, // Localized "KL @ A Glance"
+      S.of(context).gettingAroundKL, // Localized "Getting Around KL"
+      S.of(context).travelTips, // Localized "Travel Tips"
+    ];
+
+    // Use localized strings for the recommendations titles
+    final List<String> titlesRmd = [
+      S.of(context).exploreKL, // Localized "Explore KL"
+      S.of(context).shopLikeLocals, // Localized "Shop Like Locals"
+      S.of(context).placesToStay, // Localized "Places To Stay"
+      S.of(context).spaTime, // Localized "Spa Time"
+      S.of(context).medicalTourism, // Localized "Medical Tourism"
+      S.of(context).beyondKL, // Localized "Beyond KL"
+    ];
+
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(
@@ -88,8 +89,8 @@ class _HomeScreenState extends State<HomeScreen> {
                       color: Colors.green,
                       size: 48,
                     ),
-                    onTap: () =>
-                        _launchURL('https://api.whatsapp.com/send?phone=60122200622'),
+                    onTap: () => _launchURL(
+                        'https://api.whatsapp.com/send?phone=60122200622'),
                   ),
                   GestureDetector(
                     child: const Icon(
@@ -110,11 +111,11 @@ class _HomeScreenState extends State<HomeScreen> {
                 ],
               ),
             ),
-            const Padding(
-              padding: EdgeInsets.all(16.0),
+            Padding(
+              padding: const EdgeInsets.all(16.0),
               child: Text(
-                'KL Highlights',
-                style: TextStyle(
+                S.of(context).klHighlights, // Localized "KL Highlights" string
+                style: const TextStyle(
                   color: Colors.black,
                   fontSize: 20.0,
                   fontWeight: FontWeight.bold,
@@ -122,11 +123,13 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             ),
             ImageCarousel(images: imagesHighlights, titles: titlesHighlights),
-            const Padding(
-              padding: EdgeInsets.all(16.0),
+            Padding(
+              padding: const EdgeInsets.all(16.0),
               child: Text(
-                'Recommendations',
-                style: TextStyle(
+                S
+                    .of(context)
+                    .recommendations, // Localized "Recommendations" string
+                style: const TextStyle(
                   color: Colors.black,
                   fontSize: 20.0,
                   fontWeight: FontWeight.bold,

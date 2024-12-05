@@ -155,12 +155,12 @@ class _BlogListScreenState extends State<BlogListScreen> {
   }
 
   void _navigateToArticlePage(dynamic article) {
-    Navigator.push(
-      context,
-      MaterialPageRoute(
-        builder: (context) => ArticlePage(article: article),
-      ),
-    );
+    // Navigator.push(
+    //   context,
+    //   MaterialPageRoute(
+    //     builder: (context) => ArticlePage(article: article),
+    //   ),
+    // );
   }
 
   @override
