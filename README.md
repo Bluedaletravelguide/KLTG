@@ -1,6 +1,6 @@
 # KlTheGuide
 
-First project on a new app base and framework
+- New event screen added
 
 ## Getting Started
 

@@ -2,6 +2,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:kltheguide/main.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'generated/l10n.dart'; // Import localization file
 //import 'package:http/http.dart' as http;
 //import 'dart:convert';
 
@@ -13,8 +14,8 @@ class GlancePage extends StatelessWidget {
         iconTheme: const IconThemeData(
           color: Colors.white, //change your color here
         ),
-        title:
-            const Text("KL @ A Glance", style: TextStyle(color: Colors.white)),
+        title: Text(S.of(context).klAtAGlance,
+            style: const TextStyle(color: Colors.white)),
         // foregroundColor: const Color.fromARGB(255, 0, 71, 133),
         backgroundColor: const Color.fromARGB(255, 0, 71, 133),
         actions: const <Widget>[
@@ -32,7 +33,7 @@ class GlancePage extends StatelessWidget {
             ),
             SizedBox(height: 16),
             Text(
-              'KL @ A Glance',
+              S.of(context).klAtAGlance,
               style: TextStyle(
                 fontSize: 24,
                 fontWeight: FontWeight.bold,
@@ -40,15 +41,15 @@ class GlancePage extends StatelessWidget {
             ),
             SizedBox(height: 8),
             Text(
-              "Kuala Lumpur city center (KL) is renowned for its tall, futuristic skyscrapers and modern structures. Yet, to experience KL, you 're going to have to walk through its streets and roads to appreciate KL at its best. That's how you're going to be able to smell the food from the hawker stalls, appreciate the murals on the some of the older buildings. The more you walk, the more you will come to realise that KL is not just about concrete skyscrapers, but is a work of architectural art. Sauntering along the streets, you would be able to take in the sights of KL better.",
+              S.of(context).klDescription1,
               textAlign: TextAlign.justify,
-              style: TextStyle(fontSize: 16),
+              style: const TextStyle(fontSize: 16),
             ),
             SizedBox(height: 8),
             Text(
-              "KL's establishment was almost an accident. In 1857, 87 Chinese prospectors, looking for tin, arrived at the meeting point of the Klang and Gombak rivers and set up camp, naming the place Kuala Lumpur, meaning 'muddy confluence'.",
+              S.of(context).klDescription2,
               textAlign: TextAlign.justify,
-              style: TextStyle(fontSize: 16),
+              style: const TextStyle(fontSize: 16),
             ),
             SizedBox(height: 8),
             SizedBox(height: 8),
@@ -74,49 +75,58 @@ class _GetAroundState extends State<GetAround> {
         iconTheme: const IconThemeData(
           color: Colors.white,
         ),
-        title: const Text("Getting Around KL",
-            style: TextStyle(color: Colors.white)),
+        title: Text(S.of(context).gettingAroundKL,
+            style: const TextStyle(color: Colors.white)),
         backgroundColor: const Color.fromARGB(255, 0, 71, 133),
         actions: const <Widget>[
           AppBarMore(),
         ],
       ),
-      body: MyList(), // This is where the images and text will be displayed.
+      body: MyList(
+          context:
+              context), // This is where the images and text will be displayed.
     );
   }
 }
 
 class MyList extends StatelessWidget {
-  final List<ItemData> items = [
-    ItemData(
-      'Light Rail Transit (LRT)',
-      'https://www.kltheguide.com.my/assets/img/highlights/getaround/1.-lrt.png',
-      'The Light Rail Transit (LRT) is one of the most commonly used public rail transport. The LRT is divided into two lines; Ampang/Sri Petaling and Kelana Jaya. This is the best means of transport if you are thinking of visiting places that aren’t within walking distance of Kuala Lumpur city centre. Helpline: 03-7885 2585',
-    ),
-    ItemData(
-      'Mass Rapid Transit (MRT)',
-      'https://www.kltheguide.com.my/assets/img/highlights/getaround/2.-mrt.png',
-      'The Mass Rapid Transit (MRT) is divided into two lines; the first is the Sungai Buloh-Kajang line that is 51km-long with 31 stations along its route. All the stations start operating at 6.00 am daily. Closing times varies based on respective stations. A single journey is priced at RM1.20 and upwards. Helpline: 1800-82-6868',
-    ),
-    ItemData(
-      'KTM Komuter',
-      'https://www.kltheguide.com.my/assets/img/highlights/getaround/3.-ktm-komuter.png',
-      'The oldest rail system in Malaysia, the KTM is catered more for the locals rather than tourists. It acts as a cheaper travel alternative to longer destinations. The lines are divided into two; Rawang - Pelabuhan Klang and Batu Caves - Seremban. Helpline: 03-2267 1200',
-    ),
-    ItemData(
-      'KL Monorail',
-      'https://www.kltheguide.com.my/assets/img/highlights/getaround/4.-kl-monorail.png',
-      'The KL Monorail is a simple yet well-connected train system which runs between Kuala Lumpur’s transport hub KL Sentral and Titiwangsa in the heart of KL. It acts as a bridge between Kuala Lumpur city centre and the inner areas of Kuala Lumpur. The KL Monorail starts operations at 6.00 am and ceases at 12.00 am. Helpline: 03-2267 9888',
-    ),
-    ItemData(
-      'RapidKL Bus',
-      'https://www.kltheguide.com.my/assets/img/highlights/getaround/5.-rapid-kl-bus.png',
-      'The RapidKL Bus is commonly seen at most train stations and usually acts as a transit-based mode of transportation for passengers to directly get to their preferred destinations. Each trip on the bus can cost up to RM5.00 per trip which can be paid by using exact change or through tapping your Touch n’ Go card upon entry and exit. Helpline: 03-7885 2585',
-    ),
-  ];
+  final BuildContext context;
+
+  MyList({required this.context}); // Constructor accepting context
+
+  final List<ItemData> items = [];
 
   @override
   Widget build(BuildContext context) {
+    // Initializing items inside build where context is accessible
+    final List<ItemData> items = [
+      ItemData(
+        S.of(this.context).lrtTitle,
+        'https://www.kltheguide.com.my/assets/img/highlights/getaround/1.-lrt.png',
+        S.of(this.context).lrtDescription,
+      ),
+      ItemData(
+        S.of(this.context).mrtTitle,
+        'https://www.kltheguide.com.my/assets/img/highlights/getaround/2.-mrt.png',
+        S.of(this.context).mrtDescription,
+      ),
+      ItemData(
+        S.of(this.context).ktmKomuterTitle,
+        'https://www.kltheguide.com.my/assets/img/highlights/getaround/3.-ktm-komuter.png',
+        S.of(this.context).ktmKomuterDescription,
+      ),
+      ItemData(
+        S.of(this.context).klMonorailTitle,
+        'https://www.kltheguide.com.my/assets/img/highlights/getaround/4.-kl-monorail.png',
+        S.of(this.context).klMonorailDescription,
+      ),
+      ItemData(
+        S.of(this.context).rapidKLBusTitle,
+        'https://www.kltheguide.com.my/assets/img/highlights/getaround/5.-rapid-kl-bus.png',
+        S.of(this.context).rapidKLBusDescription,
+      ),
+    ];
+
     return ListView.builder(
       itemCount: items.length,
       itemBuilder: (context, index) {
@@ -195,8 +205,8 @@ class _TravelTipsState extends State<TravelTips> {
         iconTheme: const IconThemeData(
           color: Colors.white, //change your color here
         ),
-        title: const Text("Travel Tips", style: TextStyle(color: Colors.white)),
-        // foregroundColor: const Color.fromARGB(255, 0, 71, 133),
+        title: Text(S.of(context).travelTips,
+            style: const TextStyle(color: Colors.white)),
         backgroundColor: const Color.fromARGB(255, 0, 71, 133),
         actions: const <Widget>[
           AppBarMore(),
@@ -210,27 +220,27 @@ class _TravelTipsState extends State<TravelTips> {
 class MyList2 extends StatelessWidget {
   final List<ItemData2> items = [
     ItemData2(
-      'Weather',
+      'Weather', // This will be replaced by S.of(context).weather
       'https://www.kltheguide.com.my/assets/img/highlights/traveltips/weather.png',
-      'The climate in KL is quite humid all year-round. Anyone travelling to KL must always be ready for rains at any time of the year. Regardless, the best time to visit KL is from May-July or December-February.\nThe weather can be pretty hot between March - April. Due to the forest fires from Sumatera which typically happens between June - August, the dust particles may cast a haze over KL thus making it not an ideal time to visit the city.',
+      'The climate in KL is quite humid all year-round. Anyone travelling to KL must always be ready for rains at any time of the year. Regardless, the best time to visit KL is from May-July or December-February.\nThe weather can be pretty hot between March - April. Due to the forest fires from Sumatera which typically happens between June - August, the dust particles may cast a haze over KL thus making it not an ideal time to visit the city.', // Will be replaced with localized text
       'https://www.ventusky.com/',
     ),
     ItemData2(
-      'Time Zone',
+      'Time Zone', // This will be replaced by S.of(context).timeZone
       'https://www.kltheguide.com.my/assets/img/highlights/traveltips/timezone.png',
-      'Standard Malaysian time is 8 hours ahead of GMT (GMT +8).Standard Malaysian time is 8 hours ahead of GMT (GMT +8).',
+      'Standard Malaysian time is 8 hours ahead of GMT (GMT +8).', // Will be replaced with localized text
       'https://www.timeanddate.com/',
     ),
     ItemData2(
-      'Currency',
+      'Currency', // This will be replaced by S.of(context).currency
       'https://www.kltheguide.com.my/assets/img/highlights/traveltips/currency-code.png',
-      'Malaysia’s currency unit is divided into two. The term Ringgit Malaysia (RM) is used to refer to paper money. The denominations are RM1, RM5, RM10, RM 20, RM 50 and RM100. Whereas the coins are referred to as sen (cents). The denominations are 5 sen, 10 sen, 20 sen and 50 sen.\n',
+      'Malaysia’s currency unit is divided into two. The term Ringgit Malaysia (RM) is used to refer to paper money. The denominations are RM1, RM5, RM10, RM 20, RM 50 and RM100. Whereas the coins are referred to as sen (cents). The denominations are 5 sen, 10 sen, 20 sen and 50 sen.', // Will be replaced with localized text
       'https://www.xe.com/',
     ),
     ItemData2(
-      'Visa and Passport',
+      'Visa and Passport', // This will be replaced by S.of(context).visaAndPassport
       'https://www.kltheguide.com.my/assets/img/highlights/traveltips/visa-and-passports.png',
-      'Passports must be valid for at least 6 months at the time of entry. Visa requirements vary from time to time, so it is best to check with the Malaysian embassy or consulate or the Immigration Department website.',
+      'Passports must be valid for at least 6 months at the time of entry. Visa requirements vary from time to time, so it is best to check with the Malaysian embassy or consulate or the Immigration Department website.', // Will be replaced with localized text
       'https://www.imi.gov.my/',
     ),
   ];
@@ -262,7 +272,8 @@ class MyList2 extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        items[index].text,
+                        _getLocalizedTitle(
+                            index, context), // Using localized titles
                         style: const TextStyle(
                           fontSize: 20.0, // Adjust the font size as needed
                           fontWeight: FontWeight.bold,
@@ -271,7 +282,8 @@ class MyList2 extends StatelessWidget {
                       const SizedBox(
                           height: 8.0), // Add spacing between title and content
                       Text(
-                        items[index].content,
+                        _getLocalizedContent(
+                            index, context), // Using localized content
                         style: const TextStyle(
                             fontSize: 16.0), // Adjust the font size as needed
                       ),
@@ -284,6 +296,38 @@ class MyList2 extends StatelessWidget {
         );
       },
     );
+  }
+
+  // Helper function to get localized title based on index
+  String _getLocalizedTitle(int index, BuildContext context) {
+    switch (index) {
+      case 0:
+        return S.of(context).weatherTitle;
+      case 1:
+        return S.of(context).timeZoneTitle;
+      case 2:
+        return S.of(context).currencyTitle;
+      case 3:
+        return S.of(context).visaAndPassportTitle;
+      default:
+        return '';
+    }
+  }
+
+  // Helper function to get localized content based on index
+  String _getLocalizedContent(int index, BuildContext context) {
+    switch (index) {
+      case 0:
+        return S.of(context).weatherDescription;
+      case 1:
+        return S.of(context).timeZoneDescription;
+      case 2:
+        return S.of(context).currencyDescription;
+      case 3:
+        return S.of(context).visaAndPassportDescription;
+      default:
+        return '';
+    }
   }
 }
 
@@ -309,38 +353,6 @@ class ApiData {
     );
   }
 }
-
-// Future<List<ApiData>> fetchData2(bodyparse, category) async {
-//   final response = await http.post(
-//     Uri.parse('https://www.kltheguide.com.my/admin/functions.php'),
-//     body: {bodyparse: bodyparse, 'category': category},
-//   );
-
-//   if (response.statusCode == 200) {
-//     // Check if the response is JSON by inspecting the Content-Type header
-//     if (response.headers['content-type']?.contains('application/json') ==
-//         true) {
-//       // Try to parse the response body as JSON
-//       try {
-//         final List<dynamic> jsonData = jsonDecode(response.body);
-//         return jsonData.map((json) => ApiData.fromJson(json)).toList();
-//       } catch (e) {
-//         // Handle JSON decoding error
-//         throw Exception('Failed to decode JSON: $e');
-//       }
-//     } else {
-//       // Log the response body for inspection
-//       print('Unexpected content type: ${response.headers['content-type']}');
-//       print('Response body: ${response.body}');
-
-//       // Handle non-JSON response
-//       throw Exception(
-//           'Unexpected response format: ${response.headers['content-type']}');
-//     }
-//   } else {
-//     throw Exception('Failed to load data. Status code: ${response.statusCode}');
-//   }
-// }
 
 class CardListWidget extends StatelessWidget {
   final List<ApiData> data;
@@ -446,99 +458,6 @@ class CardItem extends StatelessWidget {
     );
   }
 }
-
-// class GetAround2 extends StatefulWidget {
-//   const GetAround2({super.key});
-
-//   @override
-//   _GetAround2State createState() => _GetAround2State();
-// }
-
-// class _GetAround2State extends State<GetAround2> {
-//   late Future<List<ApiData>> _data;
-
-//   // @override
-//   // void initState() {
-//   //   super.initState();
-//   //   _data = fetchData2('appHighlights', 'traveltips');
-//   // }
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//       appBar: AppBar(
-//         iconTheme: const IconThemeData(
-//           color: Colors.white, //change your color here
-//         ),
-//         title: const Text("Getting Around KL",
-//             style: TextStyle(color: Colors.white)),
-//         // foregroundColor: const Color.fromARGB(255, 0, 71, 133),
-//         backgroundColor: const Color.fromARGB(255, 0, 71, 133),
-//         actions: const <Widget>[
-//           AppBarMore(),
-//         ],
-//       ),
-//       body: FutureBuilder<List<ApiData>>(
-//         future: _data,
-//         builder: (context, snapshot) {
-//           if (snapshot.connectionState == ConnectionState.waiting) {
-//             return const Center(child: CircularProgressIndicator());
-//           } else if (snapshot.hasError) {
-//             return Center(child: Text('Error: ${snapshot.error}'));
-//           } else {
-//             return CardListWidget(data: snapshot.data ?? []);
-//           }
-//         },
-//       ),
-//     );
-//   }
-// }
-
-// class TravelTips2 extends StatefulWidget {
-//   const TravelTips2({super.key});
-
-//   @override
-//   _TravelTips2State createState() => _TravelTips2State();
-// }
-
-// class _TravelTips2State extends State<TravelTips2> {
-//   late Future<List<ApiData>> _data;
-
-//   // @override
-//   // void initState() {
-//   //   super.initState();
-//   //   _data = fetchData2('appHighlights', 'gettingaround');
-//   // }
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//       appBar: AppBar(
-//         iconTheme: const IconThemeData(
-//           color: Colors.white, //change your color here
-//         ),
-//         title: const Text("Travel Tips", style: TextStyle(color: Colors.white)),
-//         // foregroundColor: const Color.fromARGB(255, 0, 71, 133),
-//         backgroundColor: const Color.fromARGB(255, 0, 71, 133),
-//         actions: const <Widget>[
-//           AppBarMore(),
-//         ],
-//       ),
-//       body: FutureBuilder<List<ApiData>>(
-//         future: _data,
-//         builder: (context, snapshot) {
-//           if (snapshot.connectionState == ConnectionState.waiting) {
-//             return const Center(child: CircularProgressIndicator());
-//           } else if (snapshot.hasError) {
-//             return Center(child: Text('Error: ${snapshot.error}'));
-//           } else {
-//             return CardListWidget(data: snapshot.data ?? []);
-//           }
-//         },
-//       ),
-//     );
-//   }
-// }
 
 void _launchURL(url) async {
   var url2 = Uri.parse(url);

@@ -1,9 +1,8 @@
-// ignore_for_file: use_key_in_widget_constructors
-
 import 'package:flutter/material.dart';
 import 'package:kltheguide/main.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:package_info_plus/package_info_plus.dart';
+import 'generated/l10n.dart';
 
 class AboutUsPage extends StatelessWidget {
   @override
@@ -13,8 +12,9 @@ class AboutUsPage extends StatelessWidget {
         iconTheme: const IconThemeData(
           color: Colors.white, //change your color here
         ),
-        title: const Text("About Us", style: TextStyle(color: Colors.white)),
-        // foregroundColor: const Color.fromARGB(255, 0, 71, 133),
+        title: Text(S.of(context).aboutUs,
+            style:
+                const TextStyle(color: Colors.white)), // Localized "About Us"
         backgroundColor: const Color.fromARGB(255, 0, 71, 133),
         actions: const <Widget>[
           AppBarMore(),
@@ -29,92 +29,30 @@ class AboutUsPage extends StatelessWidget {
               'assets/images/Logo_100x50.png',
             ),
             const SizedBox(height: 16),
-            const Text(
-              'Our Company',
-              style: TextStyle(
+            Text(
+              S.of(context).ourCompany, // Localized "Our Company"
+              style: const TextStyle(
                 fontSize: 24,
                 fontWeight: FontWeight.bold,
               ),
             ),
             const SizedBox(height: 8),
-            const Text(
-              "KL The Guide is a quarterly guidebook, first published In August 2007. We are a free travel guide book that helps travellers make their travel plans around Malaysia's capital city, Kuala Lumpur. Kl The Guide includes travel tips, places to explore, kid-friendly locations, hotels, and more. With KL The Guide, navigating the city becomes easier.",
+            Text(
+              S
+                  .of(context)
+                  .ourCompanyDescription, // Localized company description
               textAlign: TextAlign.justify,
-              style: TextStyle(fontSize: 16),
+              style: const TextStyle(fontSize: 16),
             ),
             const SizedBox(height: 16),
-            const Text(
-              'Find Us',
-              style: TextStyle(
+            Text(
+              S.of(context).findUs, // Localized "Find Us"
+              style: const TextStyle(
                 fontSize: 24,
                 fontWeight: FontWeight.bold,
               ),
             ),
             const SizedBox(height: 8),
-            // const Text(
-            //   "No.31-2, Block F2, Level 2, Jalan PJU 1/42a, Dataran Prima, 47301 Petaling Jaya, Selangor.",
-            //   textAlign: TextAlign.justify,
-            //   style: TextStyle(fontSize: 16),
-            // ),
-            // const SizedBox(height: 8),
-            // Container(
-            //   child: const Text(
-            //     "Opening Hours:",
-            //     textAlign: TextAlign.start,
-            //     style: TextStyle(fontSize: 16),
-            //   ),
-            // ),
-            // RichText(
-            //   text: const TextSpan(
-            //     text: 'Monday-Friday :',
-            //     style:
-            //         TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
-            //     children: [
-            //       TextSpan(
-            //         text: '9:00AM - 6:00PM',
-            //         style: TextStyle(color: Colors.black),
-            //       ),
-            //     ],
-            //   ),
-            // ),
-            // const SizedBox(height: 8),
-            // RichText(
-            //   text: TextSpan(
-            //     text: 'Mobile Num.: ',
-            //     style: const TextStyle(
-            //         color: Colors.black, fontWeight: FontWeight.bold),
-            //     children: [
-            //       TextSpan(
-            //         text: '+6012-2200622',
-            //         style: const TextStyle(color: Colors.blue),
-            //         recognizer: TapGestureRecognizer()
-            //           ..onTap = () {
-            //             _launchURL('tel:+60122200622');
-            //           },
-            //       ),
-            //     ],
-            //   ),
-            // ),
-            // const SizedBox(height: 8),
-            // RichText(
-            //   text: TextSpan(
-            //     text: 'Telephone Num.: ',
-            //     style: const TextStyle(
-            //         color: Colors.black, fontWeight: FontWeight.bold),
-            //     children: [
-            //       TextSpan(
-            //         text: '+603-7886 9219',
-            //         style: const TextStyle(color: Colors.blue),
-            //         recognizer: TapGestureRecognizer()
-            //           ..onTap = () {
-            //             _launchURL('tel:+60378869219');
-            //           },
-            //       ),
-            //     ],
-            //   ),
-            // ),
-            const SizedBox(height: 8),
-
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
@@ -154,23 +92,22 @@ class AboutUsPage extends StatelessWidget {
               ],
             ),
             const SizedBox(height: 8),
-
             Center(
               child: FutureBuilder<PackageInfo>(
                 future: PackageInfo.fromPlatform(),
                 builder: (context, snapshot) {
                   if (snapshot.connectionState == ConnectionState.waiting) {
-                    // While waiting for the package info, show a loading indicator
-                    return CircularProgressIndicator();
+                    return const CircularProgressIndicator();
                   } else if (snapshot.hasError) {
-                    // If there's an error, show an error message
-                    return Text('Error: ${snapshot.error}');
+                    return Text(S
+                        .of(context)
+                        .errorLoadingVersion); // Localized error message
                   } else {
-                    // If the package info is available, display the app version
                     String appVersion = snapshot.data!.version;
                     String buildNumber = snapshot.data!.buildNumber;
 
-                    return Text('App Version: $appVersion+$buildNumber');
+                    return Text(
+                        '${S.of(context).appVersion} $appVersion+$buildNumber'); // Localized "App Version"
                   }
                 },
               ),

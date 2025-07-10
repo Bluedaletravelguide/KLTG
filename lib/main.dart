@@ -1,12 +1,10 @@
 // ignore_for_file: constant_identifier_names
-
 import 'dart:math';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:kltheguide/blog_page.dart';
-import 'package:kltheguide/bookmarks_page.dart';
 import 'package:kltheguide/contact_us.dart';
 import 'package:kltheguide/ebook_page.dart';
 import 'package:kltheguide/explorekl.dart';
@@ -20,10 +18,13 @@ import 'package:kltheguide/home_page.dart';
 import 'package:kltheguide/about_us.dart';
 import 'package:flutter_downloader/flutter_downloader.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
+import 'package:kltheguide/voucher.dart';
 import 'package:url_launcher/url_launcher.dart';
-// import 'package:flutter_native_splash/flutter_native_splash.dart';
-// import 'package:shared_preferences/shared_preferences.dart';
 import 'package:package_info_plus/package_info_plus.dart';
+// import 'event.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+import 'generated/l10n.dart';
+import 'package:in_app_update/in_app_update.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -41,10 +42,26 @@ void main() async {
   runApp(MyApp());
 }
 
-class MyApp extends StatelessWidget {
-  MyApp({super.key});
+class MyApp extends StatefulWidget {
+  // Add setLocale method to update locale dynamically
+  static void setLocale(BuildContext context, Locale newLocale) {
+    _MyAppState? state = context.findAncestorStateOfType<_MyAppState>();
+    state?.changeLocale(newLocale);
+  }
 
-  // This widget is the root of your application.
+  @override
+  _MyAppState createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  Locale? _locale;
+
+  // Method to change the locale
+  void changeLocale(Locale locale) {
+    setState(() {
+      _locale = locale;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -52,34 +69,28 @@ class MyApp extends StatelessWidget {
       title: 'KL The Guide',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        // This is the theme of your application.
-        //
-        // TRY THIS: Try running your application with "flutter run". You'll see
-        // the application has a blue toolbar. Then, without quitting the app,
-        // try changing the seedColor in the colorScheme below to Colors.green
-        // and then invoke "hot reload" (save your changes or press the "hot
-        // reload" button in a Flutter-supported IDE, or press "r" if you used
-        // the command line to start the app).
-        //
-        // Notice that the counter didn't reset back to zero; the application
-        // state is not lost during the reload. To reset the state, use hot
-        // restart instead.
-        //
-        // This works for code too, not just values: Most code changes can be
-        // tested with just a hot reload.
-
-        // primarySwatch: const Colors(0xFF343484),
         colorScheme: ColorScheme.fromSeed(
             seedColor: const Color.fromARGB(255, 0, 71, 133)),
         useMaterial3: true,
       ),
+      // Add locale to MaterialApp
+      locale: _locale,
+      // Add supported locales
+      supportedLocales: S.delegate.supportedLocales,
+      // Add localization delegates
+      localizationsDelegates: const [
+        S.delegate, // Localization delegate for the app
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+      ],
       home: const MyHomePage(title: 'Home'),
       routes: {
         '/highlights-0': (context) => GlancePage(),
         '/highlights-1': (context) => GetAround(),
         '/highlights-2': (context) => const TravelTips(),
         '/rmd-0': (context) => ExploreKL(),
-        '/explorekl-0': (context) => const ExploreKL_WTD(),
+        '/explorekl-0': (context) => ExploreKL_WTD(),
         '/explorekl-1': (context) => const ExploreKL_HS2(),
         '/explorekl-2': (context) => const ExploreKL_PWOR2(),
         '/explorekl-3': (context) => const ExploreKL_WTE2(),
@@ -92,11 +103,11 @@ class MyApp extends StatelessWidget {
         '/rmd-3': (context) => const Spa(),
         '/rmd-4': (context) => const MedicalT(),
         '/rmd-5': (context) => BeyondKL(),
-        '/beyondkl-0': (context) => const BeyondKL_I(),
-        '/beyondkl-1': (context) => const BeyondKL_HS(),
-        '/beyondkl-2': (context) => const BeyondKL_W(),
-        '/beyondkl-3': (context) => const BeyondKL_H(),
-        '/beyondkl-4': (context) => const BeyondKL_ES(),
+        '/beyondkl-0': (context) => BeyondKL_I(),
+        '/beyondkl-1': (context) => BeyondKL_HS(),
+        '/beyondkl-2': (context) => BeyondKL_W(),
+        '/beyondkl-3': (context) => BeyondKL_H(),
+        '/beyondkl-4': (context) => BeyondKL_ES(),
         '/ebook-0': (context) =>
             const Ebook_view(category: 'kltg', name: 'KL The Guide'),
         '/ebook-1': (context) =>
@@ -133,15 +144,6 @@ class MyApp extends StatelessWidget {
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
 
-  // This widget is the home page of your application. It is stateful, meaning
-  // that it has a State object (defined below) that contains fields that affect
-  // how it looks.
-
-  // This class is the configuration for the state. It holds the values (in this
-  // case the title) provided by the parent (in this case the App widget) and
-  // used by the build method of the State. Fields in a Widget subclass are
-  // always marked "final".
-
   final String title;
 
   @override
@@ -150,6 +152,51 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver {
   int currentPageIndex = 0;
+
+  void _selectLanguage(String language) {
+    setState(() {
+      Locale newLocale;
+      Map<String, Locale> localeMap = {
+        'ms': Locale('ms', 'MY'), // Malay
+        'zh': Locale('zh', 'CN'), // Mandarin
+        'ta': Locale('ta', 'IN'), // Tamil
+        'hi': Locale('hi', 'IN'), // Hindi
+        'th': Locale('th', 'TH'), // Thai
+        'fil': Locale('fil', 'FIL'), // Filipino
+        'id': Locale('id', 'ID'), // Indonesian
+        'es': Locale('es', 'ES'), // Spanish
+        'pt': Locale('pt', 'BR'), // Portuguese
+        'fr': Locale('fr', 'FR'), // French
+        'ru': Locale('ru', 'RU'), // Russian
+        'en': Locale('en', 'US'), // Default to English
+      };
+      newLocale = localeMap[language] ?? Locale('en', 'US');
+      MyApp.setLocale(context, newLocale);
+    });
+
+    // Show a snackbar to confirm language change
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        content: Text({
+          'ms': 'Bahasa Malaysia',
+          'zh': '中文',
+          'ta': 'தமிழ்',
+          'hi': 'हिंदी',
+          'th': 'ไทย.',
+          'es': 'Español',
+          'fil': 'Filipino',
+          'id': 'Bahasa Indonesia',
+          'pt': 'Português',
+          'fr': 'français',
+          'ru': 'русский',
+          'en': 'English',
+        }[language]!),
+      ),
+    );
+
+    Navigator.pop(context); // Close the drawer after selecting a language
+  }
+
   final String desiredVersion = '1.5.0'; // Replace with your desired version
 
   late BannerAd _bannerAd;
@@ -181,22 +228,79 @@ class _MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver {
         fetchDataFromApi();
       }
     });
+
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      _showVoucherPopup(); // Call the function to show the pop-up on app launch
+    });
+  }
+
+  // Function to display the pop-up message with the "View" button
+  void _showVoucherPopup() {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: const Text('New Vouchers Available!'),
+          content: const Text('New vouchers have been added. Check them out!'),
+          actions: [
+            TextButton(
+              onPressed: () {
+                Navigator.of(context).pop(); // Close the dialog
+              },
+              child: const Text('Cancel'),
+            ),
+            TextButton(
+              onPressed: () {
+                Navigator.of(context).pop(); // Close the dialog first
+                _navigateToVoucherScreen(); // Then navigate to VoucherScreen
+              },
+              child: const Text('View'),
+            ),
+          ],
+        );
+      },
+    );
+  }
+
+  // Function to navigate to the VoucherScreen
+  void _navigateToVoucherScreen() {
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => const VoucherScreen()),
+    );
   }
 
   Future<void> _checkVersionAndShowDialog() async {
+    // Check for an update using Google's In-App Update API
+    try {
+      AppUpdateInfo updateInfo = await InAppUpdate.checkForUpdate();
+      if (updateInfo.updateAvailability == UpdateAvailability.updateAvailable) {
+        if (updateInfo.immediateUpdateAllowed) {
+          // Trigger immediate update
+          InAppUpdate.performImmediateUpdate();
+        } else if (updateInfo.flexibleUpdateAllowed) {
+          // Trigger flexible update
+          InAppUpdate.startFlexibleUpdate().then((_) {
+            InAppUpdate.completeFlexibleUpdate();
+          });
+        }
+      }
+    } catch (e) {
+      print("Error checking for updates: $e");
+    }
+
+    // Custom version check remains (if needed)
     final packageInfo = await PackageInfo.fromPlatform();
     final currentVersion = packageInfo.version;
     final currentBuildNumber = packageInfo.buildNumber;
 
-    // Define your desired version and build
     final desiredVersionAndBuild = await _fetchDesiredVersionAndBuild();
     final String desiredVersion = desiredVersionAndBuild['version']!;
     final String desiredBuildNumber = desiredVersionAndBuild['buildNumber']!;
 
     if (_isUpdateRequired(currentVersion, desiredVersion, currentBuildNumber,
         desiredBuildNumber)) {
-      // Versions do not match, show AlertDialog
-      _showUpdateDialog(context);
+      _showUpdateDialog(context); // Custom update dialog
     }
   }
 
@@ -357,91 +461,18 @@ class _MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver {
 
       if (response.statusCode == 200) {
         final jsonData = json.decode(response.body);
-        var range = jsonData['range'];
-        var start = jsonData['start'];
         var admobrandomswitch = jsonData['admobrandomswitch'];
         print(isDialogShown);
-
-        print(range);
-        print(start);
-        print(admobrandomswitch);
         int? switch2 = int.parse(admobrandomswitch);
+
+        // Set a fixed delay of 30 seconds
+        int delayInSeconds = 30;
 
         final Random random = Random();
 
         if (switch2 == 1) {
-          var testrando = random.nextInt(5);
-          print(testrando);
-          print('switdch 1');
-
-          if (testrando == 1) {
-            int? rangeval;
-            int? startval;
-
-            try {
-              rangeval = int.parse(range);
-              startval = int.parse(start);
-            } catch (e) {
-              print('Error parsing integers: $e');
-            }
-
-            if (rangeval != null && startval != null) {
-              int delayInSeconds = random.nextInt(rangeval) + startval;
-              print('Delay: $delayInSeconds seconds');
-              if (isDialogShown) {
-                _showWelcomeDialog(delayInSeconds);
-              } else {
-                _showWelcomeDialog(0);
-                isDialogShown = true;
-              }
-            } else {
-              print('Invalid integer values received from the API.');
-            }
-          } else {
-            int? rangeval;
-            int? startval;
-
-            try {
-              rangeval = int.parse(range);
-              startval = int.parse(start);
-            } catch (e) {
-              print('Error parsing integers: $e');
-            }
-
-            if (rangeval != null && startval != null) {
-              int delayInSeconds = random.nextInt(rangeval) + startval;
-              print('Delay: $delayInSeconds seconds');
-
-              final List<ImageData> imageDatas = await fetchImageUrls();
-              if (imageDatas.isNotEmpty) {
-                final randomImageData =
-                    imageDatas[random.nextInt(imageDatas.length)];
-                if (isDialogShown) {
-                  _showRandomPopup(delayInSeconds, randomImageData);
-                } else {
-                  _showRandomPopup(0, randomImageData);
-                  isDialogShown = true;
-                }
-              }
-            } else {
-              print('Invalid integer values received from the API.');
-            }
-          }
-        } else if (switch2 == 2) {
-          print('switdch 2');
-          int? rangeval;
-          int? startval;
-
-          try {
-            rangeval = int.parse(range);
-            startval = int.parse(start);
-          } catch (e) {
-            print('Error parsing integers: $e');
-          }
-
-          if (rangeval != null && startval != null) {
-            int delayInSeconds = random.nextInt(rangeval) + startval;
-            print('Delay: $delayInSeconds seconds');
+          if (random.nextInt(5) == 1) {
+            // Show the AdMob ad
             if (isDialogShown) {
               _showWelcomeDialog(delayInSeconds);
             } else {
@@ -449,26 +480,7 @@ class _MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver {
               isDialogShown = true;
             }
           } else {
-            print('Invalid integer values received from the API.');
-          }
-        } else {
-          print('switdch 0');
-
-          // Use error handling to parse integers
-          int? rangeval;
-          int? startval;
-
-          try {
-            rangeval = int.parse(range);
-            startval = int.parse(start);
-          } catch (e) {
-            print('Error parsing integers: $e');
-          }
-
-          if (rangeval != null && startval != null) {
-            int delayInSeconds = random.nextInt(rangeval) + startval;
-            print('Delay: $delayInSeconds seconds');
-
+            // Show custom ads with a fixed delay of 7 seconds
             final List<ImageData> imageDatas = await fetchImageUrls();
             if (imageDatas.isNotEmpty) {
               final randomImageData =
@@ -480,15 +492,26 @@ class _MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver {
                 isDialogShown = true;
               }
             }
-          } else {
-            print('Invalid integer values received from the API.');
+          }
+        } else {
+          // Handle cases when 'switch2' is not 1
+          final List<ImageData> imageDatas = await fetchImageUrls();
+          if (imageDatas.isNotEmpty) {
+            final randomImageData =
+                imageDatas[random.nextInt(imageDatas.length)];
+            if (isDialogShown) {
+              _showRandomPopup(delayInSeconds, randomImageData);
+            } else {
+              _showRandomPopup(0, randomImageData);
+              isDialogShown = true;
+            }
           }
         }
       } else {
         throw Exception('Failed to load data from the API');
       }
     } catch (e) {
-      print('Error api : $e');
+      print('Error fetching data from API: $e');
     }
   }
 
@@ -609,11 +632,79 @@ class _MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver {
         appBar: AppBar(
           title:
               const Text("KL THE GUIDE", style: TextStyle(color: Colors.white)),
-          // foregroundColor: const Color.fromARGB(255, 0, 71, 133),
           backgroundColor: const Color.fromARGB(255, 0, 71, 133),
+          iconTheme: const IconThemeData(color: Colors.white),
           actions: const <Widget>[
             AppBarMore(),
           ],
+        ),
+        // Move the drawer here inside the Scaffold
+        drawer: Drawer(
+          child: ListView(
+            padding: EdgeInsets.zero,
+            children: [
+              DrawerHeader(
+                decoration: const BoxDecoration(
+                  color: Color.fromARGB(255, 0, 71, 133),
+                ),
+                child: Text(
+                  S.of(context).pickALanguage,
+                  style: const TextStyle(
+                    color: Colors.white,
+                    fontSize: 24,
+                  ),
+                ),
+              ),
+              ListTile(
+                title: const Text('Bahasa Malaysia'),
+                onTap: () => _selectLanguage('ms'),
+              ),
+              ListTile(
+                title: const Text('English'),
+                onTap: () => _selectLanguage('en'),
+              ),
+              ListTile(
+                title: const Text('Mandarin'),
+                onTap: () => _selectLanguage('zh'),
+              ),
+              ListTile(
+                title: const Text('Tamil'),
+                onTap: () => _selectLanguage('ta'),
+              ),
+              ListTile(
+                title: const Text('Hindi'),
+                onTap: () => _selectLanguage('hi'),
+              ),
+              ListTile(
+                title: const Text('Thai'),
+                onTap: () => _selectLanguage('th'),
+              ),
+              ListTile(
+                title: const Text('Tagalog'),
+                onTap: () => _selectLanguage('fil'),
+              ),
+              ListTile(
+                title: const Text('Bahasa Indonesia'),
+                onTap: () => _selectLanguage('id'),
+              ),
+              ListTile(
+                title: const Text('Spanish'),
+                onTap: () => _selectLanguage('es'),
+              ),
+              ListTile(
+                title: const Text('Portuguese'),
+                onTap: () => _selectLanguage('pt'),
+              ),
+              ListTile(
+                title: const Text('French'),
+                onTap: () => _selectLanguage('fr'),
+              ),
+              ListTile(
+                title: const Text('Russian'),
+                onTap: () => _selectLanguage('ru'),
+              ),
+            ],
+          ),
         ),
         bottomNavigationBar: NavigationBar(
           onDestinationSelected: (int index) {
@@ -621,36 +712,41 @@ class _MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver {
               currentPageIndex = index;
             });
           },
-          // indicatorColor: const Color.fromARGB(255, 0, 0, 0),
           selectedIndex: currentPageIndex,
-          destinations: const <Widget>[
+          destinations: <Widget>[
             NavigationDestination(
                 selectedIcon:
                     Icon(Icons.home, color: Color.fromARGB(255, 0, 71, 133)),
                 icon: Icon(Icons.home_outlined),
-                label: 'Home'),
-            NavigationDestination(
-                selectedIcon: Icon(Icons.bookmark,
-                    color: Color.fromARGB(255, 0, 71, 133)),
-                icon: Icon(Icons.bookmark_border_outlined),
-                label: 'Bookmarks'),
+                label: S.of(context).home),
             NavigationDestination(
                 selectedIcon:
                     Icon(Icons.article, color: Color.fromARGB(255, 0, 71, 133)),
                 icon: Icon(Icons.article_outlined),
-                label: 'Blog'),
+                label: S.of(context).blog),
             NavigationDestination(
                 selectedIcon: Icon(Icons.menu_book,
                     color: Color.fromARGB(255, 0, 71, 133)),
                 icon: Icon(Icons.menu_book_outlined),
-                label: 'E-Book'),
+                label: S.of(context).ebook),
+            // NavigationDestination(
+            //     selectedIcon:
+            //         Icon(Icons.event, color: Color.fromARGB(255, 0, 71, 133)),
+            //     icon: Icon(Icons.event_available_outlined),
+            //     label: S.of(context).EventScreen),
+            NavigationDestination(
+                selectedIcon: Icon(Icons.discount,
+                    color: Color.fromARGB(255, 0, 71, 133)),
+                icon: Icon(Icons.discount_outlined),
+                label: S.of(context).Contest),
           ],
         ),
         body: [
           HomeScreen(),
-          BookmarkPage(),
           const BlogListScreen(),
           Ebook(),
+          // EventScreen(),
+          VoucherScreen(),
         ][currentPageIndex],
       ),
     );
@@ -667,11 +763,11 @@ class AppBarMore extends StatelessWidget {
       color: Colors.white,
       onSelected: (value) {
         // Handle the item selection here.
-        if (value == 'Contact Us') {
+        if (value == S.of(context).contactUs) {
           Navigator.of(context).push(MaterialPageRoute(
             builder: (context) => ContactUsPage(),
           ));
-        } else if (value == 'About Us') {
+        } else if (value == S.of(context).aboutUs) {
           Navigator.of(context).push(MaterialPageRoute(
             builder: (context) => AboutUsPage(),
           ));
@@ -680,13 +776,13 @@ class AppBarMore extends StatelessWidget {
       },
       itemBuilder: (BuildContext context) {
         return <PopupMenuEntry<String>>[
-          const PopupMenuItem<String>(
-            value: 'About Us',
-            child: Text('About Us'),
+          PopupMenuItem<String>(
+            value: S.of(context).aboutUs,
+            child: Text(S.of(context).aboutUs),
           ),
-          const PopupMenuItem<String>(
-            value: 'Contact Us',
-            child: Text('Contact Us'),
+          PopupMenuItem<String>(
+            value: S.of(context).contactUs,
+            child: Text(S.of(context).contactUs),
           ),
           // Add more PopupMenuItem entries for additional pages.
         ];

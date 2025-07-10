@@ -97,6 +97,7 @@ class _BlogListScreenState extends State<BlogListScreen> {
       });
     }
   }
+
   void showSnackBar(BuildContext context, String message) {
     final snackBar = SnackBar(
       content: Text(message),
@@ -106,6 +107,7 @@ class _BlogListScreenState extends State<BlogListScreen> {
 
     ScaffoldMessenger.of(context).showSnackBar(snackBar);
   }
+
   Future<void> initPrefs() async {
     prefs = await SharedPreferences.getInstance();
   }
@@ -129,7 +131,6 @@ class _BlogListScreenState extends State<BlogListScreen> {
         addBookmark(post);
         prefs.setBool(postId, true);
         showSnackBar(context, 'Bookmark added');
-
       }
     });
   }
@@ -154,12 +155,12 @@ class _BlogListScreenState extends State<BlogListScreen> {
   }
 
   void _navigateToArticlePage(dynamic article) {
-    Navigator.push(
-      context,
-      MaterialPageRoute(
-        builder: (context) => ArticlePage(article: article),
-      ),
-    );
+    // Navigator.push(
+    //   context,
+    //   MaterialPageRoute(
+    //     builder: (context) => ArticlePage(article: article),
+    //   ),
+    // );
   }
 
   @override
@@ -218,9 +219,9 @@ class _BlogListScreenState extends State<BlogListScreen> {
                   ListTile(
                     title: Text(post['title']),
                     subtitle: Text(formattedPublishedDate),
-                    trailing: isBookmarked(post)
-                        ? const Icon(Icons.bookmark, color: Colors.blue)
-                        : const Icon(Icons.bookmark_border),
+                    // trailing: isBookmarked(post)
+                    //     ? const Icon(Icons.bookmark, color: Colors.blue)
+                    //     : const Icon(Icons.bookmark_border),
                   ),
                 ],
               ),
@@ -261,7 +262,6 @@ class _ArticlePageState extends State<ArticlePage> {
 
     // print(plainText);
 
-
     return Scaffold(
       appBar: AppBar(
         iconTheme: const IconThemeData(
@@ -276,9 +276,7 @@ class _ArticlePageState extends State<ArticlePage> {
         ],
       ),
       body: InAppWebView(
-        onWebViewCreated: (controller) {
-        },
-        
+        onWebViewCreated: (controller) {},
         onLoadStop: (controller, url) async {
           // Get the initial HTML content and print it
         },
@@ -289,7 +287,7 @@ class _ArticlePageState extends State<ArticlePage> {
         <head>
                 <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      
+
           <style>
             /* CSS styles for images */
             img {
@@ -304,7 +302,7 @@ class _ArticlePageState extends State<ArticlePage> {
         <body>
           <!-- Inject your Blogger API content here -->
                   $plainText
-      
+
         </body>
       </html>
         ''',

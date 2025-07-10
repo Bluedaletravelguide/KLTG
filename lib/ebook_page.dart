@@ -9,7 +9,6 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:kltheguide/main.dart';
 import 'package:flutter_cached_pdfview/flutter_cached_pdfview.dart';
 
-
 class ApiData {
   final String title;
   final String content;
@@ -69,7 +68,7 @@ class CardListWidget extends StatelessWidget {
       itemCount: data.length,
       itemBuilder: (context, index) {
         final item = data[index];
-print(item.image);
+        print(item.image);
         return GestureDetector(
           onTap: () {
             if (item.content != '') {
@@ -116,7 +115,6 @@ print(item.image);
                       const LinearProgressIndicator(),
                   errorWidget: (context, url, error) => const Icon(Icons
                       .error), // Display an error icon if the image fails to load
-                  
                 ),
                 Padding(
                   padding: const EdgeInsets.all(16.0),
@@ -376,8 +374,6 @@ class PdfViewerPage extends StatefulWidget {
 class _PdfViewerPageState extends State<PdfViewerPage> {
   String? filePath;
 
-
-  
   @override
   void initState() {
     super.initState();
@@ -401,11 +397,8 @@ class _PdfViewerPageState extends State<PdfViewerPage> {
       ),
       body: const PDF(
         swipeHorizontal: true,
-
-
       ).cachedFromUrl(
         widget.pdfUrl,
-        
         placeholder: (double progress) => Center(child: Text('$progress %')),
         errorWidget: (dynamic error) => Center(child: Text(error.toString())),
       ),
@@ -436,7 +429,7 @@ class _MyAdBannerState extends State<MyAdBanner> {
     // Create a BannerAd instance
     _bannerAd = BannerAd(
       adUnitId:
-          'ca-app-pub-3940256099942544/6300978111', // Replace with your Ad Unit ID
+          'ca-app-pub-7002644831588730/4427349537', // Replace with your Ad Unit ID
       size: AdSize.fullBanner,
       request: const AdRequest(),
       listener: BannerAdListener(
