@@ -65,73 +65,191 @@ class CardListWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
+      padding: const EdgeInsets.all(16),
       itemCount: data.length,
       itemBuilder: (context, index) {
         final item = data[index];
         print(item.image);
-        return GestureDetector(
-          onTap: () {
-            if (item.content != '') {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => PdfViewerPage(
-                    pdfUrl: item.content,
-                    pdfTitle: item.title,
+        return Padding(
+          padding: const EdgeInsets.only(bottom: 20),
+          child: GestureDetector(
+            onTap: () {
+              if (item.content != '') {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => PdfViewerPage(
+                      pdfUrl: item.content,
+                      pdfTitle: item.title,
+                    ),
                   ),
-                ),
-              );
-            } else {
-              final snackBar = SnackBar(
-                content: const Text('PDF not available'),
-                behavior: SnackBarBehavior.floating,
-                duration: const Duration(
-                    seconds:
-                        3), // Duration for how long the Snackbar is displayed
-                action: SnackBarAction(
-                  label: 'Close',
-                  onPressed: () {
-                    // You can add custom actions when the action button is pressed
-                    ScaffoldMessenger.of(context).hideCurrentSnackBar();
-                  },
-                ),
-              );
-
-              ScaffoldMessenger.of(context).showSnackBar(snackBar);
-            }
-          },
-          child: Card(
-            elevation: 4.0,
-            margin: const EdgeInsets.all(16.0),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                CachedNetworkImage(
-                  imageUrl: item.image,
-                  fit: BoxFit.cover,
-                  height: 200,
-                  width: double.infinity,
-                  placeholder: (context, url) =>
-                      const LinearProgressIndicator(),
-                  errorWidget: (context, url, error) => const Icon(Icons
-                      .error), // Display an error icon if the image fails to load
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(16.0),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
+                );
+              } else {
+                final snackBar = SnackBar(
+                  content: Row(
                     children: [
-                      Text(
-                        item.title,
-                        style: const TextStyle(
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
+                      const Icon(Icons.picture_as_pdf_outlined,
+                          color: Colors.white),
+                      const SizedBox(width: 12),
+                      const Text('PDF not available'),
                     ],
                   ),
-                ),
-              ],
+                  backgroundColor: Colors.red[700],
+                  behavior: SnackBarBehavior.floating,
+                  duration: const Duration(seconds: 3),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                  margin: const EdgeInsets.all(16),
+                  action: SnackBarAction(
+                    label: 'Close',
+                    textColor: Colors.white,
+                    onPressed: () {
+                      ScaffoldMessenger.of(context).hideCurrentSnackBar();
+                    },
+                  ),
+                );
+
+                ScaffoldMessenger.of(context).showSnackBar(snackBar);
+              }
+            },
+            child: Container(
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(20),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black.withOpacity(0.08),
+                    blurRadius: 20,
+                    offset: const Offset(0, 4),
+                  ),
+                ],
+              ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Stack(
+                    children: [
+                      ClipRRect(
+                        borderRadius: const BorderRadius.only(
+                          topLeft: Radius.circular(20),
+                          topRight: Radius.circular(20),
+                        ),
+                        child: CachedNetworkImage(
+                          imageUrl: item.image,
+                          fit: BoxFit.cover,
+                          height: 220,
+                          width: double.infinity,
+                          placeholder: (context, url) => Container(
+                            height: 220,
+                            decoration: BoxDecoration(
+                              gradient: LinearGradient(
+                                begin: Alignment.topLeft,
+                                end: Alignment.bottomRight,
+                                colors: [
+                                  Colors.grey[200]!,
+                                  Colors.grey[100]!,
+                                ],
+                              ),
+                            ),
+                            child: Center(
+                              child: CircularProgressIndicator(
+                                valueColor: AlwaysStoppedAnimation<Color>(
+                                  const Color.fromARGB(255, 0, 71, 133),
+                                ),
+                              ),
+                            ),
+                          ),
+                          errorWidget: (context, url, error) => Container(
+                            height: 220,
+                            color: Colors.grey[200],
+                            child: const Icon(
+                              Icons.broken_image_outlined,
+                              size: 48,
+                              color: Colors.grey,
+                            ),
+                          ),
+                        ),
+                      ),
+                      if (item.content != '')
+                        Positioned(
+                          top: 12,
+                          right: 12,
+                          child: Container(
+                            padding: const EdgeInsets.symmetric(
+                              horizontal: 12,
+                              vertical: 8,
+                            ),
+                            decoration: BoxDecoration(
+                              color: const Color.fromARGB(255, 0, 71, 133),
+                              borderRadius: BorderRadius.circular(20),
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Colors.black.withOpacity(0.2),
+                                  blurRadius: 8,
+                                  offset: const Offset(0, 2),
+                                ),
+                              ],
+                            ),
+                            child: Row(
+                              mainAxisSize: MainAxisSize.min,
+                              children: [
+                                const Icon(
+                                  Icons.picture_as_pdf,
+                                  color: Colors.white,
+                                  size: 16,
+                                ),
+                                const SizedBox(width: 4),
+                                const Text(
+                                  'PDF',
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 12,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                    ],
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(20),
+                    child: Row(
+                      children: [
+                        Expanded(
+                          child: Text(
+                            item.title,
+                            style: const TextStyle(
+                              fontSize: 18,
+                              fontWeight: FontWeight.bold,
+                              color: Color.fromARGB(255, 0, 71, 133),
+                              height: 1.3,
+                            ),
+                            maxLines: 2,
+                            overflow: TextOverflow.ellipsis,
+                          ),
+                        ),
+                        const SizedBox(width: 12),
+                        Container(
+                          padding: const EdgeInsets.all(8),
+                          decoration: BoxDecoration(
+                            color: const Color.fromARGB(255, 0, 71, 133)
+                                .withOpacity(0.1),
+                            borderRadius: BorderRadius.circular(12),
+                          ),
+                          child: const Icon(
+                            Icons.arrow_forward_ios,
+                            size: 16,
+                            color: Color.fromARGB(255, 0, 71, 133),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
         );
@@ -198,7 +316,6 @@ class Ebook extends StatelessWidget {
       "name": "Kazakhstan The Guide",
       "image": "https://www.kltheguide.com.my/assets/img/ebook/kztg/1.jpg"
     },
-    // Add more items as needed
   ];
 
   Ebook({super.key});
@@ -206,12 +323,23 @@ class Ebook extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: ListView.builder(
+      backgroundColor: Colors.grey[50],
+      body: GridView.builder(
+        padding: const EdgeInsets.all(16),
+        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+          crossAxisCount: 2,
+          childAspectRatio: 0.65,
+          crossAxisSpacing: 16,
+          mainAxisSpacing: 16,
+        ),
         itemCount: dataList.length,
         itemBuilder: (context, index) {
           final item = dataList[index];
           return CardItem(
-              name: item["name"], image: item["image"], index: index);
+            name: item["name"],
+            image: item["image"],
+            index: index,
+          );
         },
       ),
     );
@@ -223,11 +351,12 @@ class CardItem extends StatelessWidget {
   final String image;
   final int index;
 
-  const CardItem(
-      {super.key,
-      required this.name,
-      required this.image,
-      required this.index});
+  const CardItem({
+    super.key,
+    required this.name,
+    required this.image,
+    required this.index,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -236,52 +365,134 @@ class CardItem extends StatelessWidget {
         Navigator.pushNamed(context, '/ebook-$index', arguments: {
           'index': {index}
         });
-        // Navigate to a detail page or perform an action when the card is tapped
-        // You can use Navigator to navigate to a detail page with specific data
-        // For example: Navigator.push(context, MaterialPageRoute(builder: (context) => DetailPage(name: name, image: image)));
-        // showDialog(
-        //   context: context,
-        //   builder: (BuildContext context) {
-        //     return MyAdBanner(
-        //       index: index,
-        //     );
-        //   },
-        // );
       },
-      child: SizedBox(
-        child: Card(
-          color: Colors.transparent,
-          elevation: 0,
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.zero,
-          ),
-          margin: const EdgeInsets.only(top: 8, bottom: 8, left: 8, right: 8),
-          child: Container(
-            height: 250,
-            decoration: BoxDecoration(
-              image: DecorationImage(
-                image: NetworkImage(image),
-
-                fit: BoxFit.contain,
-                // Make the image cover the entire card
-              ),
+      child: Container(
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(20),
+          boxShadow: [
+            BoxShadow(
+              color: Colors.black.withOpacity(0.15),
+              blurRadius: 15,
+              offset: const Offset(0, 5),
             ),
-            child: Center(
-              child: Container(
-                padding: const EdgeInsets.all(8),
-                color: Colors.black
-                    .withOpacity(0.5), // Adjust the opacity as needed
-                child: Text(
-                  name,
-                  textAlign: TextAlign.justify,
-                  style: const TextStyle(
-                    color: Colors.white,
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
+          ],
+        ),
+        child: ClipRRect(
+          borderRadius: BorderRadius.circular(20),
+          child: Stack(
+            fit: StackFit.expand,
+            children: [
+              CachedNetworkImage(
+                imageUrl: image,
+                fit: BoxFit.cover,
+                placeholder: (context, url) => Container(
+                  decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                      begin: Alignment.topLeft,
+                      end: Alignment.bottomRight,
+                      colors: [
+                        Colors.grey[300]!,
+                        Colors.grey[200]!,
+                      ],
+                    ),
+                  ),
+                  child: Center(
+                    child: CircularProgressIndicator(
+                      valueColor: AlwaysStoppedAnimation<Color>(
+                        const Color.fromARGB(255, 0, 71, 133),
+                      ),
+                    ),
+                  ),
+                ),
+                errorWidget: (context, url, error) => Container(
+                  color: Colors.grey[300],
+                  child: const Icon(
+                    Icons.book_outlined,
+                    size: 48,
+                    color: Colors.grey,
                   ),
                 ),
               ),
-            ),
+              Container(
+                decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                    begin: Alignment.topCenter,
+                    end: Alignment.bottomCenter,
+                    colors: [
+                      Colors.transparent,
+                      Colors.black.withOpacity(0.7),
+                    ],
+                    stops: const [0.5, 1.0],
+                  ),
+                ),
+              ),
+              Positioned(
+                bottom: 0,
+                left: 0,
+                right: 0,
+                child: Container(
+                  padding: const EdgeInsets.all(16),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Text(
+                        name,
+                        style: const TextStyle(
+                          color: Colors.white,
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold,
+                          height: 1.2,
+                          shadows: [
+                            Shadow(
+                              color: Colors.black45,
+                              offset: Offset(0, 1),
+                              blurRadius: 4,
+                            ),
+                          ],
+                        ),
+                        maxLines: 2,
+                        overflow: TextOverflow.ellipsis,
+                      ),
+                      const SizedBox(height: 8),
+                      Container(
+                        padding: const EdgeInsets.symmetric(
+                          horizontal: 10,
+                          vertical: 6,
+                        ),
+                        decoration: BoxDecoration(
+                          color: Colors.white.withOpacity(0.25),
+                          borderRadius: BorderRadius.circular(20),
+                          border: Border.all(
+                            color: Colors.white.withOpacity(0.5),
+                            width: 1,
+                          ),
+                        ),
+                        child: Row(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            const Icon(
+                              Icons.auto_stories,
+                              color: Colors.white,
+                              size: 14,
+                            ),
+                            const SizedBox(width: 6),
+                            const Text(
+                              'Read Now',
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 12,
+                                fontWeight: FontWeight.w600,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ],
           ),
         ),
       ),
@@ -294,11 +505,12 @@ class DetailPage extends StatelessWidget {
   final String image;
   final int index;
 
-  const DetailPage(
-      {super.key,
-      required this.name,
-      required this.image,
-      required this.index});
+  const DetailPage({
+    super.key,
+    required this.name,
+    required this.image,
+    required this.index,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -324,23 +536,24 @@ class Ebook_view extends StatefulWidget {
 
 class _Ebook_viewState extends State<Ebook_view> {
   late Future<List<ApiData>> _data;
+
   @override
   void initState() {
     super.initState();
-
     _data = fetchData2('appEbook', widget.category);
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.grey[50],
       appBar: AppBar(
         iconTheme: const IconThemeData(
-          color: Colors.white, //change your color here
+          color: Colors.white,
         ),
-        title: Text(widget.name, style: TextStyle(color: Colors.white)),
-        // foregroundColor: const Color.fromARGB(255, 0, 71, 133),
+        title: Text(widget.name, style: const TextStyle(color: Colors.white)),
         backgroundColor: const Color.fromARGB(255, 0, 71, 133),
+        elevation: 0,
         actions: const <Widget>[
           AppBarMore(),
         ],
@@ -349,9 +562,48 @@ class _Ebook_viewState extends State<Ebook_view> {
         future: _data,
         builder: (context, snapshot) {
           if (snapshot.connectionState == ConnectionState.waiting) {
-            return const Center(child: CircularProgressIndicator());
+            return Center(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  CircularProgressIndicator(
+                    valueColor: AlwaysStoppedAnimation<Color>(
+                      const Color.fromARGB(255, 0, 71, 133),
+                    ),
+                  ),
+                  const SizedBox(height: 16),
+                  Text(
+                    'Loading ebooks...',
+                    style: TextStyle(
+                      color: Colors.grey[600],
+                      fontSize: 16,
+                    ),
+                  ),
+                ],
+              ),
+            );
           } else if (snapshot.hasError) {
-            return Center(child: Text('Error: ${snapshot.error}'));
+            return Center(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Icon(
+                    Icons.error_outline,
+                    size: 64,
+                    color: Colors.red[300],
+                  ),
+                  const SizedBox(height: 16),
+                  Text(
+                    'Error: ${snapshot.error}',
+                    style: TextStyle(
+                      color: Colors.grey[600],
+                      fontSize: 16,
+                    ),
+                    textAlign: TextAlign.center,
+                  ),
+                ],
+              ),
+            );
           } else {
             return CardListWidget(data: snapshot.data ?? []);
           }
@@ -364,8 +616,11 @@ class _Ebook_viewState extends State<Ebook_view> {
 class PdfViewerPage extends StatefulWidget {
   final String pdfUrl;
   final String pdfTitle;
-  const PdfViewerPage(
-      {super.key, required this.pdfUrl, required this.pdfTitle});
+  const PdfViewerPage({
+    super.key,
+    required this.pdfUrl,
+    required this.pdfTitle,
+  });
 
   @override
   _PdfViewerPageState createState() => _PdfViewerPageState();
@@ -377,8 +632,6 @@ class _PdfViewerPageState extends State<PdfViewerPage> {
   @override
   void initState() {
     super.initState();
-
-    // checkIfFileExists();
   }
 
   @override
@@ -386,11 +639,12 @@ class _PdfViewerPageState extends State<PdfViewerPage> {
     return Scaffold(
       appBar: AppBar(
         iconTheme: const IconThemeData(
-          color: Colors.white, //change your color here
+          color: Colors.white,
         ),
-        title: Text(widget.pdfTitle, style: TextStyle(color: Colors.white)),
-        // foregroundColor: const Color.fromARGB(255, 0, 71, 133),
+        title:
+            Text(widget.pdfTitle, style: const TextStyle(color: Colors.white)),
         backgroundColor: const Color.fromARGB(255, 0, 71, 133),
+        elevation: 0,
         actions: const <Widget>[
           AppBarMore(),
         ],
@@ -399,8 +653,69 @@ class _PdfViewerPageState extends State<PdfViewerPage> {
         swipeHorizontal: true,
       ).cachedFromUrl(
         widget.pdfUrl,
-        placeholder: (double progress) => Center(child: Text('$progress %')),
-        errorWidget: (dynamic error) => Center(child: Text(error.toString())),
+        placeholder: (double progress) => Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              CircularProgressIndicator(
+                value: progress / 100,
+                valueColor: AlwaysStoppedAnimation<Color>(
+                  const Color.fromARGB(255, 0, 71, 133),
+                ),
+              ),
+              const SizedBox(height: 16),
+              Text(
+                '${progress.toStringAsFixed(0)}%',
+                style: TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold,
+                  color: const Color.fromARGB(255, 0, 71, 133),
+                ),
+              ),
+              const SizedBox(height: 8),
+              Text(
+                'Loading PDF...',
+                style: TextStyle(
+                  color: Colors.grey[600],
+                  fontSize: 14,
+                ),
+              ),
+            ],
+          ),
+        ),
+        errorWidget: (dynamic error) => Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Icon(
+                Icons.error_outline,
+                size: 64,
+                color: Colors.red[300],
+              ),
+              const SizedBox(height: 16),
+              Text(
+                'Error loading PDF',
+                style: TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.grey[800],
+                ),
+              ),
+              const SizedBox(height: 8),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 32),
+                child: Text(
+                  error.toString(),
+                  style: TextStyle(
+                    color: Colors.grey[600],
+                    fontSize: 14,
+                  ),
+                  textAlign: TextAlign.center,
+                ),
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }
@@ -417,40 +732,33 @@ class MyAdBanner extends StatefulWidget {
 
 class _MyAdBannerState extends State<MyAdBanner> {
   late BannerAd _bannerAd;
-  bool isAdLoaded = false; // Add a flag to track ad loading
+  bool isAdLoaded = false;
 
   @override
   void initState() {
     super.initState();
 
-    // Initialize the Google Mobile Ads SDK
     MobileAds.instance.initialize();
 
-    // Create a BannerAd instance
     _bannerAd = BannerAd(
-      adUnitId:
-          'ca-app-pub-7002644831588730/4427349537', // Replace with your Ad Unit ID
+      adUnitId: 'ca-app-pub-7002644831588730/4427349537',
       size: AdSize.fullBanner,
       request: const AdRequest(),
       listener: BannerAdListener(
         onAdLoaded: (_) {
           setState(() {
-            isAdLoaded = true; // Set the flag to true when ad is loaded
+            isAdLoaded = true;
           });
         },
-        onAdFailedToLoad: (ad, error) {
-          // Ad failed to load
-        },
+        onAdFailedToLoad: (ad, error) {},
       ),
     );
 
-    // Load the ad
     _bannerAd.load();
   }
 
   @override
   void dispose() {
-    // Dispose of the BannerAd when it's no longer needed
     _bannerAd.dispose();
     super.dispose();
   }
@@ -458,6 +766,9 @@ class _MyAdBannerState extends State<MyAdBanner> {
   @override
   Widget build(BuildContext context) {
     return AlertDialog(
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(20),
+      ),
       content: SizedBox(
         height: _bannerAd.size.height.toDouble(),
         width: _bannerAd.size.width.toDouble(),
@@ -466,16 +777,23 @@ class _MyAdBannerState extends State<MyAdBanner> {
         ),
       ),
       actions: [
-        if (isAdLoaded) // Only show the "OK" button if the ad is loaded
+        if (isAdLoaded)
           TextButton(
+            style: TextButton.styleFrom(
+              foregroundColor: const Color.fromARGB(255, 0, 71, 133),
+              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
+            ),
             onPressed: () {
-              Navigator.of(context).pop(); // Close the dialog
+              Navigator.of(context).pop();
               Navigator.pushNamed(context, '/ebook-${widget.index}',
                   arguments: {
                     'index': {widget.index}
                   });
             },
-            child: const Text('OK'),
+            child: const Text(
+              'Continue',
+              style: TextStyle(fontWeight: FontWeight.bold),
+            ),
           ),
       ],
     );

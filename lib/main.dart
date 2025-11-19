@@ -21,29 +21,23 @@ import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:kltheguide/voucher.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:package_info_plus/package_info_plus.dart';
-// import 'event.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'generated/l10n.dart';
 import 'package:in_app_update/in_app_update.dart';
+import 'package:kltheguide/maps_page.dart';
+
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   MobileAds.instance.initialize();
   CachedNetworkImage.logLevel = CacheManagerLogLevel.debug;
-  // Check the app version and build number
 
-  await FlutterDownloader.initialize(
-      debug:
-          true, // optional: set to false to disable printing logs to console (default: true)
-      ignoreSsl:
-          true // option: set to false to disable working with http links (default: false)
-      );
+  await FlutterDownloader.initialize(debug: true, ignoreSsl: true);
 
   runApp(MyApp());
 }
 
 class MyApp extends StatefulWidget {
-  // Add setLocale method to update locale dynamically
   static void setLocale(BuildContext context, Locale newLocale) {
     _MyAppState? state = context.findAncestorStateOfType<_MyAppState>();
     state?.changeLocale(newLocale);
@@ -56,7 +50,6 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   Locale? _locale;
 
-  // Method to change the locale
   void changeLocale(Locale locale) {
     setState(() {
       _locale = locale;
@@ -72,14 +65,31 @@ class _MyAppState extends State<MyApp> {
         colorScheme: ColorScheme.fromSeed(
             seedColor: const Color.fromARGB(255, 0, 71, 133)),
         useMaterial3: true,
+        // Enhanced navigation bar theme
+        navigationBarTheme: NavigationBarThemeData(
+          elevation: 8,
+          backgroundColor: Colors.white,
+          indicatorColor:
+              const Color.fromARGB(255, 0, 71, 133).withOpacity(0.15),
+          labelTextStyle: MaterialStateProperty.resolveWith((states) {
+            if (states.contains(MaterialState.selected)) {
+              return const TextStyle(
+                fontSize: 12,
+                fontWeight: FontWeight.w600,
+                color: Color.fromARGB(255, 0, 71, 133),
+              );
+            }
+            return const TextStyle(
+              fontSize: 12,
+              fontWeight: FontWeight.normal,
+            );
+          }),
+        ),
       ),
-      // Add locale to MaterialApp
       locale: _locale,
-      // Add supported locales
       supportedLocales: S.delegate.supportedLocales,
-      // Add localization delegates
       localizationsDelegates: const [
-        S.delegate, // Localization delegate for the app
+        S.delegate,
         GlobalMaterialLocalizations.delegate,
         GlobalWidgetsLocalizations.delegate,
         GlobalCupertinoLocalizations.delegate,
@@ -157,59 +167,65 @@ class _MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver {
     setState(() {
       Locale newLocale;
       Map<String, Locale> localeMap = {
-        'ms': Locale('ms', 'MY'), // Malay
-        'zh': Locale('zh', 'CN'), // Mandarin
-        'ta': Locale('ta', 'IN'), // Tamil
-        'hi': Locale('hi', 'IN'), // Hindi
-        'th': Locale('th', 'TH'), // Thai
-        'fil': Locale('fil', 'FIL'), // Filipino
-        'id': Locale('id', 'ID'), // Indonesian
-        'es': Locale('es', 'ES'), // Spanish
-        'pt': Locale('pt', 'BR'), // Portuguese
-        'fr': Locale('fr', 'FR'), // French
-        'ru': Locale('ru', 'RU'), // Russian
-        'en': Locale('en', 'US'), // Default to English
+        'ms': Locale('ms', 'MY'),
+        'zh': Locale('zh', 'CN'),
+        'ta': Locale('ta', 'IN'),
+        'hi': Locale('hi', 'IN'),
+        'th': Locale('th', 'TH'),
+        'fil': Locale('fil', 'FIL'),
+        'id': Locale('id', 'ID'),
+        'es': Locale('es', 'ES'),
+        'pt': Locale('pt', 'BR'),
+        'fr': Locale('fr', 'FR'),
+        'ru': Locale('ru', 'RU'),
+        'en': Locale('en', 'US'),
       };
       newLocale = localeMap[language] ?? Locale('en', 'US');
       MyApp.setLocale(context, newLocale);
     });
 
-    // Show a snackbar to confirm language change
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
-        content: Text({
-          'ms': 'Bahasa Malaysia',
-          'zh': '中文',
-          'ta': 'தமிழ்',
-          'hi': 'हिंदी',
-          'th': 'ไทย.',
-          'es': 'Español',
-          'fil': 'Filipino',
-          'id': 'Bahasa Indonesia',
-          'pt': 'Português',
-          'fr': 'français',
-          'ru': 'русский',
-          'en': 'English',
-        }[language]!),
+        content: Row(
+          children: [
+            const Icon(Icons.check_circle, color: Colors.white),
+            const SizedBox(width: 12),
+            Text({
+              'ms': 'Bahasa Malaysia',
+              'zh': '中文',
+              'ta': 'தமிழ்',
+              'hi': 'हिंदी',
+              'th': 'ไทย.',
+              'es': 'Español',
+              'fil': 'Filipino',
+              'id': 'Bahasa Indonesia',
+              'pt': 'Português',
+              'fr': 'français',
+              'ru': 'русский',
+              'en': 'English',
+            }[language]!),
+          ],
+        ),
+        behavior: SnackBarBehavior.floating,
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+        backgroundColor: const Color.fromARGB(255, 0, 71, 133),
       ),
     );
 
-    Navigator.pop(context); // Close the drawer after selecting a language
+    Navigator.pop(context);
   }
 
-  final String desiredVersion = '1.5.0'; // Replace with your desired version
+  final String desiredVersion = '1.5.0';
 
   late BannerAd _bannerAd;
   DateTime? currentBackPressTime;
-
-  bool isDialogShown = false; // Add a flag to track if the dialog is shown
+  bool isDialogShown = false;
 
   @override
   void initState() {
     super.initState();
     WidgetsBinding.instance.addObserver(this);
 
-    // Create a BannerAd instance
     _bannerAd = BannerAd(
       adUnitId: 'ca-app-pub-7002644831588730/4427349537',
       size: AdSize.mediumRectangle,
@@ -217,12 +233,9 @@ class _MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver {
       listener: const BannerAdListener(),
     );
 
-    // Load the ad
     _bannerAd.load();
 
     WidgetsBinding.instance.addPostFrameCallback((_) {
-      // Use addPostFrameCallback to ensure the dialog is shown after the first frame
-
       _checkVersionAndShowDialog();
       if (!isDialogShown) {
         fetchDataFromApi();
@@ -230,30 +243,67 @@ class _MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver {
     });
 
     WidgetsBinding.instance.addPostFrameCallback((_) {
-      _showVoucherPopup(); // Call the function to show the pop-up on app launch
+      _showVoucherPopup();
     });
   }
 
-  // Function to display the pop-up message with the "View" button
   void _showVoucherPopup() {
     showDialog(
       context: context,
       builder: (BuildContext context) {
         return AlertDialog(
-          title: const Text('New Vouchers Available!'),
-          content: const Text('New vouchers have been added. Check them out!'),
+          shape:
+              RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+          title: Row(
+            children: [
+              Container(
+                padding: const EdgeInsets.all(8),
+                decoration: BoxDecoration(
+                  color: const Color.fromARGB(255, 0, 71, 133).withOpacity(0.1),
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: const Icon(
+                  Icons.local_offer,
+                  color: Color.fromARGB(255, 0, 71, 133),
+                ),
+              ),
+              const SizedBox(width: 12),
+              const Expanded(
+                child: Text(
+                  'New Vouchers Available!',
+                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                ),
+              ),
+            ],
+          ),
+          content: const Text(
+            'New vouchers have been added. Check them out!',
+            style: TextStyle(fontSize: 15),
+          ),
           actions: [
             TextButton(
               onPressed: () {
-                Navigator.of(context).pop(); // Close the dialog
+                Navigator.of(context).pop();
               },
-              child: const Text('Cancel'),
+              child: Text(
+                'Cancel',
+                style: TextStyle(color: Colors.grey[600]),
+              ),
             ),
-            TextButton(
+            ElevatedButton(
               onPressed: () {
-                Navigator.of(context).pop(); // Close the dialog first
-                _navigateToVoucherScreen(); // Then navigate to VoucherScreen
+                Navigator.of(context).pop();
+                _navigateToVoucherScreen();
               },
+              style: ElevatedButton.styleFrom(
+                backgroundColor: const Color.fromARGB(255, 0, 71, 133),
+                foregroundColor: Colors.white,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
+              ),
               child: const Text('View'),
             ),
           ],
@@ -262,7 +312,6 @@ class _MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver {
     );
   }
 
-  // Function to navigate to the VoucherScreen
   void _navigateToVoucherScreen() {
     Navigator.push(
       context,
@@ -271,15 +320,12 @@ class _MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver {
   }
 
   Future<void> _checkVersionAndShowDialog() async {
-    // Check for an update using Google's In-App Update API
     try {
       AppUpdateInfo updateInfo = await InAppUpdate.checkForUpdate();
       if (updateInfo.updateAvailability == UpdateAvailability.updateAvailable) {
         if (updateInfo.immediateUpdateAllowed) {
-          // Trigger immediate update
           InAppUpdate.performImmediateUpdate();
         } else if (updateInfo.flexibleUpdateAllowed) {
-          // Trigger flexible update
           InAppUpdate.startFlexibleUpdate().then((_) {
             InAppUpdate.completeFlexibleUpdate();
           });
@@ -289,7 +335,6 @@ class _MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver {
       print("Error checking for updates: $e");
     }
 
-    // Custom version check remains (if needed)
     final packageInfo = await PackageInfo.fromPlatform();
     final currentVersion = packageInfo.version;
     final currentBuildNumber = packageInfo.buildNumber;
@@ -300,14 +345,13 @@ class _MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver {
 
     if (_isUpdateRequired(currentVersion, desiredVersion, currentBuildNumber,
         desiredBuildNumber)) {
-      _showUpdateDialog(context); // Custom update dialog
+      _showUpdateDialog(context);
     }
   }
 
   Future<Map<String, String>> _fetchDesiredVersionAndBuild() async {
     final response = await http.post(
-      Uri.parse(
-          'https://www.kltheguide.com.my/admin/functions.php'), // Replace with your API endpoint
+      Uri.parse('https://www.kltheguide.com.my/admin/functions.php'),
       body: {'appAdsSettings': 'appAdsSettings'},
     );
 
@@ -339,7 +383,6 @@ class _MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver {
       }
     }
 
-    // If versions are equal, check build numbers
     return int.parse(currentBuildNumber) < int.parse(desiredBuildNumber);
   }
 
@@ -353,7 +396,7 @@ class _MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver {
   void didChangeAppLifecycleState(AppLifecycleState state) {
     super.didChangeAppLifecycleState(state);
     if (state == AppLifecycleState.resumed) {
-      currentBackPressTime = null; // Reset the back button press time
+      currentBackPressTime = null;
     }
   }
 
@@ -362,26 +405,60 @@ class _MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver {
       context: context,
       builder: (BuildContext context) {
         return AlertDialog(
-          title: Text('Update Required'),
-          content: Text(
+          shape:
+              RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+          title: Row(
+            children: [
+              Container(
+                padding: const EdgeInsets.all(8),
+                decoration: BoxDecoration(
+                  color: const Color.fromARGB(255, 0, 71, 133).withOpacity(0.1),
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: const Icon(
+                  Icons.system_update,
+                  color: Color.fromARGB(255, 0, 71, 133),
+                ),
+              ),
+              const SizedBox(width: 12),
+              const Expanded(
+                child: Text(
+                  'Update Required',
+                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                ),
+              ),
+            ],
+          ),
+          content: const Text(
             'A new version of the app is available. Please update to enjoy new features of the app.',
+            style: TextStyle(fontSize: 15),
           ),
           actions: <Widget>[
             TextButton(
               onPressed: () {
-                Navigator.of(context).pop(); // Close the dialog
-                // You can navigate to the store or perform update logic here
+                Navigator.of(context).pop();
               },
-              child: Text('Update Later'),
+              child: Text(
+                'Update Later',
+                style: TextStyle(color: Colors.grey[600]),
+              ),
             ),
-            TextButton(
+            ElevatedButton(
               onPressed: () {
-                Navigator.of(context).pop(); // Close the dialog
+                Navigator.of(context).pop();
                 _launchURL(
                     'https://play.google.com/store/apps/details?id=my.com.kltheguide&hl=en&gl=US');
-                // You can navigate to the store or perform update logic here
               },
-              child: Text('Update Now'),
+              style: ElevatedButton.styleFrom(
+                backgroundColor: const Color.fromARGB(255, 0, 71, 133),
+                foregroundColor: Colors.white,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
+              ),
+              child: const Text('Update Now'),
             ),
           ],
         );
@@ -394,14 +471,16 @@ class _MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver {
       context: context,
       builder: (BuildContext context) {
         return AlertDialog(
-          title: Text('Welcome'),
-          content: Text('This is an example AlertDialog on app launch.'),
+          shape:
+              RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+          title: const Text('Welcome'),
+          content: const Text('This is an example AlertDialog on app launch.'),
           actions: <Widget>[
             TextButton(
               onPressed: () {
-                Navigator.of(context).pop(); // Close the dialog
+                Navigator.of(context).pop();
               },
-              child: Text('OK'),
+              child: const Text('OK'),
             ),
           ],
         );
@@ -416,9 +495,17 @@ class _MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver {
       currentBackPressTime = now;
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
-          content: Text('Press back again to exit'),
+          content: const Row(
+            children: [
+              Icon(Icons.info_outline, color: Colors.white),
+              SizedBox(width: 12),
+              Text('Press back again to exit'),
+            ],
+          ),
           duration: Duration(seconds: 2),
           behavior: SnackBarBehavior.floating,
+          shape:
+              RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
         ),
       );
       return false;
@@ -448,7 +535,7 @@ class _MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver {
       }
     } catch (e) {
       print('Error fetching image URLs: $e');
-      return []; // Return an empty list in case of an error
+      return [];
     }
   }
 
@@ -465,14 +552,12 @@ class _MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver {
         print(isDialogShown);
         int? switch2 = int.parse(admobrandomswitch);
 
-        // Set a fixed delay of 30 seconds
         int delayInSeconds = 30;
 
         final Random random = Random();
 
         if (switch2 == 1) {
           if (random.nextInt(5) == 1) {
-            // Show the AdMob ad
             if (isDialogShown) {
               _showWelcomeDialog(delayInSeconds);
             } else {
@@ -480,7 +565,6 @@ class _MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver {
               isDialogShown = true;
             }
           } else {
-            // Show custom ads with a fixed delay of 7 seconds
             final List<ImageData> imageDatas = await fetchImageUrls();
             if (imageDatas.isNotEmpty) {
               final randomImageData =
@@ -494,7 +578,6 @@ class _MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver {
             }
           }
         } else {
-          // Handle cases when 'switch2' is not 1
           final List<ImageData> imageDatas = await fetchImageUrls();
           if (imageDatas.isNotEmpty) {
             final randomImageData =
@@ -528,10 +611,8 @@ class _MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver {
               future: Future.delayed(Duration(seconds: 0), () {}),
               builder: (BuildContext context, AsyncSnapshot<void> snapshot) {
                 if (snapshot.connectionState == ConnectionState.waiting) {
-                  // While waiting for the delay, show a loading indicator
                   return Center(child: CircularProgressIndicator());
                 } else {
-                  // After the delay, display the image and actions
                   return WillPopScope(
                     onWillPop: () async {
                       return false;
@@ -543,27 +624,42 @@ class _MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver {
                       actionsPadding: EdgeInsets.zero,
                       insetPadding: EdgeInsets.zero,
                       actionsAlignment: MainAxisAlignment.center,
-                      // title: Text('Random Popup'),
                       backgroundColor: Colors.transparent,
-                      content: GestureDetector(
-                        child: Image.network(randomImageUrl),
-                        onTap: () {
-                          if (imageData.actionUrl.isNotEmpty) {
-                            print(Uri.decodeFull(imageData.actionUrl));
-                            _launchURL(Uri.decodeFull(imageData.actionUrl));
-                          }
-                        },
+                      content: ClipRRect(
+                        borderRadius: BorderRadius.circular(16),
+                        child: GestureDetector(
+                          child: Image.network(randomImageUrl),
+                          onTap: () {
+                            if (imageData.actionUrl.isNotEmpty) {
+                              print(Uri.decodeFull(imageData.actionUrl));
+                              _launchURL(Uri.decodeFull(imageData.actionUrl));
+                            }
+                          },
+                        ),
                       ),
                       actions: <Widget>[
-                        TextButton(
-                          onPressed: () {
-                            Navigator.of(context).pop(); // Close the dialog
-                            fetchDataFromApi();
-                          },
-                          child: Icon(
-                            Icons.cancel_outlined,
-                            size: 32,
+                        Container(
+                          decoration: BoxDecoration(
                             color: Colors.white,
+                            shape: BoxShape.circle,
+                            boxShadow: [
+                              BoxShadow(
+                                color: Colors.black26,
+                                blurRadius: 8,
+                                offset: Offset(0, 2),
+                              ),
+                            ],
+                          ),
+                          child: IconButton(
+                            onPressed: () {
+                              Navigator.of(context).pop();
+                              fetchDataFromApi();
+                            },
+                            icon: const Icon(
+                              Icons.close,
+                              size: 24,
+                              color: Color.fromARGB(255, 0, 71, 133),
+                            ),
                           ),
                         ),
                       ],
@@ -579,7 +675,6 @@ class _MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver {
   }
 
   void _showWelcomeDialog(int delaySec) {
-    // Add a delay of 3 seconds before showing the dialog
     Future.delayed(Duration(seconds: delaySec), () {
       showDialog(
         barrierDismissible: false,
@@ -595,25 +690,44 @@ class _MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver {
               actionsPadding: EdgeInsets.zero,
               insetPadding: EdgeInsets.zero,
               actionsAlignment: MainAxisAlignment.center,
-              // title: Text('Random Popup'),
               backgroundColor: Colors.transparent,
-              content: SizedBox(
+              content: Container(
                 height: 250,
                 width: 300,
-                child: AdWidget(
-                  ad: _bannerAd,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(16),
+                  color: Colors.white,
+                ),
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(16),
+                  child: AdWidget(
+                    ad: _bannerAd,
+                  ),
                 ),
               ),
               actions: [
-                TextButton(
-                  onPressed: () {
-                    Navigator.of(context).pop(); // Close the dialog
-                    fetchDataFromApi();
-                  },
-                  child: Icon(
-                    Icons.cancel_outlined,
-                    size: 32,
+                Container(
+                  decoration: BoxDecoration(
                     color: Colors.white,
+                    shape: BoxShape.circle,
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.black26,
+                        blurRadius: 8,
+                        offset: Offset(0, 2),
+                      ),
+                    ],
+                  ),
+                  child: IconButton(
+                    onPressed: () {
+                      Navigator.of(context).pop();
+                      fetchDataFromApi();
+                    },
+                    icon: const Icon(
+                      Icons.close,
+                      size: 24,
+                      color: Color.fromARGB(255, 0, 71, 133),
+                    ),
                   ),
                 ),
               ],
@@ -630,125 +744,171 @@ class _MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver {
       onWillPop: _onWillPop,
       child: Scaffold(
         appBar: AppBar(
-          title:
-              const Text("KL THE GUIDE", style: TextStyle(color: Colors.white)),
+          title: const Text(
+            "KL THE GUIDE",
+            style: TextStyle(
+              color: Colors.white,
+              fontWeight: FontWeight.bold,
+              letterSpacing: 0.5,
+            ),
+          ),
           backgroundColor: const Color.fromARGB(255, 0, 71, 133),
           iconTheme: const IconThemeData(color: Colors.white),
+          elevation: 2,
           actions: const <Widget>[
             AppBarMore(),
           ],
         ),
-        // Move the drawer here inside the Scaffold
         drawer: Drawer(
-          child: ListView(
-            padding: EdgeInsets.zero,
+          child: Column(
             children: [
               DrawerHeader(
                 decoration: const BoxDecoration(
-                  color: Color.fromARGB(255, 0, 71, 133),
-                ),
-                child: Text(
-                  S.of(context).pickALanguage,
-                  style: const TextStyle(
-                    color: Colors.white,
-                    fontSize: 24,
+                  gradient: LinearGradient(
+                    begin: Alignment.topLeft,
+                    end: Alignment.bottomRight,
+                    colors: [
+                      Color.fromARGB(255, 0, 71, 133),
+                      Color.fromARGB(255, 0, 95, 177),
+                    ],
                   ),
                 ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    const Icon(
+                      Icons.language,
+                      size: 48,
+                      color: Colors.white,
+                    ),
+                    const SizedBox(height: 16),
+                    Text(
+                      S.of(context).pickALanguage,
+                      style: const TextStyle(
+                        color: Colors.white,
+                        fontSize: 22,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    const SizedBox(height: 4),
+                    Text(
+                      'Choose your preferred language',
+                      style: TextStyle(
+                        color: Colors.white.withOpacity(0.9),
+                        fontSize: 14,
+                      ),
+                    ),
+                  ],
+                ),
               ),
-              ListTile(
-                title: const Text('Bahasa Malaysia'),
-                onTap: () => _selectLanguage('ms'),
-              ),
-              ListTile(
-                title: const Text('English'),
-                onTap: () => _selectLanguage('en'),
-              ),
-              ListTile(
-                title: const Text('Mandarin'),
-                onTap: () => _selectLanguage('zh'),
-              ),
-              ListTile(
-                title: const Text('Tamil'),
-                onTap: () => _selectLanguage('ta'),
-              ),
-              ListTile(
-                title: const Text('Hindi'),
-                onTap: () => _selectLanguage('hi'),
-              ),
-              ListTile(
-                title: const Text('Thai'),
-                onTap: () => _selectLanguage('th'),
-              ),
-              ListTile(
-                title: const Text('Tagalog'),
-                onTap: () => _selectLanguage('fil'),
-              ),
-              ListTile(
-                title: const Text('Bahasa Indonesia'),
-                onTap: () => _selectLanguage('id'),
-              ),
-              ListTile(
-                title: const Text('Spanish'),
-                onTap: () => _selectLanguage('es'),
-              ),
-              ListTile(
-                title: const Text('Portuguese'),
-                onTap: () => _selectLanguage('pt'),
-              ),
-              ListTile(
-                title: const Text('French'),
-                onTap: () => _selectLanguage('fr'),
-              ),
-              ListTile(
-                title: const Text('Russian'),
-                onTap: () => _selectLanguage('ru'),
+              Expanded(
+                child: ListView(
+                  padding: const EdgeInsets.symmetric(vertical: 4),
+                  children: [
+                    _buildLanguageTile('Bahasa Malaysia', '🇲🇾', 'ms'),
+                    _buildLanguageTile('English', '🇬🇧', 'en'),
+                    _buildLanguageTile('Mandarin', '🇨🇳', 'zh'),
+                    _buildLanguageTile('Tamil', '🇮🇳', 'ta'),
+                    _buildLanguageTile('Hindi', '🇮🇳', 'hi'),
+                    _buildLanguageTile('Thai', '🇹🇭', 'th'),
+                    _buildLanguageTile('Tagalog', '🇵🇭', 'fil'),
+                    _buildLanguageTile('Bahasa Indonesia', '🇮🇩', 'id'),
+                    _buildLanguageTile('Spanish', '🇪🇸', 'es'),
+                    _buildLanguageTile('Portuguese', '🇵🇹', 'pt'),
+                    _buildLanguageTile('French', '🇫🇷', 'fr'),
+                    _buildLanguageTile('Russian', '🇷🇺', 'ru'),
+                  ],
+                ),
               ),
             ],
           ),
         ),
-        bottomNavigationBar: NavigationBar(
-          onDestinationSelected: (int index) {
-            setState(() {
-              currentPageIndex = index;
-            });
-          },
-          selectedIndex: currentPageIndex,
-          destinations: <Widget>[
-            NavigationDestination(
+        bottomNavigationBar: Container(
+          decoration: BoxDecoration(
+            boxShadow: [
+              BoxShadow(
+                color: Colors.black.withOpacity(0.1),
+                blurRadius: 8,
+                offset: const Offset(0, -2),
+              ),
+            ],
+          ),
+          child: NavigationBar(
+            onDestinationSelected: (int index) {
+              setState(() {
+                currentPageIndex = index;
+              });
+            },
+            selectedIndex: currentPageIndex,
+            destinations: <Widget>[
+              NavigationDestination(
                 selectedIcon:
                     Icon(Icons.home, color: Color.fromARGB(255, 0, 71, 133)),
                 icon: Icon(Icons.home_outlined),
-                label: S.of(context).home),
-            NavigationDestination(
+                label: S.of(context).home,
+              ),
+              NavigationDestination(
                 selectedIcon:
                     Icon(Icons.article, color: Color.fromARGB(255, 0, 71, 133)),
                 icon: Icon(Icons.article_outlined),
-                label: S.of(context).blog),
-            NavigationDestination(
+                label: S.of(context).blog,
+              ),
+              NavigationDestination(
+                selectedIcon: Icon(Icons.map, color: Color.fromARGB(255, 0, 71, 133)),
+                icon: Icon(Icons.map_outlined),
+                // If you want i18n later, add a `maps` key to your ARB files; for now, literal is fine:
+                label: 'Maps',
+              ),
+              NavigationDestination(
                 selectedIcon: Icon(Icons.menu_book,
                     color: Color.fromARGB(255, 0, 71, 133)),
                 icon: Icon(Icons.menu_book_outlined),
-                label: S.of(context).ebook),
-            // NavigationDestination(
-            //     selectedIcon:
-            //         Icon(Icons.event, color: Color.fromARGB(255, 0, 71, 133)),
-            //     icon: Icon(Icons.event_available_outlined),
-            //     label: S.of(context).EventScreen),
-            NavigationDestination(
+                label: S.of(context).ebook,
+              ),
+              NavigationDestination(
                 selectedIcon: Icon(Icons.discount,
                     color: Color.fromARGB(255, 0, 71, 133)),
                 icon: Icon(Icons.discount_outlined),
-                label: S.of(context).Contest),
-          ],
+                label: S.of(context).Contest,
+              ),
+            ],
+          ),
         ),
         body: [
           HomeScreen(),
           const BlogListScreen(),
+          const MapsPage(),
           Ebook(),
-          // EventScreen(),
           VoucherScreen(),
         ][currentPageIndex],
       ),
+    );
+  }
+
+  Widget _buildLanguageTile(String title, String flag, String code) {
+    return ListTile(
+      leading: Text(
+        flag,
+        style: const TextStyle(fontSize: 24),
+      ),
+      title: Text(
+        title,
+        style: const TextStyle(
+          fontSize: 16,
+          fontWeight: FontWeight.w500,
+        ),
+      ),
+      trailing: const Icon(
+        Icons.arrow_forward_ios,
+        size: 16,
+        color: Colors.grey,
+      ),
+      onTap: () => _selectLanguage(code),
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(8),
+      ),
+      contentPadding: const EdgeInsets.symmetric(horizontal: 20, vertical: 2),
     );
   }
 }
@@ -761,8 +921,10 @@ class AppBarMore extends StatelessWidget {
     return PopupMenuButton<String>(
       icon: const Icon(Icons.more_vert),
       color: Colors.white,
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+      elevation: 8,
+      offset: const Offset(0, 50),
       onSelected: (value) {
-        // Handle the item selection here.
         if (value == S.of(context).contactUs) {
           Navigator.of(context).push(MaterialPageRoute(
             builder: (context) => ContactUsPage(),
@@ -772,19 +934,43 @@ class AppBarMore extends StatelessWidget {
             builder: (context) => AboutUsPage(),
           ));
         }
-        // Add more options for additional pages as needed.
       },
       itemBuilder: (BuildContext context) {
         return <PopupMenuEntry<String>>[
           PopupMenuItem<String>(
             value: S.of(context).aboutUs,
-            child: Text(S.of(context).aboutUs),
+            child: Row(
+              children: [
+                Icon(
+                  Icons.info_outline,
+                  color: Color.fromARGB(255, 0, 71, 133),
+                  size: 20,
+                ),
+                const SizedBox(width: 12),
+                Text(
+                  S.of(context).aboutUs,
+                  style: const TextStyle(fontSize: 15),
+                ),
+              ],
+            ),
           ),
           PopupMenuItem<String>(
             value: S.of(context).contactUs,
-            child: Text(S.of(context).contactUs),
+            child: Row(
+              children: [
+                Icon(
+                  Icons.contact_support_outlined,
+                  color: Color.fromARGB(255, 0, 71, 133),
+                  size: 20,
+                ),
+                const SizedBox(width: 12),
+                Text(
+                  S.of(context).contactUs,
+                  style: const TextStyle(fontSize: 15),
+                ),
+              ],
+            ),
           ),
-          // Add more PopupMenuItem entries for additional pages.
         ];
       },
     );

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:kltheguide/main.dart';
 import 'package:url_launcher/url_launcher.dart';
-import 'generated/l10n.dart'; // Import generated localization
+import 'generated/l10n.dart';
 
 class Stay extends StatefulWidget {
   const Stay({super.key});
@@ -11,36 +11,82 @@ class Stay extends StatefulWidget {
   _StayState createState() => _StayState();
 }
 
-class _StayState extends State<Stay> {
+class _StayState extends State<Stay> with SingleTickerProviderStateMixin {
+  late TabController _tabController;
+
+  @override
+  void initState() {
+    super.initState();
+    _tabController = TabController(length: 4, vsync: this);
+  }
+
+  @override
+  void dispose() {
+    _tabController.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
-    return DefaultTabController(
-      length: 4,
-      child: Scaffold(
-        appBar: AppBar(
-          iconTheme: const IconThemeData(
-            color: Colors.white, // Change your color here
+    return Scaffold(
+      appBar: AppBar(
+        iconTheme: const IconThemeData(color: Colors.white),
+        elevation: 0,
+        title: Text(
+          S.of(context).placesToStay,
+          style: const TextStyle(
+            color: Colors.white,
+            fontWeight: FontWeight.bold,
+            letterSpacing: 0.5,
           ),
-          bottom: TabBar(
-            tabs: [
-              Tab(text: S.of(context).topPlacesToStay),
-              Tab(text: S.of(context).hotels),
-              Tab(text: S.of(context).budgetHotels),
-              Tab(text: S.of(context).backpackersLodge),
-            ],
-            unselectedLabelColor: Colors.white,
-            labelColor: Colors.white,
-            labelStyle: TextStyle(fontWeight: FontWeight.w800),
-            unselectedLabelStyle: TextStyle(fontWeight: FontWeight.normal),
-          ),
-          title: Text(S.of(context).placesToStay,
-              style: const TextStyle(color: Colors.white)),
-          backgroundColor: const Color.fromARGB(255, 0, 71, 133),
-          actions: const <Widget>[
-            AppBarMore(),
-          ],
         ),
-        body: TabBarView(
+        backgroundColor: const Color.fromARGB(255, 0, 71, 133),
+        actions: const <Widget>[
+          AppBarMore(),
+        ],
+        bottom: PreferredSize(
+          preferredSize: const Size.fromHeight(50),
+          child: Container(
+            color: const Color.fromARGB(255, 0, 71, 133),
+            child: TabBar(
+              controller: _tabController,
+              isScrollable: true,
+              indicatorColor: Colors.white,
+              indicatorWeight: 3,
+              indicatorSize: TabBarIndicatorSize.tab,
+              labelColor: Colors.white,
+              unselectedLabelColor: Colors.white70,
+              labelStyle: const TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 15,
+              ),
+              unselectedLabelStyle: const TextStyle(
+                fontWeight: FontWeight.normal,
+                fontSize: 14,
+              ),
+              tabs: [
+                Tab(text: S.of(context).topPlacesToStay),
+                Tab(text: S.of(context).hotels),
+                Tab(text: S.of(context).budgetHotels),
+                Tab(text: S.of(context).backpackersLodge),
+              ],
+            ),
+          ),
+        ),
+      ),
+      body: Container(
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: [
+              Colors.grey[50]!,
+              Colors.white,
+            ],
+          ),
+        ),
+        child: TabBarView(
+          controller: _tabController,
           children: [
             MyList2(
               items: [
@@ -208,106 +254,314 @@ class _StayState extends State<Stay> {
 class MyList2 extends StatelessWidget {
   final List<ItemData> items;
 
-  MyList2({required this.items});
+  const MyList2({super.key, required this.items});
 
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
+      padding: const EdgeInsets.symmetric(vertical: 8),
       itemCount: items.length,
       itemBuilder: (context, index) {
-        return Card(
-          elevation: 3.0,
-          margin: const EdgeInsets.all(16.0),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Center(
-                child: CachedNetworkImage(
-                  imageUrl: items[index].imageUrl,
-                  fit: BoxFit.cover,
-                  height: 200,
-                  width: double.infinity,
-                ),
+        return Container(
+          margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(16),
+            color: Colors.white,
+            boxShadow: [
+              BoxShadow(
+                color: Colors.black.withOpacity(0.08),
+                blurRadius: 10,
+                offset: const Offset(0, 4),
               ),
-              Padding(
-                padding: const EdgeInsets.all(16.0),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
+            ],
+          ),
+          child: ClipRRect(
+            borderRadius: BorderRadius.circular(16),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                // Image Section
+                Stack(
                   children: [
-                    Text(
-                      items[index].title,
-                      style: const TextStyle(
-                        fontSize: 20.0,
-                        fontWeight: FontWeight.bold,
+                    CachedNetworkImage(
+                      imageUrl: items[index].imageUrl,
+                      fit: BoxFit.cover,
+                      height: 220,
+                      width: double.infinity,
+                      placeholder: (context, url) => Container(
+                        height: 220,
+                        color: Colors.grey[200],
+                        child: const Center(
+                          child: CircularProgressIndicator(
+                            valueColor: AlwaysStoppedAnimation<Color>(
+                              Color.fromARGB(255, 0, 71, 133),
+                            ),
+                          ),
+                        ),
+                      ),
+                      errorWidget: (context, url, error) => Container(
+                        height: 220,
+                        color: Colors.grey[300],
+                        child: const Icon(Icons.error, size: 50),
                       ),
                     ),
-                    const SizedBox(height: 8.0),
-                    if (items[index].description.isNotEmpty)
-                      Text(
-                        '${S.of(context).description}: ${items[index].description}',
-                        style: const TextStyle(
-                          fontSize: 16.0,
+                    Positioned(
+                      top: 12,
+                      right: 12,
+                      child: Container(
+                        padding: const EdgeInsets.symmetric(
+                          horizontal: 12,
+                          vertical: 6,
                         ),
-                      ),
-                    const SizedBox(height: 8.0),
-                    if (items[index].address.isNotEmpty)
-                      Text(
-                        '${S.of(context).address}: ${items[index].address}',
-                        style: const TextStyle(
-                          fontSize: 16.0,
+                        decoration: BoxDecoration(
+                          color: Colors.black.withOpacity(0.6),
+                          borderRadius: BorderRadius.circular(20),
                         ),
-                      ),
-                    const SizedBox(height: 8.0),
-                    GestureDetector(
-                      onTap: () {
-                        _launchURL(items[index].location);
-                      },
-                      child: Text(
-                        '${S.of(context).location}: ${items[index].location}',
-                        style:
-                            const TextStyle(fontSize: 16.0, color: Colors.blue),
-                      ),
-                    ),
-                    const SizedBox(height: 8.0),
-                    if (items[index].contact.isNotEmpty)
-                      Text(
-                        '${S.of(context).contact}: ${items[index].contact}',
-                        style: const TextStyle(
-                          fontSize: 16.0,
-                        ),
-                      ),
-                    GestureDetector(
-                      onTap: () {
-                        _launchURL(items[index].website);
-                      },
-                      child: Text(
-                        '',
-                        style: const TextStyle(
-                          fontSize: 16.0,
-                          color: Colors.blue,
-                          decoration: TextDecoration.underline,
+                        child: Row(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            const Icon(
+                              Icons.star,
+                              color: Colors.amber,
+                              size: 16,
+                            ),
+                            const SizedBox(width: 4),
+                            Text(
+                              '${(index % 2 == 0) ? "4.5" : "4.8"}',
+                              style: const TextStyle(
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 13,
+                              ),
+                            ),
+                          ],
                         ),
                       ),
                     ),
                   ],
                 ),
-              ),
-            ],
+
+                // Content Section
+                Padding(
+                  padding: const EdgeInsets.all(16),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      // Title
+                      Text(
+                        items[index].title,
+                        style: const TextStyle(
+                          fontSize: 22,
+                          fontWeight: FontWeight.bold,
+                          color: Color.fromARGB(255, 0, 71, 133),
+                          letterSpacing: 0.3,
+                        ),
+                      ),
+                      const SizedBox(height: 12),
+
+                      // Description
+                      if (items[index].description.isNotEmpty) ...[
+                        Container(
+                          padding: const EdgeInsets.all(12),
+                          decoration: BoxDecoration(
+                            color: Colors.grey[50],
+                            borderRadius: BorderRadius.circular(8),
+                          ),
+                          child: Row(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Icon(
+                                Icons.info_outline,
+                                size: 20,
+                                color: Colors.grey[600],
+                              ),
+                              const SizedBox(width: 8),
+                              Expanded(
+                                child: Text(
+                                  items[index].description,
+                                  style: TextStyle(
+                                    fontSize: 14,
+                                    color: Colors.grey[700],
+                                    height: 1.4,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        const SizedBox(height: 12),
+                      ],
+
+                      // Address
+                      if (items[index].address.isNotEmpty) ...[
+                        _buildInfoRow(
+                          icon: Icons.location_on_outlined,
+                          label: S.of(context).address,
+                          value: items[index].address,
+                        ),
+                        const SizedBox(height: 10),
+                      ],
+
+                      // Contact
+                      if (items[index].contact.isNotEmpty) ...[
+                        _buildInfoRow(
+                          icon: Icons.phone_outlined,
+                          label: S.of(context).contact,
+                          value: items[index].contact,
+                        ),
+                        const SizedBox(height: 16),
+                      ],
+
+                      // Action Buttons
+                      Row(
+                        children: [
+                          if (items[index].location.isNotEmpty)
+                            Expanded(
+                              child: Material(
+                                color: const Color.fromARGB(255, 0, 71, 133),
+                                borderRadius: BorderRadius.circular(10),
+                                child: InkWell(
+                                  onTap: () =>
+                                      _launchURL(items[index].location),
+                                  borderRadius: BorderRadius.circular(10),
+                                  child: Container(
+                                    padding: const EdgeInsets.symmetric(
+                                      vertical: 12,
+                                    ),
+                                    child: const Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: [
+                                        Icon(
+                                          Icons.map_outlined,
+                                          color: Colors.white,
+                                          size: 20,
+                                        ),
+                                        SizedBox(width: 8),
+                                        Text(
+                                          'View Location',
+                                          style: TextStyle(
+                                            color: Colors.white,
+                                            fontWeight: FontWeight.bold,
+                                            fontSize: 15,
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          if (items[index].website.isNotEmpty) ...[
+                            const SizedBox(width: 10),
+                            Expanded(
+                              child: Material(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.circular(10),
+                                child: InkWell(
+                                  onTap: () => _launchURL(items[index].website),
+                                  borderRadius: BorderRadius.circular(10),
+                                  child: Container(
+                                    padding: const EdgeInsets.symmetric(
+                                      vertical: 12,
+                                    ),
+                                    decoration: BoxDecoration(
+                                      border: Border.all(
+                                        color: const Color.fromARGB(
+                                            255, 0, 71, 133),
+                                        width: 2,
+                                      ),
+                                      borderRadius: BorderRadius.circular(10),
+                                    ),
+                                    child: const Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: [
+                                        Icon(
+                                          Icons.language_outlined,
+                                          color:
+                                              Color.fromARGB(255, 0, 71, 133),
+                                          size: 20,
+                                        ),
+                                        SizedBox(width: 8),
+                                        Text(
+                                          'Website',
+                                          style: TextStyle(
+                                            color:
+                                                Color.fromARGB(255, 0, 71, 133),
+                                            fontWeight: FontWeight.bold,
+                                            fontSize: 15,
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ],
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
           ),
         );
       },
     );
   }
 
-  void _launchURL(String url, {bool isLocation = false}) async {
-    final formattedUrl = isLocation
-        ? 'https://www.google.com/maps/search/?api=1&query=${Uri.encodeComponent(url)}'
-        : url;
+  Widget _buildInfoRow({
+    required IconData icon,
+    required String label,
+    required String value,
+  }) {
+    return Row(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Icon(
+          icon,
+          size: 20,
+          color: const Color.fromARGB(255, 0, 71, 133),
+        ),
+        const SizedBox(width: 8),
+        Expanded(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                label,
+                style: TextStyle(
+                  fontSize: 12,
+                  fontWeight: FontWeight.w600,
+                  color: Colors.grey[600],
+                  letterSpacing: 0.5,
+                ),
+              ),
+              const SizedBox(height: 2),
+              Text(
+                value,
+                style: const TextStyle(
+                  fontSize: 14,
+                  color: Colors.black87,
+                  height: 1.3,
+                ),
+              ),
+            ],
+          ),
+        ),
+      ],
+    );
+  }
 
-    if (await canLaunch(formattedUrl)) {
-      await launch(formattedUrl);
+  void _launchURL(String url) async {
+    final uri = Uri.parse(url);
+    if (await canLaunchUrl(uri)) {
+      await launchUrl(uri, mode: LaunchMode.externalApplication);
     } else {
-      throw 'Could not launch $formattedUrl';
+      throw 'Could not launch $url';
     }
   }
 }

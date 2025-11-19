@@ -2,64 +2,161 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:kltheguide/main.dart';
 import 'package:url_launcher/url_launcher.dart';
-import 'generated/l10n.dart'; // Import localization file
-//import 'package:http/http.dart' as http;
-//import 'dart:convert';
+import 'generated/l10n.dart';
 
+// ============ GLANCE PAGE ============
 class GlancePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         iconTheme: const IconThemeData(
-          color: Colors.white, //change your color here
+          color: Colors.white,
         ),
-        title: Text(S.of(context).klAtAGlance,
-            style: const TextStyle(color: Colors.white)),
-        // foregroundColor: const Color.fromARGB(255, 0, 71, 133),
+        title: Text(
+          S.of(context).klAtAGlance,
+          style: const TextStyle(
+            color: Colors.white,
+            fontWeight: FontWeight.w600,
+            letterSpacing: 0.5,
+          ),
+        ),
         backgroundColor: const Color.fromARGB(255, 0, 71, 133),
+        elevation: 0,
         actions: const <Widget>[
           AppBarMore(),
         ],
       ),
-      body: SingleChildScrollView(
-        padding: EdgeInsets.all(16.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            CachedNetworkImage(
-              imageUrl:
-                  'https://www.kltheguide.com.my/assets/img/highlights/KLATGLANCE-01-2.jpg',
-            ),
-            SizedBox(height: 16),
-            Text(
-              S.of(context).klAtAGlance,
-              style: TextStyle(
-                fontSize: 24,
-                fontWeight: FontWeight.bold,
+      body: Container(
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: [
+              const Color.fromARGB(255, 0, 71, 133).withOpacity(0.05),
+              Colors.white,
+            ],
+          ),
+        ),
+        child: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              // Hero Image with Overlay
+              Stack(
+                children: [
+                  CachedNetworkImage(
+                    imageUrl:
+                        'https://www.kltheguide.com.my/assets/img/highlights/KLATGLANCE-01-2.jpg',
+                    fit: BoxFit.cover,
+                    height: 250,
+                    width: double.infinity,
+                    placeholder: (context, url) => Container(
+                      height: 250,
+                      color: Colors.grey.shade200,
+                      child: Center(
+                        child: CircularProgressIndicator(
+                          valueColor: AlwaysStoppedAnimation<Color>(
+                            const Color.fromARGB(255, 0, 71, 133),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                  Positioned.fill(
+                    child: DecoratedBox(
+                      decoration: BoxDecoration(
+                        gradient: LinearGradient(
+                          begin: Alignment.topCenter,
+                          end: Alignment.bottomCenter,
+                          colors: [
+                            Colors.transparent,
+                            Colors.black.withOpacity(0.5),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                  Positioned(
+                    bottom: 20,
+                    left: 20,
+                    right: 20,
+                    child: Text(
+                      S.of(context).klAtAGlance,
+                      style: const TextStyle(
+                        fontSize: 28,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,
+                        letterSpacing: 1,
+                        shadows: [
+                          Shadow(
+                            color: Colors.black54,
+                            offset: Offset(0, 2),
+                            blurRadius: 4,
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ],
               ),
-            ),
-            SizedBox(height: 8),
-            Text(
-              S.of(context).klDescription1,
-              textAlign: TextAlign.justify,
-              style: const TextStyle(fontSize: 16),
-            ),
-            SizedBox(height: 8),
-            Text(
-              S.of(context).klDescription2,
-              textAlign: TextAlign.justify,
-              style: const TextStyle(fontSize: 16),
-            ),
-            SizedBox(height: 8),
-            SizedBox(height: 8),
-          ],
+
+              // Content Section
+              Padding(
+                padding: const EdgeInsets.all(24.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Container(
+                      padding: const EdgeInsets.all(20),
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(16),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.black.withOpacity(0.05),
+                            blurRadius: 10,
+                            offset: const Offset(0, 4),
+                          ),
+                        ],
+                      ),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            S.of(context).klDescription1,
+                            textAlign: TextAlign.justify,
+                            style: TextStyle(
+                              fontSize: 16,
+                              height: 1.6,
+                              color: Colors.grey.shade800,
+                            ),
+                          ),
+                          const SizedBox(height: 16),
+                          Text(
+                            S.of(context).klDescription2,
+                            textAlign: TextAlign.justify,
+                            style: TextStyle(
+                              fontSize: 16,
+                              height: 1.6,
+                              color: Colors.grey.shade800,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );
   }
 }
 
+// ============ GET AROUND PAGE ============
 class GetAround extends StatefulWidget {
   const GetAround({super.key});
 
@@ -75,16 +172,21 @@ class _GetAroundState extends State<GetAround> {
         iconTheme: const IconThemeData(
           color: Colors.white,
         ),
-        title: Text(S.of(context).gettingAroundKL,
-            style: const TextStyle(color: Colors.white)),
+        title: Text(
+          S.of(context).gettingAroundKL,
+          style: const TextStyle(
+            color: Colors.white,
+            fontWeight: FontWeight.w600,
+            letterSpacing: 0.5,
+          ),
+        ),
         backgroundColor: const Color.fromARGB(255, 0, 71, 133),
+        elevation: 0,
         actions: const <Widget>[
           AppBarMore(),
         ],
       ),
-      body: MyList(
-          context:
-              context), // This is where the images and text will be displayed.
+      body: MyList(context: context),
     );
   }
 }
@@ -92,13 +194,10 @@ class _GetAroundState extends State<GetAround> {
 class MyList extends StatelessWidget {
   final BuildContext context;
 
-  MyList({required this.context}); // Constructor accepting context
-
-  final List<ItemData> items = [];
+  MyList({required this.context});
 
   @override
   Widget build(BuildContext context) {
-    // Initializing items inside build where context is accessible
     final List<ItemData> items = [
       ItemData(
         S.of(this.context).lrtTitle,
@@ -127,48 +226,140 @@ class MyList extends StatelessWidget {
       ),
     ];
 
-    return ListView.builder(
-      itemCount: items.length,
-      itemBuilder: (context, index) {
-        return Card(
-          elevation: 3.0,
-          margin: const EdgeInsets.all(16.0),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Center(
-                child: Image.network(
-                  items[index].imageUrl,
-                  fit: BoxFit.cover,
-                  height: 200,
+    return Container(
+      decoration: BoxDecoration(
+        gradient: LinearGradient(
+          begin: Alignment.topCenter,
+          end: Alignment.bottomCenter,
+          colors: [
+            const Color.fromARGB(255, 0, 71, 133).withOpacity(0.05),
+            Colors.white,
+          ],
+        ),
+      ),
+      child: ListView.builder(
+        padding: const EdgeInsets.all(16.0),
+        itemCount: items.length,
+        itemBuilder: (context, index) {
+          return Padding(
+            padding: const EdgeInsets.only(bottom: 20.0),
+            child: Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(20),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black.withOpacity(0.08),
+                    blurRadius: 15,
+                    offset: const Offset(0, 5),
+                  ),
+                ],
+              ),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(20),
+                child: Card(
+                  elevation: 0,
+                  margin: EdgeInsets.zero,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      // Image with badge
+                      Stack(
+                        children: [
+                          CachedNetworkImage(
+                            imageUrl: items[index].imageUrl,
+                            fit: BoxFit.cover,
+                            height: 200,
+                            width: double.infinity,
+                            placeholder: (context, url) => Container(
+                              height: 200,
+                              color: Colors.grey.shade200,
+                              child: Center(
+                                child: CircularProgressIndicator(
+                                  valueColor: AlwaysStoppedAnimation<Color>(
+                                    const Color.fromARGB(255, 0, 71, 133),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                          Positioned(
+                            top: 16,
+                            left: 16,
+                            child: Container(
+                              padding: const EdgeInsets.symmetric(
+                                horizontal: 12,
+                                vertical: 6,
+                              ),
+                              decoration: BoxDecoration(
+                                color: const Color.fromARGB(255, 0, 71, 133),
+                                borderRadius: BorderRadius.circular(20),
+                                boxShadow: [
+                                  BoxShadow(
+                                    color: Colors.black.withOpacity(0.2),
+                                    blurRadius: 8,
+                                    offset: const Offset(0, 2),
+                                  ),
+                                ],
+                              ),
+                              child: Row(
+                                mainAxisSize: MainAxisSize.min,
+                                children: [
+                                  const Icon(
+                                    Icons.directions_transit_rounded,
+                                    color: Colors.white,
+                                    size: 16,
+                                  ),
+                                  const SizedBox(width: 4),
+                                  Text(
+                                    'Option ${index + 1}',
+                                    style: const TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 12,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+
+                      // Content
+                      Padding(
+                        padding: const EdgeInsets.all(20.0),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              items[index].text,
+                              style: TextStyle(
+                                fontSize: 22.0,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.grey.shade900,
+                                letterSpacing: 0.5,
+                              ),
+                            ),
+                            const SizedBox(height: 12.0),
+                            Text(
+                              items[index].content,
+                              style: TextStyle(
+                                fontSize: 16.0,
+                                height: 1.5,
+                                color: Colors.grey.shade700,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.all(16.0),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      items[index].text,
-                      style: const TextStyle(
-                        fontSize: 20.0,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                    const SizedBox(height: 8.0),
-                    Text(
-                      items[index].content,
-                      style: const TextStyle(
-                        fontSize: 16.0,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ],
-          ),
-        );
-      },
+            ),
+          );
+        },
+      ),
     );
   }
 }
@@ -181,15 +372,7 @@ class ItemData {
   ItemData(this.text, this.imageUrl, this.content);
 }
 
-class ItemData2 {
-  final String text;
-  final String imageUrl;
-  final String content;
-  final String goto;
-
-  ItemData2(this.text, this.imageUrl, this.content, this.goto);
-}
-
+// ============ TRAVEL TIPS PAGE ============
 class TravelTips extends StatefulWidget {
   const TravelTips({super.key});
 
@@ -203,11 +386,18 @@ class _TravelTipsState extends State<TravelTips> {
     return Scaffold(
       appBar: AppBar(
         iconTheme: const IconThemeData(
-          color: Colors.white, //change your color here
+          color: Colors.white,
         ),
-        title: Text(S.of(context).travelTips,
-            style: const TextStyle(color: Colors.white)),
+        title: Text(
+          S.of(context).travelTips,
+          style: const TextStyle(
+            color: Colors.white,
+            fontWeight: FontWeight.w600,
+            letterSpacing: 0.5,
+          ),
+        ),
         backgroundColor: const Color.fromARGB(255, 0, 71, 133),
+        elevation: 0,
         actions: const <Widget>[
           AppBarMore(),
         ],
@@ -220,85 +410,187 @@ class _TravelTipsState extends State<TravelTips> {
 class MyList2 extends StatelessWidget {
   final List<ItemData2> items = [
     ItemData2(
-      'Weather', // This will be replaced by S.of(context).weather
+      'Weather',
       'https://www.kltheguide.com.my/assets/img/highlights/traveltips/weather.png',
-      'The climate in KL is quite humid all year-round. Anyone travelling to KL must always be ready for rains at any time of the year. Regardless, the best time to visit KL is from May-July or December-February.\nThe weather can be pretty hot between March - April. Due to the forest fires from Sumatera which typically happens between June - August, the dust particles may cast a haze over KL thus making it not an ideal time to visit the city.', // Will be replaced with localized text
+      '',
       'https://www.ventusky.com/',
+      Icons.wb_sunny_rounded,
+      Colors.orange,
     ),
     ItemData2(
-      'Time Zone', // This will be replaced by S.of(context).timeZone
+      'Time Zone',
       'https://www.kltheguide.com.my/assets/img/highlights/traveltips/timezone.png',
-      'Standard Malaysian time is 8 hours ahead of GMT (GMT +8).', // Will be replaced with localized text
+      '',
       'https://www.timeanddate.com/',
+      Icons.access_time_rounded,
+      Colors.blue,
     ),
     ItemData2(
-      'Currency', // This will be replaced by S.of(context).currency
+      'Currency',
       'https://www.kltheguide.com.my/assets/img/highlights/traveltips/currency-code.png',
-      'Malaysia’s currency unit is divided into two. The term Ringgit Malaysia (RM) is used to refer to paper money. The denominations are RM1, RM5, RM10, RM 20, RM 50 and RM100. Whereas the coins are referred to as sen (cents). The denominations are 5 sen, 10 sen, 20 sen and 50 sen.', // Will be replaced with localized text
+      '',
       'https://www.xe.com/',
+      Icons.payments_rounded,
+      Colors.green,
     ),
     ItemData2(
-      'Visa and Passport', // This will be replaced by S.of(context).visaAndPassport
+      'Visa and Passport',
       'https://www.kltheguide.com.my/assets/img/highlights/traveltips/visa-and-passports.png',
-      'Passports must be valid for at least 6 months at the time of entry. Visa requirements vary from time to time, so it is best to check with the Malaysian embassy or consulate or the Immigration Department website.', // Will be replaced with localized text
+      '',
       'https://www.imi.gov.my/',
+      Icons.card_travel_rounded,
+      Colors.purple,
     ),
   ];
 
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
-      itemCount: items.length,
-      itemBuilder: (context, index) {
-        return GestureDetector(
-          onTap: () => _launchURL(items[index].goto),
-          child: Card(
-            elevation: 3.0, // Adjust the elevation as needed
-            margin: const EdgeInsets.all(16.0), // Adjust the margin as needed
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Center(
-                  child: Image.network(
-                    items[index].imageUrl,
-                    fit: BoxFit.cover,
-                    height: 200,
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(
-                      16.0), // Adjust the padding as needed
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        _getLocalizedTitle(
-                            index, context), // Using localized titles
-                        style: const TextStyle(
-                          fontSize: 20.0, // Adjust the font size as needed
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                      const SizedBox(
-                          height: 8.0), // Add spacing between title and content
-                      Text(
-                        _getLocalizedContent(
-                            index, context), // Using localized content
-                        style: const TextStyle(
-                            fontSize: 16.0), // Adjust the font size as needed
+    return Container(
+      decoration: BoxDecoration(
+        gradient: LinearGradient(
+          begin: Alignment.topCenter,
+          end: Alignment.bottomCenter,
+          colors: [
+            const Color.fromARGB(255, 0, 71, 133).withOpacity(0.05),
+            Colors.white,
+          ],
+        ),
+      ),
+      child: ListView.builder(
+        padding: const EdgeInsets.all(16.0),
+        itemCount: items.length,
+        itemBuilder: (context, index) {
+          return Padding(
+            padding: const EdgeInsets.only(bottom: 20.0),
+            child: Material(
+              color: Colors.transparent,
+              child: InkWell(
+                onTap: () => _launchURL(items[index].goto),
+                borderRadius: BorderRadius.circular(20),
+                child: Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(20),
+                    boxShadow: [
+                      BoxShadow(
+                        color: items[index].color.withOpacity(0.2),
+                        blurRadius: 15,
+                        offset: const Offset(0, 5),
                       ),
                     ],
                   ),
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(20),
+                    child: Card(
+                      elevation: 0,
+                      margin: EdgeInsets.zero,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          // Image Section
+                          Stack(
+                            children: [
+                              CachedNetworkImage(
+                                imageUrl: items[index].imageUrl,
+                                fit: BoxFit.cover,
+                                height: 200,
+                                width: double.infinity,
+                                placeholder: (context, url) => Container(
+                                  height: 200,
+                                  color: Colors.grey.shade200,
+                                  child: Center(
+                                    child: CircularProgressIndicator(
+                                      valueColor: AlwaysStoppedAnimation<Color>(
+                                        items[index].color,
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              Positioned(
+                                top: 16,
+                                left: 16,
+                                child: Container(
+                                  padding: const EdgeInsets.all(12),
+                                  decoration: BoxDecoration(
+                                    color: items[index].color,
+                                    borderRadius: BorderRadius.circular(12),
+                                    boxShadow: [
+                                      BoxShadow(
+                                        color: Colors.black.withOpacity(0.2),
+                                        blurRadius: 8,
+                                        offset: const Offset(0, 2),
+                                      ),
+                                    ],
+                                  ),
+                                  child: Icon(
+                                    items[index].icon,
+                                    color: Colors.white,
+                                    size: 24,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+
+                          // Content
+                          Padding(
+                            padding: const EdgeInsets.all(20.0),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  _getLocalizedTitle(index, context),
+                                  style: TextStyle(
+                                    fontSize: 22.0,
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.grey.shade900,
+                                    letterSpacing: 0.5,
+                                  ),
+                                ),
+                                const SizedBox(height: 12.0),
+                                Text(
+                                  _getLocalizedContent(index, context),
+                                  style: TextStyle(
+                                    fontSize: 16.0,
+                                    height: 1.5,
+                                    color: Colors.grey.shade700,
+                                  ),
+                                ),
+                                const SizedBox(height: 16),
+                                Row(
+                                  children: [
+                                    Icon(
+                                      Icons.open_in_new_rounded,
+                                      color: items[index].color,
+                                      size: 18,
+                                    ),
+                                    const SizedBox(width: 8),
+                                    Text(
+                                      'Learn More',
+                                      style: TextStyle(
+                                        fontSize: 14,
+                                        fontWeight: FontWeight.bold,
+                                        color: items[index].color,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
                 ),
-              ],
+              ),
             ),
-          ),
-        );
-      },
+          );
+        },
+      ),
     );
   }
 
-  // Helper function to get localized title based on index
   String _getLocalizedTitle(int index, BuildContext context) {
     switch (index) {
       case 0:
@@ -314,7 +606,6 @@ class MyList2 extends StatelessWidget {
     }
   }
 
-  // Helper function to get localized content based on index
   String _getLocalizedContent(int index, BuildContext context) {
     switch (index) {
       case 0:
@@ -331,6 +622,19 @@ class MyList2 extends StatelessWidget {
   }
 }
 
+class ItemData2 {
+  final String text;
+  final String imageUrl;
+  final String content;
+  final String goto;
+  final IconData icon;
+  final Color color;
+
+  ItemData2(
+      this.text, this.imageUrl, this.content, this.goto, this.icon, this.color);
+}
+
+// ============ SHARED WIDGETS ============
 class ApiData {
   final String title;
   final String content;
@@ -362,47 +666,73 @@ class CardListWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
+      padding: const EdgeInsets.all(16.0),
       itemCount: data.length,
       itemBuilder: (context, index) {
         final item = data[index];
 
-        return GestureDetector(
-          onTap: () {
-            // print(item.location);
-            if (item.location != '') {
-              _launchURL(item.location);
-            }
-          },
-          child: Card(
-            elevation: 4.0,
-            margin: const EdgeInsets.all(16.0),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                CachedNetworkImage(
-                  imageUrl: item.image,
-                  fit: BoxFit.cover,
-                  height: 200,
-                  width: double.infinity,
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(16.0),
+        return Padding(
+          padding: const EdgeInsets.only(bottom: 20.0),
+          child: GestureDetector(
+            onTap: () {
+              if (item.location != '') {
+                _launchURL(item.location);
+              }
+            },
+            child: Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(20),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black.withOpacity(0.08),
+                    blurRadius: 15,
+                    offset: const Offset(0, 5),
+                  ),
+                ],
+              ),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(20),
+                child: Card(
+                  elevation: 0,
+                  margin: EdgeInsets.zero,
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text(
-                        (item.title),
-                        style: const TextStyle(
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold,
+                      CachedNetworkImage(
+                        imageUrl: item.image,
+                        fit: BoxFit.cover,
+                        height: 200,
+                        width: double.infinity,
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(20.0),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              item.title,
+                              style: TextStyle(
+                                fontSize: 20,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.grey.shade900,
+                              ),
+                            ),
+                            const SizedBox(height: 12.0),
+                            Text(
+                              item.content.replaceAll('\\n', '\n'),
+                              style: TextStyle(
+                                fontSize: 16,
+                                height: 1.5,
+                                color: Colors.grey.shade700,
+                              ),
+                            ),
+                          ],
                         ),
                       ),
-                      const SizedBox(height: 8.0),
-                      Text(item.content.replaceAll('\\n', '\n')),
                     ],
                   ),
                 ),
-              ],
+              ),
             ),
           ),
         );
@@ -416,11 +746,12 @@ class CardItem extends StatelessWidget {
   final String image;
   final int index;
 
-  const CardItem(
-      {super.key,
-      required this.name,
-      required this.image,
-      required this.index});
+  const CardItem({
+    super.key,
+    required this.name,
+    required this.image,
+    required this.index,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -434,14 +765,13 @@ class CardItem extends StatelessWidget {
             decoration: BoxDecoration(
               image: DecorationImage(
                 image: NetworkImage(image),
-                fit: BoxFit.cover, // Make the image cover the entire card
+                fit: BoxFit.cover,
               ),
             ),
             child: Center(
               child: Container(
                 padding: const EdgeInsets.all(8),
-                color: Colors.black
-                    .withOpacity(0.5), // Adjust the opacity as needed
+                color: Colors.black.withOpacity(0.5),
                 child: Text(
                   name,
                   style: const TextStyle(

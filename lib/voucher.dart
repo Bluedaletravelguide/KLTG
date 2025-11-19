@@ -34,13 +34,13 @@ List<VoucherData> fallbackVoucherData = [
   VoucherData(
     voucher: 'Voucher 1',
     title: 'Stand a chance to win complimentary vouchers. Click participate.',
-    image: 'assets/images/voucher_1.jpg', // Local asset image 1
+    image: 'assets/images/voucher_1.jpg',
     expiryDate: '30 November 2024',
   ),
   VoucherData(
     voucher: 'Voucher 2',
     title: 'Stand a chance to win complimentary vouchers. Click participate.',
-    image: 'assets/images/voucher_2.jpg', // Local asset image 2
+    image: 'assets/images/voucher_2.jpg',
     expiryDate: '30 November 2024',
   ),
 ];
@@ -69,6 +69,7 @@ class VoucherCardList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
+      padding: const EdgeInsets.all(16),
       itemCount: data.length,
       itemBuilder: (context, index) {
         final item = data[index];
@@ -76,61 +77,258 @@ class VoucherCardList extends StatelessWidget {
             ? 'assets/images/voucher_1.jpg'
             : 'assets/images/voucher_2.jpg';
 
-        return Card(
-          elevation: 4.0,
-          margin: const EdgeInsets.all(16.0),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              // Display the voucher image with a fallback mechanism
-              CachedNetworkImage(
-                imageUrl: item.image.isNotEmpty ? item.image : '',
-                fit: BoxFit.cover,
-                height: 200,
-                width: double.infinity,
-                errorWidget: (context, url, error) => Image.asset(
-                  fallbackImage, // Local fallback image based on index
-                  fit: BoxFit.cover,
-                  height: 200,
-                  width: double.infinity,
-                ),
-                placeholder: (context, url) =>
-                    const CircularProgressIndicator(),
+        return Padding(
+          padding: const EdgeInsets.only(bottom: 20),
+          child: Container(
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(24),
+              gradient: LinearGradient(
+                begin: Alignment.topLeft,
+                end: Alignment.bottomRight,
+                colors: [
+                  const Color.fromARGB(255, 0, 71, 133),
+                  const Color.fromARGB(255, 0, 95, 175),
+                ],
               ),
-              Padding(
-                padding: const EdgeInsets.all(16.0),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    // Display the voucher title
-                    Text(
-                      item.title,
-                      style: const TextStyle(
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold,
+              boxShadow: [
+                BoxShadow(
+                  color: const Color.fromARGB(255, 0, 71, 133).withOpacity(0.3),
+                  blurRadius: 20,
+                  offset: const Offset(0, 8),
+                ),
+              ],
+            ),
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(24),
+              child: Stack(
+                children: [
+                  // Background pattern
+                  Positioned.fill(
+                    child: Opacity(
+                      opacity: 0.1,
+                      child: CustomPaint(
+                        painter: VoucherPatternPainter(),
                       ),
                     ),
-                    const SizedBox(height: 8.0),
-                    // Display the voucher content
-                    Text(item.voucher),
-                    const SizedBox(height: 8.0),
-                    // Display the voucher expiry date
-                    Text("Expiry Date: ${item.expiryDate}"),
-                    const SizedBox(height: 8.0),
-                    // Claim button at the bottom right
-                    Align(
-                      alignment: Alignment.bottomRight,
-                      child: ElevatedButton(
-                        onPressed: () {
-                          _launchURL();
-                        },
-                        child: Text('Click'),
+                  ),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.stretch,
+                    children: [
+                      // Voucher image with special styling
+                      Stack(
+                        children: [
+                          Container(
+                            margin: const EdgeInsets.all(16),
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(16),
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Colors.black.withOpacity(0.2),
+                                  blurRadius: 15,
+                                  offset: const Offset(0, 5),
+                                ),
+                              ],
+                            ),
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.circular(16),
+                              child: CachedNetworkImage(
+                                imageUrl:
+                                    item.image.isNotEmpty ? item.image : '',
+                                fit: BoxFit.cover,
+                                height: 180,
+                                width: double.infinity,
+                                errorWidget: (context, url, error) =>
+                                    Image.asset(
+                                  fallbackImage,
+                                  fit: BoxFit.cover,
+                                  height: 180,
+                                  width: double.infinity,
+                                ),
+                                placeholder: (context, url) => Container(
+                                  height: 180,
+                                  decoration: BoxDecoration(
+                                    gradient: LinearGradient(
+                                      begin: Alignment.topLeft,
+                                      end: Alignment.bottomRight,
+                                      colors: [
+                                        Colors.grey[300]!,
+                                        Colors.grey[200]!,
+                                      ],
+                                    ),
+                                  ),
+                                  child: Center(
+                                    child: CircularProgressIndicator(
+                                      valueColor: AlwaysStoppedAnimation<Color>(
+                                        const Color.fromARGB(255, 0, 71, 133),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                          // Special offer badge
+                          Positioned(
+                            top: 24,
+                            right: 24,
+                            child: Container(
+                              padding: const EdgeInsets.symmetric(
+                                horizontal: 16,
+                                vertical: 8,
+                              ),
+                              decoration: BoxDecoration(
+                                gradient: const LinearGradient(
+                                  colors: [
+                                    Color(0xFFFF6B6B),
+                                    Color(0xFFFF8E53),
+                                  ],
+                                ),
+                                borderRadius: BorderRadius.circular(20),
+                                boxShadow: [
+                                  BoxShadow(
+                                    color: Colors.red.withOpacity(0.4),
+                                    blurRadius: 12,
+                                    offset: const Offset(0, 4),
+                                  ),
+                                ],
+                              ),
+                              child: Row(
+                                mainAxisSize: MainAxisSize.min,
+                                children: const [
+                                  Icon(
+                                    Icons.local_offer,
+                                    color: Colors.white,
+                                    size: 16,
+                                  ),
+                                  SizedBox(width: 4),
+                                  Text(
+                                    'SPECIAL',
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 12,
+                                      fontWeight: FontWeight.bold,
+                                      letterSpacing: 0.5,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                        ],
                       ),
-                    ),
-                  ],
-                ),
+                      // Content section
+                      Container(
+                        padding: const EdgeInsets.fromLTRB(20, 8, 20, 20),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            // Title
+                            Text(
+                              item.title,
+                              style: const TextStyle(
+                                fontSize: 18,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white,
+                                height: 1.3,
+                              ),
+                            ),
+                            const SizedBox(height: 12),
+                            // Voucher code section
+                            Container(
+                              padding: const EdgeInsets.all(12),
+                              decoration: BoxDecoration(
+                                color: Colors.yellow.withOpacity(0.15),
+                                borderRadius: BorderRadius.circular(12),
+                                border: Border.all(
+                                  color: Colors.yellow.withOpacity(0.3),
+                                  width: 1,
+                                ),
+                              ),
+                              child: Row(
+                                children: [
+                                  Icon(
+                                    Icons.confirmation_number_outlined,
+                                    color: Colors.yellow.withOpacity(0.9),
+                                    size: 20,
+                                  ),
+                                  const SizedBox(width: 8),
+                                  Expanded(
+                                    child: Text(
+                                      item.voucher,
+                                      style: TextStyle(
+                                        color: Colors.yellow.withOpacity(0.95),
+                                        fontSize: 14,
+                                        fontWeight: FontWeight.w500,
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                            const SizedBox(height: 12),
+                            // Expiry date
+                            Row(
+                              children: [
+                                Icon(
+                                  Icons.access_time,
+                                  color: Colors.white.withOpacity(0.8),
+                                  size: 16,
+                                ),
+                                const SizedBox(width: 6),
+                                Text(
+                                  "Expires: ${item.expiryDate}",
+                                  style: TextStyle(
+                                    color: Colors.white.withOpacity(0.85),
+                                    fontSize: 13,
+                                    fontWeight: FontWeight.w500,
+                                  ),
+                                ),
+                              ],
+                            ),
+                            const SizedBox(height: 16),
+                            // Claim button
+                            SizedBox(
+                              width: double.infinity,
+                              child: ElevatedButton(
+                                onPressed: () {
+                                  _launchURL();
+                                },
+                                style: ElevatedButton.styleFrom(
+                                  backgroundColor: Colors.white,
+                                  foregroundColor:
+                                      const Color.fromARGB(255, 0, 71, 133),
+                                  padding:
+                                      const EdgeInsets.symmetric(vertical: 14),
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(12),
+                                  ),
+                                  elevation: 0,
+                                ),
+                                child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: const [
+                                    Text(
+                                      'Claim Voucher',
+                                      style: TextStyle(
+                                        fontSize: 16,
+                                        fontWeight: FontWeight.bold,
+                                        letterSpacing: 0.5,
+                                      ),
+                                    ),
+                                    SizedBox(width: 8),
+                                    Icon(Icons.arrow_forward, size: 18),
+                                  ],
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
               ),
-            ],
+            ),
           ),
         );
       },
@@ -149,6 +347,29 @@ class VoucherCardList extends StatelessWidget {
   }
 }
 
+// Custom painter for voucher pattern background
+class VoucherPatternPainter extends CustomPainter {
+  @override
+  void paint(Canvas canvas, Size size) {
+    final paint = Paint()
+      ..color = Colors.white
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = 2;
+
+    // Draw diagonal lines pattern
+    for (double i = -size.height; i < size.width; i += 30) {
+      canvas.drawLine(
+        Offset(i, 0),
+        Offset(i + size.height, size.height),
+        paint,
+      );
+    }
+  }
+
+  @override
+  bool shouldRepaint(covariant CustomPainter oldDelegate) => false;
+}
+
 // Main widget to display the vouchers
 class VoucherScreen extends StatefulWidget {
   const VoucherScreen({Key? key}) : super(key: key);
@@ -164,47 +385,65 @@ class _VoucherScreenState extends State<VoucherScreen> {
   @override
   void initState() {
     super.initState();
-    _fetchData(); // Simulate new vouchers being added for testing
+    _fetchData();
   }
 
   void _fetchData() {
     _data = fetchVouchers();
     _data.then((newData) {
       if (_previousData.isNotEmpty && newData.length > _previousData.length) {
-        // Return true to indicate new vouchers were added, NO SnackBar here
         Navigator.pop(context, true);
       }
-      // Update the previous data within setState to trigger rebuild if necessary
       setState(() {
         _previousData = newData;
       });
     }).catchError((error) {
-      // Handle errors if needed
-      Navigator.pop(context,
-          false); // Return false if there's an error or no new vouchers
+      Navigator.pop(context, false);
     });
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.grey[50],
       appBar: AppBar(
-        title:
-            Text(S.of(context).vouchers, style: TextStyle(color: Colors.white)),
+        title: Text(
+          S.of(context).vouchers,
+          style: const TextStyle(color: Colors.white),
+        ),
         backgroundColor: const Color.fromARGB(255, 0, 71, 133),
         iconTheme: const IconThemeData(color: Colors.white),
+        elevation: 0,
       ),
       body: FutureBuilder<List<VoucherData>>(
         future: _data,
         builder: (context, snapshot) {
           if (snapshot.connectionState == ConnectionState.waiting) {
-            return const Center(child: CircularProgressIndicator());
+            return Center(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  CircularProgressIndicator(
+                    valueColor: AlwaysStoppedAnimation<Color>(
+                      const Color.fromARGB(255, 0, 71, 133),
+                    ),
+                  ),
+                  const SizedBox(height: 16),
+                  Text(
+                    'Loading vouchers...',
+                    style: TextStyle(
+                      color: Colors.grey[600],
+                      fontSize: 16,
+                    ),
+                  ),
+                ],
+              ),
+            );
           } else if (snapshot.hasError) {
-            // Display fallback data when there is an error fetching from the server
             return VoucherCardList(data: fallbackVoucherData);
           } else if (snapshot.hasData) {
             final newData = snapshot.data ?? [];
-            _previousData = newData; // Store the fetched data
+            _previousData = newData;
             return VoucherCardList(data: newData);
           } else {
             return VoucherCardList(data: fallbackVoucherData);
@@ -214,3 +453,4 @@ class _VoucherScreenState extends State<VoucherScreen> {
     );
   }
 }
+  

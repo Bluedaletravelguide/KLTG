@@ -25,51 +25,251 @@ class CardListWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
-      itemCount: data.length,
-      itemBuilder: (context, index) {
-        final item = data[index];
+    return Container(
+      decoration: BoxDecoration(
+        gradient: LinearGradient(
+          begin: Alignment.topCenter,
+          end: Alignment.bottomCenter,
+          colors: [
+            Colors.grey[50]!,
+            Colors.white,
+          ],
+        ),
+      ),
+      child: ListView.builder(
+        padding: const EdgeInsets.symmetric(vertical: 8),
+        itemCount: data.length,
+        itemBuilder: (context, index) {
+          final item = data[index];
 
-        return GestureDetector(
-          onTap: () {
-            if (item.location != '') {
-              _launchURL(item.location);
-            }
-          },
-          child: Card(
-            elevation: 4.0,
-            margin: const EdgeInsets.all(16.0),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                CachedNetworkImage(
-                  imageUrl: item.image,
-                  fit: BoxFit.cover,
-                  height: 200,
-                  width: double.infinity,
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(16.0),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        item.title,
-                        style: const TextStyle(
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                      const SizedBox(height: 8.0),
-                      Text(item.content.replaceAll('\\n', '\n')),
-                    ],
-                  ),
+          return Container(
+            margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(16),
+              color: Colors.white,
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.black.withOpacity(0.08),
+                  blurRadius: 10,
+                  offset: const Offset(0, 4),
                 ),
               ],
             ),
-          ),
-        );
-      },
+            child: Material(
+              color: Colors.transparent,
+              child: InkWell(
+                onTap: () {
+                  if (item.location.isNotEmpty) {
+                    _launchURL(item.location);
+                  }
+                },
+                borderRadius: BorderRadius.circular(16),
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(16),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      // Image with overlay gradient
+                      Stack(
+                        children: [
+                          CachedNetworkImage(
+                            imageUrl: item.image,
+                            fit: BoxFit.cover,
+                            height: 220,
+                            width: double.infinity,
+                            placeholder: (context, url) => Container(
+                              height: 220,
+                              color: Colors.grey[200],
+                              child: const Center(
+                                child: CircularProgressIndicator(
+                                  valueColor: AlwaysStoppedAnimation<Color>(
+                                    Color.fromARGB(255, 0, 71, 133),
+                                  ),
+                                ),
+                              ),
+                            ),
+                            errorWidget: (context, url, error) => Container(
+                              height: 220,
+                              color: Colors.grey[300],
+                              child: const Icon(Icons.error, size: 50),
+                            ),
+                          ),
+                          if (item.location.isNotEmpty)
+                            Positioned(
+                              top: 12,
+                              right: 12,
+                              child: Container(
+                                padding: const EdgeInsets.symmetric(
+                                  horizontal: 12,
+                                  vertical: 8,
+                                ),
+                                decoration: BoxDecoration(
+                                  color: const Color.fromARGB(255, 0, 71, 133),
+                                  borderRadius: BorderRadius.circular(20),
+                                  boxShadow: [
+                                    BoxShadow(
+                                      color: Colors.black.withOpacity(0.3),
+                                      blurRadius: 8,
+                                      offset: const Offset(0, 2),
+                                    ),
+                                  ],
+                                ),
+                                child: const Row(
+                                  mainAxisSize: MainAxisSize.min,
+                                  children: [
+                                    Icon(
+                                      Icons.location_on,
+                                      color: Colors.white,
+                                      size: 16,
+                                    ),
+                                    SizedBox(width: 4),
+                                    Text(
+                                      'View Map',
+                                      style: TextStyle(
+                                        color: Colors.white,
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 12,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                        ],
+                      ),
+
+                      // Content Section
+                      Padding(
+                        padding: const EdgeInsets.all(16),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            // Title with icon
+                            Row(
+                              children: [
+                                Container(
+                                  padding: const EdgeInsets.all(8),
+                                  decoration: BoxDecoration(
+                                    color: const Color.fromARGB(255, 0, 71, 133)
+                                        .withOpacity(0.1),
+                                    borderRadius: BorderRadius.circular(8),
+                                  ),
+                                  child: const Icon(
+                                    Icons.place,
+                                    color: Color.fromARGB(255, 0, 71, 133),
+                                    size: 20,
+                                  ),
+                                ),
+                                const SizedBox(width: 12),
+                                Expanded(
+                                  child: Text(
+                                    item.title,
+                                    style: const TextStyle(
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.bold,
+                                      color: Color.fromARGB(255, 0, 71, 133),
+                                      letterSpacing: 0.3,
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                            const SizedBox(height: 16),
+
+                            // Content/Description
+                            if (item.content.isNotEmpty)
+                              Container(
+                                padding: const EdgeInsets.all(14),
+                                decoration: BoxDecoration(
+                                  color: Colors.grey[50],
+                                  borderRadius: BorderRadius.circular(12),
+                                  border: Border.all(
+                                    color: Colors.grey[200]!,
+                                    width: 1,
+                                  ),
+                                ),
+                                child: Row(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Icon(
+                                      Icons.info_outline,
+                                      size: 20,
+                                      color: Colors.grey[600],
+                                    ),
+                                    const SizedBox(width: 10),
+                                    Expanded(
+                                      child: Text(
+                                        item.content.replaceAll('\\n', '\n'),
+                                        style: TextStyle(
+                                          fontSize: 15,
+                                          color: Colors.grey[700],
+                                          height: 1.5,
+                                          letterSpacing: 0.2,
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+
+                            // Location Button (if location exists)
+                            if (item.location.isNotEmpty) ...[
+                              const SizedBox(height: 16),
+                              SizedBox(
+                                width: double.infinity,
+                                child: Material(
+                                  color: const Color.fromARGB(255, 0, 71, 133),
+                                  borderRadius: BorderRadius.circular(12),
+                                  child: InkWell(
+                                    onTap: () => _launchURL(item.location),
+                                    borderRadius: BorderRadius.circular(12),
+                                    child: Container(
+                                      padding: const EdgeInsets.symmetric(
+                                        vertical: 14,
+                                      ),
+                                      child: const Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.center,
+                                        children: [
+                                          Icon(
+                                            Icons.map_outlined,
+                                            color: Colors.white,
+                                            size: 20,
+                                          ),
+                                          SizedBox(width: 10),
+                                          Text(
+                                            'View on Map',
+                                            style: TextStyle(
+                                              color: Colors.white,
+                                              fontWeight: FontWeight.bold,
+                                              fontSize: 16,
+                                              letterSpacing: 0.5,
+                                            ),
+                                          ),
+                                          SizedBox(width: 4),
+                                          Icon(
+                                            Icons.arrow_forward_rounded,
+                                            color: Colors.white,
+                                            size: 18,
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+          );
+        },
+      ),
     );
   }
 }
@@ -77,27 +277,33 @@ class CardListWidget extends StatelessWidget {
 class BeyondKL extends StatelessWidget {
   final List<Map<String, dynamic>> dataList = [
     {
-      "name": S.current.islands, // localized key for "Islands"
-      "image": "https://www.kltheguide.com.my/assets/img/beyondkl/ISLAND-01.jpg"
-    },
-    {
-      "name": S.current.hillStation, // localized key for "Hill Station"
+      "name": S.current.islands,
       "image":
-          "https://www.kltheguide.com.my/assets/img/beyondkl/HILL-STATION-01.jpg"
+          "https://www.kltheguide.com.my/assets/img/beyondkl/ISLAND-01.jpg",
+      "icon": Icons.beach_access,
     },
     {
-      "name": S.current.waterfall, // localized key for "Waterfall"
+      "name": S.current.hillStation,
       "image":
-          "https://www.kltheguide.com.my/assets/img/beyondkl/WATERFALL-01.jpg"
+          "https://www.kltheguide.com.my/assets/img/beyondkl/HILL-STATION-01.jpg",
+      "icon": Icons.landscape,
     },
     {
-      "name": S.current.hiking, // localized key for "Hiking"
-      "image": "https://www.kltheguide.com.my/assets/img/beyondkl/HIKING.jpg"
-    },
-    {
-      "name": S.current.extremeSports, // localized key for "Extreme Sports"
+      "name": S.current.waterfall,
       "image":
-          "https://www.kltheguide.com.my/assets/img/beyondkl/EXTREME-SPORT-2.webp"
+          "https://www.kltheguide.com.my/assets/img/beyondkl/WATERFALL-01.jpg",
+      "icon": Icons.water,
+    },
+    {
+      "name": S.current.hiking,
+      "image": "https://www.kltheguide.com.my/assets/img/beyondkl/HIKING.jpg",
+      "icon": Icons.hiking,
+    },
+    {
+      "name": S.current.extremeSports,
+      "image":
+          "https://www.kltheguide.com.my/assets/img/beyondkl/EXTREME-SPORT-2.webp",
+      "icon": Icons.sports_motorsports,
     },
   ];
 
@@ -108,19 +314,41 @@ class BeyondKL extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         iconTheme: const IconThemeData(color: Colors.white),
+        elevation: 2,
         title: Text(
-          S.of(context).beyondKL, // localized key for "Beyond KL"
-          style: const TextStyle(color: Colors.white),
+          S.of(context).beyondKL,
+          style: const TextStyle(
+            color: Colors.white,
+            fontWeight: FontWeight.bold,
+            letterSpacing: 0.5,
+          ),
         ),
         backgroundColor: const Color.fromARGB(255, 0, 71, 133),
       ),
-      body: ListView.builder(
-        itemCount: dataList.length,
-        itemBuilder: (context, index) {
-          final item = dataList[index];
-          return CardItem(
-              name: item["name"], image: item["image"], index: index);
-        },
+      body: Container(
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: [
+              Colors.grey[50]!,
+              Colors.white,
+            ],
+          ),
+        ),
+        child: ListView.builder(
+          padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 16),
+          itemCount: dataList.length,
+          itemBuilder: (context, index) {
+            final item = dataList[index];
+            return CardItem(
+              name: item["name"],
+              image: item["image"],
+              icon: item["icon"],
+              index: index,
+            );
+          },
+        ),
       ),
     );
   }
@@ -129,47 +357,151 @@ class BeyondKL extends StatelessWidget {
 class CardItem extends StatelessWidget {
   final String name;
   final String image;
+  final IconData icon;
   final int index;
 
   const CardItem({
     super.key,
     required this.name,
     required this.image,
+    required this.icon,
     required this.index,
   });
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: () {
-        Navigator.pushNamed(context, '/beyondkl-$index',
-            arguments: {'index': index});
-      },
-      child: Card(
-        elevation: 3,
-        margin: const EdgeInsets.all(10),
-        child: AspectRatio(
-          aspectRatio: 16 / 9,
-          child: Container(
-            decoration: BoxDecoration(
-              image: DecorationImage(
-                image: NetworkImage(image),
-                fit: BoxFit.cover,
-              ),
-            ),
-            child: Center(
-              child: Container(
-                padding: const EdgeInsets.all(8),
-                color: Colors.black.withOpacity(0.5),
-                child: Text(
-                  name,
-                  style: const TextStyle(
-                    color: Colors.white,
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
+    return Container(
+      margin: const EdgeInsets.only(bottom: 16),
+      height: 200,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(20),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withOpacity(0.15),
+            blurRadius: 10,
+            offset: const Offset(0, 4),
+          ),
+        ],
+      ),
+      child: Material(
+        color: Colors.transparent,
+        child: InkWell(
+          onTap: () {
+            Navigator.pushNamed(context, '/beyondkl-$index',
+                arguments: {'index': index});
+          },
+          borderRadius: BorderRadius.circular(20),
+          child: ClipRRect(
+            borderRadius: BorderRadius.circular(20),
+            child: Stack(
+              children: [
+                // Background Image
+                Positioned.fill(
+                  child: CachedNetworkImage(
+                    imageUrl: image,
+                    fit: BoxFit.cover,
+                    placeholder: (context, url) => Container(
+                      color: Colors.grey[300],
+                      child: const Center(
+                        child: CircularProgressIndicator(
+                          valueColor: AlwaysStoppedAnimation<Color>(
+                            Color.fromARGB(255, 0, 71, 133),
+                          ),
+                        ),
+                      ),
+                    ),
+                    errorWidget: (context, url, error) => Container(
+                      color: Colors.grey[400],
+                      child: const Icon(Icons.error, size: 50),
+                    ),
                   ),
                 ),
-              ),
+
+                // Gradient Overlay
+                Positioned.fill(
+                  child: Container(
+                    decoration: BoxDecoration(
+                      gradient: LinearGradient(
+                        begin: Alignment.topCenter,
+                        end: Alignment.bottomCenter,
+                        colors: [
+                          Colors.transparent,
+                          Colors.black.withOpacity(0.7),
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+
+                // Content
+                Positioned(
+                  bottom: 0,
+                  left: 0,
+                  right: 0,
+                  child: Padding(
+                    padding: const EdgeInsets.all(20),
+                    child: Row(
+                      children: [
+                        Container(
+                          padding: const EdgeInsets.all(12),
+                          decoration: BoxDecoration(
+                            color: Colors.white.withOpacity(0.9),
+                            borderRadius: BorderRadius.circular(12),
+                          ),
+                          child: Icon(
+                            icon,
+                            color: const Color.fromARGB(255, 0, 71, 133),
+                            size: 28,
+                          ),
+                        ),
+                        const SizedBox(width: 16),
+                        Expanded(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              Text(
+                                name,
+                                style: const TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 24,
+                                  fontWeight: FontWeight.bold,
+                                  letterSpacing: 0.5,
+                                  shadows: [
+                                    Shadow(
+                                      color: Colors.black45,
+                                      blurRadius: 8,
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              const SizedBox(height: 4),
+                              Row(
+                                children: [
+                                  Text(
+                                    'Explore',
+                                    style: TextStyle(
+                                      color: Colors.white.withOpacity(0.9),
+                                      fontSize: 14,
+                                      fontWeight: FontWeight.w500,
+                                    ),
+                                  ),
+                                  const SizedBox(width: 6),
+                                  Icon(
+                                    Icons.arrow_forward_rounded,
+                                    color: Colors.white.withOpacity(0.9),
+                                    size: 16,
+                                  ),
+                                ],
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ],
             ),
           ),
         ),
@@ -195,6 +527,7 @@ class DetailPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(name),
+        backgroundColor: const Color.fromARGB(255, 0, 71, 133),
       ),
       body: Center(
         child: Text(location),
@@ -210,49 +543,34 @@ class BeyondKL_I extends StatelessWidget {
   Widget build(BuildContext context) {
     final List<ApiData> dataList = [
       ApiData(
-        title:
-            S.of(context).pangkorIsland, // localized key for "Pangkor Island"
-        content: S
-            .of(context)
-            .pangkorIslandContent, // localized key for content description
+        title: S.of(context).pangkorIsland,
+        content: S.of(context).pangkorIslandContent,
         image:
             "https://www.kltheguide.com.my/assets/img/beyondkl/i/pangkor.webp",
         location: "https://maps.app.goo.gl/rHbUNhRs3Tj1ywg69",
       ),
       ApiData(
-        title: S.of(context).pulauRedang, // localized key for "Pulau Redang"
-        content: S
-            .of(context)
-            .pulauRedangContent, // localized key for content description
+        title: S.of(context).pulauRedang,
+        content: S.of(context).pulauRedangContent,
         image: "https://www.kltheguide.com.my/assets/img/beyondkl/i/redang.jpg",
         location: "https://maps.app.goo.gl/3wB5KeBaBLT49yR58",
       ),
       ApiData(
-        title:
-            S.of(context).pulauLangkawi, // localized key for "Pulau Langkawi"
-        content: S
-            .of(context)
-            .pulauLangkawiContent, // localized key for content description
+        title: S.of(context).pulauLangkawi,
+        content: S.of(context).pulauLangkawiContent,
         image: "https://www.kltheguide.com.my/assets/img/beyondkl/i/redang.jpg",
         location: "https://maps.app.goo.gl/Kmx69vmc9CWNp6LJ8",
       ),
       ApiData(
-        title:
-            S.of(context).sipadanIsland, // localized key for "Sipadan Island"
-        content: S
-            .of(context)
-            .sipadanIslandContent, // localized key for content description
+        title: S.of(context).sipadanIsland,
+        content: S.of(context).sipadanIslandContent,
         image:
             "https://www.kltheguide.com.my/assets/img/beyondkl/i/sipadan.jpg",
         location: "https://maps.app.goo.gl/VbSXWmMNwAq7pk6D8",
       ),
       ApiData(
-        title: S
-            .of(context)
-            .mantananiIsland, // localized key for "Mantanani Island"
-        content: S
-            .of(context)
-            .mantananiIslandContent, // localized key for content description
+        title: S.of(context).mantananiIsland,
+        content: S.of(context).mantananiIslandContent,
         image:
             "https://www.kltheguide.com.my/assets/img/beyondkl/i/mantanani1.jpg",
         location: "https://maps.app.goo.gl/HU8eQ5xBpqXfxvUv7",
@@ -262,8 +580,15 @@ class BeyondKL_I extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         iconTheme: const IconThemeData(color: Colors.white),
-        title: Text(S.of(context).islands,
-            style: const TextStyle(color: Colors.white)),
+        elevation: 2,
+        title: Text(
+          S.of(context).islands,
+          style: const TextStyle(
+            color: Colors.white,
+            fontWeight: FontWeight.bold,
+            letterSpacing: 0.5,
+          ),
+        ),
         backgroundColor: const Color.fromARGB(255, 0, 71, 133),
       ),
       body: CardListWidget(data: dataList),
@@ -277,53 +602,36 @@ class BeyondKL_HS extends StatelessWidget {
   List<ApiData> _buildDataList(BuildContext context) {
     return [
       ApiData(
-        title: S
-            .of(context)
-            .gentingHighlands, // localized title for "Genting Highlands, Pahang"
-        content: S
-            .of(context)
-            .gentingHighlandsContent, // localized content description
+        title: S.of(context).gentingHighlands,
+        content: S.of(context).gentingHighlandsContent,
         image:
             "https://www.kltheguide.com.my/assets/img/beyondkl/hs/genting.jpg",
         location: "https://maps.app.goo.gl/UVBCR4wnuBBYP5Ka8",
       ),
       ApiData(
-        title: S
-            .of(context)
-            .bukitTinggi, // localized title for "Bukit Tinggi, Pahang"
-        content:
-            S.of(context).bukitTinggiContent, // localized content description
+        title: S.of(context).bukitTinggi,
+        content: S.of(context).bukitTinggiContent,
         image:
             "https://www.kltheguide.com.my/assets/img/beyondkl/hs/bukittinggi1.jpg",
         location: "https://maps.app.goo.gl/ooY7RjT7gxSo5eGo6",
       ),
       ApiData(
-        title: S
-            .of(context)
-            .fraserHill, // localized title for "Fraser Hill, Pahang"
-        content:
-            S.of(context).fraserHillContent, // localized content description
+        title: S.of(context).fraserHill,
+        content: S.of(context).fraserHillContent,
         image:
             "https://www.kltheguide.com.my/assets/img/beyondkl/hs/fraserhill.jpg",
         location: "https://maps.app.goo.gl/oUbq1qzrkK7wuV4H9",
       ),
       ApiData(
-        title: S
-            .of(context)
-            .cameronHighland, // localized title for "Cameron Highland, Pahang"
-        content: S
-            .of(context)
-            .cameronHighlandContent, // localized content description
+        title: S.of(context).cameronHighland,
+        content: S.of(context).cameronHighlandContent,
         image:
             "https://www.kltheguide.com.my/assets/img/beyondkl/hs/cameron.jpg",
         location: "https://maps.app.goo.gl/CZQuL7oUem4ET6pV6",
       ),
       ApiData(
-        title: S
-            .of(context)
-            .maxwellHill, // localized title for "Maxwell Hill, Perak"
-        content:
-            S.of(context).maxwellHillContent, // localized content description
+        title: S.of(context).maxwellHill,
+        content: S.of(context).maxwellHillContent,
         image:
             "https://www.kltheguide.com.my/assets/img/beyondkl/hs/cameron.jpg",
         location: "https://maps.app.goo.gl/NHNwxBvPn4Qc23Zb6",
@@ -338,8 +646,15 @@ class BeyondKL_HS extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         iconTheme: const IconThemeData(color: Colors.white),
-        title: Text(S.of(context).hillStation,
-            style: TextStyle(color: Colors.white)),
+        elevation: 2,
+        title: Text(
+          S.of(context).hillStation,
+          style: const TextStyle(
+            color: Colors.white,
+            fontWeight: FontWeight.bold,
+            letterSpacing: 0.5,
+          ),
+        ),
         backgroundColor: const Color.fromARGB(255, 0, 71, 133),
       ),
       body: CardListWidget(data: dataList),
@@ -353,49 +668,36 @@ class BeyondKL_W extends StatelessWidget {
   List<ApiData> _buildDataList(BuildContext context) {
     return [
       ApiData(
-        title: S
-            .of(context)
-            .sungaiPisangWaterfall, // localized title for "Sungai Pisang Waterfall, Batu Caves"
-        content:
-            S.of(context).sungaiPisangContent, // localized content description
+        title: S.of(context).sungaiPisangWaterfall,
+        content: S.of(context).sungaiPisangContent,
         image:
             "https://www.kltheguide.com.my/assets/img/beyondkl/w/sungaipisang.jpg",
         location: "https://maps.app.goo.gl/Mx2BdsVN1WPNzBgA6",
       ),
       ApiData(
-        title: S
-            .of(context)
-            .jeramToi, // localized title for "Jeram Toi, Negeri Sembilan"
-        content: S.of(context).jeramToiContent, // localized content description
+        title: S.of(context).jeramToi,
+        content: S.of(context).jeramToiContent,
         image:
             "https://www.kltheguide.com.my/assets/img/beyondkl/w/jeramtoi.jpg",
         location: "https://maps.app.goo.gl/u4QKamLSrrF6RQqa6",
       ),
       ApiData(
-        title:
-            S.of(context).uluChepor, // localized title for "Ulu Chepor, Perak"
-        content:
-            S.of(context).uluCheporContent, // localized content description
+        title: S.of(context).uluChepor,
+        content: S.of(context).uluCheporContent,
         image:
             "https://www.kltheguide.com.my/assets/img/beyondkl/w/uluchepor.jpg",
         location: "https://maps.app.goo.gl/xyMVK89D9XoMgp188",
       ),
       ApiData(
-        title: S
-            .of(context)
-            .sungaiLembing, // localized title for "Sungai Lembing, Pahang"
-        content:
-            S.of(context).sungaiLembingContent, // localized content description
+        title: S.of(context).sungaiLembing,
+        content: S.of(context).sungaiLembingContent,
         image:
             "https://www.kltheguide.com.my/assets/img/beyondkl/w/sungailembing.jpg",
         location: "https://maps.app.goo.gl/nuhAbMUbbA7ByYCCA",
       ),
       ApiData(
-        title: S
-            .of(context)
-            .sevenWellsWaterfall, // localized title for "Seven Wells Waterfall, Kedah"
-        content:
-            S.of(context).sevenWellsContent, // localized content description
+        title: S.of(context).sevenWellsWaterfall,
+        content: S.of(context).sevenWellsContent,
         image:
             "https://www.kltheguide.com.my/assets/img/beyondkl/w/sevenwells1.jpg",
         location: "https://maps.app.goo.gl/eGkiZ5hRxmYQ8ips6",
@@ -410,8 +712,15 @@ class BeyondKL_W extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         iconTheme: const IconThemeData(color: Colors.white),
-        title: Text(S.of(context).waterfall,
-            style: TextStyle(color: Colors.white)),
+        elevation: 2,
+        title: Text(
+          S.of(context).waterfall,
+          style: const TextStyle(
+            color: Colors.white,
+            fontWeight: FontWeight.bold,
+            letterSpacing: 0.5,
+          ),
+        ),
         backgroundColor: const Color.fromARGB(255, 0, 71, 133),
       ),
       body: CardListWidget(data: dataList),
@@ -425,52 +734,36 @@ class BeyondKL_H extends StatelessWidget {
   List<ApiData> _buildDataList(BuildContext context) {
     return [
       ApiData(
-        title: S
-            .of(context)
-            .brogaHill, // localized title for "Broga Hill, Semenyih"
-        content:
-            S.of(context).brogaHillContent, // localized content description
+        title: S.of(context).brogaHill,
+        content: S.of(context).brogaHillContent,
         image:
             "https://www.kltheguide.com.my/assets/img/beyondkl/h/brogahill.jpg",
         location: "https://maps.app.goo.gl/tDdapXxffn8DEbtm6",
       ),
       ApiData(
-        title: S
-            .of(context)
-            .mountPulai, // localized title for "Mount Pulai, Johor"
-        content:
-            S.of(context).mountPulaiContent, // localized content description
+        title: S.of(context).mountPulai,
+        content: S.of(context).mountPulaiContent,
         image:
             "https://www.kltheguide.com.my/assets/img/beyondkl/h/mountpulai.jpg",
         location: "https://maps.app.goo.gl/evbpwftijzWyfmYKA",
       ),
       ApiData(
-        title: S
-            .of(context)
-            .panoramaHill, // localized title for "Panorama Hill, Sungai Lembing"
-        content:
-            S.of(context).panoramaHillContent, // localized content description
+        title: S.of(context).panoramaHill,
+        content: S.of(context).panoramaHillContent,
         image:
             "https://www.kltheguide.com.my/assets/img/beyondkl/h/panoramahill.jpg",
         location: "https://maps.app.goo.gl/fDAgtnbzyfwDiKar9",
       ),
       ApiData(
-        title: S
-            .of(context)
-            .mossyForest, // localized title for "Mossy Forest, Cameron Highlands"
-        content:
-            S.of(context).mossyForestContent, // localized content description
+        title: S.of(context).mossyForest,
+        content: S.of(context).mossyForestContent,
         image:
             "https://www.kltheguide.com.my/assets/img/beyondkl/h/mossyforest.jpg",
         location: "https://maps.app.goo.gl/YyURpsoqwtc9yv5Z8",
       ),
       ApiData(
-        title: S
-            .of(context)
-            .penangNationalPark, // localized title for "Penang National Park, Penang"
-        content: S
-            .of(context)
-            .penangNationalParkContent, // localized content description
+        title: S.of(context).penangNationalPark,
+        content: S.of(context).penangNationalParkContent,
         image:
             "https://www.kltheguide.com.my/assets/img/beyondkl/h/penangnational.jpg",
         location: "https://maps.app.goo.gl/UhZS5nanNDCRAgJHA",
@@ -485,8 +778,15 @@ class BeyondKL_H extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         iconTheme: const IconThemeData(color: Colors.white),
-        title:
-            Text(S.of(context).hiking, style: TextStyle(color: Colors.white)),
+        elevation: 2,
+        title: Text(
+          S.of(context).hiking,
+          style: const TextStyle(
+            color: Colors.white,
+            fontWeight: FontWeight.bold,
+            letterSpacing: 0.5,
+          ),
+        ),
         backgroundColor: const Color.fromARGB(255, 0, 71, 133),
       ),
       body: CardListWidget(data: dataList),
@@ -500,29 +800,20 @@ class BeyondKL_ES extends StatelessWidget {
   List<ApiData> _buildDataList(BuildContext context) {
     return [
       ApiData(
-        title: S
-            .of(context)
-            .kkbParaglidingPark, // localized key for "KKB Paragliding Park"
-        content: S
-            .of(context)
-            .kkbParaglidingParkContent, // localized content description
+        title: S.of(context).kkbParaglidingPark,
+        content: S.of(context).kkbParaglidingParkContent,
         image: "https://www.kltheguide.com.my/assets/img/beyondkl/es/1.webp",
         location: "https://maps.app.goo.gl/QXFGUuurwNCTMAT56",
       ),
       ApiData(
-        title: S
-            .of(context)
-            .whitewaterRafting, // localized key for "Whitewater Rafting Kuala Kubu Bharu"
-        content: S
-            .of(context)
-            .whitewaterRaftingContent, // localized content description
+        title: S.of(context).whitewaterRafting,
+        content: S.of(context).whitewaterRaftingContent,
         image: "https://www.kltheguide.com.my/assets/img/beyondkl/es/2.jpg",
         location: "https://maps.app.goo.gl/GLiYCoyCo5T4wjZ28",
       ),
       ApiData(
-        title: S.of(context).jugraHill, // localized key for "Jugra Hill"
-        content:
-            S.of(context).jugraHillContent, // localized content description
+        title: S.of(context).jugraHill,
+        content: S.of(context).jugraHillContent,
         image: "https://www.kltheguide.com.my/assets/img/beyondkl/es/3.webp",
         location: "https://maps.app.goo.gl/3TGSagXPnaYTre3f9",
       ),
@@ -536,8 +827,15 @@ class BeyondKL_ES extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         iconTheme: const IconThemeData(color: Colors.white),
-        title: Text(S.of(context).extremeSports,
-            style: TextStyle(color: Colors.white)),
+        elevation: 2,
+        title: Text(
+          S.of(context).extremeSports,
+          style: const TextStyle(
+            color: Colors.white,
+            fontWeight: FontWeight.bold,
+            letterSpacing: 0.5,
+          ),
+        ),
         backgroundColor: const Color.fromARGB(255, 0, 71, 133),
       ),
       body: CardListWidget(data: dataList),
@@ -553,568 +851,3 @@ void _launchURL(url) async {
     throw 'Could not launch $url';
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//////////////////////////////////////**API METHOD**////////////////////////////////////////////*/
-
-// ignore_for_file: camel_case_types
-
-// import 'dart:convert';
-// import 'package:flutter/material.dart';
-// import 'package:http/http.dart' as http;
-// import 'package:cached_network_image/cached_network_image.dart';
-// import 'package:kltheguide/main.dart';
-// import 'package:url_launcher/url_launcher.dart';
-
-// class ApiData {
-//   final String title;
-//   final String content;
-//   final String image;
-//   final String location;
-
-//   ApiData({
-//     required this.location,
-//     required this.title,
-//     required this.content,
-//     required this.image,
-//   });
-
-//   factory ApiData.fromJson(Map<String, dynamic> json) {
-//     return ApiData(
-//       title: json['title'] ?? '',
-//       content: json['content'] ?? '',
-//       image: json['image'] ?? '',
-//       location: json['location'] ?? '',
-//     );
-//   }
-// }
-
-// Future<List<ApiData>> fetchData(bodyparse) async {
-//   final response = await http.post(
-//     Uri.parse('https://www.kltheguide.com.my/admin/functions.php'),
-//     body: {bodyparse: bodyparse},
-//   );
-
-//   if (response.statusCode == 200) {
-//     final List<dynamic> jsonData = jsonDecode(response.body);
-//     return jsonData.map((json) => ApiData.fromJson(json)).toList();
-//   } else {
-//     throw Exception('Failed to load data');
-//   }
-// }
-
-// Future<List<ApiData>> fetchData2(bodyparse, category) async {
-//   final response = await http.post(
-//     Uri.parse('https://www.kltheguide.com.my/admin/functions.php'),
-//     body: {bodyparse: bodyparse, 'category': category},
-//   );
-
-//   if (response.statusCode == 200) {
-//     final List<dynamic> jsonData = jsonDecode(response.body);
-//     return jsonData.map((json) => ApiData.fromJson(json)).toList();
-//   } else {
-//     throw Exception('Failed to load data');
-//   }
-// }
-
-// class CardListWidget extends StatelessWidget {
-//   final List<ApiData> data;
-
-//   const CardListWidget({super.key, required this.data});
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return ListView.builder(
-//       itemCount: data.length,
-//       itemBuilder: (context, index) {
-//         final item = data[index];
-
-//         return GestureDetector(
-//           onTap: () {
-//             // print(item.location);
-//             if (item.location != '') {
-//               _launchURL(item.location);
-//             }
-//           },
-//           child: Card(
-//             elevation: 4.0,
-//             margin: const EdgeInsets.all(16.0),
-//             child: Column(
-//               crossAxisAlignment: CrossAxisAlignment.start,
-//               children: [
-//                 CachedNetworkImage(
-//                   imageUrl: item.image,
-//                   fit: BoxFit.cover,
-//                   height: 200,
-//                   width: double.infinity,
-//                 ),
-//                 Padding(
-//                   padding: const EdgeInsets.all(16.0),
-//                   child: Column(
-//                     crossAxisAlignment: CrossAxisAlignment.start,
-//                     children: [
-//                       Text(
-//                         (item.title),
-//                         style: const TextStyle(
-//                           fontSize: 20,
-//                           fontWeight: FontWeight.bold,
-//                         ),
-//                       ),
-//                       const SizedBox(height: 8.0),
-//                       Text(item.content.replaceAll('\\n', '\n')),
-//                     ],
-//                   ),
-//                 ),
-//               ],
-//             ),
-//           ),
-//         );
-//       },
-//     );
-//   }
-// }
-
-// class BeyondKL extends StatelessWidget {
-//   final List<Map<String, dynamic>> dataList = [
-//     {
-//       "name": "Islands",
-//       "image": "https://www.kltheguide.com.my/assets/img/beyondkl/ISLAND-01.jpg"
-//     },
-//     {
-//       "name": "Hill Station",
-//       "image":
-//           "https://www.kltheguide.com.my/assets/img/beyondkl/HILL-STATION-01.jpg"
-//     },
-//     {
-//       "name": "Waterfall",
-//       "image":
-//           "https://www.kltheguide.com.my/assets/img/beyondkl/WATERFALL-01.jpg"
-//     },
-//     {
-//       "name": "Hiking",
-//       "image": "https://www.kltheguide.com.my/assets/img/beyondkl/HIKING.jpg"
-//     },
-//     {
-//       "name": "Extreme Sports",
-//       "image":
-//           "https://www.kltheguide.com.my/assets/img/beyondkl/EXTREME-SPORT-2.webp"
-//     },
-
-//     // Add more items as needed
-//   ];
-
-//   BeyondKL({super.key});
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//       appBar: AppBar(
-//         iconTheme: const IconThemeData(
-//           color: Colors.white, //change your color here
-//         ),
-//         title: const Text("Beyond KL", style: TextStyle(color: Colors.white)),
-//         // foregroundColor: const Color.fromARGB(255, 0, 71, 133),
-//         backgroundColor: const Color.fromARGB(255, 0, 71, 133),
-//         actions: const <Widget>[
-//           AppBarMore(),
-//         ],
-//       ),
-//       body: ListView.builder(
-//         itemCount: dataList.length,
-//         itemBuilder: (context, index) {
-//           final item = dataList[index];
-//           return CardItem(
-//               name: item["name"], image: item["image"], index: index);
-//         },
-//       ),
-//     );
-//   }
-// }
-
-// class CardItem extends StatelessWidget {
-//   final String name;
-//   final String image;
-//   final int index;
-
-//   const CardItem(
-//       {super.key,
-//       required this.name,
-//       required this.image,
-//       required this.index});
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return GestureDetector(
-//       onTap: () {
-//         // Navigate to a detail page or perform an action when the card is tapped
-//         // You can use Navigator to navigate to a detail page with specific data
-//         // For example: Navigator.push(context, MaterialPageRoute(builder: (context) => DetailPage(name: name, image: image)));
-//         Navigator.pushNamed(context, '/beyondkl-$index',
-//             arguments: {'index': index});
-//       },
-//       child: Card(
-//         elevation: 3,
-//         margin: const EdgeInsets.all(10),
-//         child: AspectRatio(
-//           aspectRatio: 16 / 9,
-//           child: Container(
-//             decoration: BoxDecoration(
-//               image: DecorationImage(
-//                 image: NetworkImage(image),
-//                 fit: BoxFit.cover, // Make the image cover the entire card
-//               ),
-//             ),
-//             child: Center(
-//               child: Container(
-//                 padding: const EdgeInsets.all(8),
-//                 color: Colors.black
-//                     .withOpacity(0.5), // Adjust the opacity as needed
-//                 child: Text(
-//                   name,
-//                   style: const TextStyle(
-//                     color: Colors.white,
-//                     fontSize: 20,
-//                     fontWeight: FontWeight.bold,
-//                   ),
-//                 ),
-//               ),
-//             ),
-//           ),
-//         ),
-//       ),
-//     );
-//   }
-// }
-
-// class DetailPage extends StatelessWidget {
-//   final String name;
-//   final String image;
-//   final String location;
-
-//   const DetailPage({
-//     super.key,
-//     required this.name,
-//     required this.image,
-//     required this.location,
-//   });
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//       appBar: AppBar(
-//         title: Text(name),
-//       ),
-//       body: Center(
-//         child: Text(location),
-//       ),
-//     );
-//   }
-// }
-
-// class BeyondKL_I extends StatefulWidget {
-//   const BeyondKL_I({super.key});
-
-//   @override
-//   _BeyondKL_IState createState() => _BeyondKL_IState();
-// }
-
-// class _BeyondKL_IState extends State<BeyondKL_I> {
-//   late Future<List<ApiData>> _data;
-
-//   @override
-//   void initState() {
-//     super.initState();
-//     _data = fetchData('appBeyondKL_i');
-//   }
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//       appBar: AppBar(
-//         iconTheme: const IconThemeData(
-//           color: Colors.white, //change your color here
-//         ),
-//         title: const Text("Islands", style: TextStyle(color: Colors.white)),
-//         // foregroundColor: const Color.fromARGB(255, 0, 71, 133),
-//         backgroundColor: const Color.fromARGB(255, 0, 71, 133),
-//         actions: const <Widget>[
-//           AppBarMore(),
-//         ],
-//       ),
-//       body: FutureBuilder<List<ApiData>>(
-//         future: _data,
-//         builder: (context, snapshot) {
-//           if (snapshot.connectionState == ConnectionState.waiting) {
-//             return const Center(child: CircularProgressIndicator());
-//           } else if (snapshot.hasError) {
-//             return Center(child: Text('Error: ${snapshot.error}'));
-//           } else {
-//             return CardListWidget(data: snapshot.data ?? []);
-//           }
-//         },
-//       ),
-//     );
-//   }
-// }
-
-// class BeyondKL_HS extends StatefulWidget {
-//   const BeyondKL_HS({super.key});
-
-//   @override
-//   _BeyondKL_HSState createState() => _BeyondKL_HSState();
-// }
-
-// class _BeyondKL_HSState extends State<BeyondKL_HS> {
-//   late Future<List<ApiData>> _data;
-
-//   @override
-//   void initState() {
-//     super.initState();
-//     _data = fetchData('appBeyondKL_hs');
-//   }
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//       appBar: AppBar(
-//         iconTheme: const IconThemeData(
-//           color: Colors.white, //change your color here
-//         ),
-//         title:
-//             const Text("Hill Station", style: TextStyle(color: Colors.white)),
-//         // foregroundColor: const Color.fromARGB(255, 0, 71, 133),
-//         backgroundColor: const Color.fromARGB(255, 0, 71, 133),
-//         actions: const <Widget>[
-//           AppBarMore(),
-//         ],
-//       ),
-//       body: FutureBuilder<List<ApiData>>(
-//         future: _data,
-//         builder: (context, snapshot) {
-//           if (snapshot.connectionState == ConnectionState.waiting) {
-//             return const Center(child: CircularProgressIndicator());
-//           } else if (snapshot.hasError) {
-//             return Center(child: Text('Error: ${snapshot.error}'));
-//           } else {
-//             return CardListWidget(data: snapshot.data ?? []);
-//           }
-//         },
-//       ),
-//     );
-//   }
-// }
-
-// class BeyondKL_W extends StatefulWidget {
-//   const BeyondKL_W({super.key});
-
-//   @override
-//   _BeyondKL_WState createState() => _BeyondKL_WState();
-// }
-
-// class _BeyondKL_WState extends State<BeyondKL_W> {
-//   late Future<List<ApiData>> _data;
-
-//   @override
-//   void initState() {
-//     super.initState();
-//     _data = fetchData('appBeyondKL_w');
-//   }
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//       appBar: AppBar(
-//         iconTheme: const IconThemeData(
-//           color: Colors.white, //change your color here
-//         ),
-//         title: const Text("Waterfall", style: TextStyle(color: Colors.white)),
-//         // foregroundColor: const Color.fromARGB(255, 0, 71, 133),
-//         backgroundColor: const Color.fromARGB(255, 0, 71, 133),
-//         actions: const <Widget>[
-//           AppBarMore(),
-//         ],
-//       ),
-//       body: FutureBuilder<List<ApiData>>(
-//         future: _data,
-//         builder: (context, snapshot) {
-//           if (snapshot.connectionState == ConnectionState.waiting) {
-//             return const Center(child: CircularProgressIndicator());
-//           } else if (snapshot.hasError) {
-//             return Center(child: Text('Error: ${snapshot.error}'));
-//           } else {
-//             return CardListWidget(data: snapshot.data ?? []);
-//           }
-//         },
-//       ),
-//     );
-//   }
-// }
-
-// class BeyondKL_H extends StatefulWidget {
-//   const BeyondKL_H({super.key});
-
-//   @override
-//   _BeyondKL_HState createState() => _BeyondKL_HState();
-// }
-
-// class _BeyondKL_HState extends State<BeyondKL_H> {
-//   late Future<List<ApiData>> _data;
-
-//   @override
-//   void initState() {
-//     super.initState();
-//     _data = fetchData('appBeyondKL_h');
-//   }
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//       appBar: AppBar(
-//         iconTheme: const IconThemeData(
-//           color: Colors.white, //change your color here
-//         ),
-//         title: const Text("Hiking", style: TextStyle(color: Colors.white)),
-//         // foregroundColor: const Color.fromARGB(255, 0, 71, 133),
-//         backgroundColor: const Color.fromARGB(255, 0, 71, 133),
-//         actions: const <Widget>[
-//           AppBarMore(),
-//         ],
-//       ),
-//       body: FutureBuilder<List<ApiData>>(
-//         future: _data,
-//         builder: (context, snapshot) {
-//           if (snapshot.connectionState == ConnectionState.waiting) {
-//             return const Center(child: CircularProgressIndicator());
-//           } else if (snapshot.hasError) {
-//             return Center(child: Text('Error: ${snapshot.error}'));
-//           } else {
-//             return CardListWidget(data: snapshot.data ?? []);
-//           }
-//         },
-//       ),
-//     );
-//   }
-// }
-
-// class BeyondKL_ES extends StatefulWidget {
-//   const BeyondKL_ES({super.key});
-
-//   @override
-//   _BeyondKL_ESState createState() => _BeyondKL_ESState();
-// }
-
-// class _BeyondKL_ESState extends State<BeyondKL_ES> {
-//   late Future<List<ApiData>> _data;
-
-//   @override
-//   void initState() {
-//     super.initState();
-//     _data = fetchData('appBeyondKL_es');
-//   }
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//       appBar: AppBar(
-//         iconTheme: const IconThemeData(
-//           color: Colors.white, //change your color here
-//         ),
-//         title:
-//             const Text("Extreme Sports", style: TextStyle(color: Colors.white)),
-//         // foregroundColor: const Color.fromARGB(255, 0, 71, 133),
-//         backgroundColor: const Color.fromARGB(255, 0, 71, 133),
-//         actions: const <Widget>[
-//           AppBarMore(),
-//         ],
-//       ),
-//       body: FutureBuilder<List<ApiData>>(
-//         future: _data,
-//         builder: (context, snapshot) {
-//           if (snapshot.connectionState == ConnectionState.waiting) {
-//             return const Center(child: CircularProgressIndicator());
-//           } else if (snapshot.hasError) {
-//             return Center(child: Text('Error: ${snapshot.error}'));
-//           } else {
-//             return CardListWidget(data: snapshot.data ?? []);
-//           }
-//         },
-//       ),
-//     );
-//   }
-// }
-
-// void _launchURL(url) async {
-//   var url2 = Uri.parse(url);
-//   if (await canLaunchUrl(url2)) {
-//     await launchUrl(url2, mode: LaunchMode.externalApplication);
-//   } else {
-//     throw 'Could not launch $url';
-//   }
-// }
