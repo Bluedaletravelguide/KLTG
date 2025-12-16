@@ -3,6 +3,8 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:kltheguide/main.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'generated/l10n.dart';
+import 'dart:convert';
+import 'package:http/http.dart' as http;
 
 class Shop extends StatefulWidget {
   const Shop({super.key});
@@ -12,7 +14,33 @@ class Shop extends StatefulWidget {
 }
 
 class _ShopState extends State<Shop> {
-  @override
+  static const String apiUrl =
+      'http://10.0.2.2/kltheguide.com.my/api/get_place_shop.php';
+
+  Future<List<ItemData>> fetchShops() async {
+    final response = await http.get(Uri.parse(apiUrl));
+
+    if (response.statusCode == 200) {
+      final List data = jsonDecode(response.body);
+
+      return data.map<ItemData>((item) {
+        return ItemData(
+          title: item['place_shop_title'] ?? '',
+          imageUrl: item['place_shop_image'] ??
+              'https://www.kltheguide.com.my/assets/img/placeholder.jpg',
+          location: item['place_shop_location'] ?? '',
+          hours: item['place_shop_hours'] ?? '',
+          website: item['place_shop_website'] ??
+              'https://www.kltheguide.com.my',
+        );
+      }).toList();
+    } else {
+      throw Exception('Failed to load shop data');
+    }
+  }
+
+
+@override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
@@ -44,33 +72,23 @@ class _ShopState extends State<Shop> {
             ],
           ),
         ),
-        child: MyList2(
-          items: [
-            ItemData(
-              title: S.of(context).avenueKShop,
-              imageUrl:
-                  'https://www.kltheguide.com.my/assets/img/place_to_shop/avenuek.jpg',
-              location: S.of(context).avenueKShopLocation,
-              hours: S.of(context).avenueKShopHours,
-              website: S.of(context).avenueKShopWebsite,
-            ),
-            ItemData(
-              title: S.of(context).sanctuaryMall,
-              imageUrl:
-                  'https://www.kltheguide.com.my/assets/img/place_to_shop/sanctuary.jpg',
-              location: S.of(context).sanctuaryMallLocation,
-              hours: S.of(context).sanctuaryMallHours,
-              website: S.of(context).sanctuaryMallWebsite,
-            ),
-            ItemData(
-              title: S.of(context).lincKL,
-              imageUrl:
-                  'https://www.kltheguide.com.my/assets/img/place_to_shop/linc.jpeg',
-              location: S.of(context).lincKLLocation,
-              hours: S.of(context).lincKLHours,
-              website: S.of(context).lincKLWebsite,
-            ),
-          ],
+        child: FutureBuilder<List<ItemData>>(
+          future: fetchShops(),
+          builder: (context, snapshot) {
+            if (snapshot.connectionState == ConnectionState.waiting) {
+              return const Center(child: CircularProgressIndicator());
+            }
+
+            if (snapshot.hasError) {
+              return Center(child: Text('Error: ${snapshot.error}'));
+            }
+
+            if (!snapshot.hasData || snapshot.data!.isEmpty) {
+              return const Center(child: Text('No data found'));
+            }
+
+            return MyList2(items: snapshot.data!);
+          },
         ),
       ),
     );

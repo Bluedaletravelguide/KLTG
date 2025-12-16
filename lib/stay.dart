@@ -3,6 +3,74 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:kltheguide/main.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'generated/l10n.dart';
+import 'dart:convert';
+import 'package:http/http.dart' as http;
+
+// Data class for Stay items
+class StayItemData {
+  final String title;
+  final String content; // Assuming 'content' is used for description
+  final String location; // Assuming 'location' is used for address
+  final String locationUrl; // Maps URL
+  final String imageUrl;
+  final String hours; // Potentially unused for stay, but fetched from DB
+  final String phone; // Used for contact
+  final String website; // Used for website
+  final String category; // To identify the source tab/api
+
+  StayItemData({
+    required this.title,
+    required this.content,
+    required this.location,
+    required this.locationUrl,
+    required this.imageUrl,
+    required this.hours,
+    required this.phone,
+    required this.website,
+    required this.category,
+  });
+
+  // Factory constructor to create an instance from a JSON map
+  factory StayItemData.fromJson(Map<String, dynamic> json, String category) {
+    String tablePrefix;
+    switch (category.toLowerCase()) {
+      case 'top':
+        tablePrefix = 'accommodation_top';
+        break;
+      case 'hotels':
+        tablePrefix = 'accommodation_h';
+        break;
+      case 'budget hotels': // Match the tab name exactly
+        tablePrefix = 'accommodation_bh';
+        break;
+      case 'backpackers lodge':
+        tablePrefix = 'accommodation_bks';
+        break;
+      default:
+        tablePrefix = 'accommodation'; // Fallback
+    }
+
+    String titleKey = '${tablePrefix}_title';
+    String contentKey = '${tablePrefix}_content';
+    String locationKey = '${tablePrefix}_location'; // Address
+    String locationUrlKey = '${tablePrefix}_locationurl';
+    String imageKey = '${tablePrefix}_image';
+    String hoursKey = '${tablePrefix}_hours';
+    String phoneKey = '${tablePrefix}_phone';
+
+    return StayItemData(
+      title: json[titleKey] as String? ?? '',
+      content: json[contentKey] as String? ?? '',
+      location: json[locationKey] as String? ?? '', // Address
+      locationUrl: json[locationUrlKey] as String? ?? '',
+      imageUrl: json[imageKey] as String? ?? '',
+      hours: json[hoursKey] as String? ?? '',
+      phone: json[phoneKey] as String? ?? '',
+      website: json['${tablePrefix}_website'] as String? ?? '', // Assuming website field exists
+      category: category,
+    );
+  }
+}
 
 class Stay extends StatefulWidget {
   const Stay({super.key});
@@ -13,6 +81,57 @@ class Stay extends StatefulWidget {
 
 class _StayState extends State<Stay> with SingleTickerProviderStateMixin {
   late TabController _tabController;
+
+  // Define API endpoints for each category
+  static const String apiUrlTop = 'http://10.0.2.2/kltheguide.com.my/api/get_accommodation_top.php';
+  static const String apiUrlHotels = 'http://10.0.2.2/kltheguide.com.my/api/get_accommodation_h.php';
+  static const String apiUrlBudget = 'http://10.0.2.2/kltheguide.com.my/api/get_accommodation_bh.php'; // Your existing API
+  static const String apiUrlBackpackers = 'http://10.0.2.2/kltheguide.com.my/api/get_accommodation_bks.php';
+
+  // Fetch functions for each category
+  Future<List<StayItemData>> fetchTopItems() async {
+    final response = await http.get(Uri.parse(apiUrlTop));
+    if (response.statusCode == 200) {
+      final List<dynamic> data = jsonDecode(response.body);
+      return data.map((item) => StayItemData.fromJson(item, 'Top')).toList();
+    } else {
+      print('API Error (Top): ${response.statusCode}');
+      throw Exception('Failed to load Top Places data: ${response.statusCode}');
+    }
+  }
+
+  Future<List<StayItemData>> fetchHotelItems() async {
+    final response = await http.get(Uri.parse(apiUrlHotels));
+    if (response.statusCode == 200) {
+      final List<dynamic> data = jsonDecode(response.body);
+      return data.map((item) => StayItemData.fromJson(item, 'Hotels')).toList();
+    } else {
+      print('API Error (Hotels): ${response.statusCode}');
+      throw Exception('Failed to load Hotels data: ${response.statusCode}');
+    }
+  }
+
+  Future<List<StayItemData>> fetchBudgetHotelItems() async {
+    final response = await http.get(Uri.parse(apiUrlBudget));
+    if (response.statusCode == 200) {
+      final List<dynamic> data = jsonDecode(response.body);
+      return data.map((item) => StayItemData.fromJson(item, 'Budget Hotels')).toList();
+    } else {
+      print('API Error (Budget Hotels): ${response.statusCode}');
+      throw Exception('Failed to load Budget Hotels data: ${response.statusCode}');
+    }
+  }
+
+  Future<List<StayItemData>> fetchBackpackersItems() async {
+    final response = await http.get(Uri.parse(apiUrlBackpackers));
+    if (response.statusCode == 200) {
+      final List<dynamic> data = jsonDecode(response.body);
+      return data.map((item) => StayItemData.fromJson(item, 'Backpackers Lodge')).toList();
+    } else {
+      print('API Error (Backpackers): ${response.statusCode}');
+      throw Exception('Failed to load Backpackers Lodge data: ${response.statusCode}');
+    }
+  }
 
   @override
   void initState() {
@@ -88,161 +207,61 @@ class _StayState extends State<Stay> with SingleTickerProviderStateMixin {
         child: TabBarView(
           controller: _tabController,
           children: [
-            MyList2(
-              items: [
-                ItemData(
-                  title: S.of(context).bukitBintang,
-                  imageUrl:
-                      'https://www.kltheguide.com.my/assets/img/accommodation/top/1024px-Bukit_Bintang_intersection.jpg',
-                  description: S.of(context).bukitBintangDescription,
-                  address: '',
-                  location: 'https://maps.app.goo.gl/k87vsCoKXVFHZyfW9',
-                  contact: '',
-                  website: '',
-                ),
-                ItemData(
-                  title: S.of(context).klcc,
-                  imageUrl:
-                      'https://www.kltheguide.com.my/assets/img/accommodation/top/kong-kuala-2937763_1280.jpg',
-                  description: S.of(context).klccDescription,
-                  address: '',
-                  location: 'https://maps.app.goo.gl/i3dLezxAhc9S8bS77',
-                  contact: '',
-                  website: '',
-                ),
-                ItemData(
-                  title: S.of(context).bangsarSouth,
-                  imageUrl:
-                      'https://www.kltheguide.com.my/assets/img/accommodation/top/bangsarsouth-5321307_1280.jpg',
-                  description: S.of(context).bangsarSouthDescription,
-                  address: '',
-                  location: 'https://maps.app.goo.gl/EKJTaVCAnJw1fF4V6',
-                  contact: '',
-                  website: '',
-                ),
-              ],
+            // Tab 0: Top Places To Stay
+            FutureBuilder<List<StayItemData>>(
+              future: fetchTopItems(),
+              builder: (context, snapshot) {
+                if (snapshot.connectionState == ConnectionState.waiting) {
+                  return const Center(child: CircularProgressIndicator());
+                } else if (snapshot.hasError) {
+                  return Center(child: Text('Error: ${snapshot.error}'));
+                } else if (!snapshot.hasData || snapshot.data!.isEmpty) {
+                  return const Center(child: Text('No top places data found.'));
+                }
+                return MyList2(items: snapshot.data!);
+              },
             ),
-            MyList2(
-              items: [
-                ItemData(
-                  title: S.of(context).mercureKL,
-                  imageUrl:
-                      'https://www.kltheguide.com.my/assets/img/accommodation/h/mercure.jpg',
-                  description: '',
-                  address:
-                      'Jalan Kontraktor U1/14, Seksyen U1, 40150 Shah Alam, Selangor',
-                  location: 'https://maps.app.goo.gl/9VFWM6zzMLhUBNXr9',
-                  contact: S.of(context).mercureKLContact,
-                  website: '',
-                ),
-                ItemData(
-                  title: S.of(context).ritz_carlton,
-                  imageUrl:
-                      'https://www.kltheguide.com.my/assets/img/accommodation/h/ritz-carlton.jpg',
-                  description: S.of(context).ritz_description,
-                  address:
-                      '168, Jln Imbi, Bukit Bintang, 55100 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
-                  location: 'https://maps.app.goo.gl/BSxbdTf4GybJ5XeD7',
-                  contact: S.of(context).ritz_contact,
-                  website: S.of(context).ritz_website,
-                ),
-                ItemData(
-                  title: S.of(context).ansa_hotel,
-                  imageUrl:
-                      'https://www.kltheguide.com.my/assets/img/accommodation/h/ansa.jpg',
-                  description: S.of(context).ansa_description,
-                  address:
-                      '101, Jln Bukit Bintang, Bukit Bintang, 55100 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
-                  location: 'https://maps.app.goo.gl/FmoJ8AogLGyPuiS88',
-                  contact: S.of(context).ansa_contact,
-                  website: S.of(context).ansa_website,
-                ),
-                ItemData(
-                  title: S.of(context).royale_chulan,
-                  imageUrl:
-                      'https://www.kltheguide.com.my/assets/img/accommodation/h/1.jpg',
-                  description: S.of(context).chulan_description,
-                  address:
-                      '5, Jalan Conlay, Kuala Lumpur, 50450 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
-                  location: 'https://maps.app.goo.gl/oBNP96QsVrYcfDqn9',
-                  contact: S.of(context).chulan_contact,
-                  website: S.of(context).chulan_website,
-                ),
-              ],
+            // Tab 1: Hotels
+            FutureBuilder<List<StayItemData>>(
+              future: fetchHotelItems(),
+              builder: (context, snapshot) {
+                if (snapshot.connectionState == ConnectionState.waiting) {
+                  return const Center(child: CircularProgressIndicator());
+                } else if (snapshot.hasError) {
+                  return Center(child: Text('Error: ${snapshot.error}'));
+                } else if (!snapshot.hasData || snapshot.data!.isEmpty) {
+                  return const Center(child: Text('No hotels data found.'));
+                }
+                return MyList2(items: snapshot.data!);
+              },
             ),
-            MyList2(
-              items: [
-                ItemData(
-                  title: S.of(context).grandCampbellHotel,
-                  imageUrl:
-                      'https://www.kltheguide.com.my/assets/img/accommodation/bh/campbell.jpg',
-                  description: '',
-                  address:
-                      'Ground Campbell Complex, 98, Jalan Dang Wangi, 50100 Kuala Lumpur',
-                  location: 'https://maps.app.goo.gl/zYWR3Z1DHsGR2iga7',
-                  contact: S.of(context).grandCampbellHotelContact,
-                  website: '',
-                ),
-                ItemData(
-                  title: S.of(context).miles_hotel,
-                  imageUrl:
-                      'https://www.kltheguide.com.my/assets/img/accommodation/bh/1000milesH.jpg',
-                  description: S.of(context).hotel_description,
-                  address:
-                      '17 & 19, Jalan Tun H S Lee, City Centre, 50000 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
-                  location: 'https://maps.app.goo.gl/EekrrWWjGxhCysKN6',
-                  contact: S.of(context).hotel_contact,
-                  website: S.of(context).hotel_website,
-                ),
-                ItemData(
-                  title: S.of(context).ymca_hostel,
-                  imageUrl:
-                      'https://www.kltheguide.com.my/assets/img/accommodation/bh/ymca.jpg',
-                  description: S.of(context).ymca_description,
-                  address:
-                      '95, Jalan Padang Belia, Brickfields, 50470 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
-                  location: 'https://maps.app.goo.gl/RjJZew8T2KFq2nuv9',
-                  contact: S.of(context).ymca_contact,
-                  website: S.of(context).ymca_website,
-                ),
-              ],
+            // Tab 2: Budget Hotels
+            FutureBuilder<List<StayItemData>>(
+              future: fetchBudgetHotelItems(),
+              builder: (context, snapshot) {
+                if (snapshot.connectionState == ConnectionState.waiting) {
+                  return const Center(child: CircularProgressIndicator());
+                } else if (snapshot.hasError) {
+                  return Center(child: Text('Error: ${snapshot.error}'));
+                } else if (!snapshot.hasData || snapshot.data!.isEmpty) {
+                  return const Center(child: Text('No budget hotels data found.'));
+                }
+                return MyList2(items: snapshot.data!);
+              },
             ),
-            MyList2(
-              items: [
-                ItemData(
-                  title: S.of(context).leoBackpackers,
-                  imageUrl:
-                      'https://www.kltheguide.com.my/assets/img/accommodation/bks/leo.jpg',
-                  description: '',
-                  address:
-                      'Jalan Hang Kasturi, City Centre, 50000 Kuala Lumpur',
-                  location: 'https://maps.app.goo.gl/Rkgm5YZUP2hErhDC7',
-                  contact: S.of(context).leoBackpackersContact,
-                  website: '',
-                ),
-                ItemData(
-                  title: S.of(context).pods_hostel,
-                  imageUrl:
-                      'https://www.kltheguide.com.my/assets/img/accommodation/bks/pod.jpg',
-                  description: S.of(context).pods_description,
-                  address:
-                      'G-6, 30, Jalan Thambipillay, Brickfields, 50470 Kuala Lumpur',
-                  location: 'https://maps.app.goo.gl/Ly9uK9Tarp1Y4oVx5',
-                  contact: S.of(context).pods_contact,
-                  website: S.of(context).pods_website,
-                ),
-                ItemData(
-                  title: S.of(context).bunk_bilik,
-                  imageUrl:
-                      'https://www.kltheguide.com.my/assets/img/accommodation/bks/bunkbilik.jpg',
-                  description: S.of(context).bunk_description,
-                  address:
-                      'No, 9, Jalan Radin Bagus, Bandar Baru Sri Petaling, 57000 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
-                  location: 'https://maps.app.goo.gl/kmiWh5oqbGV96Nst9',
-                  contact: S.of(context).bunk_contact,
-                  website: S.of(context).bunk_website,
-                ),
-              ],
+            // Tab 3: Backpackers Lodge
+            FutureBuilder<List<StayItemData>>(
+              future: fetchBackpackersItems(),
+              builder: (context, snapshot) {
+                if (snapshot.connectionState == ConnectionState.waiting) {
+                  return const Center(child: CircularProgressIndicator());
+                } else if (snapshot.hasError) {
+                  return Center(child: Text('Error: ${snapshot.error}'));
+                } else if (!snapshot.hasData || snapshot.data!.isEmpty) {
+                  return const Center(child: Text('No backpackers lodge data found.'));
+                }
+                return MyList2(items: snapshot.data!);
+              },
             ),
           ],
         ),
@@ -252,7 +271,7 @@ class _StayState extends State<Stay> with SingleTickerProviderStateMixin {
 }
 
 class MyList2 extends StatelessWidget {
-  final List<ItemData> items;
+  final List<StayItemData> items;
 
   const MyList2({super.key, required this.items});
 
@@ -262,6 +281,7 @@ class MyList2 extends StatelessWidget {
       padding: const EdgeInsets.symmetric(vertical: 8),
       itemCount: items.length,
       itemBuilder: (context, index) {
+        final item = items[index];
         return Container(
           margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
           decoration: BoxDecoration(
@@ -284,9 +304,9 @@ class MyList2 extends StatelessWidget {
                 Stack(
                   children: [
                     CachedNetworkImage(
-                      imageUrl: items[index].imageUrl,
+                      imageUrl: item.imageUrl,
                       fit: BoxFit.cover,
-                      height: 220,
+                      height: 300,
                       width: double.infinity,
                       placeholder: (context, url) => Container(
                         height: 220,
@@ -317,25 +337,6 @@ class MyList2 extends StatelessWidget {
                           color: Colors.black.withOpacity(0.6),
                           borderRadius: BorderRadius.circular(20),
                         ),
-                        child: Row(
-                          mainAxisSize: MainAxisSize.min,
-                          children: [
-                            const Icon(
-                              Icons.star,
-                              color: Colors.amber,
-                              size: 16,
-                            ),
-                            const SizedBox(width: 4),
-                            Text(
-                              '${(index % 2 == 0) ? "4.5" : "4.8"}',
-                              style: const TextStyle(
-                                color: Colors.white,
-                                fontWeight: FontWeight.bold,
-                                fontSize: 13,
-                              ),
-                            ),
-                          ],
-                        ),
                       ),
                     ),
                   ],
@@ -349,7 +350,7 @@ class MyList2 extends StatelessWidget {
                     children: [
                       // Title
                       Text(
-                        items[index].title,
+                        item.title,
                         style: const TextStyle(
                           fontSize: 22,
                           fontWeight: FontWeight.bold,
@@ -359,8 +360,8 @@ class MyList2 extends StatelessWidget {
                       ),
                       const SizedBox(height: 12),
 
-                      // Description
-                      if (items[index].description.isNotEmpty) ...[
+                      // Description (using content field)
+                      if (item.content.isNotEmpty) ...[
                         Container(
                           padding: const EdgeInsets.all(12),
                           decoration: BoxDecoration(
@@ -378,9 +379,9 @@ class MyList2 extends StatelessWidget {
                               const SizedBox(width: 8),
                               Expanded(
                                 child: Text(
-                                  items[index].description,
+                                  item.content, // Use content for description
                                   style: TextStyle(
-                                    fontSize: 14,
+                                    fontSize: 16,
                                     color: Colors.grey[700],
                                     height: 1.4,
                                   ),
@@ -392,22 +393,22 @@ class MyList2 extends StatelessWidget {
                         const SizedBox(height: 12),
                       ],
 
-                      // Address
-                      if (items[index].address.isNotEmpty) ...[
+                      // Address (using location field)
+                      if (item.location.isNotEmpty) ...[
                         _buildInfoRow(
                           icon: Icons.location_on_outlined,
-                          label: S.of(context).address,
-                          value: items[index].address,
+                          label: S.of(context).address, // Use localization for 'Address'
+                          value: item.location, // Use location for address
                         ),
                         const SizedBox(height: 10),
                       ],
 
-                      // Contact
-                      if (items[index].contact.isNotEmpty) ...[
+                      // Contact (using phone field)
+                      if (item.phone.isNotEmpty) ...[
                         _buildInfoRow(
                           icon: Icons.phone_outlined,
-                          label: S.of(context).contact,
-                          value: items[index].contact,
+                          label: S.of(context).contact, // Use localization for 'Contact'
+                          value: item.phone, // Use phone for contact
                         ),
                         const SizedBox(height: 16),
                       ],
@@ -415,14 +416,13 @@ class MyList2 extends StatelessWidget {
                       // Action Buttons
                       Row(
                         children: [
-                          if (items[index].location.isNotEmpty)
+                          if (item.locationUrl.isNotEmpty) // Use locationUrl for map link
                             Expanded(
                               child: Material(
                                 color: const Color.fromARGB(255, 0, 71, 133),
                                 borderRadius: BorderRadius.circular(10),
                                 child: InkWell(
-                                  onTap: () =>
-                                      _launchURL(items[index].location),
+                                  onTap: () => _launchURL(item.locationUrl), // Launch locationUrl
                                   borderRadius: BorderRadius.circular(10),
                                   child: Container(
                                     padding: const EdgeInsets.symmetric(
@@ -430,7 +430,7 @@ class MyList2 extends StatelessWidget {
                                     ),
                                     child: const Row(
                                       mainAxisAlignment:
-                                          MainAxisAlignment.center,
+                                      MainAxisAlignment.center,
                                       children: [
                                         Icon(
                                           Icons.map_outlined,
@@ -439,7 +439,7 @@ class MyList2 extends StatelessWidget {
                                         ),
                                         SizedBox(width: 8),
                                         Text(
-                                          'View Location',
+                                          'View Location', // You could localize this too if needed
                                           style: TextStyle(
                                             color: Colors.white,
                                             fontWeight: FontWeight.bold,
@@ -452,14 +452,14 @@ class MyList2 extends StatelessWidget {
                                 ),
                               ),
                             ),
-                          if (items[index].website.isNotEmpty) ...[
+                          if (item.website.isNotEmpty) ...[ // Use website field
                             const SizedBox(width: 10),
                             Expanded(
                               child: Material(
                                 color: Colors.white,
                                 borderRadius: BorderRadius.circular(10),
                                 child: InkWell(
-                                  onTap: () => _launchURL(items[index].website),
+                                  onTap: () => _launchURL(item.website), // Launch website
                                   borderRadius: BorderRadius.circular(10),
                                   child: Container(
                                     padding: const EdgeInsets.symmetric(
@@ -475,20 +475,20 @@ class MyList2 extends StatelessWidget {
                                     ),
                                     child: const Row(
                                       mainAxisAlignment:
-                                          MainAxisAlignment.center,
+                                      MainAxisAlignment.center,
                                       children: [
                                         Icon(
                                           Icons.language_outlined,
                                           color:
-                                              Color.fromARGB(255, 0, 71, 133),
+                                          Color.fromARGB(255, 0, 71, 133),
                                           size: 20,
                                         ),
                                         SizedBox(width: 8),
                                         Text(
-                                          'Website',
+                                          'Website', // You could localize this too if needed
                                           style: TextStyle(
                                             color:
-                                                Color.fromARGB(255, 0, 71, 133),
+                                            Color.fromARGB(255, 0, 71, 133),
                                             fontWeight: FontWeight.bold,
                                             fontSize: 15,
                                           ),
@@ -566,22 +566,4 @@ class MyList2 extends StatelessWidget {
   }
 }
 
-class ItemData {
-  final String title;
-  final String imageUrl;
-  final String description;
-  final String address;
-  final String location;
-  final String contact;
-  final String website;
-
-  ItemData({
-    required this.title,
-    required this.imageUrl,
-    required this.description,
-    required this.address,
-    required this.location,
-    required this.contact,
-    required this.website,
-  });
-}
+// No need for the old ItemData class as it's replaced by StayItemData

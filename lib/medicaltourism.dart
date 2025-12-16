@@ -3,15 +3,151 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:kltheguide/main.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'generated/l10n.dart';
+import 'dart:convert';
+import 'package:http/http.dart' as http;
 
+// Data class for Medical Tourism items
+class MedicalItemData {
+  final String title;
+  final String content;
+  final String location;
+  final String locationUrl; // Maps URL
+  final String imageUrl; // This should be the full URL from the PHP API
+  final String hours;
+  final String phone;
+  final String category;
+
+  MedicalItemData({
+    required this.title,
+    required this.content,
+    required this.location,
+    required this.locationUrl,
+    required this.imageUrl,
+    required this.hours,
+    required this.phone,
+    required this.category,
+  });
+
+  // Factory constructor to create an instance from a JSON map
+  factory MedicalItemData.fromJson(Map<String, dynamic> json, String category) {
+    // Determine the correct prefix based on the category
+    String tablePrefix;
+    switch (category.toLowerCase()) {
+      case 'healthcare':
+        tablePrefix = 'medical_tourism_hc';
+        break;
+      case 'dental':
+        tablePrefix = 'medical_tourism_dtl';
+        break;
+      case 'dermatology': // Match the category string you pass
+        tablePrefix = 'medical_tourism_der';
+        break;
+      case 'ophthalmology': // Match the category string you pass
+        tablePrefix = 'medical_tourism_oph';
+        break;
+      case 'plastic surgery': // Match the category string you pass
+        tablePrefix = 'medical_tourism_ps';
+        break;
+      default:
+        tablePrefix = 'medical_tourism'; // Fallback or handle error
+    }
+
+    // Now construct the keys using the determined prefix
+    String titleKey = '${tablePrefix}_title';
+    String contentKey = '${tablePrefix}_content';
+    String locationKey = '${tablePrefix}_location';
+    String locationUrlKey = '${tablePrefix}_locationurl';
+    String imageKey = '${tablePrefix}_image'; // This should already be the full URL from PHP
+    String hoursKey = '${tablePrefix}_hours';
+    String phoneKey = '${tablePrefix}_phone';
+
+    return MedicalItemData(
+      // Use the constructed keys
+      title: json[titleKey] as String? ?? '',
+      content: json[contentKey] as String? ?? '',
+      location: json[locationKey] as String? ?? '',
+      locationUrl: json[locationUrlKey] as String? ?? '',
+      // Use the image URL directly from the JSON (as constructed by PHP)
+      imageUrl: json[imageKey] as String? ?? '',
+      hours: json[hoursKey] as String? ?? '',
+      phone: json[phoneKey] as String? ?? '',
+      category: category,
+    );
+  }
+}
+
+// Main Screen Widget
 class MedicalT extends StatefulWidget {
   const MedicalT({super.key});
 
   @override
-  _MedicalTState createState() => _MedicalTState();
+  State<MedicalT> createState() => _MedicalTState();
 }
 
 class _MedicalTState extends State<MedicalT> {
+  // Define API endpoints for each category
+  static const String apiUrlHc = 'http://10.0.2.2/kltheguide.com.my/api/get_medicaltourism_hc.php';
+  static const String apiUrlDtl = 'http://10.0.2.2/kltheguide.com.my/api/get_medicaltourism_dtl.php';
+  static const String apiUrlDer = 'http://10.0.2.2/kltheguide.com.my/api/get_medicaltourism_der.php';
+  static const String apiUrlOph = 'http://10.0.2.2/kltheguide.com.my/api/get_medicaltourism_oph.php';
+  static const String apiUrlPs = 'http://10.0.2.2/kltheguide.com.my/api/get_medicaltourism_ps.php';
+
+  // Fetch functions for each category
+  Future<List<MedicalItemData>> fetchHealthcareItems() async {
+    final response = await http.get(Uri.parse(apiUrlHc));
+    if (response.statusCode == 200) {
+      final List<dynamic> data = jsonDecode(response.body);
+      return data.map((item) => MedicalItemData.fromJson(item, 'Healthcare')).toList();
+    } else {
+      print('API Error (Healthcare): ${response.statusCode}');
+      throw Exception('Failed to load Healthcare data: ${response.statusCode}');
+    }
+  }
+
+  Future<List<MedicalItemData>> fetchDentalItems() async {
+    final response = await http.get(Uri.parse(apiUrlDtl));
+    if (response.statusCode == 200) {
+      final List<dynamic> data = jsonDecode(response.body);
+      return data.map((item) => MedicalItemData.fromJson(item, 'Dental')).toList();
+    } else {
+      print('API Error (Dental): ${response.statusCode}');
+      throw Exception('Failed to load Dental data: ${response.statusCode}');
+    }
+  }
+
+  Future<List<MedicalItemData>> fetchDermatologyItems() async {
+    final response = await http.get(Uri.parse(apiUrlDer));
+    if (response.statusCode == 200) {
+      final List<dynamic> data = jsonDecode(response.body);
+      return data.map((item) => MedicalItemData.fromJson(item, 'Dermatology')).toList();
+    } else {
+      print('API Error (Dermatology): ${response.statusCode}');
+      throw Exception('Failed to load Dermatology data: ${response.statusCode}');
+    }
+  }
+
+  Future<List<MedicalItemData>> fetchOphthalmologyItems() async {
+    final response = await http.get(Uri.parse(apiUrlOph));
+    if (response.statusCode == 200) {
+      final List<dynamic> data = jsonDecode(response.body);
+      return data.map((item) => MedicalItemData.fromJson(item, 'Ophthalmology')).toList();
+    } else {
+      print('API Error (Ophthalmology): ${response.statusCode}');
+      throw Exception('Failed to load Ophthalmology data: ${response.statusCode}');
+    }
+  }
+
+  Future<List<MedicalItemData>> fetchPlasticSurgeryItems() async {
+    final response = await http.get(Uri.parse(apiUrlPs));
+    if (response.statusCode == 200) {
+      final List<dynamic> data = jsonDecode(response.body);
+      return data.map((item) => MedicalItemData.fromJson(item, 'Plastic Surgery')).toList();
+    } else {
+      print('API Error (Plastic Surgery): ${response.statusCode}');
+      throw Exception('Failed to load Plastic Surgery data: ${response.statusCode}');
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
@@ -112,106 +248,75 @@ class _MedicalTState extends State<MedicalT> {
           color: Colors.grey[100],
           child: TabBarView(
             children: [
-              MyList2(
-                items: [
-                  ItemData(
-                    title: S.of(context).gleneagles,
-                    imageUrl:
-                        'https://www.kltheguide.com.my/assets/img/medical_tourism/hc/Gleneagles.png',
-                    location: S.of(context).gleneaglesLocation,
-                    hours: S.of(context).gleneaglesHours,
-                    maps: 'https://maps.app.goo.gl/soSkhAnzWpbsxZRR6',
-                    category: 'Healthcare',
-                  ),
-                  ItemData(
-                    title: S.of(context).kpjTawakkal,
-                    imageUrl:
-                        'https://www.kltheguide.com.my/assets/img/medical_tourism/hc/KPJ%20Tawakkal.png',
-                    location: S.of(context).kpjTawakkalLocation,
-                    hours: S.of(context).kpjTawakkalHours,
-                    maps: 'https://maps.app.goo.gl/ZRfNu4rfUe2bPmNh9',
-                    category: 'Healthcare',
-                  ),
-                ],
+              // Tab 0: Healthcare
+              FutureBuilder<List<MedicalItemData>>(
+                future: fetchHealthcareItems(),
+                builder: (context, snapshot) {
+                  if (snapshot.connectionState == ConnectionState.waiting) {
+                    return const Center(child: CircularProgressIndicator());
+                  } else if (snapshot.hasError) {
+                    return Center(child: Text('Error: ${snapshot.error}'));
+                  } else if (!snapshot.hasData || snapshot.data!.isEmpty) {
+                    return const Center(child: Text('No healthcare data found.'));
+                  }
+                  return MyList2(items: snapshot.data!);
+                },
               ),
-              MyList2(
-                items: [
-                  ItemData(
-                    title: S.of(context).klinikPergigianBangsar,
-                    imageUrl:
-                        'https://www.kltheguide.com.my/assets/img/medical_tourism/dtl/bangsardental2.png',
-                    location: S.of(context).klinikPergigianBangsarLocation,
-                    hours: S.of(context).klinikPergigianBangsarHours,
-                    maps: 'https://maps.app.goo.gl/cNtYG1N2VLUnYZdA8',
-                    category: 'Dental',
-                  ),
-                  ItemData(
-                    title: S.of(context).dentalPro,
-                    imageUrl:
-                        'https://www.kltheguide.com.my/assets/img/medical_tourism/dtl/dentalpro.png',
-                    location: S.of(context).dentalProLocation,
-                    hours: S.of(context).dentalProHours,
-                    maps: 'https://maps.app.goo.gl/bz4df7x6QXS43g9e9',
-                    category: 'Dental',
-                  ),
-                ],
+              // Tab 1: Dental
+              FutureBuilder<List<MedicalItemData>>(
+                future: fetchDentalItems(),
+                builder: (context, snapshot) {
+                  if (snapshot.connectionState == ConnectionState.waiting) {
+                    return const Center(child: CircularProgressIndicator());
+                  } else if (snapshot.hasError) {
+                    return Center(child: Text('Error: ${snapshot.error}'));
+                  } else if (!snapshot.hasData || snapshot.data!.isEmpty) {
+                    return const Center(child: Text('No dental data found.'));
+                  }
+                  return MyList2(items: snapshot.data!);
+                },
               ),
-              MyList2(
-                items: [
-                  ItemData(
-                    title: S.of(context).drJaneClinic,
-                    imageUrl:
-                        'https://www.kltheguide.com.my/assets/img/medical_tourism/der/DrJaneClinic.jpg',
-                    location: S.of(context).drJaneClinicLocation,
-                    hours: S.of(context).drJaneClinicHours,
-                    maps: 'https://maps.app.goo.gl/7UzWTKXMhCq1ZNtaA',
-                    category: 'Dermatology',
-                  ),
-                  ItemData(
-                    title: S.of(context).dermlaze,
-                    imageUrl:
-                        'https://www.kltheguide.com.my/assets/img/medical_tourism/der/Dermlaze.jpeg',
-                    location: S.of(context).dermlazeLocation,
-                    hours: S.of(context).dermlazeHours,
-                    maps: 'https://maps.app.goo.gl/12UwhMvjy6ywzxfr7',
-                    category: 'Dermatology',
-                  ),
-                ],
+              // Tab 2: Dermatology
+              FutureBuilder<List<MedicalItemData>>(
+                future: fetchDermatologyItems(),
+                builder: (context, snapshot) {
+                  if (snapshot.connectionState == ConnectionState.waiting) {
+                    return const Center(child: CircularProgressIndicator());
+                  } else if (snapshot.hasError) {
+                    return Center(child: Text('Error: ${snapshot.error}'));
+                  } else if (!snapshot.hasData || snapshot.data!.isEmpty) {
+                    return const Center(child: Text('No dermatology data found.'));
+                  }
+                  return MyList2(items: snapshot.data!);
+                },
               ),
-              MyList2(
-                items: [
-                  ItemData(
-                    title: S.of(context).isec,
-                    imageUrl:
-                        'https://www.kltheguide.com.my/assets/img/medical_tourism/oph/isec.JPG',
-                    location: S.of(context).isecLocation,
-                    hours: S.of(context).isecHours,
-                    maps: 'https://maps.app.goo.gl/f4pXArGmPdcnK6Uy9',
-                    category: 'Ophthalmology',
-                  ),
-                  ItemData(
-                    title: S.of(context).vistaEyeSpecialist,
-                    imageUrl:
-                        'https://www.kltheguide.com.my/assets/img/medical_tourism/oph/vista.jpg',
-                    location: S.of(context).vistaEyeSpecialistLocation,
-                    hours: S.of(context).vistaEyeSpecialistHours,
-                    maps: 'https://maps.app.goo.gl/wRsZkXypZHUBzJ1AA',
-                    category: 'Ophthalmology',
-                  ),
-                ],
+              // Tab 3: Ophthalmology
+              FutureBuilder<List<MedicalItemData>>(
+                future: fetchOphthalmologyItems(),
+                builder: (context, snapshot) {
+                  if (snapshot.connectionState == ConnectionState.waiting) {
+                    return const Center(child: CircularProgressIndicator());
+                  } else if (snapshot.hasError) {
+                    return Center(child: Text('Error: ${snapshot.error}'));
+                  } else if (!snapshot.hasData || snapshot.data!.isEmpty) {
+                    return const Center(child: Text('No ophthalmology data found.'));
+                  }
+                  return MyList2(items: snapshot.data!);
+                },
               ),
-              MyList2(
-                items: [
-                  ItemData(
-                    title: S.of(context).somaPlasticSurgery,
-                    imageUrl:
-                        'https://www.kltheguide.com.my/assets/img/medical_tourism/ps/soma_plastic_surgery.jpeg',
-                    location: S.of(context).somaPlasticSurgeryLocation,
-                    hours: S.of(context).somaPlasticSurgeryHours,
-                    maps: 'https://maps.app.goo.gl/kNBG3FZLBCQXXEhi6',
-                    category: 'Plastic Surgery',
-                  ),
-                ],
+              // Tab 4: Plastic Surgery
+              FutureBuilder<List<MedicalItemData>>(
+                future: fetchPlasticSurgeryItems(),
+                builder: (context, snapshot) {
+                  if (snapshot.connectionState == ConnectionState.waiting) {
+                    return const Center(child: CircularProgressIndicator());
+                  } else if (snapshot.hasError) {
+                    return Center(child: Text('Error: ${snapshot.error}'));
+                  } else if (!snapshot.hasData || snapshot.data!.isEmpty) {
+                    return const Center(child: Text('No plastic surgery data found.'));
+                  }
+                  return MyList2(items: snapshot.data!);
+                },
               ),
             ],
           ),
@@ -221,8 +326,9 @@ class _MedicalTState extends State<MedicalT> {
   }
 }
 
+// Widget to display the list of medical items
 class MyList2 extends StatelessWidget {
-  final List<ItemData> items;
+  final List<MedicalItemData> items;
 
   const MyList2({super.key, required this.items});
 
@@ -232,6 +338,7 @@ class MyList2 extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 16),
       itemCount: items.length,
       itemBuilder: (context, index) {
+        final item = items[index];
         return Container(
           margin: const EdgeInsets.only(bottom: 16),
           child: Card(
@@ -242,7 +349,7 @@ class MyList2 extends StatelessWidget {
             ),
             child: InkWell(
               borderRadius: BorderRadius.circular(16),
-              onTap: () => _showDetailsBottomSheet(context, items[index]),
+              onTap: () => _showDetailsBottomSheet(context, item),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -254,7 +361,7 @@ class MyList2 extends StatelessWidget {
                           top: Radius.circular(16),
                         ),
                         child: CachedNetworkImage(
-                          imageUrl: items[index].imageUrl,
+                          imageUrl: item.imageUrl,
                           fit: BoxFit.cover,
                           height: 200,
                           width: double.infinity,
@@ -289,7 +396,7 @@ class MyList2 extends StatelessWidget {
                           ),
                           padding: const EdgeInsets.all(16),
                           child: Text(
-                            items[index].title,
+                            item.title,
                             style: const TextStyle(
                               fontSize: 22,
                               fontWeight: FontWeight.bold,
@@ -318,7 +425,7 @@ class MyList2 extends StatelessWidget {
                             const SizedBox(width: 8),
                             Expanded(
                               child: Text(
-                                items[index].location,
+                                item.location,
                                 style: const TextStyle(
                                   fontSize: 15,
                                   color: Colors.black87,
@@ -341,7 +448,7 @@ class MyList2 extends StatelessWidget {
                             const SizedBox(width: 8),
                             Expanded(
                               child: Text(
-                                items[index].hours,
+                                item.hours,
                                 style: const TextStyle(
                                   fontSize: 15,
                                   color: Colors.black87,
@@ -356,12 +463,12 @@ class MyList2 extends StatelessWidget {
                         SizedBox(
                           width: double.infinity,
                           child: ElevatedButton.icon(
-                            onPressed: () => _launchURL(items[index].maps),
+                            onPressed: () => _launchURL(item.locationUrl), // Use locationUrl
                             icon: const Icon(Icons.map, size: 20),
                             label: Text(S.of(context).maps),
                             style: ElevatedButton.styleFrom(
                               backgroundColor:
-                                  const Color.fromARGB(255, 0, 71, 133),
+                              const Color.fromARGB(255, 0, 71, 133),
                               foregroundColor: Colors.white,
                               padding: const EdgeInsets.symmetric(vertical: 12),
                               shape: RoundedRectangleBorder(
@@ -383,7 +490,7 @@ class MyList2 extends StatelessWidget {
     );
   }
 
-  void _showDetailsBottomSheet(BuildContext context, ItemData item) {
+  void _showDetailsBottomSheet(BuildContext context, MedicalItemData item) {
     showModalBottomSheet(
       context: context,
       shape: const RoundedRectangleBorder(
@@ -432,7 +539,7 @@ class MyList2 extends StatelessWidget {
               child: ElevatedButton.icon(
                 onPressed: () {
                   Navigator.pop(context);
-                  _launchURL(item.maps);
+                  _launchURL(item.locationUrl); // Use locationUrl
                 },
                 icon: const Icon(Icons.directions),
                 label: const Text('Get Directions'),
@@ -461,21 +568,4 @@ void _launchURL(String url) async {
     throw 'Could not launch $url';
   }
 }
-
-class ItemData {
-  final String title;
-  final String imageUrl;
-  final String location;
-  final String hours;
-  final String maps;
-  final String category;
-
-  ItemData({
-    required this.title,
-    required this.imageUrl,
-    required this.location,
-    required this.hours,
-    required this.maps,
-    required this.category,
-  });
-}
+// No need for the old ItemData class as it's replaced by MedicalItemData

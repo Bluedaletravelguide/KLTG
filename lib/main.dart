@@ -71,8 +71,8 @@ class _MyAppState extends State<MyApp> {
           backgroundColor: Colors.white,
           indicatorColor:
               const Color.fromARGB(255, 0, 71, 133).withOpacity(0.15),
-          labelTextStyle: MaterialStateProperty.resolveWith((states) {
-            if (states.contains(MaterialState.selected)) {
+          labelTextStyle: WidgetStateProperty.resolveWith((states) {
+            if (states.contains(WidgetState.selected)) {
               return const TextStyle(
                 fontSize: 12,
                 fontWeight: FontWeight.w600,
